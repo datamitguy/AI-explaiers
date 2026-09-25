@@ -1,14 +1,15 @@
-# AI, Explained, plus Product & Platform courses
+# AI, Explained, plus Product, Platform & Big Ideas courses
 
-Three interactive, Brilliant-style courses. Each is a single self-contained HTML file with no build step:
+Four interactive, Brilliant-style courses. Each is a single self-contained HTML file with no build step:
 
 | Page | Course |
 |---|---|
 | `index.html` | **AI, Explained**: 19 chapters, from AI basics to Claude, agents and the frontier |
 | `product-management.html` | **Product Management, First Principles**: 8 chapters |
-| `platform-management.html` | **Platform Management, First Principles**: 9 chapters |
+| `platform-management.html` | **Platform Management, First Principles**: 12 chapters |
+| `theories.html` | **Big Ideas**: 62 mind-expanding theories across 9 domains, with 22 simulations |
 
-A switcher in the top bar links the three courses.
+A switcher in the top bar links the four courses.
 
 ---
 
@@ -80,3 +81,21 @@ It ends with a filterable library of 26 books, papers and reports (2009–2026),
 12. **Running a lending platform as a product**: a job to be done for each customer, an outcome scorecard, leverage-based prioritization with regulatory deadlines, operating model and anti-patterns
 
 It ends with a library of 23 sources (including Domain-Driven Design, the EU AI Act and the FCA Consumer Duty), including *Reshuffle* (2025), *Team Topologies* 2nd ed. (2025), *Platform Engineering* (2025), *Frictionless* (2025), *Platform Strategy* (2024), *The Cold Start Problem* (2021) and *Platform Revolution* (2016), plus foundational papers (Rochet & Tirole 2003; Eisenmann, Parker & Van Alstyne 2006).
+
+## Big Ideas: 62 theories that expand your mind (`theories.html`)
+
+An interactive field guide to the theories that give you an edge today. A **theory map** at the top lets you search, filter by domain, pick a theory at random, and track which ones you've marked as understood (saved in your browser). Each theory card covers the core idea, *why it gives you an edge now*, an example, a common misconception, and links to related theories. You can deep-link to any card, for example `theories.html#t-bayes`.
+
+| Domain | Theories (🎮 = interactive simulation) |
+|---|---|
+| **Information & computation** | Information theory 🎮, Bayesian probability 🎮, computability, complexity (P vs NP), cybernetics, Gödel's incompleteness, Kolmogorov complexity |
+| **Strategy & decisions** | Game theory (Axelrod tournament 🎮), expected utility, prospect theory 🎮, bounded rationality, mechanism design, Arrow's theorem (voting paradoxes 🎮), signaling |
+| **Physics & the cosmos** | Big Bang (cosmic timeline 🎮), relativity (twin paradox 🎮), quantum theory (double slit 🎮), thermodynamics (entropy 🎮), chaos (logistic map 🎮), Noether's theorem, plate tectonics |
+| **Life & evolution** | Natural selection (weasel program 🎮), the selfish gene, germ theory, endosymbiosis, the Red Queen, evolutionarily stable strategies, scaling laws (Kleiber 🎮) |
+| **Mind & behaviour** | Dual-process theory (Cognitive Reflection Test 🎮), predictive processing, cognitive dissonance, attachment, theory of mind, global workspace, Hebbian learning |
+| **Systems & complexity** | Systems thinking (thermostat 🎮), small-world networks 🎮, emergence, power laws 🎮, tipping points (Granovetter 🎮), black swans |
+| **Economics & society** | Comparative advantage (Ricardo 🎮), tragedy of the commons & Ostrom 🎮, principal–agent, creative destruction, diffusion of innovations, transaction costs |
+| **Power, politics & history** | Realism, power transition (Thucydides Trap 🎮), hegemonic stability, social contract, democratic peace, soft power, Great Man vs. forces |
+| **Language, culture & knowledge** | Sapir–Whorf, universal grammar, speech acts, semiotics, memetics, Hofstede's cultural dimensions 🎮, falsifiability (Wason 2-4-6 🎮), paradigm shifts |
+
+It ends with a 12-question "which theory explains it?" challenge, a 30-book reading list, and a recap on how to think in models.
