@@ -74,4 +74,9 @@ It ends with a filterable library of 26 books, papers and reports (2009–2026),
 8. **Measuring a platform**: a DORA-metrics profiler, SPACE and DevEx
 9. **Maturity & the AI era**: a CNCF maturity self-assessment with a radar chart, and the 2025 DORA platform findings
 
-It ends with a library of 20 sources, including *Reshuffle* (2025), *Team Topologies* 2nd ed. (2025), *Platform Engineering* (2025), *Frictionless* (2025), *Platform Strategy* (2024), *The Cold Start Problem* (2021) and *Platform Revolution* (2016), plus foundational papers (Rochet & Tirole 2003; Eisenmann, Parker & Van Alstyne 2006).
+**Part C · Domain platforms (for example, credit & lending)**
+10. **Who are my customers?**: an interactive customer map separating direct customers (journey teams, partners), operators, end customers (borrowers), guardrail owners and sponsors, plus a role-sorting game ("customers are per capability")
+11. **Drawing the platform boundary**: a loan-lifecycle capability map (customers, interface, metric and guardrail owners for each capability), and a platform vs. self-service config vs. journey-team sorting game
+12. **Running a lending platform as a product**: a job to be done for each customer, an outcome scorecard, leverage-based prioritization with regulatory deadlines, operating model and anti-patterns
+
+It ends with a library of 23 sources (including Domain-Driven Design, the EU AI Act and the FCA Consumer Duty), including *Reshuffle* (2025), *Team Topologies* 2nd ed. (2025), *Platform Engineering* (2025), *Frictionless* (2025), *Platform Strategy* (2024), *The Cold Start Problem* (2021) and *Platform Revolution* (2016), plus foundational papers (Rochet & Tirole 2003; Eisenmann, Parker & Van Alstyne 2006).

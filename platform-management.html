@@ -518,6 +518,27 @@ select{font:inherit;font-size:.8rem;padding:6px 8px;border-radius:10px;border:1p
 .dora-tier{border:2px solid;border-radius:16px;padding:10px 20px;display:flex;flex-direction:column;align-items:center}.dora-tier b{font-family:"Space Grotesk",Inter,system-ui,sans-serif;font-size:1.7rem}
 .dora-result p{flex:1;min-width:220px}
 .mm-row{padding:8px 0;border-bottom:1px solid var(--line)}.mm-row .row{margin-top:4px;gap:6px}.mm-row .chip{min-width:34px}
+/* ---------- domain platforms ---------- */
+.capmap{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;overflow-x:auto}
+@media (max-width:860px){.capmap{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:520px){.capmap{grid-template-columns:repeat(2,1fr)}}
+.cap-col{display:flex;flex-direction:column;gap:6px;min-width:0}
+.cap-h{font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em;padding:6px 8px;border-radius:8px;text-align:center}
+.cap{cursor:pointer;text-align:left;font-size:.8rem;font-weight:600;padding:9px 10px;border-radius:10px;border:1.5px solid var(--line);background:var(--surface);transition:.2s;overflow-wrap:anywhere}
+.cap:hover{border-color:var(--c1)}.cap.on{border-color:var(--c1);background:var(--c1-soft);box-shadow:0 0 0 3px var(--c1-soft)}
+.cap-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media (max-width:560px){.cap-grid{grid-template-columns:1fr}}
+.cap-grid div{background:var(--surface);border-radius:10px;padding:10px 12px}.cap-grid b{display:block;font-size:.78rem;margin-bottom:3px}.cap-grid span{font-size:.88rem;color:var(--ink-2)}
+.sc-row{display:flex;flex-direction:column;gap:2px;padding:10px 0;border-bottom:1px solid var(--line)}
+.lev{display:grid;gap:6px;overflow-x:auto;padding-bottom:4px}
+.lev-h,.lev-r{display:grid;grid-template-columns:2.2fr 1.1fr 1fr 70px 110px;gap:10px;align-items:center;min-width:720px}
+.lev-h{font-size:.68rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);padding:0 10px}
+.lev-r{background:var(--surface-2);border-radius:12px;padding:8px 10px}
+.lev-r label{display:flex;align-items:center;gap:8px}.lev-r input[type=checkbox]{accent-color:var(--c4);width:16px;height:16px}
+.lev-bar{display:grid;grid-template-columns:minmax(200px,1.6fr) 1fr auto;gap:10px;align-items:center;margin:6px 0}
+.lev-bar .track{height:14px;border-radius:8px;background:var(--surface-2);overflow:hidden}.lev-bar .fill{height:100%;border-radius:8px;transition:width .4s}
+@media (max-width:640px){.lev-bar{grid-template-columns:1fr auto}.lev-bar .track{grid-column:1/-1;order:3}}
+@media (max-width:720px){#ostSvg,#riceSvg,#abSvg,#retSvg,#ppSvg,#nfSvg,#trSvg,#ttSvg,#cmapSvg{min-width:560px}}
 </style>
 </head>
 <body>
@@ -541,6 +562,10 @@ select{font:inherit;font-size:.8rem;padding:6px 8px;border-radius:10px;border:1p
   <a href="#pl7"><span class="num">7</span>Platform as a product</a>
   <a href="#pl8"><span class="num">8</span>Measuring a platform</a>
   <a href="#pl9"><span class="num">9</span>Maturity &amp; the AI era</a>
+  <div class="grp">Part C · Domain platforms (e.g. lending)</div>
+  <a href="#pl10"><span class="num">10</span>Who are my customers?</a>
+  <a href="#pl11"><span class="num">11</span>Drawing the boundary</a>
+  <a href="#pl12"><span class="num">12</span>Running it as a product</a>
   <a href="#plread"><span class="num">📚</span>Reading list &amp; research</a>
   <a href="#recap"><span class="num">★</span>Recap</a>
 </nav>
@@ -550,9 +575,9 @@ select{font:inherit;font-size:.8rem;padding:6px 8px;border-radius:10px;border:1p
   <div class="hero-inner reveal">
     <span class="ch-tag">An interactive course</span>
     <h1 style="margin-top:18px">Platforms, <span class="grad">from first principles</span>.</h1>
-    <p>Two kinds of platform, one idea: make it cheaper for others to create value. Launch a two-sided marketplace, find the take-rate sweet spot, map your teams with Team Topologies, build a golden path, and assess your internal platform with DORA and CNCF maturity models.</p>
+    <p>Two kinds of platform, one idea: make it cheaper for others to create value. Launch a two-sided marketplace, find the take-rate sweet spot, map your teams with Team Topologies, build a golden path, assess your internal platform with DORA and CNCF maturity models, and, if you lead a domain platform such as credit and lending, finally answer "who are my customers?"</p>
     <a class="btn primary" href="#pl1" style="text-decoration:none;padding:13px 24px;font-size:1rem">Start learning →</a>
-    <div class="hero-stats"><span>9 chapters</span><span>Platform businesses + internal platforms</span><span>20 books, papers &amp; reports</span></div>
+    <div class="hero-stats"><span>12 chapters</span><span>Platform businesses · internal platforms · domain platforms</span><span>23 books, papers &amp; reports</span></div>
   </div>
 </section>
 <!-- ============ PL1 ============ -->
@@ -698,7 +723,7 @@ select{font:inherit;font-size:.8rem;padding:6px 8px;border-radius:10px;border:1p
     <div class="w-head" style="color:var(--c5t)">Explore</div>
     <div class="w-title">Team Topologies: four team types, three interaction modes</div>
     <div class="grid2" style="grid-template-columns:1.3fr 1fr;align-items:center">
-      <div class="stage" style="padding:8px"><svg id="ttSvg" viewBox="0 0 520 320" style="width:100%;display:block"></svg></div>
+      <div class="stage" style="padding:8px"><svg id="ttSvg" viewBox="0 0 520 320" style="width:100%;display:block"></svg></div><div class="scroll-hint">↔ swipe the diagram to see all of it</div>
       <div class="info-panel" id="ttInfo"></div>
     </div>
   </div>
@@ -793,6 +818,133 @@ select{font:inherit;font-size:.8rem;padding:6px 8px;border-radius:10px;border:1p
 </div>
 </section>
 
+<!-- ============ PL10 ============ -->
+<section class="chapter" id="pl10">
+<div class="wrap">
+  <div class="ch-head reveal">
+    <span class="ch-tag" style="background:var(--c3-soft);color:var(--c3t)">Chapter 10</span>
+    <h2>Domain platforms: who are my customers?</h2>
+    <p class="lede">Part C. For leads of business-capability platforms (credit and lending, payments, customer data) who serve many teams and answer to many functions.</p>
+  </div>
+  <p class="reveal">A <b>domain platform</b> (also called a business-capability platform) packages a business capability so that many products can reuse it. A credit and lending platform, for example, provides application intake, identity and bureau checks, decisioning, pricing, loan accounts, repayments and collections, so that the personal-loan, card, buy-now-pay-later (BNPL) and small-business lending teams don't each rebuild them. It sits between the two worlds of this course. It isn't a public marketplace, and it isn't only developer infrastructure. It carries business logic, regulatory obligations and money.</p>
+  <p class="reveal">That's why the question "who is my customer?" feels impossible. Everyone seems to be one: the product teams, the underwriters, the risk team, compliance, finance, the borrowers. When everyone is your customer, you end up serving whoever shouts loudest. The way out is to <b>separate the roles people play</b>.</p>
+
+  <div class="key reveal"><p><b>First principle: a customer is someone whose success you exist to create, and who chooses (or would choose, if they could) to use what you provide.</b> A stakeholder is someone who <i>constrains</i>, <i>funds</i> or <i>governs</i> you. Both matter enormously, but you manage them differently. You earn a customer's adoption. You satisfy a stakeholder's constraints.</p></div>
+
+  <div class="widget wide reveal">
+    <div class="w-head" style="color:var(--c3t)">Explore</div>
+    <div class="w-title">The customer map of a credit and lending platform</div>
+    <div class="w-sub">Tap each group to see what they need from you, how you serve them, and how you'd know you're succeeding.</div>
+    <div class="grid2" style="grid-template-columns:1.35fr 1fr;align-items:center">
+      <div class="stage" style="padding:8px"><svg id="cmapSvg" viewBox="0 0 560 380" style="width:100%;display:block"></svg></div><div class="scroll-hint">↔ swipe the diagram to see all of it</div>
+      <div class="info-panel" id="cmapInfo"></div>
+    </div>
+  </div>
+
+  <p class="reveal">Read the map from left to right. The platform exists so that <b>journey teams</b> (your direct customers) can serve <b>borrowers</b> (the end customers, who are the ultimate reason any of this exists) better, faster and more safely. Beneath the platform, <b>operators</b> such as underwriters and collections agents are direct users of the platform's tools. Above it, <b>guardrail owners</b> (credit risk policy, compliance, audit, regulators) set the rules the whole system must obey, and <b>sponsors</b> fund it and set its strategy.</p>
+
+  <div class="widget reveal" id="roleSorter">
+    <div class="w-head" style="color:var(--c3t)">Interactive</div>
+    <div class="w-title">What role does each person play?</div>
+    <div class="w-sub">Sort the people who contact a lending platform lead in a typical week. Watch for the twist in some of them.</div>
+    <div class="sorter"></div>
+  </div>
+
+  <div class="key warn reveal"><p><b>Customers are per capability, not per person.</b> The credit risk team is a <i>stakeholder</i> of your decisioning API, because they set the policy it must enforce. They're also the <i>customer</i> of your rule-authoring and back-testing tool, because their job is to change policy quickly and safely. The same person can be your customer on Monday and your auditor on Tuesday, so name the capability before you name the customer.</p></div>
+</div>
+</section>
+
+<!-- ============ PL11 ============ -->
+<section class="chapter" id="pl11">
+<div class="wrap">
+  <div class="ch-head reveal">
+    <span class="ch-tag" style="background:var(--c6-soft);color:var(--c6t)">Chapter 11</span>
+    <h2>Drawing the platform boundary</h2>
+    <p class="lede">What belongs in the platform, what belongs to the product teams, and what goes in between?</p>
+  </div>
+  <p class="reveal">Most domain-platform conflicts are really <b>boundary</b> conflicts. The platform grows into a bottleneck that owns everyone's roadmap, or it shrinks into a thin API that every team works around. A practical rule of thumb for where things belong:</p>
+  <div class="cards reveal">
+    <div class="card"><div class="ico" style="background:var(--c5-soft)">🏛️</div><h4>Platform owns</h4><p>Anything <b>common</b> across products, anything that must be <b>controlled</b> (regulated, audited, money-moving), and anything that changes <b>slowly</b>. Examples: the loan ledger, interest accrual, bureau integrations, decision records, adverse-action reasons and regulatory reporting.</p></div>
+    <div class="card"><div class="ico" style="background:var(--c2-soft)">🎛️</div><h4>Self-service configuration</h4><p>Anything that <b>varies by product</b> but must stay <b>inside guardrails</b>: pricing tables, product parameters, policy rules and document templates. Teams change these themselves, within limits the platform enforces.</p></div>
+    <div class="card"><div class="ico" style="background:var(--c1-soft)">🚀</div><h4>Journey teams own</h4><p>Anything that <b>differentiates</b> the product and changes <b>fast</b>: application screens, onboarding flows, marketing, channel-specific experiences and experiments.</p></div>
+  </div>
+
+  <div class="widget wide reveal">
+    <div class="w-head" style="color:var(--c6t)">Explore</div>
+    <div class="w-title">Capability map across the loan lifecycle</div>
+    <div class="w-sub">Each capability is its own small product, with its own customers, interface and success metric. Tap one.</div>
+    <div class="capmap" id="capMap"></div>
+    <div class="info-panel" id="capInfo" style="margin-top:12px;min-height:0"></div>
+  </div>
+
+  <div class="widget reveal" id="boundSorter">
+    <div class="w-head" style="color:var(--c6t)">Interactive</div>
+    <div class="w-title">Platform, configuration, or journey team?</div>
+    <div class="w-sub">Requests your credit and lending platform receives. Where should each one live?</div>
+    <div class="sorter"></div>
+  </div>
+  <p class="reveal">Two ideas from software architecture help here. Eric Evans's <b>Domain-Driven Design</b> (2003) says to draw boundaries around <i>bounded contexts</i>, parts of the business with their own language and rules, such as "origination", "servicing" and "collections". The banking industry's <b>BIAN</b> service landscape offers a ready-made capability map to start from. Use it to agree on names and boundaries, not as a blueprint to build all at once.</p>
+</div>
+</section>
+
+<!-- ============ PL12 ============ -->
+<section class="chapter" id="pl12">
+<div class="wrap">
+  <div class="ch-head reveal">
+    <span class="ch-tag" style="background:var(--c2-soft);color:var(--c2t)">Chapter 12</span>
+    <h2>Running a lending platform as a product</h2>
+    <p class="lede">Roadmaps, metrics and operating rhythms, when every request seems urgent.</p>
+  </div>
+
+  <h3 class="reveal">Write down each customer's job to be done</h3>
+  <div class="cards reveal">
+    <div class="card"><h4>🚀 Journey team</h4><p>"Launch a new loan product, or change an existing one, <b>in weeks rather than quarters</b>, without rebuilding decisioning, accounts or compliance."</p></div>
+    <div class="card"><h4>📐 Credit risk team (as a customer of the rule tools)</h4><p>"Change a cut-off or scorecard <b>safely</b>, see its impact on approval rates and losses <b>before</b> it goes live, and roll it back instantly."</p></div>
+    <div class="card"><h4>🧑‍💼 Underwriter</h4><p>"Decide a referred case <b>quickly and consistently</b>, with every piece of evidence on one screen."</p></div>
+    <div class="card"><h4>📞 Collections agent</h4><p>"Offer the right hardship option to a struggling borrower <b>fairly and compliantly</b>, first time."</p></div>
+    <div class="card"><h4>🤝 Partner (lending-as-a-service)</h4><p>"Embed credit in our product through a stable, well-documented API, and <b>go live without a six-month integration</b>."</p></div>
+    <div class="card"><h4>🏠 Borrower (end customer)</h4><p>"Get a <b>fast, fair and understandable</b> decision, and be treated well if I struggle to repay."</p></div>
+  </div>
+
+  <h3 class="reveal">Measure customer outcomes, not platform activity</h3>
+  <p class="reveal">"Number of APIs" and "tickets closed" measure activity. Measure whether your customers are succeeding, and keep the guardrails visible.</p>
+  <div class="widget reveal">
+    <div class="w-head" style="color:var(--c2t)">Explore</div>
+    <div class="w-title">A scorecard for a credit and lending platform</div>
+    <div class="row" id="scTabs" style="margin-bottom:12px"></div>
+    <div id="scBody"></div>
+  </div>
+
+  <h3 class="reveal">Prioritize for leverage, with deadlines as fixed constraints</h3>
+  <p class="reveal">A domain platform's backlog mixes product requests, regulatory deadlines, operational pain and technical debt. There are two first principles. <b>Regulatory obligations with fixed dates are constraints, not options</b>: schedule them first and protect their capacity. After that, prefer <b>leverage</b>, meaning work that makes <i>many</i> consumers faster or safer. A request that only one team needs usually belongs in that team's backlog, or should be made possible through self-service configuration.</p>
+  <div class="widget wide reveal">
+    <div class="w-head" style="color:var(--c2t)">Interactive</div>
+    <div class="w-title">This quarter's requests</div>
+    <div class="w-sub">Adjust how many consumers benefit, the value, and the effort. Mark regulatory deadlines. Leverage = consumers benefiting × value ÷ effort.</div>
+    <div id="levTable"></div>
+    <div id="levRank" style="margin-top:12px"></div>
+  </div>
+
+  <h3 class="reveal">Operating model &amp; anti-patterns</h3>
+  <div class="grid2 reveal">
+    <div class="card"><h4>✅ Healthy patterns</h4><p>• A <b>platform product manager</b> paired with a tech lead and a risk/compliance partner embedded in the team.<br>• A monthly <b>customer council</b> of journey-team leads to review the roadmap together.<br>• <b>Team Topologies modes</b>: X-as-a-Service with journey teams by default, time-boxed <i>collaboration</i> when launching a new product type, and <i>facilitating</i> to teach the risk team the self-service tools.<br>• <b>Compliance by design</b>: decision records, reasons and audit trails built into the platform, so every product gets them free.<br>• Versioned APIs, published service levels, and planned deprecations.</p></div>
+    <div class="card"><h4>🚫 Anti-patterns</h4><p>• <b>The service desk</b>: everything arrives as a ticket, and the platform becomes the bottleneck for every product launch.<br>• <b>Loudest stakeholder wins</b>: the roadmap follows escalations, not leverage.<br>• <b>Platform takeover</b>: the platform starts owning journey teams' screens and product roadmaps.<br>• <b>Gold-plating</b>: building for hypothetical future products instead of real current consumers.<br>• <b>Mandated adoption</b>: teams comply on paper and build shadow systems.<br>• <b>Forgetting the borrower</b>: optimizing internal convenience while decision times or fairness get worse.</p></div>
+  </div>
+  <div class="key warn reveal"><p><b>Lending is regulated, and decisions about people's credit are high stakes.</b> Examples include adverse-action notices under the US Equal Credit Opportunity Act (Regulation B), the EU AI Act's classification of creditworthiness assessment as <b>high-risk</b>, and the UK FCA's <b>Consumer Duty</b> (2023), which requires firms to deliver good outcomes for retail customers. Treat these as product requirements the platform delivers once, well, for everyone. That's one of the strongest reasons a lending platform exists at all.</p></div>
+
+  <div class="quiz reveal" data-correct="1">
+    <div class="q-label">Quick check</div>
+    <div class="q">The SME lending team, the credit risk team and compliance all demand to be "the priority customer" of your lending platform. What's the first-principles answer?</div>
+    <div class="opts">
+      <button class="opt">Whoever is most senior is the customer</button>
+      <button class="opt">It depends on the capability. SME lending is the customer of the origination APIs, risk is the customer of the rule-authoring tools, and compliance is a guardrail owner whose requirements every capability must meet.</button>
+      <button class="opt">Borrowers are the only customers, so internal teams don't matter</button>
+    </div>
+    <div class="explain">Name the capability first, then its customers. Borrowers are the ultimate "why", and internal teams are how you serve them at scale. Compliance's requirements are non-negotiable constraints, not a competing wish list.</div>
+  </div>
+</div>
+</section>
+
 <!-- ============ READING ============ -->
 <section class="chapter" id="plread">
 <div class="wrap">
@@ -819,6 +971,8 @@ select{font:inherit;font-size:.8rem;padding:6px 8px;border-radius:10px;border:1p
     <div><b>Reduce cognitive load</b>Internal platforms exist so product teams can focus on their customers.</div>
     <div><b>Platform as a product</b>Developers are customers. Earn adoption with golden paths, and don't mandate it.</div>
     <div><b>Measure outcomes and experience</b>Use DORA for delivery, and SPACE and DevEx for the human side.</div>
+    <div><b>Separate customers from stakeholders</b>Customers are whose success you create (per capability). Stakeholders constrain, govern or fund you.</div>
+    <div><b>Draw the boundary</b>Common, controlled and slow-changing work goes in the platform. Varying work within guardrails goes into self-service configuration. Differentiating work goes to journey teams.</div>
     <div><b>AI amplifies foundations</b>Good platforms turn AI into speed, and weak ones into accelerated chaos.</div>
   </div>
 </div>
@@ -1162,7 +1316,119 @@ makeLibrary([
   ["Platform Scale", "Sangeet Paul Choudary", 2015, "Platform business", "Designing platforms around interactions, and scaling through ecosystems rather than ownership."],
   ["Strategies for Two-Sided Markets", "Thomas Eisenmann, Geoffrey Parker & Marshall Van Alstyne", 2006, "Research & policy", "An HBR article introducing subsidy and money sides, and the conditions for winner-take-all."],
   ["Platform Competition in Two-Sided Markets", "Jean-Charles Rochet & Jean Tirole", 2003, "Research & policy", "The foundational economics paper on two-sided markets and platform pricing."],
-], ["Platform business", "Internal platforms", "Measurement", "Research & policy"]);
+  ["EU AI Act", "European Union", 2024, "Domain platforms", "Classifies AI used to assess creditworthiness as high-risk, with requirements for risk management, data quality, documentation and human oversight."],
+  ["FCA Consumer Duty", "UK Financial Conduct Authority", 2023, "Domain platforms", "Requires firms to deliver good outcomes for retail customers, which shapes lending platform design from decisioning to collections."],
+  ["Domain-Driven Design", "Eric Evans", 2003, "Domain platforms", "Bounded contexts and a shared language: the architectural basis for drawing domain-platform boundaries such as origination, servicing and collections."],
+], ["Platform business", "Internal platforms", "Domain platforms", "Measurement", "Research & policy"]);
+
+/* ---------- PL-C: customer map ---------- */
+(() => {
+  const svg = $("#cmapSvg"), info = $("#cmapInfo");
+  const G = {
+    platform: ["🏛️ Credit & lending platform", "c1", "You", "The capabilities you provide: origination services, decisioning, pricing, loan accounts, repayments and collections tooling.", "Your job is to make lending products <b>faster to build, safer to run and cheaper to operate</b>."],
+    journey: ["🚀 Journey teams", "c2", "Direct customers", "Personal loans, credit cards, BNPL, SME lending, mortgages: the product teams that build borrower experiences <b>on top of</b> your capabilities, plus external partners using lending-as-a-service APIs.", "<b>Serve them</b> with self-service APIs, configuration, docs and golden paths. <b>Measure</b> time to launch or change a product, adoption, and their satisfaction."],
+    borrower: ["🏠 Borrowers", "c4", "End customers (the ultimate \"why\")", "Individuals and businesses applying for, repaying and struggling with credit. You rarely talk to them directly, but every capability exists for them.", "<b>Serve them</b> through the journey teams, with fast, fair, explainable decisions and good treatment in hardship. <b>Measure</b> decision time, approval fairness, complaint rates and arrears outcomes."],
+    ops: ["🧑‍💼 Operators", "c5", "Direct users", "Underwriters, fraud analysts, collections agents and operations staff who use your case-management, referral and collections tools every day.", "<b>Serve them</b> with tools that make the right action the easy action. <b>Measure</b> handling time, consistency, automation rate, and their satisfaction."],
+    guard: ["🛡️ Guardrail owners", "c3", "Stakeholders who set constraints", "Credit risk policy, compliance, legal, internal audit, model risk and regulators. They define what the system <i>must</i> and <i>must never</i> do.", "<b>Serve them</b> by building their requirements in once: decision records, reason codes, audit trails, controls. <b>Measure</b> audit findings, control failures and policy change lead time. Note that risk is <i>also</i> a customer of the rule-authoring tools."],
+    sponsor: ["💼 Sponsors", "c6", "Stakeholders who fund & steer", "The CFO, heads of lending businesses and the CTO. They fund the platform and decide which bets matter.", "<b>Serve them</b> with a clear strategy and outcome reporting: faster launches, lower cost per loan, fewer incidents. They aren't the customer, but they decide whether the platform keeps existing."],
+  };
+  const pos = { guard: [150, 55, 190], sponsor: [400, 55, 190], platform: [120, 190, 200], journey: [330, 190, 150], borrower: [490, 190, 110], ops: [120, 315, 200] };
+  let sel = "journey";
+  const draw = () => {
+    svg.innerHTML = "";
+    const arrow = (x1, y1, x2, y2, col, dash, label) => { svgEl("path", { d: `M${x1} ${y1} L${x2} ${y2}`, stroke: C[col], "stroke-width": 2.5, fill: "none", class: "flow-dash", "stroke-dasharray": dash || "6 6" }, svg); if (label) { const t = svgEl("text", { x: (x1 + x2) / 2 + 4, y: (y1 + y2) / 2 - 6, "font-size": 10, "font-weight": 700, fill: C.muted, "text-anchor": "middle" }, svg); t.textContent = label; } };
+    arrow(220, 190, 255, 190, "c2", null, ""); arrow(405, 190, 435, 190, "c4", null, "");
+    arrow(150, 80, 130, 162, "c3", "3 5", ""); arrow(400, 80, 200, 170, "c6", "3 5", "");
+    arrow(120, 218, 120, 290, "c5", null, "");
+    const lbl = (x, y, t) => { const e = svgEl("text", { x, y, "text-anchor": "middle", "font-size": 9.5, "font-weight": 800, fill: C.muted }, svg); e.textContent = t; };
+    lbl(238, 180, "APIs"); lbl(420, 168, "products"); lbl(165, 128, "rules & controls"); lbl(318, 118, "funding & strategy"); lbl(150, 258, "tools");
+    for (const k in pos) {
+      const [x, y, w] = pos[k], g = G[k], on = k === sel, gr = svgEl("g", { style: "cursor:pointer" }, svg);
+      svgEl("rect", { x: x - w / 2, y: y - 26, width: w, height: 52, rx: 14, fill: hexA(C[g[1]], on ? .38 : .15), stroke: C[g[1]], "stroke-width": on ? 3 : 1.6 }, gr);
+      const t1 = svgEl("text", { x, y: y - 3, "text-anchor": "middle", "font-size": w < 130 ? 11 : 12, "font-weight": 800, fill: C.ink }, gr); t1.textContent = g[0];
+      const t2 = svgEl("text", { x, y: y + 14, "text-anchor": "middle", "font-size": 9.5, "font-weight": 700, fill: C.muted }, gr); t2.textContent = g[2].replace(/ \(.*\)/, "");
+      gr.addEventListener("click", () => { sel = k; draw(); });
+    }
+    const g = G[sel]; info.innerHTML = `<span class="pill" style="background:${hexA(C[g[1]], .2)};color:${C[g[1]]}">${g[2]}</span><h4 style="margin-top:8px">${g[0]}</h4><p style="margin:0 0 8px">${g[3]}</p><p class="small" style="margin:0">${g[4]}</p>`;
+  };
+  draw(); document.addEventListener("themechange", draw);
+})();
+
+/* ---------- PL-C: role sorter ---------- */
+makeSorter($("#roleSorter"), ["🚀 Direct customer", "🧑‍💼 Operator (user)", "🏠 End customer", "🛡️ Guardrail owner", "💼 Sponsor"], [
+  ["The BNPL squad integrating your decisioning API into their checkout flow", 0, "They build their product on your capability. Their speed and success is exactly what you exist to create."],
+  ["An underwriter working through referred applications in your case tool", 1, "They use your tools every day to do their job. Their handling time and consistency are your metrics."],
+  ["A small-business owner applying for a working-capital loan", 2, "The end customer. You serve them through the SME journey team, and their outcome is the ultimate measure."],
+  ["The regulator requiring a specific reason for every declined application", 3, "A non-negotiable constraint. Build adverse-action reasons into the platform once, for every product."],
+  ["Credit risk analysts authoring and back-testing new cut-off rules in your policy tool", 0, "The twist: for the rule-authoring capability, risk is a <i>direct customer</i>. Their job is changing policy fast and safely, so make that easy."],
+  ["The CFO deciding next year's platform budget", 4, "They fund you and set priorities, but you don't earn their adoption. Report outcomes they care about: cost per loan, time to market, incidents."],
+  ["A fintech partner offering your loans inside their app via API", 0, "An external direct customer (lending-as-a-service). API stability, docs and onboarding time matter most."],
+  ["Internal audit sampling decisions to check they followed policy", 3, "A guardrail owner. Make every decision traceable, with inputs, rules version, outcome and reasons, so audits take hours rather than weeks."],
+  ["A collections agent setting up a hardship payment plan", 1, "A direct user of your collections tooling, which must make fair treatment the easy default."],
+]);
+
+/* ---------- PL-C: capability map ---------- */
+(() => {
+  const L = [
+    ["Origination", "c5", [["Application intake", "Journey teams, partners", "API + embeddable components", "Time to integrate a new channel", "Compliance (consent, disclosures)"], ["Identity & KYC", "Journey teams", "API", "Pass rate and false-reject rate", "Compliance, fraud"], ["Bureau & data pulls", "Decisioning, journey teams", "Internal API", "Latency and cost per pull", "Data protection, vendor management"]]],
+    ["Decisioning", "c1", [["Rules & policy engine", "Credit risk (authoring), journey teams (calling it)", "Rule editor + decision API", "Policy change lead time (days → hours)", "Credit risk policy, model risk"], ["Scorecards & models", "Credit risk, data science", "Model registry + scoring API", "Model deployment time, drift alerts", "Model risk management, fair-lending review"], ["Pricing", "Journey teams, product owners", "Configurable pricing tables", "Time to launch a new price or promotion", "Finance, compliance"]]],
+    ["Fulfilment", "c2", [["Offers & documents", "Journey teams", "Templates + e-sign API", "Time to add a new product's documents", "Legal"], ["Disbursement", "Journey teams, finance ops", "API", "Straight-through rate, failed payouts", "Finance, payment controls"]]],
+    ["Servicing", "c3", [["Loan accounts & ledger", "All products, finance", "Core API", "Accuracy (zero breaks), reconciliation time", "Finance, audit"], ["Repayments & statements", "Journey teams, borrowers (indirectly)", "API + templates", "Failed collections, statement errors", "Compliance"]]],
+    ["Collections", "c4", [["Arrears & hardship workflows", "Collections agents, journey teams", "Agent tools + strategy config", "Cure rate, time to resolution, fair-treatment outcomes", "Compliance (Consumer Duty and similar), conduct risk"]]],
+    ["Cross-cutting", "c6", [["Decision records & reasons", "Every product; audit and regulators", "Built-in, automatic", "Audit time, completeness of records", "Audit, regulators"], ["Reporting & regulatory returns", "Finance, risk, regulators", "Data products", "On-time, accurate returns", "Regulators"]]],
+  ];
+  const box = $("#capMap"), info = $("#capInfo");
+  box.innerHTML = L.map((l, i) => `<div class="cap-col"><div class="cap-h" style="background:var(--${l[1]}-soft);color:var(--${l[1] === "c1" ? "c1" : l[1] + "t"})">${l[0]}</div>${l[2].map((c, k) => `<button class="cap" data-c="${i}-${k}">${c[0]}</button>`).join("")}</div>`).join("");
+  const sel = (i, k) => { $$(".cap", box).forEach(b => b.classList.toggle("on", b.dataset.c === `${i}-${k}`)); const c = L[i][2][k]; info.innerHTML = `<h4 style="margin-bottom:8px">${c[0]} <span class="small muted">· ${L[i][0]}</span></h4><div class="cap-grid"><div><b>👥 Customers</b><span>${c[1]}</span></div><div><b>🔌 Interface ("the product")</b><span>${c[2]}</span></div><div><b>📏 Success metric</b><span>${c[3]}</span></div><div><b>🛡️ Guardrail owners</b><span>${c[4]}</span></div></div>`; };
+  $$(".cap", box).forEach(b => b.addEventListener("click", () => { const [i, k] = b.dataset.c.split("-").map(Number); sel(i, k); }));
+  sel(1, 0);
+})();
+
+/* ---------- PL-C: boundary sorter ---------- */
+makeSorter($("#boundSorter"), ["🏛️ Platform builds & owns", "🎛️ Self-service config on the platform", "🚀 Journey team builds"], [
+  ["Loan ledger & daily interest accrual", 0, "It's common to every product, money-moving, audited, and slow-changing. That's core platform."],
+  ["Mobile application screens for a student-loan product", 2, "It differentiates the product and changes fast. It belongs to the journey team, built on platform APIs."],
+  ["A 0% promotional rate for a partner campaign", 1, "It varies by product but must stay within pricing guardrails. Make it configuration the product owner sets, not a platform ticket."],
+  ["Generating adverse-action reasons for every decline", 0, "It's a regulatory obligation every product shares. Build it once, correctly, and it becomes a big reason to use the platform."],
+  ["A new affordability cut-off for the card product", 1, "The risk team changes it through the rule editor with back-testing, within policy limits. It's self-service, not a code change."],
+  ["An A/B test of the offer-page layout", 2, "This is experience experimentation, and it's the journey team's job. The platform should make it easy by keeping decisions separate from presentation."],
+  ["A new credit-bureau integration", 0, "It's shared data plumbing with vendor, security and data-protection requirements. Do it once for everyone."],
+  ["Product-specific document wording for SME loans", 1, "Templates with legal-approved clauses. The team configures them, and legal approves them through a workflow."],
+]);
+
+/* ---------- PL-C: scorecard ---------- */
+(() => {
+  const T = {
+    "🚀 Journey teams": [["Time to launch a new loan product", "e.g. 6 months → 6 weeks", "The headline measure of platform value."], ["Time to change pricing or product parameters", "days → minutes via config", ""], ["Adoption: share of lending journeys on the platform", "voluntary, not mandated", ""], ["Developer / team satisfaction", "quarterly survey, with top friction points", ""]],
+    "🧑‍💼 Operators": [["Auto-decision (straight-through) rate", "share of applications decided without manual review", ""], ["Referral handling time", "minutes per referred case", ""], ["Decision consistency", "agreement between underwriters on the same case", ""]],
+    "🛡️ Guardrails": [["Policy change lead time", "from approved rule to live, with back-test evidence", "Speed and control together."], ["Audit findings & control failures", "should trend to zero", ""], ["Decision traceability", "% of decisions with full inputs, rule version and reasons", ""]],
+    "🏠 Borrowers": [["Time to decision", "seconds for most applications", ""], ["Approval-rate parity across groups", "a fair-lending check", ""], ["Complaints & arrears outcomes", "including customers in hardship", "Don't let internal efficiency hide worse borrower outcomes."]],
+    "💼 Business": [["Cost per loan originated / serviced", "falls as more products reuse the platform", ""], ["Incidents & availability", "service levels for the critical path", ""], ["Reuse", "number of products per capability", ""]],
+  };
+  const tabs = $("#scTabs"); Object.keys(T).forEach((k, i) => { const b = document.createElement("button"); b.className = "chip" + (i ? "" : " on"); b.dataset.sc = k; b.textContent = k; tabs.appendChild(b); });
+  const render = k => { $("#scBody").innerHTML = T[k].map(r => `<div class="sc-row"><b>${r[0]}</b><span class="small muted">${r[1]}</span>${r[2] ? `<span class="small">${r[2]}</span>` : ""}</div>`).join(""); $$(".sc-row").forEach((el, i) => el.animate?.([{ opacity: 0, transform: "translateY(6px)" }, { opacity: 1, transform: "none" }], { duration: 250, delay: i * 50, fill: "backwards" })); };
+  chipGroup(tabs, "sc", render); render(Object.keys(T)[0]);
+})();
+
+/* ---------- PL-C: leverage prioritization ---------- */
+(() => {
+  const R = [
+    ["Compliance: adverse-action reasons for every decline (regulatory deadline)", 6, 5, 2, true],
+    ["Risk: self-service rule editor with back-testing", 6, 5, 3, false],
+    ["BNPL team: 0% promotional instalment plans", 2, 4, 2, false],
+    ["Ops: auto-assign referred applications to underwriters", 4, 3, 1, false],
+    ["SME team: custom collateral fields", 1, 3, 1, false],
+    ["Platform: move decision engine off an end-of-life database", 6, 3, 3, false],
+  ];
+  const tbl = $("#levTable"), EF = ["", "S", "M", "L"];
+  tbl.innerHTML = `<div class="lev"><div class="lev-h"><span>Request</span><span>Consumers who benefit (of 6)</span><span>Value (1–5)</span><span>Effort</span><span>Deadline?</span></div>${R.map((r, i) => `<div class="lev-r" data-i="${i}"><b class="small">${r[0]}</b><label><input type="range" min="1" max="6" step="1" value="${r[1]}" data-f="1"><span class="mono small">${r[1]}</span></label><label><input type="range" min="1" max="5" step="1" value="${r[2]}" data-f="2"><span class="mono small">${r[2]}</span></label><select data-f="3">${[1, 2, 3].map(e => `<option value="${e}"${e === r[3] ? " selected" : ""}>${EF[e]}</option>`).join("")}</select><label class="small"><input type="checkbox" data-f="4" ${r[4] ? "checked" : ""}> regulatory</label></div>`).join("")}</div>`;
+  const draw = () => {
+    const S = R.map(r => ({ n: r[0].split(":")[0], full: r[0], lev: r[1] * r[2] / r[3], reg: r[4], single: r[1] === 1 })).sort((a, b) => (b.reg - a.reg) || (b.lev - a.lev)), mx = Math.max(...S.map(s => s.lev));
+    $("#levRank").innerHTML = S.map((s, i) => `<div class="lev-bar"><span class="small"><b>${i + 1}.</b> ${s.full}</span><div class="track"><div class="fill" style="width:${s.lev / mx * 100}%;background:var(--${s.reg ? "c4" : s.single ? "muted" : "c2"})"></div></div><span class="pill" style="background:var(--${s.reg ? "c4" : s.single ? "surface-3" : "c2"}-soft,var(--surface-2));color:var(--${s.reg ? "c4t" : "ink-2"})">${s.reg ? "📅 fixed date" : s.single ? "one consumer: config?" : "leverage " + s.lev.toFixed(1)}</span></div>`).join("");
+  };
+  $$(".lev-r", tbl).forEach(r => $$("[data-f]", r).forEach(inp => inp.addEventListener(inp.type === "checkbox" ? "change" : "input", () => { const row = R[+r.dataset.i], f = +inp.dataset.f; row[f] = inp.type === "checkbox" ? inp.checked : +inp.value; const sp = inp.type === "range" && inp.parentElement.querySelector("span"); if (sp) sp.textContent = inp.value; draw(); })));
+  draw();
+})();
 
 })();
 </script>

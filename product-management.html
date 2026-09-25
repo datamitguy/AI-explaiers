@@ -518,6 +518,27 @@ select{font:inherit;font-size:.8rem;padding:6px 8px;border-radius:10px;border:1p
 .dora-tier{border:2px solid;border-radius:16px;padding:10px 20px;display:flex;flex-direction:column;align-items:center}.dora-tier b{font-family:"Space Grotesk",Inter,system-ui,sans-serif;font-size:1.7rem}
 .dora-result p{flex:1;min-width:220px}
 .mm-row{padding:8px 0;border-bottom:1px solid var(--line)}.mm-row .row{margin-top:4px;gap:6px}.mm-row .chip{min-width:34px}
+/* ---------- domain platforms ---------- */
+.capmap{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;overflow-x:auto}
+@media (max-width:860px){.capmap{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:520px){.capmap{grid-template-columns:repeat(2,1fr)}}
+.cap-col{display:flex;flex-direction:column;gap:6px;min-width:0}
+.cap-h{font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em;padding:6px 8px;border-radius:8px;text-align:center}
+.cap{cursor:pointer;text-align:left;font-size:.8rem;font-weight:600;padding:9px 10px;border-radius:10px;border:1.5px solid var(--line);background:var(--surface);transition:.2s;overflow-wrap:anywhere}
+.cap:hover{border-color:var(--c1)}.cap.on{border-color:var(--c1);background:var(--c1-soft);box-shadow:0 0 0 3px var(--c1-soft)}
+.cap-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media (max-width:560px){.cap-grid{grid-template-columns:1fr}}
+.cap-grid div{background:var(--surface);border-radius:10px;padding:10px 12px}.cap-grid b{display:block;font-size:.78rem;margin-bottom:3px}.cap-grid span{font-size:.88rem;color:var(--ink-2)}
+.sc-row{display:flex;flex-direction:column;gap:2px;padding:10px 0;border-bottom:1px solid var(--line)}
+.lev{display:grid;gap:6px;overflow-x:auto;padding-bottom:4px}
+.lev-h,.lev-r{display:grid;grid-template-columns:2.2fr 1.1fr 1fr 70px 110px;gap:10px;align-items:center;min-width:720px}
+.lev-h{font-size:.68rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);padding:0 10px}
+.lev-r{background:var(--surface-2);border-radius:12px;padding:8px 10px}
+.lev-r label{display:flex;align-items:center;gap:8px}.lev-r input[type=checkbox]{accent-color:var(--c4);width:16px;height:16px}
+.lev-bar{display:grid;grid-template-columns:minmax(200px,1.6fr) 1fr auto;gap:10px;align-items:center;margin:6px 0}
+.lev-bar .track{height:14px;border-radius:8px;background:var(--surface-2);overflow:hidden}.lev-bar .fill{height:100%;border-radius:8px;transition:width .4s}
+@media (max-width:640px){.lev-bar{grid-template-columns:1fr auto}.lev-bar .track{grid-column:1/-1;order:3}}
+@media (max-width:720px){#ostSvg,#riceSvg,#abSvg,#retSvg,#ppSvg,#nfSvg,#trSvg,#ttSvg,#cmapSvg{min-width:560px}}
 </style>
 </head>
 <body>
@@ -660,7 +681,7 @@ select{font:inherit;font-size:.8rem;padding:6px 8px;border-radius:10px;border:1p
     <div class="w-title">RICE your backlog</div>
     <div class="w-sub">Adjust the inputs and watch the ranking change. Then pick the kind of evidence behind each idea, and watch the confidence (and the rank) move with it.</div>
     <div id="riceTable"></div>
-    <div class="stage" style="padding:8px;margin-top:12px"><svg id="riceSvg" viewBox="0 0 640 200" style="width:100%;display:block"></svg></div>
+    <div class="stage" style="padding:8px;margin-top:12px"><svg id="riceSvg" viewBox="0 0 640 200" style="width:100%;display:block"></svg></div><div class="scroll-hint">↔ swipe the diagram to see all of it</div>
   </div>
   <p class="reveal">The evidence ladder is adapted from Itamar Gilad's <b>Confidence Meter</b> (<i>Evidence-Guided</i>, 2023). The opinions of senior people and your own conviction count for very little. Customer evidence, experiment results and launch data count for much more. The point isn't precise numbers but honesty. A big idea backed only by conviction shouldn't outrank a medium idea with test results behind it.</p>
 </div>
@@ -691,7 +712,7 @@ select{font:inherit;font-size:.8rem;padding:6px 8px;border-radius:10px;border:1p
     <div class="w-head" style="color:var(--c5t)">Simulation</div>
     <div class="w-title">200 A/A tests: peeking vs. a fixed horizon</div>
     <div class="row" style="margin-bottom:10px"><button class="btn primary" id="abRun">▶ Run 200 experiments</button><span class="small muted">Each line is one experiment's p-value over 20 days. Below the dashed line counts as "significant" (p &lt; 0.05).</span></div>
-    <div class="stage" style="padding:8px"><svg id="abSvg" viewBox="0 0 640 240" style="width:100%;display:block"></svg></div>
+    <div class="stage" style="padding:8px"><svg id="abSvg" viewBox="0 0 640 240" style="width:100%;display:block"></svg></div><div class="scroll-hint">↔ swipe the diagram to see all of it</div>
     <div class="stats" id="abStats"></div>
     <p class="small" id="abNote" style="margin-top:8px"></p>
   </div>
@@ -723,7 +744,7 @@ select{font:inherit;font-size:.8rem;padding:6px 8px;border-radius:10px;border:1p
     <div class="w-head" style="color:var(--c4t)">Interactive</div>
     <div class="w-title">Shape a retention curve</div>
     <div class="grid2" style="grid-template-columns:1.4fr 1fr;align-items:center">
-      <div class="stage" style="padding:8px"><svg id="retSvg" viewBox="0 0 520 260" style="width:100%;display:block"></svg></div>
+      <div class="stage" style="padding:8px"><svg id="retSvg" viewBox="0 0 520 260" style="width:100%;display:block"></svg></div><div class="scroll-hint">↔ swipe the diagram to see all of it</div>
       <div>
         <label class="slider">Week-1 drop-off <b id="r1V">45%</b><input type="range" id="r1" min="10" max="80" step="1" value="45"></label>
         <label class="slider" style="margin-top:10px">Share who find lasting value <b id="r2V">25%</b><input type="range" id="r2" min="0" max="60" step="1" value="25"></label>
