@@ -1,4 +1,18 @@
-# AI, Explained
+# AI, Explained, plus Product & Platform courses
+
+Three interactive, Brilliant-style courses. Each is a single self-contained HTML file with no build step:
+
+| Page | Course |
+|---|---|
+| `index.html` | **AI, Explained**: 19 chapters, from AI basics to Claude, agents and the frontier |
+| `product-management.html` | **Product Management, First Principles**: 8 chapters |
+| `platform-management.html` | **Platform Management, First Principles**: 9 chapters |
+
+A switcher in the top bar links the three courses.
+
+---
+
+## AI, Explained
 
 An interactive, Brilliant-style course on artificial intelligence in a single `index.html` file. There's no build step and no dependencies apart from Google Fonts.
 
@@ -29,3 +43,35 @@ Open `index.html` in a browser, or serve the folder with a static server such as
 A searchable **glossary** of 150+ terms closes the course, and bold key terms throughout the course show inline definitions when you hover or tap them.
 
 It supports light and dark themes, including a manual toggle, and respects `prefers-reduced-motion`.
+
+---
+
+## Product Management, First Principles (`product-management.html`)
+
+1. **What product management is**: the four risks (value, usability, feasibility, viability), plus "name that risk" and "output, outcome or impact?" sorting games
+2. **Start from the customer's problem**: Jobs to Be Done, a Mom Test question game, and an interactive opportunity solution tree
+3. **Strategy**: Rumelt's kernel (take a strategy memo apart), Playing to Win, positioning and 7 Powers
+4. **Prioritization**: a live RICE calculator with an evidence-based confidence ladder, and cost of delay
+5. **Experiments**: an assumption map, and a simulation of 200 A/A tests showing the peeking problem
+6. **Metrics**: a North Star metric tree with input metrics and guardrails, and a retention-curve shaper for product–market fit
+7. **Teams & the product operating model**: feature teams vs. empowered teams, OKRs, story mapping and pricing
+8. **Product management in the AI era**: an AI autonomy ladder, evals as the new spec, and AI unit economics
+
+It ends with a filterable library of 26 books, papers and reports (2009–2026), including *Transformed* (2024), *Evidence-Guided* (2023), *Product Operations* (2023), *Me, My Customer, and AI* (2025), *AI Engineering* (2025) and the 2025 DORA report.
+
+## Platform Management, First Principles (`platform-management.html`)
+
+**Part A · Platform businesses**
+1. **What is a platform?**: an animated pipeline-vs-platform comparison and the core interaction
+2. **Network effects & cold start**: a two-sided marketplace simulator with cold-start strategies (atomic network, subsidies, single-player tool, seeding)
+3. **Pricing**: subsidy and money sides, and a take-rate sweet-spot model with a leakage zone
+4. **Governance & winner-take-all**: a governance-lever sorting game and a tipping-point checklist
+5. **AI reshuffles platforms**: coordination, agents as a new side, protocols and envelopment
+
+**Part B · Internal platforms**
+6. **Cognitive load & Team Topologies**: an interactive diagram of the four team types and three interaction modes
+7. **Platform as a product**: a golden-path simulator showing lead time, tickets and cognitive load
+8. **Measuring a platform**: a DORA-metrics profiler, SPACE and DevEx
+9. **Maturity & the AI era**: a CNCF maturity self-assessment with a radar chart, and the 2025 DORA platform findings
+
+It ends with a library of 20 sources, including *Reshuffle* (2025), *Team Topologies* 2nd ed. (2025), *Platform Engineering* (2025), *Frictionless* (2025), *Platform Strategy* (2024), *The Cold Start Problem* (2021) and *Platform Revolution* (2016), plus foundational papers (Rochet & Tirole 2003; Eisenmann, Parker & Van Alstyne 2006).

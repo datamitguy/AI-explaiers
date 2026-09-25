@@ -1,0 +1,1170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Platform Management, First Principles</title>
+<meta name="description" content="An interactive, first-principles course on platform management: multi-sided platform businesses (network effects, cold start, pricing, governance) and internal developer platforms (Team Topologies, platform as a product, DORA, maturity), grounded in the latest books and research.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#faf9f6; --surface:#ffffff; --surface-2:#f3f2ed; --surface-3:#e9e7df;
+  --ink:#16161d; --ink-2:#4a4a57; --muted:#6b6b78; --line:#e4e2da;
+  --c1:#5b5bf0; --c1-d:#3f3fc4; --c1-soft:#ececfe;
+  --c2:#10a574; --c2-d:#0b7d58; --c2-soft:#e2f6ee;
+  --c3:#f09a0b; --c3-soft:#fdf1dc;
+  --c4:#e8466a; --c4-soft:#fde6eb;
+  --c5:#0e98d6; --c5-soft:#e0f2fb;
+  --c6:#9b4ff0; --c6-soft:#f1e7fd;
+  --claude:#d97757; --claude-soft:#fbeae3;
+  --c2t:#0a7a56; --c3t:#9a5a00; --c4t:#c42a4f; --c5t:#0a6f9e; --c6t:#8338e0; --claudet:#b0502f; --c1-btn:#5b5bf0;
+  --shadow:0 1px 2px rgba(20,20,40,.04),0 10px 30px rgba(20,20,40,.06);
+  --radius:20px;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0e0e13; --surface:#16161e; --surface-2:#1e1e28; --surface-3:#282834;
+    --ink:#ececf2; --ink-2:#b6b6c4; --muted:#9090a2; --line:#2a2a37;
+    --c1:#8484ff; --c1-d:#5d5de0; --c1-soft:#23234a;
+    --c2:#2fd09b; --c2-d:#1a9e72; --c2-soft:#133329;
+    --c3:#ffb640; --c3-soft:#3a2c12;
+    --c4:#ff6b8b; --c4-soft:#3d1a24;
+    --c5:#3dbdf5; --c5-soft:#11303f;
+    --c6:#b98aff; --c6-soft:#2d1f45;
+    --claude:#e8906f; --claude-soft:#3a241c;
+    --c2t:var(--c2); --c3t:var(--c3); --c4t:var(--c4); --c5t:var(--c5); --c6t:var(--c6); --claudet:var(--claude); --c1-btn:#5d5de0;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 30px rgba(0,0,0,.35);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0e0e13; --surface:#16161e; --surface-2:#1e1e28; --surface-3:#282834;
+  --ink:#ececf2; --ink-2:#b6b6c4; --muted:#9090a2; --line:#2a2a37;
+  --c1:#8484ff; --c1-d:#5d5de0; --c1-soft:#23234a;
+  --c2:#2fd09b; --c2-d:#1a9e72; --c2-soft:#133329;
+  --c3:#ffb640; --c3-soft:#3a2c12;
+  --c4:#ff6b8b; --c4-soft:#3d1a24;
+  --c5:#3dbdf5; --c5-soft:#11303f;
+  --c6:#b98aff; --c6-soft:#2d1f45;
+  --claude:#e8906f; --claude-soft:#3a241c;
+    --c2t:var(--c2); --c3t:var(--c3); --c4t:var(--c4); --c5t:var(--c5); --c6t:var(--c6); --claudet:var(--claude); --c1-btn:#5d5de0;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 30px rgba(0,0,0,.35);
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif;font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3,h4{font-family:"Space Grotesk",Inter,sans-serif;line-height:1.15;letter-spacing:-.02em;margin:0}
+p{margin:0 0 1em}
+a{color:var(--c1)}
+code,.mono{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:.88em}
+button{font:inherit;color:inherit}
+svg text{font-family:Inter,sans-serif}
+
+/* ---------- top bar ---------- */
+.topbar{position:fixed;inset:0 0 auto 0;height:60px;z-index:50;display:flex;align-items:center;gap:14px;padding:0 18px;background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:10px;font-family:"Space Grotesk",Inter,system-ui,sans-serif;font-weight:700;font-size:1.05rem;text-decoration:none;color:var(--ink)}
+.brand-mark{width:30px;height:30px;border-radius:9px;background:conic-gradient(from 200deg,var(--c1),var(--c6),var(--c4),var(--c3),var(--c2),var(--c5),var(--c1));display:grid;place-items:center;color:#fff;font-size:.8rem}
+.progress{position:absolute;left:0;bottom:-1px;height:3px;width:0;background:linear-gradient(90deg,var(--c1),var(--c6),var(--c4));transition:width .1s linear}
+.top-actions{margin-left:auto;display:flex;gap:8px}
+.icon-btn{width:38px;height:38px;border-radius:12px;border:1px solid var(--line);background:var(--surface);display:grid;place-items:center;cursor:pointer}
+.icon-btn:hover{border-color:var(--c1)}
+#menuBtn{display:none}
+
+/* ---------- sidebar ---------- */
+.sidebar{position:fixed;top:60px;left:0;bottom:0;width:270px;padding:22px 14px;overflow:auto;border-right:1px solid var(--line);background:var(--bg);z-index:40}
+.sidebar h4{font-family:Inter,system-ui,sans-serif;font-size:.7rem;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin:0 10px 10px}
+.sidebar a{display:flex;align-items:center;gap:10px;padding:8px 10px;border-radius:12px;color:var(--ink-2);text-decoration:none;font-size:.9rem;font-weight:500;line-height:1.3}
+.sidebar a .num{flex:none;min-width:26px;padding:0 4px;height:26px;border-radius:8px;display:grid;place-items:center;font-size:.75rem;font-weight:700;background:var(--surface-2);color:var(--muted);transition:.25s}
+.sidebar a:hover{background:var(--surface-2)}
+.sidebar a.active{color:var(--ink);background:var(--surface)}
+.sidebar a.active .num{background:var(--c1);color:#fff}
+.sidebar a.done .num{background:var(--c2-soft);color:var(--c2t)}
+main{margin-left:270px;padding-top:60px}
+@media (max-width:1100px){
+  body.menu-open::after{content:"";position:fixed;inset:60px 0 0 0;background:rgba(0,0,0,.35);z-index:39}
+  .sidebar{transform:translateX(-100%);transition:transform .3s;box-shadow:var(--shadow)}
+  .sidebar.open{transform:none}
+  main{margin-left:0}
+  #menuBtn{display:grid}
+}
+
+/* ---------- layout ---------- */
+.wrap{max-width:780px;margin:0 auto;padding:0 20px}
+.wide{max-width:980px;margin-left:auto;margin-right:auto}
+.chapter{padding:90px 0 40px;border-top:1px solid var(--line)}
+.ch-head{display:flex;flex-direction:column;gap:14px;margin-bottom:34px}
+.ch-tag{display:inline-flex;align-items:center;gap:8px;align-self:flex-start;font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:6px 12px;border-radius:99px;background:var(--c1-soft);color:var(--c1)}
+.ch-head h2{font-size:clamp(2rem,5vw,3rem)}
+.ch-head .lede{font-size:1.2rem;color:var(--ink-2);margin:0}
+h3{font-size:1.45rem;margin:46px 0 14px}
+.muted{color:var(--muted)}
+.small{font-size:.85rem}
+
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:calc(100vh - 60px);display:flex;align-items:center;overflow:hidden}
+#heroCanvas{position:absolute;inset:0;width:100%;height:100%}
+.hero-inner{position:relative;z-index:1;padding:60px 20px;max-width:860px;margin:0 auto}
+.hero h1{font-size:clamp(2.6rem,7vw,5rem);letter-spacing:-.04em}
+.hero h1 .grad{background:linear-gradient(90deg,var(--c1),var(--c6),var(--c4));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{font-size:1.25rem;color:var(--ink-2);max-width:640px;margin:22px 0 30px}
+.hero-stats{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.hero-stats span{padding:8px 14px;border-radius:99px;background:var(--surface);border:1px solid var(--line);font-size:.85rem;font-weight:600;color:var(--ink-2)}
+
+/* ---------- widgets ---------- */
+.widget{background:var(--surface);border:1px solid var(--line);border-radius:24px;box-shadow:var(--shadow);padding:24px;margin:30px 0}
+.widget.wide{margin-left:max(-100px,min(0px,calc((1050px - 100vw)/2 + 20px)));margin-right:max(-100px,min(0px,calc((1050px - 100vw)/2 + 20px)))}
+@media (max-width:1100px){.widget.wide{margin-left:0;margin-right:0}}
+.w-head{display:flex;align-items:center;gap:10px;margin-bottom:6px;font-size:.72rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--c1)}
+.w-head::before{content:"";width:8px;height:8px;border-radius:50%;background:currentColor;box-shadow:0 0 0 4px color-mix(in srgb,currentColor 20%,transparent)}
+.w-title{font-family:"Space Grotesk",Inter,system-ui,sans-serif;font-size:1.3rem;font-weight:700;margin-bottom:4px}
+.w-sub{color:var(--ink-2);font-size:.95rem;margin-bottom:18px}
+.row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media (max-width:720px){.grid2{grid-template-columns:1fr!important}}
+.btn{cursor:pointer;border:1px solid var(--line);background:var(--surface);padding:9px 16px;border-radius:12px;font-weight:600;font-size:.9rem;box-shadow:0 3px 0 var(--line);transition:transform .08s,box-shadow .08s,background .2s}
+.btn:hover{background:var(--surface-2)}
+.btn:active{transform:translateY(2px);box-shadow:0 1px 0 var(--line)}
+.btn.primary{background:var(--c1-btn);color:#fff;border-color:var(--c1-btn);box-shadow:0 3px 0 var(--c1-d)}
+.btn.primary:hover{filter:brightness(1.07)}
+.btn.primary:active{box-shadow:0 1px 0 var(--c1-d)}
+.btn:disabled{opacity:.45;cursor:default}
+.chip{cursor:pointer;border:1px solid var(--line);background:var(--surface-2);padding:6px 13px;border-radius:99px;font-size:.84rem;font-weight:600;color:var(--ink-2);transition:.2s}
+.chip:hover{border-color:var(--c1)}
+.chip.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.stage{background:var(--surface-2);border-radius:16px;position:relative;overflow:hidden}
+canvas{display:block;width:100%}
+label.slider{display:flex;flex-direction:column;gap:4px;font-size:.85rem;font-weight:600;color:var(--ink-2);flex:1;min-width:150px}
+label.slider b{color:var(--ink);font-family:"JetBrains Mono",ui-monospace,monospace;font-weight:600}
+input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:6px;border-radius:9px;background:var(--surface-3);outline:none}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:20px;height:20px;border-radius:50%;background:var(--c1);border:3px solid var(--surface);box-shadow:0 1px 4px rgba(0,0,0,.25);cursor:pointer}
+input[type=range]::-moz-range-thumb{width:16px;height:16px;border-radius:50%;background:var(--c1);border:3px solid var(--surface);cursor:pointer}
+input[type=text]{width:100%;padding:12px 14px;border-radius:12px;border:1px solid var(--line);background:var(--surface-2);color:var(--ink);font:inherit;outline:none}
+input[type=text]:focus{border-color:var(--c1)}
+.readout{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:.85rem;color:var(--ink-2)}
+.pill{display:inline-block;padding:2px 9px;border-radius:99px;font-size:.78rem;font-weight:700}
+
+/* callouts */
+.key{border-left:4px solid var(--c1);background:var(--c1-soft);padding:16px 20px;border-radius:0 16px 16px 0;margin:26px 0}
+.key::before{content:"Key idea";display:block;font-size:.7rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--c1);margin-bottom:4px}
+.key.warn{border-color:var(--c3);background:var(--c3-soft)}
+.key.warn::before{content:"Worth knowing";color:var(--c3t)}
+.key p:last-child{margin:0}
+
+/* quiz */
+.quiz{border:2px dashed var(--line);border-radius:22px;padding:22px;margin:34px 0;background:var(--surface)}
+.quiz .q-label{font-size:.72rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--c3t)}
+.quiz .q{font-weight:700;font-size:1.08rem;margin:6px 0 14px}
+.quiz .opts{display:grid;gap:10px}
+.quiz .opt{text-align:left;cursor:pointer;padding:12px 16px;border-radius:14px;border:2px solid var(--line);background:var(--surface);font-weight:500;box-shadow:0 3px 0 var(--line);transition:.15s}
+.quiz .opt:hover{border-color:var(--c1)}
+.quiz .opt.right{border-color:var(--c2);background:var(--c2-soft);box-shadow:0 3px 0 var(--c2)}
+.quiz .opt.wrong{border-color:var(--c4);background:var(--c4-soft);box-shadow:0 3px 0 var(--c4);animation:shake .35s}
+.quiz .explain{display:none;margin-top:14px;padding:14px 16px;border-radius:14px;background:var(--surface-2);font-size:.95rem}
+.quiz.answered .explain{display:block;animation:pop .35s}
+@keyframes shake{25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+@keyframes pop{from{opacity:0;transform:translateY(6px)}}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+
+/* cards */
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:18px;transition:transform .25s,box-shadow .25s,opacity .3s}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.card h4{font-size:1.05rem;margin:8px 0 6px}
+.card p{font-size:.88rem;color:var(--ink-2);margin:0}
+.card .ico{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;font-size:1.25rem}
+.card.hide{display:none}
+
+/* ---------- specific widgets ---------- */
+#rings circle{cursor:pointer;transition:filter .2s,opacity .3s}
+#rings circle:hover{filter:brightness(1.08)}
+#rings text{pointer-events:none;font-weight:700}
+.info-panel{background:var(--surface-2);border-radius:16px;padding:18px;min-height:150px}
+.info-panel h4{font-size:1.2rem;margin-bottom:6px}
+.info-panel .ex{margin-top:10px;font-size:.88rem;color:var(--ink-2)}
+
+.spectrum{position:relative;height:14px;border-radius:99px;background:linear-gradient(90deg,var(--c2),var(--c3),var(--c4));margin:34px 8px 12px}
+.spectrum .mark{position:absolute;top:-30px;transform:translateX(-50%);font-size:.75rem;font-weight:700;white-space:nowrap;color:var(--ink)}
+.spectrum .mark::after{content:"";position:absolute;left:50%;top:22px;width:3px;height:22px;background:var(--ink);transform:translateX(-50%);border-radius:2px}
+.spectrum-labels{display:flex;justify-content:space-between;font-size:.8rem;font-weight:700;color:var(--ink-2)}
+
+#neuronSvg line{transition:stroke-width .2s,stroke .2s}
+#neuronOut{transition:fill .25s}
+
+.timeline{position:relative;overflow-x:auto;padding:26px 6px 8px;scrollbar-width:thin}
+.tl-track{position:relative;display:flex;gap:0;min-width:max-content;padding:0 20px}
+.tl-track::before{content:"";position:absolute;left:0;right:0;top:44px;height:3px;background:var(--line)}
+.tl-item{position:relative;width:86px;flex:none;text-align:center;cursor:pointer;padding-top:4px}
+.tl-year{font-size:.75rem;font-weight:700;color:var(--muted);height:22px}
+.tl-dot{width:18px;height:18px;border-radius:50%;margin:5px auto 8px;background:var(--surface);border:3px solid var(--muted);transition:.25s;position:relative;z-index:1}
+.tl-item.big .tl-dot{width:26px;height:26px;margin-top:1px;margin-bottom:4px}
+.tl-name{font-size:.72rem;font-weight:600;color:var(--ink-2);line-height:1.25;padding:0 4px}
+.tl-item:hover .tl-dot{transform:scale(1.2)}
+.tl-item.sel .tl-dot{background:var(--c1);border-color:var(--c1);box-shadow:0 0 0 6px var(--c1-soft)}
+.tl-item.sel .tl-name{color:var(--ink)}
+.tl-detail{margin-top:14px;background:var(--surface-2);border-radius:16px;padding:18px 20px;min-height:130px}
+.tl-detail h4{font-size:1.2rem;margin:6px 0}
+.tag{display:inline-block;padding:2px 10px;border-radius:99px;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em}
+.tag.paper{background:var(--c6-soft);color:var(--c6t)}
+.tag.milestone{background:var(--c5-soft);color:var(--c5t)}
+.tag.product{background:var(--c2-soft);color:var(--c2t)}
+.tag.claude{background:var(--claude-soft);color:var(--claudet)}
+
+.paper-card{background:linear-gradient(135deg,var(--c6-soft),var(--c1-soft));border-radius:24px;padding:28px;margin:30px 0;position:relative;overflow:hidden}
+.paper-card .ptitle{font-family:"Space Grotesk",Inter,system-ui,sans-serif;font-size:1.8rem;font-weight:700;margin:4px 0 6px}
+.paper-card .authors{font-size:.85rem;color:var(--ink-2)}
+.paper-card blockquote{margin:16px 0 0;padding:14px 18px;background:var(--surface);border-radius:14px;font-size:.95rem;font-style:italic;color:var(--ink-2)}
+
+.tf{display:flex;flex-direction:column-reverse;gap:8px;position:relative}
+.tf-block{cursor:pointer;border-radius:12px;padding:10px 14px;font-weight:600;font-size:.9rem;text-align:center;border:2px solid transparent;transition:.2s}
+.tf-block:hover,.tf-block.sel{border-color:var(--ink);transform:scale(1.02)}
+.tf-group{border:2px dashed var(--muted);border-radius:16px;padding:10px;display:flex;flex-direction:column-reverse;gap:8px;position:relative}
+.tf-group::after{content:"× N layers";position:absolute;right:-8px;top:-12px;background:var(--surface);padding:0 8px;font-size:.75rem;font-weight:700;color:var(--muted)}
+.tf-flow{position:absolute;left:-14px;top:0;bottom:0;width:4px;border-radius:4px;background:linear-gradient(0deg,var(--c1),var(--c6),var(--c4),var(--c1));background-size:100% 300%;animation:flow 2.5s linear infinite}
+@keyframes flow{to{background-position:0 300%}}
+
+.tokens{display:flex;flex-wrap:wrap;gap:3px;margin-top:14px;min-height:44px;font-family:"JetBrains Mono",ui-monospace,monospace;font-size:.92rem}
+.tok{padding:4px 5px;border-radius:6px;white-space:pre;animation:pop .3s both}
+.stats{display:flex;gap:18px;margin-top:14px;flex-wrap:wrap}
+.stat{background:var(--surface-2);border-radius:12px;padding:10px 14px;min-width:100px}
+.stat b{display:block;font-family:"Space Grotesk",Inter,system-ui,sans-serif;font-size:1.5rem}
+.stat span{font-size:.75rem;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+
+.att-wrap{position:relative;overflow-x:auto;padding-top:110px}
+.att-words{display:flex;gap:6px;white-space:nowrap;padding:0 8px 8px;position:relative;z-index:1;min-width:max-content}
+.att-word{cursor:pointer;padding:8px 10px;border-radius:10px;font-weight:600;border:2px solid transparent;transition:background .25s,border-color .2s;position:relative}
+.att-word.src{border-color:var(--ink)}
+.att-word.future{opacity:.3}
+.att-word .bar{position:absolute;left:6px;right:6px;bottom:-8px;height:4px;border-radius:3px;background:var(--c1);transform-origin:left;transition:transform .3s}
+#attSvg{position:absolute;left:0;top:0;pointer-events:none;overflow:visible}
+#attSvg path{fill:none;stroke:var(--c1);stroke-linecap:round;transition:stroke-width .3s,opacity .3s}
+
+.probs{display:grid;gap:7px;margin-top:14px}
+.prob{display:grid;grid-template-columns:90px 1fr 56px;align-items:center;gap:10px;font-weight:600;font-size:.92rem}
+.prob .track{height:26px;border-radius:8px;background:var(--surface-2);overflow:hidden}
+.prob .fill{height:100%;border-radius:8px;background:linear-gradient(90deg,var(--c1),var(--c6));transition:width .35s cubic-bezier(.2,.7,.2,1)}
+.prob.picked .fill{background:linear-gradient(90deg,var(--c2),var(--c5))}
+.sentence{font-size:1.35rem;font-family:"Space Grotesk",Inter,system-ui,sans-serif;font-weight:600}
+.sentence .next{color:var(--c1);border-bottom:3px solid var(--c1);padding:0 4px;display:inline-block;min-width:60px;transition:.2s}
+.samples{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px;min-height:30px}
+.samples span{padding:3px 10px;border-radius:99px;background:var(--surface-2);font-size:.8rem;font-weight:600;animation:pop .3s}
+
+#embSvg .pt circle{transition:r .3s}
+#embSvg text{font-size:13px;font-weight:600;fill:var(--ink)}
+#embSvg .vec{stroke-width:3;fill:none;stroke-dasharray:400;stroke-dashoffset:400;transition:stroke-dashoffset 1s ease}
+#embSvg .vec.on{stroke-dashoffset:0}
+
+.steps{display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap}
+.step-dot{flex:1;min-width:90px;padding:10px 12px;border-radius:12px;background:var(--surface-2);font-size:.8rem;font-weight:700;color:var(--muted);cursor:pointer;transition:.25s;border:2px solid transparent}
+.step-dot.on{background:var(--c1-soft);color:var(--c1);border-color:var(--c1)}
+.step-dot.done{color:var(--c2t)}
+.step-body{min-height:150px;animation:pop .4s}
+.step-body .big-ico{font-size:2.4rem}
+
+.stack{display:flex;flex-direction:column;gap:8px}
+.layer{border-radius:14px;padding:14px 18px;display:flex;justify-content:space-between;align-items:center;gap:12px;font-weight:600;transition:transform .3s;cursor:default}
+.layer:hover{transform:translateX(6px)}
+.layer small{font-weight:500;color:var(--ink-2);text-align:right}
+
+.tier{cursor:pointer;border:2px solid var(--line);border-radius:18px;padding:16px;background:var(--surface);transition:.25s}
+.tier.on{border-color:var(--claude);background:var(--claude-soft)}
+.tier h4{font-size:1.15rem}
+.meter{display:grid;grid-template-columns:100px 1fr;align-items:center;gap:10px;font-size:.85rem;font-weight:600;margin:8px 0}
+.meter .track{height:12px;border-radius:9px;background:var(--surface-2);overflow:hidden}
+.meter .fill{height:100%;border-radius:9px;background:var(--claude);transition:width .5s cubic-bezier(.2,.7,.2,1)}
+
+.code{background:#15151d;color:#e6e6ee;border-radius:14px;padding:14px 16px;font-family:"JetBrains Mono",ui-monospace,monospace;font-size:.8rem;line-height:1.55;white-space:pre-wrap;overflow-x:auto;min-height:120px}
+.code .k{color:#ff9e7a}.code .s{color:#8fe3b0}.code .c{color:#8a8aa0}
+
+.books{display:flex;flex-wrap:wrap;gap:5px;margin-top:14px;min-height:60px;align-items:flex-end}
+.book{width:14px;height:44px;border-radius:3px;animation:pop .3s both}
+.page{width:18px;height:24px;border-radius:2px;background:var(--surface-3);border:1px solid var(--line);animation:pop .3s both}
+
+.think{border:1px solid var(--line);border-radius:14px;margin-top:14px;overflow:hidden}
+.think-head{padding:10px 14px;font-size:.8rem;font-weight:700;background:var(--surface-2);display:flex;align-items:center;gap:8px;color:var(--ink-2)}
+.think-body{padding:12px 14px;font-size:.88rem;color:var(--ink-2);font-family:"JetBrains Mono",ui-monospace,monospace;white-space:pre-wrap;min-height:40px}
+.answer{margin-top:12px;padding:14px 16px;border-radius:14px;background:var(--claude-soft);font-weight:600;display:none}
+.spin{width:12px;height:12px;border-radius:50%;border:2px solid var(--claude);border-right-color:transparent;animation:rot .8s linear infinite}
+@keyframes rot{to{transform:rotate(360deg)}}
+
+.rag-docs{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:8px;margin-top:12px}
+.rag-doc{border-radius:12px;padding:10px 12px;font-size:.78rem;background:var(--surface-2);border:2px solid transparent;transition:.35s;position:relative}
+.rag-doc .score{position:absolute;top:6px;right:8px;font-family:"JetBrains Mono",ui-monospace,monospace;font-size:.72rem;font-weight:700;opacity:0;transition:.3s}
+.rag-doc.scored .score{opacity:1}
+.rag-doc.top{border-color:var(--c2);background:var(--c2-soft);transform:scale(1.03)}
+.rag-doc.dim{opacity:.4}
+.rag-doc b{display:block;font-size:.8rem;margin-bottom:2px;padding-right:40px}
+.vecbar{display:flex;gap:2px;height:28px;align-items:flex-end;margin-top:8px}
+.vecbar i{flex:1;border-radius:2px;background:var(--c1);transition:height .4s}
+.rag-stage{display:flex;gap:6px;margin:14px 0;flex-wrap:wrap}
+.rag-stage span{flex:1;min-width:110px;text-align:center;padding:8px;border-radius:10px;font-size:.78rem;font-weight:700;background:var(--surface-2);color:var(--muted);transition:.3s}
+.rag-stage span.on{background:var(--c1-btn);color:#fff}
+.rag-stage span.done{background:var(--c2-soft);color:var(--c2t)}
+
+.flow-dash{stroke-dasharray:6 6;animation:dash 1s linear infinite}
+.lanes{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}
+@media (max-width:720px){.lanes{grid-template-columns:1fr}}
+.lane{border:1px solid var(--line);border-radius:16px;padding:14px;background:var(--surface-2);min-width:0}
+.lane-head{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;font-size:.8rem;font-weight:800;margin-bottom:8px}
+.lane-bar{height:6px;border-radius:6px;background:var(--surface-3);overflow:hidden;margin-bottom:10px}
+.lane-bar i{display:block;height:100%;width:0;border-radius:6px}
+.jq{background:var(--surface);border-radius:12px;padding:10px 12px;margin-bottom:8px;opacity:.35;transition:opacity .3s}
+.jq.on{opacity:1;animation:pop .35s}
+.jq-name{display:flex;justify-content:space-between;font-family:"JetBrains Mono",ui-monospace,monospace;font-size:.78rem;font-weight:600;margin-bottom:6px}
+.jq-name span{color:var(--muted)}
+.opt-row{display:grid;grid-template-columns:110px 1fr 40px;gap:8px;align-items:center;font-size:.78rem;font-weight:600;margin:3px 0}
+.opt-row .track{height:10px;border-radius:6px;background:var(--surface-2);overflow:hidden}
+.opt-row .fill{height:100%;border-radius:6px;background:var(--c5);transition:width .4s cubic-bezier(.2,.7,.2,1)}
+.opt-row.best .fill{background:var(--c2)}
+.scale{position:relative;height:10px;border-radius:6px;background:linear-gradient(90deg,var(--c2),var(--c3),var(--c4));margin:14px 4px 6px}
+.scale b{position:absolute;top:-6px;width:4px;height:22px;border-radius:2px;background:var(--ink);transform:translateX(-50%);transition:left .5s cubic-bezier(.2,.7,.2,1)}
+.scale-labels{display:flex;justify-content:space-between;font-size:.7rem;font-weight:600;color:var(--muted)}
+.s12{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media (max-width:720px){.s12{grid-template-columns:1fr}}
+.s12 .card ul{margin:8px 0 0;padding-left:18px;font-size:.88rem;color:var(--ink-2)}
+@keyframes dash{to{stroke-dashoffset:-24}}
+
+.footer{padding:70px 20px 90px;text-align:center;color:var(--muted);font-size:.9rem;border-top:1px solid var(--line)}
+.recap{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
+.recap div{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:16px;font-size:.9rem}
+.recap b{display:block;font-family:"Space Grotesk",Inter,system-ui,sans-serif;font-size:1rem;margin-bottom:4px}
+@media (max-width:720px){
+  .stage:has(> svg){overflow-x:auto;-webkit-overflow-scrolling:touch}
+  #netSvg,#jepaSvg,#moeSvg,#calSvg,#ttcSvg,#embSvg,#ofSvg,#cmSvg,#fairSvg,#ctxSim,#patSvg,#vitSvg{min-width:540px}
+  #toolSvg{min-width:440px}
+  .step-dot{font-size:.72rem;min-width:70px;padding:8px;overflow-wrap:anywhere}
+  .layer{flex-direction:column;align-items:flex-start;gap:2px}.layer small{text-align:left}
+}
+.scroll-hint{display:none;font-size:.72rem;color:var(--muted);margin-top:6px}
+@media (max-width:720px){.scroll-hint{display:block}}
+/* ---------- ML engineering chapters ---------- */
+.dtable{width:100%;min-width:480px;border-collapse:separate;border-spacing:0;font-size:.85rem}
+.dtable th{text-align:left;font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);padding:8px 10px;border-bottom:2px solid var(--line)}
+.dtable td{padding:8px 10px;border-bottom:1px solid var(--line);font-family:"JetBrains Mono",ui-monospace,monospace;transition:background .4s,color .4s,opacity .4s}
+.dtable td.bad{background:var(--c4-soft);color:var(--c4t);font-weight:700;cursor:help}
+.dtable td.fixed{background:var(--c2-soft);color:var(--c2t);font-weight:700}
+.dtable tr.gone td{opacity:.3;text-decoration:line-through}
+.mini{border-collapse:separate;border-spacing:0;font-size:.82rem;width:100%}
+.mini th{text-align:left;font-size:.7rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);padding:6px 8px;border-bottom:2px solid var(--line);white-space:nowrap}
+.mini td{padding:6px 8px;border-bottom:1px solid var(--line)}
+.mini.ev td:first-child{font-weight:600}
+.mini tr.reg td{background:var(--c3-soft)}
+.recipe{display:grid;grid-template-columns:1fr auto 1fr;gap:14px;align-items:center}
+.recipe>div{background:var(--surface-2);border-radius:12px;padding:8px}
+.recipe-arrow{font-size:1.6rem;font-weight:800;color:var(--c3t);background:none!important;animation:nudge 1.4s ease-in-out infinite}
+@keyframes nudge{50%{transform:translateX(5px)}}
+@media (max-width:720px){.recipe{grid-template-columns:1fr}.recipe-arrow{transform:rotate(90deg);text-align:center;animation:none}}
+.split-grid{display:grid;grid-template-columns:repeat(20,1fr);gap:4px}
+.split-grid i{aspect-ratio:1;border-radius:3px;transition:background .5s,transform .5s cubic-bezier(.2,.7,.2,1)}
+.cm{display:grid;grid-template-columns:auto 1fr 1fr;gap:6px;font-size:.78rem}
+.cm-h{font-weight:700;color:var(--muted);text-align:center;align-self:end;font-size:.72rem}
+.cm-r{text-align:right;align-self:center}
+.cm-cell{border-radius:12px;padding:12px 6px;text-align:center;transition:background .3s}
+.cm-cell b{display:block;font-family:"Space Grotesk",Inter,system-ui,sans-serif;font-size:1.5rem}
+.cm-cell span{font-size:.7rem;font-weight:700;color:var(--ink-2)}
+.dash{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:720px){.dash{grid-template-columns:1fr}}
+.panel{background:var(--surface-2);border-radius:14px;padding:12px 14px}
+.panel-head{display:flex;justify-content:space-between;gap:8px;font-size:.78rem;font-weight:700}
+.panel-head .st{white-space:nowrap;font-size:.72rem}
+.panel .mono{color:var(--ink-2);margin-top:2px}
+.alerts{margin-top:12px;height:130px;overflow:auto;background:var(--surface-2);border-radius:12px;padding:10px 12px;font-family:"JetBrains Mono",ui-monospace,monospace;font-size:.75rem}
+.alerts div{padding:2px 0;animation:pop .3s}
+.alerts .bad{color:var(--c4t);font-weight:600}.alerts .ok{color:var(--c2t);font-weight:600}.alerts .ev{color:var(--ink-2)}
+.xai{display:grid;grid-template-columns:minmax(120px,190px) 1fr minmax(50px,auto);gap:10px;align-items:center;font-size:.85rem;font-weight:600;margin:6px 0}
+.xai-track{position:relative;height:16px;border-radius:8px;background:var(--surface-2)}
+.xai-track::after{content:"";position:absolute;left:50%;top:-3px;bottom:-3px;width:2px;background:var(--line)}
+.xai-fill{position:absolute;top:0;height:100%;border-radius:8px;transition:width .5s cubic-bezier(.2,.7,.2,1)}
+.pyr{display:flex;flex-direction:column;align-items:center;gap:6px}
+.pyr-level{cursor:pointer;text-align:center;padding:12px 8px;border-radius:10px;border:2px solid;font-weight:700;font-size:.88rem;transition:transform .2s,box-shadow .2s}
+.pyr-level:hover{transform:scale(1.03)}
+.pyr-level.sel{box-shadow:0 0 0 4px var(--surface-3)}
+.sidebar .grp{margin:18px 10px 6px;font-size:.66rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+/* ---------- first model ---------- */
+.fm-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:start}
+@media (max-width:860px){.fm-grid{grid-template-columns:1fr}}
+.fm-body{min-height:360px;animation:pop .35s}
+.fm-body h4{font-size:1.2rem;margin:0 0 8px}
+.fm-body p{font-size:.95rem}
+.fm-legend{display:flex;gap:14px;flex-wrap:wrap;font-size:.75rem;font-weight:600;color:var(--ink-2);margin-top:8px}
+.fm-legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;vertical-align:-1px}
+.step-dot.locked{opacity:.4;cursor:not-allowed}
+.fm-opts{display:grid;gap:8px}
+.fm-opt{text-align:left;cursor:pointer;padding:10px 14px;border-radius:12px;border:2px solid var(--line);background:var(--surface);font-weight:600;font-size:.9rem;box-shadow:0 3px 0 var(--line)}
+.fm-opt:hover{border-color:var(--c1)}
+.fm-opt.right{border-color:var(--c2);background:var(--c2-soft);box-shadow:0 3px 0 var(--c2)}
+.fm-opt.wrong{border-color:var(--c4);background:var(--c4-soft);animation:shake .35s}
+.fm-checks{display:grid;gap:8px}
+.fm-checks label{display:flex;gap:10px;align-items:flex-start;font-size:.9rem;cursor:pointer}
+.fm-checks input{margin-top:5px;width:17px;height:17px;accent-color:var(--c1);flex:none}
+td.fm-bad{background:var(--c4-soft);color:var(--c4t);font-weight:700}
+/* ---------- glossary ---------- */
+.gl-tools{position:sticky;top:70px;z-index:5;padding:16px 18px}
+@media (max-width:720px){.gl-tools{position:static}.gl-card{scroll-margin-top:80px}}
+.gl-letters{display:flex;flex-wrap:wrap;gap:4px;margin-top:10px}
+.gl-l{cursor:pointer;border:none;background:var(--surface-2);border-radius:8px;min-width:30px;height:30px;font-weight:700;font-size:.8rem;color:var(--ink-2)}
+.gl-l:hover{background:var(--surface-3)}.gl-l.on{background:var(--ink);color:var(--bg)}
+.gl-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}
+.gl-letter{grid-column:1/-1;font-family:"Space Grotesk",Inter,system-ui,sans-serif;font-size:1.6rem;font-weight:700;color:var(--muted);margin:14px 0 -4px;border-bottom:2px solid var(--line)}
+.gl-card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:14px 16px;scroll-margin-top:230px}
+.gl-card:target{border-color:var(--c1);box-shadow:0 0 0 4px var(--c1-soft)}
+.gl-card h4{font-size:1rem;margin:0}
+.gl-card p{font-size:.88rem;color:var(--ink-2);margin:8px 0}
+.gl-card a{text-decoration:none;font-weight:600}
+.gl-term,.gl-demo{text-decoration:underline dotted var(--c1);text-decoration-thickness:2px;text-underline-offset:3px;cursor:help;font-weight:700}
+.gl-term:focus-visible{outline:2px solid var(--c1);outline-offset:2px;border-radius:3px}
+.gl-pop{position:fixed;z-index:80;max-width:320px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:12px 14px;box-shadow:0 12px 40px rgba(0,0,0,.18);font-size:.85rem;opacity:0;pointer-events:none;transform:translateY(4px);transition:opacity .15s,transform .15s}
+.gl-pop.on{opacity:1;pointer-events:auto;transform:none}
+.gl-pop p{margin:6px 0 8px;color:var(--ink-2)}
+.gl-pop a{text-decoration:none;font-weight:700}
+/* ---------- agents ---------- */
+.ag-log{background:var(--surface-2);border-radius:14px;padding:10px;max-height:380px;min-height:200px;overflow:auto;display:flex;flex-direction:column;gap:6px}
+.ag-line{background:var(--surface);border-radius:10px;padding:8px 10px;font-size:.84rem;border-left:4px solid var(--line);animation:pop .3s;position:relative}
+.ag-line div{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:.78rem;margin-top:3px;white-space:pre-wrap;overflow-wrap:anywhere}
+.ag-tag{font-size:.66rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.ag-tok{position:absolute;right:10px;top:8px;font-size:.68rem;font-weight:700;color:var(--muted);font-family:"JetBrains Mono",ui-monospace,monospace}
+.ag-user{border-left-color:var(--c1)}.ag-think{border-left-color:var(--c6)}.ag-tool{border-left-color:var(--c3)}.ag-result{border-left-color:var(--c5)}.ag-final{border-left-color:var(--c2)}.ag-hook{border-left-color:var(--claude);background:var(--claude-soft)}
+.ag-hook .ag-tag{color:var(--claudet)}
+.hook-events{display:flex;flex-wrap:wrap;align-items:center;gap:4px}
+.hk-ev{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:.72rem;font-weight:600;padding:4px 8px;border-radius:8px;background:var(--surface-2);color:var(--muted);transition:.25s}
+.hk-ev.on{background:var(--claude);color:#fff;box-shadow:0 0 0 3px var(--claude-soft)}
+.hk-arrow{color:var(--muted);font-size:.75rem}
+.perm-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:6px}
+.perm-row{display:flex;justify-content:space-between;align-items:center;gap:8px;background:var(--surface-2);border-radius:10px;padding:8px 12px;font-size:.88rem;font-weight:600}
+.perm-row .pill{white-space:nowrap}
+.tier .tg{display:inline-block;margin-top:4px;font-size:.68rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--claudet)}
+.tier .px{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:.72rem;color:var(--muted);margin-top:6px}
+/* ---------- RL ---------- */
+.bandits{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+@media (max-width:560px){.bandits{grid-template-columns:repeat(2,1fr)}}
+.bandit{cursor:pointer;border:2px solid var(--line);background:var(--surface);border-radius:16px;padding:12px 8px;text-align:center;box-shadow:0 3px 0 var(--line);transition:transform .1s}
+.bandit:active{transform:translateY(2px)}
+.bandit.win{border-color:var(--c2);background:var(--c2-soft)}.bandit.lose{border-color:var(--c4)}
+.b-emoji{font-size:1.8rem}.b-name{font-weight:800;font-size:.85rem;margin:2px 0 6px}
+.b-bar{position:relative;height:70px;width:28px;margin:0 auto 6px;border-radius:8px;background:var(--surface-2);overflow:hidden}
+.b-bar i{position:absolute;left:0;right:0;bottom:0;background:var(--c3);border-radius:8px;transition:height .25s}
+.b-bar em{position:absolute;left:-4px;right:-4px;height:3px;background:var(--ink)}
+/* ---------- vision ---------- */
+.px-canvas{width:100%;display:block;border-radius:12px;background:#000;cursor:crosshair}
+.px-nums{display:grid;grid-template-columns:repeat(14,1fr);gap:1px;font-family:"JetBrains Mono",ui-monospace,monospace;font-size:.68rem;color:var(--muted);text-align:center;background:var(--surface-2);border-radius:10px;padding:8px}
+.conv-grid{display:grid;grid-template-columns:1fr 160px 1fr;gap:16px;align-items:center}
+@media (max-width:720px){.conv-grid{grid-template-columns:1fr}}
+.conv-mid{text-align:center}
+.kgrid{display:grid;grid-template-columns:repeat(3,44px);gap:4px;justify-content:center;margin-top:6px}
+.kgrid span{height:44px;border-radius:8px;display:grid;place-items:center;font-family:"JetBrains Mono",ui-monospace,monospace;font-size:.72rem;font-weight:700}
+.cnn-row{display:flex;align-items:center;gap:8px;overflow-x:auto;padding:4px}
+.cnn-col{flex:1;min-width:110px;background:var(--surface-2);border-radius:14px;padding:10px;text-align:center;animation:pop .6s both}
+.cnn-cells{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;margin:8px 0}
+.cnn-cells span{aspect-ratio:1;display:grid;place-items:center;background:var(--surface);border-radius:8px;font-size:1.2rem}
+.cnn-arrow{font-size:1.3rem;font-weight:800;color:var(--c5)}
+/* ---------- course switcher ---------- */
+.courses{display:flex;gap:3px;margin-left:14px;background:var(--surface-2);padding:4px;border-radius:99px}
+.courses a{padding:6px 12px;border-radius:99px;font-size:.8rem;font-weight:700;color:var(--ink-2);text-decoration:none;white-space:nowrap}
+.courses a:hover{background:var(--surface-3)}
+.courses a.on{background:var(--ink);color:var(--bg)}
+@media (max-width:760px){.brand-txt{display:none}.courses{margin-left:2px}.courses a{padding:5px 8px;font-size:.72rem}}
+@media (max-width:430px){.top-actions a.icon-btn{display:none}.courses a .ci{display:none}}
+/* ---------- course switcher ---------- */
+.courses{display:flex;gap:3px;margin-left:14px;background:var(--surface-2);padding:4px;border-radius:99px}
+.courses a{padding:6px 12px;border-radius:99px;font-size:.8rem;font-weight:700;color:var(--ink-2);text-decoration:none;white-space:nowrap}
+.courses a:hover{background:var(--surface-3)}
+.courses a.on{background:var(--ink);color:var(--bg)}
+@media (max-width:760px){.brand-txt{display:none}.courses{margin-left:2px}.courses a{padding:5px 8px;font-size:.72rem}}
+@media (max-width:430px){.top-actions a.icon-btn{display:none}.courses a .ci{display:none}}
+/* ---------- sorter ---------- */
+.sorter{min-height:230px}
+.sort-progress{display:flex;justify-content:space-between;font-size:.78rem;font-weight:700;color:var(--muted)}
+.sort-bar{height:5px;border-radius:5px;background:var(--surface-2);margin:6px 0 14px;overflow:hidden}.sort-bar i{display:block;height:100%;background:var(--c1);transition:width .3s}
+.sort-card{font-size:1.12rem;font-weight:600;padding:18px 20px;border-radius:16px;background:var(--surface-2);animation:pop .35s}
+.sort-buckets{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.sort-b{flex:1;min-width:130px;cursor:pointer;padding:12px;border-radius:14px;border:2px solid var(--line);background:var(--surface);font-weight:700;box-shadow:0 3px 0 var(--line);transition:.15s}
+.sort-b:hover{border-color:var(--c1)}.sort-b.right{border-color:var(--c2);background:var(--c2-soft)}.sort-b.wrong{border-color:var(--c4);background:var(--c4-soft);animation:shake .35s}
+.sort-fb{margin-top:12px;animation:pop .3s}.sort-fb p{margin:0 0 10px;font-size:.95rem}
+.sort-done{text-align:center;padding:24px}.sort-big{font-family:"Space Grotesk",Inter,system-ui,sans-serif;font-size:3rem;font-weight:700}
+/* ---------- library ---------- */
+.lib{display:grid;gap:10px}
+.lib-book{display:grid;grid-template-columns:64px 1fr;gap:14px;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:14px 16px}
+.book-year{font-family:"Space Grotesk",Inter,system-ui,sans-serif;font-size:1.35rem;font-weight:700;color:var(--c1)}
+.lib-book h4{font-size:1.02rem;margin:0 0 3px}.lib-book p{font-size:.9rem;color:var(--ink-2);margin:6px 0 0}
+/* ---------- PM widgets ---------- */
+.rice{display:grid;gap:6px;overflow-x:auto;padding-bottom:4px}
+.rice-h,.rice-r{display:grid;grid-template-columns:150px 1.2fr .9fr 1fr 1.6fr;gap:10px;align-items:center;min-width:760px}
+.rice-h{font-size:.68rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);padding:0 10px}
+.rice-r{background:var(--surface-2);border-radius:12px;padding:8px 10px;font-size:.88rem}
+.rice-r label{display:flex;align-items:center;gap:8px}.rice-r label span{min-width:44px}
+select{font:inherit;font-size:.8rem;padding:6px 8px;border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--ink);max-width:100%}
+.am-row{display:flex;align-items:center;gap:6px;padding:7px 0;border-bottom:1px solid var(--line);flex-wrap:wrap}.am-row .chip{font-size:.7rem;padding:4px 9px}
+.am-n{width:22px;height:22px;border-radius:50%;background:var(--surface-3);display:grid;place-items:center;font-size:.72rem;font-weight:800;flex:none}
+.ft-row{display:grid;grid-template-columns:170px 1fr;gap:14px;padding:10px 0;border-bottom:1px solid var(--line)}
+.ft-feat{color:var(--c4t);font-weight:600}.ft-emp{color:var(--c2t);font-weight:600}
+@media (max-width:560px){.ft-row{grid-template-columns:1fr;gap:2px}}
+.auto-ladder{display:flex;flex-direction:column;gap:6px}
+.ladder-step{display:flex;gap:10px;align-items:center;padding:10px 12px;border-radius:12px;background:var(--surface-2);opacity:.45;transition:.3s;font-size:.9rem}
+.ladder-step.on{opacity:1;background:var(--claude-soft);box-shadow:inset 0 0 0 2px var(--claude);transform:scale(1.02)}
+/* ---------- platform widgets ---------- */
+.wta-row{display:flex;gap:10px;align-items:flex-start;padding:8px 0;border-bottom:1px solid var(--line);font-size:.92rem;font-weight:600;cursor:pointer}.wta-row input{width:18px;height:18px;margin-top:3px;accent-color:var(--c6);flex:none}
+.gp-row{display:grid;grid-template-columns:minmax(180px,1.3fr) 1fr 64px;gap:10px;align-items:center;font-size:.86rem;font-weight:600;margin:7px 0}
+.gp-row .track{height:14px;border-radius:8px;background:var(--surface-2);overflow:hidden}.gp-row .fill{height:100%;border-radius:8px;transition:width .5s cubic-bezier(.2,.7,.2,1),background .3s}
+@media (max-width:560px){.gp-row{grid-template-columns:1fr 64px}.gp-row .track{grid-column:1/-1;order:3}}
+.dora-q{padding:10px 0;border-bottom:1px solid var(--line)}.dora-q .row{margin-top:6px;gap:6px}
+.dora-result{display:flex;gap:16px;align-items:center;margin-top:14px;flex-wrap:wrap}
+.dora-tier{border:2px solid;border-radius:16px;padding:10px 20px;display:flex;flex-direction:column;align-items:center}.dora-tier b{font-family:"Space Grotesk",Inter,system-ui,sans-serif;font-size:1.7rem}
+.dora-result p{flex:1;min-width:220px}
+.mm-row{padding:8px 0;border-bottom:1px solid var(--line)}.mm-row .row{margin-top:4px;gap:6px}.mm-row .chip{min-width:34px}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <button class="icon-btn" id="menuBtn" aria-label="Open chapters">☰</button>
+  <a class="brand" href="#top"><span class="brand-mark">PL</span><span class="brand-txt">Platforms, First Principles</span></a>
+  <nav class="courses" aria-label="Courses"><a href="index.html"><span class="ci">🤖 </span>AI</a><a href="product-management.html"><span class="ci">🧭 </span>Product</a><a href="platform-management.html" class="on"><span class="ci">🏗️ </span>Platforms</a></nav>
+  <div class="top-actions"><button class="icon-btn" id="themeBtn" aria-label="Toggle theme">◐</button></div>
+  <div class="progress" id="progress"></div>
+</header>
+<nav class="sidebar" id="sidebar">
+  <h4>Course</h4>
+  <div class="grp">Part A · Platform businesses</div>
+  <a href="#pl1"><span class="num">1</span>What is a platform?</a>
+  <a href="#pl2"><span class="num">2</span>Network effects &amp; cold start</a>
+  <a href="#pl3"><span class="num">3</span>Pricing &amp; take rates</a>
+  <a href="#pl4"><span class="num">4</span>Governance &amp; tipping</a>
+  <a href="#pl5"><span class="num">5</span>AI reshuffles platforms</a>
+  <div class="grp">Part B · Internal platforms</div>
+  <a href="#pl6"><span class="num">6</span>Cognitive load &amp; team types</a>
+  <a href="#pl7"><span class="num">7</span>Platform as a product</a>
+  <a href="#pl8"><span class="num">8</span>Measuring a platform</a>
+  <a href="#pl9"><span class="num">9</span>Maturity &amp; the AI era</a>
+  <a href="#plread"><span class="num">📚</span>Reading list &amp; research</a>
+  <a href="#recap"><span class="num">★</span>Recap</a>
+</nav>
+<main id="top">
+<section class="hero">
+  <canvas id="heroCanvas" aria-hidden="true"></canvas>
+  <div class="hero-inner reveal">
+    <span class="ch-tag">An interactive course</span>
+    <h1 style="margin-top:18px">Platforms, <span class="grad">from first principles</span>.</h1>
+    <p>Two kinds of platform, one idea: make it cheaper for others to create value. Launch a two-sided marketplace, find the take-rate sweet spot, map your teams with Team Topologies, build a golden path, and assess your internal platform with DORA and CNCF maturity models.</p>
+    <a class="btn primary" href="#pl1" style="text-decoration:none;padding:13px 24px;font-size:1rem">Start learning →</a>
+    <div class="hero-stats"><span>9 chapters</span><span>Platform businesses + internal platforms</span><span>20 books, papers &amp; reports</span></div>
+  </div>
+</section>
+<!-- ============ PL1 ============ -->
+<section class="chapter" id="pl1">
+<div class="wrap">
+  <div class="ch-head reveal">
+    <span class="ch-tag">Chapter 1</span>
+    <h2>What is a platform?</h2>
+    <p class="lede">One word, two worlds, one first principle.</p>
+  </div>
+  <p class="reveal">"Platform" means two related things. A <b>platform business</b> (App Store, Airbnb, Uber, YouTube) creates value by <b>enabling interactions</b> between outside producers and consumers. An <b>internal platform</b> (a company's developer platform) gives product teams self-service building blocks so they can ship faster. Both rest on the same first principle: <b>a platform is a foundation that makes it dramatically cheaper for <i>others</i> to create value, and it succeeds only when those others choose to build on it.</b></p>
+  <p class="reveal">That's why platforms are managed differently from ordinary products. Your success depends on an ecosystem you don't control. You can design incentives, rules and tools, but you can't order anyone to show up.</p>
+
+  <div class="widget wide reveal">
+    <div class="w-head">Animation</div>
+    <div class="w-title">Pipeline vs. platform</div>
+    <div class="w-sub">Traditional businesses are <b>pipelines</b>: value flows in one direction, from supplier to firm to customer. <b>Platforms</b> orchestrate value that flows between participants, and the firm doesn't own the inventory. (From <i>Platform Revolution</i>, Parker, Van Alstyne and Choudary, 2016.)</div>
+    <div class="row" id="ppMode" style="margin-bottom:10px"><button class="chip on" data-pp="pipe">Pipeline (a hotel chain)</button><button class="chip" data-pp="plat">Platform (a home-sharing marketplace)</button></div>
+    <div class="stage" style="padding:8px"><svg id="ppSvg" viewBox="0 0 640 260" style="width:100%;display:block"></svg></div>
+    <div class="scroll-hint">↔ swipe the diagram to see all of it</div>
+    <p class="small" id="ppNote" style="margin-top:10px"></p>
+  </div>
+  <div class="key reveal"><p>Every platform has a <b>core interaction</b>: the single most important exchange of value it enables, such as a stay booked, a ride taken, an app installed, or a service deployed. Design everything to make that interaction easier, more frequent and more valuable.</p></div>
+</div>
+</section>
+
+<!-- ============ PL2 ============ -->
+<section class="chapter" id="pl2">
+<div class="wrap">
+  <div class="ch-head reveal">
+    <span class="ch-tag" style="background:var(--c2-soft);color:var(--c2t)">Chapter 2</span>
+    <h2>Network effects &amp; the cold start problem</h2>
+    <p class="lede">A platform becomes more valuable as more people use it, which means it's nearly worthless when nobody does.</p>
+  </div>
+  <p class="reveal">Network effects come in two kinds. <b>Same-side</b> effects: more players make a game more fun for players. <b>Cross-side</b> effects: more drivers make a ride app better for riders, and more riders make it better for drivers. They can also turn <b>negative</b>, through congestion, spam or low-quality supply. Economists Jean-Charles Rochet and Jean Tirole formalized these <b>two-sided markets</b> in 2003. Tirole went on to win the 2014 Nobel prize for his wider work on market power and regulation.</p>
+  <p class="reveal">The flip side is the <b>chicken-and-egg problem</b>: riders won't come without drivers, and drivers won't come without riders. Andrew Chen's <i>The Cold Start Problem</i> (2021) describes the path: build an <b>atomic network</b> (the smallest network that works on its own, like one city or one campus), reach the <b>tipping point</b>, hit <b>escape velocity</b>, deal with the <b>ceiling</b>, and then defend the <b>moat</b>.</p>
+
+  <div class="widget wide reveal">
+    <div class="w-head" style="color:var(--c2t)">Simulation</div>
+    <div class="w-title">Launch a two-sided marketplace</div>
+    <div class="w-sub">Buyers join when there are enough sellers, and sellers stay when there are enough buyers. Launch with no help and watch the network stall. Then combine cold-start strategies until it tips.</div>
+    <div class="row" id="nfStrat" style="margin-bottom:10px">
+      <button class="chip" data-st="atomic">🏙️ Start in one city (atomic network)</button>
+      <button class="chip" data-st="subsidy">💸 Subsidize the hard side (sellers)</button>
+      <button class="chip" data-st="tool">🧰 Single-player tool for sellers</button>
+      <button class="chip" data-st="seed">🌱 Seed supply by hand</button>
+    </div>
+    <div class="stage" style="padding:8px"><svg id="nfSvg" viewBox="0 0 640 260" style="width:100%;display:block"></svg></div>
+    <div class="scroll-hint">↔ swipe the diagram to see all of it</div>
+    <label class="slider" style="margin-top:10px">Strength of cross-side network effects <b id="nfV">1.0×</b><input type="range" id="nfK" min="0.4" max="1.8" step="0.05" value="1"></label>
+    <div class="stats" id="nfStats"></div>
+    <p class="small" id="nfNote" style="margin-top:8px"></p>
+  </div>
+  <div class="cards reveal">
+    <div class="card"><h4>🏙️ Atomic network</h4><p>Density beats size. Uber launched city by city, Facebook campus by campus. A small, dense network delivers value where a large, thin one doesn't.</p></div>
+    <div class="card"><h4>💸 Subsidize the hard side</h4><p>One side is usually harder to attract, often supply. Pay it, guarantee earnings, or waive fees, and let the other side pay.</p></div>
+    <div class="card"><h4>🧰 Come for the tool, stay for the network</h4><p>Chris Dixon's phrase. Give one side something useful on its own (Instagram's filters, OpenTable's reservation software), then add the network on top.</p></div>
+    <div class="card"><h4>🌱 Seed &amp; fake it (ethically)</h4><p>Reddit's founders famously posted content themselves at first. Airbnb photographed listings for hosts. Early supply is often hand-built.</p></div>
+  </div>
+</div>
+</section>
+
+<!-- ============ PL3 ============ -->
+<section class="chapter" id="pl3">
+<div class="wrap">
+  <div class="ch-head reveal">
+    <span class="ch-tag" style="background:var(--c3-soft);color:var(--c3t)">Chapter 3</span>
+    <h2>Pricing: who pays, and how much?</h2>
+    <p class="lede">On a platform, the side that pays is a strategic choice, not an accounting detail.</p>
+  </div>
+  <p class="reveal">Two-sided pricing breaks ordinary intuition. It often pays to <b>subsidize</b> one side, even charging it nothing, because its presence makes the other side willing to pay more. Thomas Eisenmann, Geoffrey Parker and Marshall Van Alstyne's HBR article "Strategies for Two-Sided Markets" (2006) calls these the <b>subsidy side</b> and the <b>money side</b>. Consumers use search engines for free, while advertisers pay. Readers of PDFs paid nothing for Adobe's reader, while creators bought the authoring tools.</p>
+  <p class="reveal">Then there's the <b>take rate</b>, the platform's cut of each transaction. Too low and the platform can't fund itself. Too high and supply leaves, prices rise, and participants start dealing directly with each other to avoid the fee. That's called <b>disintermediation</b>, or leakage.</p>
+  <div class="widget wide reveal">
+    <div class="w-head" style="color:var(--c3t)">Interactive</div>
+    <div class="w-title">Find the take-rate sweet spot</div>
+    <div class="w-sub">This is an illustrative model of a services marketplace. Volume falls as the fee rises, and above about 20% leakage accelerates.</div>
+    <div class="stage" style="padding:8px"><svg id="trSvg" viewBox="0 0 640 250" style="width:100%;display:block"></svg></div>
+    <div class="scroll-hint">↔ swipe the diagram to see all of it</div>
+    <label class="slider" style="margin-top:10px">Take rate <b id="trV">15%</b><input type="range" id="trK" min="0" max="50" step="1" value="15"></label>
+    <div class="stats" id="trStats"></div>
+    <p class="small" id="trNote" style="margin-top:8px"></p>
+  </div>
+</div>
+</section>
+
+<!-- ============ PL4 ============ -->
+<section class="chapter" id="pl4">
+<div class="wrap">
+  <div class="ch-head reveal">
+    <span class="ch-tag" style="background:var(--c6-soft);color:var(--c6t)">Chapter 4</span>
+    <h2>Governance, trust &amp; winner-take-all</h2>
+    <p class="lede">A platform is a small economy, and you write its laws.</p>
+  </div>
+  <p class="reveal">Platforms <b>govern</b> their ecosystems. They decide who can join (curation), what's allowed (rules), how trust is built (ratings, verification, escrow), and how open to be (APIs, interoperability). Get it wrong and quality collapses: fake reviews, scams, spam. Negative network effects then drive good participants away. Increasingly, governments set rules too. The EU's <b>Digital Markets Act</b> (in force since 2022, with obligations applying from March 2024) forces designated "gatekeepers" to allow things like alternative app stores and interoperability.</p>
+  <div class="widget reveal" id="govSorter">
+    <div class="w-head" style="color:var(--c6t)">Interactive</div>
+    <div class="w-title">Which governance lever is this?</div>
+    <div class="sorter"></div>
+  </div>
+
+  <h3 class="reveal">Will this market be winner-take-all?</h3>
+  <p class="reveal">Network effects don't automatically crown a single winner. Michael Cusumano, Annabelle Gawer and David Yoffie's <i>The Business of Platforms</i> (2019), building on Eisenmann and colleagues, identify the conditions that make markets <b>tip</b> toward one platform. Many markets support several: riders and drivers happily <b>multi-home</b> across ride apps.</p>
+  <div class="widget reveal">
+    <div class="w-head" style="color:var(--c6t)">Interactive</div>
+    <div class="w-title">Tipping-point checklist</div>
+    <div class="row" id="wtaEx" style="margin-bottom:12px"><span class="small muted" style="font-weight:700">Try:</span></div>
+    <div id="wtaList"></div>
+    <div class="meter" style="grid-template-columns:170px 1fr 60px;margin-top:12px"><span>Likelihood of winner-take-all</span><div class="track"><div class="fill" id="wtaFill" style="background:var(--c6)"></div></div><b class="mono" id="wtaV"></b></div>
+    <p class="small" id="wtaNote" style="margin-top:8px"></p>
+  </div>
+</div>
+</section>
+
+<!-- ============ PL5 ============ -->
+<section class="chapter" id="pl5">
+<div class="wrap">
+  <div class="ch-head reveal">
+    <span class="ch-tag" style="background:var(--claude-soft);color:var(--claudet)">Chapter 5</span>
+    <h2>AI is reshuffling the platform game</h2>
+    <p class="lede">When coordination becomes cheap, whoever controls coordination gains power.</p>
+  </div>
+  <p class="reveal">Sangeet Paul Choudary, co-author of <i>Platform Revolution</i>, argues in <i>Reshuffle</i> (2025, winner of the Thinkers50 Strategy Award) that AI's biggest effect isn't automating tasks faster. It's <b>restructuring how work is coordinated</b> across organizations and markets. Platforms have always been coordination machines, so AI changes who captures value. Tool makers become platforms, platforms bundle AI, and control shifts to whoever owns the system in which work gets coordinated.</p>
+  <div class="cards reveal">
+    <div class="card"><div class="ico" style="background:var(--claude-soft)">🤖</div><h4>Agents as a new "side"</h4><p>AI agents that search, compare, book and buy on users' behalf become platform participants. Platforms must decide whether to welcome, charge, or block them.</p></div>
+    <div class="card"><div class="ico" style="background:var(--c1-soft)">🔌</div><h4>Protocols &amp; interoperability</h4><p>Open standards like the Model Context Protocol (MCP) let AI systems plug into many services. Openness becomes a strategic lever again.</p></div>
+    <div class="card"><div class="ico" style="background:var(--c2-soft)">🧲</div><h4>Aggregation of demand</h4><p>AI assistants can become the new front door. If users ask an assistant instead of visiting a marketplace, the marketplace risks becoming a back-end supplier.</p></div>
+    <div class="card"><div class="ico" style="background:var(--c4-soft)">🏰</div><h4>Envelopment</h4><p>Platforms with overlapping user bases can absorb adjacent markets by bundling. AI features make bundling cheaper, so watch your adjacent platforms.</p></div>
+  </div>
+</div>
+</section>
+
+<!-- ============ PL6 ============ -->
+<section class="chapter" id="pl6">
+<div class="wrap">
+  <div class="ch-head reveal">
+    <span class="ch-tag" style="background:var(--c5-soft);color:var(--c5t)">Chapter 6</span>
+    <h2>Internal platforms: fighting cognitive load</h2>
+    <p class="lede">Part B. The same first principle, turned inward: make it cheap for your own teams to create value.</p>
+  </div>
+  <p class="reveal">Modern software teams are expected to handle cloud infrastructure, CI/CD, security, observability, data, compliance, and now AI tooling. That's more than any one team can hold in its head. Matthew Skelton and Manuel Pais's <i>Team Topologies</i> (2019; 2nd edition, September 2025) makes <b>team cognitive load</b> the central design constraint. When a team is overloaded, flow slows and quality drops. <b>Platform teams</b> exist to absorb that load and offer it back as easy-to-use services.</p>
+  <p class="reveal">Evan Bottcher's widely quoted definition (2018): <i>"A digital platform is a foundation of self-service APIs, tools, services, knowledge and support which are arranged as a compelling internal product."</i></p>
+  <div class="widget wide reveal">
+    <div class="w-head" style="color:var(--c5t)">Explore</div>
+    <div class="w-title">Team Topologies: four team types, three interaction modes</div>
+    <div class="grid2" style="grid-template-columns:1.3fr 1fr;align-items:center">
+      <div class="stage" style="padding:8px"><svg id="ttSvg" viewBox="0 0 520 320" style="width:100%;display:block"></svg></div>
+      <div class="info-panel" id="ttInfo"></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ============ PL7 ============ -->
+<section class="chapter" id="pl7">
+<div class="wrap">
+  <div class="ch-head reveal">
+    <span class="ch-tag" style="background:var(--c2-soft);color:var(--c2t)">Chapter 7</span>
+    <h2>Platform as a product</h2>
+    <p class="lede">Your developers are customers who can choose not to use you. Act accordingly.</p>
+  </div>
+  <p class="reveal">The core idea of modern platform engineering, developed in <i>Team Topologies</i>, in Camille Fournier and Ian Nowland's <i>Platform Engineering</i> (2025), and in Gregor Hohpe's <i>Platform Strategy</i> (2024), is to run the internal platform <b>as a product</b>. That means a product manager, user research with developers, a roadmap driven by their pain points, documentation, onboarding, and adoption that's earned rather than mandated. Start with the <b>thinnest viable platform</b>, sometimes just a wiki page of recommended practices, and grow only where there's demand.</p>
+  <p class="reveal">The main tool is the <b>golden path</b> (Spotify's term) or <b>paved road</b> (Netflix's term): a well-supported, opinionated default way to do common tasks, such as creating a service, adding a database or deploying. Teams can leave the road, but staying on it is so much easier that most do.</p>
+  <div class="widget wide reveal">
+    <div class="w-head" style="color:var(--c2t)">Simulation</div>
+    <div class="w-title">From ticket-ops to golden paths: shipping a new service</div>
+    <div class="w-sub">Here's what it takes to get a brand-new service into production. Add platform capabilities one at a time and watch the lead time, the number of tickets and the cognitive load fall.</div>
+    <div class="row" id="gpCaps" style="margin-bottom:12px">
+      <button class="chip" data-gp="tmpl">📦 Service template</button>
+      <button class="chip" data-gp="infra">🏗️ Self-service infrastructure</button>
+      <button class="chip" data-gp="secrets">🔑 Built-in secrets &amp; access</button>
+      <button class="chip" data-gp="policy">✅ Policy-as-code</button>
+      <button class="chip" data-gp="deploy">🚀 One-click deploy</button>
+    </div>
+    <div id="gpBars"></div>
+    <div class="stats" id="gpStats"></div>
+  </div>
+  <div class="cards reveal">
+    <div class="card"><h4>🧭 Discovery for developers</h4><p>Interview teams, shadow them shipping a feature, and map where they wait and what they must learn. The same Mom Test rules apply.</p></div>
+    <div class="card"><h4>📣 Internal marketing</h4><p>Great platforms fail when nobody knows about them. Demos, docs, office hours and champions in product teams all matter.</p></div>
+    <div class="card"><h4>🧹 Deprecation is a product skill</h4><p>Every capability you add is one you must support. Plan migrations and sunset old paths deliberately.</p></div>
+    <div class="card"><h4>🗂️ Developer portals</h4><p>A single front door (such as Backstage, open-sourced by Spotify and now a CNCF project) for the service catalog, templates, docs and ownership.</p></div>
+  </div>
+</div>
+</section>
+
+<!-- ============ PL8 ============ -->
+<section class="chapter" id="pl8">
+<div class="wrap">
+  <div class="ch-head reveal">
+    <span class="ch-tag" style="background:var(--c4-soft);color:var(--c4t)">Chapter 8</span>
+    <h2>Measuring a platform</h2>
+    <p class="lede">If a platform is a product, its success is measured by its customers' success.</p>
+  </div>
+  <p class="reveal">Three layers of research guide platform measurement. The <b>DORA</b> metrics (<i>Accelerate</i>, Forsgren, Humble and Kim, 2018, and the yearly DORA reports) track delivery performance: deployment frequency, lead time for changes, change failure rate, and time to recover from a failed deployment. <b>SPACE</b> (2021) warns that productivity has many dimensions: satisfaction, performance, activity, communication and efficiency. <b>DevEx</b> (Noda, Storey, Forsgren and Greiler, 2023) focuses on what developers feel: <b>feedback loops</b>, <b>cognitive load</b> and <b>flow state</b>. Nicole Forsgren and Abi Noda's <i>Frictionless</i> (2025) turns this into a seven-step program for removing developer friction in the AI era.</p>
+  <div class="widget reveal">
+    <div class="w-head" style="color:var(--c4t)">Interactive</div>
+    <div class="w-title">Where does your team land on the DORA metrics?</div>
+    <div class="w-sub">Pick the band closest to your team for each metric. The bands are approximate and adapted from DORA's recent performance clusters, which shift from year to year.</div>
+    <div id="doraQs"></div>
+    <div class="dora-result" id="doraOut"></div>
+  </div>
+  <div class="key reveal"><p>Balance the three layers. <b>Adoption</b> (are teams choosing the golden path?), <b>outcomes</b> (DORA metrics for teams on and off the platform), and <b>experience</b> (developer satisfaction and friction surveys). A platform everyone is <i>forced</i> to use but secretly works around is failing, whatever the dashboards say.</p></div>
+</div>
+</section>
+
+<!-- ============ PL9 ============ -->
+<section class="chapter" id="pl9">
+<div class="wrap">
+  <div class="ch-head reveal">
+    <span class="ch-tag" style="background:var(--c1-soft);color:var(--c1)">Chapter 9</span>
+    <h2>Platform maturity &amp; the AI era</h2>
+    <p class="lede">Platforms aren't built once. They mature through stages.</p>
+  </div>
+  <p class="reveal">The CNCF's <b>Platform Engineering Maturity Model</b> (2023) assesses five aspects (investment, adoption, interfaces, operations and measurement) across four levels: provisional, operational, scalable and optimizing. It's a map of where you are, not a race to level four everywhere.</p>
+  <div class="widget wide reveal">
+    <div class="w-head">Self-assessment</div>
+    <div class="w-title">Rate your platform</div>
+    <div class="grid2" style="grid-template-columns:1.2fr 1fr;align-items:center">
+      <div id="mmList"></div>
+      <div class="stage" style="padding:8px"><svg id="mmSvg" viewBox="0 0 320 300" style="width:100%;display:block"></svg></div>
+    </div>
+    <p class="small" id="mmNote" style="margin-top:10px"></p>
+  </div>
+
+  <h3 class="reveal">Platforms are the foundation for AI</h3>
+  <p class="reveal">The 2025 DORA report on AI-assisted software development surveyed nearly 5,000 technology professionals. It found that <b>90%</b> of organizations have adopted at least one internal platform, <b>76%</b> have a dedicated platform team, and there's a direct link between a <b>high-quality internal platform</b> and an organization's ability to get value from AI. The report's headline is that AI is an <b>amplifier</b>. With good platforms, clear workflows and strong engineering practices, AI speeds everything up. Without them, it produces "accelerated chaos". AI coding agents are also becoming platform <i>users</i>, so golden paths, templates and clear APIs make agents more effective too.</p>
+
+  <div class="quiz reveal" data-correct="2">
+    <div class="q-label">Quick check</div>
+    <div class="q">Leadership wants to mandate the new internal platform for every team next quarter. What's the platform-as-a-product response?</div>
+    <div class="opts">
+      <button class="opt">Great, because mandates guarantee adoption</button>
+      <button class="opt">Delay the platform until it covers every use case</button>
+      <button class="opt">Win adoption by solving teams' top pain points first, measure voluntary use, and treat workarounds as feedback</button>
+    </div>
+    <div class="explain">Mandates hide product problems: teams comply on paper and work around the platform in practice. Voluntary adoption is the most honest signal that the platform actually reduces cognitive load.</div>
+  </div>
+</div>
+</section>
+
+<!-- ============ READING ============ -->
+<section class="chapter" id="plread">
+<div class="wrap">
+  <div class="ch-head reveal">
+    <span class="ch-tag" style="background:var(--surface-3);color:var(--ink-2)">Library</span>
+    <h2>Reading list &amp; research</h2>
+    <p class="lede">The books, papers and reports behind this course, newest first.</p>
+  </div>
+  <div class="row" id="rlFilter" style="margin-bottom:14px"></div>
+  <div class="lib" id="lib"></div>
+</div>
+</section>
+
+<!-- ============ RECAP ============ -->
+<section class="chapter" id="recap">
+<div class="wrap">
+  <div class="ch-head reveal"><span class="ch-tag" style="background:var(--c2-soft);color:var(--c2t)">Recap</span><h2>The first principles, in one screen</h2></div>
+  <div class="recap reveal">
+    <div><b>Make it cheaper for others to create value</b>That's what a platform is, whether it serves the outside world or your own teams.</div>
+    <div><b>Design the core interaction</b>Everything serves the key exchange of value.</div>
+    <div><b>Network effects cut both ways</b>They're powerful once you tip and worthless before, so solve the cold start deliberately.</div>
+    <div><b>Price the sides differently</b>Subsidize the side that attracts the other, and keep the take rate below the leakage point.</div>
+    <div><b>Govern the ecosystem</b>Curation, rules, trust and openness are product decisions.</div>
+    <div><b>Reduce cognitive load</b>Internal platforms exist so product teams can focus on their customers.</div>
+    <div><b>Platform as a product</b>Developers are customers. Earn adoption with golden paths, and don't mandate it.</div>
+    <div><b>Measure outcomes and experience</b>Use DORA for delivery, and SPACE and DevEx for the human side.</div>
+    <div><b>AI amplifies foundations</b>Good platforms turn AI into speed, and weak ones into accelerated chaos.</div>
+  </div>
+</div>
+</section>
+
+<footer class="footer">Platform Management, First Principles · part of the <a href="index.html">AI, Explained</a> series · models are simplified for learning, so read the sources.</footer>
+</main>
+<script>
+(() => {
+"use strict";
+const $ = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+const NS = "http://www.w3.org/2000/svg";
+const svgEl = (tag, attrs = {}, parent) => { const e = document.createElementNS(NS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); if (parent) parent.appendChild(e); return e; };
+const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
+const lerp = (a, b, t) => a + (b - a) * t;
+const rand = (a, b) => a + Math.random() * (b - a);
+const gauss = () => { let u = 0, v = 0; while (!u) u = Math.random(); while (!v) v = Math.random(); return Math.sqrt(-2 * Math.log(u)) * Math.cos(2 * Math.PI * v); };
+const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
+let C = {};
+const readColors = () => { ["--c1","--c2","--c3","--c4","--c5","--c6","--ink","--ink-2","--muted","--line","--surface","--surface-2","--surface-3","--claude","--bg"].forEach(k => C[k.slice(2)] = css(k)); };
+readColors();
+const hexA = (hex, a) => { const h = hex.replace("#", ""); const n = parseInt(h.length === 3 ? h.split("").map(c => c + c).join("") : h, 16); return `rgba(${n >> 16 & 255},${n >> 8 & 255},${n & 255},${a})`; };
+
+function fitCanvas(cv) {
+  const r = cv.getBoundingClientRect(), d = devicePixelRatio || 1;
+  cv.width = Math.round(r.width * d); cv.height = Math.round(r.height * d);
+  const ctx = cv.getContext("2d"); ctx.setTransform(d, 0, 0, d, 0, 0);
+  return { ctx, W: r.width, H: r.height };
+}
+function whenVisible(el, fn) {
+  let vis = false, raf = 0, last = 0;
+  const tick = t => { const dt = Math.min(50, last ? t - last : 16); last = t; fn(dt, t); raf = vis ? requestAnimationFrame(tick) : 0; if (!vis) last = 0; };
+  new IntersectionObserver(es => { vis = es[0].isIntersecting; if (vis && !raf) raf = requestAnimationFrame(tick); }, { threshold: 0.05 }).observe(el);
+}
+function chipGroup(container, attr, cb) {
+  $$(`[data-${attr}]`, container).forEach(b => b.addEventListener("click", () => {
+    $$(`[data-${attr}]`, container).forEach(x => x.classList.toggle("on", x === b)); cb(b.dataset[attr]);
+  }));
+}
+
+/* ---------- theme, progress, nav, reveal ---------- */
+$("#themeBtn").addEventListener("click", () => {
+  const root = document.documentElement;
+  const dark = root.dataset.theme ? root.dataset.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
+  root.dataset.theme = dark ? "light" : "dark";
+  try { localStorage.setItem("ai-theme", root.dataset.theme); } catch (e) {}
+  readColors(); document.dispatchEvent(new Event("themechange"));
+});
+matchMedia("(prefers-color-scheme: dark)").addEventListener?.("change", () => { if (!document.documentElement.dataset.theme) { readColors(); document.dispatchEvent(new Event("themechange")); } });
+try { const t = localStorage.getItem("ai-theme"); if (t) { document.documentElement.dataset.theme = t; readColors(); } } catch (e) {}
+const sb = $("#sidebar"), mb = $("#menuBtn");
+const setMenu = open => { sb.classList.toggle("open", open); mb.setAttribute("aria-expanded", open); document.body.classList.toggle("menu-open", open); };
+mb.setAttribute("aria-expanded", "false");
+mb.addEventListener("click", e => { e.stopPropagation(); setMenu(!sb.classList.contains("open")); });
+document.addEventListener("click", e => { if (sb.classList.contains("open") && !sb.contains(e.target)) setMenu(false); });
+document.addEventListener("keydown", e => { if (e.key === "Escape") setMenu(false); });
+$$("#sidebar a").forEach(a => a.addEventListener("click", () => $("#sidebar").classList.remove("open")));
+addEventListener("scroll", () => { const h = document.documentElement; $("#progress").style.width = (h.scrollTop / (h.scrollHeight - h.clientHeight) * 100) + "%"; }, { passive: true });
+const navLinks = $$("#sidebar a");
+const secObs = new IntersectionObserver(es => es.forEach(e => {
+  if (!e.isIntersecting) return;
+  const i = navLinks.findIndex(a => a.getAttribute("href") === "#" + e.target.id);
+  navLinks.forEach((a, j) => { a.classList.toggle("active", j === i); a.classList.toggle("done", j < i); });
+}), { rootMargin: "-45% 0px -50% 0px" });
+$$("section.chapter").forEach(s => secObs.observe(s));
+const revObs = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("in"); revObs.unobserve(e.target); } }), { threshold: 0, rootMargin: "0px 0px -8% 0px" });
+$$(".reveal").forEach(el => revObs.observe(el));
+
+/* ---------- quizzes ---------- */
+$$(".quiz").forEach(q => {
+  const correct = +q.dataset.correct;
+  $$(".opt", q).forEach((b, i) => b.addEventListener("click", () => {
+    if (q.classList.contains("answered")) return;
+    if (i === correct) { b.classList.add("right"); q.classList.add("answered"); $(".explain", q).insertAdjacentHTML("afterbegin", "<b>✓ Correct!</b> "); }
+    else { b.classList.remove("wrong"); void b.offsetWidth; b.classList.add("wrong"); }
+  }));
+});
+
+/* ---------- hero particles ---------- */
+(() => {
+  const cv = $("#heroCanvas"); let ctx, W, H, pts = [], mouse = { x: -999, y: -999 };
+  const init = () => { ({ ctx, W, H } = fitCanvas(cv)); const n = Math.round(clamp(W * H / 14000, 30, 110)); pts = Array.from({ length: n }, () => ({ x: rand(0, W), y: rand(0, H), vx: rand(-.3, .3), vy: rand(-.3, .3), r: rand(1.5, 3.2), c: ["c1","c6","c4","c5"][Math.floor(rand(0, 4))] })); };
+  init(); addEventListener("resize", init);
+  cv.parentElement.addEventListener("mousemove", e => { const r = cv.getBoundingClientRect(); mouse = { x: e.clientX - r.left, y: e.clientY - r.top }; });
+  cv.parentElement.addEventListener("mouseleave", () => mouse = { x: -999, y: -999 });
+  whenVisible(cv, () => {
+    ctx.clearRect(0, 0, W, H);
+    const sp = reduced ? .2 : 1;
+    for (const p of pts) {
+      const dx = mouse.x - p.x, dy = mouse.y - p.y, d = Math.hypot(dx, dy);
+      if (d < 160) { p.vx += dx / d * .02; p.vy += dy / d * .02; }
+      p.vx *= .99; p.vy *= .99; p.x += p.vx * sp; p.y += p.vy * sp;
+      if (p.x < 0 || p.x > W) p.vx *= -1; if (p.y < 0 || p.y > H) p.vy *= -1;
+    }
+    for (let i = 0; i < pts.length; i++) for (let j = i + 1; j < pts.length; j++) {
+      const a = pts[i], b = pts[j], d = Math.hypot(a.x - b.x, a.y - b.y);
+      if (d < 120) { ctx.strokeStyle = hexA(C.c1, (1 - d / 120) * .25); ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke(); }
+    }
+    for (const p of pts) { ctx.fillStyle = hexA(C[p.c], .7); ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, 7); ctx.fill(); }
+  });
+})();
+
+
+/* ---------- shared: sorter game ---------- */
+function makeSorter(root, buckets, items) {
+  const box = $(".sorter", root); let i = 0, score = 0, locked = false;
+  const render = () => {
+    if (i >= items.length) {
+      box.innerHTML = `<div class="sort-done"><div class="sort-big">${score} / ${items.length}</div><p>${score === items.length ? "Perfect! You've got this principle down." : score >= items.length * .7 ? "Nice work. Review the ones you missed above." : "Worth another pass: these distinctions are the heart of the chapter."}</p><button class="btn" data-again>↺ Try again</button></div>`;
+      $("[data-again]", box).addEventListener("click", () => { i = 0; score = 0; render(); }); return;
+    }
+    const it = items[i]; locked = false;
+    box.innerHTML = `<div class="sort-progress"><span>${i + 1} / ${items.length}</span><span>score ${score}</span></div><div class="sort-bar"><i style="width:${i / items.length * 100}%"></i></div><div class="sort-card">“${it[0]}”</div><div class="sort-buckets">${buckets.map((b, k) => `<button class="sort-b" data-k="${k}">${b}</button>`).join("")}</div><div class="sort-fb"></div>`;
+    $$(".sort-b", box).forEach(btn => btn.addEventListener("click", () => {
+      if (locked) return; locked = true; const k = +btn.dataset.k, ok = k === it[1]; if (ok) score++;
+      btn.classList.add(ok ? "right" : "wrong"); if (!ok) $$(".sort-b", box)[it[1]].classList.add("right");
+      const fb = $(".sort-fb", box); fb.innerHTML = `<p><b>${ok ? "✓ Right." : "✗ It's " + buckets[it[1]].replace(/^\S+\s/, "") + "."}</b> ${it[2]}</p><button class="btn primary">${i === items.length - 1 ? "See score →" : "Next →"}</button>`;
+      $("button", fb).addEventListener("click", () => { i++; render(); });
+    }));
+  };
+  render();
+}
+
+/* ---------- shared: library ---------- */
+function makeLibrary(items, themes) {
+  const lib = $("#lib"), f = $("#rlFilter"); let cur = "All";
+  f.innerHTML = ["All", ...themes].map((t, i) => `<button class="chip${i ? "" : " on"}" data-th="${t}">${t}</button>`).join("");
+  const render = () => {
+    lib.innerHTML = items.filter(b => cur === "All" || b[3] === cur).sort((a, b) => b[2] - a[2]).map(b => `<div class="lib-book"><div class="book-year">${b[2]}</div><div><h4>${b[0]}</h4><div class="small muted" style="font-weight:600">${b[1]} · <span class="pill" style="background:var(--surface-2);color:var(--ink-2)">${b[3]}</span></div><p>${b[4]}</p></div></div>`).join("");
+    $$(".lib-book", lib).forEach((el, k) => el.animate?.([{ opacity: 0, transform: "translateY(8px)" }, { opacity: 1, transform: "none" }], { duration: 300, delay: k * 25, fill: "backwards" }));
+  };
+  chipGroup(f, "th", t => { cur = t; render(); }); render();
+}
+
+/* ---------- PL: pipeline vs platform ---------- */
+(() => {
+  const svg = $("#ppSvg"); let mode = "pipe", dots = [], t0 = 0;
+  const NOTES = { pipe: "A <b>pipeline</b> creates value step by step and pushes it downstream. The firm owns the rooms, the staff and the inventory, so growing means building more hotels. Its costs scale linearly.", plat: "A <b>platform</b> owns none of the rooms. Hosts create the supply, guests create demand, and the platform provides trust, matching and payments. Every new host makes it more valuable to guests and vice versa, so value grows <i>faster</i> than costs." };
+  const layout = () => mode === "pipe"
+    ? { nodes: [["🧱 Suppliers", 90, 130, "c3"], ["🏨 Hotel chain", 320, 130, "c1"], ["🧳 Guests", 550, 130, "c2"]], edges: [[0, 1], [1, 2]] }
+    : { nodes: [["🏡 Host", 90, 50, "c3"], ["🏡 Host", 70, 130, "c3"], ["🏡 Host", 90, 210, "c3"], ["⭐ Platform: trust, matching, payments", 320, 130, "c6"], ["🧳 Guest", 550, 50, "c2"], ["🧳 Guest", 570, 130, "c2"], ["🧳 Guest", 550, 210, "c2"]], edges: [[0, 3], [1, 3], [2, 3], [3, 4], [3, 5], [3, 6]] };
+  const draw = t => {
+    const L = layout(); svg.innerHTML = "";
+    L.edges.forEach(([a, b]) => { const A = L.nodes[a], B = L.nodes[b]; svgEl("line", { x1: A[1], y1: A[2], x2: B[1], y2: B[2], stroke: C.line, "stroke-width": 2.5 }, svg); });
+    if (mode === "pipe") L.edges.forEach(([a, b], i) => { for (let k = 0; k < 3; k++) { const p = ((t / 2400) + k / 3) % 1, A = L.nodes[a], B = L.nodes[b]; svgEl("circle", { cx: lerp(A[1], B[1], p), cy: lerp(A[2], B[2], p), r: 5, fill: C.c1 }, svg); } });
+    else { for (let k = 0; k < 6; k++) { const h = k % 3, g = 4 + ((k * 2) % 3), p = ((t / 2600) + k / 6) % 1, H = L.nodes[h], P = L.nodes[3], G = L.nodes[g]; const [x, y] = p < .5 ? [lerp(H[1], P[1], p * 2), lerp(H[2], P[2], p * 2)] : [lerp(P[1], G[1], (p - .5) * 2), lerp(P[2], G[2], (p - .5) * 2)]; svgEl("circle", { cx: x, cy: y, r: 5, fill: C.c2 }, svg); const q = (p + .5) % 1, [x2, y2] = q < .5 ? [lerp(G[1], P[1], q * 2), lerp(G[2], P[2], q * 2)] : [lerp(P[1], H[1], (q - .5) * 2), lerp(P[2], H[2], (q - .5) * 2)]; svgEl("circle", { cx: x2, cy: y2, r: 4, fill: C.c3 }, svg); } }
+    L.nodes.forEach(([lbl, x, y, c], i) => { const w = mode === "plat" && i === 3 ? 170 : 130; svgEl("rect", { x: x - w / 2, y: y - 22, width: w, height: 44, rx: 14, fill: hexA(C[c], .2), stroke: C[c], "stroke-width": 2 }, svg); const words = lbl.split(": "); words.forEach((wd, k) => { const e = svgEl("text", { x, y: y + 5 + (k - (words.length - 1) / 2) * 14, "text-anchor": "middle", "font-size": k ? 10 : 12.5, "font-weight": k ? 600 : 800, fill: C.ink }, svg); e.textContent = wd; }); });
+    if (mode === "plat") { const e = svgEl("text", { x: 320, y: 245, "text-anchor": "middle", "font-size": 11, "font-weight": 700, fill: C.muted }, svg); e.textContent = "value flows both ways: stays ⇄ payments, reviews ⇄ trust"; }
+  };
+  chipGroup(svg.closest(".widget"), "pp", m => { mode = m; $("#ppNote").innerHTML = NOTES[m]; });
+  $("#ppNote").innerHTML = NOTES.pipe;
+  whenVisible(svg, (dt, t) => draw(t));
+})();
+
+/* ---------- PL: network effects sim ---------- */
+(() => {
+  const svg = $("#nfSvg"), st = {}; let k = 1;
+  const sim = () => {
+    let B = 150, S = st.seed ? 120 : 25; const out = [];
+    const Sh = st.atomic ? 60 : 250, Bh = st.atomic ? 600 : 2500;
+    for (let m = 0; m <= 36; m++) {
+      out.push([B, S]);
+      let lB = S / (S + Sh), lS = B / (B + Bh); if (st.tool) lS = Math.max(lS, .3);
+      const acqB = 120 * k * lB, acqS = 14 * k * lS * (st.subsidy ? 2 : 1), virB = .09 * B * lB * k, virS = .06 * S * lS * k;
+      const chB = B * (.03 + .22 * (1 - lB)), chS = S * (.02 + (st.subsidy ? .07 : .2) * (1 - lS));
+      B = Math.max(0, B + acqB + virB - chB); S = Math.max(0, S + acqS + virS - chS);
+    }
+    return out;
+  };
+  const draw = () => {
+    const R = sim(), mx = Math.max(1000, ...R.map(r => Math.max(r[0], r[1] * 10)));
+    const X = m => 50 + m / 36 * 570, Y = v => 225 - v / mx * 200;
+    svg.innerHTML = "";
+    [0, .25, .5, .75, 1].forEach(f => { svgEl("line", { x1: 50, x2: 620, y1: Y(f * mx), y2: Y(f * mx), stroke: C.line }, svg); const t = svgEl("text", { x: 44, y: Y(f * mx) + 4, "text-anchor": "end", "font-size": 10, fill: C.muted }, svg); t.textContent = Math.round(f * mx).toLocaleString(); });
+    const xt = svgEl("text", { x: 335, y: 250, "text-anchor": "middle", "font-size": 10, "font-weight": 600, fill: C.muted }, svg); xt.textContent = "months →";
+    [[0, "c2", "buyers"], [1, "c3", "sellers ×10"]].forEach(([i, c, l]) => { const d = R.map((r, m) => (m ? "L" : "M") + X(m) + " " + Y(r[i] * (i ? 10 : 1))).join(""); const p = svgEl("path", { d, fill: "none", stroke: C[c], "stroke-width": 3 }, svg); const len = p.getTotalLength(); p.style.strokeDasharray = len; p.animate?.([{ strokeDashoffset: len }, { strokeDashoffset: 0 }], { duration: reduced ? 1 : 900 }); const e = svgEl("text", { x: X(36) - 4, y: Y(R[36][i] * (i ? 10 : 1)) - 8, "text-anchor": "end", "font-size": 11, "font-weight": 700, fill: C[c] }, svg); e.textContent = l; });
+    const b = R[36][0], s = R[36][1], tipped = b > 1000, died = b < 60;
+    const stt = (v, l) => `<div class="stat"><b>${v}</b><span>${l}</span></div>`;
+    $("#nfStats").innerHTML = stt(Math.round(b).toLocaleString(), "buyers at month 36") + stt(Math.round(s).toLocaleString(), "sellers at month 36") + stt(tipped ? "🚀 tipped" : died ? "💀 died" : "😐 stalled", "outcome");
+    const n = Object.keys(st).filter(x => st[x]).length;
+    $("#nfNote").innerHTML = tipped ? "The network passed its <b>tipping point</b>: each side now attracts the other, and growth compounds. Notice that it took a <i>combination</i> of strategies." : died ? "Buyers arrive, find too few sellers, and leave. Sellers see too few buyers and leave too. That's the chicken-and-egg death spiral." : n ? "Better, but it's stuck below the tipping point. Density and one-sided value help, but you still need more fuel. Try combining strategies." : "Stalled. Add strategies.";
+  };
+  $$("#nfStrat [data-st]").forEach(b => b.addEventListener("click", () => { st[b.dataset.st] = !st[b.dataset.st]; b.classList.toggle("on", st[b.dataset.st]); draw(); }));
+  $("#nfK").addEventListener("input", e => { k = +e.target.value; $("#nfV").textContent = k.toFixed(2) + "×"; draw(); });
+  draw(); document.addEventListener("themechange", draw);
+})();
+
+/* ---------- PL: take rate ---------- */
+(() => {
+  const svg = $("#trSvg");
+  const leak = t => .6 / (1 + Math.exp(-(t - .24) * 22)), gmv = t => 100 * Math.pow(Math.max(0, 1 - t / .7), 1.4) * (1 - leak(t)), rev = t => t * gmv(t);
+  let best = 0; for (let t = 0; t <= .5; t += .005) if (rev(t) > rev(best)) best = t;
+  const X = t => 50 + t / .5 * 560, Yg = v => 220 - v / 100 * 190, maxR = rev(best), Yr = v => 220 - v / maxR * 150;
+  const draw = () => {
+    const t = +$("#trK").value / 100; $("#trV").textContent = Math.round(t * 100) + "%";
+    svg.innerHTML = "";
+    [0, 10, 20, 30, 40, 50].forEach(p => { svgEl("line", { x1: X(p / 100), x2: X(p / 100), y1: 25, y2: 220, stroke: C.line }, svg); const e = svgEl("text", { x: X(p / 100), y: 238, "text-anchor": "middle", "font-size": 10, fill: C.muted }, svg); e.textContent = p + "%"; });
+    svgEl("rect", { x: X(.22), y: 25, width: X(.5) - X(.22), height: 195, fill: hexA(C.c4, .06) }, svg);
+    const lk = svgEl("text", { x: X(.36), y: 40, "text-anchor": "middle", "font-size": 10, "font-weight": 700, fill: C.c4 }, svg); lk.textContent = "leakage zone: deals move off-platform";
+    const path = (f, Y) => Array.from({ length: 101 }, (_, i) => { const tt = i / 200; return (i ? "L" : "M") + X(tt).toFixed(1) + " " + Y(f(tt)).toFixed(1); }).join("");
+    svgEl("path", { d: path(gmv, Yg), fill: "none", stroke: C.c5, "stroke-width": 3 }, svg);
+    svgEl("path", { d: path(rev, Yr), fill: "none", stroke: C.c3, "stroke-width": 3 }, svg);
+    [[gmv, Yg, "c5", "transaction volume (GMV)", .03], [rev, Yr, "c3", "platform revenue", .42]].forEach(([f, Y, c, l, at]) => { const e = svgEl("text", { x: X(at) + 6, y: Y(f(at)) - 8, "font-size": 11, "font-weight": 700, fill: C[c] }, svg); e.textContent = l; });
+    svgEl("line", { x1: X(t), x2: X(t), y1: 25, y2: 220, stroke: C.ink, "stroke-width": 2 }, svg);
+    svgEl("circle", { cx: X(t), cy: Yr(rev(t)), r: 6, fill: C.c3, stroke: C.surface, "stroke-width": 2 }, svg);
+    svgEl("circle", { cx: X(best), cy: Yr(maxR), r: 4, fill: "none", stroke: C.c3, "stroke-width": 2, "stroke-dasharray": "2 2" }, svg);
+    const stt = (v, l) => `<div class="stat"><b>${v}</b><span>${l}</span></div>`;
+    $("#trStats").innerHTML = stt(Math.round(gmv(t)) + "%", "of max volume") + stt(Math.round(rev(t) / maxR * 100) + "%", "of max revenue") + stt(Math.round(leak(t) * 100) + "%", "deals leaking off-platform");
+    $("#trNote").innerHTML = t < .04 ? "Almost free: great for growth, but the platform can't fund trust, payments and support. Some platforms do this deliberately early on, then raise fees later, which is risky." : t > .3 ? "Above about 30%, supply walks and buyers and sellers swap phone numbers. Revenue falls even though the percentage is higher." : Math.abs(t - best) < .03 ? `🎯 Near the revenue-maximizing rate (about ${Math.round(best * 100)}% in this model). In reality many marketplaces charge somewhere between 5% and 30%, depending on how much value they add to each deal.` : "Move the slider to find where revenue peaks, and notice that it's well before volume is exhausted.";
+  };
+  $("#trK").addEventListener("input", draw); draw(); document.addEventListener("themechange", draw);
+})();
+
+/* ---------- PL: governance sorter ---------- */
+makeSorter($("#govSorter"), ["💸 Pricing", "🧹 Curation & rules", "🛡️ Trust & safety", "🔓 Openness"], [
+  ["An app store charges small developers 15% instead of 30%.", 0, "Who pays and how much is pricing. Here it's used to keep a vital supply side healthy."],
+  ["A home-sharing site releases the host's payment only after the guest checks in.", 2, "Holding funds in escrow protects guests from fraud. It's a trust mechanism."],
+  ["Drivers whose ratings drop below a threshold lose access.", 1, "Deciding who may keep participating is curation. It prevents negative network effects from bad supply."],
+  ["Publishing an open API so third parties can build integrations.", 3, "Opening the platform lets others extend it, and generates new supply."],
+  ["Hiding sellers' contact details until a booking is made.", 1, "A rule against leakage keeps the transaction, and the platform's value, on the platform."],
+  ["Verified-identity badges for hosts and guests.", 2, "Verification reduces the risk of transacting with strangers. That's trust."],
+  ["Sellers list for free; buyers pay a small service fee.", 0, "It picks the subsidy side and the money side, a core two-sided pricing choice."],
+  ["Allowing alternative app stores to comply with the EU Digital Markets Act.", 3, "The DMA requires gatekeepers to open up, making openness a regulatory matter as well as a strategic one."],
+]);
+
+/* ---------- PL: winner-take-all ---------- */
+(() => {
+  const Q = [["Strong network effects (value rises steeply with users)", 30], ["Multi-homing is costly for users (hard to use two platforms)", 25], ["Little demand for niche or differentiated alternatives", 20], ["Big economies of scale (costs fall with size)", 15], ["High switching costs (data, reputation, habits lock users in)", 10]];
+  const EX = { "Ride-hailing": [1, 0, 1, 0, 0], "Desktop operating systems": [1, 1, 1, 1, 1], "Food delivery": [1, 0, 0, 0, 0], "Professional social network": [1, 1, 1, 1, 1] };
+  let v = [1, 0, 0, 0, 0];
+  const box = $("#wtaEx"); Object.keys(EX).forEach(k => { const b = document.createElement("button"); b.className = "chip"; b.textContent = k; b.addEventListener("click", () => { v = [...EX[k]]; render(k); }); box.appendChild(b); });
+  const render = ex => {
+    $("#wtaList").innerHTML = Q.map((q, i) => `<label class="wta-row"><input type="checkbox" data-i="${i}" ${v[i] ? "checked" : ""}><span>${q[0]}</span></label>`).join("");
+    $$("#wtaList input").forEach(c => c.addEventListener("change", () => { v[+c.dataset.i] = c.checked ? 1 : 0; render(); }));
+    const s = Q.reduce((a, q, i) => a + q[1] * v[i], 0); $("#wtaFill").style.width = s + "%"; $("#wtaV").textContent = s + "%";
+    $("#wtaNote").innerHTML = (ex ? `<b>${ex}:</b> ` : "") + (s >= 80 ? "Likely to tip to one dominant platform. Expect a race for scale, and regulatory attention once someone wins." : s >= 45 ? "Could consolidate to two or three players. Differentiation and switching costs will decide the outcome." : "Probably a market with several winners. Users happily use more than one platform, so compete on quality, price and niche fit rather than size alone.");
+  };
+  render();
+})();
+
+/* ---------- PL: Team Topologies ---------- */
+(() => {
+  const svg = $("#ttSvg"), info = $("#ttInfo");
+  const T = {
+    stream: ["Stream-aligned team", "c2", "Aligned to a flow of work from a business domain or customer segment, such as \"checkout\" or \"mobile onboarding\". Most teams should be stream-aligned: they own features end to end and deliver directly to users."],
+    platform: ["Platform team", "c5", "Provides internal services (infrastructure, deployment, data, observability) that stream-aligned teams consume <b>as a service</b>, reducing their cognitive load. Its customers are the other teams."],
+    enabling: ["Enabling team", "c6", "Specialists (for example in security, testing or AI adoption) who help stream-aligned teams build new capabilities, then step away. They coach rather than do the work."],
+    complicated: ["Complicated-subsystem team", "c3", "Owns a part of the system needing deep specialist knowledge, such as a video codec, a pricing engine or an ML ranking model, so other teams don't have to learn it."],
+    xaas: ["Interaction: X-as-a-Service", "c5", "One team consumes another's service with minimal collaboration: clear APIs, documentation and self-service. It's the default mode between platform and stream-aligned teams."],
+    collab: ["Interaction: Collaboration", "c2", "Two teams work closely together for a limited time to discover something new, such as a new platform capability. It's high-bandwidth but expensive, so keep it temporary."],
+    facil: ["Interaction: Facilitating", "c6", "One team (usually enabling) helps another learn or unblock itself. The goal is to make itself unnecessary."],
+  };
+  let sel = "platform";
+  const draw = () => {
+    svg.innerHTML = "";
+    const node = (id, x, y, w, h, label) => { const t = T[id], g = svgEl("g", { style: "cursor:pointer" }, svg); svgEl("rect", { x, y, width: w, height: h, rx: 12, fill: hexA(C[t[1]], sel === id ? .4 : .18), stroke: C[t[1]], "stroke-width": sel === id ? 3 : 1.5 }, g); const e = svgEl("text", { x: x + w / 2, y: y + h / 2 + 4, "text-anchor": "middle", "font-size": 11.5, "font-weight": 700, fill: C.ink }, g); e.textContent = label; g.addEventListener("click", () => { sel = id; draw(); }); };
+    const link = (id, x1, y1, x2, y2, label) => { const t = T[id], on = sel === id, g = svgEl("g", { style: "cursor:pointer" }, svg); svgEl("line", { x1, y1, x2, y2, stroke: C[t[1]], "stroke-width": on ? 4 : 2.5, "stroke-dasharray": id === "facil" ? "6 4" : id === "collab" ? "" : "2 5", class: on ? "flow-dash" : "" }, g); svgEl("line", { x1, y1, x2, y2, stroke: "transparent", "stroke-width": 16 }, g); const e = svgEl("text", { x: (x1 + x2) / 2 + 6, y: (y1 + y2) / 2, "font-size": 10, "font-weight": 800, fill: C[t[1]] }, g); e.textContent = label; g.addEventListener("click", () => { sel = id; draw(); }); };
+    const ar = svgEl("text", { x: 500, y: 110, "text-anchor": "end", "font-size": 11, "font-weight": 700, fill: C.muted }, svg); ar.textContent = "→ customers";
+    [40, 100, 160].forEach((y, i) => node("stream", 110, y, 280, 40, ["Stream-aligned: checkout", "Stream-aligned: search", "Stream-aligned: mobile app"][i]));
+    node("enabling", 10, 40, 80, 160, "");
+    const et = svgEl("text", { x: 50, y: 124, "text-anchor": "middle", "font-size": 11, "font-weight": 700, fill: C.ink, transform: "rotate(-90 50 124)" }, svg); et.textContent = "Enabling (security)"; et.style.pointerEvents = "none";
+    node("complicated", 410, 150, 100, 50, "Pricing engine");
+    node("platform", 110, 260, 400, 44, "Platform team: CI/CD, infra, observability, golden paths");
+    link("xaas", 250, 200, 250, 258, "X-as-a-Service");
+    link("facil", 90, 120, 110, 120, "");
+    link("collab", 390, 180, 410, 175, "");
+    const ft = svgEl("text", { x: 70, y: 222, "font-size": 10, "font-weight": 800, fill: C[T.facil[1]] }, svg); ft.textContent = "facilitating";
+    const ct = svgEl("text", { x: 432, y: 222, "font-size": 10, "font-weight": 800, fill: C[T.collab[1]] }, svg); ct.textContent = "collaboration";
+    [["facil", 70, 222], ["collab", 432, 222]].forEach(([id, x, y]) => { const r = svgEl("rect", { x: x - 4, y: y - 12, width: 90, height: 16, fill: "transparent", style: "cursor:pointer" }, svg); r.addEventListener("click", () => { sel = id; draw(); }); });
+    const t = T[sel]; info.innerHTML = `<span class="pill" style="background:${hexA(C[t[1]], .2)};color:${C[t[1]]}">${sel.length > 8 || ["xaas", "collab", "facil"].includes(sel) ? "interaction mode" : "team type"}</span><h4 style="margin-top:8px">${t[0]}</h4><p style="margin:0">${t[2]}</p><p class="small muted" style="margin:8px 0 0">Tap the teams and the lines between them.</p>`;
+  };
+  draw(); document.addEventListener("themechange", draw);
+})();
+
+/* ---------- PL: golden path ---------- */
+(() => {
+  const S = [["Get a repo, CI pipeline & service skeleton", 2, "tmpl", .1, 2], ["Provision database & message queue", 5, "infra", .2, 3], ["Set up secrets, IAM & network access", 3, "secrets", .1, 3], ["Wire up logs, metrics, alerts & dashboards", 3, "tmpl", .2, 3], ["Security & compliance review", 4, "policy", .5, 2], ["Deploy to production", 1, "deploy", .05, 2]];
+  const on = new Set();
+  const draw = () => {
+    const days = S.map(s => on.has(s[2]) ? s[3] : s[1]), tot = days.reduce((a, b) => a + b, 0), tickets = S.filter(s => !on.has(s[2])).length, load = S.reduce((a, s) => a + (on.has(s[2]) ? 0 : s[4]), 0) + (on.size ? 1 : 0);
+    $("#gpBars").innerHTML = S.map((s, i) => `<div class="gp-row"><span>${on.has(s[2]) ? "✅" : "🎫"} ${s[0]}</span><div class="track"><div class="fill" style="width:${days[i] / 5 * 100}%;background:${on.has(s[2]) ? "var(--c2)" : "var(--c4)"}"></div></div><b class="mono">${days[i] < 1 ? Math.round(days[i] * 8 * 10) / 10 + " h" : days[i] + " d"}</b></div>`).join("");
+    const stt = (v, l) => `<div class="stat"><b>${v}</b><span>${l}</span></div>`;
+    $("#gpStats").innerHTML = stt(tot < 1 ? Math.round(tot * 8 * 10) / 10 + " hours" : Math.round(tot * 10) / 10 + " days", "lead time to first deploy") + stt(tickets, "tickets to other teams") + stt(load, "tools & teams to understand") + stt(on.size === 5 ? "🛤️ golden path" : on.size ? "🚧 partial" : "🎫 ticket-ops", "state");
+  };
+  $$("#gpCaps [data-gp]").forEach(b => b.addEventListener("click", () => { const k = b.dataset.gp; on.has(k) ? on.delete(k) : on.add(k); b.classList.toggle("on", on.has(k)); draw(); }));
+  draw();
+})();
+
+/* ---------- PL: DORA ---------- */
+(() => {
+  const Q = [["🚀 Deployment frequency", ["On demand (several a day)", "Daily to weekly", "Weekly to monthly", "Monthly or less"]], ["⏱️ Lead time for changes", ["Under a day", "A day to a week", "A week to a month", "More than a month"]], ["💥 Change failure rate", ["About 5% or less", "Around 10%", "Around 15%", "20% or more"]], ["🩹 Time to recover from a failed deployment", ["Under an hour", "Under a day", "A day to a week", "More than a week"]]];
+  const v = [1, 1, 2, 1], TIERS = [["Elite", "c2", "You ship small changes continuously and recover fast. Protect this: invest in the platform and in developer experience so it scales as the organization grows."], ["High", "c5", "Strong delivery. The next gains usually come from smaller batches, faster code review, and automating whatever still needs a ticket."], ["Medium", "c3", "Common for growing organizations. Look for the biggest queue, such as manual testing, approvals or environment provisioning. A platform's golden paths often help most here."], ["Low", "c4", "Changes are big, slow and risky. Start with CI, automated tests and trunk-based development, and measure lead time weekly. DORA's research shows speed and stability improve together."]];
+  const render = () => {
+    $("#doraQs").innerHTML = Q.map((q, i) => `<div class="dora-q"><b class="small">${q[0]}</b><div class="row">${q[1].map((o, k) => `<button class="chip${v[i] === k ? " on" : ""}" data-q="${i}" data-k="${k}">${o}</button>`).join("")}</div></div>`).join("");
+    $$("#doraQs [data-q]").forEach(b => b.addEventListener("click", () => { v[+b.dataset.q] = +b.dataset.k; render(); }));
+    const avg = v.reduce((a, b) => a + b, 0) / 4, t = TIERS[Math.min(3, Math.round(avg))];
+    $("#doraOut").innerHTML = `<div class="dora-tier" style="background:${hexA(C[t[1]], .18)};border-color:${C[t[1]]}"><span class="small muted" style="font-weight:800">PERFORMANCE PROFILE</span><b style="color:${C[t[1]]}">${t[0]}</b></div><p class="small" style="margin:0">${t[2]}</p>`;
+  };
+  render();
+})();
+
+/* ---------- PL: maturity model ---------- */
+(() => {
+  const A = [["Investment", "How the platform is staffed and funded", ["Voluntary, side-of-desk", "A dedicated team", "Funded as a product", "Enabled ecosystem"]], ["Adoption", "Why teams use it", ["Erratic", "Extrinsic push (mandates)", "Intrinsic pull (they want to)", "Participatory (they contribute)"]], ["Interfaces", "How teams interact with it", ["Custom processes & tickets", "Standard tooling", "Self-service solutions", "Integrated services"]], ["Operations", "How capabilities are run", ["By request", "Centrally tracked", "Centrally enabled", "Managed services"]], ["Measurement", "How success is known", ["Ad hoc", "Consistent collection", "Insights", "Quantitative & qualitative"]]];
+  const L = ["Provisional", "Operational", "Scalable", "Optimizing"], v = [1, 1, 0, 1, 0], svg = $("#mmSvg");
+  const render = () => {
+    $("#mmList").innerHTML = A.map((a, i) => `<div class="mm-row"><div><b>${a[0]}</b> <span class="small muted">${a[1]}</span></div><div class="row">${L.map((l, k) => `<button class="chip${v[i] === k ? " on" : ""}" data-a="${i}" data-l="${k}" title="${a[2][k]}">${k + 1}</button>`).join("")}<span class="small" style="font-weight:600">${a[2][v[i]]}</span></div></div>`).join("");
+    $$("#mmList [data-a]").forEach(b => b.addEventListener("click", () => { v[+b.dataset.a] = +b.dataset.l; render(); }));
+    svg.innerHTML = ""; const cx = 160, cy = 155, R = 105, ang = i => -Math.PI / 2 + i * 2 * Math.PI / 5, P = (i, r) => [cx + r * Math.cos(ang(i)), cy + r * Math.sin(ang(i))];
+    [1, 2, 3, 4].forEach(l => svgEl("polygon", { points: A.map((_, i) => P(i, R * l / 4).join(",")).join(" "), fill: "none", stroke: C.line }, svg));
+    A.forEach((a, i) => { const [x, y] = P(i, R); svgEl("line", { x1: cx, y1: cy, x2: x, y2: y, stroke: C.line }, svg); const [tx, ty] = P(i, R + 22); const e = svgEl("text", { x: tx, y: ty + 4, "text-anchor": "middle", "font-size": 11, "font-weight": 700, fill: C.ink }, svg); e.textContent = a[0]; });
+    const poly = svgEl("polygon", { points: A.map((_, i) => P(i, R * (v[i] + 1) / 4).join(",")).join(" "), fill: hexA(C.c1, .25), stroke: C.c1, "stroke-width": 2.5 }, svg);
+    A.forEach((_, i) => { const [x, y] = P(i, R * (v[i] + 1) / 4); svgEl("circle", { cx: x, cy: y, r: 4, fill: C.c1 }, svg); });
+    const lo = v.indexOf(Math.min(...v));
+    $("#mmNote").innerHTML = `Your weakest aspect is <b>${A[lo][0]}</b>, at level ${v[lo] + 1} (${L[v[lo]]}: ${A[lo][2][v[lo]]}). ${v[lo] < 3 ? `The next step is <i>${A[lo][2][v[lo] + 1]}</i>.` : ""} Uneven profiles are normal, so work on the aspect that's holding the others back.`;
+  };
+  render(); document.addEventListener("themechange", render);
+})();
+
+/* ---------- PL: library ---------- */
+makeLibrary([
+  ["Reshuffle: Who Wins When AI Restacks the Knowledge Economy", "Sangeet Paul Choudary", 2025, "Platform business", "AI as a coordination technology that restructures industries and platforms. Winner of the 2025 Thinkers50 Strategy Award."],
+  ["Team Topologies (2nd ed.)", "Matthew Skelton & Manuel Pais", 2025, "Internal platforms", "Four team types, three interaction modes, and cognitive load as the design constraint. The second edition adds ten new real-world case studies."],
+  ["Platform Engineering: A Guide for Technical, Product, and People Leaders", "Camille Fournier & Ian Nowland", 2025, "Internal platforms", "How to build, run and lead internal platforms as products, from two engineering leaders who've done it."],
+  ["Frictionless", "Nicole Forsgren & Abi Noda", 2025, "Measurement", "Seven steps to remove developer friction and outpace competitors in the AI era, with measurement frameworks and workbooks."],
+  ["State of AI-assisted Software Development (DORA)", "Google Cloud DORA", 2025, "Research & policy", "90% of organizations have a platform and 76% have a dedicated platform team. Platform quality is linked to getting value from AI, which amplifies strengths and weaknesses alike."],
+  ["Platform Strategy: Innovation Through Harmonization", "Gregor Hohpe (with M. Danieli & J.-F. Landreau)", 2024, "Internal platforms", "Designing, building and rolling out an in-house platform, and the architectural thinking behind platform decisions."],
+  ["CNCF Platforms White Paper & Platform Engineering Maturity Model", "CNCF TAG App Delivery", 2023, "Research & policy", "Vendor-neutral definitions of internal platforms, and a five-aspect, four-level maturity model."],
+  ["DevEx: What Actually Drives Productivity", "Abi Noda, Margaret-Anne Storey, Nicole Forsgren & Michaela Greiler", 2023, "Measurement", "An ACM Queue paper arguing that feedback loops, cognitive load and flow state are the three dimensions of developer experience."],
+  ["EU Digital Markets Act", "European Union", 2022, "Research & policy", "Rules for large \"gatekeeper\" platforms, including interoperability, alternative app stores and a ban on self-preferencing. Obligations have applied since 2024."],
+  ["The SPACE of Developer Productivity", "Nicole Forsgren et al.", 2021, "Measurement", "Productivity is multidimensional: satisfaction, performance, activity, communication and efficiency."],
+  ["The Cold Start Problem", "Andrew Chen", 2021, "Platform business", "How network effects are born and scaled: atomic networks, tipping points, escape velocity, ceilings and moats."],
+  ["The Business of Platforms", "Michael Cusumano, Annabelle Gawer & David Yoffie", 2019, "Platform business", "Strategy for platform businesses, drawing on decades of research, including when markets tip to winner-take-all."],
+  ["Team Topologies (1st ed.)", "Matthew Skelton & Manuel Pais", 2019, "Internal platforms", "The original book that established platform-as-a-product thinking in software organizations."],
+  ["Accelerate", "Nicole Forsgren, Jez Humble & Gene Kim", 2018, "Measurement", "The research behind the DORA metrics: speed and stability go together, and practices drive performance."],
+  ["What I Talk About When I Talk About Platforms", "Evan Bottcher", 2018, "Internal platforms", "The classic short essay defining a digital platform as a compelling internal product."],
+  ["Platform Revolution", "Geoffrey Parker, Marshall Van Alstyne & Sangeet Paul Choudary", 2016, "Platform business", "Pipelines versus platforms, the core interaction, network effects, governance and monetization."],
+  ["Matchmakers", "David Evans & Richard Schmalensee", 2016, "Platform business", "The economics of multi-sided platforms, from two leading economists in the field."],
+  ["Platform Scale", "Sangeet Paul Choudary", 2015, "Platform business", "Designing platforms around interactions, and scaling through ecosystems rather than ownership."],
+  ["Strategies for Two-Sided Markets", "Thomas Eisenmann, Geoffrey Parker & Marshall Van Alstyne", 2006, "Research & policy", "An HBR article introducing subsidy and money sides, and the conditions for winner-take-all."],
+  ["Platform Competition in Two-Sided Markets", "Jean-Charles Rochet & Jean Tirole", 2003, "Research & policy", "The foundational economics paper on two-sided markets and platform pricing."],
+], ["Platform business", "Internal platforms", "Measurement", "Research & policy"]);
+
+})();
+</script>
+</body>
+</html>
