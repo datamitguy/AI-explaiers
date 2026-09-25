@@ -7,7 +7,7 @@ Five interactive, Brilliant-style courses. Each is a single self-contained HTML 
 | `index.html` | **AI, Explained**: 19 chapters, from AI basics to Claude, agents and the frontier |
 | `product-management.html` | **Product Management, First Principles**: 8 chapters |
 | `platform-management.html` | **Platform Management, First Principles**: 12 chapters |
-| `theories.html` | **Big Ideas, Part 1**: 135 mind-expanding theories across 15 domains (including a quantum physics deep dive and string theory), with 45 simulations |
+| `theories.html` | **Big Ideas, Part 1**: 160 mind-expanding theories across 17 domains (including a quantum physics deep dive, string theory and philosophy), with 50 simulations |
 | `models.html` | **Big Ideas, Part 2: Mental models & toolkits**: 148 models and tools across 9 sections, with 39 simulations |
 
 A switcher in the top bar links the courses. Both Big Ideas parts sit under "Theories" and link to each other.
@@ -103,6 +103,8 @@ An interactive field guide to the theories that give you an edge today, covering
 | **Leverage, wealth & modern strategy** | Asymmetric bets 🎮, permissionless leverage 🎮, specific knowledge, compounding 🎮, escaping the default game, value maxing, owning your time 🎮, ideas to influence 🎮, Lindy effect, antifragility, Kelly criterion 🎮, ergodicity 🎮, Matthew effect, 1,000 true fans, luck surface area |
 | **Power, politics & history** | Realism, power transition (Thucydides Trap 🎮), hegemonic stability, social contract, democratic peace, soft power, Great Man vs. forces |
 | **Language, culture & knowledge** | Sapir–Whorf, universal grammar, speech acts, semiotics, memetics, Hofstede's cultural dimensions 🎮, falsifiability (Wason 2-4-6 🎮), paradigm shifts |
+| **Ethics: how should we live?** | Utilitarianism, deontology (Kant), virtue ethics, trolley problems 🎮, Rawls's veil of ignorance 🎮, care ethics, Mill's harm principle, Hume's is–ought gap, moral relativism vs. realism, Nozick's experience machine 🎮 |
+| **Existence, mind & knowledge** | Existentialism, absurdism (Camus), Nietzsche, Plato's cave, rationalism vs. empiricism, the problem of induction (the turkey 🎮), the mind–body problem, the hard problem of consciousness, the Chinese Room, free will, personal identity (Ship of Theseus 🎮), pragmatism, Wittgenstein, Buddhist philosophy, Taoism |
 | **Thinking tools & mental models** | First principles, inversion, second-order thinking, circle of competence, Occam's razor, Goodhart's law, Parkinson's law, Chesterton's fence, the map is not the territory, regret minimization, planning fallacy |
 
 It ends with an 18-question "which theory explains it?" challenge, a 57-book reading list, and a recap on how to think in models.
