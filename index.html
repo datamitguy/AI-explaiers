@@ -1,0 +1,1730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI, Explained</title>
+<meta name="description" content="An interactive course on artificial intelligence: from the basics, through the transformer paper that sparked generative AI, to Claude and the frontier of RAG, JEPA and agents.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#faf9f6; --surface:#ffffff; --surface-2:#f3f2ed; --surface-3:#e9e7df;
+  --ink:#16161d; --ink-2:#4a4a57; --muted:#8a8a96; --line:#e4e2da;
+  --c1:#5b5bf0; --c1-d:#3f3fc4; --c1-soft:#ececfe;
+  --c2:#10a574; --c2-d:#0b7d58; --c2-soft:#e2f6ee;
+  --c3:#f09a0b; --c3-soft:#fdf1dc;
+  --c4:#e8466a; --c4-soft:#fde6eb;
+  --c5:#0e98d6; --c5-soft:#e0f2fb;
+  --c6:#9b4ff0; --c6-soft:#f1e7fd;
+  --claude:#d97757; --claude-soft:#fbeae3;
+  --shadow:0 1px 2px rgba(20,20,40,.04),0 10px 30px rgba(20,20,40,.06);
+  --radius:20px;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0e0e13; --surface:#16161e; --surface-2:#1e1e28; --surface-3:#282834;
+    --ink:#ececf2; --ink-2:#b6b6c4; --muted:#7c7c8e; --line:#2a2a37;
+    --c1:#8484ff; --c1-d:#5d5de0; --c1-soft:#23234a;
+    --c2:#2fd09b; --c2-d:#1a9e72; --c2-soft:#133329;
+    --c3:#ffb640; --c3-soft:#3a2c12;
+    --c4:#ff6b8b; --c4-soft:#3d1a24;
+    --c5:#3dbdf5; --c5-soft:#11303f;
+    --c6:#b98aff; --c6-soft:#2d1f45;
+    --claude:#e8906f; --claude-soft:#3a241c;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 30px rgba(0,0,0,.35);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0e0e13; --surface:#16161e; --surface-2:#1e1e28; --surface-3:#282834;
+  --ink:#ececf2; --ink-2:#b6b6c4; --muted:#7c7c8e; --line:#2a2a37;
+  --c1:#8484ff; --c1-d:#5d5de0; --c1-soft:#23234a;
+  --c2:#2fd09b; --c2-d:#1a9e72; --c2-soft:#133329;
+  --c3:#ffb640; --c3-soft:#3a2c12;
+  --c4:#ff6b8b; --c4-soft:#3d1a24;
+  --c5:#3dbdf5; --c5-soft:#11303f;
+  --c6:#b98aff; --c6-soft:#2d1f45;
+  --claude:#e8906f; --claude-soft:#3a241c;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 30px rgba(0,0,0,.35);
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif;font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3,h4{font-family:"Space Grotesk",Inter,sans-serif;line-height:1.15;letter-spacing:-.02em;margin:0}
+p{margin:0 0 1em}
+a{color:var(--c1)}
+code,.mono{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:.88em}
+button{font:inherit;color:inherit}
+svg text{font-family:Inter,sans-serif}
+
+/* ---------- top bar ---------- */
+.topbar{position:fixed;inset:0 0 auto 0;height:60px;z-index:50;display:flex;align-items:center;gap:14px;padding:0 18px;background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:10px;font-family:"Space Grotesk",Inter,system-ui,sans-serif;font-weight:700;font-size:1.05rem;text-decoration:none;color:var(--ink)}
+.brand-mark{width:30px;height:30px;border-radius:9px;background:conic-gradient(from 200deg,var(--c1),var(--c6),var(--c4),var(--c3),var(--c2),var(--c5),var(--c1));display:grid;place-items:center;color:#fff;font-size:.8rem}
+.progress{position:absolute;left:0;bottom:-1px;height:3px;width:0;background:linear-gradient(90deg,var(--c1),var(--c6),var(--c4));transition:width .1s linear}
+.top-actions{margin-left:auto;display:flex;gap:8px}
+.icon-btn{width:38px;height:38px;border-radius:12px;border:1px solid var(--line);background:var(--surface);display:grid;place-items:center;cursor:pointer}
+.icon-btn:hover{border-color:var(--c1)}
+#menuBtn{display:none}
+
+/* ---------- sidebar ---------- */
+.sidebar{position:fixed;top:60px;left:0;bottom:0;width:270px;padding:22px 14px;overflow:auto;border-right:1px solid var(--line);background:var(--bg);z-index:40}
+.sidebar h4{font-family:Inter,system-ui,sans-serif;font-size:.7rem;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin:0 10px 10px}
+.sidebar a{display:flex;align-items:center;gap:10px;padding:8px 10px;border-radius:12px;color:var(--ink-2);text-decoration:none;font-size:.9rem;font-weight:500;line-height:1.3}
+.sidebar a .num{flex:none;width:26px;height:26px;border-radius:8px;display:grid;place-items:center;font-size:.75rem;font-weight:700;background:var(--surface-2);color:var(--muted);transition:.25s}
+.sidebar a:hover{background:var(--surface-2)}
+.sidebar a.active{color:var(--ink);background:var(--surface)}
+.sidebar a.active .num{background:var(--c1);color:#fff}
+.sidebar a.done .num{background:var(--c2-soft);color:var(--c2)}
+main{margin-left:270px;padding-top:60px}
+@media (max-width:1100px){
+  .sidebar{transform:translateX(-100%);transition:transform .3s;box-shadow:var(--shadow)}
+  .sidebar.open{transform:none}
+  main{margin-left:0}
+  #menuBtn{display:grid}
+}
+
+/* ---------- layout ---------- */
+.wrap{max-width:780px;margin:0 auto;padding:0 20px}
+.wide{max-width:980px;margin-left:auto;margin-right:auto}
+.chapter{padding:90px 0 40px;border-top:1px solid var(--line)}
+.ch-head{display:flex;flex-direction:column;gap:14px;margin-bottom:34px}
+.ch-tag{display:inline-flex;align-items:center;gap:8px;align-self:flex-start;font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:6px 12px;border-radius:99px;background:var(--c1-soft);color:var(--c1)}
+.ch-head h2{font-size:clamp(2rem,5vw,3rem)}
+.ch-head .lede{font-size:1.2rem;color:var(--ink-2);margin:0}
+h3{font-size:1.45rem;margin:46px 0 14px}
+.muted{color:var(--muted)}
+.small{font-size:.85rem}
+
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:calc(100vh - 60px);display:flex;align-items:center;overflow:hidden}
+#heroCanvas{position:absolute;inset:0;width:100%;height:100%}
+.hero-inner{position:relative;z-index:1;padding:60px 20px;max-width:860px;margin:0 auto}
+.hero h1{font-size:clamp(2.6rem,7vw,5rem);letter-spacing:-.04em}
+.hero h1 .grad{background:linear-gradient(90deg,var(--c1),var(--c6),var(--c4));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{font-size:1.25rem;color:var(--ink-2);max-width:640px;margin:22px 0 30px}
+.hero-stats{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.hero-stats span{padding:8px 14px;border-radius:99px;background:var(--surface);border:1px solid var(--line);font-size:.85rem;font-weight:600;color:var(--ink-2)}
+
+/* ---------- widgets ---------- */
+.widget{background:var(--surface);border:1px solid var(--line);border-radius:24px;box-shadow:var(--shadow);padding:24px;margin:30px 0}
+.widget.wide{margin-left:max(-100px,calc((780px - 100vw)/2 + 20px));margin-right:max(-100px,calc((780px - 100vw)/2 + 20px))}
+@media (max-width:1100px){.widget.wide{margin-left:0;margin-right:0}}
+.w-head{display:flex;align-items:center;gap:10px;margin-bottom:6px;font-size:.72rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--c1)}
+.w-head::before{content:"";width:8px;height:8px;border-radius:50%;background:currentColor;box-shadow:0 0 0 4px color-mix(in srgb,currentColor 20%,transparent)}
+.w-title{font-family:"Space Grotesk",Inter,system-ui,sans-serif;font-size:1.3rem;font-weight:700;margin-bottom:4px}
+.w-sub{color:var(--ink-2);font-size:.95rem;margin-bottom:18px}
+.row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media (max-width:720px){.grid2{grid-template-columns:1fr}}
+.btn{cursor:pointer;border:1px solid var(--line);background:var(--surface);padding:9px 16px;border-radius:12px;font-weight:600;font-size:.9rem;box-shadow:0 3px 0 var(--line);transition:transform .08s,box-shadow .08s,background .2s}
+.btn:hover{background:var(--surface-2)}
+.btn:active{transform:translateY(2px);box-shadow:0 1px 0 var(--line)}
+.btn.primary{background:var(--c1);color:#fff;border-color:var(--c1);box-shadow:0 3px 0 var(--c1-d)}
+.btn.primary:hover{filter:brightness(1.07)}
+.btn.primary:active{box-shadow:0 1px 0 var(--c1-d)}
+.btn:disabled{opacity:.45;cursor:default}
+.chip{cursor:pointer;border:1px solid var(--line);background:var(--surface-2);padding:6px 13px;border-radius:99px;font-size:.84rem;font-weight:600;color:var(--ink-2);transition:.2s}
+.chip:hover{border-color:var(--c1)}
+.chip.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.stage{background:var(--surface-2);border-radius:16px;position:relative;overflow:hidden}
+canvas{display:block;width:100%}
+label.slider{display:flex;flex-direction:column;gap:4px;font-size:.85rem;font-weight:600;color:var(--ink-2);flex:1;min-width:150px}
+label.slider b{color:var(--ink);font-family:"JetBrains Mono",ui-monospace,monospace;font-weight:600}
+input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:6px;border-radius:9px;background:var(--surface-3);outline:none}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:20px;height:20px;border-radius:50%;background:var(--c1);border:3px solid var(--surface);box-shadow:0 1px 4px rgba(0,0,0,.25);cursor:pointer}
+input[type=range]::-moz-range-thumb{width:16px;height:16px;border-radius:50%;background:var(--c1);border:3px solid var(--surface);cursor:pointer}
+input[type=text]{width:100%;padding:12px 14px;border-radius:12px;border:1px solid var(--line);background:var(--surface-2);color:var(--ink);font:inherit;outline:none}
+input[type=text]:focus{border-color:var(--c1)}
+.readout{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:.85rem;color:var(--ink-2)}
+.pill{display:inline-block;padding:2px 9px;border-radius:99px;font-size:.78rem;font-weight:700}
+
+/* callouts */
+.key{border-left:4px solid var(--c1);background:var(--c1-soft);padding:16px 20px;border-radius:0 16px 16px 0;margin:26px 0}
+.key::before{content:"Key idea";display:block;font-size:.7rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--c1);margin-bottom:4px}
+.key.warn{border-color:var(--c3);background:var(--c3-soft)}
+.key.warn::before{content:"Worth knowing";color:var(--c3)}
+.key p:last-child{margin:0}
+
+/* quiz */
+.quiz{border:2px dashed var(--line);border-radius:22px;padding:22px;margin:34px 0;background:var(--surface)}
+.quiz .q-label{font-size:.72rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--c3)}
+.quiz .q{font-weight:700;font-size:1.08rem;margin:6px 0 14px}
+.quiz .opts{display:grid;gap:10px}
+.quiz .opt{text-align:left;cursor:pointer;padding:12px 16px;border-radius:14px;border:2px solid var(--line);background:var(--surface);font-weight:500;box-shadow:0 3px 0 var(--line);transition:.15s}
+.quiz .opt:hover{border-color:var(--c1)}
+.quiz .opt.right{border-color:var(--c2);background:var(--c2-soft);box-shadow:0 3px 0 var(--c2)}
+.quiz .opt.wrong{border-color:var(--c4);background:var(--c4-soft);box-shadow:0 3px 0 var(--c4);animation:shake .35s}
+.quiz .explain{display:none;margin-top:14px;padding:14px 16px;border-radius:14px;background:var(--surface-2);font-size:.95rem}
+.quiz.answered .explain{display:block;animation:pop .35s}
+@keyframes shake{25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+@keyframes pop{from{opacity:0;transform:translateY(6px)}}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+
+/* cards */
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:18px;transition:transform .25s,box-shadow .25s,opacity .3s}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.card h4{font-size:1.05rem;margin:8px 0 6px}
+.card p{font-size:.88rem;color:var(--ink-2);margin:0}
+.card .ico{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;font-size:1.25rem}
+.card.hide{display:none}
+
+/* ---------- specific widgets ---------- */
+#rings circle{cursor:pointer;transition:filter .2s,opacity .3s}
+#rings circle:hover{filter:brightness(1.08)}
+#rings text{pointer-events:none;font-weight:700}
+.info-panel{background:var(--surface-2);border-radius:16px;padding:18px;min-height:150px}
+.info-panel h4{font-size:1.2rem;margin-bottom:6px}
+.info-panel .ex{margin-top:10px;font-size:.88rem;color:var(--ink-2)}
+
+.spectrum{position:relative;height:14px;border-radius:99px;background:linear-gradient(90deg,var(--c2),var(--c3),var(--c4));margin:34px 8px 12px}
+.spectrum .mark{position:absolute;top:-30px;transform:translateX(-50%);font-size:.75rem;font-weight:700;white-space:nowrap;color:var(--ink)}
+.spectrum .mark::after{content:"";position:absolute;left:50%;top:22px;width:3px;height:22px;background:var(--ink);transform:translateX(-50%);border-radius:2px}
+.spectrum-labels{display:flex;justify-content:space-between;font-size:.8rem;font-weight:700;color:var(--ink-2)}
+
+#neuronSvg line{transition:stroke-width .2s,stroke .2s}
+#neuronOut{transition:fill .25s}
+
+.timeline{position:relative;overflow-x:auto;padding:26px 6px 8px;scrollbar-width:thin}
+.tl-track{position:relative;display:flex;gap:0;min-width:max-content;padding:0 20px}
+.tl-track::before{content:"";position:absolute;left:0;right:0;top:44px;height:3px;background:var(--line)}
+.tl-item{position:relative;width:86px;flex:none;text-align:center;cursor:pointer;padding-top:4px}
+.tl-year{font-size:.75rem;font-weight:700;color:var(--muted);height:22px}
+.tl-dot{width:18px;height:18px;border-radius:50%;margin:5px auto 8px;background:var(--surface);border:3px solid var(--muted);transition:.25s;position:relative;z-index:1}
+.tl-item.big .tl-dot{width:26px;height:26px;margin-top:1px;margin-bottom:4px}
+.tl-name{font-size:.72rem;font-weight:600;color:var(--ink-2);line-height:1.25;padding:0 4px}
+.tl-item:hover .tl-dot{transform:scale(1.2)}
+.tl-item.sel .tl-dot{background:var(--c1);border-color:var(--c1);box-shadow:0 0 0 6px var(--c1-soft)}
+.tl-item.sel .tl-name{color:var(--ink)}
+.tl-detail{margin-top:14px;background:var(--surface-2);border-radius:16px;padding:18px 20px;min-height:130px}
+.tl-detail h4{font-size:1.2rem;margin:6px 0}
+.tag{display:inline-block;padding:2px 10px;border-radius:99px;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em}
+.tag.paper{background:var(--c6-soft);color:var(--c6)}
+.tag.milestone{background:var(--c5-soft);color:var(--c5)}
+.tag.product{background:var(--c2-soft);color:var(--c2)}
+.tag.claude{background:var(--claude-soft);color:var(--claude)}
+
+.paper{background:linear-gradient(135deg,var(--c6-soft),var(--c1-soft));border-radius:24px;padding:28px;margin:30px 0;position:relative;overflow:hidden}
+.paper .ptitle{font-family:"Space Grotesk",Inter,system-ui,sans-serif;font-size:1.8rem;font-weight:700;margin:4px 0 6px}
+.paper .authors{font-size:.85rem;color:var(--ink-2)}
+.paper blockquote{margin:16px 0 0;padding:14px 18px;background:var(--surface);border-radius:14px;font-size:.95rem;font-style:italic;color:var(--ink-2)}
+
+.tf{display:flex;flex-direction:column-reverse;gap:8px;position:relative}
+.tf-block{cursor:pointer;border-radius:12px;padding:10px 14px;font-weight:600;font-size:.9rem;text-align:center;border:2px solid transparent;transition:.2s}
+.tf-block:hover,.tf-block.sel{border-color:var(--ink);transform:scale(1.02)}
+.tf-group{border:2px dashed var(--muted);border-radius:16px;padding:10px;display:flex;flex-direction:column-reverse;gap:8px;position:relative}
+.tf-group::after{content:"× N layers";position:absolute;right:-8px;top:-12px;background:var(--surface);padding:0 8px;font-size:.75rem;font-weight:700;color:var(--muted)}
+.tf-flow{position:absolute;left:-14px;top:0;bottom:0;width:4px;border-radius:4px;background:linear-gradient(0deg,var(--c1),var(--c6),var(--c4),var(--c1));background-size:100% 300%;animation:flow 2.5s linear infinite}
+@keyframes flow{to{background-position:0 300%}}
+
+.tokens{display:flex;flex-wrap:wrap;gap:3px;margin-top:14px;min-height:44px;font-family:"JetBrains Mono",ui-monospace,monospace;font-size:.92rem}
+.tok{padding:4px 5px;border-radius:6px;white-space:pre;animation:pop .3s both}
+.stats{display:flex;gap:18px;margin-top:14px;flex-wrap:wrap}
+.stat{background:var(--surface-2);border-radius:12px;padding:10px 14px;min-width:100px}
+.stat b{display:block;font-family:"Space Grotesk",Inter,system-ui,sans-serif;font-size:1.5rem}
+.stat span{font-size:.75rem;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+
+.att-wrap{position:relative;overflow-x:auto;padding-top:110px}
+.att-words{display:flex;gap:6px;white-space:nowrap;padding:0 8px 8px;position:relative;z-index:1;min-width:max-content}
+.att-word{cursor:pointer;padding:8px 10px;border-radius:10px;font-weight:600;border:2px solid transparent;transition:background .25s,border-color .2s;position:relative}
+.att-word.src{border-color:var(--ink)}
+.att-word .bar{position:absolute;left:6px;right:6px;bottom:-8px;height:4px;border-radius:3px;background:var(--c1);transform-origin:left;transition:transform .3s}
+#attSvg{position:absolute;left:0;top:0;pointer-events:none;overflow:visible}
+#attSvg path{fill:none;stroke:var(--c1);stroke-linecap:round;transition:stroke-width .3s,opacity .3s}
+
+.probs{display:grid;gap:7px;margin-top:14px}
+.prob{display:grid;grid-template-columns:90px 1fr 56px;align-items:center;gap:10px;font-weight:600;font-size:.92rem}
+.prob .track{height:26px;border-radius:8px;background:var(--surface-2);overflow:hidden}
+.prob .fill{height:100%;border-radius:8px;background:linear-gradient(90deg,var(--c1),var(--c6));transition:width .35s cubic-bezier(.2,.7,.2,1)}
+.prob.picked .fill{background:linear-gradient(90deg,var(--c2),var(--c5))}
+.sentence{font-size:1.35rem;font-family:"Space Grotesk",Inter,system-ui,sans-serif;font-weight:600}
+.sentence .next{color:var(--c1);border-bottom:3px solid var(--c1);padding:0 4px;display:inline-block;min-width:60px;transition:.2s}
+.samples{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px;min-height:30px}
+.samples span{padding:3px 10px;border-radius:99px;background:var(--surface-2);font-size:.8rem;font-weight:600;animation:pop .3s}
+
+#embSvg .pt circle{transition:r .3s}
+#embSvg text{font-size:13px;font-weight:600;fill:var(--ink)}
+#embSvg .vec{stroke-width:3;fill:none;stroke-dasharray:400;stroke-dashoffset:400;transition:stroke-dashoffset 1s ease}
+#embSvg .vec.on{stroke-dashoffset:0}
+
+.steps{display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap}
+.step-dot{flex:1;min-width:90px;padding:10px 12px;border-radius:12px;background:var(--surface-2);font-size:.8rem;font-weight:700;color:var(--muted);cursor:pointer;transition:.25s;border:2px solid transparent}
+.step-dot.on{background:var(--c1-soft);color:var(--c1);border-color:var(--c1)}
+.step-dot.done{color:var(--c2)}
+.step-body{min-height:150px;animation:pop .4s}
+.step-body .big-ico{font-size:2.4rem}
+
+.stack{display:flex;flex-direction:column;gap:8px}
+.layer{border-radius:14px;padding:14px 18px;display:flex;justify-content:space-between;align-items:center;gap:12px;font-weight:600;transition:transform .3s;cursor:default}
+.layer:hover{transform:translateX(6px)}
+.layer small{font-weight:500;color:var(--ink-2);text-align:right}
+
+.tier{cursor:pointer;border:2px solid var(--line);border-radius:18px;padding:16px;background:var(--surface);transition:.25s}
+.tier.on{border-color:var(--claude);background:var(--claude-soft)}
+.tier h4{font-size:1.15rem}
+.meter{display:grid;grid-template-columns:100px 1fr;align-items:center;gap:10px;font-size:.85rem;font-weight:600;margin:8px 0}
+.meter .track{height:12px;border-radius:9px;background:var(--surface-2);overflow:hidden}
+.meter .fill{height:100%;border-radius:9px;background:var(--claude);transition:width .5s cubic-bezier(.2,.7,.2,1)}
+
+.code{background:#15151d;color:#e6e6ee;border-radius:14px;padding:14px 16px;font-family:"JetBrains Mono",ui-monospace,monospace;font-size:.8rem;line-height:1.55;white-space:pre-wrap;overflow-x:auto;min-height:120px}
+.code .k{color:#ff9e7a}.code .s{color:#8fe3b0}.code .c{color:#8a8aa0}
+
+.books{display:flex;flex-wrap:wrap;gap:5px;margin-top:14px;min-height:60px;align-items:flex-end}
+.book{width:14px;height:44px;border-radius:3px;animation:pop .3s both}
+.page{width:18px;height:24px;border-radius:2px;background:var(--surface-3);border:1px solid var(--line);animation:pop .3s both}
+
+.think{border:1px solid var(--line);border-radius:14px;margin-top:14px;overflow:hidden}
+.think-head{padding:10px 14px;font-size:.8rem;font-weight:700;background:var(--surface-2);display:flex;align-items:center;gap:8px;color:var(--ink-2)}
+.think-body{padding:12px 14px;font-size:.88rem;color:var(--ink-2);font-family:"JetBrains Mono",ui-monospace,monospace;white-space:pre-wrap;min-height:40px}
+.answer{margin-top:12px;padding:14px 16px;border-radius:14px;background:var(--claude-soft);font-weight:600;display:none}
+.spin{width:12px;height:12px;border-radius:50%;border:2px solid var(--claude);border-right-color:transparent;animation:rot .8s linear infinite}
+@keyframes rot{to{transform:rotate(360deg)}}
+
+.rag-docs{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:8px;margin-top:12px}
+.rag-doc{border-radius:12px;padding:10px 12px;font-size:.78rem;background:var(--surface-2);border:2px solid transparent;transition:.35s;position:relative}
+.rag-doc .score{position:absolute;top:6px;right:8px;font-family:"JetBrains Mono",ui-monospace,monospace;font-size:.72rem;font-weight:700;opacity:0;transition:.3s}
+.rag-doc.scored .score{opacity:1}
+.rag-doc.top{border-color:var(--c2);background:var(--c2-soft);transform:scale(1.03)}
+.rag-doc.dim{opacity:.4}
+.rag-doc b{display:block;font-size:.8rem;margin-bottom:2px;padding-right:40px}
+.vecbar{display:flex;gap:2px;height:28px;align-items:flex-end;margin-top:8px}
+.vecbar i{flex:1;border-radius:2px;background:var(--c1);transition:height .4s}
+.rag-stage{display:flex;gap:6px;margin:14px 0;flex-wrap:wrap}
+.rag-stage span{flex:1;min-width:110px;text-align:center;padding:8px;border-radius:10px;font-size:.78rem;font-weight:700;background:var(--surface-2);color:var(--muted);transition:.3s}
+.rag-stage span.on{background:var(--c1);color:#fff}
+.rag-stage span.done{background:var(--c2-soft);color:var(--c2)}
+
+.flow-dash{stroke-dasharray:6 6;animation:dash 1s linear infinite}
+@keyframes dash{to{stroke-dashoffset:-24}}
+
+.footer{padding:70px 20px 90px;text-align:center;color:var(--muted);font-size:.9rem;border-top:1px solid var(--line)}
+.recap{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
+.recap div{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:16px;font-size:.9rem}
+.recap b{display:block;font-family:"Space Grotesk",Inter,system-ui,sans-serif;font-size:1rem;margin-bottom:4px}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <button class="icon-btn" id="menuBtn" aria-label="Open chapters">☰</button>
+  <a class="brand" href="#top"><span class="brand-mark">AI</span> AI, Explained</a>
+  <div class="top-actions">
+    <button class="icon-btn" id="themeBtn" aria-label="Toggle theme">◐</button>
+  </div>
+  <div class="progress" id="progress"></div>
+</header>
+
+<nav class="sidebar" id="sidebar">
+  <h4>Course</h4>
+  <a href="#ch1"><span class="num">1</span>What is AI?</a>
+  <a href="#ch2"><span class="num">2</span>How machines learn</a>
+  <a href="#ch3"><span class="num">3</span>Neural networks</a>
+  <a href="#ch4"><span class="num">4</span>The road to generative AI</a>
+  <a href="#ch5"><span class="num">5</span>Inside a transformer</a>
+  <a href="#ch6"><span class="num">6</span>How LLMs are trained</a>
+  <a href="#ch7"><span class="num">7</span>Beyond text: diffusion</a>
+  <a href="#ch8"><span class="num">8</span>Today's AI landscape</a>
+  <a href="#ch9"><span class="num">9</span>Meet Claude</a>
+  <a href="#ch10"><span class="num">10</span>The frontier: RAG, JEPA &amp; more</a>
+  <a href="#recap"><span class="num">★</span>Recap</a>
+</nav>
+
+<main id="top">
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <canvas id="heroCanvas" aria-hidden="true"></canvas>
+  <div class="hero-inner reveal">
+    <span class="ch-tag">An interactive course</span>
+    <h1 style="margin-top:18px">How <span class="grad">AI</span> actually works.</h1>
+    <p>Start from zero. Play with a neuron, watch a network learn, pull apart the 2017 paper that started the generative AI boom, meet Claude, and look at where the field is heading next.</p>
+    <a class="btn primary" href="#ch1" style="text-decoration:none;padding:13px 24px;font-size:1rem">Start learning →</a>
+    <div class="hero-stats"><span>10 chapters</span><span>20+ interactive diagrams</span><span>No math background needed</span></div>
+  </div>
+</section>
+
+<!-- ============ CH1 ============ -->
+<section class="chapter" id="ch1">
+<div class="wrap">
+  <div class="ch-head reveal">
+    <span class="ch-tag">Chapter 1</span>
+    <h2>What is AI, really?</h2>
+    <p class="lede">"Artificial intelligence" is an umbrella term. Underneath it sit several nested ideas, each more specific than the last.</p>
+  </div>
+
+  <p class="reveal"><b>Artificial intelligence</b> is any technique that lets a computer do something we'd normally say takes intelligence: recognizing a face, translating a sentence, planning a route, writing a poem.</p>
+  <p class="reveal">For decades, most AI was <b>hand-written rules</b>: <i>"if the email contains 'FREE MONEY', mark it as spam."</i> That works until the spammer writes "FR3E M0NEY". The big shift in modern AI is that we stopped writing the rules and started letting machines <b>learn them from examples</b>.</p>
+
+  <div class="widget reveal">
+    <div class="w-head">Interactive</div>
+    <div class="w-title">The AI family tree</div>
+    <div class="w-sub">Each circle sits inside the one before it. Tap a circle to explore it.</div>
+    <div class="grid2" style="align-items:center">
+      <svg id="rings" viewBox="0 0 400 400" role="img" aria-label="Nested circles: AI contains machine learning, which contains deep learning, which contains generative AI"></svg>
+      <div class="info-panel" id="ringInfo"></div>
+    </div>
+  </div>
+
+  <h3 class="reveal">Three levels of capability</h3>
+  <p class="reveal">People also sort AI by how <i>general</i> it is. Every AI system in use today, however impressive, is some kind of <b>narrow AI</b>: it's good at a set of tasks, not everything a human can do. Today's large language models are the broadest narrow AIs ever built, which is why the line has started to feel blurry.</p>
+  <div class="widget reveal">
+    <div class="w-head" style="color:var(--c2)">Spectrum</div>
+    <div class="spectrum"><div class="mark" id="nowMark" style="left:8%">We are here</div></div>
+    <div class="spectrum-labels"><span>Narrow AI (ANI)</span><span>General AI (AGI)</span><span>Superintelligence (ASI)</span></div>
+    <div class="cards" style="margin-top:22px">
+      <div class="card"><div class="ico" style="background:var(--c2-soft)">🎯</div><h4>Narrow AI</h4><p>Excels at specific tasks: chess engines, spam filters, image recognition, today's chatbots. It exists today.</p></div>
+      <div class="card"><div class="ico" style="background:var(--c3-soft)">🧠</div><h4>General AI</h4><p>Could learn and do almost any intellectual task a person can, and transfer skills between them. Hypothetical, and heavily debated.</p></div>
+      <div class="card"><div class="ico" style="background:var(--c4-soft)">🚀</div><h4>Superintelligence</h4><p>Would exceed the best humans across nearly every domain. Speculative, and the main focus of long-term AI safety research.</p></div>
+    </div>
+  </div>
+
+  <div class="quiz reveal" data-correct="1">
+    <div class="q-label">Quick check</div>
+    <div class="q">A system follows 5,000 hand-written "if/then" rules to diagnose car engine faults. Which category fits best?</div>
+    <div class="opts">
+      <button class="opt">Machine learning</button>
+      <button class="opt">AI, but not machine learning</button>
+      <button class="opt">Generative AI</button>
+    </div>
+    <div class="explain">It counts as AI (an "expert system", popular in the 1980s), but nothing is <i>learned</i> from data. A human wrote every rule, so it isn't machine learning.</div>
+  </div>
+</div>
+</section>
+
+<!-- ============ CH2 ============ -->
+<section class="chapter" id="ch2">
+<div class="wrap">
+  <div class="ch-head reveal">
+    <span class="ch-tag" style="background:var(--c2-soft);color:var(--c2)">Chapter 2</span>
+    <h2>How machines learn</h2>
+    <p class="lede">Machine learning comes in three main flavors. What separates them is the kind of feedback the machine gets.</p>
+  </div>
+
+  <div class="widget wide reveal">
+    <div class="w-head" style="color:var(--c2)">Live simulation</div>
+    <div class="w-title">Three ways to learn</div>
+    <div class="w-sub" id="learnInfo"></div>
+    <div class="row" style="margin-bottom:14px">
+      <button class="chip on" data-mode="sup">Supervised</button>
+      <button class="chip" data-mode="uns">Unsupervised</button>
+      <button class="chip" data-mode="rl">Reinforcement</button>
+      <span style="flex:1"></span>
+      <button class="btn" id="learnFast">⏩ Speed up</button>
+      <button class="btn" id="learnReset">↺ Restart</button>
+    </div>
+    <div class="stage"><canvas id="learnCanvas" style="height:340px"></canvas></div>
+    <div class="readout" id="learnStat" style="margin-top:10px"></div>
+  </div>
+
+  <div class="grid2 reveal">
+    <div class="card"><div class="ico" style="background:var(--c1-soft)">🏷️</div><h4>Supervised</h4><p>Learn from labeled examples ("this is spam", "this is not"). Used for classification and prediction.</p></div>
+    <div class="card"><div class="ico" style="background:var(--c5-soft)">🧩</div><h4>Unsupervised</h4><p>Find structure in unlabeled data: clusters, patterns, compressions. Used for customer segmentation and anomaly detection.</p></div>
+    <div class="card"><div class="ico" style="background:var(--c3-soft)">🎮</div><h4>Reinforcement</h4><p>Learn by trial and error from rewards. It's how AlphaGo mastered Go, and part of how chatbots learn to be helpful.</p></div>
+    <div class="card"><div class="ico" style="background:var(--c6-soft)">🔮</div><h4>Self-supervised</h4><p>A clever mix: hide part of the data and predict it. "Predict the next word" is how LLMs learn from raw text without human labels.</p></div>
+  </div>
+
+  <h3 class="reveal">Learning = rolling downhill</h3>
+  <p class="reveal">Nearly all modern ML works the same way underneath. Define a <b>loss</b>, a number that says how wrong the model is. Then nudge the model's settings in whatever direction lowers the loss, and repeat. This is called <b>gradient descent</b>: a ball rolling down a hill in the dark, feeling for the slope.</p>
+
+  <div class="widget reveal">
+    <div class="w-head" style="color:var(--c2)">Interactive</div>
+    <div class="w-title">Gradient descent</div>
+    <div class="w-sub">Click anywhere on the curve to drop the ball. Then change the <b>learning rate</b>, the size of each step. Too small and it crawls. Too big and it overshoots.</div>
+    <div class="stage"><canvas id="gdCanvas" style="height:280px;cursor:crosshair"></canvas></div>
+    <div class="row" style="margin-top:14px">
+      <label class="slider">Learning rate <b id="lrVal">0.10</b><input type="range" id="lr" min="0.01" max="0.9" step="0.01" value="0.1"></label>
+      <button class="btn primary" id="gdPlay">▶ Roll</button>
+      <button class="btn" id="gdStep">Step</button>
+    </div>
+    <div class="readout" id="gdStat" style="margin-top:8px"></div>
+  </div>
+
+  <div class="key reveal"><p>Training a model with billions of parameters is the same idea as this ball, just in a landscape with billions of dimensions instead of one.</p></div>
+
+  <div class="quiz reveal" data-correct="2">
+    <div class="q-label">Quick check</div>
+    <div class="q">You set the learning rate very high and the loss starts jumping around wildly. What's happening?</div>
+    <div class="opts">
+      <button class="opt">The model has found the global minimum</button>
+      <button class="opt">The data is unlabeled</button>
+      <button class="opt">Each step is so large it jumps over the valley</button>
+    </div>
+    <div class="explain">Big steps overshoot the bottom and land on the opposite slope, sometimes higher than before. Picking a good learning rate (and changing it during training) is a big part of the craft.</div>
+  </div>
+</div>
+</section>
+
+<!-- ============ CH3 ============ -->
+<section class="chapter" id="ch3">
+<div class="wrap">
+  <div class="ch-head reveal">
+    <span class="ch-tag" style="background:var(--c5-soft);color:var(--c5)">Chapter 3</span>
+    <h2>Neural networks</h2>
+    <p class="lede">Neural networks are loosely inspired by the brain. Their basic unit, the artificial neuron, is surprisingly simple.</p>
+  </div>
+
+  <p class="reveal">A neuron takes a few numbers in and multiplies each by a <b>weight</b> (how much it matters). It adds them up with a <b>bias</b>, then squashes the result into a range like 0 to 1. That's the whole thing. <b>Learning means finding good weights.</b></p>
+
+  <div class="widget reveal">
+    <div class="w-head" style="color:var(--c5)">Interactive</div>
+    <div class="w-title">A single neuron: "Should I go to the beach?"</div>
+    <div class="w-sub">Set the inputs (what's true today) and the weights (how much you care about each one). Line thickness shows weight size. Rose lines are negative weights.</div>
+    <div class="grid2">
+      <svg id="neuronSvg" viewBox="0 0 360 260"></svg>
+      <div>
+        <div id="neuronSliders"></div>
+        <div class="stat" style="margin-top:10px"><span>Output = σ(Σ w·x + b)</span><b id="neuronVal">0.00</b><div id="neuronVerdict" class="small"></div></div>
+      </div>
+    </div>
+  </div>
+
+  <h3 class="reveal">Stack them up: deep learning</h3>
+  <p class="reveal">Wire thousands of neurons into <b>layers</b>, so that each layer feeds the next, and you get a neural network. The early layers learn simple features (edges, letter shapes). Deeper layers combine those into complex concepts (faces, meanings). "Deep" learning just means many layers.</p>
+  <p class="reveal">The algorithm that trains them, <b>backpropagation</b>, works out how much each weight contributed to the error and nudges every one of them downhill at once. It's gradient descent across the whole network.</p>
+
+  <div class="widget wide reveal">
+    <div class="w-head" style="color:var(--c5)">Animation</div>
+    <div class="w-title">A forward pass</div>
+    <div class="w-sub">Signals flow from the inputs through hidden layers to a prediction. Press run to send a new example through.</div>
+    <div class="stage" style="padding:10px"><svg id="netSvg" viewBox="0 0 640 300" style="width:100%;display:block"></svg></div>
+    <div class="row" style="margin-top:12px"><button class="btn primary" id="netRun">▶ Run forward pass</button><span class="readout" id="netOut"></span></div>
+  </div>
+
+  <div class="quiz reveal" data-correct="0">
+    <div class="q-label">Quick check</div>
+    <div class="q">In the beach neuron, you set the weight on "It's raining" to a large negative number. What does that do?</div>
+    <div class="opts">
+      <button class="opt">Rain strongly pushes the output toward "no"</button>
+      <button class="opt">Rain is ignored</button>
+      <button class="opt">Rain makes the beach more likely</button>
+    </div>
+    <div class="explain">A negative weight means "when this input is on, lower the output." The magnitude sets how strongly. A weight of 0 would mean "ignore it."</div>
+  </div>
+</div>
+</section>
+
+<!-- ============ CH4 ============ -->
+<section class="chapter" id="ch4">
+<div class="wrap">
+  <div class="ch-head reveal">
+    <span class="ch-tag" style="background:var(--c6-soft);color:var(--c6)">Chapter 4</span>
+    <h2>The road to generative AI</h2>
+    <p class="lede">Generative AI makes new content instead of just labeling existing content. It took 70 years of ideas, and one pivotal paper, to get here.</p>
+  </div>
+
+  <div class="widget wide reveal">
+    <div class="w-head" style="color:var(--c6)">Timeline</div>
+    <div class="w-title">70 years in 30 moments</div>
+    <div class="w-sub">Scroll sideways and tap any moment. Or press play for the tour.</div>
+    <div class="row"><button class="btn primary" id="tlPlay">▶ Play tour</button>
+      <span class="small muted"><span class="tag paper">paper</span> <span class="tag milestone">milestone</span> <span class="tag product">product</span> <span class="tag claude">Claude</span></span></div>
+    <div class="timeline" id="timeline"><div class="tl-track" id="tlTrack"></div></div>
+    <div class="tl-detail" id="tlDetail"></div>
+  </div>
+
+  <h3 class="reveal">The paper that started it all</h3>
+  <p class="reveal">Before 2017, language models read text <b>one word at a time</b> using recurrent networks (RNNs and LSTMs). That was slow, because it couldn't run in parallel, and forgetful, because information from early words faded by the end of long sentences.</p>
+
+  <div class="paper reveal">
+    <span class="tag paper">NeurIPS 2017 · Google Brain &amp; Google Research</span>
+    <div class="ptitle">"Attention Is All You Need"</div>
+    <div class="authors">Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N. Gomez, Łukasz Kaiser, Illia Polosukhin</div>
+    <blockquote>"We propose a new simple network architecture, the Transformer, based solely on attention mechanisms, dispensing with recurrence and convolutions entirely."</blockquote>
+    <div class="cards" style="margin-top:18px">
+      <div class="card"><h4>💡 The insight</h4><p>Let every word look directly at every other word at the same time, using <b>self-attention</b>. There's no recurrence and no fading memory.</p></div>
+      <div class="card"><h4>⚡ Why it mattered</h4><p>It runs fully in parallel on GPUs, so you can train much bigger models on much more data.</p></div>
+      <div class="card"><h4>🌱 What it spawned</h4><p>BERT, GPT, Claude, Gemini, Llama, and image, audio and protein models too. The "T" in GPT stands for Transformer.</p></div>
+    </div>
+  </div>
+
+  <p class="reveal">The paper was originally about translating English to German and French. Nobody knew yet that the same architecture, <b>scaled up</b>, would learn to write code, pass exams and hold conversations. That discovery came from the <b>scaling laws</b> (2020): the loss of language models falls predictably as you add parameters, data and compute.</p>
+
+  <div class="quiz reveal" data-correct="1">
+    <div class="q-label">Quick check</div>
+    <div class="q">What was the key limitation of RNNs that the Transformer removed?</div>
+    <div class="opts">
+      <button class="opt">They couldn't process text at all</button>
+      <button class="opt">They processed words one after another, so they were slow to train and forgot distant context</button>
+      <button class="opt">They needed labeled data</button>
+    </div>
+    <div class="explain">Sequential processing meant no parallelism and a weakening signal over long distances. Attention connects any two positions in a single step.</div>
+  </div>
+</div>
+</section>
+
+<!-- ============ CH5 ============ -->
+<section class="chapter" id="ch5">
+<div class="wrap">
+  <div class="ch-head reveal">
+    <span class="ch-tag">Chapter 5</span>
+    <h2>Inside a transformer</h2>
+    <p class="lede">A large language model does one thing: predict the next piece of text. Here's how it gets from your words to that prediction.</p>
+  </div>
+
+  <h3 class="reveal">Step 1: Text becomes tokens</h3>
+  <p class="reveal">Models don't see letters or words. They see <b>tokens</b>: common chunks of text, each with an ID number. Common words are usually one token. Rare words get split into pieces.</p>
+  <div class="widget reveal">
+    <div class="w-head">Interactive</div>
+    <div class="w-title">Tokenizer playground</div>
+    <div class="w-sub">Type anything. (This is a simplified tokenizer. Real ones like BPE learn their splits from data, but the behavior is similar.)</div>
+    <input type="text" id="tokIn" value="Tokenization is unbelievably important for transformers!" aria-label="Text to tokenize">
+    <div class="tokens" id="tokOut"></div>
+    <div class="stats"><div class="stat"><b id="tkN">0</b><span>tokens</span></div><div class="stat"><b id="tkC">0</b><span>characters</span></div><div class="stat"><b id="tkR">0</b><span>chars / token</span></div></div>
+  </div>
+
+  <h3 class="reveal">Step 2: Tokens become meaning-vectors</h3>
+  <p class="reveal">Each token is turned into an <b>embedding</b>: a long list of numbers (thousands of them) that places the token in a "meaning space". Similar meanings end up near each other. Directions in that space can even encode relationships.</p>
+  <div class="widget reveal">
+    <div class="w-head">Interactive</div>
+    <div class="w-title">Embedding arithmetic</div>
+    <div class="w-sub">A 2-D sketch of a space that really has thousands of dimensions. Pick an analogy and watch vector math find the answer.</div>
+    <div class="row" style="margin-bottom:12px"><button class="chip on" data-an="0">king − man + woman</button><button class="chip" data-an="1">swim − walk + walked</button></div>
+    <div class="stage"><svg id="embSvg" viewBox="0 0 520 340" style="width:100%;display:block"></svg></div>
+    <div class="readout" id="embOut" style="margin-top:10px"></div>
+  </div>
+
+  <h3 class="reveal">Step 3: Attention, where words look at each other</h3>
+  <p class="reveal">Here's the transformer's superpower. For every token, <b>self-attention</b> asks: <i>"Which other tokens should I pay attention to, to understand what I mean here?"</i> The word "it" can't be understood alone. It needs to find what it refers to.</p>
+  <div class="widget wide reveal">
+    <div class="w-head">Interactive</div>
+    <div class="w-title">Watch attention resolve "it"</div>
+    <div class="w-sub">Tap any word to see where it attends. Then swap the last word and see how "it" changes what it looks at.</div>
+    <div class="row"><button class="chip on" data-end="tired">…because it was too <b>tired</b></button><button class="chip" data-end="wide">…because it was too <b>wide</b></button></div>
+    <div class="att-wrap" id="attWrap"><svg id="attSvg"></svg><div class="att-words" id="attWords"></div></div>
+    <div class="readout" id="attOut" style="margin-top:14px"></div>
+  </div>
+  <p class="reveal">A real model runs dozens of these <b>attention heads</b> in parallel, each learning to track different things (grammar, references, facts, tone), and stacks dozens of layers of them.</p>
+
+  <h3 class="reveal">The full architecture</h3>
+  <div class="widget reveal">
+    <div class="w-head">Explore</div>
+    <div class="w-title">A (decoder-only) transformer, bottom to top</div>
+    <div class="w-sub">Modern chat models like Claude use the "decoder" half of the original design. Tap each block.</div>
+    <div class="grid2" style="align-items:center">
+      <div style="position:relative;padding-left:18px"><div class="tf-flow"></div><div class="tf" id="tf"></div></div>
+      <div class="info-panel" id="tfInfo"></div>
+    </div>
+  </div>
+
+  <h3 class="reveal">Step 4: Predict the next token</h3>
+  <p class="reveal">At the top, the model outputs a <b>probability for every token</b> in its vocabulary. It picks one, appends it to the text, and runs again, one token at a time. The <b>temperature</b> setting controls how adventurous that pick is.</p>
+  <div class="widget reveal">
+    <div class="w-head">Interactive</div>
+    <div class="w-title">Temperature &amp; sampling</div>
+    <div class="w-sub">Low temperature makes the model predictable. High temperature makes it creative, and eventually chaotic. Sample a few times at each setting.</div>
+    <div class="sentence">The cat sat on the <span class="next" id="ntNext">___</span></div>
+    <div class="probs" id="probs"></div>
+    <div class="row" style="margin-top:16px">
+      <label class="slider">Temperature <b id="tVal">1.00</b><input type="range" id="temp" min="0.1" max="2.5" step="0.05" value="1"></label>
+      <button class="btn primary" id="sample">🎲 Sample</button>
+      <button class="btn" id="sample10">×10</button>
+    </div>
+    <div class="samples" id="samples"></div>
+  </div>
+
+  <div class="key reveal"><p>An LLM is a <b>next-token predictor</b>, trained on a huge amount of text. To predict the next word of a physics textbook, a legal brief or a Python program well, it has to learn a lot of physics, law and Python along the way.</p></div>
+</div>
+</section>
+
+<!-- ============ CH6 ============ -->
+<section class="chapter" id="ch6">
+<div class="wrap">
+  <div class="ch-head reveal">
+    <span class="ch-tag" style="background:var(--c3-soft);color:var(--c3)">Chapter 6</span>
+    <h2>How LLMs are trained</h2>
+    <p class="lede">A raw next-token predictor is not yet an assistant. It takes several stages to turn it into one.</p>
+  </div>
+  <div class="widget reveal">
+    <div class="w-head" style="color:var(--c3)">Step through</div>
+    <div class="w-title">From raw text to a helpful assistant</div>
+    <div class="steps" id="trainSteps"></div>
+    <div class="step-body" id="trainBody"></div>
+    <div class="row" style="margin-top:14px"><button class="btn" id="trainPrev">← Back</button><button class="btn primary" id="trainNext">Next →</button></div>
+  </div>
+
+  <h3 class="reveal">Constitutional AI: training with principles</h3>
+  <p class="reveal">Anthropic introduced <b>Constitutional AI</b> in 2022. Instead of relying only on humans to label which responses are better, the model is given a written set of principles (a "constitution"). It learns to critique and revise its own answers against those principles, and AI feedback based on them guides further training.</p>
+  <div class="widget reveal">
+    <div class="w-head" style="color:var(--claude)">Step through</div>
+    <div class="w-title">Critique → revise</div>
+    <div class="steps" id="caiSteps"></div>
+    <div class="step-body" id="caiBody"></div>
+    <div class="row" style="margin-top:14px"><button class="btn" id="caiPrev">← Back</button><button class="btn primary" id="caiNext">Next →</button></div>
+  </div>
+</div>
+</section>
+
+<!-- ============ CH7 ============ -->
+<section class="chapter" id="ch7">
+<div class="wrap">
+  <div class="ch-head reveal">
+    <span class="ch-tag" style="background:var(--c4-soft);color:var(--c4)">Chapter 7</span>
+    <h2>Beyond text: diffusion</h2>
+    <p class="lede">Image and video generators mostly use a different trick: they learn to turn noise into pictures.</p>
+  </div>
+  <p class="reveal"><b>Diffusion models</b> (a key 2020 paper was "Denoising Diffusion Probabilistic Models" by Ho, Jain and Abbeel) are trained by taking real images and adding noise step by step until only static is left. The model learns to <b>undo one small step of noise</b>. To generate something, you start from pure static and denoise it hundreds of times, guided by your text prompt.</p>
+  <div class="widget reveal">
+    <div class="w-head" style="color:var(--c4)">Interactive</div>
+    <div class="w-title">From noise to image</div>
+    <div class="w-sub">Drag the timestep. <b>t = 1000</b> is pure noise and <b>t = 0</b> is the clean image. (Our demo cheats and already knows the answer. A real model has to <i>predict</i> the noise at each step.)</div>
+    <div class="grid2" style="align-items:center">
+      <div class="stage" style="aspect-ratio:1"><canvas id="difCanvas" style="height:100%"></canvas></div>
+      <div>
+        <label class="slider">Timestep t <b id="difT">1000</b><input type="range" id="difSlider" min="0" max="1000" step="1" value="1000"></label>
+        <div class="row" style="margin-top:14px"><button class="btn primary" id="difPlay">▶ Denoise</button><button class="btn" id="difNoise">New noise</button></div>
+        <div class="row" style="margin-top:14px" id="difShapes"><button class="chip on" data-s="smile">Smiley</button><button class="chip" data-s="heart">Heart</button><button class="chip" data-s="house">House</button></div>
+        <p class="small muted" style="margin-top:14px">Signal kept: <b id="difSig">0%</b>. Early steps settle the big layout. Late steps add fine detail.</p>
+      </div>
+    </div>
+  </div>
+  <p class="reveal">Other generative families include <b>GANs</b> (2014), where two networks compete, a forger against a detective, and <b>VAEs</b> (2013), which compress data and decode it again. Many new video and image models combine diffusion with transformer backbones.</p>
+</div>
+</section>
+
+<!-- ============ CH8 ============ -->
+<section class="chapter" id="ch8">
+<div class="wrap">
+  <div class="ch-head reveal">
+    <span class="ch-tag" style="background:var(--c5-soft);color:var(--c5)">Chapter 8</span>
+    <h2>Today's AI landscape</h2>
+    <p class="lede">A few frontier labs, a fast-moving open-weights world, and thousands of products built on top.</p>
+  </div>
+
+  <div class="widget reveal">
+    <div class="w-head" style="color:var(--c5)">The AI stack</div>
+    <div class="w-title">Who builds what</div>
+    <div class="stack">
+      <div class="layer" style="background:var(--c2-soft)">📱 Apps &amp; agents <small>Chat assistants, coding agents, copilots in every product</small></div>
+      <div class="layer" style="background:var(--c1-soft)">🧠 Foundation models <small>Claude, GPT, Gemini, Llama, DeepSeek, Qwen, Mistral…</small></div>
+      <div class="layer" style="background:var(--c6-soft)">☁️ Cloud &amp; infrastructure <small>AWS, Google Cloud, Azure, specialized GPU clouds</small></div>
+      <div class="layer" style="background:var(--c3-soft)">🔌 Chips <small>NVIDIA GPUs, Google TPUs, AWS Trainium, custom accelerators</small></div>
+      <div class="layer" style="background:var(--c4-soft)">📚 Data &amp; energy <small>The web, books, code, licensed and synthetic data, and a lot of electricity</small></div>
+    </div>
+  </div>
+
+  <div class="widget wide reveal">
+    <div class="w-head" style="color:var(--c5)">Filter</div>
+    <div class="w-title">Major model families</div>
+    <div class="row" id="landFilter" style="margin-bottom:14px">
+      <button class="chip on" data-f="all">All</button><button class="chip" data-f="closed">Frontier (closed)</button><button class="chip" data-f="open">Open-weights</button><button class="chip" data-f="media">Image, video &amp; audio</button>
+    </div>
+    <div class="cards" id="landCards"></div>
+    <p class="small muted" style="margin-top:12px">This field moves every month, so treat this as a map of the major players, not a leaderboard.</p>
+  </div>
+
+  <h3 class="reveal">Five trends shaping the landscape</h3>
+  <div class="cards reveal">
+    <div class="card"><div class="ico" style="background:var(--c1-soft)">🤔</div><h4>Reasoning models</h4><p>Models that "think" before answering and spend more compute at inference time on hard problems.</p></div>
+    <div class="card"><div class="ico" style="background:var(--c2-soft)">🤖</div><h4>Agents</h4><p>Models that use tools, browse, write and run code, and complete multi-step tasks on their own.</p></div>
+    <div class="card"><div class="ico" style="background:var(--c3-soft)">🖼️</div><h4>Multimodality</h4><p>One model that reads and produces text, images, audio and video.</p></div>
+    <div class="card"><div class="ico" style="background:var(--c6-soft)">🔓</div><h4>Open-weights race</h4><p>Openly released models often trail the frontier by only months.</p></div>
+    <div class="card"><div class="ico" style="background:var(--c4-soft)">🛡️</div><h4>Safety &amp; regulation</h4><p>Frameworks like the EU AI Act, lab safety policies, and a growing interpretability field.</p></div>
+  </div>
+</div>
+</section>
+
+<!-- ============ CH9 ============ -->
+<section class="chapter" id="ch9">
+<div class="wrap">
+  <div class="ch-head reveal">
+    <span class="ch-tag" style="background:var(--claude-soft);color:var(--claude)">Chapter 9</span>
+    <h2>Meet Claude</h2>
+    <p class="lede">Claude is the family of AI models built by Anthropic, an AI safety company founded in 2021.</p>
+  </div>
+  <p class="reveal">Anthropic's stated mission is to ensure the world safely makes the transition through transformative AI. That shows up in how Claude is built: <b>Constitutional AI</b> training, a published <b>Responsible Scaling Policy</b> with AI Safety Levels (ASL), detailed system cards, and a large <b>interpretability</b> research program that tries to understand what's happening inside the network.</p>
+
+  <div class="widget reveal">
+    <div class="w-head" style="color:var(--claude)">Interactive</div>
+    <div class="w-title">The model tiers</div>
+    <div class="w-sub">Claude comes in sizes that trade speed and cost against capability. Tap a tier. (Bars are relative and illustrative.)</div>
+    <div class="cards" id="tiers"></div>
+    <div id="tierMeters" style="margin-top:16px"></div>
+    <p class="small muted" style="margin-top:10px">New versions ship regularly. Recent generations include Claude Haiku 4.5 and the Claude 5 family. Check anthropic.com for the current lineup.</p>
+  </div>
+
+  <h3 class="reveal">What Claude can do</h3>
+  <div class="widget wide reveal">
+    <div class="w-head" style="color:var(--claude)">Feature explorer</div>
+    <div class="w-title">Claude's capabilities &amp; products</div>
+    <div class="row" id="featFilter" style="margin-bottom:14px">
+      <button class="chip on" data-f="all">All</button><button class="chip" data-f="core">Core abilities</button><button class="chip" data-f="app">In the apps</button><button class="chip" data-f="agent">Agentic</button><button class="chip" data-f="dev">For developers</button>
+    </div>
+    <div class="cards" id="featCards"></div>
+  </div>
+
+  <h3 class="reveal">How tool use works</h3>
+  <p class="reveal">On its own, a model only produces text. <b>Tool use</b> lets Claude ask your application to run a function (search the web, query a database, call an API) and then continue with the result. It's the building block of every agent. The <b>Model Context Protocol (MCP)</b>, which Anthropic open-sourced in 2024, standardizes how tools and data sources plug into AI apps.</p>
+  <div class="widget wide reveal">
+    <div class="w-head" style="color:var(--claude)">Step through</div>
+    <div class="w-title">The tool-use loop</div>
+    <div class="grid2">
+      <div class="stage" style="padding:8px"><svg id="toolSvg" viewBox="0 0 420 260" style="width:100%;display:block"></svg></div>
+      <div><div id="toolText" style="font-weight:600;margin-bottom:10px;min-height:52px"></div><div class="code" id="toolCode"></div></div>
+    </div>
+    <div class="row" style="margin-top:14px"><button class="btn" id="toolPrev">← Back</button><button class="btn primary" id="toolNext">Next →</button><span class="readout" id="toolStep"></span></div>
+  </div>
+
+  <h3 class="reveal">Context window: Claude's working memory</h3>
+  <p class="reveal">The <b>context window</b> is how much text Claude can consider at once: your conversation, documents, code and its own replies. Claude models have a 200K-token window as standard, and some models support up to 1 million tokens.</p>
+  <div class="widget reveal">
+    <div class="w-head" style="color:var(--claude)">Interactive</div>
+    <div class="w-title">How much is a context window?</div>
+    <label class="slider">Tokens <b id="ctxVal">200,000</b><input type="range" id="ctx" min="0" max="100" step="1" value="77"></label>
+    <div class="stats"><div class="stat"><b id="ctxWords">150K</b><span>≈ words</span></div><div class="stat"><b id="ctxPages">500</b><span>≈ pages</span></div><div class="stat"><b id="ctxBooks">1.7</b><span>≈ novels</span></div></div>
+    <div class="books" id="books"></div>
+  </div>
+
+  <h3 class="reveal">Extended thinking</h3>
+  <p class="reveal">For hard problems, Claude can <b>think step by step before answering</b>, and you can read that reasoning. More thinking tends to mean better answers on math, code and multi-step analysis, at the cost of time.</p>
+  <div class="widget reveal">
+    <div class="w-head" style="color:var(--claude)">Demo</div>
+    <div class="w-title">Think first, then answer</div>
+    <div class="w-sub">"A bat and a ball cost $1.10 in total. The bat costs $1.00 more than the ball. How much does the ball cost?"</div>
+    <div class="row"><button class="chip on" id="thinkOn">Extended thinking: ON</button><button class="btn primary" id="thinkRun">▶ Ask</button></div>
+    <div class="think" id="thinkBox"><div class="think-head"><span class="spin" id="thinkSpin" style="display:none"></span><span id="thinkLabel">Thinking</span></div><div class="think-body" id="thinkBody"></div></div>
+    <div class="answer" id="thinkAns"></div>
+  </div>
+
+  <div class="quiz reveal" data-correct="2">
+    <div class="q-label">Quick check</div>
+    <div class="q">During tool use, who actually runs the tool (e.g. calls the weather API)?</div>
+    <div class="opts">
+      <button class="opt">Claude runs it inside the model</button>
+      <button class="opt">Anthropic's servers always run it</button>
+      <button class="opt">The application that is using Claude runs it and returns the result</button>
+    </div>
+    <div class="explain">Claude emits a structured <code>tool_use</code> request, and your code executes it and sends back a <code>tool_result</code>. (Anthropic does offer some server-side tools, like web search, which run on its infrastructure.)</div>
+  </div>
+</div>
+</section>
+
+<!-- ============ CH10 ============ -->
+<section class="chapter" id="ch10">
+<div class="wrap">
+  <div class="ch-head reveal">
+    <span class="ch-tag" style="background:var(--c6-soft);color:var(--c6)">Chapter 10</span>
+    <h2>The frontier: RAG, JEPA &amp; beyond</h2>
+    <p class="lede">What comes after "a bigger transformer"? Here are the ideas pushing AI forward.</p>
+  </div>
+
+  <h3 class="reveal">RAG: Retrieval-Augmented Generation</h3>
+  <p class="reveal">LLMs only know what was in their training data, and they can <b>hallucinate</b> confidently. <b>RAG</b> (Lewis et al., 2020) fixes this by <i>looking things up first</i>. Your question is used to search a knowledge base, the best-matching passages are pasted into the prompt, and the model answers <b>grounded in those sources</b>, with citations.</p>
+  <div class="widget wide reveal">
+    <div class="w-head" style="color:var(--c6)">Working mini-RAG</div>
+    <div class="w-title">Ask the (fictional) Nimbus Coffee Co. employee handbook</div>
+    <div class="w-sub">This runs a real retrieval step in your browser, scoring 8 documents against your question. Try a suggested question, or ask something that isn't covered.</div>
+    <div class="row"><input type="text" id="ragQ" value="How many vacation days do I get?" style="flex:1;min-width:220px" aria-label="Question"><button class="btn primary" id="ragGo">Ask →</button></div>
+    <div class="row" style="margin-top:10px" id="ragSugg"></div>
+    <div class="rag-stage" id="ragStage"><span>1 · Embed question</span><span>2 · Search</span><span>3 · Augment prompt</span><span>4 · Generate</span></div>
+    <div class="grid2">
+      <div><div class="small muted"><b>Question embedding</b> (toy vector)</div><div class="vecbar" id="ragVec"></div>
+        <div class="small muted" style="margin-top:14px"><b>Knowledge base</b></div><div class="rag-docs" id="ragDocs"></div></div>
+      <div><div class="small muted"><b>Prompt sent to the model</b></div><div class="code" id="ragPrompt" style="min-height:170px"></div><div class="answer" id="ragAns" style="display:block;opacity:.4">The answer will appear here.</div></div>
+    </div>
+  </div>
+  <div class="key reveal"><p>RAG is how most companies connect LLMs to their own documents. Real systems use neural <b>embedding models</b> and <b>vector databases</b> instead of our keyword scoring, often combined with re-ranking. The idea is the same.</p></div>
+
+  <h3 class="reveal">JEPA: predicting meaning, not pixels</h3>
+  <p class="reveal">Yann LeCun (Meta) argues that predicting every word or pixel is wasteful, because the world is full of unpredictable detail, like the exact shape of every leaf. His proposal is the <b>Joint Embedding Predictive Architecture</b> (JEPA), set out in the 2022 position paper <i>"A Path Towards Autonomous Machine Intelligence"</i>. A JEPA predicts the <b>abstract representation</b> of the missing part instead of the raw pixels. Models such as I-JEPA (2023), V-JEPA (2024) and V-JEPA 2 (2025) put this into practice, with the goal of building <b>world models</b> that understand physics and can plan.</p>
+  <div class="widget wide reveal">
+    <div class="w-head" style="color:var(--c6)">Compare</div>
+    <div class="w-title">Generative vs. joint-embedding prediction</div>
+    <div class="row" style="margin-bottom:12px"><button class="chip on" data-j="gen">Generative (predict pixels)</button><button class="chip" data-j="jepa">JEPA (predict embeddings)</button></div>
+    <div class="stage" style="padding:8px"><svg id="jepaSvg" viewBox="0 0 700 280" style="width:100%;display:block"></svg></div>
+    <p class="small" id="jepaText" style="margin-top:12px"></p>
+  </div>
+
+  <h3 class="reveal">Mixture of Experts (MoE)</h3>
+  <p class="reveal">Why run a whole giant model for every token? In an <b>MoE</b>, each layer has many "expert" sub-networks and a small <b>router</b> that sends each token to just a few of them. You get the knowledge of a huge model at the compute cost of a much smaller one. Many recent open-weights frontier models use it.</p>
+  <div class="widget reveal">
+    <div class="w-head" style="color:var(--c6)">Animation</div>
+    <div class="w-title">A router picking 2 of 8 experts per token</div>
+    <div class="stage" style="padding:8px"><svg id="moeSvg" viewBox="0 0 560 330" style="width:100%;display:block"></svg></div>
+    <p class="small muted" style="margin-top:10px">In practice experts don't split into neat human topics like "math" or "French". Their specializations are learned and often hard to interpret.</p>
+  </div>
+
+  <h3 class="reveal">Test-time compute: thinking longer</h3>
+  <p class="reveal">One of the biggest recent shifts: instead of only making models bigger, let them <b>spend more computation while answering</b>, by reasoning, checking, and trying alternatives. On hard math and coding tasks, accuracy keeps climbing as the thinking budget grows, though with diminishing returns.</p>
+  <div class="widget reveal">
+    <div class="w-head" style="color:var(--c6)">Interactive</div>
+    <div class="w-title">Thinking budget vs. accuracy (illustrative)</div>
+    <div class="stage" style="padding:8px"><svg id="ttcSvg" viewBox="0 0 520 250" style="width:100%;display:block"></svg></div>
+    <label class="slider" style="margin-top:12px">Thinking budget <b id="ttcVal">2,048 tokens</b><input type="range" id="ttc" min="8" max="16" step="0.05" value="11"></label>
+  </div>
+
+  <h3 class="reveal">More ideas on the horizon</h3>
+  <div class="cards reveal">
+    <div class="card"><div class="ico" style="background:var(--c2-soft)">🤖</div><h4>Agents &amp; computer use</h4><p>Models that operate browsers, terminals and apps to complete long, multi-step tasks, connected to tools through standards like MCP.</p></div>
+    <div class="card"><div class="ico" style="background:var(--c5-soft)">🐍</div><h4>State-space models</h4><p>Architectures like Mamba (2023) process long sequences in linear time. Hybrids mix them with attention.</p></div>
+    <div class="card"><div class="ico" style="background:var(--c3-soft)">🌍</div><h4>World models</h4><p>Systems that learn how environments evolve, for robotics, video and planning. JEPA is one route there.</p></div>
+    <div class="card"><div class="ico" style="background:var(--c1-soft)">🔬</div><h4>Interpretability</h4><p>Reverse-engineering the concepts and circuits inside networks so that we can check what models are really doing.</p></div>
+    <div class="card"><div class="ico" style="background:var(--c4-soft)">📱</div><h4>Small &amp; on-device</h4><p>Distilled models running privately on phones and laptops.</p></div>
+    <div class="card"><div class="ico" style="background:var(--c6-soft)">🧬</div><h4>AI for science</h4><p>Protein structure (AlphaFold), materials, weather and math. AI as a research collaborator.</p></div>
+    <div class="card"><div class="ico" style="background:var(--claude-soft)">🛡️</div><h4>Alignment &amp; safety</h4><p>Making sure increasingly capable systems stay honest, controllable and beneficial. It's the central open problem.</p></div>
+    <div class="card"><div class="ico" style="background:var(--c2-soft)">🔁</div><h4>Continual learning &amp; memory</h4><p>Models that remember across sessions and keep learning after deployment.</p></div>
+  </div>
+
+  <div class="quiz reveal" data-correct="1">
+    <div class="q-label">Final check</div>
+    <div class="q">A company wants its chatbot to answer from its 10,000-page internal wiki, which changes weekly. What's the best first approach?</div>
+    <div class="opts">
+      <button class="opt">Retrain a model from scratch every week</button>
+      <button class="opt">RAG: index the wiki and retrieve relevant pages for each question</button>
+      <button class="opt">Raise the temperature</button>
+    </div>
+    <div class="explain">RAG keeps knowledge up to date without retraining: just re-index changed pages. It also gives citations you can check. Fine-tuning suits changing <i>behavior or style</i> better than adding fresh facts.</div>
+  </div>
+</div>
+</section>
+
+<!-- ============ RECAP ============ -->
+<section class="chapter" id="recap">
+<div class="wrap">
+  <div class="ch-head reveal">
+    <span class="ch-tag" style="background:var(--c2-soft);color:var(--c2)">Recap</span>
+    <h2>What you now know</h2>
+  </div>
+  <div class="recap reveal">
+    <div><b>AI ⊃ ML ⊃ DL ⊃ GenAI</b>Modern AI learns rules from data instead of being hand-coded.</div>
+    <div><b>Learning is descent</b>Measure the error, nudge the weights downhill, and repeat billions of times.</div>
+    <div><b>Neurons → networks</b>Simple weighted sums stacked in layers can represent very complex functions.</div>
+    <div><b>Attention changed everything</b>The 2017 Transformer let models look at all of the context at once, and it scaled.</div>
+    <div><b>LLMs predict tokens</b>Pretraining, then fine-tuning and RLHF or Constitutional AI, turns a predictor into an assistant.</div>
+    <div><b>Diffusion paints from noise</b>Image and video models learn to reverse a noising process.</div>
+    <div><b>Claude</b>Anthropic's safety-focused models, with tools, long context, extended thinking and agents.</div>
+    <div><b>The frontier</b>RAG for grounding, JEPA and world models, MoE, test-time compute, and alignment.</div>
+  </div>
+</div>
+</section>
+
+<footer class="footer">AI, Explained · an interactive primer · Some diagrams are simplified or illustrative, and the field changes quickly.</footer>
+</main>
+
+<script>
+(() => {
+"use strict";
+const $ = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+const NS = "http://www.w3.org/2000/svg";
+const svgEl = (tag, attrs = {}, parent) => { const e = document.createElementNS(NS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); if (parent) parent.appendChild(e); return e; };
+const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
+const lerp = (a, b, t) => a + (b - a) * t;
+const rand = (a, b) => a + Math.random() * (b - a);
+const gauss = () => { let u = 0, v = 0; while (!u) u = Math.random(); while (!v) v = Math.random(); return Math.sqrt(-2 * Math.log(u)) * Math.cos(2 * Math.PI * v); };
+const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
+let C = {};
+const readColors = () => { ["--c1","--c2","--c3","--c4","--c5","--c6","--ink","--ink-2","--muted","--line","--surface","--surface-2","--surface-3","--claude","--bg"].forEach(k => C[k.slice(2)] = css(k)); };
+readColors();
+const hexA = (hex, a) => { const h = hex.replace("#", ""); const n = parseInt(h.length === 3 ? h.split("").map(c => c + c).join("") : h, 16); return `rgba(${n >> 16 & 255},${n >> 8 & 255},${n & 255},${a})`; };
+
+function fitCanvas(cv) {
+  const r = cv.getBoundingClientRect(), d = devicePixelRatio || 1;
+  cv.width = Math.round(r.width * d); cv.height = Math.round(r.height * d);
+  const ctx = cv.getContext("2d"); ctx.setTransform(d, 0, 0, d, 0, 0);
+  return { ctx, W: r.width, H: r.height };
+}
+function whenVisible(el, fn) {
+  let vis = false, raf = 0, last = 0;
+  const tick = t => { const dt = Math.min(50, last ? t - last : 16); last = t; fn(dt, t); raf = vis ? requestAnimationFrame(tick) : 0; if (!vis) last = 0; };
+  new IntersectionObserver(es => { vis = es[0].isIntersecting; if (vis && !raf) raf = requestAnimationFrame(tick); }, { threshold: 0.05 }).observe(el);
+}
+function chipGroup(container, attr, cb) {
+  $$(`[data-${attr}]`, container).forEach(b => b.addEventListener("click", () => {
+    $$(`[data-${attr}]`, container).forEach(x => x.classList.toggle("on", x === b)); cb(b.dataset[attr]);
+  }));
+}
+
+/* ---------- theme, progress, nav, reveal ---------- */
+$("#themeBtn").addEventListener("click", () => {
+  const root = document.documentElement;
+  const dark = root.dataset.theme ? root.dataset.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
+  root.dataset.theme = dark ? "light" : "dark";
+  try { localStorage.setItem("ai-theme", root.dataset.theme); } catch (e) {}
+  readColors(); document.dispatchEvent(new Event("themechange"));
+});
+try { const t = localStorage.getItem("ai-theme"); if (t) { document.documentElement.dataset.theme = t; readColors(); } } catch (e) {}
+$("#menuBtn").addEventListener("click", () => $("#sidebar").classList.toggle("open"));
+$$("#sidebar a").forEach(a => a.addEventListener("click", () => $("#sidebar").classList.remove("open")));
+addEventListener("scroll", () => { const h = document.documentElement; $("#progress").style.width = (h.scrollTop / (h.scrollHeight - h.clientHeight) * 100) + "%"; }, { passive: true });
+const navLinks = $$("#sidebar a");
+const secObs = new IntersectionObserver(es => es.forEach(e => {
+  if (!e.isIntersecting) return;
+  const i = navLinks.findIndex(a => a.getAttribute("href") === "#" + e.target.id);
+  navLinks.forEach((a, j) => { a.classList.toggle("active", j === i); a.classList.toggle("done", j < i); });
+}), { rootMargin: "-45% 0px -50% 0px" });
+$$("section.chapter").forEach(s => secObs.observe(s));
+const revObs = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("in"); revObs.unobserve(e.target); } }), { threshold: 0, rootMargin: "0px 0px -8% 0px" });
+$$(".reveal").forEach(el => revObs.observe(el));
+
+/* ---------- quizzes ---------- */
+$$(".quiz").forEach(q => {
+  const correct = +q.dataset.correct;
+  $$(".opt", q).forEach((b, i) => b.addEventListener("click", () => {
+    if (q.classList.contains("answered")) return;
+    if (i === correct) { b.classList.add("right"); q.classList.add("answered"); $(".explain", q).insertAdjacentHTML("afterbegin", "<b>✓ Correct!</b> "); }
+    else { b.classList.remove("wrong"); void b.offsetWidth; b.classList.add("wrong"); }
+  }));
+});
+
+/* ---------- hero particles ---------- */
+(() => {
+  const cv = $("#heroCanvas"); let ctx, W, H, pts = [], mouse = { x: -999, y: -999 };
+  const init = () => { ({ ctx, W, H } = fitCanvas(cv)); const n = Math.round(clamp(W * H / 14000, 30, 110)); pts = Array.from({ length: n }, () => ({ x: rand(0, W), y: rand(0, H), vx: rand(-.3, .3), vy: rand(-.3, .3), r: rand(1.5, 3.2), c: ["c1","c6","c4","c5"][Math.floor(rand(0, 4))] })); };
+  init(); addEventListener("resize", init);
+  cv.parentElement.addEventListener("mousemove", e => { const r = cv.getBoundingClientRect(); mouse = { x: e.clientX - r.left, y: e.clientY - r.top }; });
+  cv.parentElement.addEventListener("mouseleave", () => mouse = { x: -999, y: -999 });
+  whenVisible(cv, () => {
+    ctx.clearRect(0, 0, W, H);
+    const sp = reduced ? .2 : 1;
+    for (const p of pts) {
+      const dx = mouse.x - p.x, dy = mouse.y - p.y, d = Math.hypot(dx, dy);
+      if (d < 160) { p.vx += dx / d * .02; p.vy += dy / d * .02; }
+      p.vx *= .99; p.vy *= .99; p.x += p.vx * sp; p.y += p.vy * sp;
+      if (p.x < 0 || p.x > W) p.vx *= -1; if (p.y < 0 || p.y > H) p.vy *= -1;
+    }
+    for (let i = 0; i < pts.length; i++) for (let j = i + 1; j < pts.length; j++) {
+      const a = pts[i], b = pts[j], d = Math.hypot(a.x - b.x, a.y - b.y);
+      if (d < 120) { ctx.strokeStyle = hexA(C.c1, (1 - d / 120) * .25); ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke(); }
+    }
+    for (const p of pts) { ctx.fillStyle = hexA(C[p.c], .7); ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, 7); ctx.fill(); }
+  });
+})();
+
+/* ---------- CH1: rings ---------- */
+(() => {
+  const svg = $("#rings"), info = $("#ringInfo");
+  const data = [
+    { k: "AI", name: "Artificial Intelligence", r: 190, col: "c5", y: 60, text: "The broad goal: machines doing tasks that seem to need intelligence. It includes rule-based systems, search, planning, logic, and learning.", ex: "Examples: chess engines (Deep Blue, 1997), GPS route planners, 1980s expert systems." },
+    { k: "ML", name: "Machine Learning", r: 145, col: "c2", y: 150, text: "AI that learns patterns from data instead of following hand-written rules. You provide examples, and the algorithm finds the rules.", ex: "Examples: spam filters, Netflix recommendations, credit-card fraud detection." },
+    { k: "DL", name: "Deep Learning", r: 100, col: "c3", y: 240, text: "Machine learning with many-layered neural networks. Since around 2012, deep learning has driven almost every AI breakthrough, from vision to speech to language.", ex: "Examples: face unlock, speech recognition, AlphaGo, self-driving perception." },
+    { k: "GenAI", name: "Generative AI", r: 55, col: "c4", y: 342, text: "Deep learning models that create new content: text, images, audio, video, code. They learn the patterns of their training data well enough to produce new samples from it.", ex: "Examples: Claude, ChatGPT, Gemini, Midjourney, Stable Diffusion, Suno." },
+  ];
+  const draw = sel => {
+    svg.innerHTML = "";
+    data.forEach((d, i) => {
+      const c = svgEl("circle", { cx: 200, cy: 390 - d.r, r: d.r, fill: hexA(C[d.col], sel === i ? .55 : .22), stroke: C[d.col], "stroke-width": sel === i ? 3 : 1.5 }, svg);
+      c.addEventListener("click", () => draw(i));
+      svgEl("text", { x: 200, y: 390 - 2 * d.r + (i === 3 ? 60 : 26), "text-anchor": "middle", fill: C.ink, "font-size": i === 3 ? 15 : 16 }, svg).textContent = d.k;
+    });
+    const d = data[sel];
+    info.innerHTML = `<span class="pill" style="background:${hexA(C[d.col], .2)};color:${C[d.col]}">${d.k}</span><h4 style="margin-top:8px">${d.name}</h4><p style="margin:0">${d.text}</p><div class="ex">${d.ex}</div>`;
+    info.animate?.([{ opacity: 0, transform: "translateY(6px)" }, { opacity: 1, transform: "none" }], { duration: 300 });
+  };
+  let cur = 0; draw(0);
+  svg.addEventListener("click", e => { if (e.target.tagName === "circle") cur = data.findIndex(d => +e.target.getAttribute("r") === d.r); });
+  document.addEventListener("themechange", () => draw(cur));
+  // spectrum marker slides in
+  new IntersectionObserver((es, o) => { if (es[0].isIntersecting) { const m = $("#nowMark"); m.style.transition = "left 1.6s cubic-bezier(.2,.7,.2,1)"; m.style.left = "22%"; o.disconnect(); } }, { threshold: .6 }).observe($("#nowMark").parentElement);
+})();
+
+/* ---------- CH2: learning types ---------- */
+(() => {
+  const cv = $("#learnCanvas"); let ctx, W, H;
+  const size = () => ({ ctx, W, H } = fitCanvas(cv)); size(); addEventListener("resize", size);
+  const info = $("#learnInfo"), stat = $("#learnStat");
+  const texts = {
+    sup: "<b>Supervised:</b> every point has a label (its color). A perceptron adjusts its dividing line each time it gets a point wrong, until it separates the two classes.",
+    uns: "<b>Unsupervised:</b> no labels, just points. K-means finds 3 groups by itself: assign each point to the nearest center (✕), move each center to the middle of its group, and repeat.",
+    rl: "<b>Reinforcement:</b> the agent (●) starts knowing nothing. It gets +1 for reaching the ★ and −1 for falling in a pit. Over many episodes it learns which moves pay off. Green cells are ones it has learned are valuable.",
+  };
+  let mode = "sup", fast = false, S, U, R;
+  const pad = 24, px = x => pad + x * (W - 2 * pad), py = y => pad + y * (H - 2 * pad);
+
+  const initSup = () => { const pts = []; for (let i = 0; i < 50; i++) { const c = i % 2; pts.push({ x: clamp((c ? .66 : .34) + gauss() * .12, .02, .98), y: clamp((c ? .64 : .36) + gauss() * .12, .02, .98), c }); } S = { pts, w: [rand(-1, 1), rand(-1, 1)], b: rand(-.2, .2), it: 0, hold: 0 }; };
+  const supScore = (p) => S.w[0] * (p.x - .5) + S.w[1] * (p.y - .5) + S.b;
+  const stepSup = () => {
+    const acc = S.pts.filter(p => (supScore(p) > 0) === !!p.c).length / S.pts.length;
+    if (acc > .95) { if (++S.hold > 150) initSup(); } else {
+      for (let k = 0; k < (fast ? 20 : 1); k++) { const p = S.pts[Math.floor(Math.random() * S.pts.length)], y = p.c ? 1 : -1; if (y * supScore(p) <= 0) { S.w[0] += .15 * y * (p.x - .5); S.w[1] += .15 * y * (p.y - .5); S.b += .03 * y; } S.it++; }
+    }
+    stat.textContent = `updates: ${S.it}   accuracy: ${(acc * 100).toFixed(0)}%${acc > .95 ? "   ✓ learned!" : ""}`;
+  };
+  const drawSup = () => {
+    const g = 16;
+    for (let i = 0; i < g; i++) for (let j = 0; j < g; j++) { const s = supScore({ x: (i + .5) / g, y: (j + .5) / g }); ctx.fillStyle = hexA(s > 0 ? C.c4 : C.c1, .08); ctx.fillRect(px(i / g), py(j / g), (W - 2 * pad) / g + 1, (H - 2 * pad) / g + 1); }
+    const [a, b] = S.w, c = S.b; ctx.strokeStyle = C.ink; ctx.lineWidth = 2.5; ctx.beginPath();
+    if (Math.abs(b) > 1e-4) { const y0 = .5 - (a * (0 - .5) + c) / b, y1 = .5 - (a * (1 - .5) + c) / b; ctx.moveTo(px(0), py(y0)); ctx.lineTo(px(1), py(y1)); } else { const x0 = .5 - c / a; ctx.moveTo(px(x0), py(0)); ctx.lineTo(px(x0), py(1)); }
+    ctx.save(); ctx.beginPath(); ctx.rect(pad, pad, W - 2 * pad, H - 2 * pad); ctx.clip(); ctx.restore(); ctx.stroke();
+    for (const p of S.pts) { ctx.fillStyle = p.c ? C.c4 : C.c1; ctx.beginPath(); ctx.arc(px(p.x), py(p.y), 6, 0, 7); ctx.fill(); ctx.strokeStyle = C.surface; ctx.lineWidth = 2; ctx.stroke(); }
+  };
+
+  const initUns = () => {
+    const centers = [[.22, .3], [.75, .3], [.5, .75]], pts = [];
+    for (let i = 0; i < 90; i++) { const c = centers[i % 3]; pts.push({ x: clamp(c[0] + gauss() * .09, .02, .98), y: clamp(c[1] + gauss() * .09, .02, .98), a: -1 }); }
+    const ks = Array.from({ length: 3 }, () => { const p = pts[Math.floor(Math.random() * pts.length)]; return { x: p.x, y: p.y, dx: p.x, dy: p.y }; });
+    U = { pts, ks, t: 0, phase: 0, it: 0, done: false, hold: 0 };
+  };
+  const stepUns = () => {
+    for (const k of U.ks) { k.dx = lerp(k.dx, k.x, .12); k.dy = lerp(k.dy, k.y, .12); }
+    if (U.done) { if (++U.hold > 150) initUns(); return; }
+    if (++U.t < (fast ? 6 : 40)) return; U.t = 0;
+    if (U.phase === 0) {
+      let changed = false;
+      for (const p of U.pts) { let best = 0, bd = 9; U.ks.forEach((k, i) => { const d = (k.x - p.x) ** 2 + (k.y - p.y) ** 2; if (d < bd) { bd = d; best = i; } }); if (p.a !== best) { changed = true; p.a = best; } }
+      if (!changed) U.done = true; U.phase = 1;
+    } else {
+      U.ks.forEach((k, i) => { const m = U.pts.filter(p => p.a === i); if (m.length) { k.x = m.reduce((s, p) => s + p.x, 0) / m.length; k.y = m.reduce((s, p) => s + p.y, 0) / m.length; } });
+      U.phase = 0; U.it++;
+    }
+    stat.textContent = `iteration: ${U.it}   step: ${U.phase ? "move centers" : "assign points"}${U.done ? "   ✓ converged: 3 clusters found without any labels" : ""}`;
+  };
+  const drawUns = () => {
+    const cols = [C.c1, C.c2, C.c3];
+    for (const p of U.pts) { ctx.fillStyle = p.a < 0 ? C.muted : cols[p.a]; ctx.beginPath(); ctx.arc(px(p.x), py(p.y), 5.5, 0, 7); ctx.fill(); }
+    U.ks.forEach((k, i) => { const x = px(k.dx), y = py(k.dy); ctx.strokeStyle = C.surface; ctx.lineWidth = 8; ctx.beginPath(); ctx.moveTo(x - 10, y - 10); ctx.lineTo(x + 10, y + 10); ctx.moveTo(x + 10, y - 10); ctx.lineTo(x - 10, y + 10); ctx.stroke(); ctx.strokeStyle = cols[i]; ctx.lineWidth = 4; ctx.stroke(); });
+  };
+
+  const N = 6, START = { x: 0, y: 5 }, GOAL = { x: 5, y: 0 }, PITS = ["2,1", "3,3", "1,3", "4,4", "4,1"];
+  const isPit = (x, y) => PITS.includes(x + "," + y);
+  const initRL = () => { R = { Q: Array.from({ length: N * N }, () => [0, 0, 0, 0]), pos: { ...START }, ep: 0, eps: .9, steps: 0, last: "-", t: 0, trail: [], wins: 0 }; };
+  const MV = [[0, -1], [1, 0], [0, 1], [-1, 0]];
+  const stepRL = () => {
+    const n = fast ? 40 : (++R.t % 4 === 0 ? 1 : 0);
+    for (let k = 0; k < n; k++) {
+      const s = R.pos.y * N + R.pos.x, q = R.Q[s];
+      let a; if (Math.random() < R.eps) a = Math.floor(Math.random() * 4); else { const m = Math.max(...q); const bs = q.map((v, i) => v === m ? i : -1).filter(i => i >= 0); a = bs[Math.floor(Math.random() * bs.length)]; }
+      const nx = clamp(R.pos.x + MV[a][0], 0, N - 1), ny = clamp(R.pos.y + MV[a][1], 0, N - 1);
+      let r = -.02, done = false;
+      if (isPit(nx, ny)) { r = -1; done = true; } else if (nx === GOAL.x && ny === GOAL.y) { r = 1; done = true; }
+      const s2 = ny * N + nx; q[a] += .5 * (r + (done ? 0 : .9 * Math.max(...R.Q[s2])) - q[a]);
+      R.pos = { x: nx, y: ny }; R.steps++; R.trail.push({ ...R.pos }); if (R.trail.length > 14) R.trail.shift();
+      if (done || R.steps > 60) { if (r === 1) R.wins++; R.last = r === 1 ? `reached ★ in ${R.steps} steps` : r === -1 ? "fell in a pit" : "timed out"; R.ep++; R.eps = Math.max(.05, R.eps * .96); R.pos = { ...START }; R.steps = 0; R.trail = []; }
+    }
+    stat.textContent = `episode: ${R.ep}   exploration: ${(R.eps * 100).toFixed(0)}%   last: ${R.last}`;
+  };
+  const drawRL = () => {
+    const cs = Math.min((W - 40) / N, (H - 30) / N), ox = (W - cs * N) / 2, oy = (H - cs * N) / 2;
+    for (let y = 0; y < N; y++) for (let x = 0; x < N; x++) {
+      const v = Math.max(...R.Q[y * N + x]);
+      ctx.fillStyle = C.surface; ctx.fillRect(ox + x * cs + 2, oy + y * cs + 2, cs - 4, cs - 4);
+      if (v !== 0) { ctx.fillStyle = hexA(v > 0 ? C.c2 : C.c4, clamp(Math.abs(v), 0, 1) * .6); ctx.fillRect(ox + x * cs + 2, oy + y * cs + 2, cs - 4, cs - 4); }
+      const cx = ox + x * cs + cs / 2, cy = oy + y * cs + cs / 2;
+      ctx.textAlign = "center"; ctx.textBaseline = "middle"; ctx.font = `${cs * .45}px Inter`;
+      if (isPit(x, y)) ctx.fillText("🕳️", cx, cy); else if (x === GOAL.x && y === GOAL.y) ctx.fillText("⭐", cx, cy);
+      else if (v > .05 && R.ep > 5) { const a = R.Q[y * N + x].indexOf(v); ctx.strokeStyle = hexA(C.ink, .45); ctx.lineWidth = 2; ctx.beginPath(); ctx.moveTo(cx, cy); ctx.lineTo(cx + MV[a][0] * cs * .28, cy + MV[a][1] * cs * .28); ctx.stroke(); }
+    }
+    R.trail.forEach((p, i) => { ctx.fillStyle = hexA(C.c1, i / R.trail.length * .35); ctx.beginPath(); ctx.arc(ox + p.x * cs + cs / 2, oy + p.y * cs + cs / 2, cs * .12, 0, 7); ctx.fill(); });
+    ctx.fillStyle = C.c1; ctx.beginPath(); ctx.arc(ox + R.pos.x * cs + cs / 2, oy + R.pos.y * cs + cs / 2, cs * .22, 0, 7); ctx.fill();
+  };
+
+  const init = () => { ({ sup: initSup, uns: initUns, rl: initRL })[mode](); info.innerHTML = texts[mode]; };
+  init();
+  chipGroup(cv.closest(".widget"), "mode", m => { mode = m; init(); });
+  $("#learnReset").addEventListener("click", init);
+  $("#learnFast").addEventListener("click", e => { fast = !fast; e.currentTarget.textContent = fast ? "⏸ Normal speed" : "⏩ Speed up"; });
+  whenVisible(cv, () => { ctx.clearRect(0, 0, W, H); if (mode === "sup") { stepSup(); drawSup(); } else if (mode === "uns") { stepUns(); drawUns(); } else { stepRL(); drawRL(); } });
+})();
+
+/* ---------- CH2: gradient descent ---------- */
+(() => {
+  const cv = $("#gdCanvas"); let ctx, W, H;
+  const size = () => ({ ctx, W, H } = fitCanvas(cv)); size(); addEventListener("resize", () => { size(); draw(); });
+  const f = x => .1 * x ** 4 - x * x + .5 * x + 3, df = x => .4 * x ** 3 - 2 * x + .5;
+  const X0 = -3.6, X1 = 3.6, Y0 = 0, Y1 = 6.5;
+  const sx = x => 20 + (x - X0) / (X1 - X0) * (W - 40), sy = y => H - 16 - (y - Y0) / (Y1 - Y0) * (H - 32);
+  let x = 3.2, bx = 3.2, lr = .1, playing = false, steps = 0, trail = [], timer = 0, diverged = false;
+  const stat = $("#gdStat");
+  const report = () => stat.textContent = diverged ? `💥 Diverged! Steps are too big. Lower the learning rate and drop the ball again.` : `step ${steps}   x = ${x.toFixed(3)}   loss = ${f(x).toFixed(3)}   slope = ${df(x).toFixed(3)}`;
+  const step = () => { if (diverged) return; trail.push(x); x = x - lr * df(x); steps++; if (Math.abs(x) > 3.6) { diverged = true; x = clamp(x, -3.59, 3.59); playing = false; $("#gdPlay").textContent = "▶ Roll"; } if (Math.abs(df(x)) < 1e-3 && playing) { playing = false; $("#gdPlay").textContent = "▶ Roll"; } report(); };
+  function draw() {
+    ctx.clearRect(0, 0, W, H);
+    const g = ctx.createLinearGradient(0, 0, 0, H); g.addColorStop(0, hexA(C.c2, .18)); g.addColorStop(1, hexA(C.c2, 0));
+    ctx.beginPath(); for (let i = 0; i <= 200; i++) { const xx = X0 + (X1 - X0) * i / 200; i ? ctx.lineTo(sx(xx), sy(f(xx))) : ctx.moveTo(sx(xx), sy(f(xx))); }
+    ctx.strokeStyle = C.c2; ctx.lineWidth = 3; ctx.stroke(); ctx.lineTo(sx(X1), H); ctx.lineTo(sx(X0), H); ctx.fillStyle = g; ctx.fill();
+    trail.forEach((t, i) => { ctx.fillStyle = hexA(C.c3, .25 + .5 * i / trail.length); ctx.beginPath(); ctx.arc(sx(t), sy(f(t)) - 9, 4, 0, 7); ctx.fill(); });
+    for (let i = 1; i < trail.length; i++) { ctx.strokeStyle = hexA(C.c3, .35); ctx.setLineDash([4, 4]); ctx.lineWidth = 1.5; ctx.beginPath(); ctx.moveTo(sx(trail[i - 1]), sy(f(trail[i - 1])) - 9); ctx.lineTo(sx(trail[i]), sy(f(trail[i])) - 9); ctx.stroke(); ctx.setLineDash([]); }
+    bx = lerp(bx, x, .25);
+    const s = df(bx), ang = Math.atan(-s * (H - 32) / (Y1 - Y0) / ((W - 40) / (X1 - X0)));
+    ctx.save(); ctx.translate(sx(bx), sy(f(bx)) - 11); ctx.rotate(ang); ctx.strokeStyle = hexA(C.ink, .5); ctx.lineWidth = 2; ctx.beginPath(); ctx.moveTo(-30, 0); ctx.lineTo(30, 0); ctx.stroke(); ctx.restore();
+    ctx.fillStyle = diverged ? C.c4 : C.c3; ctx.beginPath(); ctx.arc(sx(bx), sy(f(bx)) - 11, 10, 0, 7); ctx.fill(); ctx.strokeStyle = C.surface; ctx.lineWidth = 3; ctx.stroke();
+    ctx.fillStyle = C.muted; ctx.font = "600 11px Inter"; ctx.fillText("loss", 24, 20); ctx.fillText("model setting (weight) →", W - 170, H - 4);
+  }
+  cv.addEventListener("click", e => { const r = cv.getBoundingClientRect(); x = bx = clamp(X0 + (e.clientX - r.left - 20) / (W - 40) * (X1 - X0), -3.4, 3.4); trail = []; steps = 0; diverged = false; report(); });
+  $("#lr").addEventListener("input", e => { lr = +e.target.value; $("#lrVal").textContent = lr.toFixed(2); });
+  $("#gdPlay").addEventListener("click", e => { if (diverged) { x = bx = 3.2; trail = []; steps = 0; diverged = false; } playing = !playing; e.target.textContent = playing ? "⏸ Pause" : "▶ Roll"; });
+  $("#gdStep").addEventListener("click", step);
+  report();
+  whenVisible(cv, dt => { if (playing && (timer += dt) > 280) { timer = 0; step(); } draw(); });
+})();
+
+/* ---------- CH3: neuron ---------- */
+(() => {
+  const svg = $("#neuronSvg"), box = $("#neuronSliders");
+  const inputs = [{ n: "☀️ Sunny", x: 1, w: 1.5 }, { n: "🌡️ Warm", x: 1, w: 1 }, { n: "🌧️ Raining", x: 0, w: -2.5 }];
+  let bias = -1;
+  const ys = [50, 130, 210];
+  const lines = ys.map(y => svgEl("line", { x1: 90, y1: y, x2: 250, y2: 130, "stroke-linecap": "round" }, svg));
+  ys.forEach((y, i) => { svgEl("circle", { cx: 60, cy: y, r: 28, fill: C.surface, stroke: C.line, "stroke-width": 2, class: "nin" }, svg); const t = svgEl("text", { x: 60, y: y + 5, "text-anchor": "middle", "font-size": 18 }, svg); t.textContent = inputs[i].n.split(" ")[0]; });
+  const wLabels = ys.map((y, i) => svgEl("text", { x: 165, y: (y + 130) / 2 - 8, "text-anchor": "middle", "font-size": 12, "font-weight": 700 }, svg));
+  const out = svgEl("circle", { cx: 270, cy: 130, r: 38, id: "neuronOut", stroke: C.ink, "stroke-width": 2 }, svg);
+  const outT = svgEl("text", { x: 270, y: 136, "text-anchor": "middle", "font-size": 16, "font-weight": 800 }, svg);
+  svgEl("text", { x: 270, y: 195, "text-anchor": "middle", "font-size": 12, "font-weight": 600, fill: C.muted }, svg).textContent = "Σ → σ";
+  const mk = (label, min, max, step, val, on) => { const l = document.createElement("label"); l.className = "slider"; l.style.marginBottom = "8px"; l.innerHTML = `${label} <b>${val}</b><input type="range" min="${min}" max="${max}" step="${step}" value="${val}">`; const inp = $("input", l), b = $("b", l); inp.addEventListener("input", () => { b.textContent = (+inp.value).toFixed(step < 1 ? 1 : 0); on(+inp.value); upd(); }); box.appendChild(l); };
+  inputs.forEach((p, i) => { mk(`${p.n}? (input)`, 0, 1, 1, p.x, v => p.x = v); mk(`weight on ${p.n.split(" ")[1]}`, -3, 3, .1, p.w, v => p.w = v); });
+  mk("bias", -3, 3, .1, bias, v => bias = v);
+  $$("label.slider", box).forEach((l, i) => { if (i % 2 === 0 && i < 6) l.style.marginTop = "6px"; });
+  function upd() {
+    const z = inputs.reduce((s, p) => s + p.x * p.w, 0) + bias, o = 1 / (1 + Math.exp(-z));
+    lines.forEach((ln, i) => { const p = inputs[i]; ln.setAttribute("stroke", p.w >= 0 ? C.c1 : C.c4); ln.setAttribute("stroke-width", 1 + Math.abs(p.w) * 3); ln.setAttribute("opacity", p.x ? 1 : .2); wLabels[i].textContent = p.w.toFixed(1); wLabels[i].setAttribute("fill", p.w >= 0 ? C.c1 : C.c4); });
+    $$(".nin", svg).forEach((c, i) => { c.setAttribute("fill", inputs[i].x ? hexA(C.c1, .2) : C.surface); c.setAttribute("stroke", inputs[i].x ? C.c1 : C.line); });
+    out.setAttribute("fill", hexA(C.c2, .1 + o * .8)); outT.textContent = o.toFixed(2); outT.setAttribute("fill", C.ink);
+    $("#neuronVal").textContent = o.toFixed(2);
+    $("#neuronVerdict").innerHTML = o > .5 ? "🏖️ <b>Go to the beach!</b>" : "🏠 <b>Stay home.</b>";
+  }
+  upd(); document.addEventListener("themechange", upd);
+})();
+
+/* ---------- CH3: forward pass ---------- */
+(() => {
+  const svg = $("#netSvg"), sizes = [4, 6, 6, 2], xs = [70, 250, 430, 570];
+  const labels = [["pointy ears", "whiskers", "barks", "fur"], [], [], ["🐱 cat", "🐶 dog"]];
+  const nodes = sizes.map((n, l) => Array.from({ length: n }, (_, i) => ({ x: xs[l], y: 150 + (i - (n - 1) / 2) * 44, a: 0 })));
+  const eG = svgEl("g", {}, svg), pG = svgEl("g", {}, svg), nG = svgEl("g", {}, svg);
+  const edges = [];
+  for (let l = 0; l < 3; l++) nodes[l].forEach(a => nodes[l + 1].forEach(b => edges.push({ l, a, b, w: rand(-1, 1), el: svgEl("line", { x1: a.x, y1: a.y, x2: b.x, y2: b.y, "stroke-width": 1 }, eG) })));
+  const circles = nodes.flat().map(n => ({ n, el: svgEl("circle", { cx: n.x, cy: n.y, r: 13, "stroke-width": 2 }, nG) }));
+  labels[0].forEach((t, i) => { const e = svgEl("text", { x: xs[0] - 22, y: nodes[0][i].y + 4, "text-anchor": "end", "font-size": 11, "font-weight": 600 }, nG); e.textContent = t; });
+  const outL = labels[3].map((t, i) => { const e = svgEl("text", { x: xs[3] + 22, y: nodes[3][i].y + 4, "font-size": 13, "font-weight": 700 }, nG); e.textContent = t; return e; });
+  ["input", "hidden 1", "hidden 2", "output"].forEach((t, l) => { const e = svgEl("text", { x: xs[l], y: 22, "text-anchor": "middle", "font-size": 11, "font-weight": 700, class: "lyr" }, nG); e.textContent = t; });
+  const paint = () => {
+    edges.forEach(e => { e.el.setAttribute("stroke", hexA(e.w > 0 ? C.c1 : C.c4, .15 + .25 * Math.abs(e.w))); });
+    circles.forEach(c => { c.el.setAttribute("fill", c.n.a > 0 ? hexA(C.c5, .15 + .85 * c.n.a) : C.surface); c.el.setAttribute("stroke", c.n.a > 0 ? C.c5 : C.line); });
+    $$("text", svg).forEach(t => t.setAttribute("fill", t.classList.contains("lyr") ? C.muted : C.ink));
+  };
+  paint(); document.addEventListener("themechange", paint);
+  let running = false;
+  const run = () => {
+    if (running) return; running = true; $("#netOut").textContent = "";
+    const isCat = Math.random() < .5;
+    nodes.flat().forEach(n => n.a = 0);
+    const inVals = isCat ? [1, 1, 0, 1] : [0, .3, 1, 1];
+    nodes[0].forEach((n, i) => n.a = inVals[i]);
+    nodes[1].forEach(n => n.a = rand(.1, 1)); nodes[2].forEach(n => n.a = rand(.1, 1));
+    const catP = isCat ? rand(.86, .97) : rand(.04, .15);
+    const targets = nodes.map(l => l.map(n => n.a)); targets[3] = [catP, 1 - catP];
+    nodes.flat().forEach(n => n.a = 0); nodes[0].forEach((n, i) => n.a = inVals[i]); paint();
+    let layer = 0, t0 = performance.now();
+    const pulses = [];
+    const spawn = l => edges.filter(e => e.l === l && e.a.a > .05).forEach(e => pulses.push({ e, el: svgEl("circle", { r: 3.5, fill: C.c5 }, pG) }));
+    spawn(0);
+    const tick = t => {
+      const p = Math.min(1, (t - t0) / (reduced ? 200 : 700));
+      pulses.forEach(q => { q.el.setAttribute("cx", lerp(q.e.a.x, q.e.b.x, p)); q.el.setAttribute("cy", lerp(q.e.a.y, q.e.b.y, p)); });
+      if (p >= 1) {
+        pulses.splice(0).forEach(q => q.el.remove());
+        layer++; nodes[layer].forEach((n, i) => n.a = targets[layer][i]); paint();
+        if (layer < 3) { spawn(layer); t0 = t; } else {
+          outL[0].textContent = `🐱 cat ${(catP * 100).toFixed(0)}%`; outL[1].textContent = `🐶 dog ${((1 - catP) * 100).toFixed(0)}%`;
+          $("#netOut").textContent = `Prediction: ${catP > .5 ? "cat 🐱" : "dog 🐶"}`; running = false; return;
+        }
+      }
+      requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  };
+  $("#netRun").addEventListener("click", run);
+  new IntersectionObserver((es, o) => { if (es[0].isIntersecting) { setTimeout(run, 400); o.disconnect(); } }, { threshold: .6 }).observe(svg);
+})();
+
+/* ---------- CH4: timeline ---------- */
+(() => {
+  const ev = [
+    ["1950", "Turing's question", "milestone", "Alan Turing publishes \"Computing Machinery and Intelligence\", asking \"Can machines think?\" and proposing the imitation game, later called the Turing Test."],
+    ["1956", "Dartmouth workshop", "milestone", "John McCarthy, Marvin Minsky, Claude Shannon and others coin the term \"artificial intelligence\" at a summer workshop. The field is born."],
+    ["1958", "The perceptron", "paper", "Frank Rosenblatt's perceptron is the first trainable artificial neuron, the ancestor of every neural network. Its limits helped trigger the first \"AI winter\"."],
+    ["1966", "ELIZA", "milestone", "Joseph Weizenbaum's ELIZA mimics a therapist with simple pattern matching. People were surprisingly willing to confide in it."],
+    ["1986", "Backpropagation", "paper", "Rumelhart, Hinton and Williams popularize backpropagation, an efficient way to train multi-layer networks by passing errors backwards."],
+    ["1997", "LSTM · Deep Blue", "paper", "Hochreiter and Schmidhuber publish the LSTM, which lets networks remember across sequences. The same year, IBM's Deep Blue beats chess champion Garry Kasparov."],
+    ["2012", "AlexNet", "milestone", "A deep convolutional network trained on GPUs crushes the ImageNet competition. The deep learning era begins."],
+    ["2013", "word2vec · VAE", "paper", "Mikolov et al. show that words can be embedded as vectors whose geometry captures meaning (king − man + woman ≈ queen). Kingma and Welling introduce Variational Autoencoders."],
+    ["2014", "GANs · Seq2seq · Attention", "paper", "Goodfellow's Generative Adversarial Networks produce the first convincing synthetic images. Sutskever et al. propose seq2seq, and Bahdanau, Cho and Bengio introduce attention for translation."],
+    ["2016", "AlphaGo", "milestone", "DeepMind's AlphaGo defeats Lee Sedol at Go using deep reinforcement learning. Its move 37 in game two stunned professionals."],
+    ["2017", "Attention Is All You Need", "paper", "Vaswani et al. introduce the Transformer, built entirely on self-attention. Almost every modern generative model descends from it. The same year, Shazeer et al. publish sparse mixture-of-experts layers.", true],
+    ["2018", "GPT-1 · BERT", "paper", "OpenAI's GPT shows that generative pretraining followed by fine-tuning works. Google's BERT transforms search and NLP benchmarks."],
+    ["2019", "GPT-2", "product", "A 1.5B-parameter model writes surprisingly coherent paragraphs. Its staged release sparked the first big debate about releasing AI models responsibly."],
+    ["2020", "GPT-3 · Scaling laws · RAG · DDPM", "paper", "Kaplan et al. find that loss falls predictably with scale. GPT-3 (175B parameters) learns tasks from examples in the prompt. Lewis et al. introduce Retrieval-Augmented Generation, and Ho et al.'s DDPM revives diffusion models.", true],
+    ["2021", "Anthropic · CLIP · Codex", "claude", "Anthropic is founded with a focus on AI safety research. OpenAI's CLIP links images and text, and Codex powers GitHub Copilot for code."],
+    ["2022", "InstructGPT · Diffusion boom · ChatGPT", "product", "RLHF turns raw models into instruction-followers. DALL·E 2, Midjourney and Stable Diffusion bring text-to-image to everyone. ChatGPT launches in November and reaches 100M users in about two months.", true],
+    ["Dec 2022", "Constitutional AI", "claude", "Anthropic publishes Constitutional AI, which trains a harmless assistant using a written set of principles and AI feedback instead of relying only on human labels."],
+    ["2023", "GPT-4 · Claude · Llama", "claude", "GPT-4 is multimodal and passes professional exams. Anthropic releases Claude (March) and Claude 2 (July, with a 100K context window). Meta's Llama kicks off the open-weights wave. Mamba and I-JEPA appear."],
+    ["2024", "Claude 3 · Artifacts · Computer use · MCP", "claude", "The Claude 3 family (Haiku, Sonnet, Opus) arrives in March, then Claude 3.5 Sonnet with Artifacts. OpenAI's o1 popularizes reasoning models. Anthropic ships computer use in beta and open-sources the Model Context Protocol.", true],
+    ["2025", "Reasoning & agents · Claude 4 · Claude Code", "claude", "DeepSeek-R1 shows strong open reasoning. Claude 3.7 Sonnet brings hybrid extended thinking, and Claude Code launches as an agentic coding tool. Claude 4 models follow, and agents that browse, code and use apps go mainstream. V-JEPA 2 advances world models.", true],
+    ["2026", "The agentic era", "claude", "Frontier models (including the Claude 5 family) work on longer and more autonomous tasks. The questions now are about reliability, safety and how AI is used across the economy."],
+  ];
+  const track = $("#tlTrack"), det = $("#tlDetail");
+  const items = ev.map((e, i) => { const d = document.createElement("div"); d.className = "tl-item" + (e[4] ? " big" : ""); d.innerHTML = `<div class="tl-year">${e[0]}</div><div class="tl-dot"></div><div class="tl-name">${e[1]}</div>`; d.addEventListener("click", () => { stop(); sel(i); }); track.appendChild(d); return d; });
+  const colFor = t => ({ paper: C.c6, milestone: C.c5, product: C.c2, claude: C.claude })[t];
+  function sel(i) {
+    items.forEach((d, j) => { d.classList.toggle("sel", j === i); $(".tl-dot", d).style.borderColor = colFor(ev[j][2]); $(".tl-dot", d).style.background = j === i ? colFor(ev[j][2]) : ""; });
+    const e = ev[i];
+    det.innerHTML = `<span class="tag ${e[2]}">${e[2]}</span> <span class="muted small" style="font-weight:700">${e[0]}</span><h4>${e[1]}</h4><p style="margin:0">${e[3]}</p>`;
+    det.animate?.([{ opacity: 0 }, { opacity: 1 }], { duration: 250 });
+    const tl = $("#timeline"); tl.scrollTo({ left: items[i].offsetLeft - tl.clientWidth / 2 + 43, behavior: reduced ? "auto" : "smooth" });
+  }
+  let timer = 0, idx = 10;
+  const stop = () => { clearInterval(timer); timer = 0; $("#tlPlay").textContent = "▶ Play tour"; };
+  $("#tlPlay").addEventListener("click", () => { if (timer) return stop(); idx = -1; $("#tlPlay").textContent = "⏸ Pause"; const go = () => { idx++; if (idx >= ev.length) return stop(); sel(idx); }; go(); timer = setInterval(go, 2600); });
+  sel(10); document.addEventListener("themechange", () => sel(items.findIndex(d => d.classList.contains("sel"))));
+})();
+
+/* ---------- CH5: tokenizer ---------- */
+(() => {
+  const inp = $("#tokIn"), out = $("#tokOut");
+  const SUF = ["ization", "ational", "ation", "ingly", "ness", "ment", "able", "ible", "ing", "ers", "est", "ed", "ly", "er"];
+  const PRE = ["un", "re", "trans", "inter", "pre", "dis"];
+  const common = new Set("the a an is are was were be to of and in on for it that this with as at by from or not but you i we they he she my your our what how why when can will do did have has had me so if all just like more some very about into than then there their out up time important".split(" "));
+  const splitWord = w => {
+    const lead = w.match(/^\s*/)[0], core = w.slice(lead.length);
+    if (core.length <= 6 || common.has(core.toLowerCase())) return [w];
+    const parts = []; let rest = core;
+    const pre = PRE.find(p => rest.toLowerCase().startsWith(p) && rest.length - p.length > 4);
+    if (pre) { parts.push(rest.slice(0, pre.length)); rest = rest.slice(pre.length); }
+    const suf = SUF.find(s => rest.toLowerCase().endsWith(s) && rest.length - s.length >= 3);
+    let tail = ""; if (suf) { tail = rest.slice(-suf.length); rest = rest.slice(0, -suf.length); }
+    while (rest.length > 6) { parts.push(rest.slice(0, 5)); rest = rest.slice(5); }
+    if (rest) parts.push(rest); if (tail) parts.push(tail);
+    parts[0] = lead + parts[0]; return parts;
+  };
+  const tokenize = t => { const toks = []; (t.match(/\s*[A-Za-z']+|\s*\d{1,3}|\s*[^\sA-Za-z\d]|\s+/g) || []).forEach(m => /[A-Za-z]/.test(m) ? toks.push(...splitWord(m)) : toks.push(m)); return toks; };
+  const cols = ["c1", "c2", "c3", "c4", "c5", "c6"];
+  const upd = () => {
+    const toks = tokenize(inp.value); out.innerHTML = "";
+    toks.forEach((t, i) => { const s = document.createElement("span"); s.className = "tok"; s.style.background = hexA(C[cols[i % 6]], .22); s.style.animationDelay = Math.min(i * 15, 400) + "ms"; s.textContent = t.replace(/ /g, "·"); s.title = "token id " + (Math.abs([...t].reduce((h, c) => (h * 31 + c.charCodeAt(0)) | 0, 7)) % 100000); out.appendChild(s); });
+    $("#tkN").textContent = toks.length; $("#tkC").textContent = inp.value.length; $("#tkR").textContent = toks.length ? (inp.value.length / toks.length).toFixed(1) : "0";
+  };
+  inp.addEventListener("input", upd); upd(); document.addEventListener("themechange", upd);
+})();
+
+/* ---------- CH5: embeddings ---------- */
+(() => {
+  const svg = $("#embSvg");
+  const P = { man: [90, 250], woman: [160, 160], king: [320, 245], queen: [390, 155], walk: [70, 70], walked: [150, 95], swim: [290, 50], swam: [370, 75], apple: [455, 300], banana: [490, 265], orange: [440, 262], cat: [215, 300], dog: [250, 318], puppy: [272, 290] };
+  const AN = [{ a: "man", b: "woman", c: "king", d: "queen", col: "c4", txt: "The direction man → woman (roughly \"female-ness\") also takes <b>king → queen</b>." },
+              { a: "walk", b: "walked", c: "swim", d: "swam", col: "c2", txt: "The direction walk → walked (\"past tense\") also takes <b>swim → swam</b>." }];
+  const defs = svgEl("defs", {}, svg);
+  ["c4", "c2", "c1"].forEach(c => { const m = svgEl("marker", { id: "ar" + c, viewBox: "0 0 10 10", refX: 8, refY: 5, markerWidth: 6, markerHeight: 6, orient: "auto-start-reverse" }, defs); svgEl("path", { d: "M0 0L10 5L0 10z", fill: C[c] }, m); });
+  const gV = svgEl("g", {}, svg), gP = svgEl("g", {}, svg);
+  const pts = {};
+  for (const k in P) { const g = svgEl("g", { class: "pt" }, gP); pts[k] = { c: svgEl("circle", { cx: P[k][0], cy: P[k][1], r: 6, fill: C.muted }, g) }; const t = svgEl("text", { x: P[k][0] + 10, y: P[k][1] + 4 }, g); t.textContent = k; }
+  svgEl("text", { x: 430, y: 330, "font-size": 11, fill: C.muted, style: "font-weight:600" }, gP).textContent = "fruit";
+  svgEl("text", { x: 200, y: 335, "font-size": 11, fill: C.muted, style: "font-weight:600" }, gP).textContent = "animals";
+  const vec = (a, b, col) => { const l = svgEl("line", { x1: a[0], y1: a[1], x2: b[0] - (b[0] - a[0]) * .08, y2: b[1] - (b[1] - a[1]) * .08, stroke: C[col], class: "vec", "marker-end": `url(#ar${col})` }, gV); requestAnimationFrame(() => requestAnimationFrame(() => l.classList.add("on"))); return l; };
+  let timers = [];
+  const show = i => {
+    timers.forEach(clearTimeout); timers = []; gV.innerHTML = "";
+    const a = AN[i]; for (const k in pts) { pts[k].c.setAttribute("fill", C.muted); pts[k].c.setAttribute("r", 6); }
+    [a.a, a.b].forEach(k => { pts[k].c.setAttribute("fill", C[a.col]); });
+    $("#embOut").innerHTML = `Step 1: find the direction ${a.a} → ${a.b}`;
+    vec(P[a.a], P[a.b], a.col);
+    timers.push(setTimeout(() => { pts[a.c].c.setAttribute("fill", C.c1); pts[a.c].c.setAttribute("r", 8); $("#embOut").innerHTML = `Step 2: start at <b>${a.c}</b> and add the same direction…`; }, 1100));
+    timers.push(setTimeout(() => { const d = [P[a.b][0] - P[a.a][0], P[a.b][1] - P[a.a][1]]; vec(P[a.c], [P[a.c][0] + d[0], P[a.c][1] + d[1]], "c1"); }, 1700));
+    timers.push(setTimeout(() => { pts[a.d].c.setAttribute("fill", C.c2); pts[a.d].c.setAttribute("r", 10); $("#embOut").innerHTML = `Result: you land right next to <b>${a.d}</b>. ${a.txt}`; }, 2800));
+  };
+  let cur = 0;
+  chipGroup(svg.closest(".widget"), "an", v => show(cur = +v));
+  new IntersectionObserver((es, o) => { if (es[0].isIntersecting) { show(0); o.disconnect(); } }, { threshold: .5 }).observe(svg);
+})();
+
+/* ---------- CH5: attention ---------- */
+(() => {
+  const wrap = $("#attWrap"), wordsEl = $("#attWords"), svg = $("#attSvg");
+  const base = ["The", "animal", "didn't", "cross", "the", "street", "because", "it", "was", "too"];
+  let end = "tired", src = 7;
+  const special = {
+    tired: { 7: { 1: .62, 5: .1, 7: .08, 10: .1, 0: .04 }, 10: { 7: .35, 1: .35, 9: .15, 10: .1 }, 3: { 1: .4, 5: .35, 3: .15 } },
+    wide: { 7: { 5: .6, 1: .12, 7: .08, 10: .12, 4: .04 }, 10: { 7: .35, 5: .35, 9: .15, 10: .1 }, 3: { 1: .4, 5: .35, 3: .15 } },
+  };
+  const weights = (i, n) => {
+    const sp = special[end][i]; let w = Array(n).fill(0);
+    if (sp) for (const k in sp) w[k] = sp[k]; else { w[i] = .45; if (i > 0) w[i - 1] = .25; if (i < n - 1) w[i + 1] = .15; w = w.map(v => v + .15 / n); }
+    const s = w.reduce((a, b) => a + b, 0); return w.map(v => v / s);
+  };
+  const render = () => {
+    const words = [...base, end]; wordsEl.innerHTML = "";
+    words.forEach((t, i) => { const s = document.createElement("span"); s.className = "att-word"; s.innerHTML = `${t}<span class="bar"></span>`; s.addEventListener("click", () => { src = i; draw(); }); s.addEventListener("mouseenter", () => { src = i; draw(); }); wordsEl.appendChild(s); });
+    draw();
+  };
+  const draw = () => {
+    const spans = $$(".att-word", wordsEl), w = weights(src, spans.length), wr = wrap.getBoundingClientRect();
+    svg.setAttribute("width", wordsEl.scrollWidth); svg.setAttribute("height", 110); svg.innerHTML = "";
+    const sr = spans[src].getBoundingClientRect(), sx = sr.left - wr.left + wrap.scrollLeft + sr.width / 2;
+    spans.forEach((s, i) => {
+      s.classList.toggle("src", i === src);
+      s.style.background = hexA(C.c1, w[i] * .9);
+      $(".bar", s).style.transform = `scaleX(${w[i]})`;
+      if (i === src || w[i] < .03) return;
+      const r = s.getBoundingClientRect(), x = r.left - wr.left + wrap.scrollLeft + r.width / 2, h = clamp(Math.abs(x - sx) * .35, 20, 100);
+      const p = svgEl("path", { d: `M${sx} 108 Q${(sx + x) / 2} ${108 - h * 1.5} ${x} 108`, "stroke-width": 1 + w[i] * 12, opacity: .25 + w[i], stroke: C.c1 }, svg);
+      const len = p.getTotalLength(); p.style.strokeDasharray = len; p.style.strokeDashoffset = len;
+      p.animate?.([{ strokeDashoffset: len }, { strokeDashoffset: 0 }], { duration: 500, fill: "forwards", easing: "ease-out" });
+    });
+    const words = [...base, end], top = w.map((v, i) => [v, i]).filter(x => x[1] !== src).sort((a, b) => b[0] - a[0])[0];
+    $("#attOut").innerHTML = `"<b>${words[src]}</b>" attends most to "<b>${words[top[1]]}</b>" (${(top[0] * 100).toFixed(0)}%)` + (src === 7 ? (end === "tired" ? ". Animals get tired, so \"it\" = the animal." : ". Streets are wide, so \"it\" = the street.") : "");
+  };
+  chipGroup(wrap.closest(".widget"), "end", v => { end = v; src = 7; render(); });
+  render(); addEventListener("resize", draw); document.addEventListener("themechange", draw);
+})();
+
+/* ---------- CH5: transformer blocks ---------- */
+(() => {
+  const B = [
+    ["Input text", "c5", "Your prompt, e.g. \"The cat sat on the\". It is split into tokens, as in the tokenizer playground above."],
+    ["Token embeddings + positions", "c2", "Each token ID becomes a vector (its embedding). Position information is added so the model knows word order, since attention by itself has no sense of order."],
+    ["G", null, ""],
+    ["Next-token probabilities", "c4", "Linear + softmax: turns the final vector into a probability for every token in the vocabulary (often 100K+ options). Then one token is sampled."],
+  ];
+  const G = [
+    ["Masked multi-head self-attention", "c1", "Every token gathers information from earlier tokens. \"Masked\" means it can't peek at future tokens. Multiple heads look for different relationships in parallel."],
+    ["Add & normalize", "c3", "A residual connection adds the input back in, and layer normalization keeps the numbers stable. This is what lets very deep stacks train."],
+    ["Feed-forward network", "c6", "A small neural network applied to each token separately. Much of the model's factual knowledge seems to be stored in these layers."],
+    ["Add & normalize", "c3", "Another residual connection and normalization. Then the whole block repeats, dozens of times in large models."],
+  ];
+  const tf = $("#tf"), info = $("#tfInfo"); let all = [];
+  const mk = (b, parent) => { const d = document.createElement("div"); d.className = "tf-block"; d.textContent = b[0]; d.style.background = hexA(C[b[1]], .2); d.addEventListener("click", () => sel(d, b)); parent.appendChild(d); all.push(d); return d; };
+  const sel = (d, b) => { all.forEach(x => x.classList.toggle("sel", x === d)); info.innerHTML = `<h4>${b[0]}</h4><p style="margin:0">${b[2]}</p>`; info.animate?.([{ opacity: 0 }, { opacity: 1 }], { duration: 250 }); };
+  B.forEach(b => { if (b[0] === "G") { const g = document.createElement("div"); g.className = "tf-group"; G.forEach(x => mk(x, g)); tf.appendChild(g); } else mk(b, tf); });
+  sel(all[2], G[0]);
+})();
+
+/* ---------- CH5: next token ---------- */
+(() => {
+  const cand = [["mat", 3.2], ["floor", 2.5], ["sofa", 2.2], ["roof", 1.5], ["keyboard", 1.2], ["moon", -.2], ["spaghetti", -1]];
+  let T = 1; const box = $("#probs");
+  const rows = cand.map(c => { const r = document.createElement("div"); r.className = "prob"; r.innerHTML = `<span>${c[0]}</span><div class="track"><div class="fill"></div></div><span class="mono">0%</span>`; box.appendChild(r); return r; });
+  const probs = () => { const z = cand.map(c => c[1] / T), m = Math.max(...z), e = z.map(v => Math.exp(v - m)), s = e.reduce((a, b) => a + b, 0); return e.map(v => v / s); };
+  const upd = () => { const p = probs(); rows.forEach((r, i) => { $(".fill", r).style.width = (p[i] * 100) + "%"; $(".mono", r).textContent = (p[i] * 100).toFixed(1) + "%"; }); };
+  const sample = () => { const p = probs(); let u = Math.random(), i = 0; while (i < p.length - 1 && (u -= p[i]) > 0) i++; rows.forEach((r, j) => r.classList.toggle("picked", j === i)); const n = $("#ntNext"); n.textContent = cand[i][0]; n.animate?.([{ transform: "scale(1.3)" }, { transform: "scale(1)" }], { duration: 300 }); const s = document.createElement("span"); s.textContent = cand[i][0]; $("#samples").prepend(s); while ($("#samples").children.length > 24) $("#samples").lastChild.remove(); };
+  $("#temp").addEventListener("input", e => { T = +e.target.value; $("#tVal").textContent = T.toFixed(2); upd(); });
+  $("#sample").addEventListener("click", sample);
+  $("#sample10").addEventListener("click", () => { for (let k = 0; k < 10; k++) setTimeout(sample, k * 90); });
+  upd();
+})();
+
+/* ---------- stepper helper ---------- */
+function stepper(stepsEl, bodyEl, prev, next, data) {
+  let i = 0;
+  const dots = data.map((d, j) => { const b = document.createElement("div"); b.className = "step-dot"; b.textContent = `${j + 1}. ${d.t}`; b.addEventListener("click", () => go(j)); stepsEl.appendChild(b); return b; });
+  const go = j => { i = clamp(j, 0, data.length - 1); dots.forEach((d, k) => { d.classList.toggle("on", k === i); d.classList.toggle("done", k < i); }); bodyEl.innerHTML = data[i].h; bodyEl.style.animation = "none"; void bodyEl.offsetWidth; bodyEl.style.animation = ""; prev.disabled = i === 0; next.textContent = i === data.length - 1 ? "Start over ↺" : "Next →"; };
+  prev.addEventListener("click", () => go(i - 1)); next.addEventListener("click", () => go(i === data.length - 1 ? 0 : i + 1)); go(0);
+}
+
+/* ---------- CH6: training ---------- */
+stepper($("#trainSteps"), $("#trainBody"), $("#trainPrev"), $("#trainNext"), [
+  { t: "Pretraining", h: `<div class="big-ico">📚</div><h4>Pretraining: read (almost) everything</h4><p>The model reads trillions of tokens of web pages, books, code and papers, and learns to predict each next token. This is by far the most expensive stage: weeks on thousands of GPUs. The result is a <b>base model</b> that knows a lot, but it just <i>continues</i> text. Ask it a question and it might reply with more questions.</p>` },
+  { t: "Fine-tuning", h: `<div class="big-ico">🧑‍🏫</div><h4>Supervised fine-tuning (SFT): learn the format</h4><p>Train further on curated examples of good conversations: a question and an ideal answer. The model learns to act like an <b>assistant</b>: answer the question, follow instructions, and use a helpful format.</p>` },
+  { t: "Feedback", h: `<div class="big-ico">👍👎</div><h4>RLHF / RLAIF: learn preferences</h4><p>The model writes several answers, and humans (RLHF) or an AI guided by principles (RLAIF, used in Constitutional AI) judge which is better. A <b>reward model</b> learns those preferences, and reinforcement learning pushes the assistant toward answers that are more helpful, honest and harmless.</p>` },
+  { t: "RL on tasks", h: `<div class="big-ico">🧮</div><h4>Reinforcement learning on verifiable tasks</h4><p>Newer models are also trained with RL on problems that can be checked automatically: math with known answers, code that has to pass tests, and multi-step agent tasks. This is a big part of how models learn to <b>reason</b> step by step and use tools reliably.</p>` },
+  { t: "Evaluate & deploy", h: `<div class="big-ico">🚀</div><h4>Evaluate, red-team, deploy</h4><p>Before release, models are tested on capability benchmarks, safety evaluations and adversarial "red-teaming". Labs publish <b>model cards</b> or <b>system cards</b> describing the results. Then the model ships through apps and APIs, and monitoring continues.</p>` },
+]);
+stepper($("#caiSteps"), $("#caiBody"), $("#caiPrev"), $("#caiNext"), [
+  { t: "Prompt", h: `<p class="muted small">User asks:</p><p style="font-size:1.1rem"><b>"Write a brutal roast of my coworker's presentation to post in the team chat."</b></p>` },
+  { t: "Draft", h: `<p class="muted small">The model's first draft:</p><div class="info-panel">"Wow, 40 slides and not one original idea. Maybe next time try staying awake while you make them…"</div>` },
+  { t: "Principle", h: `<p class="muted small">A principle drawn from the constitution:</p><div class="key" style="margin:0"><p>"Choose the response that is most helpful to the user while avoiding content that is needlessly hurtful or demeaning to others."</p></div>` },
+  { t: "Critique", h: `<p class="muted small">The model critiques its own draft:</p><div class="info-panel">"Posting this publicly could humiliate a colleague and damage the user's working relationships. The user's real goal is probably to give feedback, or to be funny without being cruel."</div>` },
+  { t: "Revision", h: `<p class="muted small">Revised response:</p><div class="info-panel" style="background:var(--c2-soft)">"Public roasts can backfire at work. Here are two options: a light, good-natured joke everyone (including them) will laugh at, plus three specific, constructive notes you could share privately…"</div><p class="small muted" style="margin-top:10px">Pairs of drafts and revisions like this become training data, so the final model produces the better response directly.</p>` },
+]);
+
+/* ---------- CH7: diffusion ---------- */
+(() => {
+  const cv = $("#difCanvas"), G = 32; let ctx, W, H, shape = "smile", eps = [], t = 1000, anim = 0;
+  const size = () => { ({ ctx, W, H } = fitCanvas(cv)); draw(); };
+  const noise = () => { eps = Array.from({ length: G * G }, gauss); };
+  const target = (u, v) => {
+    if (shape === "smile") { const r = Math.hypot(u, v); if (Math.abs(r - .78) < .09) return 1; if (Math.hypot(u + .3, v + .25) < .12 || Math.hypot(u - .3, v + .25) < .12) return 1; const r2 = Math.hypot(u, v + .05); return Math.abs(r2 - .45) < .08 && v > .15 ? 1 : 0; }
+    if (shape === "heart") { const x = u * 1.25, y = -v * 1.25 + .25; return (x * x + y * y - 1) ** 3 - x * x * y ** 3 < 0 ? 1 : 0; }
+    const roof = v < -.1 && v > -.75 && Math.abs(u) < (v + .75) * 1.1; const body = v >= -.1 && v < .75 && Math.abs(u) < .6; const door = v > .25 && v < .75 && Math.abs(u - .2) < .14; const win = Math.abs(v - .15) < .12 && Math.abs(u + .28) < .12; return (roof || body) && !door && !win ? 1 : 0;
+  };
+  function draw() {
+    if (!ctx) return;
+    ctx.clearRect(0, 0, W, H);
+    const ab = Math.cos(t / 1000 * Math.PI / 2) ** 2, cs = Math.min(W, H) / G, ox = (W - cs * G) / 2, oy = (H - cs * G) / 2;
+    for (let j = 0; j < G; j++) for (let i = 0; i < G; i++) {
+      const x0 = target((i + .5) / G * 2 - 1, (j + .5) / G * 2 - 1) * 2 - 1;
+      const x = Math.sqrt(ab) * x0 + Math.sqrt(1 - ab) * eps[j * G + i];
+      ctx.fillStyle = hexA(C.c4, clamp((x + 1) / 2, 0, 1)); ctx.fillRect(ox + i * cs, oy + j * cs, cs + .5, cs + .5);
+    }
+    $("#difT").textContent = Math.round(t) + (t > 990 ? " (pure noise)" : t < 5 ? " (clean!)" : "");
+    $("#difSig").textContent = Math.round(Math.sqrt(ab) * 100) + "%";
+    $("#difSlider").value = Math.round(t);
+  }
+  noise(); size(); addEventListener("resize", size); document.addEventListener("themechange", draw);
+  $("#difSlider").addEventListener("input", e => { cancelAnimationFrame(anim); t = +e.target.value; draw(); });
+  $("#difNoise").addEventListener("click", () => { noise(); draw(); });
+  $("#difPlay").addEventListener("click", () => { cancelAnimationFrame(anim); t = 1000; const t0 = performance.now(), D = reduced ? 600 : 3200; const tick = n => { const p = Math.min(1, (n - t0) / D); t = 1000 * (1 - p); draw(); if (p < 1) anim = requestAnimationFrame(tick); }; anim = requestAnimationFrame(tick); });
+  chipGroup($("#difShapes"), "s", s => { shape = s; draw(); });
+})();
+
+/* ---------- CH8: landscape ---------- */
+(() => {
+  const L = [
+    ["Claude", "Anthropic", "closed", "🟠", "Safety-focused frontier models known for coding, writing, long context and agentic work."],
+    ["GPT & o-series", "OpenAI", "closed", "⚪", "Powers ChatGPT. Pioneered consumer chat and popularized reasoning models."],
+    ["Gemini", "Google DeepMind", "closed", "🔷", "Natively multimodal models integrated across Google products, with very long context."],
+    ["Grok", "xAI", "closed", "✖️", "Models integrated with the X platform."],
+    ["Llama", "Meta", "open", "🦙", "The open-weights family that started the open wave in 2023."],
+    ["DeepSeek", "DeepSeek", "open", "🐋", "Efficient open models. Its R1 reasoning model made headlines in 2025."],
+    ["Qwen", "Alibaba", "open", "🌐", "A broad family of open-weights models in many sizes, widely used for fine-tuning."],
+    ["Mistral", "Mistral AI", "open", "🌬️", "European lab offering both open-weights and commercial models."],
+    ["Image generators", "Midjourney, FLUX, Imagen…", "media", "🎨", "Text-to-image models, mostly diffusion-based, used for art, design and marketing."],
+    ["Video generators", "Veo, Sora, Runway…", "media", "🎬", "Generate short, realistic video clips from text or images."],
+    ["Voice & music", "ElevenLabs, Suno…", "media", "🎵", "Realistic speech synthesis, voice cloning and full song generation."],
+  ];
+  const box = $("#landCards");
+  const cards = L.map(l => { const c = document.createElement("div"); c.className = "card"; c.dataset.cat = l[2]; c.innerHTML = `<div class="row" style="justify-content:space-between"><div class="ico" style="background:var(--surface-2)">${l[3]}</div><span class="pill" style="background:var(--surface-2);color:var(--ink-2)">${l[2] === "closed" ? "closed" : l[2] === "open" ? "open-weights" : "media"}</span></div><h4>${l[0]}</h4><div class="small muted" style="margin-bottom:6px;font-weight:600">${l[1]}</div><p>${l[4]}</p>`; box.appendChild(c); return c; });
+  chipGroup($("#landFilter"), "f", f => cards.forEach(c => { const show = f === "all" || c.dataset.cat === f; c.classList.toggle("hide", !show); if (show) c.animate?.([{ opacity: 0, transform: "scale(.96)" }, { opacity: 1, transform: "none" }], { duration: 300 }); }));
+})();
+
+/* ---------- CH9: tiers ---------- */
+(() => {
+  const T = [["Haiku", "Fastest and most affordable. Great for high-volume tasks, sub-agents and real-time apps.", [95, 62, 15]], ["Sonnet", "The balanced workhorse, with strong coding and agent skills at moderate cost.", [72, 86, 45]], ["Opus", "The most capable tier, for the hardest reasoning, research and long agentic tasks.", [48, 100, 100]]];
+  const box = $("#tiers"), m = $("#tierMeters");
+  m.innerHTML = ["Speed", "Intelligence", "Cost"].map(n => `<div class="meter"><span>${n}</span><div class="track"><div class="fill"></div></div></div>`).join("");
+  const cards = T.map((t, i) => { const c = document.createElement("div"); c.className = "tier"; c.innerHTML = `<h4>${t[0]}</h4><p class="small" style="margin:6px 0 0;color:var(--ink-2)">${t[1]}</p>`; c.addEventListener("click", () => sel(i)); box.appendChild(c); return c; });
+  const sel = i => { cards.forEach((c, j) => c.classList.toggle("on", j === i)); $$(".fill", m).forEach((f, j) => f.style.width = T[i][2][j] + "%"); };
+  sel(1);
+})();
+
+/* ---------- CH9: features ---------- */
+(() => {
+  const F = [
+    ["core", "✍️", "Writing & analysis", "Drafting, editing, summarizing and nuanced analysis of long documents."],
+    ["core", "💻", "Coding", "Writing, debugging, refactoring and explaining code across languages. One of Claude's standout strengths."],
+    ["core", "👁️", "Vision", "Reads images, charts, screenshots, handwriting and PDFs."],
+    ["core", "📏", "Long context", "200K tokens standard, and up to 1M on some models: whole codebases or stacks of reports at once."],
+    ["core", "🧠", "Extended thinking", "Reasons step by step before answering, with visible thinking, for harder problems."],
+    ["core", "🌍", "Multilingual", "Works fluently across many languages."],
+    ["app", "🧩", "Artifacts", "Generates standalone documents, code, diagrams and interactive apps in a side panel you can iterate on and share."],
+    ["app", "📁", "Projects", "Workspaces with your own files and custom instructions that Claude uses as context."],
+    ["app", "🔎", "Web search & Research", "Searches the web with citations. Research mode runs multi-step investigations and writes reports."],
+    ["app", "🗂️", "Memory", "Can remember relevant context from past conversations, which you can view and control."],
+    ["app", "📄", "File creation", "Creates and edits real files such as spreadsheets, documents, slide decks and PDFs."],
+    ["app", "🔗", "Connectors", "Links to tools like Google Drive, Gmail, calendars, Slack and more through MCP."],
+    ["agent", "⌨️", "Claude Code", "An agentic coding tool in your terminal, IDE, desktop or browser that reads your codebase, edits files, runs commands and opens PRs."],
+    ["agent", "🖱️", "Computer use", "Operates a computer through screenshots, mouse and keyboard to complete tasks in any app."],
+    ["agent", "🌐", "Claude in Chrome", "A browser extension that lets Claude navigate sites and take actions in your browser."],
+    ["agent", "🧰", "Agent Skills", "Packaged folders of instructions and scripts that Claude loads when relevant, to perform specialized tasks consistently."],
+    ["agent", "🗃️", "Cowork", "Claude as an agent for everyday knowledge work across your files and apps, beyond coding."],
+    ["dev", "🔌", "Claude API", "Build Claude into products with the Messages API, available directly and through AWS, Google Cloud and Microsoft."],
+    ["dev", "🛠️", "Tool use", "Define functions (as JSON schemas) that Claude can call. This is the basis of every agent."],
+    ["dev", "🧷", "Model Context Protocol", "An open standard for connecting AI apps to tools and data, adopted across the industry."],
+    ["dev", "⚡", "Prompt caching & batch", "Cache repeated context and batch requests to cut cost and latency."],
+    ["dev", "📎", "Citations & Files API", "Ground answers in source documents with exact citations, and upload files once to reuse them."],
+    ["dev", "🤖", "Claude Agent SDK", "The same agent harness that powers Claude Code, available for building your own agents."],
+  ];
+  const col = { core: "c1", app: "c2", agent: "c3", dev: "c6" };
+  const box = $("#featCards");
+  const cards = F.map(f => { const c = document.createElement("div"); c.className = "card"; c.dataset.cat = f[0]; c.innerHTML = `<div class="ico" style="background:var(--${col[f[0]]}-soft)">${f[1]}</div><h4>${f[2]}</h4><p>${f[3]}</p>`; box.appendChild(c); return c; });
+  chipGroup($("#featFilter"), "f", f => cards.forEach((c, i) => { const show = f === "all" || c.dataset.cat === f; c.classList.toggle("hide", !show); if (show) c.animate?.([{ opacity: 0, transform: "translateY(8px)" }, { opacity: 1, transform: "none" }], { duration: 300, delay: (i % 8) * 30, fill: "backwards" }); }));
+})();
+
+/* ---------- CH9: tool use ---------- */
+(() => {
+  const svg = $("#toolSvg");
+  const N = { user: [60, 130, "🧑", "Your app / user"], claude: [210, 130, "✳️", "Claude"], tool: [360, 130, "⛅", "get_weather()"] };
+  const pathG = svgEl("g", {}, svg), nodeG = svgEl("g", {}, svg);
+  const arc = (a, b, up) => `M${N[a][0]} ${N[a][1] + (up ? -30 : 30)} Q${(N[a][0] + N[b][0]) / 2} ${N[a][1] + (up ? -110 : 110)} ${N[b][0]} ${N[b][1] + (up ? -30 : 30)}`;
+  const paths = { u2c: arc("user", "claude", true), c2t: arc("claude", "tool", true), t2c: arc("tool", "claude", false), c2u: arc("claude", "user", false) };
+  const pEls = {}; for (const k in paths) pEls[k] = svgEl("path", { d: paths[k], fill: "none", "stroke-width": 2.5, "stroke-linecap": "round" }, pathG);
+  const circ = {}; for (const k in N) { const g = svgEl("g", {}, nodeG); circ[k] = svgEl("circle", { cx: N[k][0], cy: N[k][1], r: 30, "stroke-width": 2.5 }, g); svgEl("text", { x: N[k][0], y: N[k][1] + 8, "text-anchor": "middle", "font-size": 24 }, g).textContent = N[k][2]; const l = svgEl("text", { x: N[k][0], y: N[k][1] + 52, "text-anchor": "middle", "font-size": 12, "font-weight": 700, class: "lbl" }, g); l.textContent = N[k][3]; }
+  const dot = svgEl("circle", { r: 7 }, svg);
+  const S = [
+    { p: "u2c", on: "claude", t: "1. The app sends the user's message plus a list of tools Claude may use.", c: `<span class="c">// request</span>\n{ <span class="k">"tools"</span>: [{ <span class="k">"name"</span>: <span class="s">"get_weather"</span>, ... }],\n  <span class="k">"messages"</span>: [{ <span class="k">"role"</span>: <span class="s">"user"</span>,\n    <span class="k">"content"</span>: <span class="s">"Weather in Paris? Do I need an umbrella?"</span> }] }` },
+    { p: "c2t", on: "tool", t: "2. Claude decides it needs live data and responds with a tool_use request instead of an answer.", c: `<span class="c">// Claude's response</span>\n{ <span class="k">"stop_reason"</span>: <span class="s">"tool_use"</span>,\n  <span class="k">"content"</span>: [{ <span class="k">"type"</span>: <span class="s">"tool_use"</span>,\n    <span class="k">"name"</span>: <span class="s">"get_weather"</span>,\n    <span class="k">"input"</span>: { <span class="k">"city"</span>: <span class="s">"Paris"</span> } }] }` },
+    { p: "t2c", on: "claude", t: "3. Your code runs the real function and sends back the result as a tool_result.", c: `<span class="c">// your app → Claude</span>\n{ <span class="k">"type"</span>: <span class="s">"tool_result"</span>,\n  <span class="k">"content"</span>: { <span class="k">"temp_c"</span>: 14, <span class="k">"condition"</span>: <span class="s">"rain"</span>,\n               <span class="k">"chance"</span>: 0.8 } }` },
+    { p: "c2u", on: "user", t: "4. Claude uses the result to write the final answer. Agents repeat this loop many times.", c: `<span class="c">// final answer</span>\n<span class="s">"It's 14°C in Paris with an 80% chance of rain,\n so yes, pack the umbrella ☔"</span>` },
+  ];
+  let i = 0, anim = 0;
+  const paint = () => {
+    for (const k in pEls) { pEls[k].setAttribute("stroke", k === S[i].p ? C.claude : C.line); pEls[k].setAttribute("class", k === S[i].p ? "flow-dash" : ""); }
+    for (const k in circ) { circ[k].setAttribute("fill", k === S[i].on ? hexA(C.claude, .25) : C.surface); circ[k].setAttribute("stroke", k === S[i].on ? C.claude : C.line); }
+    $$(".lbl", svg).forEach(l => l.setAttribute("fill", C.ink)); dot.setAttribute("fill", C.claude);
+  };
+  const go = j => {
+    i = (j + S.length) % S.length; paint(); $("#toolText").textContent = S[i].t; $("#toolCode").innerHTML = S[i].c; $("#toolStep").textContent = `${i + 1} / ${S.length}`;
+    cancelAnimationFrame(anim); const p = pEls[S[i].p], L = p.getTotalLength(), t0 = performance.now();
+    const tick = t => { const q = Math.min(1, (t - t0) / 900), pt = p.getPointAtLength(L * (1 - (1 - q) ** 3)); dot.setAttribute("cx", pt.x); dot.setAttribute("cy", pt.y); if (q < 1) anim = requestAnimationFrame(tick); };
+    anim = requestAnimationFrame(tick);
+  };
+  $("#toolNext").addEventListener("click", () => go(i + 1)); $("#toolPrev").addEventListener("click", () => go(i - 1));
+  go(0); document.addEventListener("themechange", paint);
+})();
+
+/* ---------- CH9: context window ---------- */
+(() => {
+  const sl = $("#ctx"), books = $("#books");
+  const fmt = n => n >= 1e6 ? (n / 1e6).toFixed(n % 1e6 ? 1 : 0) + "M" : n >= 1e3 ? Math.round(n / 1e3) + "K" : Math.round(n) + "";
+  const cols = ["c1", "c2", "c3", "c4", "c5", "c6", "claude"];
+  let lastKey = "";
+  const upd = () => {
+    const tok = Math.round(1000 * Math.pow(1000, sl.value / 100) / 1000) * 1000, words = tok * .75, pages = words / 300, novels = words / 90000;
+    $("#ctxVal").textContent = tok.toLocaleString() + (tok === 200000 ? " (Claude standard)" : tok >= 1e6 ? " (1M context)" : "");
+    $("#ctxWords").textContent = fmt(words); $("#ctxPages").textContent = fmt(pages); $("#ctxBooks").textContent = novels < 1 ? novels.toFixed(2) : novels.toFixed(1);
+    const key = novels >= 1 ? "b" + Math.min(Math.floor(novels), 40) : "p" + Math.min(Math.ceil(pages / 5), 60);
+    if (key === lastKey) return; lastKey = key; books.innerHTML = "";
+    if (novels >= 1) { const n = Math.min(Math.floor(novels), 40); for (let i = 0; i < n; i++) { const b = document.createElement("div"); b.className = "book"; b.style.background = `var(--${cols[i % 7]})`; b.style.height = (36 + (i * 7) % 16) + "px"; b.style.animationDelay = i * 12 + "ms"; books.appendChild(b); } books.insertAdjacentHTML("beforeend", `<span class="small muted" style="margin-left:8px">📚 ${n} novel${n > 1 ? "s" : ""}${novels > 40 ? " (showing 40)" : ""}</span>`); }
+    else { const n = Math.min(Math.ceil(pages / 5), 60); for (let i = 0; i < n; i++) { const p = document.createElement("div"); p.className = "page"; p.style.animationDelay = i * 8 + "ms"; books.appendChild(p); } books.insertAdjacentHTML("beforeend", `<span class="small muted" style="margin-left:8px">each ▯ ≈ 5 pages</span>`); }
+  };
+  sl.addEventListener("input", upd); upd();
+})();
+
+/* ---------- CH9: thinking ---------- */
+(() => {
+  let on = true, timer = 0;
+  const thought = `Let the ball cost x.\nThe bat costs x + 1.00.\nTogether: x + (x + 1.00) = 1.10\n2x = 0.10 → x = 0.05\nCheck: ball $0.05, bat $1.05, total $1.10 ✓\nThe intuitive answer "$0.10" is wrong: then the bat would be $1.10 and the total $1.20.`;
+  const btn = $("#thinkOn"), box = $("#thinkBox"), body = $("#thinkBody"), ans = $("#thinkAns");
+  btn.addEventListener("click", () => { on = !on; btn.classList.toggle("on", on); btn.textContent = `Extended thinking: ${on ? "ON" : "OFF"}`; box.style.display = on ? "" : "none"; });
+  $("#thinkRun").addEventListener("click", () => {
+    clearInterval(timer); body.textContent = ""; ans.style.display = "none";
+    if (!on) { ans.style.display = "block"; ans.innerHTML = "The ball costs <b>$0.05</b>. <span class='small muted'>(A quick answer is fine for simple questions. Thinking helps most when problems get long and tricky, and it lets you check the reasoning.)</span>"; return; }
+    $("#thinkSpin").style.display = ""; $("#thinkLabel").textContent = "Thinking…"; let k = 0;
+    timer = setInterval(() => { k += 2; body.textContent = thought.slice(0, k); if (k >= thought.length) { clearInterval(timer); $("#thinkSpin").style.display = "none"; $("#thinkLabel").textContent = "Thought for a few seconds"; ans.style.display = "block"; ans.innerHTML = "The ball costs <b>$0.05</b>, and the bat costs $1.05."; ans.animate?.([{ opacity: 0 }, { opacity: 1 }], { duration: 300 }); } }, reduced ? 1 : 22);
+  });
+})();
+
+/* ---------- CH10: RAG ---------- */
+(() => {
+  const D = [
+    ["Vacation policy", "Full-time staff receive 20 paid vacation days per year. Up to 5 unused days roll over to the next year."],
+    ["Remote work", "Employees may work remotely up to 2 days per week with their manager's approval."],
+    ["Expenses", "Submit receipts within 30 days in the Ledger app. Meals while traveling are reimbursed up to $40 per day."],
+    ["Office hours", "The Portland roastery office is open 7am to 6pm, Monday through Friday."],
+    ["Staff perks", "Every employee gets one free drink per shift and 50% off coffee beans."],
+    ["Parental leave", "New parents receive 16 weeks of fully paid parental leave."],
+    ["Equipment", "Laptops are replaced every 3 years. Report lost or stolen devices to IT within 24 hours."],
+    ["Guest Wi-Fi", "The guest Wi-Fi password changes monthly. Ask at the front desk."],
+  ];
+  // query-side synonym expansion: a query word in a group pulls in the group's words
+  const SYN = ["vacation pto holiday", "remote remotely home wfh", "expense receipt reimbursed reimburse meal", "office open hour", "drink coffee free perk bean", "parental baby maternity paternity parent", "laptop computer equipment device lost stolen", "wi-fi wifi internet password network guest"].map(g => g.split(" "));
+  const STOP = new Set("a an the i do does how many what when is are can my to of for in on at get we our you your me it be with per and or if much where who up".split(" "));
+  const norm = w => w.toLowerCase().replace(/[^a-z0-9-]/g, "").replace(/ies$/, "y").replace(/([^s])s$/, "$1");
+  const toks = s => s.split(/\s+/).map(norm).filter(w => w && !STOP.has(w));
+  const expand = words => { const out = new Set(words); SYN.forEach(g => { if (words.some(w => g.includes(w))) g.forEach(x => out.add(x)); }); return out; };
+  const docTok = D.map(d => new Set(toks(d[0] + " " + d[1])));
+  const idf = w => Math.log(1 + D.length / (1 + docTok.filter(t => t.has(w)).length));
+  const box = $("#ragDocs"), vec = $("#ragVec"), stages = $$("#ragStage span");
+  const els = D.map((d, i) => { const e = document.createElement("div"); e.className = "rag-doc"; e.innerHTML = `<span class="score"></span><b>[${i + 1}] ${d[0]}</b>${d[1]}`; box.appendChild(e); return e; });
+  for (let i = 0; i < 24; i++) vec.appendChild(document.createElement("i"));
+  const sug = ["How many vacation days do I get?", "Can I work from home?", "What's the meal limit when traveling?", "I lost my laptop, what do I do?", "What is the CEO's favorite color?"];
+  sug.forEach(s => { const b = document.createElement("button"); b.className = "chip"; b.textContent = s; b.addEventListener("click", () => { $("#ragQ").value = s; run(); }); $("#ragSugg").appendChild(b); });
+  let timers = [];
+  const stage = n => stages.forEach((s, i) => { s.classList.toggle("on", i === n); s.classList.toggle("done", i < n); });
+  function run() {
+    timers.forEach(clearTimeout); timers = [];
+    const q = $("#ragQ").value.trim(); if (!q) return;
+    els.forEach(e => e.classList.remove("top", "dim", "scored")); $("#ragPrompt").textContent = ""; const ans = $("#ragAns"); ans.style.opacity = .4; ans.textContent = "…";
+    stage(0);
+    const qt = expand(toks(q));
+    let h = 0; [...$$("i", vec)].forEach((b, i) => { h = [...q].reduce((a, c, j) => (a * 31 + c.charCodeAt(0) * (i + j + 1)) % 997, i + 7); b.style.height = (10 + h % 90) + "%"; b.style.background = `var(--${["c1", "c6", "c5"][i % 3]})`; });
+    const scores = docTok.map(dt => { let m = 0; qt.forEach(w => { if (dt.has(w)) m += idf(w); }); return Math.tanh(m / 3); });
+    const order = scores.map((s, i) => [s, i]).sort((a, b) => b[0] - a[0]);
+    const top = order.filter(o => o[0] > .3 && o[0] > order[0][0] * .6).slice(0, 2);
+    timers.push(setTimeout(() => { stage(1); els.forEach((e, i) => { e.classList.add("scored"); $(".score", e).textContent = scores[i].toFixed(2); }); }, 800));
+    timers.push(setTimeout(() => { els.forEach((e, i) => { const isTop = top.some(t => t[1] === i); e.classList.toggle("top", isTop); e.classList.toggle("dim", !isTop); }); }, 1500));
+    timers.push(setTimeout(() => {
+      stage(2);
+      const ctx = top.length ? top.map(t => `[${t[1] + 1}] ${D[t[1]][1]}`).join("\n") : "(no relevant documents found)";
+      $("#ragPrompt").innerHTML = `<span class="c">// system</span>\nAnswer using ONLY the context below.\nCite sources like [1]. If the answer isn't\nin the context, say you don't know.\n\n<span class="k">Context:</span>\n<span class="s">${ctx}</span>\n\n<span class="k">Question:</span> ${q.replace(/</g, "&lt;")}`;
+    }, 2300));
+    timers.push(setTimeout(() => {
+      stage(3); ans.style.opacity = 1;
+      ans.innerHTML = top.length ? `${D[top[0][1]][1]} <span class="pill" style="background:var(--c2-soft);color:var(--c2)">[${top[0][1] + 1}] ${D[top[0][1]][0]}</span>` : `I couldn't find that in the handbook, so I won't guess. <span class="small muted">(Grounding in retrieved sources is how RAG reduces hallucination.)</span>`;
+      ans.animate?.([{ opacity: 0, transform: "translateY(6px)" }, { opacity: 1, transform: "none" }], { duration: 350 });
+      timers.push(setTimeout(() => stage(4), 600));
+    }, 3200));
+  }
+  $("#ragGo").addEventListener("click", run); $("#ragQ").addEventListener("keydown", e => { if (e.key === "Enter") run(); });
+  new IntersectionObserver((es, o) => { if (es[0].isIntersecting) { run(); o.disconnect(); } }, { threshold: .4 }).observe(box);
+})();
+
+/* ---------- CH10: JEPA ---------- */
+(() => {
+  const svg = $("#jepaSvg"); let mode = "gen";
+  const pal = ["c5", "c2", "c2", "c5", "c2", "c3", "c3", "c2", "c6", "c3", "c3", "c6", "c6", "c6", "c6", "c6"];
+  const img = (x, y, s, masked, fuzzy) => { const g = svgEl("g", {}, svg); for (let i = 0; i < 16; i++) { const cx = x + (i % 4) * s, cy = y + Math.floor(i / 4) * s, m = masked && [5, 6, 9, 10].includes(i); svgEl("rect", { x: cx, y: cy, width: s - 2, height: s - 2, rx: 3, fill: m ? C.surface : hexA(C[pal[i]], fuzzy && [5, 6, 9, 10].includes(i) ? .3 + Math.random() * .4 : .75), stroke: m ? C.muted : "none", "stroke-dasharray": m ? "3 3" : "" }, g); } return g; };
+  const box = (x, y, w, h, t, col) => { svgEl("rect", { x, y, width: w, height: h, rx: 12, fill: hexA(C[col], .2), stroke: C[col], "stroke-width": 2 }, svg); const e = svgEl("text", { x: x + w / 2, y: y + h / 2 + 5, "text-anchor": "middle", "font-size": 13, "font-weight": 700, fill: C.ink }, svg); e.textContent = t; };
+  const arrow = (x1, y1, x2, y2, col = "muted") => svgEl("path", { d: `M${x1} ${y1} L${x2} ${y2}`, stroke: C[col], "stroke-width": 2.5, fill: "none", class: "flow-dash" }, svg);
+  const lab = (x, y, t, col = "muted", anchor = "middle") => { const e = svgEl("text", { x, y, "text-anchor": anchor, "font-size": 12, "font-weight": 700, fill: C[col] }, svg); e.textContent = t; };
+  const emb = (x, y, col, seed) => { for (let i = 0; i < 8; i++) svgEl("rect", { x: x + i * 11, y: y + 30 - ((seed * (i + 3) * 7) % 28), width: 8, height: 2 + ((seed * (i + 3) * 7) % 28), rx: 2, fill: C[col] }, svg); };
+  const draw = () => {
+    svg.innerHTML = "";
+    if (mode === "gen") {
+      lab(80, 28, "Context (masked image)"); img(20, 40, 30, true);
+      arrow(145, 100, 200, 100); box(200, 70, 120, 60, "Encoder", "c1");
+      arrow(320, 100, 370, 100); box(370, 70, 120, 60, "Decoder", "c4");
+      arrow(490, 100, 530, 100); lab(610, 28, "Predicted pixels"); img(540, 40, 30, false, true);
+      lab(610, 180, "vs. real pixels"); img(565, 190, 18, false);
+      lab(290, 200, "Loss is measured on every pixel.", "c4"); lab(290, 222, "Capacity gets spent on unpredictable", "muted"); lab(290, 240, "details like texture and noise.", "muted");
+      $("#jepaText").innerHTML = "<b>Generative approach</b> (masked autoencoders, next-pixel or next-token prediction): the model must reconstruct <i>exact</i> pixels or tokens. For language this works very well. For video and the physical world, much of the detail is inherently unpredictable, so the model's effort goes into guessing noise, and the outputs come out blurry.";
+    } else {
+      lab(80, 28, "Context (masked)"); img(20, 40, 30, true);
+      arrow(145, 100, 190, 100); box(190, 70, 120, 60, "Context encoder", "c1");
+      arrow(310, 100, 350, 100); box(350, 70, 100, 60, "Predictor", "c6");
+      arrow(450, 100, 490, 100); lab(540, 60, "predicted embedding", "c6"); emb(500, 70, "c6", 3);
+      lab(80, 192, "Target (hidden part)"); img(20, 200, 13, false);
+      arrow(80, 258, 190, 238); box(190, 205, 120, 50, "Target encoder", "c2");
+      arrow(310, 230, 490, 230); lab(540, 195, "target embedding", "c2"); emb(500, 205, "c2", 3);
+      svgEl("path", { d: "M590 110 Q640 170 590 225", stroke: C.c3, "stroke-width": 2.5, fill: "none", "stroke-dasharray": "4 4" }, svg); lab(648, 172, "loss", "c3");
+      lab(420, 170, "compare in abstract", "c3"); lab(420, 186, "representation space", "c3");
+      $("#jepaText").innerHTML = "<b>JEPA</b>: two encoders turn the visible context and the hidden target into <i>embeddings</i> (abstract summaries). A predictor learns to guess the target's embedding from the context's. The loss lives in representation space, so the model can ignore unpredictable pixel detail and focus on what matters, such as objects, motion and physics. That makes it a promising route to world models that can plan.";
+    }
+  };
+  chipGroup(svg.closest(".widget"), "j", j => { mode = j; draw(); }); draw(); document.addEventListener("themechange", draw);
+})();
+
+/* ---------- CH10: MoE ---------- */
+(() => {
+  const svg = $("#moeSvg"), E = 8;
+  const toks = ["The", "∫x²dx", "Paris", "def", "🙂", "gravity", "=", "bonjour", "SELECT", "photon"];
+  const eG = svgEl("g", {}, svg), lG = svgEl("g", {}, svg), tG = svgEl("g", {}, svg);
+  const ex = Array.from({ length: E }, (_, i) => { const y = 22 + i * 34; const r = svgEl("rect", { x: 380, y, width: 120, height: 26, rx: 8, "stroke-width": 2 }, eG); const t = svgEl("text", { x: 440, y: y + 18, "text-anchor": "middle", "font-size": 12, "font-weight": 700 }, eG); t.textContent = `Expert ${i + 1}`; return { r, t, y: y + 13 }; });
+  const router = svgEl("rect", { x: 190, y: 120, width: 100, height: 60, rx: 14, "stroke-width": 2 }, svg); const rt = svgEl("text", { x: 240, y: 155, "text-anchor": "middle", "font-size": 14, "font-weight": 700 }, svg); rt.textContent = "Router";
+  const lines = ex.map(e => svgEl("path", { d: `M290 150 C335 150 335 ${e.y} 380 ${e.y}`, fill: "none", "stroke-width": 2 }, lG));
+  const chip = svgEl("g", {}, tG); const chipR = svgEl("rect", { x: -40, y: -16, width: 80, height: 32, rx: 16 }, chip); const chipT = svgEl("text", { "text-anchor": "middle", y: 5, "font-size": 13, "font-weight": 700 }, chip);
+  const outT = svgEl("text", { x: 280, y: 318, "text-anchor": "middle", "font-size": 11, "font-weight": 600 }, svg);
+  let k = 0, sel = [], t0 = 0, gates = [];
+  const pickFor = s => { let h = [...s].reduce((a, c) => (a * 33 + c.charCodeAt(0)) >>> 0, 5381); const a = h % E; let b = (h >> 5) % E; if (b === a) b = (a + 3) % E; return [a, b]; };
+  const paint = p => {
+    router.setAttribute("fill", hexA(C.c6, .2)); router.setAttribute("stroke", C.c6); rt.setAttribute("fill", C.ink);
+    ex.forEach((e, i) => { const on = sel.includes(i) && p > .45; e.r.setAttribute("fill", on ? hexA(C.c2, .35) : C.surface); e.r.setAttribute("stroke", on ? C.c2 : C.line); e.t.setAttribute("fill", on ? C.ink : C.muted); lines[i].setAttribute("stroke", on ? C.c2 : C.line); lines[i].setAttribute("stroke-width", on ? 2 + 4 * gates[sel.indexOf(i)] : 1.5); lines[i].setAttribute("class", on ? "flow-dash" : ""); });
+    chipR.setAttribute("fill", C.c1); chipT.setAttribute("fill", "#fff"); outT.setAttribute("fill", C.muted);
+  };
+  const next = () => { const s = toks[k++ % toks.length]; sel = pickFor(s); const g = rand(.55, .8); gates = [g, 1 - g]; chipT.textContent = s; t0 = performance.now(); outT.textContent = `token "${s}" → Expert ${sel[0] + 1} (${(gates[0] * 100).toFixed(0)}%) + Expert ${sel[1] + 1} (${(gates[1] * 100).toFixed(0)}%). The other 6 experts stay idle.`; };
+  next();
+  whenVisible(svg, t => { const p = Math.min(1, (performance.now() - t0) / 1600); const x = p < .4 ? lerp(60, 240, p / .4) : 240, y = 150, sc = p < .4 ? 1 : p < .5 ? 1 - (p - .4) * 10 : 0; chip.setAttribute("transform", `translate(${x},${y}) scale(${Math.max(sc, 0.001)})`); paint(p); if (performance.now() - t0 > 2200) next(); });
+  document.addEventListener("themechange", () => paint(1));
+})();
+
+/* ---------- CH10: test-time compute ---------- */
+(() => {
+  const svg = $("#ttcSvg"), X = l => 50 + (l - 8) / 8 * 440, acc = l => 28 + 58 * (1 - Math.exp(-(l - 8) / 3.2)), Y = a => 215 - (a - 20) / 80 * 190;
+  const draw = () => {
+    svg.innerHTML = "";
+    for (let a = 20; a <= 100; a += 20) { svgEl("line", { x1: 50, x2: 490, y1: Y(a), y2: Y(a), stroke: C.line }, svg); const t = svgEl("text", { x: 42, y: Y(a) + 4, "text-anchor": "end", "font-size": 11, fill: C.muted }, svg); t.textContent = a + "%"; }
+    [8, 10, 12, 14, 16].forEach(l => { const t = svgEl("text", { x: X(l), y: 235, "text-anchor": "middle", "font-size": 11, fill: C.muted }, svg); t.textContent = (2 ** l >= 1024 ? 2 ** l / 1024 + "K" : 2 ** l); });
+    let d = ""; for (let l = 8; l <= 16.001; l += .1) d += (d ? "L" : "M") + X(l) + " " + Y(acc(l));
+    svgEl("path", { d: d + `L${X(16)} ${Y(20)} L${X(8)} ${Y(20)}Z`, fill: hexA(C.c6, .12) }, svg);
+    svgEl("path", { d, fill: "none", stroke: C.c6, "stroke-width": 3 }, svg);
+    const t = svgEl("text", { x: 490, y: 16, "text-anchor": "end", "font-size": 11, "font-weight": 600, fill: C.muted }, svg); t.textContent = "accuracy on hard problems (illustrative)";
+    const l = +$("#ttc").value;
+    svgEl("line", { x1: X(l), x2: X(l), y1: Y(acc(l)), y2: Y(20), stroke: C.c6, "stroke-dasharray": "4 4" }, svg);
+    svgEl("circle", { cx: X(l), cy: Y(acc(l)), r: 8, fill: C.c6, stroke: C.surface, "stroke-width": 3 }, svg);
+    const lb = svgEl("text", { x: X(l), y: Y(acc(l)) - 14, "text-anchor": "middle", "font-size": 13, "font-weight": 800, fill: C.ink }, svg); lb.textContent = acc(l).toFixed(0) + "%";
+    $("#ttcVal").textContent = Math.round(2 ** l).toLocaleString() + " tokens";
+  };
+  $("#ttc").addEventListener("input", draw); draw(); document.addEventListener("themechange", draw);
+})();
+
+})();
+</script>
+</body>
+</html>
