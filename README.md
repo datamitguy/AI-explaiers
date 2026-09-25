@@ -7,7 +7,7 @@ Five interactive, Brilliant-style courses. Each is a single self-contained HTML 
 | `index.html` | **AI, Explained**: 19 chapters, from AI basics to Claude, agents and the frontier |
 | `product-management.html` | **Product Management, First Principles**: 8 chapters |
 | `platform-management.html` | **Platform Management, First Principles**: 12 chapters |
-| `theories.html` | **Big Ideas, Part 1**: 179 mind-expanding theories across 18 domains (including a quantum physics deep dive, string theory, philosophy and schools of economic thought), with 56 simulations |
+| `theories.html` | **Big Ideas, Part 1**: 205 mind-expanding theories across 19 domains (including a quantum physics deep dive, string theory, philosophy, schools of economic thought and classic psychology), with 62 simulations |
 | `models.html` | **Big Ideas, Part 2: Mental models & toolkits**: 148 models and tools across 9 sections, with 39 simulations |
 
 A switcher in the top bar links the courses. Both Big Ideas parts sit under "Theories" and link to each other.
@@ -98,6 +98,7 @@ An interactive field guide to the theories that give you an edge today, covering
 | **Mind & behaviour** | Dual-process theory (Cognitive Reflection Test 🎮), predictive processing, cognitive dissonance, attachment, theory of mind, global workspace, Hebbian learning |
 | **Brain, attention & focus** | Neuroplasticity & deliberate practice 🎮, dopamine loops 🎮, default mode network, attention residue 🎮, flow 🎮, deep work, cognitive load, spaced repetition 🎮, sleep & memory, Zeigarnik/Ovsiankina, habit formation 🎮 |
 | **Self-image, belief & wellbeing** | Psycho-Cybernetics, self-efficacy, growth mindset, Pygmalion effect, placebo, Neville Goddard's law of assumption (with what the evidence says), WOOP 🎮, hedonic treadmill 🎮, self-determination theory, locus of control, Stoic dichotomy of control, maximizers vs. satisficers, peak–end rule |
+| **Classic psychology** | Maslow's hierarchy (rate your needs 🎮), adult attachment styles, psychoanalysis, Jung, classical conditioning (Pavlov/Rescorla–Wagner 🎮), operant conditioning, Piaget, Vygotsky, Erikson, the Big Five (10-item TIPI test 🎮), social learning, Milgram (shock board 🎮), Asch (line-judgement test 🎮), the Stanford prison experiment, learned helplessness, positive psychology, CBT, humanistic psychology, IQ and g, multiple intelligences, emotional intelligence, the marshmallow test, Yerkes–Dodson 🎮, grief stages, Dunbar's number, terror management theory, each with an honest evidence rating |
 | **Systems & complexity** | Systems thinking (thermostat 🎮), small-world networks 🎮, emergence, power laws 🎮, tipping points (Granovetter 🎮), black swans |
 | **Economics & society** | Comparative advantage (Ricardo 🎮), tragedy of the commons & Ostrom 🎮, principal–agent, creative destruction, diffusion of innovations, transaction costs |
 | **Leverage, wealth & modern strategy** | Asymmetric bets 🎮, permissionless leverage 🎮, specific knowledge, compounding 🎮, escaping the default game, value maxing, owning your time 🎮, ideas to influence 🎮, Lindy effect, antifragility, Kelly criterion 🎮, ergodicity 🎮, Matthew effect, 1,000 true fans, luck surface area |
