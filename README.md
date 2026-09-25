@@ -12,14 +12,17 @@ Open `index.html` in a browser, or serve the folder with a static server such as
 4. **Data & feature engineering** A messy dataset to clean, the "circle problem" solved with engineered features, and a before/after toolkit of common transformations
 5. **Training & evaluation** Train/validation/test splitting, an overfitting curve-fitter, and a confusion matrix with a threshold slider
 6. **Deployment & model monitoring** The MLOps lifecycle loop, deployment patterns, and a live drift-monitoring dashboard
-7. **The road to generative AI** A timeline from 1950 to 2026 and a deep dive on *Attention Is All You Need*
-8. **Inside a transformer** A tokenizer, embedding arithmetic, an attention visualizer, the architecture explorer, and temperature sampling
-9. **How LLMs are trained** Steppers for pretraining through RLHF, and for Constitutional AI
-10. **Beyond text: diffusion** An interactive noise-to-image demo
-11. **Today's AI landscape** The AI stack and a filterable list of model families
-12. **Meet Claude** Model tiers, a feature explorer, the tool-use loop, a context window visualizer, and extended thinking
-13. **Building with LLMs** A prompt builder, a decision helper for prompting vs RAG vs fine-tuning vs agents, and an eval suite with a regression
-14. **The frontier** A working in-browser mini-RAG, JEPA vs. generative prediction, Jev and System One models (a typed parallel-decision race against a generative LLM, plus a calibration reliability diagram), a Mixture-of-Experts router, and test-time compute
-15. **Responsible AI** A fairness trade-off simulator, SHAP-style explanations, and the EU AI Act risk pyramid
+7. **Your first model** A guided 8-step project: frame, explore, clean, split, train (logistic regression, k-NN or a decision tree, all trained live in the browser), evaluate, predict, and ship with a model card and matching scikit-learn code
+8. **The road to generative AI** A timeline from 1950 to 2026 and a deep dive on *Attention Is All You Need*
+9. **Inside a transformer** A tokenizer, embedding arithmetic, an attention visualizer, the architecture explorer, and temperature sampling
+10. **How LLMs are trained** Steppers for pretraining through RLHF, and for Constitutional AI
+11. **Beyond text: diffusion** An interactive noise-to-image demo
+12. **Today's AI landscape** The AI stack and a filterable list of model families
+13. **Meet Claude** Model tiers, a feature explorer, the tool-use loop, a context window visualizer, and extended thinking
+14. **Building with LLMs** A prompt builder, a decision helper for prompting vs RAG vs fine-tuning vs agents, and an eval suite with a regression
+15. **The frontier** A working in-browser mini-RAG, JEPA vs. generative prediction, Jev and System One models (a typed parallel-decision race against a generative LLM, plus a calibration reliability diagram), a Mixture-of-Experts router, and test-time compute
+16. **Responsible AI** A fairness trade-off simulator, SHAP-style explanations, and the EU AI Act risk pyramid
+
+A searchable **glossary** of 100+ terms closes the course, and bold key terms throughout the course show inline definitions when you hover or tap them.
 
 It supports light and dark themes, including a manual toggle, and respects `prefers-reduced-motion`.

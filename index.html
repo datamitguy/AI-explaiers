@@ -78,7 +78,7 @@ svg text{font-family:Inter,sans-serif}
 .sidebar{position:fixed;top:60px;left:0;bottom:0;width:270px;padding:22px 14px;overflow:auto;border-right:1px solid var(--line);background:var(--bg);z-index:40}
 .sidebar h4{font-family:Inter,system-ui,sans-serif;font-size:.7rem;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin:0 10px 10px}
 .sidebar a{display:flex;align-items:center;gap:10px;padding:8px 10px;border-radius:12px;color:var(--ink-2);text-decoration:none;font-size:.9rem;font-weight:500;line-height:1.3}
-.sidebar a .num{flex:none;width:26px;height:26px;border-radius:8px;display:grid;place-items:center;font-size:.75rem;font-weight:700;background:var(--surface-2);color:var(--muted);transition:.25s}
+.sidebar a .num{flex:none;min-width:26px;padding:0 4px;height:26px;border-radius:8px;display:grid;place-items:center;font-size:.75rem;font-weight:700;background:var(--surface-2);color:var(--muted);transition:.25s}
 .sidebar a:hover{background:var(--surface-2)}
 .sidebar a.active{color:var(--ink);background:var(--surface)}
 .sidebar a.active .num{background:var(--c1);color:#fff}
@@ -387,6 +387,43 @@ input[type=text]:focus{border-color:var(--c1)}
 .pyr-level:hover{transform:scale(1.03)}
 .pyr-level.sel{box-shadow:0 0 0 4px var(--surface-3)}
 .sidebar .grp{margin:18px 10px 6px;font-size:.66rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+/* ---------- first model ---------- */
+.fm-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:start}
+@media (max-width:860px){.fm-grid{grid-template-columns:1fr}}
+.fm-body{min-height:360px;animation:pop .35s}
+.fm-body h4{font-size:1.2rem;margin:0 0 8px}
+.fm-body p{font-size:.95rem}
+.fm-legend{display:flex;gap:14px;flex-wrap:wrap;font-size:.75rem;font-weight:600;color:var(--ink-2);margin-top:8px}
+.fm-legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;vertical-align:-1px}
+.step-dot.locked{opacity:.4;cursor:not-allowed}
+.fm-opts{display:grid;gap:8px}
+.fm-opt{text-align:left;cursor:pointer;padding:10px 14px;border-radius:12px;border:2px solid var(--line);background:var(--surface);font-weight:600;font-size:.9rem;box-shadow:0 3px 0 var(--line)}
+.fm-opt:hover{border-color:var(--c1)}
+.fm-opt.right{border-color:var(--c2);background:var(--c2-soft);box-shadow:0 3px 0 var(--c2)}
+.fm-opt.wrong{border-color:var(--c4);background:var(--c4-soft);animation:shake .35s}
+.fm-checks{display:grid;gap:8px}
+.fm-checks label{display:flex;gap:10px;align-items:flex-start;font-size:.9rem;cursor:pointer}
+.fm-checks input{margin-top:5px;width:17px;height:17px;accent-color:var(--c1);flex:none}
+td.fm-bad{background:var(--c4-soft);color:var(--c4t);font-weight:700}
+/* ---------- glossary ---------- */
+.gl-tools{position:sticky;top:70px;z-index:5;padding:16px 18px}
+@media (max-width:720px){.gl-tools{position:static}.gl-card{scroll-margin-top:80px}}
+.gl-letters{display:flex;flex-wrap:wrap;gap:4px;margin-top:10px}
+.gl-l{cursor:pointer;border:none;background:var(--surface-2);border-radius:8px;min-width:30px;height:30px;font-weight:700;font-size:.8rem;color:var(--ink-2)}
+.gl-l:hover{background:var(--surface-3)}.gl-l.on{background:var(--ink);color:var(--bg)}
+.gl-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}
+.gl-letter{grid-column:1/-1;font-family:"Space Grotesk",Inter,system-ui,sans-serif;font-size:1.6rem;font-weight:700;color:var(--muted);margin:14px 0 -4px;border-bottom:2px solid var(--line)}
+.gl-card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:14px 16px;scroll-margin-top:230px}
+.gl-card:target{border-color:var(--c1);box-shadow:0 0 0 4px var(--c1-soft)}
+.gl-card h4{font-size:1rem;margin:0}
+.gl-card p{font-size:.88rem;color:var(--ink-2);margin:8px 0}
+.gl-card a{text-decoration:none;font-weight:600}
+.gl-term,.gl-demo{text-decoration:underline dotted var(--c1);text-decoration-thickness:2px;text-underline-offset:3px;cursor:help;font-weight:700}
+.gl-term:focus-visible{outline:2px solid var(--c1);outline-offset:2px;border-radius:3px}
+.gl-pop{position:fixed;z-index:80;max-width:320px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:12px 14px;box-shadow:0 12px 40px rgba(0,0,0,.18);font-size:.85rem;opacity:0;pointer-events:none;transform:translateY(4px);transition:opacity .15s,transform .15s}
+.gl-pop.on{opacity:1;pointer-events:auto;transform:none}
+.gl-pop p{margin:6px 0 8px;color:var(--ink-2)}
+.gl-pop a{text-decoration:none;font-weight:700}
 </style>
 </head>
 <body>
@@ -395,6 +432,7 @@ input[type=text]:focus{border-color:var(--c1)}
   <button class="icon-btn" id="menuBtn" aria-label="Open chapters">☰</button>
   <a class="brand" href="#top"><span class="brand-mark">AI</span> AI, Explained</a>
   <div class="top-actions">
+    <a class="icon-btn" href="#glossary" aria-label="Glossary" title="Glossary" style="text-decoration:none;color:inherit;font-weight:800;font-size:.8rem">A–Z</a>
     <button class="icon-btn" id="themeBtn" aria-label="Toggle theme">◐</button>
   </div>
   <div class="progress" id="progress"></div>
@@ -410,18 +448,20 @@ input[type=text]:focus{border-color:var(--c1)}
   <a href="#data"><span class="num">4</span>Data &amp; feature engineering</a>
   <a href="#evaluate"><span class="num">5</span>Training &amp; evaluation</a>
   <a href="#mlops"><span class="num">6</span>Deployment &amp; monitoring</a>
+  <a href="#firstmodel"><span class="num">7</span>Your first model (hands-on)</a>
   <div class="grp">Generative AI</div>
-  <a href="#ch4"><span class="num">7</span>The road to generative AI</a>
-  <a href="#ch5"><span class="num">8</span>Inside a transformer</a>
-  <a href="#ch6"><span class="num">9</span>How LLMs are trained</a>
-  <a href="#ch7"><span class="num">10</span>Beyond text: diffusion</a>
+  <a href="#ch4"><span class="num">8</span>The road to generative AI</a>
+  <a href="#ch5"><span class="num">9</span>Inside a transformer</a>
+  <a href="#ch6"><span class="num">10</span>How LLMs are trained</a>
+  <a href="#ch7"><span class="num">11</span>Beyond text: diffusion</a>
   <div class="grp">Claude &amp; the frontier</div>
-  <a href="#ch8"><span class="num">11</span>Today's AI landscape</a>
-  <a href="#ch9"><span class="num">12</span>Meet Claude</a>
-  <a href="#build"><span class="num">13</span>Building with LLMs</a>
-  <a href="#ch10"><span class="num">14</span>The frontier: RAG, JEPA, Jev &amp; more</a>
-  <a href="#responsible"><span class="num">15</span>Responsible AI</a>
+  <a href="#ch8"><span class="num">12</span>Today's AI landscape</a>
+  <a href="#ch9"><span class="num">13</span>Meet Claude</a>
+  <a href="#build"><span class="num">14</span>Building with LLMs</a>
+  <a href="#ch10"><span class="num">15</span>The frontier: RAG, JEPA, Jev &amp; more</a>
+  <a href="#responsible"><span class="num">16</span>Responsible AI</a>
   <a href="#recap"><span class="num">★</span>Recap</a>
+  <a href="#glossary"><span class="num">A–Z</span>Glossary</a>
 </nav>
 
 <main id="top">
@@ -434,7 +474,7 @@ input[type=text]:focus{border-color:var(--c1)}
     <h1 style="margin-top:18px">How <span class="grad">AI</span> actually works.</h1>
     <p>Start from zero. Play with a neuron, watch a network learn, pull apart the 2017 paper that started the generative AI boom, meet Claude, and look at where the field is heading next.</p>
     <a class="btn primary" href="#ch1" style="text-decoration:none;padding:13px 24px;font-size:1rem">Start learning →</a>
-    <div class="hero-stats"><span>15 chapters</span><span>40+ interactive diagrams</span><span>No math background needed</span></div>
+    <div class="hero-stats"><span>16 chapters</span><span>45+ interactive diagrams</span><span>Build your own model</span><span>No math background needed</span></div>
   </div>
 </section>
 
@@ -801,11 +841,51 @@ input[type=text]:focus{border-color:var(--c1)}
 </div>
 </section>
 
+<!-- ============ YOUR FIRST MODEL ============ -->
+<section class="chapter" id="firstmodel">
+<div class="wrap">
+  <div class="ch-head reveal">
+    <span class="ch-tag" style="background:var(--c1-soft);color:var(--c1)">Chapter 7</span>
+    <h2>Your first model: a hands-on walkthrough</h2>
+    <p class="lede">Put the last few chapters together and build a real (tiny) machine-learning model end to end in your browser, from a raw dataset to a model card and the Python code to reproduce it.</p>
+  </div>
+  <p class="reveal">Here's the task. A teacher has records for about 120 past students: how many hours each one studied, how many minutes they slept the night before the exam, and whether they passed. Can we predict whether a <i>new</i> student will pass? Everything below is computed live. The cleaning, the split, the training and the evaluation are all real, just small.</p>
+
+  <div class="widget wide reveal" id="fmWidget">
+    <div class="w-head">Guided project</div>
+    <div class="w-title">Predict who passes the exam</div>
+    <div class="w-sub">Work through the eight steps in order. Some steps need you to do something before you can move on, just like a real project. You can always go back and change a decision.</div>
+    <div class="steps" id="fmSteps"></div>
+    <div class="fm-grid">
+      <div class="fm-body" id="fmBody"></div>
+      <div>
+        <div class="stage" style="aspect-ratio:4/3"><canvas id="fmCanvas" style="height:100%"></canvas></div>
+        <div class="fm-legend"><span><i style="background:var(--c2)"></i>passed</span><span><i style="background:var(--c4)"></i>failed</span><span><i style="border:2px solid var(--muted);background:none"></i>test set (hidden from training)</span><span>⭐ new student</span></div>
+      </div>
+    </div>
+    <div class="row" style="margin-top:16px"><button class="btn" id="fmPrev">← Back</button><button class="btn primary" id="fmNext">Next →</button><span class="small muted" id="fmHint"></span></div>
+  </div>
+
+  <div class="key reveal"><p>This is the same workflow professionals follow: frame the problem, explore, clean, split, train, evaluate, predict and document. The difference is 120 rows instead of 120 million. Libraries like scikit-learn, XGBoost and PyTorch automate the maths, but the judgment calls at each step are still yours.</p></div>
+
+  <div class="quiz reveal" data-correct="0">
+    <div class="q-label">Quick check</div>
+    <div class="q">Your k-nearest-neighbors model with k = 1 scores 100% on the training set but 74% on the test set. What's the best next move?</div>
+    <div class="opts">
+      <button class="opt">Increase k to smooth the boundary, and compare settings on validation data</button>
+      <button class="opt">Report 100%, because that's what the model achieved</button>
+      <button class="opt">Add the test set to the training data and re-test on it</button>
+    </div>
+    <div class="explain">With k = 1, every training point is its own nearest neighbor, so training accuracy is always 100%. It's memorization. A larger k averages over neighbors and usually generalizes better. Never report training accuracy as your result, and never train on your test set.</div>
+  </div>
+</div>
+</section>
+
 <!-- ============ CH4 ============ -->
 <section class="chapter" id="ch4">
 <div class="wrap">
   <div class="ch-head reveal">
-    <span class="ch-tag" style="background:var(--c6-soft);color:var(--c6t)">Chapter 7</span>
+    <span class="ch-tag" style="background:var(--c6-soft);color:var(--c6t)">Chapter 8</span>
     <h2>The road to generative AI</h2>
     <p class="lede">Generative AI makes new content instead of just labeling existing content. It took 70 years of ideas, and one pivotal paper, to get here.</p>
   </div>
@@ -854,7 +934,7 @@ input[type=text]:focus{border-color:var(--c1)}
 <section class="chapter" id="ch5">
 <div class="wrap">
   <div class="ch-head reveal">
-    <span class="ch-tag">Chapter 8</span>
+    <span class="ch-tag">Chapter 9</span>
     <h2>Inside a transformer</h2>
     <p class="lede">A large language model does one thing: predict the next piece of text. Here's how it gets from your words to that prediction.</p>
   </div>
@@ -928,7 +1008,7 @@ input[type=text]:focus{border-color:var(--c1)}
 <section class="chapter" id="ch6">
 <div class="wrap">
   <div class="ch-head reveal">
-    <span class="ch-tag" style="background:var(--c3-soft);color:var(--c3t)">Chapter 9</span>
+    <span class="ch-tag" style="background:var(--c3-soft);color:var(--c3t)">Chapter 10</span>
     <h2>How LLMs are trained</h2>
     <p class="lede">A raw next-token predictor is not yet an assistant. It takes several stages to turn it into one.</p>
   </div>
@@ -956,7 +1036,7 @@ input[type=text]:focus{border-color:var(--c1)}
 <section class="chapter" id="ch7">
 <div class="wrap">
   <div class="ch-head reveal">
-    <span class="ch-tag" style="background:var(--c4-soft);color:var(--c4t)">Chapter 10</span>
+    <span class="ch-tag" style="background:var(--c4-soft);color:var(--c4t)">Chapter 11</span>
     <h2>Beyond text: diffusion</h2>
     <p class="lede">Image and video generators mostly use a different trick: they learn to turn noise into pictures.</p>
   </div>
@@ -984,7 +1064,7 @@ input[type=text]:focus{border-color:var(--c1)}
 <section class="chapter" id="ch8">
 <div class="wrap">
   <div class="ch-head reveal">
-    <span class="ch-tag" style="background:var(--c5-soft);color:var(--c5t)">Chapter 11</span>
+    <span class="ch-tag" style="background:var(--c5-soft);color:var(--c5t)">Chapter 12</span>
     <h2>Today's AI landscape</h2>
     <p class="lede">A few frontier labs, a fast-moving open-weights world, and thousands of products built on top.</p>
   </div>
@@ -1026,7 +1106,7 @@ input[type=text]:focus{border-color:var(--c1)}
 <section class="chapter" id="ch9">
 <div class="wrap">
   <div class="ch-head reveal">
-    <span class="ch-tag" style="background:var(--claude-soft);color:var(--claudet)">Chapter 12</span>
+    <span class="ch-tag" style="background:var(--claude-soft);color:var(--claudet)">Chapter 13</span>
     <h2>Meet Claude</h2>
     <p class="lede">Claude is the family of AI models built by Anthropic, an AI safety company founded in 2021.</p>
   </div>
@@ -1101,7 +1181,7 @@ input[type=text]:focus{border-color:var(--c1)}
 <section class="chapter" id="build">
 <div class="wrap">
   <div class="ch-head reveal">
-    <span class="ch-tag" style="background:var(--c2-soft);color:var(--c2t)">Chapter 13</span>
+    <span class="ch-tag" style="background:var(--c2-soft);color:var(--c2t)">Chapter 14</span>
     <h2>Building with LLMs</h2>
     <p class="lede">Prompting, retrieval, fine-tuning, tools and evals: the practical toolkit for turning a model into a product.</p>
   </div>
@@ -1165,7 +1245,7 @@ input[type=text]:focus{border-color:var(--c1)}
 <section class="chapter" id="ch10">
 <div class="wrap">
   <div class="ch-head reveal">
-    <span class="ch-tag" style="background:var(--c6-soft);color:var(--c6t)">Chapter 14</span>
+    <span class="ch-tag" style="background:var(--c6-soft);color:var(--c6t)">Chapter 15</span>
     <h2>The frontier: RAG, JEPA, Jev &amp; beyond</h2>
     <p class="lede">What comes after "a bigger transformer"? Here are the ideas pushing AI forward.</p>
   </div>
@@ -1316,7 +1396,7 @@ input[type=text]:focus{border-color:var(--c1)}
 <section class="chapter" id="responsible">
 <div class="wrap">
   <div class="ch-head reveal">
-    <span class="ch-tag" style="background:var(--c4-soft);color:var(--c4t)">Chapter 15</span>
+    <span class="ch-tag" style="background:var(--c4-soft);color:var(--c4t)">Chapter 16</span>
     <h2>Responsible AI</h2>
     <p class="lede">Fairness, transparency, security and regulation: building AI that deserves people's trust.</p>
   </div>
@@ -1392,6 +1472,7 @@ input[type=text]:focus{border-color:var(--c1)}
     <div><b>Neurons → networks</b>Simple weighted sums stacked in layers can represent very complex functions.</div>
     <div><b>Data beats algorithms</b>Clean data and good features often matter more than the choice of model.</div>
     <div><b>Evaluate honestly</b>Hold out test data, watch for overfitting, and pick metrics that fit the cost of each error.</div>
+    <div><b>You built one!</b>Frame, explore, clean, split, train, evaluate, predict and document: the whole workflow in miniature.</div>
     <div><b>Models drift</b>MLOps means deploying safely, then monitoring data, performance and latency, and retraining.</div>
     <div><b>Attention changed everything</b>The 2017 Transformer let models look at all of the context at once, and it scaled.</div>
     <div><b>LLMs predict tokens</b>Pretraining, then fine-tuning and RLHF or Constitutional AI, turns a predictor into an assistant.</div>
@@ -1401,6 +1482,24 @@ input[type=text]:focus{border-color:var(--c1)}
     <div><b>The frontier</b>RAG for grounding, JEPA and world models, Jev and System One decision models, MoE, test-time compute, and alignment.</div>
     <div><b>Responsible AI</b>Fairness involves trade-offs, explanations build trust, and regulation scales with risk.</div>
   </div>
+</div>
+</section>
+
+<!-- ============ GLOSSARY ============ -->
+<section class="chapter" id="glossary">
+<div class="wrap">
+  <div class="ch-head reveal">
+    <span class="ch-tag" style="background:var(--surface-3);color:var(--ink-2)">Reference</span>
+    <h2>Glossary</h2>
+    <p class="lede">Every key term in the course, in plain English, with a link back to where it's explained. Tip: <span class="gl-demo">underlined bold terms</span> throughout the course show a quick definition when you hover or tap them.</p>
+  </div>
+  <div class="widget gl-tools">
+    <input type="text" id="glSearch" aria-label="Search the glossary">
+    <div class="row" id="glCats" style="margin-top:12px"></div>
+    <div class="gl-letters" id="glLetters"></div>
+    <div class="small muted" id="glCount" style="margin-top:8px"></div>
+  </div>
+  <div class="gl-list" id="glList"></div>
 </div>
 </section>
 
@@ -2757,6 +2856,363 @@ const gaussR = r => { let u = 0, v = 0; while (!u) u = r(); while (!v) v = r(); 
   const sel = i => { $$(".pyr-level", box).forEach((d, j) => d.classList.toggle("sel", j === i)); const l = L[i]; info.innerHTML = `<span class="pill" style="background:${hexA(C[l[1]], .2)};color:${C[l[1]]}">${l[2]}</span><h4 style="margin-top:8px">${l[0]}</h4><p style="margin:0">${l[3]}</p>`; info.animate?.([{ opacity: 0 }, { opacity: 1 }], { duration: 250 }); };
   sel(1);
   document.addEventListener("themechange", () => $$(".pyr-level", box).forEach((d, i) => { d.style.background = hexA(C[L[i][1]], .25); d.style.borderColor = C[L[i][1]]; }));
+})();
+
+/* ---------- YOUR FIRST MODEL: guided project ---------- */
+(() => {
+  const cv = $("#fmCanvas"), body = $("#fmBody"), stepsEl = $("#fmSteps"); let ctx, W, H;
+  const STEPS = ["Frame", "Explore", "Clean", "Split", "Train", "Evaluate", "Predict", "Ship"];
+  // ---- data ----
+  const r = seeded(2026), raw = [];
+  for (let i = 0; i < 120; i++) {
+    const study = Math.round(r() * 100) / 10, sleep = Math.round(210 + r() * 390);
+    const z = 1.25 * (study - 5) + 0.012 * (sleep - 420), pass = r() < 1 / (1 + Math.exp(-z)) ? 1 : 0;
+    raw.push({ id: i + 1, study, sleep, pass });
+  }
+  raw[3].sleep = null; raw[17].sleep = null; raw[5].sleep = 1800; raw[44].study = -2;
+  raw.push({ ...raw[10], id: 121 }); raw.push({ ...raw[52], id: 122 });
+  const S = { step: 0, maxStep: 0, framed: false, fix: { missing: false, invalid: false, dupes: false }, scaled: false, split: false, model: "logreg", hp: { epochs: 150, k: 7, depth: 3 }, trained: false, loss: [], newPt: { study: 6, sleepH: 7 } };
+  let rows = [], train = [], test = [], stats = null, M = null, heat = null, trainAnim = 0;
+  const median = a => { const v = [...a].sort((x, y) => x - y), n = v.length; return n % 2 ? v[(n - 1) / 2] : (v[n / 2 - 1] + v[n / 2]) / 2; };
+  const rebuild = () => {
+    rows = raw.map(o => ({ ...o }));
+    if (S.fix.dupes) { const seen = new Set(); rows = rows.filter(o => { const k = o.study + "|" + o.sleep + "|" + o.pass; if (seen.has(k)) return false; seen.add(k); return true; }); }
+    if (S.fix.invalid) rows = rows.filter(o => o.study >= 0 && (o.sleep == null || o.sleep <= 1440));
+    if (S.fix.missing) { const m = median(rows.filter(o => o.sleep != null && o.sleep <= 1440).map(o => o.sleep)); rows.forEach(o => { if (o.sleep == null) { o.sleep = m; o.imputed = 1; } }); }
+    if (S.split) { const rr = seeded(42); rows.forEach(o => o.test = rr() < .2); }
+    train = rows.filter(o => !o.test); test = rows.filter(o => o.test);
+  };
+  const clean = () => S.fix.missing && S.fix.invalid && S.fix.dupes;
+  // ---- features ----
+  const fit = () => { const src = train.filter(o => o.sleep != null), mean = f => src.reduce((s, o) => s + o[f], 0) / src.length, sd = (f, m) => Math.sqrt(src.reduce((s, o) => s + (o[f] - m) ** 2, 0) / src.length) || 1; const m0 = mean("study"), m1 = mean("sleep"); stats = { m0, m1, s0: sd("study", m0), s1: sd("sleep", m1) }; };
+  const tf = (st, sl) => S.scaled ? [(st - stats.m0) / stats.s0, (sl - stats.m1) / stats.s1] : [st, sl];
+  // ---- models ----
+  const MODELS = {
+    logreg: { name: "Logistic regression", hp: "epochs", blurb: "Learns one weight per feature and draws a straight boundary. It's fast and easy to explain, and it's usually the first baseline to try. Trained with gradient descent, so <b>feature scaling matters</b>." },
+    knn: { name: "k-nearest neighbors", hp: "k", blurb: "No real training: it memorizes the data. To predict, it lets the <b>k</b> closest training students vote. Small k means a wiggly boundary (overfitting); large k means a smooth one. Distances depend on units, so <b>scaling matters</b>." },
+    tree: { name: "Decision tree", hp: "depth", blurb: "Learns a flowchart of yes/no questions, such as <i>\"studied more than 4.6 h?\"</i>. It's readable and <b>doesn't care about scaling</b>. Deeper trees fit more detail, and eventually noise." },
+  };
+  const sig = z => 1 / (1 + Math.exp(-clamp(z, -30, 30)));
+  const trainLogreg = epochs => {
+    let w = [0, 0], b = 0; S.loss = []; const lr = .3, X = train.map(o => tf(o.study, o.sleep)), y = train.map(o => o.pass);
+    const steps = [];
+    for (let e = 0; e < epochs; e++) {
+      let g0 = 0, g1 = 0, gb = 0, L = 0;
+      X.forEach((x, i) => { const p = sig(w[0] * x[0] + w[1] * x[1] + b), d = p - y[i]; g0 += d * x[0]; g1 += d * x[1]; gb += d; L += -(y[i] * Math.log(Math.max(p, 1e-9)) + (1 - y[i]) * Math.log(Math.max(1 - p, 1e-9))); });
+      w = [w[0] - lr * g0 / X.length, w[1] - lr * g1 / X.length]; b -= lr * gb / X.length;
+      S.loss.push(L / X.length); steps.push({ w: [...w], b });
+    }
+    return steps;
+  };
+  const buildTree = (rs, d) => {
+    const n = rs.length, p = n ? rs.reduce((s, o) => s + o.pass, 0) / n : 0;
+    if (d === 0 || n < 6 || p === 0 || p === 1) return { leaf: 1, p, n };
+    const gini = a => { const m = a.length; if (!m) return 0; const q = a.reduce((s, o) => s + o.pass, 0) / m; return 2 * q * (1 - q); };
+    let best = null;
+    ["study", "sleep"].forEach(f => { const vals = [...new Set(rs.map(o => o[f]))].sort((a, b) => a - b); for (let i = 1; i < vals.length; i++) { const t = (vals[i - 1] + vals[i]) / 2, L = rs.filter(o => o[f] < t), R = rs.filter(o => o[f] >= t); if (L.length < 2 || R.length < 2) continue; const g = (L.length * gini(L) + R.length * gini(R)) / n; if (!best || g < best.g) best = { g, f, t, L, R }; } });
+    if (!best || best.g >= gini(rs) - 1e-4) return { leaf: 1, p, n };
+    return { f: best.f, t: best.t, l: buildTree(best.L, d - 1), r: buildTree(best.R, d - 1) };
+  };
+  const treeP = (node, o) => { while (!node.leaf) node = o[node.f] < node.t ? node.l : node.r; return node.p; };
+  const treeRules = (node, pre = "") => node.leaf ? [`${pre}→ ${node.p >= .5 ? "PASS" : "FAIL"} (${Math.round(node.p * 100)}% of ${node.n} passed)`] : [...treeRules(node.l, pre + `${node.f === "study" ? "study" : "sleep"} < ${node.f === "study" ? node.t.toFixed(1) + " h" : Math.round(node.t) + " min"}, `), ...treeRules(node.r, pre + `${node.f === "study" ? "study" : "sleep"} ≥ ${node.f === "study" ? node.t.toFixed(1) + " h" : Math.round(node.t) + " min"}, `)];
+  const predict = (st, sl) => {
+    if (!M) return .5;
+    if (M.type === "logreg") { const x = tf(st, sl); return sig(M.w[0] * x[0] + M.w[1] * x[1] + M.b); }
+    if (M.type === "knn") { const q = tf(st, sl); return train.map(o => { const x = tf(o.study, o.sleep); return [(x[0] - q[0]) ** 2 + (x[1] - q[1]) ** 2, o.pass]; }).sort((a, b) => a[0] - b[0]).slice(0, S.hp.k).reduce((s, d) => s + d[1], 0) / S.hp.k; }
+    return treeP(M.tree, { study: st, sleep: sl });
+  };
+  const acc = set => set.length ? set.filter(o => (predict(o.study, o.sleep) >= .5) === !!o.pass).length / set.length : 0;
+  const computeHeat = () => { const G = 44, g = []; for (let j = 0; j < G; j++) for (let i = 0; i < G; i++) g.push(predict((i + .5) / G * 10, 620 - (j + .5) / G * 420)); heat = { G, g }; };
+  // ---- canvas ----
+  const PX = { l: 46, r: 12, t: 12, b: 34 };
+  const X = st => PX.l + st / 10 * (W - PX.l - PX.r), Y = sl => PX.t + (620 - sl) / 420 * (H - PX.t - PX.b);
+  const draw = () => {
+    if (!ctx) return; ctx.clearRect(0, 0, W, H);
+    if (heat && S.step >= 4) { const { G, g } = heat, cw = (W - PX.l - PX.r) / G, ch = (H - PX.t - PX.b) / G; g.forEach((p, k) => { const i = k % G, j = Math.floor(k / G); ctx.fillStyle = hexA(p >= .5 ? C.c2 : C.c4, .07 + .22 * Math.abs(p - .5) * 2); const x0 = Math.round(PX.l + i * cw), y0 = Math.round(PX.t + j * ch); ctx.fillRect(x0, y0, Math.round(PX.l + (i + 1) * cw) - x0, Math.round(PX.t + (j + 1) * ch) - y0); }); }
+    ctx.strokeStyle = C.line; ctx.lineWidth = 1; ctx.fillStyle = C.muted; ctx.font = "600 11px Inter, system-ui, sans-serif"; ctx.textAlign = "center";
+    for (let st = 0; st <= 10; st += 2) { ctx.beginPath(); ctx.moveTo(X(st), PX.t); ctx.lineTo(X(st), H - PX.b); ctx.stroke(); ctx.fillText(st, X(st), H - PX.b + 14); }
+    ctx.fillText("hours studied →", (PX.l + W - PX.r) / 2, H - 4); ctx.textAlign = "right";
+    for (let sl = 240; sl <= 600; sl += 120) { ctx.beginPath(); ctx.moveTo(PX.l, Y(sl)); ctx.lineTo(W - PX.r, Y(sl)); ctx.stroke(); ctx.fillText(sl, PX.l - 6, Y(sl) + 4); }
+    ctx.save(); ctx.translate(12, (PX.t + H - PX.b) / 2); ctx.rotate(-Math.PI / 2); ctx.textAlign = "center"; ctx.fillText("minutes slept →", 0, 0); ctx.restore();
+    const pts = S.step >= 2 ? rows : raw;
+    pts.forEach(o => {
+      if (o.sleep == null || o.study < 0 || o.sleep > 620) return;
+      const x = X(o.study), y = Y(o.sleep), col = o.pass ? C.c2 : C.c4; ctx.beginPath(); ctx.arc(x, y, 4.5, 0, 7);
+      if (S.split && o.test && S.step >= 3) { ctx.strokeStyle = col; ctx.lineWidth = 2; ctx.stroke(); } else { ctx.fillStyle = col; ctx.fill(); }
+      if (o.imputed && S.step === 2) { ctx.strokeStyle = C.c3; ctx.lineWidth = 2; ctx.beginPath(); ctx.arc(x, y, 8, 0, 7); ctx.stroke(); }
+    });
+    if (S.step >= 6 && M) { const x = X(S.newPt.study), y = Y(S.newPt.sleepH * 60); ctx.font = "22px system-ui"; ctx.textAlign = "center"; ctx.fillText("⭐", x, y + 7); }
+  };
+  const resize = () => { ({ ctx, W, H } = fitCanvas(cv)); draw(); };
+  // ---- step content ----
+  const pct = v => (v * 100).toFixed(0) + "%";
+  const canNext = () => [S.framed, true, clean(), S.split, S.trained, true, true, false][S.step];
+  const HINT = ["Answer the question to continue.", "", "Apply all three cleaning fixes to continue.", "Split the data to continue.", "Train a model to continue.", "", "", ""];
+  const lossSvg = () => { if (!S.loss.length) return ""; const mx = Math.max(...S.loss.slice(0, 5), .8), n = S.loss.length; const d = S.loss.map((l, i) => `${i ? "L" : "M"}${(i / Math.max(1, n - 1) * 280).toFixed(1)} ${(76 - Math.min(l, mx) / mx * 70).toFixed(1)}`).join(""); return `<div class="small muted" style="font-weight:700;margin-top:12px">Training loss (should fall)</div><svg viewBox="0 0 280 80" style="width:100%;height:80px;background:var(--surface-2);border-radius:10px"><path d="${d}" fill="none" stroke="${C.c1}" stroke-width="2.5" vector-effect="non-scaling-stroke"/></svg><div class="small mono">final loss ${S.loss[n - 1].toFixed(3)}${S.loss[n - 1] > .6 ? " ⚠ not converging" : ""}</div>`; };
+  const pyCode = () => {
+    const mdl = S.model === "logreg" ? `LogisticRegression(max_iter=${S.hp.epochs})` : S.model === "knn" ? `KNeighborsClassifier(n_neighbors=${S.hp.k})` : `DecisionTreeClassifier(max_depth=${S.hp.depth}, random_state=42)`;
+    const imp = S.model === "logreg" ? "from sklearn.linear_model import LogisticRegression" : S.model === "knn" ? "from sklearn.neighbors import KNeighborsClassifier" : "from sklearn.tree import DecisionTreeClassifier";
+    const useSc = S.scaled && S.model !== "tree", pipe = useSc ? `make_pipeline(StandardScaler(), ${mdl})` : mdl;
+    return `import pandas as pd
+from sklearn.model_selection import train_test_split
+${useSc ? "from sklearn.pipeline import make_pipeline\nfrom sklearn.preprocessing import StandardScaler\n" : ""}${imp}
+from sklearn.metrics import accuracy_score, confusion_matrix
+
+df = pd.read_csv("students.csv")   # study_hours, sleep_min, passed
+
+# 1. Clean
+df = df.drop_duplicates()
+df = df[(df.study_hours >= 0) & ~(df.sleep_min > 24 * 60)]
+df["sleep_min"] = df["sleep_min"].fillna(df["sleep_min"].median())
+
+# 2. Split (stratify keeps the pass rate equal in both sets)
+X, y = df[["study_hours", "sleep_min"]], df["passed"]
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.2, stratify=y, random_state=42)
+
+# 3. Train${useSc ? " (the scaler is fit on training data only)" : S.model === "tree" ? " (trees don't need feature scaling)" : ""}
+model = ${pipe}
+model.fit(X_train, y_train)
+
+# 4. Evaluate on data the model has never seen
+pred = model.predict(X_test)
+print("test accuracy:", accuracy_score(y_test, pred))
+print(confusion_matrix(y_test, pred))
+
+# 5. Predict for a new student
+new = pd.DataFrame({"study_hours": [${S.newPt.study}], "sleep_min": [${Math.round(S.newPt.sleepH * 60)}]})
+print("P(pass) =", model.predict_proba(new)[0, 1])`;
+  };
+  const views = [
+    () => `<h4>1 · Frame the problem</h4><p>Before touching data, decide exactly what you're predicting, from what, and how you'll judge success.</p>
+      <div class="info-panel small" style="min-height:0"><b>Target:</b> passed (yes / no)<br><b>Inputs:</b> hours studied, minutes slept<br><b>Success:</b> accuracy on students the model has never seen, which must beat the "always guess the most common outcome" baseline.</div>
+      <p style="margin-top:14px;font-weight:600">What kind of machine-learning problem is this?</p>
+      <div class="fm-opts">${["Regression: predict a number", "Classification: predict a category", "Clustering: find groups without labels"].map((t, i) => `<button class="fm-opt${S.framed && i === 1 ? " right" : ""}" data-q="${i}">${t}</button>`).join("")}</div><p class="small" id="fmQ">${S.framed ? "✓ Right. It's <b>supervised binary classification</b>: we have labeled examples, and the answer is one of two categories." : ""}</p>`,
+    () => { const miss = raw.filter(o => o.sleep == null).length, bad = raw.filter(o => o.study < 0 || o.sleep > 1440).length, pr = raw.filter(o => o.pass).length / raw.length; const show = [0, 1, 2, 3, 4, 5, 6]; return `<h4>2 · Explore the data</h4><p>Always look before you model. Here are the first rows and some quick statistics:</p>
+      <div style="overflow-x:auto"><table class="mini"><tr><th>id</th><th>study_hours</th><th>sleep_min</th><th>passed</th></tr>${show.map(i => { const o = raw[i]; return `<tr><td>${o.id}</td><td${o.study < 0 ? ' class="fm-bad"' : ""}>${o.study}</td><td${o.sleep == null || o.sleep > 1440 ? ' class="fm-bad"' : ""}>${o.sleep == null ? "(blank)" : o.sleep}</td><td>${o.pass ? "yes" : "no"}</td></tr>`; }).join("")}</table></div>
+      <div class="stats"><div class="stat"><b>${raw.length}</b><span>rows</span></div><div class="stat"><b>${pct(pr)}</b><span>passed</span></div><div class="stat"><b>${miss}</b><span>missing</span></div><div class="stat"><b>${bad}</b><span>impossible</span></div></div>
+      <p class="small" style="margin-top:12px">In the plot, passes (green) cluster toward the right: studying clearly matters. Sleep seems to help a little too. Spot the problems: a <b>1,800-minute</b> (30-hour) night, a student who studied <b>−2 hours</b>, blank values, and (not visible here) duplicate rows. These points aren't plotted.</p>`; },
+    () => `<h4>3 · Clean &amp; prepare</h4><p>Fix the problems you found, then decide on scaling.</p>
+      <div class="fm-checks">
+        <label><input type="checkbox" data-fx="dupes" ${S.fix.dupes ? "checked" : ""}> Remove duplicate rows</label>
+        <label><input type="checkbox" data-fx="invalid" ${S.fix.invalid ? "checked" : ""}> Drop impossible values (−2 h, 1,800 min)</label>
+        <label><input type="checkbox" data-fx="missing" ${S.fix.missing ? "checked" : ""}> Fill blank sleep with the median (circled in amber)</label>
+        <label style="margin-top:6px;border-top:1px solid var(--line);padding-top:10px"><input type="checkbox" data-sc ${S.scaled ? "checked" : ""}> <span><b>Standardize features</b> (z-scores). Minutes slept range over hundreds while hours studied range from 0 to 10. Without scaling, sleep would dominate distances and gradients. <i>Try training with and without it later.</i></span></label>
+      </div>
+      <p class="small mono" style="margin-top:10px">${rows.length} rows · ${rows.filter(o => o.sleep == null).length} missing · ${rows.filter(o => o.study < 0 || o.sleep > 1440).length} impossible${clean() ? " · ✓ clean" : ""}</p>`,
+    () => `<h4>4 · Split the data</h4><p>Hold back about 20% of students as a <b>test set</b>. The model never trains on them, so they tell us how it will do on genuinely new students.</p>
+      <button class="btn primary" id="fmSplit" ${S.split ? "disabled" : ""}>🔀 Shuffle &amp; split 80 / 20</button>
+      ${S.split ? `<div class="stats"><div class="stat"><b>${train.length}</b><span>training</span></div><div class="stat"><b>${test.length}</b><span>test (hollow)</span></div><div class="stat"><b>${pct(train.filter(o => o.pass).length / train.length)} / ${pct(test.filter(o => o.pass).length / test.length)}</b><span>pass rate train / test</span></div></div><p class="small" style="margin-top:10px">The pass rates are similar in both sets, which is good. Real projects often <b>stratify</b> the split to guarantee this. With more data or more tuning, you'd also carve out a <b>validation</b> set for choosing hyperparameters.</p>` : ""}`,
+    () => { const m = MODELS[S.model], hpVal = S.hp[m.hp], hpDef = { epochs: [5, 400, 5, "Training epochs (passes over the data)"], k: [1, 31, 2, "k (neighbors that vote)"], depth: [1, 8, 1, "Max tree depth"] }[m.hp];
+      return `<h4>5 · Choose &amp; train a model</h4><div class="row" id="fmModels">${Object.keys(MODELS).map(k => `<button class="chip${k === S.model ? " on" : ""}" data-m="${k}">${MODELS[k].name}</button>`).join("")}</div>
+      <p class="small" style="margin-top:10px">${m.blurb}</p>
+      <label class="slider">${hpDef[3]} <b id="fmHpV">${hpVal}</b><input type="range" id="fmHp" min="${hpDef[0]}" max="${hpDef[1]}" step="${hpDef[2]}" value="${hpVal}"></label>
+      <div class="row" style="margin-top:12px"><button class="btn primary" id="fmTrain">▶ Train</button><span class="small mono">${S.scaled ? "features: standardized" : "features: raw units (unscaled)"}</span></div>
+      ${S.trained ? `<p class="small" style="margin-top:10px">✓ Trained. The shaded background is the model's <b>decision boundary</b>: green means it predicts pass, rose means fail. Training accuracy: <b>${pct(acc(train))}</b>.</p>` : ""}
+      ${S.model === "logreg" ? lossSvg() : ""}${S.model === "tree" && S.trained ? `<div class="code" style="min-height:0;margin-top:10px">${treeRules(M.tree).slice(0, 8).join("\n")}</div>` : ""}`; },
+    () => { const P = test.filter(o => predict(o.study, o.sleep) >= .5), TP = P.filter(o => o.pass).length, FP = P.length - TP, N = test.filter(o => predict(o.study, o.sleep) < .5), FN = N.filter(o => o.pass).length, TN = N.length - FN, tr = acc(train), te = acc(test), base = Math.max(test.filter(o => o.pass).length, test.filter(o => !o.pass).length) / test.length;
+      const gap = tr - te, verdict = te <= base + .02 ? ["No better than guessing. Try a different model or check your features.", "c4"] : gap > .12 ? ["Big train/test gap: likely <b>overfitting</b>. Try a larger k, a shallower tree, or more data.", "c3"] : tr < .75 ? ["Both scores are low: likely <b>underfitting</b>, or unscaled features. Try scaling or a more flexible model.", "c3"] : ["Healthy: it beats the baseline, and train and test scores are close. It generalizes.", "c2"];
+      return `<h4>6 · Evaluate on the test set</h4><p>This is the moment of truth: students the model has never seen.</p>
+      <div class="stats"><div class="stat"><b>${pct(tr)}</b><span>train accuracy</span></div><div class="stat"><b>${pct(te)}</b><span>test accuracy</span></div><div class="stat"><b>${pct(base)}</b><span>baseline (guess majority)</span></div></div>
+      <div class="cm" style="margin-top:12px;max-width:340px"><div></div><div class="cm-h">Predicted pass</div><div class="cm-h">Predicted fail</div><div class="cm-h cm-r">Passed</div><div class="cm-cell" style="background:${hexA(C.c2, .25)}"><b>${TP}</b><span>TP</span></div><div class="cm-cell" style="background:${hexA(C.c4, .18)}"><b>${FN}</b><span>FN</span></div><div class="cm-h cm-r">Failed</div><div class="cm-cell" style="background:${hexA(C.c4, .18)}"><b>${FP}</b><span>FP</span></div><div class="cm-cell" style="background:${hexA(C.c2, .25)}"><b>${TN}</b><span>TN</span></div></div>
+      <p class="small" style="margin-top:12px;padding:10px 12px;border-radius:12px;background:${hexA(C[verdict[1]], .15)}">${verdict[0]}</p>
+      <p class="small muted">Go back to step 5 and experiment: logistic regression without scaling, k = 1, a depth-8 tree. Watch how the train and test scores respond. With only ${test.length} test students, each one is worth ${(100 / test.length).toFixed(1)} points, so expect some noise.</p>`; },
+    () => { const p = predict(S.newPt.study, S.newPt.sleepH * 60); return `<h4>7 · Make a prediction</h4><p>A new student asks: "Will I pass?" Set their numbers, and watch the ⭐ move on the plot.</p>
+      <label class="slider">Hours studied <b id="fmSt">${S.newPt.study}</b><input type="range" id="fmStudy" min="0" max="10" step="0.5" value="${S.newPt.study}"></label>
+      <label class="slider" style="margin-top:8px">Hours slept <b id="fmSl">${S.newPt.sleepH}</b><input type="range" id="fmSleep" min="3.5" max="10" step="0.5" value="${S.newPt.sleepH}"></label>
+      <div class="answer" id="fmPred" style="display:block;margin-top:14px;background:${hexA(p >= .5 ? C.c2 : C.c4, .15)}">P(pass) = <b>${pct(p)}</b> → prediction: <b>${p >= .5 ? "PASS ✅" : "FAIL ❌"}</b></div>
+      <p class="small muted" style="margin-top:10px">A probability is more useful than a bare yes/no. A teacher might offer extra help to anyone below 60%, not just below 50%. But be careful: this model has only ever seen 3.5 to 10 hours of sleep and 0 to 10 hours of study, so predictions outside that range are guesses.</p>`; },
+    () => `<h4>8 · Ship it: model card &amp; code</h4><p>Before a model goes anywhere, document it. A <b>model card</b> records what it does, how it was built, how well it works, and where it shouldn't be used.</p>
+      <div class="info-panel small" style="min-height:0;line-height:1.7"><b>Model:</b> ${MODELS[S.model].name} (${MODELS[S.model].hp} = ${S.hp[MODELS[S.model].hp]})<br><b>Inputs:</b> study_hours, sleep_min ${S.scaled ? "(standardized)" : "(raw units)"}<br><b>Data:</b> ${rows.length} students after cleaning. ${train.length} train / ${test.length} test.<br><b>Test accuracy:</b> ${pct(acc(test))} (baseline ${pct(Math.max(test.filter(o => o.pass).length, test.length - test.filter(o => o.pass).length) / test.length)})<br><b>Limitations:</b> a small, synthetic dataset. It ignores prior grades, course difficulty and wellbeing. Don't use it to make decisions about individual students without a human in the loop.<br><b>Monitoring:</b> re-check accuracy each term, because exam formats drift.</div>
+      <div class="row" style="margin:14px 0 6px;justify-content:space-between"><b class="small">The same pipeline in Python (scikit-learn), matching your choices:</b><button class="btn" id="fmCopy">📋 Copy</button></div>
+      <div class="code" style="min-height:0;max-height:300px;overflow:auto" id="fmCode"></div>`,
+  ];
+  const renderSteps = () => { stepsEl.innerHTML = STEPS.map((t, i) => `<div class="step-dot${i === S.step ? " on" : ""}${i < S.step ? " done" : ""}${i > S.maxStep ? " locked" : ""}" data-s="${i}">${i + 1}. ${t}</div>`).join(""); $$("[data-s]", stepsEl).forEach(d => d.addEventListener("click", () => { const i = +d.dataset.s; if (i <= S.maxStep) go(i); })); };
+  const render = () => {
+    body.innerHTML = views[S.step](); renderSteps();
+    const ok = canNext(); $("#fmNext").disabled = S.step === STEPS.length - 1 ? false : !ok; $("#fmNext").textContent = S.step === STEPS.length - 1 ? "Start over ↺" : "Next →"; $("#fmPrev").disabled = S.step === 0; $("#fmHint").textContent = ok ? "" : HINT[S.step];
+    bind(); draw();
+  };
+  const invalidate = () => { S.trained = false; M = null; heat = null; S.loss = []; S.maxStep = Math.min(S.maxStep, 4); };
+  const bind = () => {
+    $$("[data-q]", body).forEach(b => b.addEventListener("click", () => { if (+b.dataset.q === 1) { S.framed = true; render(); } else { b.classList.remove("wrong"); void b.offsetWidth; b.classList.add("wrong"); $("#fmQ").innerHTML = +b.dataset.q === 0 ? "Not quite. Regression predicts a <i>number</i>, like an exam score. Here the answer is yes or no." : "Not quite. Clustering works <i>without</i> labels, but we know who passed."; } }));
+    $$("[data-fx]", body).forEach(c => c.addEventListener("change", () => { S.fix[c.dataset.fx] = c.checked; if (S.split) { S.split = false; S.maxStep = Math.min(S.maxStep, 3); } invalidate(); rebuild(); render(); }));
+    $$("[data-sc]", body).forEach(c => c.addEventListener("change", () => { S.scaled = c.checked; invalidate(); render(); }));
+    const sp = $("#fmSplit", body); if (sp) sp.addEventListener("click", () => { S.split = true; rebuild(); render(); });
+    $$("[data-m]", body).forEach(b => b.addEventListener("click", () => { S.model = b.dataset.m; invalidate(); render(); }));
+    const hp = $("#fmHp", body); if (hp) hp.addEventListener("input", () => { S.hp[MODELS[S.model].hp] = +hp.value; $("#fmHpV").textContent = hp.value; if (S.trained) { invalidate(); $("#fmNext").disabled = true; $("#fmHint").textContent = HINT[4]; draw(); } });
+    const tb = $("#fmTrain", body); if (tb) tb.addEventListener("click", () => {
+      fit(); cancelAnimationFrame(trainAnim);
+      if (S.model === "logreg") { const steps = trainLogreg(S.hp.epochs); let e = 0; const all = S.loss; const tick = () => { e = Math.min(steps.length, e + Math.max(1, Math.ceil(steps.length / 40))); M = { type: "logreg", ...steps[e - 1] }; S.loss = all.slice(0, e); computeHeat(); S.trained = e >= steps.length; if (S.trained) { S.loss = all; S.maxStep = Math.max(S.maxStep, 5); render(); } else { draw(); trainAnim = requestAnimationFrame(tick); } }; S.trained = true; trainAnim = requestAnimationFrame(tick); }
+      else { M = S.model === "knn" ? { type: "knn" } : { type: "tree", tree: buildTree(train, S.hp.depth) }; computeHeat(); S.trained = true; S.maxStep = Math.max(S.maxStep, 5); render(); }
+    });
+    const st = $("#fmStudy", body), sl = $("#fmSleep", body);
+    if (st) [st, sl].forEach(inp => inp.addEventListener("input", () => { S.newPt.study = +st.value; S.newPt.sleepH = +sl.value; $("#fmSt").textContent = st.value; $("#fmSl").textContent = sl.value; const p = predict(S.newPt.study, S.newPt.sleepH * 60), el = $("#fmPred"); el.style.background = hexA(p >= .5 ? C.c2 : C.c4, .15); el.innerHTML = `P(pass) = <b>${pct(p)}</b> → prediction: <b>${p >= .5 ? "PASS ✅" : "FAIL ❌"}</b>`; draw(); }));
+    const code = $("#fmCode", body); if (code) code.textContent = pyCode();
+    const cp = $("#fmCopy", body); if (cp) cp.addEventListener("click", async () => { try { await navigator.clipboard.writeText(pyCode()); cp.textContent = "✓ Copied"; } catch (e) { cp.textContent = "Select and copy manually"; } });
+  };
+  const go = i => { S.step = clamp(i, 0, STEPS.length - 1); S.maxStep = Math.max(S.maxStep, S.step); render(); };
+  $("#fmNext").addEventListener("click", () => { if (S.step === STEPS.length - 1) { Object.assign(S, { step: 0, maxStep: 0, framed: false, fix: { missing: false, invalid: false, dupes: false }, scaled: false, split: false, trained: false, loss: [] }); M = null; heat = null; rebuild(); render(); return; } if (canNext()) go(S.step + 1); });
+  $("#fmPrev").addEventListener("click", () => go(S.step - 1));
+  rebuild(); resize(); render(); addEventListener("resize", resize); document.addEventListener("themechange", render);
+})();
+
+/* ---------- GLOSSARY ---------- */
+(() => {
+  // [term, category, chapter id, definition, aliases]
+  const GL = [
+    ["Accuracy", "M", "evaluate", "The share of predictions that are correct. It's misleading when one class is rare: flagging nothing can still be 99% accurate.", []],
+    ["Activation function", "F", "ch3", "The squashing step inside a neuron (like sigmoid or ReLU) that turns a weighted sum into its output. It's what lets networks model non-linear patterns.", []],
+    ["Agent", "C", "build", "An AI system that plans and takes actions toward a goal: calling tools, reading results and deciding what to do next, over many steps.", ["agents", "ai agent"]],
+    ["AGI (artificial general intelligence)", "F", "ch1", "A hypothetical AI that could learn and perform almost any intellectual task a human can. It doesn't exist yet, and its definition is debated.", ["agi", "general ai"]],
+    ["Alignment", "R", "ch10", "Making AI systems reliably pursue the goals and values their designers and users intend, including as they become more capable.", ["ai alignment"]],
+    ["Artificial intelligence (AI)", "F", "ch1", "Any technique that lets computers do things we'd normally say require intelligence, from hand-written rules to learned neural networks.", ["artificial intelligence", "ai"]],
+    ["Attention (self-attention)", "G", "ch5", "The transformer mechanism that lets every token weigh how relevant every other (earlier) token is when building its meaning. Each token has queries, keys and values.", ["attention", "self-attention", "attention heads", "attention head"]],
+    ["Backpropagation", "F", "ch3", "The algorithm that works out how much each weight contributed to the error and adjusts them all. It's gradient descent applied through every layer of a network.", []],
+    ["Baseline", "M", "firstmodel", "The simplest reasonable prediction (like always guessing the most common class). A model is only useful if it beats the baseline.", []],
+    ["Bias (in a neuron)", "F", "ch3", "An extra number added to a neuron's weighted sum that shifts its threshold. Not to be confused with bias in the fairness sense.", ["bias"]],
+    ["Bias (fairness)", "R", "responsible", "Systematic unfairness in a model's outcomes for certain groups, often inherited from historical data.", ["algorithmic bias"]],
+    ["Calibration", "C", "ch10", "How well a model's stated confidence matches reality. A calibrated model saying 0.9 is right about 90% of the time.", ["calibrated", "calibrated probability"]],
+    ["Canary release", "M", "mlops", "Rolling out a new model to a small slice of traffic first, and expanding only if its metrics look healthy.", ["canary"]],
+    ["Claude", "C", "ch9", "Anthropic's family of AI models (the Haiku, Sonnet and Opus tiers), built with a focus on safety, helpfulness and honesty.", []],
+    ["Classification", "M", "firstmodel", "Predicting a category (spam or not, pass or fail) rather than a number.", []],
+    ["Concept drift", "M", "mlops", "When the relationship between inputs and outcome changes (for example, fraudsters change tactics), so the same inputs now mean something different.", []],
+    ["Confusion matrix", "M", "evaluate", "A 2×2 table (for two classes) of true positives, false positives, false negatives and true negatives. It shows what kind of mistakes a model makes.", []],
+    ["Constitutional AI", "G", "ch6", "Anthropic's method of training a model to critique and revise its outputs against a written set of principles, using AI feedback.", []],
+    ["Context window", "C", "ch9", "The maximum amount of text (in tokens) a model can consider at once: the prompt, documents, conversation and its own reply.", []],
+    ["Cross-validation", "M", "evaluate", "Estimating performance by rotating which slice of the data is held out, then averaging. It's useful when data is scarce.", []],
+    ["Data drift", "M", "mlops", "When the distribution of live inputs moves away from the training data (new users, seasons, app versions).", []],
+    ["Data leakage", "M", "data", "When a feature contains information that wouldn't be available at prediction time. The model looks great in testing and fails in production.", ["leakage"]],
+    ["Decision boundary", "M", "firstmodel", "The line or surface where a classifier switches from predicting one class to another.", []],
+    ["Decision tree", "M", "firstmodel", "A model that learns a flowchart of yes/no questions about features. It's readable, and deep trees can overfit.", []],
+    ["Deep learning", "F", "ch1", "Machine learning with neural networks of many layers. It has driven most AI breakthroughs since 2012.", []],
+    ["Diffusion model", "G", "ch7", "A generative model that learns to reverse a gradual noising process, creating images or video from pure static, guided by a prompt.", ["diffusion models", "diffusion"]],
+    ["Embedding", "G", "ch5", "A list of numbers that places a token, sentence or image in a \"meaning space\", where similar things sit close together.", ["embeddings", "embedding model", "embedding models"]],
+    ["EU AI Act", "R", "responsible", "The European Union's AI law, which regulates systems by risk level: some practices are banned, and high-risk uses carry strict obligations.", []],
+    ["Evals", "C", "build", "Test suites for AI behavior: realistic inputs with checks (rules, reference answers or an LLM judge), run on every prompt or model change.", ["eval", "eval suites", "eval suite", "evaluations"]],
+    ["Explainability", "R", "responsible", "Techniques (like SHAP) that show which inputs pushed a particular prediction up or down.", ["xai", "explainable ai"]],
+    ["Extended thinking", "C", "ch9", "Claude's ability to reason step by step before answering, with visible thinking, for harder problems.", []],
+    ["F1 score", "M", "evaluate", "The harmonic mean of precision and recall. It's a single number that balances both.", ["f1"]],
+    ["Feature", "M", "data", "One measurable input to a model, like square footage or hour of day.", ["features"]],
+    ["Feature engineering", "M", "data", "Creating better model inputs from raw data using domain knowledge, like ratios, date parts, aggregates and encodings.", []],
+    ["Feature store", "M", "data", "A shared system that computes and serves features identically for training and live prediction.", []],
+    ["Few-shot prompting", "C", "build", "Including a few examples of the desired input and output in a prompt so the model copies the pattern.", ["few-shot", "examples"]],
+    ["Fine-tuning", "G", "build", "Further training a pretrained model on specialized examples to change its style, format or narrow skills.", []],
+    ["GAN (generative adversarial network)", "G", "ch7", "Two networks trained against each other: a generator that fakes data and a discriminator that tries to catch it.", ["gan", "gans"]],
+    ["Generative AI", "F", "ch1", "AI that creates new content (text, images, audio, video, code) instead of only classifying existing data.", []],
+    ["Gradient descent", "F", "ch2", "The core learning algorithm: repeatedly nudge the parameters in the direction that lowers the loss, like a ball rolling downhill.", []],
+    ["Guardrails", "C", "build", "Checks around an AI system that validate inputs and outputs, block unsafe content and escalate uncertain cases.", []],
+    ["Hallucination", "R", "responsible", "A confident but false or made-up output from a generative model.", ["hallucinate"]],
+    ["Hyperparameter", "M", "firstmodel", "A setting chosen before training (like k, tree depth or learning rate), rather than learned from data.", ["hyperparameters", "hyperparameter tuning"]],
+    ["Imputation", "M", "data", "Filling in missing values, for example with the median, often together with a \"was missing\" flag.", []],
+    ["Interpretability", "C", "ch10", "Research into what's actually happening inside a neural network: the concepts and circuits it has learned.", []],
+    ["JEPA", "C", "ch10", "Joint Embedding Predictive Architecture: predicts the abstract representation of missing data rather than raw pixels. It was proposed by Yann LeCun as a route to world models.", ["joint embedding predictive architecture"]],
+    ["Jev", "C", "ch10", "TypeSafe AI's \"System One\" model (2026). It answers typed questions about an input with calibrated probabilities in one parallel pass, and generates no text.", []],
+    ["k-nearest neighbors (k-NN)", "M", "firstmodel", "A classifier that predicts by letting the k most similar training examples vote. It needs scaled features.", ["knn", "k-nn", "k-nearest neighbors"]],
+    ["Large language model (LLM)", "G", "ch4", "A very large transformer trained on huge amounts of text to predict the next token. It's the engine behind modern chat assistants.", ["llm", "llms", "large language model", "large language models"]],
+    ["Learning rate", "F", "ch2", "How big a step gradient descent takes each time. Too small is slow, and too large overshoots or diverges.", []],
+    ["LLM-as-judge", "C", "build", "Using a language model with a rubric to grade another model's outputs at scale.", []],
+    ["Local minimum", "F", "ch2", "A valley in the loss landscape that's lower than its surroundings but not the lowest point overall.", []],
+    ["Logistic regression", "M", "firstmodel", "A simple, fast classifier that learns one weight per feature and outputs a probability. It's a classic first baseline.", []],
+    ["Loss (loss function)", "F", "ch2", "A number that measures how wrong a model's predictions are. Training tries to minimize it.", ["loss", "loss function"]],
+    ["Machine learning (ML)", "F", "ch1", "AI that learns patterns from examples instead of following hand-written rules.", ["machine learning", "ml"]],
+    ["MCP (Model Context Protocol)", "C", "ch9", "An open standard, introduced by Anthropic in 2024, for connecting AI applications to tools and data sources.", ["mcp", "model context protocol"]],
+    ["Mixture of Experts (MoE)", "C", "ch10", "An architecture where a router sends each token to a few of many expert sub-networks: big-model knowledge at small-model cost.", ["moe", "mixture of experts"]],
+    ["MLOps", "M", "mlops", "The practices for deploying, monitoring, versioning and retraining ML models reliably in production.", []],
+    ["Model card", "R", "firstmodel", "A short document describing a model's purpose, data, performance, limitations and intended use.", ["model cards", "system cards"]],
+    ["Model registry", "M", "mlops", "A catalog of versioned, approved models that makes deployment and rollback traceable.", []],
+    ["Multimodal", "G", "ch8", "Able to take in or produce several kinds of data, such as text, images, audio and video.", ["multimodality"]],
+    ["Narrow AI", "F", "ch1", "AI that's good at a specific set of tasks. Every AI system today is narrow, however impressive.", ["ani"]],
+    ["Neural network", "F", "ch3", "Layers of simple artificial neurons connected by weights, trained to map inputs to outputs.", ["neural networks"]],
+    ["Neuron (artificial)", "F", "ch3", "The basic unit of a neural network: a weighted sum of inputs plus a bias, passed through an activation function.", ["neuron"]],
+    ["Next-token prediction", "G", "ch5", "The single task LLMs are pretrained on: predict the next piece of text given everything so far.", ["next-token predictor"]],
+    ["One-hot encoding", "M", "data", "Turning a category into separate 0/1 columns, one per possible value.", []],
+    ["Open-weights model", "G", "ch8", "A model whose trained parameters are published for anyone to download and run, like Llama or DeepSeek.", ["open-weights", "open weights"]],
+    ["Overfitting", "M", "evaluate", "When a model memorizes noise in the training data and does worse on new data. The sign is a big train/test gap.", ["overfits", "overfit"]],
+    ["Parameters", "F", "ch3", "The learned numbers inside a model (weights and biases). Frontier LLMs have billions or more.", ["parameter"]],
+    ["Precision", "M", "evaluate", "Of everything the model flagged as positive, the share that really was positive.", []],
+    ["Pretraining", "G", "ch6", "The first and most expensive training stage, where a model learns from vast unlabeled data, usually by predicting the next token.", []],
+    ["Prompt engineering", "C", "build", "Designing inputs (role, context, precise task, examples, output format) to get better results from a model.", ["prompt"]],
+    ["Prompt injection", "R", "responsible", "An attack where hidden instructions in content (a web page or email) try to hijack an AI agent's behavior.", []],
+    ["Proxy variable", "R", "responsible", "A feature that indirectly encodes a sensitive attribute, like zip code standing in for race.", ["proxy"]],
+    ["PSI (population stability index)", "M", "mlops", "A statistic measuring how much a feature's distribution has shifted. Values above about 0.2 usually signal meaningful drift.", ["psi"]],
+    ["RAG (retrieval-augmented generation)", "C", "ch10", "Retrieving relevant documents at question time and adding them to the prompt, so answers are grounded and cite sources.", ["rag", "retrieval-augmented generation"]],
+    ["Recall", "M", "evaluate", "Of all the real positives, the share the model caught.", []],
+    ["Regularization", "M", "evaluate", "Techniques that penalize overly complex models to reduce overfitting.", []],
+    ["Reinforcement learning", "F", "ch2", "Learning by trial and error from rewards, as in game-playing agents and parts of chatbot training.", ["reinforcement"]],
+    ["RLHF", "G", "ch6", "Reinforcement learning from human feedback: training a model toward responses that people rate as better.", ["rlaif", "rlhf / rlaif"]],
+    ["Scaling (feature)", "M", "data", "Putting features on comparable ranges (for example, z-scores) so no feature dominates because of its units.", ["scaling", "standardize features", "normalization"]],
+    ["Scaling laws", "G", "ch4", "The empirical finding that model loss falls predictably as parameters, data and compute grow.", []],
+    ["Self-supervised learning", "F", "ch2", "Learning from unlabeled data by hiding part of it and predicting the hidden part, as in next-token prediction.", ["self-supervised"]],
+    ["Shadow deployment", "M", "mlops", "Running a new model silently alongside the current one on real traffic to compare them before switching.", ["shadow"]],
+    ["State-space model", "C", "ch10", "A sequence architecture (like Mamba) that processes long inputs in linear time. It's an alternative or complement to attention.", []],
+    ["Supervised learning", "F", "ch2", "Learning from examples labeled with the right answer.", ["supervised"]],
+    ["System One model", "C", "ch10", "A class of fast models that return typed, calibrated decisions instead of text, named after Kahneman's fast \"System 1\" thinking.", ["system one"]],
+    ["Temperature", "G", "ch5", "A sampling setting that sharpens (low) or flattens (high) a model's next-token probabilities, trading predictability for variety.", []],
+    ["Test set", "M", "evaluate", "Data held back from all training and tuning, used once at the end to estimate real-world performance.", []],
+    ["Test-time compute", "C", "ch10", "Spending more computation while answering (reasoning longer, checking work) to improve accuracy on hard problems.", []],
+    ["Threshold", "M", "evaluate", "The cutoff probability above which a classifier predicts \"positive\". Moving it trades precision against recall.", []],
+    ["Token", "G", "ch5", "A chunk of text (a word, part of a word or a symbol) that a language model reads and writes. Pricing and context limits are counted in tokens.", ["tokens"]],
+    ["Tokenizer", "G", "ch5", "The component that splits text into tokens and maps each one to an ID number.", []],
+    ["Tool use", "C", "ch9", "Letting a model request that an application run a function (search, API, database) and continue with the result.", []],
+    ["Training set", "M", "evaluate", "The data a model learns its parameters from.", []],
+    ["Training–serving skew", "M", "data", "When a feature is computed differently in production than in training, quietly degrading predictions.", []],
+    ["Transformer", "G", "ch4", "The neural architecture introduced in \"Attention Is All You Need\" (2017), built on self-attention. It's the basis of modern LLMs.", ["transformers"]],
+    ["Underfitting", "M", "evaluate", "When a model is too simple to capture the real pattern, so it does poorly on both training and test data.", ["underfits"]],
+    ["Unsupervised learning", "F", "ch2", "Finding structure, like clusters, in data without labels.", ["unsupervised"]],
+    ["Validation set", "M", "evaluate", "Held-out data used to compare models and tune hyperparameters, keeping the test set untouched.", ["validation"]],
+    ["Vector database", "C", "ch10", "A database optimized to store embeddings and quickly find the most similar ones. It's the retrieval engine behind many RAG systems.", ["vector databases"]],
+    ["Weight", "F", "ch3", "A learned number that sets how strongly one input or neuron influences the next.", ["weights"]],
+    ["World model", "C", "ch10", "An AI system's internal model of how an environment behaves, used to predict and plan.", ["world models"]],
+  ];
+  const CATS = { all: "All", F: "Foundations", M: "ML systems", G: "Generative AI", C: "Claude & frontier", R: "Responsible AI" };
+  const catCol = { F: "c1", M: "c3", G: "c6", C: "claude", R: "c4" };
+  const chapLabel = id => { const s = document.getElementById(id); if (!s) return ""; const tag = $(".ch-tag", s), h = $("h2", s); return `${tag ? tag.textContent : ""} · ${h ? h.textContent : ""}`; };
+  const list = $("#glList"), search = $("#glSearch");
+  let cat = "all", letter = "";
+  $("#glCats").innerHTML = Object.entries(CATS).map(([k, v]) => `<button class="chip${k === "all" ? " on" : ""}" data-gc="${k}">${v}</button>`).join("");
+  const letters = [...new Set(GL.map(g => g[0][0].toUpperCase()))].sort();
+  $("#glLetters").innerHTML = `<button class="gl-l on" data-gl="">All</button>` + letters.map(l => `<button class="gl-l" data-gl="${l}">${l}</button>`).join("");
+  search.placeholder = `Search ${GL.length} terms, e.g. overfitting, RAG, token…`;
+  const render = () => {
+    const q = search.value.trim().toLowerCase();
+    const items = GL.filter(g => (cat === "all" || g[1] === cat) && (!letter || g[0][0].toUpperCase() === letter) && (!q || (g[0] + " " + g[3] + " " + g[4].join(" ")).toLowerCase().includes(q))).sort((a, b) => a[0].localeCompare(b[0]));
+    let last = "", html = "";
+    items.forEach(g => { const L = g[0][0].toUpperCase(); if (L !== last) { html += `<div class="gl-letter">${L}</div>`; last = L; } html += `<div class="gl-card" id="gl-${g[0].toLowerCase().replace(/[^a-z0-9]+/g, "-")}"><div class="row" style="justify-content:space-between;gap:8px"><h4>${g[0]}</h4><span class="pill" style="background:var(--${catCol[g[1]]}-soft);color:var(--${catCol[g[1]] === "c1" ? "c1" : catCol[g[1]] + "t"})">${CATS[g[1]]}</span></div><p>${g[3]}</p><a href="#${g[2]}" class="small">→ ${chapLabel(g[2])}</a></div>`; });
+    list.innerHTML = html || `<p class="muted">No terms match. Try a shorter search.</p>`;
+    $("#glCount").textContent = `Showing ${items.length} of ${GL.length} terms`;
+  };
+  search.addEventListener("input", render);
+  chipGroup($("#glCats"), "gc", c => { cat = c; render(); });
+  $$("#glLetters [data-gl]").forEach(b => b.addEventListener("click", () => { letter = b.dataset.gl; $$("#glLetters [data-gl]").forEach(x => x.classList.toggle("on", x === b)); render(); }));
+  render();
+
+  // ---- inline definitions: bold key terms become hoverable ----
+  const idx = new Map();
+  GL.forEach(g => [g[0], ...g[4]].forEach(n => { const k = n.toLowerCase(); if (!idx.has(k)) idx.set(k, g); }));
+  const lookup = t => { const k = t.trim().toLowerCase().replace(/[.,:;!?"“”]/g, ""); return idx.get(k) || idx.get(k.replace(/s$/, "")) || idx.get(k.replace(/es$/, "")); };
+  const seen = new Set();
+  $$("main section.chapter:not(#glossary):not(#recap) p b").forEach(b => {
+    if (b.closest(".quiz,.code,.answer,.info-panel,#fmWidget")) return;
+    const g = lookup(b.textContent); if (!g) return;
+    const sec = b.closest("section").id, key = sec + "|" + g[0]; if (seen.has(key)) return; seen.add(key);
+    b.classList.add("gl-term"); b.tabIndex = 0; b.dataset.gt = g[0];
+  });
+  const pop = document.createElement("div"); pop.className = "gl-pop"; pop.setAttribute("role", "tooltip"); document.body.appendChild(pop);
+  let hideT = 0, cur = null;
+  const show = el => {
+    clearTimeout(hideT); const g = GL.find(x => x[0] === el.dataset.gt); if (!g) return; cur = el;
+    pop.innerHTML = `<b>${g[0]}</b><p>${g[3]}</p><a href="#gl-${g[0].toLowerCase().replace(/[^a-z0-9]+/g, "-")}" class="small">Open in glossary →</a>`;
+    pop.classList.add("on"); const r = el.getBoundingClientRect(), pw = pop.offsetWidth, ph = pop.offsetHeight;
+    let x = clamp(r.left + r.width / 2 - pw / 2, 10, innerWidth - pw - 10), y = r.bottom + 8; if (y + ph > innerHeight - 10) y = r.top - ph - 8;
+    pop.style.left = x + "px"; pop.style.top = y + "px";
+  };
+  const hide = () => { hideT = setTimeout(() => { pop.classList.remove("on"); cur = null; }, 180); };
+  $$(".gl-term").forEach(el => { el.addEventListener("mouseenter", () => show(el)); el.addEventListener("mouseleave", hide); el.addEventListener("focus", () => show(el)); el.addEventListener("blur", hide); el.addEventListener("click", e => { e.stopPropagation(); cur === el && pop.classList.contains("on") ? (pop.classList.remove("on"), cur = null) : show(el); }); });
+  pop.addEventListener("mouseenter", () => clearTimeout(hideT)); pop.addEventListener("mouseleave", hide);
+  pop.addEventListener("click", e => { if (e.target.tagName === "A") { pop.classList.remove("on"); letter = ""; cat = "all"; search.value = ""; $$("#glLetters [data-gl]").forEach((x, i) => x.classList.toggle("on", i === 0)); $$("#glCats [data-gc]").forEach((x, i) => x.classList.toggle("on", i === 0)); render(); } });
+  document.addEventListener("click", e => { if (!pop.contains(e.target)) pop.classList.remove("on"); });
+  addEventListener("scroll", () => { if (pop.classList.contains("on") && cur) { const r = cur.getBoundingClientRect(); if (r.bottom < 0 || r.top > innerHeight) pop.classList.remove("on"); else show(cur); } }, { passive: true });
 })();
 
 })();
