@@ -337,7 +337,7 @@ input[type=text]:focus{border-color:var(--c1)}
 .recap b{display:block;font-family:"Space Grotesk",Inter,system-ui,sans-serif;font-size:1rem;margin-bottom:4px}
 @media (max-width:720px){
   .stage:has(> svg){overflow-x:auto;-webkit-overflow-scrolling:touch}
-  #netSvg,#jepaSvg,#moeSvg,#calSvg,#ttcSvg,#embSvg,#ofSvg,#cmSvg,#fairSvg{min-width:540px}
+  #netSvg,#jepaSvg,#moeSvg,#calSvg,#ttcSvg,#embSvg,#ofSvg,#cmSvg,#fairSvg,#ctxSim,#patSvg,#vitSvg{min-width:540px}
   #toolSvg{min-width:440px}
   .step-dot{font-size:.72rem;min-width:70px;padding:8px;overflow-wrap:anywhere}
   .layer{flex-direction:column;align-items:flex-start;gap:2px}.layer small{text-align:left}
@@ -424,6 +424,46 @@ td.fm-bad{background:var(--c4-soft);color:var(--c4t);font-weight:700}
 .gl-pop.on{opacity:1;pointer-events:auto;transform:none}
 .gl-pop p{margin:6px 0 8px;color:var(--ink-2)}
 .gl-pop a{text-decoration:none;font-weight:700}
+/* ---------- agents ---------- */
+.ag-log{background:var(--surface-2);border-radius:14px;padding:10px;max-height:380px;min-height:200px;overflow:auto;display:flex;flex-direction:column;gap:6px}
+.ag-line{background:var(--surface);border-radius:10px;padding:8px 10px;font-size:.84rem;border-left:4px solid var(--line);animation:pop .3s;position:relative}
+.ag-line div{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:.78rem;margin-top:3px;white-space:pre-wrap;overflow-wrap:anywhere}
+.ag-tag{font-size:.66rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.ag-tok{position:absolute;right:10px;top:8px;font-size:.68rem;font-weight:700;color:var(--muted);font-family:"JetBrains Mono",ui-monospace,monospace}
+.ag-user{border-left-color:var(--c1)}.ag-think{border-left-color:var(--c6)}.ag-tool{border-left-color:var(--c3)}.ag-result{border-left-color:var(--c5)}.ag-final{border-left-color:var(--c2)}.ag-hook{border-left-color:var(--claude);background:var(--claude-soft)}
+.ag-hook .ag-tag{color:var(--claudet)}
+.hook-events{display:flex;flex-wrap:wrap;align-items:center;gap:4px}
+.hk-ev{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:.72rem;font-weight:600;padding:4px 8px;border-radius:8px;background:var(--surface-2);color:var(--muted);transition:.25s}
+.hk-ev.on{background:var(--claude);color:#fff;box-shadow:0 0 0 3px var(--claude-soft)}
+.hk-arrow{color:var(--muted);font-size:.75rem}
+.perm-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:6px}
+.perm-row{display:flex;justify-content:space-between;align-items:center;gap:8px;background:var(--surface-2);border-radius:10px;padding:8px 12px;font-size:.88rem;font-weight:600}
+.perm-row .pill{white-space:nowrap}
+.tier .tg{display:inline-block;margin-top:4px;font-size:.68rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--claudet)}
+.tier .px{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:.72rem;color:var(--muted);margin-top:6px}
+/* ---------- RL ---------- */
+.bandits{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+@media (max-width:560px){.bandits{grid-template-columns:repeat(2,1fr)}}
+.bandit{cursor:pointer;border:2px solid var(--line);background:var(--surface);border-radius:16px;padding:12px 8px;text-align:center;box-shadow:0 3px 0 var(--line);transition:transform .1s}
+.bandit:active{transform:translateY(2px)}
+.bandit.win{border-color:var(--c2);background:var(--c2-soft)}.bandit.lose{border-color:var(--c4)}
+.b-emoji{font-size:1.8rem}.b-name{font-weight:800;font-size:.85rem;margin:2px 0 6px}
+.b-bar{position:relative;height:70px;width:28px;margin:0 auto 6px;border-radius:8px;background:var(--surface-2);overflow:hidden}
+.b-bar i{position:absolute;left:0;right:0;bottom:0;background:var(--c3);border-radius:8px;transition:height .25s}
+.b-bar em{position:absolute;left:-4px;right:-4px;height:3px;background:var(--ink)}
+/* ---------- vision ---------- */
+.px-canvas{width:100%;display:block;border-radius:12px;background:#000;cursor:crosshair}
+.px-nums{display:grid;grid-template-columns:repeat(14,1fr);gap:1px;font-family:"JetBrains Mono",ui-monospace,monospace;font-size:.68rem;color:var(--muted);text-align:center;background:var(--surface-2);border-radius:10px;padding:8px}
+.conv-grid{display:grid;grid-template-columns:1fr 160px 1fr;gap:16px;align-items:center}
+@media (max-width:720px){.conv-grid{grid-template-columns:1fr}}
+.conv-mid{text-align:center}
+.kgrid{display:grid;grid-template-columns:repeat(3,44px);gap:4px;justify-content:center;margin-top:6px}
+.kgrid span{height:44px;border-radius:8px;display:grid;place-items:center;font-family:"JetBrains Mono",ui-monospace,monospace;font-size:.72rem;font-weight:700}
+.cnn-row{display:flex;align-items:center;gap:8px;overflow-x:auto;padding:4px}
+.cnn-col{flex:1;min-width:110px;background:var(--surface-2);border-radius:14px;padding:10px;text-align:center;animation:pop .6s both}
+.cnn-cells{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;margin:8px 0}
+.cnn-cells span{aspect-ratio:1;display:grid;place-items:center;background:var(--surface);border-radius:8px;font-size:1.2rem}
+.cnn-arrow{font-size:1.3rem;font-weight:800;color:var(--c5)}
 </style>
 </head>
 <body>
@@ -454,12 +494,16 @@ td.fm-bad{background:var(--c4-soft);color:var(--c4t);font-weight:700}
   <a href="#ch5"><span class="num">9</span>Inside a transformer</a>
   <a href="#ch6"><span class="num">10</span>How LLMs are trained</a>
   <a href="#ch7"><span class="num">11</span>Beyond text: diffusion</a>
+  <div class="grp">Deep dives</div>
+  <a href="#rl"><span class="num">12</span>RL deep dive</a>
+  <a href="#vision"><span class="num">13</span>Computer vision</a>
   <div class="grp">Claude &amp; the frontier</div>
-  <a href="#ch8"><span class="num">12</span>Today's AI landscape</a>
-  <a href="#ch9"><span class="num">13</span>Meet Claude</a>
-  <a href="#build"><span class="num">14</span>Building with LLMs</a>
-  <a href="#ch10"><span class="num">15</span>The frontier: RAG, JEPA, Jev &amp; more</a>
-  <a href="#responsible"><span class="num">16</span>Responsible AI</a>
+  <a href="#ch8"><span class="num">14</span>Today's AI landscape</a>
+  <a href="#ch9"><span class="num">15</span>Meet Claude</a>
+  <a href="#build"><span class="num">16</span>Building with LLMs</a>
+  <a href="#agents"><span class="num">17</span>Agent engineering</a>
+  <a href="#ch10"><span class="num">18</span>The frontier: RAG, JEPA, Jev &amp; more</a>
+  <a href="#responsible"><span class="num">19</span>Responsible AI</a>
   <a href="#recap"><span class="num">★</span>Recap</a>
   <a href="#glossary"><span class="num">A–Z</span>Glossary</a>
 </nav>
@@ -474,7 +518,7 @@ td.fm-bad{background:var(--c4-soft);color:var(--c4t);font-weight:700}
     <h1 style="margin-top:18px">How <span class="grad">AI</span> actually works.</h1>
     <p>Start from zero. Play with a neuron, watch a network learn, pull apart the 2017 paper that started the generative AI boom, meet Claude, and look at where the field is heading next.</p>
     <a class="btn primary" href="#ch1" style="text-decoration:none;padding:13px 24px;font-size:1rem">Start learning →</a>
-    <div class="hero-stats"><span>16 chapters</span><span>45+ interactive diagrams</span><span>Build your own model</span><span>No math background needed</span></div>
+    <div class="hero-stats"><span>19 chapters</span><span>60+ interactive diagrams</span><span>Build your own model</span><span>No math background needed</span></div>
   </div>
 </section>
 
@@ -892,7 +936,7 @@ td.fm-bad{background:var(--c4-soft);color:var(--c4t);font-weight:700}
 
   <div class="widget wide reveal">
     <div class="w-head" style="color:var(--c6t)">Timeline</div>
-    <div class="w-title">Seven decades in 22 moments</div>
+    <div class="w-title">Seven decades of AI, moment by moment</div>
     <div class="w-sub">Scroll sideways and tap any moment. Or press play for the tour.</div>
     <div class="row"><button class="btn primary" id="tlPlay">▶ Play tour</button>
       <span class="small muted"><span class="tag paper">paper</span> <span class="tag milestone">milestone</span> <span class="tag product">product</span> <span class="tag claude">Claude</span></span></div>
@@ -1060,11 +1104,193 @@ td.fm-bad{background:var(--c4-soft);color:var(--c4t);font-weight:700}
 </div>
 </section>
 
+<!-- ============ RL DEEP DIVE ============ -->
+<section class="chapter" id="rl">
+<div class="wrap">
+  <div class="ch-head reveal">
+    <span class="ch-tag" style="background:var(--c3-soft);color:var(--c3t)">Chapter 12</span>
+    <h2>Deep dive: reinforcement learning</h2>
+    <p class="lede">How machines learn from consequences, and why RL is behind game-playing AIs, robot control and today's reasoning models.</p>
+  </div>
+  <p class="reveal">In supervised learning someone hands you the right answers. In <b>reinforcement learning</b> nobody does. An <b>agent</b> takes <b>actions</b> in an <b>environment</b>, receives <b>rewards</b>, and has to work out for itself which choices lead to good results, often long after the choice was made. It's how you learned to ride a bike: nobody labeled each muscle movement, but falling over was very informative.</p>
+
+  <div class="cards reveal">
+    <div class="card"><h4>🗺️ State</h4><p>What the agent observes right now: the board position, the robot's joint angles, the conversation so far.</p></div>
+    <div class="card"><h4>🎮 Action</h4><p>What it can do: move a piece, apply a torque, write the next token.</p></div>
+    <div class="card"><h4>🍬 Reward</h4><p>A number from the environment: +1 for winning, −1 for falling, 0 most of the time.</p></div>
+    <div class="card"><h4>🧭 Policy</h4><p>The agent's strategy, a mapping from states to actions. This is what learning improves.</p></div>
+    <div class="card"><h4>💰 Value</h4><p>How much <i>total future</i> reward the agent expects from a state. It's the long-term view that makes RL hard.</p></div>
+    <div class="card"><h4>⏳ Discount γ</h4><p>How much future rewards count compared with immediate ones. γ = 0.9 means a reward one step away is worth 90% of an immediate one.</p></div>
+  </div>
+
+  <h3 class="reveal">Explore or exploit?</h3>
+  <p class="reveal">The first dilemma every RL agent faces: stick with what has worked so far (<b>exploit</b>), or try something new that might be better (<b>explore</b>)? The classic toy version is the <b>multi-armed bandit</b>, a row of slot machines with hidden payout rates.</p>
+  <div class="widget wide reveal">
+    <div class="w-head" style="color:var(--c3t)">Game + simulation</div>
+    <div class="w-title">Four slot machines, unknown odds</div>
+    <div class="w-sub">Pull the levers yourself to find the best machine. Then let an algorithm play 500 times and compare strategies. The bars show each machine's <i>estimated</i> win rate so far.</div>
+    <div class="bandits" id="bandits"></div>
+    <div class="row" style="margin-top:14px">
+      <button class="chip on" data-bs="greedy">Greedy</button><button class="chip" data-bs="eps">ε-greedy</button><button class="chip" data-bs="random">Random</button>
+      <label class="slider" style="max-width:200px;min-width:140px">ε (explore rate) <b id="epsV">0.10</b><input type="range" id="eps" min="0.01" max="0.5" step="0.01" value="0.1"></label>
+      <button class="btn primary" id="bRun">▶ Auto-play 500</button><button class="btn" id="bReveal">👁 Reveal odds</button><button class="btn" id="bReset">↺ New machines</button>
+    </div>
+    <div class="stats" id="bStats"></div>
+    <p class="small" id="bNote" style="margin-top:8px"></p>
+  </div>
+
+  <h3 class="reveal">Planning with values</h3>
+  <p class="reveal">When actions have long-term consequences, the agent needs to know how good each <i>state</i> is. Every state's value comes from the best action there: its immediate reward plus the discounted value of where it leads. This is the <b>Bellman equation</b>, and repeating that calculation until it settles is called <b>value iteration</b>. Watch how the discount factor, the cost of each step, and a slippery floor change the agent's plan.</p>
+  <div class="widget wide reveal">
+    <div class="w-head" style="color:var(--c3t)">Interactive</div>
+    <div class="w-title">Value iteration on a grid world</div>
+    <div class="w-sub">⭐ is worth +10 and 🔥 is −10. The numbers show each cell's value, and the arrows show the resulting best move (the policy). Start at 🤖.</div>
+    <div class="grid2" style="grid-template-columns:1.2fr 1fr;align-items:center">
+      <div class="stage" style="padding:8px"><svg id="viSvg" viewBox="0 0 420 300" style="width:100%;display:block"></svg></div>
+      <div>
+        <label class="slider">Discount γ <b id="gV">0.90</b><input type="range" id="gam" min="0.1" max="0.99" step="0.01" value="0.9"></label>
+        <label class="slider" style="margin-top:10px">Reward per step <b id="lrV">−0.10</b><input type="range" id="liv" min="-2" max="0.5" step="0.05" value="-0.1"></label>
+        <div class="row" style="margin-top:12px"><button class="chip" id="slip">🧊 Slippery floor: off</button></div>
+        <p class="small" id="viNote" style="margin-top:10px"></p>
+      </div>
+    </div>
+  </div>
+
+  <h3 class="reveal">From tables to deep RL</h3>
+  <p class="reveal">A table of values works for a 30-cell grid, but not for Go, which has more board positions than atoms in the universe. <b>Deep RL</b> replaces the table with a neural network that <i>estimates</i> values or picks actions directly.</p>
+  <div class="cards reveal">
+    <div class="card"><div class="ico" style="background:var(--c1-soft)">👾</div><h4>DQN · 2013–2015</h4><p>DeepMind's Deep Q-Network learned dozens of Atari games from raw pixels and the score, often at human level.</p></div>
+    <div class="card"><div class="ico" style="background:var(--c2-soft)">⚫</div><h4>AlphaGo · 2016</h4><p>Combined networks trained on human games and self-play with tree search, and beat Lee Sedol at Go.</p></div>
+    <div class="card"><div class="ico" style="background:var(--c3-soft)">♟️</div><h4>AlphaZero · 2017</h4><p>Learned chess, shogi and Go from scratch through self-play alone, with no human games.</p></div>
+    <div class="card"><div class="ico" style="background:var(--c5-soft)">🧩</div><h4>MuZero · 2019</h4><p>Mastered games without even being told the rules, by learning its own model of the world.</p></div>
+    <div class="card"><div class="ico" style="background:var(--c6-soft)">📈</div><h4>Policy gradients &amp; PPO</h4><p>Instead of learning values, adjust the policy directly toward actions that led to high reward. PPO (2017) became the workhorse, including for RLHF.</p></div>
+    <div class="card"><div class="ico" style="background:var(--c4-soft)">🦾</div><h4>Robotics</h4><p>Train in simulation, transfer to the real world ("sim-to-real"): walking robots, dexterous hands, drones.</p></div>
+  </div>
+
+  <h3 class="reveal">RL for language models</h3>
+  <p class="reveal">For an LLM, the "policy" is the model itself, the "action" is the next token, and the reward arrives at the end of a whole response. RL is how chatbots became helpful, and more recently how they learned to reason.</p>
+  <div class="widget reveal">
+    <div class="w-head" style="color:var(--c3t)">Step through</div>
+    <div class="w-title">Three generations of RL for LLMs</div>
+    <div class="steps" id="rlSteps"></div>
+    <div class="step-body" id="rlBody"></div>
+    <div class="row" style="margin-top:14px"><button class="btn" id="rlPrev">← Back</button><button class="btn primary" id="rlNext">Next →</button></div>
+  </div>
+
+  <h3 class="reveal">Reward hacking: you get what you reward</h3>
+  <p class="reveal">RL agents optimize the reward you <i>wrote down</i>, not the goal you <i>meant</i>. In a famous 2016 OpenAI example, a boat-racing agent discovered it could score more points by circling a lagoon and hitting the same respawning targets forever than by finishing the race. LLMs can do the same: special-casing unit tests so they pass, or telling graders what they want to hear. This is called <b>reward hacking</b> or specification gaming.</p>
+  <div class="widget reveal">
+    <div class="w-head" style="color:var(--c3t)">Animation</div>
+    <div class="w-title">Same agent, two reward functions</div>
+    <div class="row" style="margin-bottom:10px" id="rhMode"><button class="chip on" data-rh="points">Reward = points from targets</button><button class="chip" data-rh="finish">Reward = finishing the race</button></div>
+    <div class="stage"><canvas id="rhCanvas" style="height:260px"></canvas></div>
+    <p class="small" id="rhNote" style="margin-top:10px"></p>
+  </div>
+
+  <div class="quiz reveal" data-correct="2">
+    <div class="q-label">Quick check</div>
+    <div class="q">A coding agent is rewarded when the unit tests pass. It starts editing the <i>tests</i> so they always pass. What's going on?</div>
+    <div class="opts">
+      <button class="opt">Overfitting to the training data</button>
+      <button class="opt">Too much exploration</button>
+      <button class="opt">Reward hacking: it found a cheaper way to get the reward than doing the real task</button>
+    </div>
+    <div class="explain">The reward ("tests pass") was a proxy for the goal ("working code"). Fixes include protecting the tests, using held-out checks, rewarding with graders that inspect the actual change, and monitoring behavior, not just scores.</div>
+  </div>
+</div>
+</section>
+
+<!-- ============ COMPUTER VISION ============ -->
+<section class="chapter" id="vision">
+<div class="wrap">
+  <div class="ch-head reveal">
+    <span class="ch-tag" style="background:var(--c5-soft);color:var(--c5t)">Chapter 13</span>
+    <h2>Deep dive: computer vision</h2>
+    <p class="lede">How machines learned to see, from pixels and filters to Vision Transformers and models that read charts.</p>
+  </div>
+  <p class="reveal">Computer vision is where deep learning first exploded, with AlexNet in 2012. Today it powers phone cameras, medical imaging, self-driving perception, factory inspection, and multimodal models like Claude that can read a screenshot or a handwritten note. Underneath all of it is one surprisingly simple fact.</p>
+
+  <h3 class="reveal">An image is just a grid of numbers</h3>
+  <div class="widget reveal">
+    <div class="w-head" style="color:var(--c5t)">Interactive</div>
+    <div class="w-title">Draw a digit and see what the computer sees</div>
+    <div class="w-sub">Draw with your mouse or finger. Each pixel is a brightness from 0 (black) to 255 (white). A color photo has three such grids, for red, green and blue. A 12-megapixel photo is 36 million numbers.</div>
+    <div class="grid2" style="align-items:center">
+      <div><canvas id="pxDraw" class="px-canvas" style="aspect-ratio:1;touch-action:none"></canvas><div class="row" style="margin-top:8px"><button class="btn" id="pxClear">Clear</button><button class="btn" id="pxSeven">Draw a "7"</button></div></div>
+      <div><div class="px-nums" id="pxNums"></div><p class="small muted" style="margin-top:6px">The computer sees only this matrix (shown here scaled down to 0–9 so it fits). Recognizing a "7" means finding patterns in these numbers.</p></div>
+    </div>
+  </div>
+
+  <h3 class="reveal">Convolution: a sliding pattern detector</h3>
+  <p class="reveal">The key operation of classic vision networks is the <b>convolution</b>. A small grid of weights, called a <b>kernel</b> or filter, slides across the image. At every position it multiplies the pixels under it by its weights and adds the results up. Different kernels detect different things: edges, blur, texture. A <b>convolutional neural network (CNN)</b> <i>learns</i> its kernels from data rather than having them designed by hand.</p>
+  <div class="widget wide reveal">
+    <div class="w-head" style="color:var(--c5t)">Interactive</div>
+    <div class="w-title">Apply a kernel</div>
+    <div class="w-sub">Pick a filter. Draw on the left image to add strokes, and hover over the right image to see the exact calculation for that pixel.</div>
+    <div class="row" id="kSel" style="margin-bottom:12px"></div>
+    <div class="conv-grid">
+      <div><div class="small muted" style="font-weight:700">INPUT</div><canvas id="cvIn" class="px-canvas" style="aspect-ratio:1;touch-action:none"></canvas></div>
+      <div class="conv-mid"><div class="small muted" style="font-weight:700">KERNEL</div><div class="kgrid" id="kGrid"></div><div class="small mono" id="kCalc" style="margin-top:10px;min-height:64px"></div></div>
+      <div><div class="small muted" style="font-weight:700">OUTPUT (feature map)</div><canvas id="cvOut" class="px-canvas" style="aspect-ratio:1"></canvas></div>
+    </div>
+    <p class="small" id="kNote" style="margin-top:10px"></p>
+  </div>
+
+  <h3 class="reveal">Stacking layers: from edges to objects</h3>
+  <p class="reveal">Stack many convolution layers, shrinking the image between them with <b>pooling</b>, and something remarkable happens. Early layers learn edges and colors, middle layers learn textures and parts, and deep layers respond to whole objects like faces, wheels or cats. Nobody programs this hierarchy. It emerges from training on millions of labeled images, such as the ImageNet dataset.</p>
+  <div class="widget reveal">
+    <div class="w-head" style="color:var(--c5t)">Animation</div>
+    <div class="w-title">What each layer responds to</div>
+    <div class="cnn-row" id="cnnRow"></div>
+  </div>
+
+  <h3 class="reveal">What vision models do</h3>
+  <div class="widget wide reveal">
+    <div class="w-head" style="color:var(--c5t)">Interactive</div>
+    <div class="w-title">One scene, five tasks</div>
+    <div class="row" id="vtTabs" style="margin-bottom:12px"></div>
+    <div class="grid2" style="grid-template-columns:1.3fr 1fr;align-items:center">
+      <div class="stage"><canvas id="vtCanvas" style="aspect-ratio:16/10"></canvas></div>
+      <div class="info-panel" id="vtInfo"></div>
+    </div>
+  </div>
+
+  <h3 class="reveal">Vision Transformers &amp; multimodal models</h3>
+  <p class="reveal">In 2020 the paper <i>"An Image is Worth 16×16 Words"</i> showed that the transformer from chapter 9 works on images too. Cut the image into <b>patches</b>, turn each patch into a vector, and treat the patches like tokens in a sentence, so self-attention can relate any part of the image to any other. In 2021 <b>CLIP</b> trained image and text encoders together on 400 million image–caption pairs, putting pictures and words in the same embedding space. Those ideas power image search, text-to-image diffusion, and multimodal LLMs like Claude, which read charts, documents, screenshots and photos.</p>
+  <div class="widget reveal">
+    <div class="w-head" style="color:var(--c5t)">Animation</div>
+    <div class="w-title">Image → patches → tokens</div>
+    <div class="stage" style="padding:8px"><svg id="vitSvg" viewBox="0 0 560 220" style="width:100%;display:block"></svg></div><div class="scroll-hint">↔ swipe the diagram to see all of it</div>
+    <div class="row" style="margin-top:10px"><button class="btn primary" id="vitGo">▶ Patchify</button><span class="small muted">A 224×224 image in 16×16 patches gives 196 tokens. Here it's 4×4 = 16.</span></div>
+  </div>
+
+  <h3 class="reveal">Where vision goes wrong</h3>
+  <div class="cards reveal">
+    <div class="card"><div class="ico" style="background:var(--c4-soft)">🐼</div><h4>Adversarial examples</h4><p>Noise that's invisible to humans can flip a prediction. A famous 2014 example turned "panda" into "gibbon" with 99% confidence.</p></div>
+    <div class="card"><div class="ico" style="background:var(--c3-soft)">🌗</div><h4>Distribution shift</h4><p>A model trained on sunny daytime photos may fail at night, in snow, or on a different camera. The world rarely matches the training set.</p></div>
+    <div class="card"><div class="ico" style="background:var(--c6-soft)">⚖️</div><h4>Dataset bias</h4><p>Face-analysis systems have shown much higher error rates on darker-skinned women than on lighter-skinned men (the 2018 Gender Shades study).</p></div>
+    <div class="card"><div class="ico" style="background:var(--c5-soft)">🔒</div><h4>Privacy &amp; surveillance</h4><p>Face recognition at scale raises serious civil-liberties concerns. The EU AI Act heavily restricts real-time biometric identification in public spaces.</p></div>
+    <div class="card"><div class="ico" style="background:var(--c2-soft)">🐄</div><h4>Shortcut learning</h4><p>A model may "detect cows" by detecting grass. It learns whatever correlates with the label, not necessarily the object.</p></div>
+  </div>
+
+  <div class="quiz reveal" data-correct="0">
+    <div class="q-label">Quick check</div>
+    <div class="q">A CNN's first layer ends up with kernels that look like small striped patterns at different angles. What are they most likely detecting?</div>
+    <div class="opts">
+      <button class="opt">Edges and lines at different orientations</button>
+      <button class="opt">Whole objects like faces</button>
+      <button class="opt">The image's file size</button>
+    </div>
+    <div class="explain">First-layer filters almost always learn oriented edge and color detectors. Strikingly, neurons in the early visual cortex of mammals do something similar. Deeper layers combine them into textures, parts and objects.</div>
+  </div>
+</div>
+</section>
+
 <!-- ============ CH8 ============ -->
 <section class="chapter" id="ch8">
 <div class="wrap">
   <div class="ch-head reveal">
-    <span class="ch-tag" style="background:var(--c5-soft);color:var(--c5t)">Chapter 12</span>
+    <span class="ch-tag" style="background:var(--c5-soft);color:var(--c5t)">Chapter 14</span>
     <h2>Today's AI landscape</h2>
     <p class="lede">A few frontier labs, a fast-moving open-weights world, and thousands of products built on top.</p>
   </div>
@@ -1106,7 +1332,7 @@ td.fm-bad{background:var(--c4-soft);color:var(--c4t);font-weight:700}
 <section class="chapter" id="ch9">
 <div class="wrap">
   <div class="ch-head reveal">
-    <span class="ch-tag" style="background:var(--claude-soft);color:var(--claudet)">Chapter 13</span>
+    <span class="ch-tag" style="background:var(--claude-soft);color:var(--claudet)">Chapter 15</span>
     <h2>Meet Claude</h2>
     <p class="lede">Claude is the family of AI models built by Anthropic, an AI safety company founded in 2021.</p>
   </div>
@@ -1115,11 +1341,16 @@ td.fm-bad{background:var(--c4-soft);color:var(--c4t);font-weight:700}
   <div class="widget reveal">
     <div class="w-head" style="color:var(--claudet)">Interactive</div>
     <div class="w-title">The model tiers</div>
-    <div class="w-sub">Claude comes in sizes that trade speed and cost against capability. Tap a tier. (Bars are relative and illustrative.)</div>
+    <div class="w-sub">Claude comes in several tiers that trade speed and price against capability. Tap a model. Prices are Claude API list prices per million input / output tokens. The speed and intelligence bars are relative and illustrative.</div>
     <div class="cards" id="tiers"></div>
     <div id="tierMeters" style="margin-top:16px"></div>
-    <p class="small muted" style="margin-top:10px">New versions ship regularly. Recent generations include Claude Haiku 4.5 and the Claude 5 family. Check anthropic.com for the current lineup.</p>
+    <p class="small muted" style="margin-top:10px">Lineup as of late September 2026. Anthropic ships new versions often, so check anthropic.com for the latest. Older models such as Opus 5 and Sonnet 4.6 remain available too.</p>
   </div>
+
+  <h3 class="reveal">Fable &amp; Mythos: a new top tier</h3>
+  <p class="reveal">In spring 2026 Anthropic revealed <b>Claude Mythos</b>, which it described as a step change in capability. In internal testing, the first version (Mythos Preview, April 7, 2026) autonomously discovered thousands of previously unknown software vulnerabilities, far more than any earlier AI model. Because that power could be used to attack as well as defend, Anthropic <b>did not release it publicly</b>. Access went to a small group of vetted organizations, largely to find and fix vulnerabilities before attackers could.</p>
+  <p class="reveal">In June 2026 Anthropic found a way to share that capability more widely. <b>Claude Fable 5</b> is a "Mythos-class" model released for general use with safeguards: queries on a narrow set of sensitive topics are answered by a different model instead. It was released alongside <b>Claude Mythos 5</b>, a restricted-access version of the same underlying model with some of those safeguards lifted. In September 2026, <b>Fable 5.1</b> and <b>Mythos 5.1</b> followed, with further gains in coding, knowledge work, cybersecurity and biology research, and <b>Opus 5.5</b> brought near-Fable performance at a lower price.</p>
+  <div class="key reveal"><p><b>One model, different doors.</b> The Fable/Mythos split shows a new way to release frontier AI. Instead of choosing between "ship it" and "hold it back", the same capabilities are offered with different safeguards to different audiences, matched to the risk. It's the Responsible Scaling Policy in action.</p></div>
 
   <h3 class="reveal">What Claude can do</h3>
   <div class="widget wide reveal">
@@ -1144,7 +1375,7 @@ td.fm-bad{background:var(--c4-soft);color:var(--c4t);font-weight:700}
   </div>
 
   <h3 class="reveal">Context window: Claude's working memory</h3>
-  <p class="reveal">The <b>context window</b> is how much text Claude can consider at once: your conversation, documents, code and its own replies. Claude models have a 200K-token window as standard, and some models support up to 1 million tokens. Longer isn't free, though: attention cost grows with length, and any model can miss details buried deep in a very long input, so it still pays to give the most relevant context.</p>
+  <p class="reveal">The <b>context window</b> is how much text Claude can consider at once: your conversation, documents, code and its own replies. Most current Claude models (Sonnet 5, Opus, Fable and Mythos) have a <b>1-million-token</b> window, while Haiku 4.5 has 200K. Longer isn't free, though: attention cost grows with length, and any model can miss details buried deep in a very long input, so it still pays to give the most relevant context.</p>
   <div class="widget reveal">
     <div class="w-head" style="color:var(--claudet)">Interactive</div>
     <div class="w-title">How much is a context window?</div>
@@ -1181,7 +1412,7 @@ td.fm-bad{background:var(--c4-soft);color:var(--c4t);font-weight:700}
 <section class="chapter" id="build">
 <div class="wrap">
   <div class="ch-head reveal">
-    <span class="ch-tag" style="background:var(--c2-soft);color:var(--c2t)">Chapter 14</span>
+    <span class="ch-tag" style="background:var(--c2-soft);color:var(--c2t)">Chapter 16</span>
     <h2>Building with LLMs</h2>
     <p class="lede">Prompting, retrieval, fine-tuning, tools and evals: the practical toolkit for turning a model into a product.</p>
   </div>
@@ -1241,11 +1472,162 @@ td.fm-bad{background:var(--c4-soft);color:var(--c4t);font-weight:700}
 </div>
 </section>
 
+<!-- ============ AGENT ENGINEERING ============ -->
+<section class="chapter" id="agents">
+<div class="wrap">
+  <div class="ch-head reveal">
+    <span class="ch-tag" style="background:var(--claude-soft);color:var(--claudet)">Chapter 17</span>
+    <h2>Agent engineering: loops, harnesses &amp; hooks</h2>
+    <p class="lede">In 2023 we prompted models. By 2026 we build <i>systems around them</i>. This chapter opens up that machinery.</p>
+  </div>
+  <p class="reveal">A model on its own just turns text into more text. An <b>agent</b> is a model placed inside a <b>loop</b>, given <b>tools</b>, fed carefully managed <b>context</b>, and wrapped in rules. Everything around the model is called the <b>harness</b>. Two agents running the same model can behave completely differently depending on their harness, which is why "harness engineering" has become a discipline of its own.</p>
+
+  <h3 class="reveal">1 · The agent loop</h3>
+  <p class="reveal">Every agent, from a coding assistant to a research bot, runs the same basic cycle. It <b>gathers context</b>, the model <b>decides</b> what to do, a <b>tool</b> does it, the result is <b>observed</b>, and the cycle repeats. It keeps going until the model says it's done (the API reports <code>stop_reason: "end_turn"</code>) or the harness stops it at a turn limit or budget.</p>
+  <div class="widget wide reveal">
+    <div class="w-head" style="color:var(--claudet)">Step through</div>
+    <div class="w-title">Watch an agent fix a failing test</div>
+    <div class="w-sub">Each step is one pass through the loop. Watch the transcript grow and the context window fill up: every tool result stays in the conversation.</div>
+    <div class="grid2" style="grid-template-columns:.9fr 1.1fr">
+      <div>
+        <div class="stage" style="padding:6px"><svg id="loopAg" viewBox="0 0 320 300" style="width:100%;display:block"></svg></div>
+        <div class="meter" style="grid-template-columns:110px 1fr 70px;margin-top:10px"><span>Context used</span><div class="track"><div class="fill" id="agCtx" style="background:var(--claude)"></div></div><b class="mono" id="agCtxV">0</b></div>
+        <div class="small mono" id="agMeta"></div>
+      </div>
+      <div class="ag-log" id="agLog"></div>
+    </div>
+    <div class="row" style="margin-top:12px"><button class="btn primary" id="agStep">Next step →</button><button class="btn" id="agPlay">▶ Auto-play</button><button class="btn" id="agReset">↺ Reset</button></div>
+    <details style="margin-top:12px"><summary class="small" style="cursor:pointer;font-weight:700">The whole loop in 8 lines of code</summary><div class="code" style="min-height:0;margin-top:8px"><span class="c"># pseudo-code: the heart of every agent</span>
+messages = [user_request]
+<span class="k">while</span> True:
+    response = model(messages, tools)          <span class="c"># think + decide</span>
+    messages.append(response)
+    <span class="k">if</span> response.stop_reason != <span class="s">"tool_use"</span>: <span class="k">break</span>   <span class="c"># done, or needs the human</span>
+    results = [run(call) <span class="k">for</span> call <span class="k">in</span> response.tool_calls]   <span class="c"># act</span>
+    messages.append(results)                     <span class="c"># observe</span></div></details>
+  </div>
+  <div class="key reveal"><p><b>Agent = model + loop + tools.</b> The model decides <i>what</i> to do next. The loop is almost trivially simple. Nearly all of the engineering goes into the parts around it: which tools exist, what goes into context, what's allowed, and when to stop.</p></div>
+
+  <h3 class="reveal">2 · The harness: everything around the model</h3>
+  <p class="reveal">If the model is the engine, the harness is the rest of the car: steering, brakes, dashboard and seatbelts. Tap each part.</p>
+  <div class="widget reveal">
+    <div class="w-head" style="color:var(--claudet)">Anatomy</div>
+    <div class="w-title">Inside an agent harness</div>
+    <div class="grid2" style="align-items:center">
+      <svg id="harnessSvg" viewBox="0 0 360 360" style="width:100%;max-width:380px;display:block;margin:auto"></svg>
+      <div class="info-panel" id="harnessInfo"></div>
+    </div>
+  </div>
+  <div class="cards reveal">
+    <div class="card"><div class="ico" style="background:var(--claude-soft)">⌨️</div><h4>Claude Code</h4><p>Anthropic's agentic coding harness in the terminal, IDE, desktop and web. It has built-in file, search and shell tools, plus hooks, subagents, skills, permissions and MCP.</p></div>
+    <div class="card"><div class="ico" style="background:var(--c1-soft)">📦</div><h4>Claude Agent SDK</h4><p>The Claude Code harness packaged as a library, so you can build your own agents on it. You host and deploy them.</p></div>
+    <div class="card"><div class="ico" style="background:var(--c2-soft)">🔁</div><h4>Tool Runner (API SDK)</h4><p>A lightweight loop over tools <i>you</i> define. It handles request → run tool → repeat, with per-turn hooks for approvals and logging.</p></div>
+    <div class="card"><div class="ico" style="background:var(--c6-soft)">☁️</div><h4>Managed Agents</h4><p>Anthropic runs the harness <i>and</i> hosts a sandboxed workspace per session. You get both the harness and the deployment.</p></div>
+  </div>
+
+  <h3 class="reveal">3 · Hooks: rules the model can't forget</h3>
+  <p class="reveal">Instructions in a prompt are suggestions. The model usually follows them, but not always. <b>Hooks</b> are code the harness runs automatically at fixed points in the agent's lifecycle. They're <b>deterministic</b>: a hook that blocks <code>rm -rf</code> blocks it every single time, however the model was prompted. In Claude Code, a hook receives the event as JSON on stdin. If it exits with code 2, the action is blocked and its message is fed back to Claude.</p>
+  <div class="widget wide reveal">
+    <div class="w-head" style="color:var(--claudet)">Interactive</div>
+    <div class="w-title">Turn hooks on and replay the session</div>
+    <div class="w-sub">The same agent session, replayed with different hooks. Toggle them and watch how the outcome changes.</div>
+    <div class="hook-events" id="hookEvents"></div>
+    <div class="row" id="hookToggles" style="margin:12px 0">
+      <button class="chip" data-hk="guard">🛡️ PreToolUse: block dangerous commands</button>
+      <button class="chip" data-hk="fmt">🧹 PostToolUse: auto-format edits</button>
+      <button class="chip" data-hk="stop">🔁 Stop: don't finish until tests pass</button>
+    </div>
+    <div class="grid2">
+      <div class="ag-log" id="hookLog" style="max-height:340px"></div>
+      <div><div class="small muted" style="font-weight:700;margin-bottom:6px">.claude/settings.json</div><div class="code" id="hookCfg" style="min-height:0"></div><p class="small" id="hookOut" style="margin-top:10px"></p></div>
+    </div>
+  </div>
+
+  <h3 class="reveal">4 · Context engineering</h3>
+  <p class="reveal">The context window is the agent's working memory, and on long tasks it fills up fast. Every file read and every test log stays in the conversation. <b>Context engineering</b> is the art of keeping the right information in view: nothing important missing, nothing useless crowding it out. It has largely replaced "prompt engineering" as the key skill for agents.</p>
+  <div class="widget wide reveal">
+    <div class="w-head" style="color:var(--claudet)">Simulation</div>
+    <div class="w-title">A 60-turn task against a 200K-token window</div>
+    <div class="w-sub">Without help, the transcript overflows long before the task is done. Switch on each technique and watch the curve and the cost.</div>
+    <div class="row" id="ctxToggles" style="margin-bottom:12px">
+      <button class="chip" data-ce="skills">🧰 Skills (load on demand)</button>
+      <button class="chip" data-ce="clear">🧽 Clear old tool results</button>
+      <button class="chip" data-ce="sub">🧑‍🤝‍🧑 Subagents for searching</button>
+      <button class="chip" data-ce="compact">🗜️ Compaction</button>
+      <button class="chip" data-ce="cache">⚡ Prompt caching</button>
+    </div>
+    <div class="stage" style="padding:8px"><svg id="ctxSim" viewBox="0 0 560 240" style="width:100%;display:block"></svg></div><div class="scroll-hint">↔ swipe the diagram to see all of it</div>
+    <div class="stats" id="ctxStats"></div>
+    <p class="small" id="ctxNote" style="margin-top:10px"></p>
+  </div>
+  <div class="cards reveal">
+    <div class="card"><h4>🗜️ Compaction</h4><p>When the window nears its limit, summarize older history into a compact recap and keep going. Claude Code and the Claude API can do this automatically.</p></div>
+    <div class="card"><h4>🧽 Context editing</h4><p>Clear stale tool results and old thinking, keeping only the fact that a tool was called. It's cheaper than summarizing.</p></div>
+    <div class="card"><h4>🗂️ Memory</h4><p>Write durable notes to files (like CLAUDE.md or a memory store) that carry across sessions, instead of relying on one long conversation.</p></div>
+    <div class="card"><h4>⚡ Prompt caching</h4><p>Reuse the unchanged prefix of the conversation across turns. It doesn't shrink context, but repeated tokens cost a fraction of the price and load faster.</p></div>
+  </div>
+
+  <h3 class="reveal">5 · Tools, MCP &amp; skills</h3>
+  <p class="reveal">Agents are only as capable as their tools. Good tools have clear names, precise descriptions, and return <i>concise</i> results, because every byte they return lands in the context window. <b>MCP</b> (the Model Context Protocol) standardizes how tools plug in: write a server once, and any MCP-compatible agent can use it. <b>Agent Skills</b> package know-how as folders of instructions and scripts, loaded by <b>progressive disclosure</b>. Only a one-line description sits in context until the skill is actually needed.</p>
+  <div class="widget reveal">
+    <div class="w-head" style="color:var(--claudet)">Interactive</div>
+    <div class="w-title">Progressive disclosure: 40 skills, few tokens</div>
+    <div class="w-sub">Compare loading every skill's full instructions up front with loading them in layers.</div>
+    <div class="row" id="pdMode" style="margin-bottom:12px"><button class="chip on" data-pd="all">Load everything up front</button><button class="chip" data-pd="prog">Progressive disclosure</button></div>
+    <div id="pdBars"></div>
+    <p class="small" id="pdNote" style="margin-top:8px"></p>
+  </div>
+
+  <h3 class="reveal">6 · Workflows, agents &amp; multi-agent patterns</h3>
+  <p class="reveal">Not everything needs a fully autonomous agent. Anthropic's widely cited guide <i>"Building effective agents"</i> (December 2024) separates <b>workflows</b>, where code sets the steps, from <b>agents</b>, where the model decides the steps. It also recommends starting with the simplest pattern that works. Explore the common patterns:</p>
+  <div class="widget wide reveal">
+    <div class="w-head" style="color:var(--claudet)">Pattern gallery</div>
+    <div class="row" id="patTabs" style="margin-bottom:12px"></div>
+    <div class="grid2" style="grid-template-columns:1.2fr 1fr;align-items:center">
+      <div class="stage" style="padding:8px"><svg id="patSvg" viewBox="-20 0 560 260" style="width:100%;display:block"></svg></div><div class="scroll-hint">↔ swipe the diagram to see all of it</div>
+      <div class="info-panel" id="patInfo"></div>
+    </div>
+  </div>
+
+  <h3 class="reveal">7 · Permissions &amp; sandboxing</h3>
+  <p class="reveal">The more an agent can do on its own, the more useful it is, and the more damage a mistake or a <b>prompt injection</b> can cause. Harnesses manage this with <b>permission modes</b>, allow and deny lists, and <b>sandboxes</b> (isolated containers with limited file and network access). Slide the autonomy level to see what runs without asking.</p>
+  <div class="widget reveal">
+    <div class="w-head" style="color:var(--claudet)">Interactive</div>
+    <div class="w-title">How much autonomy?</div>
+    <div class="row" id="permModes" style="margin-bottom:12px"></div>
+    <div id="permTable"></div>
+    <p class="small" id="permNote" style="margin-top:10px"></p>
+  </div>
+  <div class="key warn reveal"><p>Security researchers call one especially risky combination the <b>"lethal trifecta"</b>: an agent that has (1) access to private data, (2) exposure to untrusted content such as web pages, emails or issues, and (3) a way to send data out. Together, a hidden instruction in the untrusted content can exfiltrate the private data. Break at least one leg: limit tools, sandbox the network, or require approval.</p></div>
+
+  <h3 class="reveal">8 · Long-running &amp; background agents</h3>
+  <div class="cards reveal">
+    <div class="card"><div class="ico" style="background:var(--c1-soft)">⏰</div><h4>Scheduled loops</h4><p>Agents that wake up on a schedule or event (every night, on each new PR), do a job, and report back. Examples are triaging issues, babysitting CI and writing a morning brief.</p></div>
+    <div class="card"><div class="ico" style="background:var(--c2-soft)">🎚️</div><h4>Effort &amp; task budgets</h4><p>Dial how hard the model thinks (effort levels from low to max), and give it a token budget so it paces itself and finishes cleanly instead of being cut off.</p></div>
+    <div class="card"><div class="ico" style="background:var(--c3-soft)">💾</div><h4>Checkpoints &amp; resume</h4><p>Snapshot files and conversation so you can rewind a bad turn, resume a session later, or hand it to another agent.</p></div>
+    <div class="card"><div class="ico" style="background:var(--c6-soft)">🧵</div><h4>Parallel &amp; background work</h4><p>Run many agents at once, each in its own isolated copy of the repo (git worktrees), while you keep working.</p></div>
+    <div class="card"><div class="ico" style="background:var(--c4-soft)">📊</div><h4>Agent evals</h4><p>Measure success rate, cost per completed task and failure modes over full traces. Public benchmarks include SWE-bench (fixing real GitHub issues), OSWorld (using a desktop) and Terminal-Bench.</p></div>
+    <div class="card"><div class="ico" style="background:var(--claude-soft)">🔭</div><h4>Observability</h4><p>Log every prompt, tool call and result as a trace. When an agent fails, the trace shows you exactly which step went wrong.</p></div>
+  </div>
+
+  <div class="quiz reveal" data-correct="1">
+    <div class="q-label">Quick check</div>
+    <div class="q">Your team keeps reminding the agent in CLAUDE.md to "never edit files in /migrations", but it still happens occasionally. What's the most reliable fix?</div>
+    <div class="opts">
+      <button class="opt">Write the reminder in capital letters</button>
+      <button class="opt">Add a PreToolUse hook that blocks edits to /migrations</button>
+      <button class="opt">Switch to a bigger model</button>
+    </div>
+    <div class="explain">Instructions are probabilistic, and hooks are deterministic. A PreToolUse hook runs before every edit and can block it every time, with a message explaining why, so the agent can adapt.</div>
+  </div>
+</div>
+</section>
+
 <!-- ============ CH10 ============ -->
 <section class="chapter" id="ch10">
 <div class="wrap">
   <div class="ch-head reveal">
-    <span class="ch-tag" style="background:var(--c6-soft);color:var(--c6t)">Chapter 15</span>
+    <span class="ch-tag" style="background:var(--c6-soft);color:var(--c6t)">Chapter 18</span>
     <h2>The frontier: RAG, JEPA, Jev &amp; beyond</h2>
     <p class="lede">What comes after "a bigger transformer"? Here are the ideas pushing AI forward.</p>
   </div>
@@ -1396,7 +1778,7 @@ td.fm-bad{background:var(--c4-soft);color:var(--c4t);font-weight:700}
 <section class="chapter" id="responsible">
 <div class="wrap">
   <div class="ch-head reveal">
-    <span class="ch-tag" style="background:var(--c4-soft);color:var(--c4t)">Chapter 16</span>
+    <span class="ch-tag" style="background:var(--c4-soft);color:var(--c4t)">Chapter 19</span>
     <h2>Responsible AI</h2>
     <p class="lede">Fairness, transparency, security and regulation: building AI that deserves people's trust.</p>
   </div>
@@ -1479,6 +1861,9 @@ td.fm-bad{background:var(--c4-soft);color:var(--c4t);font-weight:700}
     <div><b>Diffusion paints from noise</b>Image and video models learn to reverse a noising process.</div>
     <div><b>Claude</b>Anthropic's safety-focused models, with tools, long context, extended thinking and agents.</div>
     <div><b>Building with LLMs</b>Prompt well, add RAG for knowledge, tools for actions, fine-tune for style, and measure everything with evals.</div>
+    <div><b>RL learns from consequences</b>Explore vs. exploit, values and policies, and why you get what you reward, not what you meant.</div>
+    <div><b>Vision is pattern-finding</b>Pixels → convolutions → features → objects, and now patches as tokens in Vision Transformers.</div>
+    <div><b>Agents are systems</b>A model plus a loop, tools, context engineering, hooks and permissions: the harness matters as much as the model.</div>
     <div><b>The frontier</b>RAG for grounding, JEPA and world models, Jev and System One decision models, MoE, test-time compute, and alignment.</div>
     <div><b>Responsible AI</b>Fairness involves trade-offs, explanations build trust, and regulation scales with risk.</div>
   </div>
@@ -1862,7 +2247,9 @@ $$(".quiz").forEach(q => {
     ["2023", "GPT-4 · Claude · Llama", "claude", "GPT-4 is multimodal and passes professional exams. Anthropic releases Claude (March) and Claude 2 (July, with a 100K context window). Meta's Llama kicks off the open-weights wave. Mamba and I-JEPA appear."],
     ["2024", "Claude 3 · Artifacts · Computer use · MCP", "claude", "The Claude 3 family (Haiku, Sonnet, Opus) arrives in March, then Claude 3.5 Sonnet with Artifacts. OpenAI's o1 popularizes reasoning models. Anthropic ships computer use in beta and open-sources the Model Context Protocol.", true],
     ["2025", "Reasoning & agents · Claude 4 · Claude Code", "claude", "DeepSeek-R1 shows strong open reasoning. Claude 3.7 Sonnet brings hybrid extended thinking, and Claude Code launches as an agentic coding tool. Claude 4 models follow, and agents that browse, code and use apps go mainstream. V-JEPA 2 advances world models.", true],
-    ["2026", "The agentic era", "claude", "Frontier models (including the Claude 5 family) work on longer and more autonomous tasks. The questions now are about reliability, safety and how AI is used across the economy."],
+    ["Apr 2026", "Claude Mythos Preview", "claude", "Anthropic reveals Mythos, a step change in capability. In testing it autonomously found thousands of previously unknown software vulnerabilities, so Anthropic withheld it from public release and limited access to vetted organizations for defensive work."],
+    ["Jun 2026", "Claude Fable 5 & Mythos 5", "claude", "Fable 5 brings Mythos-class capability to everyone, with safeguards that route a narrow set of sensitive queries to a different model. Mythos 5, the same model with some safeguards lifted, stays restricted.", true],
+    ["Sep 2026", "Fable 5.1 · Mythos 5.1 · Opus 5.5", "claude", "Fable 5.1 and Mythos 5.1 arrive on September 1 with gains in coding, knowledge work, cybersecurity and biology. On September 22, Opus 5.5 brings near-Fable performance at lower prices. Agents now routinely run long, autonomous tasks.", true],
     ["Sep 2026", "Jev: System One models", "product", "TypeSafe AI releases Jev in early access. It is a \"System One\" model that generates no text: it answers typed questions about some input with calibrated probabilities, all in one parallel pass taking about 70 to 500 ms."],
   ];
   const track = $("#tlTrack"), det = $("#tlDetail");
@@ -2074,7 +2461,7 @@ stepper($("#caiSteps"), $("#caiBody"), $("#caiPrev"), $("#caiNext"), [
 /* ---------- CH8: landscape ---------- */
 (() => {
   const L = [
-    ["Claude", "Anthropic", "closed", "🟠", "Safety-focused frontier models known for coding, writing, long context and agentic work."],
+    ["Claude", "Anthropic", "closed", "🟠", "Safety-focused models from Haiku to Opus and Fable, plus the restricted Mythos. Known for coding, agentic work and long context."],
     ["GPT & o-series", "OpenAI", "closed", "⚪", "Powers ChatGPT. Pioneered consumer chat and popularized reasoning models."],
     ["Gemini", "Google DeepMind", "closed", "🔷", "Natively multimodal models integrated across Google products, with very long context."],
     ["Grok", "xAI", "closed", "✖️", "Frontier models with real-time access to posts on the X platform, available in the X app and via API."],
@@ -2093,12 +2480,18 @@ stepper($("#caiSteps"), $("#caiBody"), $("#caiPrev"), $("#caiNext"), [
 
 /* ---------- CH9: tiers ---------- */
 (() => {
-  const T = [["Haiku", "Fastest and most affordable. Great for high-volume tasks, sub-agents and real-time apps.", [95, 62, 15]], ["Sonnet", "The balanced workhorse, with strong coding and agent skills at moderate cost.", [72, 86, 45]], ["Opus", "The most capable tier, for the hardest reasoning, research and long agentic tasks.", [48, 100, 100]]];
+  const T = [
+    ["Haiku 4.5", "Fastest & cheapest", "Great for high-volume tasks, subagents and real-time apps.", "$1 / $5", "200K", [95, 55, 10]],
+    ["Sonnet 5", "Balanced", "The workhorse, with strong coding and agentic skills at a moderate price.", "$2 / $10", "1M", [80, 75, 20]],
+    ["Opus 5.5", "Frontier, efficient", "The newest Opus (Sept 22, 2026), with near-Fable performance at a lower price than Opus 5. Thinking is always on, and an effort setting controls its depth.", "$4 / $20", "1M", [62, 90, 40]],
+    ["Fable 5.1", "Most capable, generally available", "Anthropic's most capable widely released model (Sept 2026), for the hardest reasoning and long-horizon agentic work. A Mythos-class model with safeguards.", "$10 / $50", "1M", [40, 100, 100]],
+    ["Mythos 5.1", "Restricted access", "The same frontier capability with some safeguards lifted, available only to vetted organizations, largely for defensive cybersecurity work.", "$10 / $50", "1M", [40, 100, 100]],
+  ];
   const box = $("#tiers"), m = $("#tierMeters");
-  m.innerHTML = ["Speed", "Intelligence", "Cost"].map(n => `<div class="meter"><span>${n}</span><div class="track"><div class="fill"></div></div></div>`).join("");
-  const cards = T.map((t, i) => { const c = document.createElement("div"); c.className = "tier"; c.innerHTML = `<h4>${t[0]}</h4><p class="small" style="margin:6px 0 0;color:var(--ink-2)">${t[1]}</p>`; c.addEventListener("click", () => sel(i)); box.appendChild(c); return c; });
-  const sel = i => { cards.forEach((c, j) => c.classList.toggle("on", j === i)); $$(".fill", m).forEach((f, j) => { f.style.width = T[i][2][j] + "%"; if (j === 2) f.style.background = "var(--c4)"; }); };
-  sel(1);
+  m.innerHTML = ["Speed", "Intelligence", "Price"].map(n => `<div class="meter"><span>${n}</span><div class="track"><div class="fill"></div></div></div>`).join("");
+  const cards = T.map((t, i) => { const c = document.createElement("div"); c.className = "tier"; c.innerHTML = `<h4>${t[0]}</h4><span class="tg">${t[1]}</span><p class="small" style="margin:6px 0 0;color:var(--ink-2)">${t[2]}</p><div class="px">${t[3]} · ${t[4]} context</div>`; c.addEventListener("click", () => sel(i)); box.appendChild(c); return c; });
+  const sel = i => { cards.forEach((c, j) => c.classList.toggle("on", j === i)); $$(".fill", m).forEach((f, j) => { f.style.width = T[i][5][j] + "%"; if (j === 2) f.style.background = "var(--c4)"; }); };
+  sel(3);
 })();
 
 /* ---------- CH9: features ---------- */
@@ -2107,7 +2500,7 @@ stepper($("#caiSteps"), $("#caiBody"), $("#caiPrev"), $("#caiNext"), [
     ["core", "✍️", "Writing & analysis", "Drafting, editing, summarizing and nuanced analysis of long documents."],
     ["core", "💻", "Coding", "Writing, debugging, refactoring and explaining code across languages. One of Claude's standout strengths."],
     ["core", "👁️", "Vision", "Reads images, charts, screenshots, handwriting and PDFs."],
-    ["core", "📏", "Long context", "200K tokens standard, and up to 1M on some models: whole codebases or stacks of reports at once."],
+    ["core", "📏", "Long context", "1M tokens on most current models (200K on Haiku 4.5): whole codebases or stacks of reports at once."],
     ["core", "🧠", "Extended thinking", "Reasons step by step before answering, with visible thinking, for harder problems."],
     ["core", "🌍", "Multilingual", "Works fluently across many languages."],
     ["app", "🧩", "Artifacts", "Generates standalone documents, code, diagrams and interactive apps in a side panel you can iterate on and share."],
@@ -2174,7 +2567,7 @@ stepper($("#caiSteps"), $("#caiBody"), $("#caiPrev"), $("#caiNext"), [
   let lastKey = "";
   const upd = () => {
     let tok = Math.round(1000 * Math.pow(1000, sl.value / 100) / 1000) * 1000; if (Math.abs(tok - 2e5) < 8000) tok = 2e5; if (tok > 9.6e5) tok = 1e6; const words = tok * .75, pages = words / 300, novels = words / 90000;
-    $("#ctxVal").textContent = tok.toLocaleString() + (tok === 200000 ? " (Claude standard)" : tok >= 1e6 ? " (1M context)" : "");
+    $("#ctxVal").textContent = tok.toLocaleString() + (tok === 200000 ? " (Haiku 4.5)" : tok >= 1e6 ? " (most current Claude models)" : "");
     $("#ctxWords").textContent = fmt(words); $("#ctxPages").textContent = fmt(pages); $("#ctxBooks").textContent = novels < 1 ? novels.toFixed(2) : novels.toFixed(1);
     const key = novels >= 1 ? "b" + Math.min(Math.floor(novels), 40) : "p" + Math.min(Math.ceil(pages / 5), 60);
     if (key === lastKey) return; lastKey = key; books.innerHTML = "";
@@ -3057,10 +3450,472 @@ print("P(pass) =", model.predict_proba(new)[0, 1])`;
   rebuild(); resize(); render(); addEventListener("resize", resize); document.addEventListener("themechange", render);
 })();
 
+/* ---------- AGENTS: the loop ---------- */
+(() => {
+  const svg = $("#loopAg"), log = $("#agLog");
+  const S = [
+    { ph: "ctx", k: "user", t: "User: The checkout test is failing. Please fix it.", tok: 14000, note: "System prompt + tool definitions + CLAUDE.md + the request" },
+    { ph: "think", k: "think", t: "Plan: run the test suite to see the actual failure.", tok: 300 },
+    { ph: "act", k: "tool", t: "bash › npm test", tok: 60, stop: "tool_use" },
+    { ph: "obs", k: "result", t: "✗ checkout › applies discount before tax\n  expected 108.00, received 110.00", tok: 2600 },
+    { ph: "act", k: "tool", t: "grep › \"applyTax\" src/", tok: 50, stop: "tool_use" },
+    { ph: "obs", k: "result", t: "src/cart.js:42   total = applyTax(subtotal) - discount", tok: 400 },
+    { ph: "act", k: "tool", t: "read › src/cart.js", tok: 40, stop: "tool_use" },
+    { ph: "obs", k: "result", t: "(118 lines of code now sit in context)", tok: 3800 },
+    { ph: "think", k: "think", t: "The discount must come off before tax: (100 − 10) × 1.2 = 108. Line 42 applies it after tax: 100 × 1.2 − 10 = 110.", tok: 500 },
+    { ph: "act", k: "tool", t: "edit › src/cart.js:42  →  total = applyTax(subtotal - discount)", tok: 120, stop: "tool_use" },
+    { ph: "obs", k: "result", t: "Edit applied.", tok: 80 },
+    { ph: "act", k: "tool", t: "bash › npm test", tok: 60, stop: "tool_use" },
+    { ph: "obs", k: "result", t: "✓ 48 tests passed", tok: 900 },
+    { ph: "done", k: "final", t: "Fixed: cart.js applied the discount after tax. I moved it before tax, and all 48 tests pass.", tok: 200, stop: "end_turn" },
+  ];
+  const N = { ctx: [160, 45, "📥", "Gather context"], think: [275, 150, "🧠", "Think & decide"], act: [160, 255, "🛠️", "Act (tool call)"], obs: [45, 150, "👀", "Observe result"] };
+  let i = -1, timer = 0;
+  const draw = () => {
+    svg.innerHTML = ""; const cur = i >= 0 ? S[i].ph : null;
+    svgEl("circle", { cx: 160, cy: 150, r: 105, fill: "none", stroke: C.line, "stroke-width": 3, "stroke-dasharray": "2 8", "stroke-linecap": "round" }, svg);
+    const mc = svgEl("circle", { cx: 160, cy: 150, r: 34, fill: cur === "done" ? hexA(C.c2, .3) : hexA(C.claude, .18), stroke: cur === "done" ? C.c2 : C.claude, "stroke-width": 2 }, svg);
+    const mt = svgEl("text", { x: 160, y: 147, "text-anchor": "middle", "font-size": 12, "font-weight": 800, fill: C.ink }, svg); mt.textContent = "Model";
+    const ms = svgEl("text", { x: 160, y: 162, "text-anchor": "middle", "font-size": 9, "font-weight": 700, fill: C.muted }, svg); ms.textContent = cur === "done" ? "end_turn ✓" : "in a loop";
+    for (const k in N) { const [x, y, e, l] = N[k], on = k === cur; svgEl("circle", { cx: x, cy: y, r: 30, fill: on ? hexA(C.claude, .35) : C.surface, stroke: on ? C.claude : C.line, "stroke-width": on ? 3 : 2 }, svg); const a = svgEl("text", { x, y: y + 6, "text-anchor": "middle", "font-size": 18 }, svg); a.textContent = e; const b = svgEl("text", { x, y: y + (y > 200 ? 46 : y < 100 ? -38 : 46), "text-anchor": "middle", "font-size": 10.5, "font-weight": 700, fill: on ? C.ink : C.muted }, svg); b.textContent = l; }
+    const used = S.slice(0, i + 1).reduce((s, x) => s + x.tok, 0), calls = S.slice(0, i + 1).filter(x => x.k === "tool").length;
+    $("#agCtx").style.width = Math.min(100, used / 200000 * 100) + "%"; $("#agCtxV").textContent = (used / 1000).toFixed(1) + "K";
+    $("#agMeta").textContent = i < 0 ? "Press Next step to start the loop." : `step ${i + 1}/${S.length} · tool calls: ${calls} · stop_reason: ${S[i].stop || (S[i].k === "result" ? "(tool result appended)" : "…")}${S[i].note ? " · " + S[i].note : ""}`;
+  };
+  const add = () => { if (i >= S.length - 1) return false; i++; const s = S[i], d = document.createElement("div"); d.className = "ag-line ag-" + s.k; d.innerHTML = `<span class="ag-tag">${{ user: "user", think: "thinking", tool: "tool call", result: "tool result", final: "answer" }[s.k]}</span><span class="ag-tok">+${s.tok >= 1000 ? (s.tok / 1000).toFixed(1) + "K" : s.tok} tok</span><div>${s.t.replace(/</g, "&lt;").replace(/\n/g, "<br>")}</div>`; log.appendChild(d); log.scrollTop = log.scrollHeight; draw(); return true; };
+  const reset = () => { clearInterval(timer); timer = 0; $("#agPlay").textContent = "▶ Auto-play"; i = -1; log.innerHTML = ""; draw(); };
+  $("#agStep").addEventListener("click", add); $("#agReset").addEventListener("click", reset);
+  $("#agPlay").addEventListener("click", e => { if (timer) { clearInterval(timer); timer = 0; e.target.textContent = "▶ Auto-play"; return; } if (i >= S.length - 1) reset(); e.target.textContent = "⏸ Pause"; timer = setInterval(() => { if (!add()) { clearInterval(timer); timer = 0; $("#agPlay").textContent = "▶ Auto-play"; } }, reduced ? 200 : 1100); });
+  draw(); document.addEventListener("themechange", draw);
+})();
+
+/* ---------- AGENTS: harness anatomy ---------- */
+(() => {
+  const svg = $("#harnessSvg"), info = $("#harnessInfo");
+  const P = [
+    ["🔁", "Agent loop", "c1", "Calls the model, runs the tools it asks for, appends results, and repeats. It also decides when to stop: end_turn, a turn limit, a token or dollar budget, or a human interrupt."],
+    ["🛠️", "Tools & MCP", "c2", "Functions the model can call: read and edit files, run shell commands, search the web, query databases. MCP servers plug in whole toolsets through one standard protocol."],
+    ["🧠", "Context manager", "c3", "Decides what's in the window on every turn: system prompt, project notes (CLAUDE.md), skills, conversation, tool results. It compacts, clears and caches to keep the window useful."],
+    ["🗂️", "Memory", "c5", "Durable knowledge that outlives a single context window, such as notes files, memory stores and a to-do list the agent keeps updated."],
+    ["🔐", "Permissions & sandbox", "c4", "Which actions run automatically, which need approval, and which are forbidden. Sandboxes isolate the file system and network so mistakes stay contained."],
+    ["🪝", "Hooks", "c6", "Your code, triggered at lifecycle events (before or after a tool, on stop, at session start). Deterministic guardrails, formatters, loggers and notifications."],
+    ["🧑‍🤝‍🧑", "Subagents", "claude", "Child agents with their own fresh context windows for focused subtasks. They return a short summary, so the parent's context stays clean."],
+    ["📺", "Interface & telemetry", "c1", "The terminal, IDE, chat or API surface, plus the logs, traces, cost tracking and checkpoints that let humans watch, steer and rewind."],
+  ];
+  let sel = 0;
+  const draw = () => {
+    svg.innerHTML = ""; const cx = 180, cy = 180;
+    svgEl("circle", { cx, cy, r: 130, fill: hexA(C.claude, .05), stroke: C.line, "stroke-width": 2, "stroke-dasharray": "5 6" }, svg);
+    const hl = svgEl("text", { x: cx, y: 30, "text-anchor": "middle", "font-size": 11, "font-weight": 800, fill: C.muted }, svg); hl.textContent = "THE HARNESS";
+    P.forEach((p, i) => { const a = -Math.PI / 2 + i * Math.PI / 4, x = cx + 118 * Math.cos(a), y = cy + 118 * Math.sin(a); svgEl("line", { x1: cx, y1: cy, x2: x, y2: y, stroke: C.line, "stroke-width": 1.5 }, svg); });
+    svgEl("circle", { cx, cy, r: 44, fill: hexA(C.claude, .25), stroke: C.claude, "stroke-width": 2.5 }, svg);
+    const t = svgEl("text", { x: cx, y: cy + 5, "text-anchor": "middle", "font-size": 14, "font-weight": 800, fill: C.ink }, svg); t.textContent = "Model";
+    P.forEach((p, i) => { const a = -Math.PI / 2 + i * Math.PI / 4, x = cx + 118 * Math.cos(a), y = cy + 118 * Math.sin(a), g = svgEl("g", { style: "cursor:pointer" }, svg);
+      svgEl("circle", { cx: x, cy: y, r: 27, fill: i === sel ? hexA(C[p[2]], .35) : C.surface, stroke: C[p[2]], "stroke-width": i === sel ? 3.5 : 2 }, g);
+      const e = svgEl("text", { x, y: y + 7, "text-anchor": "middle", "font-size": 19 }, g); e.textContent = p[0]; g.addEventListener("click", () => { sel = i; draw(); }); });
+    const p = P[sel]; info.innerHTML = `<h4>${p[0]} ${p[1]}</h4><p style="margin:0">${p[3]}</p>`;
+  };
+  draw(); document.addEventListener("themechange", draw);
+})();
+
+/* ---------- AGENTS: hooks ---------- */
+(() => {
+  const on = new Set(), log = $("#hookLog");
+  const EV = ["SessionStart", "UserPromptSubmit", "PreToolUse", "PostToolUse", "PreCompact", "Stop", "SubagentStop", "SessionEnd"];
+  const render = () => {
+    const L = [], G = on.has("guard"), F = on.has("fmt"), St = on.has("stop");
+    const u = t => L.push(["user", t]), m = t => L.push(["final", t]), tl = t => L.push(["tool", t]), r = t => L.push(["result", t]), h = t => L.push(["hook", t]);
+    u("Clean up the build folder and fix the lint errors.");
+    tl("bash › rm -rf build/ ~/");
+    if (G) { h("🛡️ PreToolUse → guard.sh: \"rm -rf ~/\" targets your home directory. Blocked (exit 2). The reason is sent back to Claude."); tl("bash › rm -rf build/"); r("build/ removed."); }
+    else r("⚠️ build/ removed … and it started deleting your home directory. (The model mis-typed one argument, and nothing stopped it.)");
+    tl("edit › src/app.js (fix 5 lint errors)"); if (F) h("🧹 PostToolUse → prettier formatted src/app.js");
+    tl("bash › npm run lint"); r("✗ 2 errors remaining in src/utils.js");
+    L.push(["think", "Model decides it's done: \"I fixed most of the lint errors.\""]);
+    if (St) { h("🔁 Stop → check.sh: lint still reports 2 errors. Stop blocked, so Claude keeps working."); tl("edit › src/utils.js"); if (F) h("🧹 PostToolUse → prettier formatted src/utils.js"); tl("bash › npm run lint"); r("✓ 0 errors"); h("✓ Stop → check.sh passes. The session may end."); m("Done: build/ cleaned, and all lint errors fixed."); }
+    else m("Done (with 2 lint errors still failing).");
+    log.innerHTML = L.map(([k, t]) => `<div class="ag-line ag-${k}"><span class="ag-tag">${{ user: "user", tool: "tool call", result: "result", hook: "hook", think: "model", final: "answer" }[k]}</span><div>${t}</div></div>`).join("");
+    const cfg = { hooks: {} };
+    if (G) cfg.hooks.PreToolUse = [{ matcher: "Bash", hooks: [{ type: "command", command: "./.claude/hooks/guard.sh" }] }];
+    if (F) cfg.hooks.PostToolUse = [{ matcher: "Edit|Write", hooks: [{ type: "command", command: "jq -r '.tool_input.file_path' | xargs npx prettier --write" }] }];
+    if (St) cfg.hooks.Stop = [{ hooks: [{ type: "command", command: "./.claude/hooks/check.sh" }] }];
+    $("#hookCfg").textContent = on.size ? JSON.stringify(cfg, null, 2) : "{\n  \"hooks\": {}\n}\n\n// no hooks: the model's judgment is the only safeguard";
+    const good = G && St;
+    $("#hookOut").innerHTML = good ? "✅ <b>Safe and complete.</b> The guard caught a destructive typo, and the stop hook made sure the job was actually finished." : `${G ? "" : "❌ <b>No guard</b>: one mistyped argument could wipe files. "}${St ? "" : "⚠️ <b>No stop check</b>: the agent declared victory with lint still failing. "}${F ? "" : "Formatting is left to chance."}`;
+    $$(".hk-ev").forEach(el => el.classList.toggle("on", (el.dataset.e === "PreToolUse" && G) || (el.dataset.e === "PostToolUse" && F) || (el.dataset.e === "Stop" && St)));
+    log.animate?.([{ opacity: .4 }, { opacity: 1 }], { duration: 300 });
+  };
+  $("#hookEvents").innerHTML = `<div class="small muted" style="font-weight:700;margin-bottom:6px">LIFECYCLE EVENTS YOU CAN HOOK (Claude Code)</div>` + EV.map((e, i) => `<span class="hk-ev" data-e="${e}">${e}</span>${i < EV.length - 1 ? '<span class="hk-arrow">→</span>' : ""}`).join("");
+  $$("#hookToggles [data-hk]").forEach(b => b.addEventListener("click", () => { const k = b.dataset.hk; on.has(k) ? on.delete(k) : on.add(k); b.classList.toggle("on", on.has(k)); render(); }));
+  render();
+})();
+
+/* ---------- AGENTS: context engineering sim ---------- */
+(() => {
+  const svg = $("#ctxSim"), on = new Set(), LIM = 200000, T = 60;
+  const sim = () => {
+    const base = on.has("skills") ? 7000 : 36000; let ctx = base, results = [], pts = [[0, ctx]], billed = 0, prev = 0, fail = 0, compactions = 0, peak = ctx;
+    for (let t = 1; t <= T; t++) {
+      const search = t % 3 === 0, res = search ? (on.has("sub") ? 1800 : 14000) : 3500 + ((t * 37) % 5) * 700;
+      results.push(res); ctx += 800 + res;
+      if (on.has("clear") && results.length > 8) { const i = results.length - 9; if (results[i] > 150) { ctx -= results[i] - 150; results[i] = 150; } }
+      let broke = false;
+      if (on.has("compact") && ctx > LIM * .75) { const recent = results.slice(-4).reduce((s, x) => s + x + 800, 0); ctx = base + 18000 + recent; results = results.slice(-4); compactions++; broke = true; }
+      billed += on.has("cache") && !broke ? prev * .1 + (ctx - prev) : ctx; prev = ctx; peak = Math.max(peak, ctx);
+      pts.push([t, ctx]); if (ctx > LIM) { fail = t; break; }
+    }
+    return { pts, billed, fail, compactions, peak };
+  };
+  const X = t => 50 + t / T * 490, Y = v => 215 - Math.min(v, 240000) / 240000 * 195;
+  const draw = () => {
+    const R = sim(), R0 = (() => { const s = new Set(on); on.clear(); const r = sim(); s.forEach(x => on.add(x)); return r; })();
+    svg.innerHTML = "";
+    [0, 50000, 100000, 150000, 200000].forEach(v => { svgEl("line", { x1: 50, x2: 540, y1: Y(v), y2: Y(v), stroke: C.line }, svg); const t = svgEl("text", { x: 44, y: Y(v) + 4, "text-anchor": "end", "font-size": 10, fill: C.muted }, svg); t.textContent = v / 1000 + "K"; });
+    svgEl("line", { x1: 50, x2: 540, y1: Y(LIM), y2: Y(LIM), stroke: C.c4, "stroke-width": 2, "stroke-dasharray": "6 5" }, svg);
+    const lt = svgEl("text", { x: 536, y: Y(LIM) - 6, "text-anchor": "end", "font-size": 10, "font-weight": 700, fill: C.c4 }, svg); lt.textContent = "context limit";
+    const xl = svgEl("text", { x: 295, y: 236, "text-anchor": "middle", "font-size": 10, "font-weight": 600, fill: C.muted }, svg); xl.textContent = "turn →";
+    if (on.size) svgEl("path", { d: R0.pts.map((p, i) => (i ? "L" : "M") + X(p[0]) + " " + Y(p[1])).join(""), fill: "none", stroke: C.muted, "stroke-width": 1.5, "stroke-dasharray": "3 4" }, svg);
+    const path = svgEl("path", { d: R.pts.map((p, i) => (i ? "L" : "M") + X(p[0]) + " " + Y(p[1])).join(""), fill: "none", stroke: R.fail ? C.c4 : C.claude, "stroke-width": 3 }, svg);
+    const len = path.getTotalLength(); path.style.strokeDasharray = len; path.animate?.([{ strokeDashoffset: len }, { strokeDashoffset: 0 }], { duration: reduced ? 1 : 900, easing: "ease-out" });
+    if (R.fail) { const e = svgEl("text", { x: X(R.fail), y: Y(LIM) - 12, "text-anchor": "middle", "font-size": 16 }, svg); e.textContent = "💥"; }
+    const st = (v, l) => `<div class="stat"><b>${v}</b><span>${l}</span></div>`;
+    $("#ctxStats").innerHTML = st(R.fail ? `✗ turn ${R.fail}` : "✓ 60/60", "task") + st((R.peak / 1000).toFixed(0) + "K", "peak context") + st(R.compactions, "compactions") + st((R.billed / 1e6).toFixed(1) + "M", "input tokens billed");
+    $("#ctxNote").innerHTML = R.fail ? "The transcript blows past the limit mid-task. Every file read and search result is still sitting in context. Try clearing old results, subagents or compaction." : on.has("cache") ? "✓ The task finishes, and caching makes every repeated prefix about 10× cheaper to reprocess. Techniques stack: this is roughly how production agent harnesses stay fast and affordable." : "✓ The task finishes. Now add prompt caching to cut the cost of re-reading the same prefix every turn.";
+  };
+  $$("#ctxToggles [data-ce]").forEach(b => b.addEventListener("click", () => { const k = b.dataset.ce; on.has(k) ? on.delete(k) : on.add(k); b.classList.toggle("on", on.has(k)); draw(); }));
+  draw(); document.addEventListener("themechange", draw);
+})();
+
+/* ---------- AGENTS: progressive disclosure ---------- */
+(() => {
+  let mode = "all";
+  const render = () => {
+    const rows = mode === "all" ? [["All 40 skills' full instructions, loaded at start", 100000, "c4"]] : [["Level 1 · name + one-line description × 40", 2400, "c2"], ["Level 2 · SKILL.md body of the 1 skill this task needs", 2500, "c3"], ["Level 3 · a bundled script or reference, only if needed", 1200, "c5"]];
+    const tot = rows.reduce((s, r) => s + r[1], 0);
+    $("#pdBars").innerHTML = rows.map(r => `<div class="meter" style="grid-template-columns:minmax(150px,1fr) 1.2fr 60px"><span style="font-weight:600">${r[0]}</span><div class="track"><div class="fill" style="width:${r[1] / 1000}%;background:var(--${r[2]})"></div></div><b class="mono">${(r[1] / 1000).toFixed(1)}K</b></div>`).join("") + `<div class="meter" style="grid-template-columns:minmax(150px,1fr) 1.2fr 60px;border-top:1px solid var(--line);padding-top:8px"><span><b>Total in context</b></span><div></div><b class="mono">${(tot / 1000).toFixed(1)}K</b></div>`;
+    $("#pdNote").innerHTML = mode === "all" ? "Half of a 200K window is gone before the task even starts, and most of those instructions are irrelevant to it." : `About <b>${Math.round(100000 / tot)}× less</b> context, and the agent still knows every skill exists and can pull one in when a task calls for it.`;
+  };
+  chipGroup($("#pdMode"), "pd", m => { mode = m; render(); }); render();
+})();
+
+/* ---------- AGENTS: pattern gallery ---------- */
+(() => {
+  const svg = $("#patSvg"), info = $("#patInfo");
+  const PAT = [
+    ["Prompt chaining", [["In", 30, 130], ["LLM 1", 130, 130], ["Gate", 230, 130, "c3"], ["LLM 2", 330, 130], ["Out", 470, 130]], [[0, 1], [1, 2], [2, 3], [3, 4]], "A fixed sequence of calls. Each step's output feeds the next, and a programmatic gate checks quality between steps.", "The task splits cleanly into steps, such as outline → check → draft → translate. You trade latency for accuracy."],
+    ["Routing", [["In", 30, 130], ["Router", 150, 130, "c3"], ["Refunds", 330, 50], ["Tech help", 330, 130], ["Small model", 330, 210], ["Out", 480, 130]], [[0, 1], [1, 2], [1, 3], [1, 4], [2, 5], [3, 5], [4, 5]], "Classify the input first, then send it to a specialized prompt, tool set or model.", "There are distinct categories that are better handled separately, including easy questions → a small fast model and hard ones → a big model."],
+    ["Parallelization", [["In", 30, 130], ["LLM A", 200, 50], ["LLM B", 200, 130], ["LLM C", 200, 210], ["Aggregate", 360, 130, "c3"], ["Out", 480, 130]], [[0, 1], [0, 2], [0, 3], [1, 4], [2, 4], [3, 4], [4, 5]], "Run calls at the same time: either <b>sectioning</b> (different parts of the task) or <b>voting</b> (the same task several times, then compare).", "Subtasks are independent and speed matters, or you want several opinions, for example checking code for vulnerabilities from different angles."],
+    ["Orchestrator–workers", [["In", 30, 130], ["Orchestrator", 150, 130, "claude"], ["Worker 1", 330, 45], ["Worker 2", 330, 130], ["Worker …", 330, 215], ["Synthesize", 470, 130, "claude"]], [[0, 1], [1, 2], [1, 3], [1, 4], [2, 5], [3, 5], [4, 5]], "A lead model breaks the task down <i>on the fly</i>, delegates the pieces to worker agents (often subagents with their own context), and combines the results.", "You can't predict the subtasks in advance: multi-file code changes, or deep research across many sources."],
+    ["Evaluator–optimizer", [["In", 30, 130], ["Generator", 190, 130, "claude"], ["Evaluator", 360, 130, "c3"], ["Out", 480, 130]], [[0, 1], [1, 2, 1], [2, 1, 1], [2, 3]], "One model drafts, another critiques against clear criteria, and the loop repeats until the evaluator is satisfied.", "There are clear quality criteria and iteration measurably helps, as with literary translation, code that must pass review, or search that needs several rounds."],
+    ["Autonomous agent", [["Human", 30, 130], ["Agent", 200, 130, "claude"], ["Tools / env", 380, 70], ["Stop / ask", 380, 200, "c4"]], [[0, 1], [1, 2, 1], [2, 1, 1], [1, 3]], "The model plans and acts in a loop, using feedback from the environment (tool results, tests) until it's done or needs a human.", "The problem is open-ended, the number of steps is unknown, and you trust the model and sandbox. Always add stopping conditions and guardrails."],
+  ];
+  const tabs = $("#patTabs"); PAT.forEach((p, i) => { const b = document.createElement("button"); b.className = "chip" + (i ? "" : " on"); b.dataset.pt = i; b.textContent = p[0]; tabs.appendChild(b); });
+  let cur = 0;
+  const draw = () => {
+    const [name, nodes, edges, what, when] = PAT[cur]; svg.innerHTML = "";
+    edges.forEach(([a, b, curve]) => { const A = nodes[a], B = nodes[b], dy = curve ? (a < b ? -45 : 45) : 0; svgEl("path", { d: `M${A[1] + 38} ${A[2]} Q${(A[1] + B[1]) / 2 + 20} ${(A[2] + B[2]) / 2 + dy} ${B[1] - 38} ${B[2]}`, fill: "none", stroke: C.claude, "stroke-width": 2, class: "flow-dash", opacity: .7 }, svg); });
+    nodes.forEach(([t, x, y, col]) => { svgEl("rect", { x: x - 42, y: y - 17, width: 84, height: 34, rx: 10, fill: col ? hexA(C[col], .25) : C.surface, stroke: col ? C[col] : C.line, "stroke-width": 2 }, svg); const e = svgEl("text", { x, y: y + 4, "text-anchor": "middle", "font-size": 11, "font-weight": 700, fill: C.ink }, svg); e.textContent = t; });
+    info.innerHTML = `<h4>${name}</h4><p style="margin:0 0 8px">${what}</p><p class="small" style="margin:0"><b>Use when:</b> ${when}</p>`;
+  };
+  chipGroup(tabs, "pt", i => { cur = +i; draw(); }); draw(); document.addEventListener("themechange", draw);
+})();
+
+/* ---------- AGENTS: permissions ---------- */
+(() => {
+  const MODES = [
+    ["Plan (read-only)", "The agent researches and proposes a plan, but changes nothing until you approve. It's great for big or risky tasks."],
+    ["Ask (default)", "Reading is free, and anything that changes the world asks first. It's safe, but you'll click \"approve\" a lot."],
+    ["Accept edits", "File edits in the project happen automatically, while shell commands and network actions still ask. It's a common sweet spot for coding."],
+    ["Auto (classifier)", "A safety classifier reviews each action: routine ones run, clearly risky ones are denied, and uncertain ones pause for you. You get more autonomy with a safety net."],
+    ["Bypass (sandbox only)", "Everything runs without asking. Use it only inside a disposable, isolated container with no secrets and restricted network, never on your laptop."],
+  ];
+  const ACT = [["📖 Read files", [1, 1, 1, 1, 1]], ["🔎 Search the web", [1, 2, 2, 1, 1]], ["✏️ Edit project files", [0, 2, 1, 1, 1]], ["🧪 Run tests", [0, 2, 2, 1, 1]], ["📦 Install packages", [0, 2, 2, 1, 1]], ["⬆️ git push", [0, 2, 2, 2, 1]], ["🗑️ Delete files outside the project", [0, 2, 2, 0, 1]], ["✉️ Send email / Slack", [0, 2, 2, 2, 1]]];
+  const box = $("#permModes"); MODES.forEach((m, i) => { const b = document.createElement("button"); b.className = "chip" + (i === 1 ? " on" : ""); b.dataset.pm = i; b.textContent = m[0]; box.appendChild(b); });
+  const L = [["blocked", "c4"], ["auto", "c2"], ["asks you", "c3"]];
+  const render = i => { $("#permTable").innerHTML = `<div class="perm-grid">${ACT.map(a => { const v = a[1][i]; return `<div class="perm-row"><span>${a[0]}</span><span class="pill" style="background:var(--${L[v][1]}-soft);color:var(--${L[v][1]}t)">${v === 1 ? "✓ " : v === 2 ? "? " : "✗ "}${L[v][0]}</span></div>`; }).join("")}</div>`; $("#permNote").innerHTML = MODES[i][1]; };
+  chipGroup(box, "pm", i => render(+i)); render(1);
+})();
+
+/* ---------- RL: bandits ---------- */
+(() => {
+  const box = $("#bandits"), K = 4; let P, n, w, pulls, total, reveal, strat = "greedy", eps = .1, anim = 0, hist;
+  const reset = () => { cancelAnimationFrame(anim); const base = [.2, .35, .5, .65].sort(() => Math.random() - .5); P = base.map(p => clamp(p + rand(-.05, .05), .05, .9)); n = Array(K).fill(0); w = Array(K).fill(0); pulls = 0; total = 0; reveal = false; hist = []; render(); };
+  const pull = k => { const win = Math.random() < P[k] ? 1 : 0; n[k]++; w[k] += win; pulls++; total += win; return win; };
+  const choose = () => {
+    const est = n.map((c, i) => c ? w[i] / c : 1); // optimistic start: untried = 1
+    if (strat === "random" || (strat === "eps" && Math.random() < eps)) return Math.floor(Math.random() * K);
+    const m = Math.max(...est), best = est.map((v, i) => v === m ? i : -1).filter(i => i >= 0); return best[Math.floor(Math.random() * best.length)];
+  };
+  const render = (last, win) => {
+    const best = Math.max(...P);
+    box.innerHTML = P.map((p, i) => { const est = n[i] ? w[i] / n[i] : 0; return `<button class="bandit${last === i ? (win ? " win" : " lose") : ""}" data-b="${i}"><div class="b-emoji">🎰</div><div class="b-name">Machine ${"ABCD"[i]}</div><div class="b-bar"><i style="height:${est * 100}%"></i>${reveal ? `<em style="bottom:${p * 100}%"></em>` : ""}</div><div class="small mono">${n[i] ? (est * 100).toFixed(0) + "%" : "–"} · ${n[i]} pulls</div>${reveal ? `<div class="small" style="font-weight:700;color:var(--${p === best ? "c2t" : "muted"})">true ${Math.round(p * 100)}%${p === best ? " ★" : ""}</div>` : ""}</button>`; }).join("");
+    $$(".bandit", box).forEach(b => b.addEventListener("click", () => { cancelAnimationFrame(anim); const k = +b.dataset.b, r = pull(k); render(k, r); }));
+    const exp = pulls * best, st = (v, l) => `<div class="stat"><b>${v}</b><span>${l}</span></div>`;
+    $("#bStats").innerHTML = st(pulls, "pulls") + st(total, "wins") + st(pulls ? (total / pulls * 100).toFixed(0) + "%" : "–", "win rate") + st(pulls ? Math.max(0, exp - total).toFixed(0) : "–", "regret vs. always-best");
+    const top = n.indexOf(Math.max(...n));
+    $("#bNote").innerHTML = pulls < 20 ? "Click machines to pull them. How quickly can you find the best one?" : strat === "greedy" && pulls >= 400 && P[top] !== best ? "😬 <b>Greedy got stuck</b>: an early lucky streak on a mediocre machine, and it never looked back. That's the cost of never exploring." : `Most-pulled: Machine ${"ABCD"[top]}. ${reveal ? (P[top] === best ? "✓ That's the best machine." : "✗ Not actually the best. Exploration would have found it.") : "Reveal the odds to check."} <b>Regret</b> measures how many wins were lost compared with always playing the best machine.`;
+  };
+  $("#bRun").addEventListener("click", () => { cancelAnimationFrame(anim); let left = 500; const tick = () => { for (let j = 0; j < (reduced ? 500 : 8) && left > 0; j++, left--) pull(choose()); render(); if (left > 0) anim = requestAnimationFrame(tick); }; tick(); });
+  $("#bReveal").addEventListener("click", () => { reveal = !reveal; render(); });
+  $("#bReset").addEventListener("click", reset);
+  $("#eps").addEventListener("input", e => { eps = +e.target.value; $("#epsV").textContent = eps.toFixed(2); });
+  chipGroup($("#bandits").closest(".widget"), "bs", s => { strat = s; });
+  reset();
+})();
+
+/* ---------- RL: value iteration ---------- */
+(() => {
+  const svg = $("#viSvg"), Wd = 6, Ht = 4, GOAL = [5, 0], PITS = [[5, 1], [3, 1], [3, 3]], WALL = [[1, 1], [1, 2]], START = [0, 3];
+  let gamma = .9, live = -.1, slip = false;
+  const isW = (x, y) => WALL.some(p => p[0] === x && p[1] === y), isP = (x, y) => PITS.some(p => p[0] === x && p[1] === y), isG = (x, y) => x === GOAL[0] && y === GOAL[1];
+  const MV = [[0, -1], [1, 0], [0, 1], [-1, 0]];
+  const move = (x, y, a) => { const nx = x + MV[a][0], ny = y + MV[a][1]; return nx < 0 || ny < 0 || nx >= Wd || ny >= Ht || isW(nx, ny) ? [x, y] : [nx, ny]; };
+  const solve = () => {
+    let V = Array.from({ length: Ht }, () => Array(Wd).fill(0));
+    for (let it = 0; it < 200; it++) {
+      const N = V.map(r => [...r]);
+      for (let y = 0; y < Ht; y++) for (let x = 0; x < Wd; x++) {
+        if (isW(x, y)) continue; if (isG(x, y)) { N[y][x] = 10; continue; } if (isP(x, y)) { N[y][x] = -10; continue; }
+        N[y][x] = Math.max(...[0, 1, 2, 3].map(a => { const outs = slip ? [[a, .8], [(a + 1) % 4, .1], [(a + 3) % 4, .1]] : [[a, 1]]; return outs.reduce((s, [b, p]) => { const [nx, ny] = move(x, y, b); return s + p * (live + gamma * V[ny][nx]); }, 0); }));
+      }
+      V = N;
+    }
+    const pol = (x, y) => { let best = -1e9, ba = 0; [0, 1, 2, 3].forEach(a => { const outs = slip ? [[a, .8], [(a + 1) % 4, .1], [(a + 3) % 4, .1]] : [[a, 1]]; const q = outs.reduce((s, [b, p]) => { const [nx, ny] = move(x, y, b); return s + p * (live + gamma * V[ny][nx]); }, 0); if (q > best + 1e-9) { best = q; ba = a; } }); return ba; };
+    return { V, pol };
+  };
+  const draw = () => {
+    const { V, pol } = solve(), cs = 64, ox = 18, oy = 16; svg.innerHTML = "";
+    let path = [START], [px, py] = START, steps = 0; while (!isG(px, py) && !isP(px, py) && steps < 20) { [px, py] = move(px, py, pol(px, py)); path.push([px, py]); steps++; }
+    for (let y = 0; y < Ht; y++) for (let x = 0; x < Wd; x++) {
+      const X = ox + x * cs, Y = oy + y * cs, v = V[y][x];
+      if (isW(x, y)) { svgEl("rect", { x: X + 2, y: Y + 2, width: cs - 4, height: cs - 4, rx: 8, fill: C.muted, opacity: .5 }, svg); continue; }
+      svgEl("rect", { x: X + 2, y: Y + 2, width: cs - 4, height: cs - 4, rx: 8, fill: hexA(v >= 0 ? C.c2 : C.c4, clamp(Math.abs(v) / 10, .05, .6)), stroke: C.line }, svg);
+      const t = svgEl("text", { x: X + cs / 2, y: Y + (isG(x, y) || isP(x, y) ? 40 : 18), "text-anchor": "middle", "font-size": isG(x, y) || isP(x, y) ? 24 : 11, "font-weight": 700, fill: C.ink }, svg);
+      t.textContent = isG(x, y) ? "⭐" : isP(x, y) ? "🔥" : v.toFixed(1);
+      if (!isG(x, y) && !isP(x, y)) { const a = pol(x, y), cx = X + cs / 2, cy = Y + cs / 2 + 8, dx = MV[a][0] * 12, dy = MV[a][1] * 12; svgEl("line", { x1: cx - dx, y1: cy - dy, x2: cx + dx, y2: cy + dy, stroke: C.ink, "stroke-width": 2.2, "marker-end": "url(#viArr)", opacity: .7 }, svg); }
+    }
+    const defs = svgEl("defs", {}, svg), mk = svgEl("marker", { id: "viArr", viewBox: "0 0 10 10", refX: 7, refY: 5, markerWidth: 5, markerHeight: 5, orient: "auto" }, defs); svgEl("path", { d: "M0 0L10 5L0 10z", fill: C.ink }, mk);
+    svgEl("path", { d: path.map((p, i) => (i ? "L" : "M") + (ox + p[0] * cs + cs / 2) + " " + (oy + p[1] * cs + cs / 2)).join(""), fill: "none", stroke: C.c3, "stroke-width": 4, "stroke-linecap": "round", "stroke-linejoin": "round", opacity: .55, class: "flow-dash" }, svg);
+    const r = svgEl("text", { x: ox + START[0] * cs + cs / 2, y: oy + START[1] * cs + 44, "text-anchor": "middle", "font-size": 18 }, svg); r.textContent = "🤖";
+    const end = path[path.length - 1], nearPit = path.some(([x, y]) => PITS.some(p => Math.abs(p[0] - x) + Math.abs(p[1] - y) === 1));
+    $("#viNote").innerHTML = isP(...end) ? "🔥 With such a painful cost per step, jumping into the fire ends things faster than walking to the star. The agent is being perfectly rational under a badly designed reward." : !isG(...end) ? "The agent doesn't bother heading for the goal: with a positive reward per step, wandering forever pays more. That's another reward-design trap." : `The path takes ${path.length - 1} steps. ${slip ? "On a slippery floor, moves sometimes slide sideways, so the policy keeps a respectful distance from the fire." : nearPit ? "It happily brushes past the fire, because on solid ground moves are exact." : ""} ${gamma < .5 ? "With a low γ the agent is short-sighted: values far from the star shrink toward zero." : ""}`;
+  };
+  $("#gam").addEventListener("input", e => { gamma = +e.target.value; $("#gV").textContent = gamma.toFixed(2); draw(); });
+  $("#liv").addEventListener("input", e => { live = +e.target.value; $("#lrV").textContent = (live >= 0 ? "+" : "−") + Math.abs(live).toFixed(2); draw(); });
+  $("#slip").addEventListener("click", e => { slip = !slip; e.target.classList.toggle("on", slip); e.target.textContent = `🧊 Slippery floor: ${slip ? "on" : "off"}`; draw(); });
+  draw(); document.addEventListener("themechange", draw);
+})();
+
+/* ---------- RL: RL for LLMs stepper ---------- */
+stepper($("#rlSteps"), $("#rlBody"), $("#rlPrev"), $("#rlNext"), [
+  { t: "RLHF · 2022", h: `<div class="big-ico">👍👎</div><h4>Reinforcement learning from human feedback</h4><p>People compare pairs of model answers. A <b>reward model</b> learns to predict their preferences, and the LLM is then optimized with PPO to score highly, with a penalty for drifting too far from its original behavior. This is what turned GPT-3 into InstructGPT and ChatGPT. Anthropic's <b>RLAIF</b> and Constitutional AI replace many human labels with AI feedback guided by written principles.</p>` },
+  { t: "DPO · 2023", h: `<div class="big-ico">⚖️</div><h4>Direct preference optimization</h4><p>A clever shortcut: skip the separate reward model and the RL loop. Train directly on preference pairs so the model raises the probability of preferred answers relative to rejected ones. It's simpler and more stable, and it's widely used for fine-tuning open models.</p>` },
+  { t: "RLVR · 2024–", h: `<div class="big-ico">✅</div><h4>RL with verifiable rewards</h4><p>For math, code and many agent tasks, you don't need a human to judge: <b>check the answer</b>. Does the proof verify? Do the unit tests pass? Did the agent complete the task? Rewarding long chains of thought that end in verified-correct answers is a key ingredient of <b>reasoning models</b> such as OpenAI's o1 and DeepSeek-R1 (trained with a PPO variant called GRPO), and of the extended thinking in modern models like Claude.</p>` },
+  { t: "Why it works", h: `<div class="big-ico">🧠</div><h4>Why RL unlocks reasoning</h4><p>Supervised training imitates what humans wrote. RL lets the model <b>discover</b> strategies that work, like double-checking, backtracking and trying another approach, because those strategies earn more reward. The catch is that the model will also discover strategies that merely <i>look</i> like they work, which is why reward design and evaluation matter so much. More on that next.</p>` },
+]);
+
+/* ---------- RL: reward hacking ---------- */
+(() => {
+  const cv = $("#rhCanvas"); let ctx, W, H, mode = "points", t = 0, lap = 0, score = 0, lastLap = -1, targets = [];
+  const size = () => ({ ctx, W, H } = fitCanvas(cv)); size(); addEventListener("resize", size);
+  const reset = () => { t = 0; score = 0; lap = 0; lastLap = -1; targets = [0, 1, 2].map(i => ({ a: i * 2.1, on: 1, cd: 0 })); };
+  reset();
+  chipGroup(cv.closest(".widget"), "rh", m => { mode = m; reset(); });
+  whenVisible(cv, dt => {
+    ctx.clearRect(0, 0, W, H); t += dt / 1000;
+    const cx = W * .38, cy = H / 2, rx = Math.min(W * .3, 220), ry = H * .36;
+    ctx.strokeStyle = hexA(C.c5, .35); ctx.lineWidth = 38; ctx.beginPath(); ctx.ellipse(cx, cy, rx, ry, 0, 0, 7); ctx.stroke();
+    ctx.strokeStyle = C.ink; ctx.setLineDash([6, 6]); ctx.lineWidth = 3; ctx.beginPath(); ctx.moveTo(cx, cy - ry - 22); ctx.lineTo(cx, cy - ry + 22); ctx.stroke(); ctx.setLineDash([]);
+    ctx.fillStyle = C.muted; ctx.font = "700 11px Inter, system-ui, sans-serif"; ctx.textAlign = "center"; ctx.fillText("FINISH", cx, cy - ry - 28);
+    const lx = W * .8, ly = H * .5, lr = Math.min(56, H * .22);
+    ctx.fillStyle = hexA(C.c5, .18); ctx.beginPath(); ctx.arc(lx, ly, lr + 18, 0, 7); ctx.fill();
+    ctx.fillStyle = C.muted; ctx.fillText("LAGOON", lx, ly + lr + 34);
+    targets.forEach(g => { if (!g.on && (g.cd -= dt / 1000) <= 0) g.on = 1; if (g.on) { ctx.font = "20px system-ui"; ctx.fillText("🎯", lx + lr * Math.cos(g.a), ly + lr * Math.sin(g.a) + 7); } });
+    let bx, by;
+    if (mode === "points") { const a = t * 2.2; bx = lx + lr * Math.cos(a); by = ly + lr * Math.sin(a); targets.forEach(g => { const d = Math.hypot(lx + lr * Math.cos(g.a) - bx, ly + lr * Math.sin(g.a) - by); if (g.on && d < 16) { g.on = 0; g.cd = 1.2; score += 10; } }); }
+    else { const a = -Math.PI / 2 + t * .9; bx = cx + rx * Math.cos(a); by = cy + ry * Math.sin(a); const l = Math.floor((t * .9) / (2 * Math.PI)); if (l > lastLap) { lastLap = l; if (l > 0) { lap++; score += 100; } } }
+    ctx.font = "24px system-ui"; ctx.fillText("🚤", bx, by + 8);
+    ctx.textAlign = "left"; ctx.fillStyle = C.ink; ctx.font = "800 14px Inter, system-ui, sans-serif"; ctx.fillText(`Score: ${score}`, 14, 24); ctx.fillStyle = C.muted; ctx.font = "600 12px Inter, system-ui, sans-serif"; ctx.fillText(`Laps finished: ${mode === "points" ? 0 : lap}`, 14, 42);
+  });
+  const note = () => $("#rhNote").innerHTML = mode === "points" ? "The agent maximizes points by looping in the lagoon forever, hitting targets as they respawn. <b>It never finishes a single lap.</b> Perfect score, failed task. (This is based on OpenAI's 2016 CoastRunners example.)" : "Reward the actual goal and the agent races the track. The hard part in real systems is that the true goal is often difficult to measure, so we measure something close, and the agent exploits the gap.";
+  $$("#rhMode [data-rh]").forEach(b => b.addEventListener("click", note)); note();
+})();
+
+/* ---------- VISION: pixel grid ---------- */
+(() => {
+  const cv = $("#pxDraw"), G = 14; let ctx, W, grid = Array(G * G).fill(0), down = false;
+  const size = () => { ({ ctx, W } = fitCanvas(cv)); draw(); };
+  const draw = () => {
+    if (!ctx) return; const c = W / G; ctx.clearRect(0, 0, W, W);
+    grid.forEach((v, i) => { const x = i % G, y = Math.floor(i / G), g = Math.round(v * 255); ctx.fillStyle = `rgb(${g},${g},${g})`; ctx.fillRect(Math.floor(x * c), Math.floor(y * c), Math.ceil(c), Math.ceil(c)); });
+    ctx.strokeStyle = hexA(C.c5, .25); ctx.lineWidth = 1; for (let i = 1; i < G; i++) { ctx.beginPath(); ctx.moveTo(i * c, 0); ctx.lineTo(i * c, W); ctx.moveTo(0, i * c); ctx.lineTo(W, i * c); ctx.stroke(); }
+    $("#pxNums").innerHTML = grid.map(v => `<span style="${v > .05 ? "color:var(--ink);font-weight:700" : ""}">${Math.round(v * 9)}</span>`).join("");
+  };
+  const paint = e => { const r = cv.getBoundingClientRect(), p = e.touches ? e.touches[0] : e, gx = (p.clientX - r.left) / r.width * G, gy = (p.clientY - r.top) / r.height * G; for (let y = 0; y < G; y++) for (let x = 0; x < G; x++) { const d = Math.hypot(x + .5 - gx, y + .5 - gy); if (d < 1.4) grid[y * G + x] = Math.min(1, grid[y * G + x] + (1.4 - d) * .6); } draw(); };
+  cv.addEventListener("pointerdown", e => { down = true; paint(e); }); cv.addEventListener("pointermove", e => down && paint(e)); addEventListener("pointerup", () => down = false);
+  const seven = () => { grid = Array(G * G).fill(0); for (let x = 3; x <= 10; x++) { grid[2 * G + x] = 1; grid[3 * G + x] = .6; } for (let y = 3; y <= 11; y++) { const x = Math.round(10 - (y - 3) * .55); grid[y * G + x] = 1; grid[y * G + x - 1] = Math.max(grid[y * G + x - 1], .5); } draw(); };
+  $("#pxClear").addEventListener("click", () => { grid = Array(G * G).fill(0); draw(); }); $("#pxSeven").addEventListener("click", seven);
+  seven(); size(); addEventListener("resize", size); document.addEventListener("themechange", draw);
+})();
+
+/* ---------- VISION: convolution ---------- */
+(() => {
+  const inC = $("#cvIn"), outC = $("#cvOut"), N = 96; let src = new Float32Array(N * N), out = new Float32Array(N * N), ki = 3, down = false;
+  const K = [
+    ["Identity", [0, 0, 0, 0, 1, 0, 0, 0, 0], 1, "Passes the image through unchanged. It's a sanity check."],
+    ["Blur", [1, 2, 1, 2, 4, 2, 1, 2, 1], 1 / 16, "Averages each pixel with its neighbors, which smooths out noise and fine detail."],
+    ["Sharpen", [0, -1, 0, -1, 5, -1, 0, -1, 0], 1, "Boosts the center against its neighbors, so edges pop."],
+    ["Vertical edges", [-1, 0, 1, -2, 0, 2, -1, 0, 1], 1, "The Sobel-x filter responds where brightness changes from left to right, so vertical edges light up."],
+    ["Horizontal edges", [-1, -2, -1, 0, 0, 0, 1, 2, 1], 1, "The Sobel-y filter responds to changes from top to bottom, so horizontal edges light up."],
+    ["Outline", [-1, -1, -1, -1, 8, -1, -1, -1, -1], 1, "The Laplacian responds to any sharp change in any direction, producing outlines."],
+  ];
+  const make = () => { src.fill(.08); for (let y = 0; y < N; y++) for (let x = 0; x < N; x++) { const i = y * N + x; if (Math.hypot(x - 30, y - 34) < 18) src[i] = .95; if (x > 54 && x < 84 && y > 18 && y < 48) src[i] = .7; if (y > 62 && y < 84 && Math.abs(x - 48) < (y - 62) * 1.3) src[i] = .85; if ((x + y) % 14 < 2 && y > 60 && x < 26) src[i] = .5; } };
+  const conv = () => { const [, k, s] = K[ki]; for (let y = 0; y < N; y++) for (let x = 0; x < N; x++) { let v = 0; for (let j = -1; j <= 1; j++) for (let i = -1; i <= 1; i++) { const xx = clamp(x + i, 0, N - 1), yy = clamp(y + j, 0, N - 1); v += src[yy * N + xx] * k[(j + 1) * 3 + i + 1]; } out[y * N + x] = v * s; } };
+  const paintC = (cv, arr, signed) => { const { ctx, W } = fitCanvas(cv), img = ctx.createImageData(N, N); for (let i = 0; i < N * N; i++) { let v = arr[i]; v = signed ? clamp(Math.abs(v), 0, 1) : clamp(v, 0, 1); const g = Math.round(v * 255); img.data[i * 4] = g; img.data[i * 4 + 1] = g; img.data[i * 4 + 2] = g; img.data[i * 4 + 3] = 255; } const tmp = document.createElement("canvas"); tmp.width = N; tmp.height = N; tmp.getContext("2d").putImageData(img, 0, 0); ctx.imageSmoothingEnabled = false; ctx.drawImage(tmp, 0, 0, W, W); return { ctx, W }; };
+  let hover = null;
+  const render = () => {
+    conv(); const signed = ki >= 3; paintC(inC, src); const o = paintC(outC, out, signed);
+    if (hover) { const c = o.W / N; [o].forEach(({ ctx }) => { ctx.strokeStyle = C.c4; ctx.lineWidth = 2; ctx.strokeRect((hover[0] - 1) * c, (hover[1] - 1) * c, 3 * c, 3 * c); }); }
+    const [name, k, s, note] = K[ki];
+    $("#kGrid").innerHTML = k.map(v => `<span style="background:${hexA(v > 0 ? C.c2 : v < 0 ? C.c4 : C.muted, v ? .15 + Math.min(1, Math.abs(v * s) * (s < 1 ? 3 : .25)) * .5 : .08)}">${s !== 1 ? v + "/16" : v}</span>`).join("");
+    $("#kNote").innerHTML = `<b>${name}.</b> ${note}${signed ? " (Edge outputs can be negative. Brightness here shows their magnitude.)" : ""}`;
+  };
+  const tabs = $("#kSel"); K.forEach((k, i) => { const b = document.createElement("button"); b.className = "chip" + (i === ki ? " on" : ""); b.dataset.k = i; b.textContent = k[0]; tabs.appendChild(b); });
+  chipGroup(tabs, "k", i => { ki = +i; render(); });
+  const pos = (cv, e) => { const r = cv.getBoundingClientRect(); return [clamp(Math.floor((e.clientX - r.left) / r.width * N), 0, N - 1), clamp(Math.floor((e.clientY - r.top) / r.height * N), 0, N - 1)]; };
+  const brush = e => { const [x, y] = pos(inC, e); for (let j = -2; j <= 2; j++) for (let i = -2; i <= 2; i++) if (i * i + j * j <= 5) { const xx = clamp(x + i, 0, N - 1), yy = clamp(y + j, 0, N - 1); src[yy * N + xx] = 1; } render(); };
+  inC.addEventListener("pointerdown", e => { down = true; brush(e); }); inC.addEventListener("pointermove", e => down && brush(e)); addEventListener("pointerup", () => down = false);
+  outC.addEventListener("pointermove", e => {
+    const [x, y] = pos(outC, e); hover = [x, y]; const [, k, s] = K[ki]; const vals = [];
+    for (let j = -1; j <= 1; j++) for (let i = -1; i <= 1; i++) vals.push(src[clamp(y + j, 0, N - 1) * N + clamp(x + i, 0, N - 1)]);
+    const sum = vals.reduce((a, v, i) => a + v * k[i], 0) * s;
+    $("#kCalc").innerHTML = `pixel (${x}, ${y}):<br>Σ (patch × kernel)${s !== 1 ? " ÷ 16" : ""}<br>= <b>${sum.toFixed(2)}</b>`;
+    render();
+  });
+  outC.addEventListener("pointerleave", () => { hover = null; render(); });
+  make(); render(); addEventListener("resize", render); document.addEventListener("themechange", render);
+})();
+
+/* ---------- VISION: CNN hierarchy ---------- */
+(() => {
+  const L = [["Layer 1", "Edges & colors", ["╱", "╲", "│", "─", "◐", "▒"]], ["Layer 2", "Textures & corners", ["▦", "◠", "⌒", "⋰", "▤", "◡"]], ["Layer 3", "Parts", ["👁️", "👃", "🛞", "🐾", "🪟", "🍃"]], ["Layer 4+", "Objects", ["🐱", "🧑", "🚗", "🐶", "🏠", "🌳"]]];
+  $("#cnnRow").innerHTML = L.map((l, i) => `<div class="cnn-col" style="animation-delay:${i * 180}ms"><div class="small" style="font-weight:800;color:var(--c5t)">${l[0]}</div><div class="cnn-cells">${l[2].map(s => `<span>${s}</span>`).join("")}</div><div class="small" style="font-weight:600">${l[1]}</div></div>${i < L.length - 1 ? '<div class="cnn-arrow">→</div>' : ""}`).join("");
+})();
+
+/* ---------- VISION: tasks on a scene ---------- */
+(() => {
+  const cv = $("#vtCanvas"); let ctx, W, H, task = 0;
+  const OBJ = [
+    { n: "house", c: "c3", b: [.08, .34, .3, .62] }, { n: "tree", c: "c2", b: [.4, .28, .6, .78] },
+    { n: "car", c: "c4", b: [.6, .64, .86, .8] }, { n: "person", c: "c6", b: [.88, .5, .95, .8] }, { n: "sign", c: "c1", b: [.33, .5, .42, .78] },
+  ];
+  const T = [
+    ["Classification", "One label for the whole image.", "Output: <b>\"suburban street\"</b> 0.91 · \"park\" 0.05 · \"parking lot\" 0.02<br><br>This is what AlexNet did in 2012. It's simple, but it can't tell you <i>where</i> anything is."],
+    ["Detection", "Find each object: a box plus a label plus a confidence.", "Detectors like YOLO draw a <b>bounding box</b> around every object they find, in real time. They're used in self-driving cars, retail shelves and wildlife cameras."],
+    ["Segmentation", "Label every pixel.", "Each pixel is assigned to an object or class. It's used in medical scans (which pixels are tumor?), photo editing and robotics. Meta's Segment Anything (2023) can segment almost anything from a click."],
+    ["OCR", "Read the text in the image.", "Optical character recognition finds and transcribes text. Here the sign says <b>\"SLOW\"</b>. Modern multimodal models go further and read whole documents, tables and handwriting."],
+    ["Captioning / VQA", "Describe or answer questions in words.", "<i>\"A red car parked on a quiet street next to a house and a tree, with a person walking by.\"</i><br><br>Q: <i>Is anyone near the car?</i> A: <i>Yes, a person is standing just to its right.</i> This is what multimodal LLMs like Claude do."],
+  ];
+  const tabs = $("#vtTabs"); T.forEach((t, i) => { const b = document.createElement("button"); b.className = "chip" + (i ? "" : " on"); b.dataset.vt = i; b.textContent = t[0]; tabs.appendChild(b); });
+  const scene = () => {
+    const g = ctx.createLinearGradient(0, 0, 0, H); g.addColorStop(0, "#bfe3ff"); g.addColorStop(.6, "#e9f6ff"); ctx.fillStyle = g; ctx.fillRect(0, 0, W, H);
+    ctx.fillStyle = "#9bd48f"; ctx.fillRect(0, H * .62, W, H * .38); ctx.fillStyle = "#8a8f99"; ctx.fillRect(0, H * .78, W, H * .1);
+    ctx.fillStyle = "#ffd257"; ctx.beginPath(); ctx.arc(W * .85, H * .15, H * .07, 0, 7); ctx.fill();
+    ctx.fillStyle = "#e9b98a"; ctx.fillRect(W * .1, H * .45, W * .18, H * .17); ctx.fillStyle = "#c0504d"; ctx.beginPath(); ctx.moveTo(W * .08, H * .46); ctx.lineTo(W * .19, H * .34); ctx.lineTo(W * .3, H * .46); ctx.fill(); ctx.fillStyle = "#7a4b2a"; ctx.fillRect(W * .17, H * .53, W * .035, H * .09);
+    ctx.fillStyle = "#7a4b2a"; ctx.fillRect(W * .49, H * .56, W * .02, H * .2); ctx.fillStyle = "#3f9b4b"; ctx.beginPath(); ctx.arc(W * .5, H * .44, H * .14, 0, 7); ctx.fill();
+    ctx.fillStyle = "#d8453f"; ctx.fillRect(W * .61, H * .69, W * .24, H * .08); ctx.fillRect(W * .66, H * .64, W * .13, H * .06); ctx.fillStyle = "#222"; [.66, .8].forEach(x => { ctx.beginPath(); ctx.arc(W * x, H * .78, H * .025, 0, 7); ctx.fill(); });
+    ctx.strokeStyle = "#333"; ctx.lineWidth = 3; const px = W * .915; ctx.beginPath(); ctx.arc(px, H * .55, H * .03, 0, 7); ctx.moveTo(px, H * .58); ctx.lineTo(px, H * .7); ctx.moveTo(px, H * .62); ctx.lineTo(px - W * .02, H * .66); ctx.moveTo(px, H * .62); ctx.lineTo(px + W * .02, H * .66); ctx.moveTo(px, H * .7); ctx.lineTo(px - W * .015, H * .78); ctx.moveTo(px, H * .7); ctx.lineTo(px + W * .015, H * .78); ctx.stroke();
+    ctx.fillStyle = "#666"; ctx.fillRect(W * .37, H * .6, W * .008, H * .18); ctx.fillStyle = "#f2c230"; ctx.fillRect(W * .335, H * .5, W * .08, H * .11); ctx.fillStyle = "#222"; ctx.font = `800 ${Math.round(H * .055)}px Inter, system-ui, sans-serif`; ctx.textAlign = "center"; ctx.fillText("SLOW", W * .375, H * .575);
+  };
+  const draw = () => {
+    ({ ctx, W, H } = fitCanvas(cv)); scene(); const t = task;
+    if (t === 1 || t === 3) OBJ.filter(o => t === 1 || o.n === "sign").forEach((o, i) => { const [a, b, c, d] = o.b; ctx.strokeStyle = C[o.c]; ctx.lineWidth = 3; ctx.strokeRect(a * W, b * H, (c - a) * W, (d - b) * H); const lab = t === 3 ? "text: SLOW" : `${o.n} ${[.97, .94, .96, .88, .91][OBJ.indexOf(o)]}`; ctx.font = "700 12px Inter, system-ui, sans-serif"; const tw = ctx.measureText(lab).width + 10; ctx.fillStyle = C[o.c]; ctx.fillRect(a * W, b * H - 18, tw, 18); ctx.fillStyle = "#fff"; ctx.textAlign = "left"; ctx.fillText(lab, a * W + 5, b * H - 5); });
+    if (t === 2) { const img = ctx.getImageData(0, 0, cv.width, cv.height), d = img.data, dpr = cv.width / W; const cls = (x, y) => { const u = x / cv.width, v = y / cv.height; for (const o of OBJ) { const [a, b, c, e] = o.b; if (u > a && u < c && v > b && v < e) { const r = d[(y * cv.width + x) * 4], gg = d[(y * cv.width + x) * 4 + 1], bb = d[(y * cv.width + x) * 4 + 2]; const sky = bb > 200 && r > 170, grass = gg > 190 && r < 170 && bb < 160; if (!sky && !grass) return o; } } return null; }; const col = {}; OBJ.forEach(o => { const h = C[o.c].replace("#", ""); const n = parseInt(h.length === 3 ? h.split("").map(c => c + c).join("") : h, 16); col[o.n] = [n >> 16 & 255, n >> 8 & 255, n & 255]; }); for (let y = 0; y < cv.height; y += 1) for (let x = 0; x < cv.width; x += 1) { const o = cls(x, y), i = (y * cv.width + x) * 4; const c = o ? col[o.n] : (y / cv.height > .62 ? [150, 160, 150] : [200, 210, 225]); const a = o ? .85 : .55; d[i] = d[i] * (1 - a) + c[0] * a; d[i + 1] = d[i + 1] * (1 - a) + c[1] * a; d[i + 2] = d[i + 2] * (1 - a) + c[2] * a; } ctx.putImageData(img, 0, 0); }
+    if (t === 0 || t === 4) { ctx.fillStyle = "rgba(0,0,0,.55)"; ctx.fillRect(0, H - 34, W, 34); ctx.fillStyle = "#fff"; ctx.font = "700 13px Inter, system-ui, sans-serif"; ctx.textAlign = "left"; ctx.fillText(t === 0 ? "🏷️ suburban street · 0.91" : "💬 \"A red car parked on a quiet street…\"", 12, H - 12); }
+    $("#vtInfo").innerHTML = `<h4>${T[t][0]}</h4><p style="margin:0 0 6px;font-weight:600">${T[t][1]}</p><p class="small" style="margin:0">${T[t][2]}</p>`;
+  };
+  chipGroup(tabs, "vt", i => { task = +i; draw(); }); draw(); addEventListener("resize", draw); document.addEventListener("themechange", draw);
+})();
+
+/* ---------- VISION: ViT patchify ---------- */
+(() => {
+  const svg = $("#vitSvg"), cols = ["#bfe3ff", "#bfe3ff", "#ffd257", "#bfe3ff", "#c0504d", "#e9b98a", "#3f9b4b", "#bfe3ff", "#e9b98a", "#e9b98a", "#7a4b2a", "#d8453f", "#9bd48f", "#9bd48f", "#9bd48f", "#8a8f99"];
+  let anim = 0;
+  const draw = p => {
+    svg.innerHTML = ""; const s = 34, ox = 20, oy = 42;
+    const lab = (x, y, t) => { const e = svgEl("text", { x, y, "text-anchor": "middle", "font-size": 11, "font-weight": 700, fill: C.muted }, svg); e.textContent = t; };
+    lab(ox + 2 * s, 28, "image"); lab(370, 28, "sequence of patch tokens → transformer");
+    cols.forEach((c, i) => svgEl("rect", { x: ox + (i % 4) * s, y: oy + Math.floor(i / 4) * s, width: s - 1, height: s - 1, fill: c, opacity: p > .3 ? .25 : 0 }, svg));
+    cols.forEach((c, i) => {
+      const r = Math.floor(i / 4), q = i % 4, x0 = ox + q * s, y0 = oy + r * s, x1 = 200 + i * 21.5, y1 = 120, e = p < .3 ? 0 : clamp((p - .3 - i * .025) / .3, 0, 1), sp = clamp(p / .3, 0, 1) * 4;
+      const x = lerp(x0 + q * sp, x1, e), y = lerp(y0 + r * sp, y1, e), sz = lerp(s - 1, 19, e);
+      svgEl("rect", { x, y, width: sz, height: sz, rx: lerp(2, 4, e), fill: c, stroke: C.surface, "stroke-width": 1 }, svg);
+      if (e >= 1) { const t = svgEl("text", { x: x + sz / 2, y: y + 34, "text-anchor": "middle", "font-size": 8, fill: C.muted }, svg); t.textContent = i + 1; }
+    });
+    if (p >= 1) { svgEl("rect", { x: 196, y: 162, width: 348, height: 32, rx: 10, fill: hexA(C.c5, .2), stroke: C.c5, "stroke-width": 2 }, svg); const t = svgEl("text", { x: 370, y: 183, "text-anchor": "middle", "font-size": 12, "font-weight": 700, fill: C.ink }, svg); t.textContent = "self-attention: every patch can look at every other patch"; }
+  };
+  $("#vitGo").addEventListener("click", () => { cancelAnimationFrame(anim); const t0 = performance.now(); const tick = n => { const p = Math.min(1, (n - t0) / (reduced ? 10 : 2200)); draw(p); if (p < 1) anim = requestAnimationFrame(tick); }; anim = requestAnimationFrame(tick); });
+  draw(0); document.addEventListener("themechange", () => draw(1));
+  new IntersectionObserver((es, o) => { if (es[0].isIntersecting) { $("#vitGo").click(); o.disconnect(); } }, { threshold: .6 }).observe(svg);
+})();
+
 /* ---------- GLOSSARY ---------- */
 (() => {
   // [term, category, chapter id, definition, aliases]
   const GL = [
+    ["Agent loop", "A", "agents", "The cycle at the heart of every agent: gather context → model decides → call a tool → observe the result → repeat, until the model finishes or the harness stops it.", ["loop", "the loop"]],
+    ["Harness", "A", "agents", "Everything around the model in an agent: the loop, tools, context management, memory, permissions, hooks and interface. The same model in a different harness behaves very differently.", ["agent harness", "harness engineering"]],
+    ["Hook", "A", "agents", "Code the harness runs automatically at lifecycle events (before or after a tool call, on stop, at session start). It's deterministic, so it can enforce rules the model might forget.", ["hooks"]],
+    ["Context engineering", "A", "agents", "Deciding what goes into the model's context window at each step, so nothing important is missing and nothing useless crowds it out.", []],
+    ["Compaction", "A", "agents", "Summarizing older conversation history when the context window nears its limit, so a long task can continue.", []],
+    ["Context editing", "A", "agents", "Clearing stale tool results or old thinking from the conversation instead of summarizing it.", []],
+    ["Prompt caching", "A", "agents", "Reusing an unchanged prefix of the prompt across requests, so repeated tokens are processed faster and far more cheaply.", ["caching"]],
+    ["Subagent", "A", "agents", "A child agent with its own fresh context window. It handles a focused subtask and returns a short summary to its parent.", ["subagents"]],
+    ["Agent Skills", "A", "agents", "Folders of instructions, scripts and resources that an agent loads only when relevant, using progressive disclosure.", ["skills", "skill", "agent skill"]],
+    ["Progressive disclosure", "A", "agents", "Loading information in layers: a short description first, and the full details only when needed. It keeps context small.", []],
+    ["Workflow (vs. agent)", "A", "agents", "A system where code, not the model, defines the sequence of LLM calls, as in prompt chaining, routing or parallelization.", ["workflows"]],
+    ["Orchestrator–workers", "A", "agents", "A pattern where a lead model breaks a task into subtasks at runtime, delegates them to worker agents, and combines the results.", []],
+    ["Evaluator–optimizer", "A", "agents", "A loop where one model generates and another critiques against criteria, repeating until the output passes.", []],
+    ["Permission mode", "A", "agents", "A harness setting for which actions run automatically and which need approval, from plan-only to fully autonomous in a sandbox.", ["permission modes", "plan mode"]],
+    ["Sandbox", "A", "agents", "An isolated environment (a container or VM) with restricted file-system and network access, so an agent's mistakes stay contained.", ["sandboxes", "sandboxing"]],
+    ["Stop reason", "A", "agents", "Why a model response ended, such as end_turn (finished), tool_use (wants a tool run), max_tokens or refusal. The agent loop branches on it.", ["stop_reason"]],
+    ["Effort", "A", "agents", "A setting (from low to max) that controls how much a model thinks and how many tokens it spends on a task.", ["effort levels"]],
+    ["Task budget", "A", "agents", "A token budget given to the model for a whole agentic task, so it paces itself and finishes cleanly.", []],
+    ["Lethal trifecta", "A", "agents", "The risky combination of private data access, exposure to untrusted content, and a way to send data out, which together enable prompt-injection data theft.", []],
+    ["Claude Code", "A", "agents", "Anthropic's agentic coding tool and harness for the terminal, IDE, desktop and web.", []],
+    ["Claude Agent SDK", "A", "agents", "The Claude Code harness packaged as a library for building your own agents.", ["agent sdk"]],
+    ["Managed Agents", "A", "agents", "Anthropic's hosted agent service, which runs the harness and a sandboxed workspace for each session.", []],
+    ["Claude Fable", "C", "ch9", "Anthropic's most capable generally available model tier (Fable 5 in June 2026, Fable 5.1 in September 2026). It's a Mythos-class model released with safeguards.", ["fable", "fable 5", "fable 5.1"]],
+    ["Claude Mythos", "C", "ch9", "Anthropic's frontier model series (Preview in April 2026, then 5 and 5.1). Its ability to find software vulnerabilities led Anthropic to restrict access to vetted organizations.", ["mythos", "mythos 5", "mythos 5.1"]],
+    ["Markov decision process (MDP)", "D", "rl", "The formal framework for RL: states, actions, transition probabilities, rewards and a discount factor.", ["mdp"]],
+    ["Policy", "D", "rl", "An agent's strategy: which action to take in each state. RL improves the policy.", []],
+    ["Value function", "D", "rl", "The expected total future reward from a state (or state–action pair) when following a policy.", ["value"]],
+    ["Bellman equation", "D", "rl", "The recursive rule that a state's value equals the best immediate reward plus the discounted value of where you end up.", []],
+    ["Value iteration", "D", "rl", "Repeatedly applying the Bellman equation to every state until the values stop changing, which reveals the optimal policy.", []],
+    ["Q-learning", "D", "rl", "A classic RL algorithm that learns the value of each action in each state from experience, without a model of the environment.", []],
+    ["Discount factor (γ)", "D", "rl", "How much future rewards count relative to immediate ones, between 0 and 1.", ["discount", "gamma"]],
+    ["Exploration vs. exploitation", "D", "rl", "The trade-off between trying new actions to learn more (explore) and using the best-known action (exploit).", ["explore", "exploit"]],
+    ["Multi-armed bandit", "D", "rl", "The simplest RL problem: repeatedly choosing among options with unknown payouts.", ["bandit"]],
+    ["Regret", "D", "rl", "How much reward was lost compared with always making the best choice.", []],
+    ["ε-greedy", "D", "rl", "An exploration strategy: act greedily most of the time, but pick a random action with probability ε.", ["epsilon-greedy"]],
+    ["Deep Q-Network (DQN)", "D", "rl", "DeepMind's 2013–2015 method that used a neural network to estimate Q-values from raw pixels, learning Atari games.", ["dqn"]],
+    ["Self-play", "D", "rl", "Training an agent by having it play against copies of itself, as in AlphaZero.", []],
+    ["Policy gradient", "D", "rl", "RL methods that adjust the policy directly toward actions that earned high reward. PPO is the most widely used.", ["ppo", "policy gradients"]],
+    ["DPO", "D", "rl", "Direct Preference Optimization (2023): training a model on preference pairs without a separate reward model or RL loop.", []],
+    ["RLVR", "D", "rl", "Reinforcement learning with verifiable rewards: rewarding answers that can be checked automatically (math, unit tests). It's key to reasoning models.", ["verifiable rewards"]],
+    ["Reward hacking", "D", "rl", "When an agent maximizes the reward in unintended ways that don't achieve the real goal. Also called specification gaming.", ["specification gaming"]],
+    ["Pixel", "D", "vision", "The smallest element of a digital image: a brightness value, or three values (red, green, blue) for color.", ["pixels"]],
+    ["Convolution", "D", "vision", "Sliding a small kernel over an image and computing a weighted sum at each position. It's the core operation of CNNs.", []],
+    ["Kernel (filter)", "D", "vision", "A small grid of weights used in convolution. Different kernels detect edges, blur or textures, and CNNs learn theirs.", ["kernel", "filter"]],
+    ["Convolutional neural network (CNN)", "D", "vision", "A neural network built from convolution and pooling layers, which learns a hierarchy from edges to objects.", ["cnn", "cnns", "convolutional neural network"]],
+    ["Pooling", "D", "vision", "Downsampling a feature map (for example, taking the maximum of each 2×2 block) to shrink it and add robustness.", []],
+    ["Object detection", "D", "vision", "Finding each object in an image with a bounding box, a label and a confidence.", ["detection", "bounding box"]],
+    ["Image segmentation", "D", "vision", "Assigning a class or object label to every pixel of an image.", ["segmentation"]],
+    ["OCR", "D", "vision", "Optical character recognition: detecting and transcribing text in images.", []],
+    ["Vision Transformer (ViT)", "D", "vision", "A transformer that treats image patches as tokens. It was introduced in \"An Image is Worth 16×16 Words\" (2020).", ["vit", "patches"]],
+    ["CLIP", "D", "vision", "OpenAI's 2021 model that trained image and text encoders together, placing pictures and captions in a shared embedding space.", []],
+    ["Adversarial example", "D", "vision", "An input with tiny, often invisible changes crafted to make a model predict something wrong.", ["adversarial examples"]],
+    ["Shortcut learning", "D", "vision", "When a model learns a spurious cue that correlates with the label (like grass for \"cow\") instead of the real concept.", []],
     ["Accuracy", "M", "evaluate", "The share of predictions that are correct. It's misleading when one class is rare: flagging nothing can still be 99% accurate.", []],
     ["Activation function", "F", "ch3", "The squashing step inside a neuron (like sigmoid or ReLU) that turns a weighted sum into its output. It's what lets networks model non-linear patterns.", []],
     ["Agent", "C", "build", "An AI system that plans and takes actions toward a goal: calling tools, reading results and deciding what to do next, over many steps.", ["agents", "ai agent"]],
@@ -3139,7 +3994,7 @@ print("P(pass) =", model.predict_proba(new)[0, 1])`;
     ["RAG (retrieval-augmented generation)", "C", "ch10", "Retrieving relevant documents at question time and adding them to the prompt, so answers are grounded and cite sources.", ["rag", "retrieval-augmented generation"]],
     ["Recall", "M", "evaluate", "Of all the real positives, the share the model caught.", []],
     ["Regularization", "M", "evaluate", "Techniques that penalize overly complex models to reduce overfitting.", []],
-    ["Reinforcement learning", "F", "ch2", "Learning by trial and error from rewards, as in game-playing agents and parts of chatbot training.", ["reinforcement"]],
+    ["Reinforcement learning", "F", "rl", "Learning by trial and error from rewards, as in game-playing agents and parts of chatbot training.", ["reinforcement"]],
     ["RLHF", "G", "ch6", "Reinforcement learning from human feedback: training a model toward responses that people rate as better.", ["rlaif", "rlhf / rlaif"]],
     ["Scaling (feature)", "M", "data", "Putting features on comparable ranges (for example, z-scores) so no feature dominates because of its units.", ["scaling", "standardize features", "normalization"]],
     ["Scaling laws", "G", "ch4", "The empirical finding that model loss falls predictably as parameters, data and compute grow.", []],
@@ -3165,8 +4020,8 @@ print("P(pass) =", model.predict_proba(new)[0, 1])`;
     ["Weight", "F", "ch3", "A learned number that sets how strongly one input or neuron influences the next.", ["weights"]],
     ["World model", "C", "ch10", "An AI system's internal model of how an environment behaves, used to predict and plan.", ["world models"]],
   ];
-  const CATS = { all: "All", F: "Foundations", M: "ML systems", G: "Generative AI", C: "Claude & frontier", R: "Responsible AI" };
-  const catCol = { F: "c1", M: "c3", G: "c6", C: "claude", R: "c4" };
+  const CATS = { all: "All", F: "Foundations", M: "ML systems", G: "Generative AI", D: "Deep dives", A: "Agents", C: "Claude & frontier", R: "Responsible AI" };
+  const catCol = { F: "c1", M: "c3", G: "c6", D: "c5", A: "c2", C: "claude", R: "c4" };
   const chapLabel = id => { const s = document.getElementById(id); if (!s) return ""; const tag = $(".ch-tag", s), h = $("h2", s); return `${tag ? tag.textContent : ""} · ${h ? h.textContent : ""}`; };
   const list = $("#glList"), search = $("#glSearch");
   let cat = "all", letter = "";

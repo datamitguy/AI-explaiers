@@ -17,12 +17,15 @@ Open `index.html` in a browser, or serve the folder with a static server such as
 9. **Inside a transformer** A tokenizer, embedding arithmetic, an attention visualizer, the architecture explorer, and temperature sampling
 10. **How LLMs are trained** Steppers for pretraining through RLHF, and for Constitutional AI
 11. **Beyond text: diffusion** An interactive noise-to-image demo
-12. **Today's AI landscape** The AI stack and a filterable list of model families
-13. **Meet Claude** Model tiers, a feature explorer, the tool-use loop, a context window visualizer, and extended thinking
-14. **Building with LLMs** A prompt builder, a decision helper for prompting vs RAG vs fine-tuning vs agents, and an eval suite with a regression
-15. **The frontier** A working in-browser mini-RAG, JEPA vs. generative prediction, Jev and System One models (a typed parallel-decision race against a generative LLM, plus a calibration reliability diagram), a Mixture-of-Experts router, and test-time compute
-16. **Responsible AI** A fairness trade-off simulator, SHAP-style explanations, and the EU AI Act risk pyramid
+12. **Deep dive: reinforcement learning** A multi-armed bandit game (greedy vs ε-greedy), value iteration on a grid world (discount, step reward, slippery floor), deep RL milestones, RL for LLMs (RLHF → DPO → RLVR), and a reward-hacking animation
+13. **Deep dive: computer vision** Draw pixels, apply convolution kernels live, the CNN feature hierarchy, one scene with five vision tasks, Vision Transformer patchify, and failure modes
+14. **Today's AI landscape** The AI stack and a filterable list of model families
+15. **Meet Claude** The current lineup (Haiku 4.5, Sonnet 5, Opus 5.5, Fable 5.1, restricted Mythos 5.1), the Fable/Mythos story, a feature explorer, the tool-use loop, a context window visualizer, and extended thinking
+16. **Building with LLMs** A prompt builder, a decision helper for prompting vs RAG vs fine-tuning vs agents, and an eval suite with a regression
+17. **Agent engineering** The agent loop step by step, harness anatomy, lifecycle hooks (with a replayable session), context engineering simulator, progressive disclosure for skills, a workflow/multi-agent pattern gallery, permission modes, and long-running agents
+18. **The frontier** A working in-browser mini-RAG, JEPA vs. generative prediction, Jev and System One models (a typed parallel-decision race against a generative LLM, plus a calibration reliability diagram), a Mixture-of-Experts router, and test-time compute
+19. **Responsible AI** A fairness trade-off simulator, SHAP-style explanations, and the EU AI Act risk pyramid
 
-A searchable **glossary** of 100+ terms closes the course, and bold key terms throughout the course show inline definitions when you hover or tap them.
+A searchable **glossary** of 150+ terms closes the course, and bold key terms throughout the course show inline definitions when you hover or tap them.
 
 It supports light and dark themes, including a manual toggle, and respects `prefers-reduced-motion`.
