@@ -1,15 +1,16 @@
 # AI, Explained, plus Product, Platform & Big Ideas courses
 
-Four interactive, Brilliant-style courses. Each is a single self-contained HTML file with no build step:
+Five interactive, Brilliant-style courses. Each is a single self-contained HTML file with no build step:
 
 | Page | Course |
 |---|---|
 | `index.html` | **AI, Explained**: 19 chapters, from AI basics to Claude, agents and the frontier |
 | `product-management.html` | **Product Management, First Principles**: 8 chapters |
 | `platform-management.html` | **Platform Management, First Principles**: 12 chapters |
-| `theories.html` | **Big Ideas**: 112 mind-expanding theories across 13 domains, with 37 simulations |
+| `theories.html` | **Big Ideas, Part 1**: 112 mind-expanding theories across 13 domains, with 37 simulations |
+| `models.html` | **Big Ideas, Part 2: Mental models & toolkits**: 93 models and tools across 7 sections, with 27 simulations |
 
-A switcher in the top bar links the four courses.
+A switcher in the top bar links the courses. Both Big Ideas parts sit under "Theories" and link to each other.
 
 ---
 
@@ -103,3 +104,19 @@ An interactive field guide to the theories that give you an edge today, covering
 | **Thinking tools & mental models** | First principles, inversion, second-order thinking, circle of competence, Occam's razor, Goodhart's law, Parkinson's law, Chesterton's fence, the map is not the territory, regret minimization, planning fallacy |
 
 It ends with an 18-question "which theory explains it?" challenge, a 57-book reading list, and a recap on how to think in models.
+
+## Big Ideas, Part 2: Mental models & toolkits (`models.html`)
+
+Practical models and untools-style frameworks for acting in the world. It uses the same card format, evidence ratings, search, progress tracking and deep links as Part 1, and related-card chips marked ↗ jump between the two parts.
+
+| Section | Models (🎮 = interactive simulation) |
+|---|---|
+| **Stoicism: the art of living** | Virtue as the only good (control sorter 🎮), judgements not things, the three disciplines, premeditatio malorum, memento mori (life in weeks 🎮), amor fati, the obstacle is the way, the view from above (powers of ten 🎮), voluntary discomfort, the evening review, Hierocles' circles |
+| **First principles of wealth** | Wealth vs. money vs. status, value creation, productivity, ownership, savings rate (years to financial independence 🎮), diversification 🎮, index funds & costs (fee drag 🎮), inflation, opportunity cost, human capital, debt (minimum-payment trap 🎮), enough |
+| **More mental models** | Hanlon's razor, survivorship bias (Wald's bombers 🎮), margin of safety, incentives, regression to the mean 🎮, sunk cost, availability, anchoring, resulting, local vs. global optima (hill climbing 🎮), leverage points, steelmanning, thought experiments, activation energy, moats, diminishing returns, cargo cult science |
+| **Decision-making tools** | Eisenhower matrix 🎮, one-way vs. two-way doors, weighted decision matrix 🎮, impact–effort matrix, Cynefin 🎮, 10/10/10, pre-mortem, decision trees & expected value 🎮, OODA loop, six thinking hats, RAPID/DACI, WRAP |
+| **Problem-solving & communication** | Five whys 🎮, issue trees & MECE, the pyramid principle, abstraction laddering, the iceberg model 🎮, ladder of inference 🎮, fishbone diagrams, rubber duck debugging, the double diamond, SBI feedback, circles of concern & influence, radical candor 🎮 |
+| **Project management models** | Iron triangle 🎮, critical path 🎮, PERT 🎮, theory of constraints 🎮, Little's law & WIP limits 🎮, Brooks's law 🎮, WBS, Agile & Scrum, Kanban, cone of uncertainty, RACI, Tuckman's stages, Conway's law, the ninety-ninety rule, risk matrices |
+| **Product management models** | Kano model 🎮, crossing the chasm, the Hook model, AARRR pirate metrics 🎮, Lean Startup, product–market fit, HEART, MoSCoW, Business Model Canvas, Fogg behaviour model 🎮, Blue Ocean strategy, Shape Up, Wardley mapping, three horizons |
+
+It ends with a "which tool fits?" challenge, a filterable reading list and a Monday-morning toolkit recap.

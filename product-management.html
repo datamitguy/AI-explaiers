@@ -981,7 +981,7 @@ function makeLibrary(items, themes) {
   const lib = $("#lib"), f = $("#rlFilter"); let cur = "All";
   f.innerHTML = ["All", ...themes].map((t, i) => `<button class="chip${i ? "" : " on"}" data-th="${t}">${t}</button>`).join("");
   const render = () => {
-    lib.innerHTML = items.filter(b => cur === "All" || b[3] === cur).sort((a, b) => b[2] - a[2]).map(b => `<div class="lib-book"><div class="book-year">${b[2]}</div><div><h4>${b[0]}</h4><div class="small muted" style="font-weight:600">${b[1]} · <span class="pill" style="background:var(--surface-2);color:var(--ink-2)">${b[3]}</span></div><p>${b[4]}</p></div></div>`).join("");
+    lib.innerHTML = items.filter(b => cur === "All" || b[3] === cur).sort((a, b) => b[2] - a[2]).map(b => `<div class="lib-book"><div class="book-year">${b[2] < 1000 ? `<small style="font-size:.7rem">c.</small>${b[2]}` : b[2]}</div><div><h4>${b[0]}</h4><div class="small muted" style="font-weight:600">${b[1]} · <span class="pill" style="background:var(--surface-2);color:var(--ink-2)">${b[3]}</span></div><p>${b[4]}</p></div></div>`).join("");
     $$(".lib-book", lib).forEach((el, k) => el.animate?.([{ opacity: 0, transform: "translateY(8px)" }, { opacity: 1, transform: "none" }], { duration: 300, delay: k * 25, fill: "backwards" }));
   };
   chipGroup(f, "th", t => { cur = t; render(); }); render();

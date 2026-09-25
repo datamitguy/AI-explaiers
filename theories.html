@@ -650,6 +650,20 @@ select{font:inherit;font-size:.8rem;padding:6px 8px;border-radius:10px;border:1p
 .ev-strong,.ev-math{background:var(--c2-soft);color:var(--c2t)}.ev-good{background:var(--c5-soft);color:var(--c5t)}.ev-active{background:var(--c1-soft);color:var(--c1)}.ev-mixed,.ev-debated{background:var(--c3-soft);color:var(--c3t)}.ev-frame{background:var(--surface-3);color:var(--ink-2)}.ev-belief{background:var(--c4-soft);color:var(--c4t)}
 .th-tile .th-tb{font-size:.62rem;font-weight:800;margin-top:4px;align-self:flex-start;padding:1px 7px;border-radius:99px}
 @media (max-width:520px){.th-tiles{grid-template-columns:1fr 1fr;gap:6px}.th-tile{padding:10px}.th-tile small{display:none}.th-tile b{font-size:.82rem}}
+.th-xlink{text-decoration:none;color:var(--ink-2);border-style:dashed}
+.th-mx-g{display:grid;gap:6px;align-items:center;font-size:.8rem;overflow-x:auto}
+.th-mx-g>b{font-size:.72rem;text-align:center}.th-mx-o{font-weight:700;font-size:.82rem}
+.th-mx-c{cursor:pointer;border:1px solid var(--line);border-radius:10px;padding:8px 0;font-weight:800;font-size:.95rem;color:var(--ink);font-family:inherit}
+.th-mx-res{margin-top:12px}
+.th-whys{display:grid;gap:6px;margin:12px 0}
+.th-why-row{background:var(--surface-2);border-radius:12px;padding:10px 14px;font-size:.92rem;animation:pop .3s;border-left:4px solid var(--c5)}.th-why-row span{display:block;font-size:.7rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--c5t)}
+.th-ladder{display:flex;flex-direction:column;gap:5px;margin:12px 0}
+.th-rung{display:grid;grid-template-columns:170px 1fr;gap:12px;padding:9px 14px;border-radius:10px;background:var(--surface-2);font-size:.88rem;opacity:.5;transition:.3s}.th-rung.on{opacity:1;background:var(--c1-soft)}.th-rung span{color:var(--ink-2)}
+@media (max-width:560px){.th-rung{grid-template-columns:1fr;gap:2px}}
+.th-fun{display:flex;flex-direction:column;align-items:center;gap:4px;margin:14px 0}
+.th-funrow{display:flex;justify-content:space-between;gap:8px;padding:9px 12px;border-radius:10px;color:#fff;font-size:.82rem;min-width:170px;box-sizing:border-box;transition:width .4s}
+.th-part{display:grid;gap:2px;text-decoration:none;color:var(--ink);background:linear-gradient(120deg,var(--c1-soft),var(--c6-soft));border:1px solid var(--line);border-radius:18px;padding:16px 20px;margin:18px 0;transition:transform .15s}
+.th-part:hover{transform:translateY(-2px)}.th-part span{font-size:.72rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--c1)}.th-part b{font-family:"Space Grotesk",Inter,system-ui,sans-serif;font-size:1.2rem}.th-part small{color:var(--ink-2);font-size:.9rem}
 </style>
 </head>
 <body>
@@ -679,14 +693,15 @@ select{font:inherit;font-size:.8rem;padding:6px 8px;border-radius:10px;border:1p
   <a href="#thquiz"><span class="num">?</span>Final challenge</a>
   <a href="#thread"><span class="num">📚</span>Reading list</a>
   <a href="#recap"><span class="num">★</span>Think in models</a>
+  <a href="models.html"><span class="num">↗</span>Part 2: Models &amp; toolkits</a>
 </nav>
 <main id="top">
 <section class="hero">
   <canvas id="heroCanvas" aria-hidden="true"></canvas>
   <div class="hero-inner reveal">
-    <span class="ch-tag">An interactive field guide</span>
+    <span class="ch-tag">An interactive field guide · Part 1</span>
     <h1 style="margin-top:18px">Big ideas that <span class="grad">expand your mind</span>.</h1>
-    <p>112 theories that explain how the world, and your own mind, work. They range from information theory, the Big Bang, evolution and great-power politics to dopamine loops, flow, neuroplasticity, asymmetric bets, permissionless leverage and owning your time. Each one is explained in plain English, with why it gives you an edge today, a real example, the most common misconception, an evidence rating, and links to related ideas. 37 of them come with a hands-on simulation.</p>
+    <p>112 theories that explain how the world, and your own mind, work. They range from information theory, the Big Bang, evolution and great-power politics to dopamine loops, flow, neuroplasticity, asymmetric bets, permissionless leverage and owning your time. Each one is explained in plain English, with why it gives you an edge today, a real example, the most common misconception, an evidence rating, and links to related ideas. 37 of them come with a hands-on simulation. <a href="models.html">Part 2</a> adds Stoicism, wealth, mental models and practical toolkits.</p>
     <a class="btn primary" href="#hub" style="text-decoration:none;padding:13px 24px;font-size:1rem">Explore the map →</a>
     <div class="hero-stats"><span>112 theories · 13 domains</span><span>37 interactive simulations</span><span>57 books</span></div>
   </div>
@@ -709,6 +724,7 @@ select{font:inherit;font-size:.8rem;padding:6px 8px;border-radius:10px;border:1p
     <div class="th-prog" id="thProg"></div>
     <div class="th-tiles" id="thTiles"></div>
   </div>
+  <a class="th-part" href="models.html"><span>Part 2 →</span><b>Mental models &amp; toolkits</b><small>Stoicism, first principles of wealth, more mental models, and decision, problem-solving, project and product toolkits.</small></a>
   <div class="key reveal"><p>A theory is not a fact. It's a <b>model</b>: a simplified story that makes predictions. Some here are among the best-tested ideas humans have produced (relativity, evolution, thermodynamics). Others are influential but contested (Sapir–Whorf, the Great Man theory, the Thucydides Trap). Each card tells you which is which. Knowing a theory's <b>limits</b> is part of knowing the theory.</p></div>
 </div>
 </section>
@@ -908,7 +924,7 @@ select{font:inherit;font-size:.8rem;padding:6px 8px;border-radius:10px;border:1p
 </div>
 </section>
 
-<footer class="footer">Big Ideas · part of the <a href="index.html">AI, Explained</a> series · theories are simplified for learning, and many are still debated, so read the sources.</footer>
+<footer class="footer">Big Ideas, Part 1 · <a href="models.html">Part 2: Mental models &amp; toolkits</a> · part of the <a href="index.html">AI, Explained</a> series · theories are simplified for learning, and many are still debated, so read the sources.</footer>
 </main>
 <script>
 (() => {
@@ -1033,7 +1049,7 @@ function makeLibrary(items, themes) {
   const lib = $("#lib"), f = $("#rlFilter"); let cur = "All";
   f.innerHTML = ["All", ...themes].map((t, i) => `<button class="chip${i ? "" : " on"}" data-th="${t}">${t}</button>`).join("");
   const render = () => {
-    lib.innerHTML = items.filter(b => cur === "All" || b[3] === cur).sort((a, b) => b[2] - a[2]).map(b => `<div class="lib-book"><div class="book-year">${b[2]}</div><div><h4>${b[0]}</h4><div class="small muted" style="font-weight:600">${b[1]} · <span class="pill" style="background:var(--surface-2);color:var(--ink-2)">${b[3]}</span></div><p>${b[4]}</p></div></div>`).join("");
+    lib.innerHTML = items.filter(b => cur === "All" || b[3] === cur).sort((a, b) => b[2] - a[2]).map(b => `<div class="lib-book"><div class="book-year">${b[2] < 1000 ? `<small style="font-size:.7rem">c.</small>${b[2]}` : b[2]}</div><div><h4>${b[0]}</h4><div class="small muted" style="font-weight:600">${b[1]} · <span class="pill" style="background:var(--surface-2);color:var(--ink-2)">${b[3]}</span></div><p>${b[4]}</p></div></div>`).join("");
     $$(".lib-book", lib).forEach((el, k) => el.animate?.([{ opacity: 0, transform: "translateY(8px)" }, { opacity: 1, transform: "none" }], { duration: 300, delay: k * 25, fill: "backwards" }));
   };
   chipGroup(f, "th", t => { cur = t; render(); }); render();
@@ -2574,84 +2590,9 @@ DEMOS.ergo = el => {
   }, { f: x => x + "%" });
 };
 
-/* ---------- THEORIES: page ---------- */
-(() => {
-  const DOM = Object.fromEntries(DOMAINS.map(d => [d[0], d]));
-  const txt = c => c === "c1" ? "var(--c1)" : `var(--${c}t)`;
-  const byId = Object.fromEntries(TH.map(t => [t[0], t]));
-  const EV = typeof EVID === "undefined" ? {} : EVID;
-  const ORD = Object.fromEntries(DOMAINS.map((d, i) => [d[0], i])), TILES = [...TH].sort((a, b) => ORD[a[1]] - ORD[b[1]]);
-  let done = new Set();
-  try { done = new Set(JSON.parse(localStorage.getItem("th-done") || "[]")); } catch (e) {}
-  const save = () => { try { localStorage.setItem("th-done", JSON.stringify([...done])); } catch (e) {} };
-
-  // cards
-  DOMAINS.forEach(([k]) => {
-    const list = $(`#list-${k}`); if (!list) return;
-    list.innerHTML = TH.filter(t => t[1] === k).map(t => {
-      const [id, d, ic, title, who, one, body, edge, ex, mis, rel, demo] = t, c = DOM[d][3];
-      return `<article class="th" id="t-${id}" style="--dc:var(--${c});--dct:${txt(c)};--dcs:var(--${c}-soft)">
-  <button class="th-h" aria-expanded="false"><span class="th-ic">${ic}</span><span class="th-tt"><b>${title}</b><small>${one}</small></span><span class="th-who">${who}</span><span class="th-ck" title="Understood">✓</span><span class="th-chev">▾</span></button>
-  <div class="th-b" hidden>
-    <p class="th-who-m small muted">${who}</p>
-    ${EV[id] ? `<span class="th-badge ev-${EV[id][0]}">Evidence: ${EV[id][1]}</span>` : ""}
-    <p>${body}</p>
-    <div class="th-edge"><h5>⚡ Why it gives you an edge now</h5><p>${edge}</p></div>
-    <div class="th-2"><div><h5>🔍 Example</h5><p>${ex}</p></div><div><h5>⚠️ Common misconception</h5><p>${mis}</p></div></div>
-    ${demo ? `<div class="widget th-demo" data-demo="${demo}"><div class="w-head">Try it</div></div>` : ""}
-    <div class="th-rel"><span>Connects to</span>${rel.map(r => `<button class="chip" data-jump="${r}">${byId[r][2]} ${byId[r][3]}</button>`).join("")}</div>
-    <button class="btn th-done-btn"></button>
-  </div>
-</article>`;
-    }).join("");
-  });
-
-  const card = id => $(`#t-${id}`);
-  const paint = () => {
-    TH.forEach(([id]) => { const c = card(id), d = done.has(id); c.classList.toggle("done", d); $(".th-done-btn", c).textContent = d ? "✓ Understood (click to undo)" : "Mark as understood"; $(`.th-tile[data-t="${id}"]`)?.classList.toggle("done", d); });
-    const n = done.size, pct = n / TH.length * 100;
-    $("#thProg").innerHTML = `<div class="th-prog-bar"><i style="width:${pct}%"></i></div><span><b>${n}</b> of ${TH.length} theories understood</span>`;
-    DOMAINS.forEach(([k]) => { const all = TH.filter(t => t[1] === k), m = all.filter(t => done.has(t[0])).length, el = $(`#dprog-${k}`); if (el) el.textContent = `${m} / ${all.length} understood`; });
-  };
-  const open = (id, on = true, scroll = false) => {
-    const c = card(id), b = $(".th-b", c), h = $(".th-h", c);
-    b.hidden = !on; h.setAttribute("aria-expanded", on); c.classList.toggle("open", on);
-    if (on) { const w = $(".th-demo", c); if (w && !w.dataset.ready) { w.dataset.ready = 1; const box = document.createElement("div"); w.appendChild(box); try { DEMOS[w.dataset.demo](box); } catch (e) { console.error(e); } } }
-    if (on && scroll) { c.scrollIntoView({ behavior: reduced ? "auto" : "smooth", block: "start" }); c.animate?.([{ boxShadow: "0 0 0 6px var(--dcs)" }, { boxShadow: "0 0 0 0 transparent" }], { duration: 1400 }); }
-  };
-  $$(".th").forEach(c => {
-    const id = c.id.slice(2);
-    $(".th-h", c).addEventListener("click", () => open(id, !c.classList.contains("open")));
-    $(".th-done-btn", c).addEventListener("click", () => { done.has(id) ? done.delete(id) : done.add(id); save(); paint(); });
-    $$("[data-jump]", c).forEach(b => b.addEventListener("click", () => open(b.dataset.jump, true, true)));
-  });
-  $$(".th-expand").forEach(b => b.addEventListener("click", () => {
-    const k = b.dataset.d, cards = $$(`#list-${k} .th`), openAll = cards.some(c => !c.classList.contains("open"));
-    cards.forEach(c => open(c.id.slice(2), openAll)); b.textContent = openAll ? "Collapse all" : "Expand all";
-  }));
-
-  // hub: tiles, search, filter, surprise
-  const tiles = $("#thTiles");
-  tiles.innerHTML = TILES.map(t => { const c = DOM[t[1]][3]; return `<button class="th-tile" data-t="${t[0]}" data-d="${t[1]}" style="--dc:var(--${c});--dcs:var(--${c}-soft)"><span>${t[2]}</span><b>${t[3]}</b><small>${t[5]}</small>${EV[t[0]] && /belief|debated|mixed/.test(EV[t[0]][0]) ? `<span class="th-tb ev-${EV[t[0]][0]}">${EV[t[0]][0] === "belief" ? "not science" : EV[t[0]][0]}</span>` : ""}</button>`; }).join("");
-  $("#thSearch").placeholder = `Search ${TH.length} theories, e.g. entropy, dopamine, Naval, Kuhn…`;
-  $("#thDomChips").innerHTML = `<button class="chip on" data-dom="all">All ${TH.length}</button>` + DOMAINS.map(d => `<button class="chip" data-dom="${d[0]}">${d[1]} ${d[2].split(" & ")[0].split(",")[0].replace("Thinking tools", "Tools")}</button>`).join("");
-  let dom = "all", q = "";
-  const filt = () => {
-    let n = 0;
-    $$(".th-tile", tiles).forEach(el => { const t = byId[el.dataset.t], hay = (t[3] + " " + t[4] + " " + t[5] + " " + t[6]).toLowerCase().replace(/<[^>]+>/g, ""); const show = (dom === "all" || t[1] === dom) && (!q || hay.includes(q)); el.hidden = !show; if (show) n++; });
-    $("#thCount").textContent = n === TH.length ? "" : `${n} match${n === 1 ? "" : "es"}`;
-  };
-  chipGroup($("#thDomChips"), "dom", d => { dom = d; filt(); });
-  $("#thSearch").addEventListener("input", e => { q = e.target.value.trim().toLowerCase(); filt(); });
-  $$(".th-tile", tiles).forEach(el => el.addEventListener("click", () => open(el.dataset.t, true, true)));
-  $("#thSurprise").addEventListener("click", () => { const pool = TH.filter(t => !done.has(t[0])), t = (pool.length ? pool : TH)[Math.floor(Math.random() * (pool.length || TH.length))]; open(t[0], true, true); });
-  paint(); filt();
-  // deep links like theories.html#t-bayes
-  const hash = () => { const m = location.hash.match(/^#t-(.+)$/); if (m && byId[m[1]]) setTimeout(() => open(m[1], true, true), 60); };
-  addEventListener("hashchange", hash); hash();
-
-  // final challenge: which theory explains it?
-  const QZ = [
+/* ---------- THEORIES part 1: page config ---------- */
+const PAGE = { noun: "theories", search: "e.g. entropy, dopamine, Naval, Kuhn" };
+const QUIZ = [
     ["A screening test for a rare disease is \"99% accurate\" and you test positive. What should you ask first?", ["How common is the disease? (Bayes' theorem)", "How expensive was the test? (sunk cost)", "Who else tested positive? (network effects)", "Is the lab biased? (cognitive dissonance)"], 0, "bayes", "With a rare condition, most positives can be false alarms. The base rate matters as much as the accuracy."],
     ["Two rival cafés on the same street could both keep prices healthy, but each is tempted to undercut. They'll face each other every day for years. What predicts they may settle into cooperation?", ["The repeated prisoner's dilemma (game theory)", "Comparative advantage", "Tragedy of the commons", "Red Queen hypothesis"], 0, "gametheory", "In repeated games, strategies like Tit for Tat make cooperation stable: undercutting today triggers retaliation tomorrow."],
     ["A retailer's inventory swings between glut and shortage although customer demand barely changes. Which idea best explains this?", ["Stocks, flows and delays (systems thinking)", "Prospect theory", "Soft power", "Punctuated paradigms"], 0, "systems", "Ordering decisions react to delayed information, so a feedback loop with delay oscillates (the \"bullwhip effect\")."],
@@ -2671,25 +2612,7 @@ DEMOS.ergo = el => {
     ["You imagine your dream outcome in vivid detail every night, but make no plan for obstacles. What does the research suggest?", ["It can reduce effort. Add the obstacle and an if–then plan (mental contrasting)", "It guarantees success if you believe enough", "It has no effect at all", "It only works for visual learners"], 0, "mentalcontrast", "Oettingen found that positive fantasies alone predicted lower achievement. Contrasting the wish with obstacles, plus implementation intentions, works better."],
     ["A team's KPI is \"tickets closed per week\", and soon tickets are being split into tiny pieces. Which law is this?", ["Goodhart's law", "Parkinson's law", "Moore's law", "The Lindy effect"], 0, "goodhart", "When a measure becomes a target, people optimise the number rather than the goal behind it."],
   ];
-  let qi = 0, sc = 0, order = [];
-  const shuffle = a => { const b = [...a]; for (let i = b.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [b[i], b[j]] = [b[j], b[i]]; } return b; };
-  const qbox = $("#thQuiz");
-  const qrender = () => {
-    if (qi >= QZ.length) { qbox.innerHTML = `<div class="sort-done"><div class="sort-big">${sc} / ${QZ.length}</div><p>${sc === QZ.length ? "Flawless. You can see the theories at work in everyday situations." : sc >= 8 ? "Strong. Open the cards you missed to close the gaps." : "Good start. The cards behind each answer are one click away."}</p><button class="btn" data-again>↺ Try again</button></div>`; $("[data-again]", qbox).addEventListener("click", () => { qi = 0; sc = 0; qrender(); }); return; }
-    const [qq, opts, ans, link, why] = QZ[qi]; order = shuffle(opts.map((o, i) => i));
-    qbox.innerHTML = `<div class="sort-progress"><span>${qi + 1} / ${QZ.length}</span><span>score ${sc}</span></div><div class="sort-bar"><i style="width:${qi / QZ.length * 100}%"></i></div><p class="q" style="font-weight:700;font-size:1.05rem">${qq}</p><div class="opts">${order.map(i => `<button class="opt" data-i="${i}">${opts[i]}</button>`).join("")}</div><div class="sort-fb"></div>`;
-    let locked = false;
-    $$(".opt", qbox).forEach(b => b.addEventListener("click", () => {
-      if (locked) return; locked = true; const ok = +b.dataset.i === ans; if (ok) sc++;
-      b.classList.add(ok ? "right" : "wrong"); if (!ok) $(`.opt[data-i="${ans}"]`, qbox).classList.add("right");
-      $(".sort-fb", qbox).innerHTML = `<p style="margin-top:12px"><b>${ok ? "✓ Right." : "✗ Not quite."}</b> ${why} <button class="chip" data-jump2="${link}">Open: ${byId[link][2]} ${byId[link][3]}</button></p><button class="btn primary">${qi === QZ.length - 1 ? "See score →" : "Next →"}</button>`;
-      $("[data-jump2]", qbox).addEventListener("click", () => open(link, true, true));
-      $(".btn.primary", qbox).addEventListener("click", () => { qi++; qrender(); });
-    }));
-  };
-  qrender();
-
-  makeLibrary([
+const BOOKS = [
     ["The Information: A History, a Theory, a Flood", "James Gleick", 2011, "Information", "The story of information theory, from talking drums to Shannon to the internet."],
     ["Gödel, Escher, Bach", "Douglas Hofstadter", 1979, "Information", "Self-reference, formal systems and minds, as a playful Pulitzer-winning puzzle box."],
     ["The Alignment Problem", "Brian Christian", 2020, "Information", "How machine learning inherits old questions about rewards, values and feedback."],
@@ -2746,8 +2669,106 @@ DEMOS.ergo = el => {
     ["Fortune's Formula", "William Poundstone", 2005, "Leverage", "The story of the Kelly criterion, Shannon and Thorp."],
     ["The Great Mental Models, Vol. 1", "Shane Parrish", 2019, "Tools", "First principles, inversion, second-order thinking and more."],
     ["Poor Charlie's Almanack", "Charlie Munger", 2005, "Tools", "The latticework of mental models, in Munger's own words."],
-    ["How Big Things Get Done", "Bent Flyvbjerg & Dan Gardner", 2023, "Tools", "Why big projects overrun, and reference-class forecasting."],
-  ], ["Information", "Strategy", "Physics", "Life", "Mind", "Brain", "Self", "Systems", "Economics", "Leverage", "Power", "Culture", "Tools"]);
+    ["How Big Things Get Done", "Bent Flyvbjerg & Dan Gardner", 2023, "Tools", "Why big projects overrun, and reference-class forecasting."],];
+const BOOK_THEMES = ["Information", "Strategy", "Physics", "Life", "Mind", "Brain", "Self", "Systems", "Economics", "Leverage", "Power", "Culture", "Tools"];
+
+const XREF = {"information": ["📡", "Information theory", "theories.html"], "bayes": ["🎲", "Bayesian probability", "theories.html"], "computability": ["🖥️", "Computability & the halting problem", "theories.html"], "complexity": ["⏳", "Computational complexity (P vs NP)", "theories.html"], "cybernetics": ["🔁", "Cybernetics & feedback control", "theories.html"], "godel": ["🔒", "Gödel's incompleteness theorems", "theories.html"], "kolmogorov": ["🗜️", "Algorithmic information (Kolmogorov complexity)", "theories.html"], "gametheory": ["♟️", "Game theory", "theories.html"], "utility": ["⚖️", "Expected utility theory", "theories.html"], "prospect": ["📉", "Prospect theory", "theories.html"], "bounded": ["🧮", "Bounded rationality", "theories.html"], "mechanism": ["🛠️", "Mechanism design & auction theory", "theories.html"], "arrow": ["🗳️", "Social choice & Arrow's impossibility theorem", "theories.html"], "signaling": ["🦚", "Signaling theory", "theories.html"], "bigbang": ["💥", "Big Bang cosmology", "theories.html"], "relativity": ["⏱️", "Relativity", "theories.html"], "quantum": ["⚛️", "Quantum theory", "theories.html"], "thermo": ["🔥", "Thermodynamics & entropy", "theories.html"], "chaos": ["🦋", "Chaos theory", "theories.html"], "noether": ["🪞", "Noether's theorem (symmetry & conservation)", "theories.html"], "plates": ["🌍", "Plate tectonics", "theories.html"], "evolution": ["🐒", "Evolution by natural selection", "theories.html"], "selfishgene": ["🧬", "The gene-centred view & kin selection", "theories.html"], "germ": ["🦠", "Germ theory of disease", "theories.html"], "endosymbiosis": ["🔋", "Endosymbiosis", "theories.html"], "redqueen": ["👑", "The Red Queen hypothesis", "theories.html"], "ess": ["🕊️", "Evolutionarily stable strategies", "theories.html"], "scaling": ["🐘", "Biological scaling laws", "theories.html"], "dualprocess": ["⚡", "Dual-process theory (System 1 & System 2)", "theories.html"], "predictive": ["🔮", "Predictive processing", "theories.html"], "dissonance": ["🎭", "Cognitive dissonance", "theories.html"], "attachment": ["🤝", "Attachment theory", "theories.html"], "tom": ["👁️", "Theory of mind", "theories.html"], "gwt": ["💡", "Global workspace theory of consciousness", "theories.html"], "hebb": ["🧩", "Hebbian learning & neuroplasticity", "theories.html"], "systems": ["🛁", "Systems thinking (stocks, flows & feedback loops)", "theories.html"], "networks": ["🕸️", "Network theory (small worlds & scale-free networks)", "theories.html"], "emergence": ["🐜", "Emergence & complex adaptive systems", "theories.html"], "powerlaw": ["📈", "Power laws & the Pareto principle", "theories.html"], "tipping": ["🔥", "Tipping points & threshold models", "theories.html"], "blackswan": ["🦢", "Black swans & fat-tailed risk", "theories.html"], "comparative": ["🍷", "Comparative advantage", "theories.html"], "commons": ["🐟", "Tragedy of the commons & Ostrom's design principles", "theories.html"], "principalagent": ["🤵", "Principal–agent theory", "theories.html"], "creative": ["🌪️", "Creative destruction", "theories.html"], "diffusion": ["📣", "Diffusion of innovations", "theories.html"], "transaction": ["🏢", "Transaction cost theory (why firms exist)", "theories.html"], "realism": ["🏰", "Realism & great-power politics", "theories.html"], "powertransition": ["⚔️", "Power transition theory & the Thucydides trap", "theories.html"], "hegemonic": ["🌐", "Hegemonic stability theory", "theories.html"], "socialcontract": ["📜", "Social contract theory", "theories.html"], "democraticpeace": ["🕊️", "Democratic peace theory", "theories.html"], "softpower": ["🎬", "Soft power", "theories.html"], "greatman": ["🗿", "Great man vs. structural theories of history", "theories.html"], "sapirwhorf": ["🗣️", "Linguistic relativity (Sapir–Whorf)", "theories.html"], "ug": ["🔤", "Universal grammar & generative linguistics", "theories.html"], "speechact": ["💬", "Speech act theory", "theories.html"], "semiotics": ["🔣", "Semiotics (signs & meaning)", "theories.html"], "memetics": ["🧫", "Memetics & cultural evolution", "theories.html"], "hofstede": ["🗺️", "Cultural dimensions theory", "theories.html"], "falsifiability": ["🔬", "Falsifiability", "theories.html"], "paradigm": ["🔄", "Paradigm shifts", "theories.html"], "neuroplasticity": ["🌱", "Neuroplasticity & deliberate practice", "theories.html"], "dopamine": ["🎰", "Dopamine loops & reward prediction", "theories.html"], "dmn": ["🌀", "Default mode network", "theories.html"], "attnresidue": ["🔀", "Attention residue", "theories.html"], "flow": ["🌊", "Flow state", "theories.html"], "deepwork": ["🧘", "Deep work", "theories.html"], "cogload": ["🧠", "Cognitive load theory", "theories.html"], "spaced": ["📅", "Spaced repetition & the forgetting curve", "theories.html"], "sleep": ["😴", "Sleep & memory consolidation", "theories.html"], "zeigarnik": ["📌", "Zeigarnik & Ovsiankina effects", "theories.html"], "habits": ["🔄", "Habit formation (cue–routine–reward)", "theories.html"], "psychocyb": ["🎯", "Psycho-Cybernetics (self-image as a guidance system)", "theories.html"], "selfefficacy": ["💪", "Self-efficacy", "theories.html"], "mindset": ["🌿", "Growth mindset", "theories.html"], "pygmalion": ["🔮", "Self-fulfilling prophecy & the Pygmalion effect", "theories.html"], "placebo": ["💊", "Placebo & expectation effects", "theories.html"], "goddard": ["✨", "Neville Goddard's Law of Assumption", "theories.html"], "mentalcontrast": ["🪜", "Mental contrasting & implementation intentions (WOOP)", "theories.html"], "hedonic": ["🎡", "The hedonic treadmill", "theories.html"], "sdt": ["🧭", "Self-determination theory", "theories.html"], "locus": ["🎛️", "Locus of control", "theories.html"], "stoic": ["🏛️", "Stoic dichotomy of control", "theories.html"], "maximizers": ["🛒", "Maximizers vs. satisficers (the paradox of choice)", "theories.html"], "peakend": ["⛰️", "Peak–end rule", "theories.html"], "asymmetric": ["📐", "Asymmetric bets (convexity)", "theories.html"], "permissionless": ["🛠️", "Permissionless leverage (code & media)", "theories.html"], "specificknow": ["🔑", "Specific knowledge", "theories.html"], "compounding": ["📈", "Compounding", "theories.html"], "defaultgame": ["🎲", "Escaping the default game", "theories.html"], "valuemax": ["💎", "Value maxing (rare & valuable skills)", "theories.html"], "owntime": ["⏳", "Owning your time (time affluence)", "theories.html"], "influence": ["📣", "From ideas to influence (persuasion & stickiness)", "theories.html"], "lindy": ["🏺", "The Lindy effect", "theories.html"], "antifragile": ["🔥", "Antifragility & optionality", "theories.html"], "kelly": ["🎯", "The Kelly criterion", "theories.html"], "ergodicity": ["🎡", "Ergodicity (ensemble vs. time averages)", "theories.html"], "matthew": ["🧲", "The Matthew effect (cumulative advantage)", "theories.html"], "truefans": ["🤝", "1,000 true fans", "theories.html"], "luck": ["🍀", "Luck surface area", "theories.html"], "firstprinciples": ["⚛️", "First-principles thinking", "theories.html"], "inversion": ["🙃", "Inversion", "theories.html"], "secondorder": ["🔭", "Second-order thinking", "theories.html"], "competence": ["⭕", "Circle of competence", "theories.html"], "occam": ["🪒", "Occam's razor", "theories.html"], "goodhart": ["🎯", "Goodhart's law", "theories.html"], "parkinson": ["⌛", "Parkinson's law", "theories.html"], "chesterton": ["🚧", "Chesterton's fence", "theories.html"], "mapterritory": ["🗺️", "The map is not the territory", "theories.html"], "regretmin": ["🧓", "Regret minimization framework", "theories.html"], "planning": ["📆", "Planning fallacy & reference-class forecasting", "theories.html"], "stoicism": ["🏛️", "Stoicism: virtue as the only good", "models.html"], "impressions": ["👁️", "Judgements, not things, upset us", "models.html"], "threedisc": ["🔺", "The three disciplines", "models.html"], "premeditatio": ["🌧️", "Premeditatio malorum (negative visualisation)", "models.html"], "mementomori": ["⏳", "Memento mori", "models.html"], "amorfati": ["🔥", "Amor fati (love of fate)", "models.html"], "obstacleway": ["🧗", "The obstacle is the way", "models.html"], "viewabove": ["🌍", "The view from above", "models.html"], "discomfort": ["🧊", "Voluntary discomfort", "models.html"], "eveningreview": ["🌙", "The evening review", "models.html"], "hierocles": ["⭕", "Hierocles' circles (the expanding circle)", "models.html"], "wealthmoney": ["💎", "Wealth vs. money vs. status", "models.html"], "valuecreation": ["🥧", "Wealth is created: the pie isn't fixed", "models.html"], "productivity": ["⚙️", "Productivity: the long-run engine", "models.html"], "ownership": ["🏠", "Ownership vs. renting your time", "models.html"], "savingsrate": ["🏁", "Savings rate & financial independence", "models.html"], "diversify": ["🧺", "Diversification", "models.html"], "indexcost": ["📉", "Index funds & the cost of costs", "models.html"], "inflation": ["🎈", "Inflation & real returns", "models.html"], "opportunitycost": ["⚖️", "Opportunity cost", "models.html"], "humancapital": ["🎓", "Human capital", "models.html"], "debt": ["⛓️", "Debt & compounding in reverse", "models.html"], "enough": ["🫖", "Enough (lifestyle creep & moving goalposts)", "models.html"], "hanlon": ["🤷", "Hanlon's razor", "models.html"], "survivorship": ["✈️", "Survivorship bias", "models.html"], "marginsafety": ["🛡️", "Margin of safety", "models.html"], "incentives": ["🥕", "Incentives drive behaviour", "models.html"], "regression": ["↩️", "Regression to the mean", "models.html"], "sunkcost": ["🕳️", "Sunk cost fallacy", "models.html"], "availability": ["📰", "Availability heuristic", "models.html"], "anchoring": ["⚓", "Anchoring", "models.html"], "resulting": ["🃏", "Resulting (decisions vs outcomes)", "models.html"], "localoptimum": ["⛰️", "Local vs global optimum", "models.html"], "leveragepoints": ["🎚️", "Leverage points", "models.html"], "steelman": ["🏗️", "Steelmanning & the principle of charity", "models.html"], "thoughtexp": ["💭", "Thought experiments", "models.html"], "activation": ["🧪", "Activation energy & catalysts", "models.html"], "moats": ["🏰", "Economic moats", "models.html"], "diminishing": ["📉", "Diminishing returns", "models.html"], "cargocult": ["🛬", "Cargo cult thinking", "models.html"], "eisenhower": ["📥", "The Eisenhower matrix (urgent vs important)", "models.html"], "twodoors": ["🚪", "One-way and two-way doors", "models.html"], "decisionmatrix": ["🧮", "Weighted decision matrix", "models.html"], "impacteffort": ["🎯", "Impact-effort matrix", "models.html"], "cynefin": ["🧭", "Cynefin framework", "models.html"], "tententen": ["🔟", "10/10/10", "models.html"], "premortem": ["⚰️", "The pre-mortem", "models.html"], "dectree": ["🌳", "Expected value & decision trees", "models.html"], "ooda": ["🔁", "The OODA loop", "models.html"], "sixhats": ["🎩", "Six Thinking Hats", "models.html"], "rapid": ["🗳️", "Decision rights: RAPID & DACI", "models.html"], "wrap": ["🎁", "The WRAP process", "models.html"], "fivewhys": ["❓", "The five whys", "models.html"], "issuetree": ["🌳", "Issue trees & MECE", "models.html"], "minto": ["🔺", "The pyramid principle (SCQA)", "models.html"], "abstraction": ["🪜", "Abstraction laddering", "models.html"], "iceberg": ["🧊", "The iceberg model", "models.html"], "ladder": ["🪜", "The ladder of inference", "models.html"], "fishbone": ["🐟", "Fishbone (Ishikawa) diagram", "models.html"], "rubberduck": ["🦆", "Rubber duck debugging", "models.html"], "doublediamond": ["💠", "The double diamond", "models.html"], "sbi": ["💬", "Situation–Behaviour–Impact feedback", "models.html"], "covey": ["⭕", "Circle of concern vs circle of influence", "models.html"], "radicalcandor": ["🎯", "Radical Candor", "models.html"], "irontriangle": ["🔺", "The iron triangle", "models.html"], "cpm": ["🛤️", "Critical path method", "models.html"], "pert": ["📐", "PERT & three-point estimates", "models.html"], "toc": ["⛓️", "Theory of constraints", "models.html"], "littles": ["🚰", "Little's law & WIP limits", "models.html"], "brooks": ["👥", "Brooks's law", "models.html"], "wbs": ["🧱", "Work breakdown structure", "models.html"], "agile": ["🔄", "Agile & Scrum", "models.html"], "kanban": ["🗂️", "Kanban", "models.html"], "cone": ["🍦", "The cone of uncertainty", "models.html"], "raci": ["📋", "RACI matrix", "models.html"], "tuckman": ["👫", "Forming, storming, norming, performing", "models.html"], "conway": ["🏗️", "Conway's law", "models.html"], "ninety": ["⏳", "The ninety-ninety rule", "models.html"], "riskmatrix": ["🟥", "Risk matrix", "models.html"], "kano": ["😍", "The Kano model", "models.html"], "chasm": ["🌉", "Crossing the chasm", "models.html"], "hook": ["🪝", "The Hook model", "models.html"], "aarrr": ["🏴‍☠️", "Pirate metrics (AARRR)", "models.html"], "leanstartup": ["🧪", "The Lean Startup", "models.html"], "pmf": ["🧩", "Product–market fit", "models.html"], "heart": ["❤️", "The HEART framework", "models.html"], "moscow": ["📌", "MoSCoW prioritisation", "models.html"], "bmc": ["🧾", "Business Model Canvas", "models.html"], "fogg": ["⚙️", "Fogg behaviour model (B = MAP)", "models.html"], "blueocean": ["🌊", "Blue ocean strategy", "models.html"], "shapeup": ["⛰️", "Shape Up", "models.html"], "wardley": ["🗺️", "Wardley mapping", "models.html"], "threehorizons": ["🌅", "Three horizons of growth", "models.html"]};
+/* ---------- THEORIES: page ---------- */
+(() => {
+  const DOM = Object.fromEntries(DOMAINS.map(d => [d[0], d]));
+  const txt = c => c === "c1" ? "var(--c1)" : `var(--${c}t)`;
+  const byId = Object.fromEntries(TH.map(t => [t[0], t]));
+  const EV = typeof EVID === "undefined" ? {} : EVID, X = typeof XREF === "undefined" ? {} : XREF;
+  const ORD = Object.fromEntries(DOMAINS.map((d, i) => [d[0], i])), TILES = [...TH].sort((a, b) => ORD[a[1]] - ORD[b[1]]);
+  let done = new Set();
+  try { done = new Set(JSON.parse(localStorage.getItem("th-done") || "[]")); } catch (e) {}
+  const save = () => { try { localStorage.setItem("th-done", JSON.stringify([...done])); } catch (e) {} };
+
+  // cards
+  DOMAINS.forEach(([k]) => {
+    const list = $(`#list-${k}`); if (!list) return;
+    list.innerHTML = TH.filter(t => t[1] === k).map(t => {
+      const [id, d, ic, title, who, one, body, edge, ex, mis, rel, demo] = t, c = DOM[d][3];
+      return `<article class="th" id="t-${id}" style="--dc:var(--${c});--dct:${txt(c)};--dcs:var(--${c}-soft)">
+  <button class="th-h" aria-expanded="false"><span class="th-ic">${ic}</span><span class="th-tt"><b>${title}</b><small>${one}</small></span><span class="th-who">${who}</span><span class="th-ck" title="Understood">✓</span><span class="th-chev">▾</span></button>
+  <div class="th-b" hidden>
+    <p class="th-who-m small muted">${who}</p>
+    ${EV[id] ? `<span class="th-badge ev-${EV[id][0]}">Evidence: ${EV[id][1]}</span>` : ""}
+    <p>${body}</p>
+    <div class="th-edge"><h5>⚡ Why it gives you an edge now</h5><p>${edge}</p></div>
+    <div class="th-2"><div><h5>🔍 Example</h5><p>${ex}</p></div><div><h5>⚠️ Common misconception</h5><p>${mis}</p></div></div>
+    ${demo ? `<div class="widget th-demo" data-demo="${demo}"><div class="w-head">Try it</div></div>` : ""}
+    <div class="th-rel"><span>Connects to</span>${rel.map(r => byId[r] ? `<button class="chip" data-jump="${r}">${byId[r][2]} ${byId[r][3]}</button>` : X[r] ? `<a class="chip th-xlink" href="${X[r][2]}#t-${r}">${X[r][0]} ${X[r][1]} <span aria-hidden="true">↗</span></a>` : "").join("")}</div>
+    <button class="btn th-done-btn"></button>
+  </div>
+</article>`;
+    }).join("");
+  });
+
+  const card = id => $(`#t-${id}`);
+  const paint = () => {
+    TH.forEach(([id]) => { const c = card(id), d = done.has(id); c.classList.toggle("done", d); $(".th-done-btn", c).textContent = d ? "✓ Understood (click to undo)" : "Mark as understood"; $(`.th-tile[data-t="${id}"]`)?.classList.toggle("done", d); });
+    const n = TH.filter(t => done.has(t[0])).length, pct = n / TH.length * 100;
+    $("#thProg").innerHTML = `<div class="th-prog-bar"><i style="width:${pct}%"></i></div><span><b>${n}</b> of ${TH.length} ${PAGE.noun} understood</span>`;
+    DOMAINS.forEach(([k]) => { const all = TH.filter(t => t[1] === k), m = all.filter(t => done.has(t[0])).length, el = $(`#dprog-${k}`); if (el) el.textContent = `${m} / ${all.length} understood`; });
+  };
+  const open = (id, on = true, scroll = false) => {
+    const c = card(id), b = $(".th-b", c), h = $(".th-h", c);
+    b.hidden = !on; h.setAttribute("aria-expanded", on); c.classList.toggle("open", on);
+    if (on) { const w = $(".th-demo", c); if (w && !w.dataset.ready) { w.dataset.ready = 1; const box = document.createElement("div"); w.appendChild(box); try { DEMOS[w.dataset.demo](box); } catch (e) { console.error(e); } } }
+    if (on && scroll) { c.scrollIntoView({ behavior: reduced ? "auto" : "smooth", block: "start" }); c.animate?.([{ boxShadow: "0 0 0 6px var(--dcs)" }, { boxShadow: "0 0 0 0 transparent" }], { duration: 1400 }); }
+  };
+  $$(".th").forEach(c => {
+    const id = c.id.slice(2);
+    $(".th-h", c).addEventListener("click", () => open(id, !c.classList.contains("open")));
+    $(".th-done-btn", c).addEventListener("click", () => { done.has(id) ? done.delete(id) : done.add(id); save(); paint(); });
+    $$("[data-jump]", c).forEach(b => b.addEventListener("click", () => open(b.dataset.jump, true, true)));
+  });
+  $$(".th-expand").forEach(b => b.addEventListener("click", () => {
+    const k = b.dataset.d, cards = $$(`#list-${k} .th`), openAll = cards.some(c => !c.classList.contains("open"));
+    cards.forEach(c => open(c.id.slice(2), openAll)); b.textContent = openAll ? "Collapse all" : "Expand all";
+  }));
+
+  // hub: tiles, search, filter, surprise
+  const tiles = $("#thTiles");
+  tiles.innerHTML = TILES.map(t => { const c = DOM[t[1]][3]; return `<button class="th-tile" data-t="${t[0]}" data-d="${t[1]}" style="--dc:var(--${c});--dcs:var(--${c}-soft)"><span>${t[2]}</span><b>${t[3]}</b><small>${t[5]}</small>${EV[t[0]] && /belief|debated|mixed/.test(EV[t[0]][0]) ? `<span class="th-tb ev-${EV[t[0]][0]}">${EV[t[0]][0] === "belief" ? "not science" : EV[t[0]][0]}</span>` : ""}</button>`; }).join("");
+  $("#thSearch").placeholder = `Search ${TH.length} ${PAGE.noun}, ${PAGE.search}…`;
+  $("#thDomChips").innerHTML = `<button class="chip on" data-dom="all">All ${TH.length}</button>` + DOMAINS.map(d => `<button class="chip" data-dom="${d[0]}">${d[1]} ${d[5] || d[2].split(" & ")[0].split(",")[0].replace("Thinking tools", "Tools")}</button>`).join("");
+  let dom = "all", q = "";
+  const filt = () => {
+    let n = 0;
+    $$(".th-tile", tiles).forEach(el => { const t = byId[el.dataset.t], hay = (t[3] + " " + t[4] + " " + t[5] + " " + t[6]).toLowerCase().replace(/<[^>]+>/g, ""); const show = (dom === "all" || t[1] === dom) && (!q || hay.includes(q)); el.hidden = !show; if (show) n++; });
+    $("#thCount").textContent = n === TH.length ? "" : `${n} match${n === 1 ? "" : "es"}`;
+  };
+  chipGroup($("#thDomChips"), "dom", d => { dom = d; filt(); });
+  $("#thSearch").addEventListener("input", e => { q = e.target.value.trim().toLowerCase(); filt(); });
+  $$(".th-tile", tiles).forEach(el => el.addEventListener("click", () => open(el.dataset.t, true, true)));
+  $("#thSurprise").addEventListener("click", () => { const pool = TH.filter(t => !done.has(t[0])), t = (pool.length ? pool : TH)[Math.floor(Math.random() * (pool.length || TH.length))]; open(t[0], true, true); });
+  paint(); filt();
+  // deep links like theories.html#t-bayes
+  const hash = () => { const m = location.hash.match(/^#t-(.+)$/); if (m && byId[m[1]]) setTimeout(() => open(m[1], true, true), 60); };
+  addEventListener("hashchange", hash); hash();
+
+  // final challenge: which theory explains it?
+  let qi = 0, sc = 0, order = [];
+  const shuffle = a => { const b = [...a]; for (let i = b.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [b[i], b[j]] = [b[j], b[i]]; } return b; };
+  const qbox = $("#thQuiz");
+  const qrender = () => {
+    if (qi >= QUIZ.length) { qbox.innerHTML = `<div class="sort-done"><div class="sort-big">${sc} / ${QUIZ.length}</div><p>${sc === QUIZ.length ? `Flawless. You can see the ${PAGE.noun} at work in everyday situations.` : sc >= QUIZ.length * .7 ? "Strong. Open the cards you missed to close the gaps." : "Good start. The cards behind each answer are one click away."}</p><button class="btn" data-again>↺ Try again</button></div>`; $("[data-again]", qbox).addEventListener("click", () => { qi = 0; sc = 0; qrender(); }); return; }
+    const [qq, opts, ans, link, why] = QUIZ[qi]; order = shuffle(opts.map((o, i) => i));
+    qbox.innerHTML = `<div class="sort-progress"><span>${qi + 1} / ${QUIZ.length}</span><span>score ${sc}</span></div><div class="sort-bar"><i style="width:${qi / QUIZ.length * 100}%"></i></div><p class="q" style="font-weight:700;font-size:1.05rem">${qq}</p><div class="opts">${order.map(i => `<button class="opt" data-i="${i}">${opts[i]}</button>`).join("")}</div><div class="sort-fb"></div>`;
+    let locked = false;
+    $$(".opt", qbox).forEach(b => b.addEventListener("click", () => {
+      if (locked) return; locked = true; const ok = +b.dataset.i === ans; if (ok) sc++;
+      b.classList.add(ok ? "right" : "wrong"); if (!ok) $(`.opt[data-i="${ans}"]`, qbox).classList.add("right");
+      $(".sort-fb", qbox).innerHTML = `<p style="margin-top:12px"><b>${ok ? "✓ Right." : "✗ Not quite."}</b> ${why} <button class="chip" data-jump2="${link}">Open: ${byId[link][2]} ${byId[link][3]}</button></p><button class="btn primary">${qi === QUIZ.length - 1 ? "See score →" : "Next →"}</button>`;
+      $("[data-jump2]", qbox).addEventListener("click", () => open(link, true, true));
+      $(".btn.primary", qbox).addEventListener("click", () => { qi++; qrender(); });
+    }));
+  };
+  qrender();
+
+  makeLibrary(BOOKS, BOOK_THEMES);
 })();
 
 })();
