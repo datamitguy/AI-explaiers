@@ -7,7 +7,7 @@ Four interactive, Brilliant-style courses. Each is a single self-contained HTML 
 | `index.html` | **AI, Explained**: 19 chapters, from AI basics to Claude, agents and the frontier |
 | `product-management.html` | **Product Management, First Principles**: 8 chapters |
 | `platform-management.html` | **Platform Management, First Principles**: 12 chapters |
-| `theories.html` | **Big Ideas**: 62 mind-expanding theories across 9 domains, with 22 simulations |
+| `theories.html` | **Big Ideas**: 112 mind-expanding theories across 13 domains, with 37 simulations |
 
 A switcher in the top bar links the four courses.
 
@@ -84,7 +84,7 @@ It ends with a library of 23 sources (including Domain-Driven Design, the EU AI 
 
 ## Big Ideas: 62 theories that expand your mind (`theories.html`)
 
-An interactive field guide to the theories that give you an edge today. A **theory map** at the top lets you search, filter by domain, pick a theory at random, and track which ones you've marked as understood (saved in your browser). Each theory card covers the core idea, *why it gives you an edge now*, an example, a common misconception, and links to related theories. You can deep-link to any card, for example `theories.html#t-bayes`.
+An interactive field guide to the theories that give you an edge today, covering the outer world (science, economics, power) and the inner game (brain, belief, leverage, mental models). A **theory map** at the top lets you search, filter by domain, pick a theory at random, and track which ones you've marked as understood (saved in your browser). Each theory card covers the core idea, *why it gives you an edge now*, an example, a common misconception, and links to related theories. Cards in the self-help-adjacent sections carry an **evidence rating**, from "very strong evidence" to "belief system, not science". You can deep-link to any card, for example `theories.html#t-bayes`.
 
 | Domain | Theories (🎮 = interactive simulation) |
 |---|---|
@@ -93,9 +93,13 @@ An interactive field guide to the theories that give you an edge today. A **theo
 | **Physics & the cosmos** | Big Bang (cosmic timeline 🎮), relativity (twin paradox 🎮), quantum theory (double slit 🎮), thermodynamics (entropy 🎮), chaos (logistic map 🎮), Noether's theorem, plate tectonics |
 | **Life & evolution** | Natural selection (weasel program 🎮), the selfish gene, germ theory, endosymbiosis, the Red Queen, evolutionarily stable strategies, scaling laws (Kleiber 🎮) |
 | **Mind & behaviour** | Dual-process theory (Cognitive Reflection Test 🎮), predictive processing, cognitive dissonance, attachment, theory of mind, global workspace, Hebbian learning |
+| **Brain, attention & focus** | Neuroplasticity & deliberate practice 🎮, dopamine loops 🎮, default mode network, attention residue 🎮, flow 🎮, deep work, cognitive load, spaced repetition 🎮, sleep & memory, Zeigarnik/Ovsiankina, habit formation 🎮 |
+| **Self-image, belief & wellbeing** | Psycho-Cybernetics, self-efficacy, growth mindset, Pygmalion effect, placebo, Neville Goddard's law of assumption (with what the evidence says), WOOP 🎮, hedonic treadmill 🎮, self-determination theory, locus of control, Stoic dichotomy of control, maximizers vs. satisficers, peak–end rule |
 | **Systems & complexity** | Systems thinking (thermostat 🎮), small-world networks 🎮, emergence, power laws 🎮, tipping points (Granovetter 🎮), black swans |
 | **Economics & society** | Comparative advantage (Ricardo 🎮), tragedy of the commons & Ostrom 🎮, principal–agent, creative destruction, diffusion of innovations, transaction costs |
+| **Leverage, wealth & modern strategy** | Asymmetric bets 🎮, permissionless leverage 🎮, specific knowledge, compounding 🎮, escaping the default game, value maxing, owning your time 🎮, ideas to influence 🎮, Lindy effect, antifragility, Kelly criterion 🎮, ergodicity 🎮, Matthew effect, 1,000 true fans, luck surface area |
 | **Power, politics & history** | Realism, power transition (Thucydides Trap 🎮), hegemonic stability, social contract, democratic peace, soft power, Great Man vs. forces |
 | **Language, culture & knowledge** | Sapir–Whorf, universal grammar, speech acts, semiotics, memetics, Hofstede's cultural dimensions 🎮, falsifiability (Wason 2-4-6 🎮), paradigm shifts |
+| **Thinking tools & mental models** | First principles, inversion, second-order thinking, circle of competence, Occam's razor, Goodhart's law, Parkinson's law, Chesterton's fence, the map is not the territory, regret minimization, planning fallacy |
 
-It ends with a 12-question "which theory explains it?" challenge, a 30-book reading list, and a recap on how to think in models.
+It ends with an 18-question "which theory explains it?" challenge, a 57-book reading list, and a recap on how to think in models.

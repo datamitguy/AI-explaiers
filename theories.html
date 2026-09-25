@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Big Ideas: 62 Theories That Expand Your Mind</title>
-<meta name="description" content="An interactive field guide to 62 mind-expanding theories: information theory, game theory, evolution, quantum theory, the Big Bang, chaos, systems thinking, power transition, cultural and language theories, and more, with simulations.">
+<title>Big Ideas: 112 Theories That Expand Your Mind</title>
+<meta name="description" content="An interactive field guide to 112 mind-expanding theories: information theory, game theory, evolution, quantum theory, the Big Bang, chaos, systems thinking, power transition, neuroplasticity, dopamine, flow, leverage, compounding, mental models and more, with simulations.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
@@ -637,6 +637,19 @@ select{font:inherit;font-size:.8rem;padding:6px 8px;border-radius:10px;border:1p
 #thQuiz .opt.right{border-color:var(--c2);background:var(--c2-soft);box-shadow:0 3px 0 var(--c2)}
 #thQuiz .opt.wrong{border-color:var(--c4);background:var(--c4-soft);box-shadow:0 3px 0 var(--c4);animation:shake .35s}
 .th-tile[hidden],.th-b[hidden]{display:none}
+.th-long{width:100%;max-width:340px;font-family:"JetBrains Mono",ui-monospace,monospace;box-sizing:border-box}.th-in.bad{border-color:var(--c4)}
+.th-day{display:grid;gap:4px;margin:12px 0 6px}
+.th-hr{display:flex;align-items:center;font-size:.72rem;font-weight:700;color:var(--muted)}.th-hr>span{width:48px;flex:none}.th-hr i,.th-hr b{display:block;height:14px;transition:width .4s}.th-hr i{background:var(--c2);border-radius:7px 0 0 7px}.th-hr b{background:var(--c4);opacity:.6;border-radius:0 7px 7px 0}
+.th-woop{display:grid;gap:8px}
+.th-wrow{display:flex;gap:12px;align-items:flex-start;background:var(--surface-2);border-radius:14px;padding:10px 12px}
+.th-wrow>span:last-child{flex:1;display:flex;flex-direction:column;gap:3px;min-width:0}.th-wrow small{color:var(--muted);font-size:.8rem}
+.th-wk{width:30px;height:30px;border-radius:50%;background:var(--c4);color:#fff;display:grid;place-items:center;font-weight:800;flex:none}
+.th-win{font:inherit;font-size:.9rem;padding:8px 10px;border-radius:10px;border:2px solid var(--line);background:var(--surface);color:var(--ink);width:100%;box-sizing:border-box}
+.th-days{display:flex;flex-wrap:wrap;gap:5px;align-items:center;margin-top:10px}.th-days .chip{padding:4px 10px;font-size:.78rem}
+.th-badge{display:inline-block;font-size:.7rem;font-weight:800;letter-spacing:.04em;padding:3px 9px;border-radius:99px;margin:0 0 10px}
+.ev-strong,.ev-math{background:var(--c2-soft);color:var(--c2t)}.ev-good{background:var(--c5-soft);color:var(--c5t)}.ev-active{background:var(--c1-soft);color:var(--c1)}.ev-mixed,.ev-debated{background:var(--c3-soft);color:var(--c3t)}.ev-frame{background:var(--surface-3);color:var(--ink-2)}.ev-belief{background:var(--c4-soft);color:var(--c4t)}
+.th-tile .th-tb{font-size:.62rem;font-weight:800;margin-top:4px;align-self:flex-start;padding:1px 7px;border-radius:99px}
+@media (max-width:520px){.th-tiles{grid-template-columns:1fr 1fr;gap:6px}.th-tile{padding:10px}.th-tile small{display:none}.th-tile b{font-size:.82rem}}
 </style>
 </head>
 <body>
@@ -655,10 +668,14 @@ select{font:inherit;font-size:.8rem;padding:6px 8px;border-radius:10px;border:1p
   <a href="#d-phys"><span class="num">🌌</span>Physics &amp; the cosmos</a>
   <a href="#d-life"><span class="num">🧬</span>Life &amp; evolution</a>
   <a href="#d-mind"><span class="num">🧠</span>Mind &amp; behaviour</a>
+  <a href="#d-brain"><span class="num">⚡</span>Brain, attention &amp; focus</a>
+  <a href="#d-self"><span class="num">🪞</span>Self-image, belief &amp; wellbeing</a>
   <a href="#d-sys"><span class="num">🕸️</span>Systems &amp; complexity</a>
   <a href="#d-econ"><span class="num">💱</span>Economics &amp; society</a>
+  <a href="#d-lever"><span class="num">🚀</span>Leverage, wealth &amp; modern strategy</a>
   <a href="#d-power"><span class="num">🏛️</span>Power, politics &amp; history</a>
   <a href="#d-cult"><span class="num">🗣️</span>Language, culture &amp; knowledge</a>
+  <a href="#d-tools"><span class="num">🧰</span>Thinking tools &amp; mental models</a>
   <a href="#thquiz"><span class="num">?</span>Final challenge</a>
   <a href="#thread"><span class="num">📚</span>Reading list</a>
   <a href="#recap"><span class="num">★</span>Think in models</a>
@@ -669,9 +686,9 @@ select{font:inherit;font-size:.8rem;padding:6px 8px;border-radius:10px;border:1p
   <div class="hero-inner reveal">
     <span class="ch-tag">An interactive field guide</span>
     <h1 style="margin-top:18px">Big ideas that <span class="grad">expand your mind</span>.</h1>
-    <p>62 theories that explain how the world works, from information theory and the Big Bang to game theory, evolution, quantum mechanics, great-power politics and the way language shapes thought. Each one is explained in plain English, with why it gives you an edge today, a real example, the most common misconception, and links to related ideas. 22 of them come with a hands-on simulation.</p>
+    <p>112 theories that explain how the world, and your own mind, work. They range from information theory, the Big Bang, evolution and great-power politics to dopamine loops, flow, neuroplasticity, asymmetric bets, permissionless leverage and owning your time. Each one is explained in plain English, with why it gives you an edge today, a real example, the most common misconception, an evidence rating, and links to related ideas. 37 of them come with a hands-on simulation.</p>
     <a class="btn primary" href="#hub" style="text-decoration:none;padding:13px 24px;font-size:1rem">Explore the map →</a>
-    <div class="hero-stats"><span>62 theories · 9 domains</span><span>22 interactive simulations</span><span>30 books</span></div>
+    <div class="hero-stats"><span>112 theories · 13 domains</span><span>37 interactive simulations</span><span>57 books</span></div>
   </div>
 </section>
 <!-- ============ HUB ============ -->
@@ -683,10 +700,11 @@ select{font:inherit;font-size:.8rem;padding:6px 8px;border-radius:10px;border:1p
     <p class="lede">Why learn theories at all? Because a good theory compresses a mountain of facts into one idea you can carry anywhere.</p>
   </div>
   <p class="reveal">The investor Charlie Munger called it a <b>latticework of mental models</b>. If you know only one theory, every problem looks like it fits that theory. If you know dozens from different fields, you can look at the same situation through several lenses and see what one-lens thinkers miss. The theories here were chosen because they are <b>deep</b> (they explain a lot with little), <b>transferable</b> (useful far beyond their home field) and <b>timely</b> (they matter for a world shaped by AI, networks, geopolitics and fast change).</p>
+  <p class="reveal">The map covers two kinds of theory. The <b>outer world</b> theories explain physics, life, economies and power. The <b>inner game</b> theories explain your brain, attention, beliefs and wellbeing, plus the modern playbook of leverage, compounding and owning your time. Because self-help mixes solid science with folklore, every card in those sections carries an <b>evidence rating</b>, from "very strong evidence" to "belief system, not science".</p>
   <p class="reveal">Each card gives you the core idea, <b>why it gives you an edge now</b>, a concrete example, the most common misconception, and links to connected theories. Search, filter by domain, or let chance pick. Your progress is saved in this browser.</p>
   <div class="widget wide reveal">
     <div class="w-head">Explore</div>
-    <div class="th-hub-tools"><input class="th-search" id="thSearch" type="search" placeholder="Search 62 theories, e.g. entropy, Nash, Darwin, Kuhn…" aria-label="Search theories"><button class="btn primary" id="thSurprise">🎲 Surprise me</button><span id="thCount"></span></div>
+    <div class="th-hub-tools"><input class="th-search" id="thSearch" type="search" placeholder="Search theories, e.g. entropy, dopamine, Naval, Kuhn…" aria-label="Search theories"><button class="btn primary" id="thSurprise">🎲 Surprise me</button><span id="thCount"></span></div>
     <div class="row" id="thDomChips"></div>
     <div class="th-prog" id="thProg"></div>
     <div class="th-tiles" id="thTiles"></div>
@@ -750,10 +768,32 @@ select{font:inherit;font-size:.8rem;padding:6px 8px;border-radius:10px;border:1p
   <div class="th-list" id="list-mind"></div>
 </div>
 </section>
+<section class="chapter" id="d-brain">
+<div class="wrap">
+  <div class="ch-head reveal">
+    <span class="ch-tag" style="background:var(--c5-soft);color:var(--c5t)">Part VI · 11 theories</span>
+    <h2>⚡ Brain, attention &amp; focus</h2>
+    <p class="lede">Your brain is plastic, prediction-driven and easily hijacked. These ideas explain how attention, motivation, habits and learning actually work, and how to take back control of them in an age of infinite feeds.</p>
+  </div>
+  <div class="th-dom-meta"><span id="dprog-brain"></span><button class="btn th-expand" data-d="brain">Expand all</button></div>
+  <div class="th-list" id="list-brain"></div>
+</div>
+</section>
+<section class="chapter" id="d-self">
+<div class="wrap">
+  <div class="ch-head reveal">
+    <span class="ch-tag" style="background:var(--c4-soft);color:var(--c4t)">Part VII · 13 theories</span>
+    <h2>🪞 Self-image, belief &amp; wellbeing</h2>
+    <p class="lede">How beliefs about yourself shape what you do, why getting what you want rarely makes you happier for long, and what the evidence says about popular ideas from self-help, including some that aren't science at all.</p>
+  </div>
+  <div class="th-dom-meta"><span id="dprog-self"></span><button class="btn th-expand" data-d="self">Expand all</button></div>
+  <div class="th-list" id="list-self"></div>
+</div>
+</section>
 <section class="chapter" id="d-sys">
 <div class="wrap">
   <div class="ch-head reveal">
-    <span class="ch-tag" style="background:var(--c5-soft);color:var(--c5t)">Part VI · 6 theories</span>
+    <span class="ch-tag" style="background:var(--c5-soft);color:var(--c5t)">Part VIII · 6 theories</span>
     <h2>🕸️ Systems &amp; complexity</h2>
     <p class="lede">Why wholes behave differently from their parts, why small causes can have huge effects, and why the world is more extreme than averages suggest.</p>
   </div>
@@ -764,7 +804,7 @@ select{font:inherit;font-size:.8rem;padding:6px 8px;border-radius:10px;border:1p
 <section class="chapter" id="d-econ">
 <div class="wrap">
   <div class="ch-head reveal">
-    <span class="ch-tag" style="background:var(--claude-soft);color:var(--claudet)">Part VII · 6 theories</span>
+    <span class="ch-tag" style="background:var(--claude-soft);color:var(--claudet)">Part IX · 6 theories</span>
     <h2>💱 Economics &amp; society</h2>
     <p class="lede">Why trade pays, why shared resources collapse (or don't), why firms exist, and how new ideas spread and destroy old ones.</p>
   </div>
@@ -772,10 +812,21 @@ select{font:inherit;font-size:.8rem;padding:6px 8px;border-radius:10px;border:1p
   <div class="th-list" id="list-econ"></div>
 </div>
 </section>
+<section class="chapter" id="d-lever">
+<div class="wrap">
+  <div class="ch-head reveal">
+    <span class="ch-tag" style="background:var(--c3-soft);color:var(--c3t)">Part X · 15 theories</span>
+    <h2>🚀 Leverage, wealth &amp; modern strategy</h2>
+    <p class="lede">Why some people's effort multiplies while others' only adds up. These ideas cover asymmetric bets, compounding, code and media as leverage, escaping crowded competition, and owning your time.</p>
+  </div>
+  <div class="th-dom-meta"><span id="dprog-lever"></span><button class="btn th-expand" data-d="lever">Expand all</button></div>
+  <div class="th-list" id="list-lever"></div>
+</div>
+</section>
 <section class="chapter" id="d-power">
 <div class="wrap">
   <div class="ch-head reveal">
-    <span class="ch-tag" style="background:var(--c1-soft);color:var(--c1)">Part VIII · 7 theories</span>
+    <span class="ch-tag" style="background:var(--c1-soft);color:var(--c1)">Part XI · 7 theories</span>
     <h2>🏛️ Power, politics &amp; history</h2>
     <p class="lede">How states compete, why rising powers clash with established ones, where legitimate authority comes from, and whether individuals or forces make history.</p>
   </div>
@@ -786,12 +837,23 @@ select{font:inherit;font-size:.8rem;padding:6px 8px;border-radius:10px;border:1p
 <section class="chapter" id="d-cult">
 <div class="wrap">
   <div class="ch-head reveal">
-    <span class="ch-tag" style="background:var(--c6-soft);color:var(--c6t)">Part IX · 8 theories</span>
+    <span class="ch-tag" style="background:var(--c6-soft);color:var(--c6t)">Part XII · 8 theories</span>
     <h2>🗣️ Language, culture &amp; knowledge</h2>
     <p class="lede">How language shapes thought, how culture evolves and differs, and how we know anything at all.</p>
   </div>
   <div class="th-dom-meta"><span id="dprog-cult"></span><button class="btn th-expand" data-d="cult">Expand all</button></div>
   <div class="th-list" id="list-cult"></div>
+</div>
+</section>
+<section class="chapter" id="d-tools">
+<div class="wrap">
+  <div class="ch-head reveal">
+    <span class="ch-tag" style="background:var(--c2-soft);color:var(--c2t)">Part XIII · 11 theories</span>
+    <h2>🧰 Thinking tools &amp; mental models</h2>
+    <p class="lede">Short, portable rules of thumb for thinking more clearly. They aren't laws of nature, but they're the habits that the best decision-makers use again and again.</p>
+  </div>
+  <div class="th-dom-meta"><span id="dprog-tools"></span><button class="btn th-expand" data-d="tools">Expand all</button></div>
+  <div class="th-list" id="list-tools"></div>
 </div>
 </section>
 
@@ -801,7 +863,7 @@ select{font:inherit;font-size:.8rem;padding:6px 8px;border-radius:10px;border:1p
   <div class="ch-head reveal">
     <span class="ch-tag" style="background:var(--c3-soft);color:var(--c3t)">Final challenge</span>
     <h2>Which theory explains it?</h2>
-    <p class="lede">Twelve real-world situations. Pick the lens that explains each one best.</p>
+    <p class="lede">Eighteen real-world situations. Pick the lens that explains each one best.</p>
   </div>
   <div class="widget reveal"><div class="w-head">Quiz</div><div id="thQuiz" style="min-height:260px"></div></div>
 </div>
@@ -837,6 +899,10 @@ select{font:inherit;font-size:.8rem;padding:6px 8px;border-radius:10px;border:1p
     <div><b>🧬 Variation + selection</b>Evolution explains more than biology: markets, ideas, memes and code all evolve.</div>
     <div><b>🧠 Distrust your first answer</b>System 1 is fast and confident. Prospect theory, dissonance and bounded rationality show where it goes wrong.</div>
     <div><b>❌ Try to prove yourself wrong</b>Popper: state in advance what would falsify your belief. Kuhn: notice the anomalies your field ignores.</div>
+    <div><b>⚡ Guard your attention</b>Attention residue, dopamine loops and deep work all point the same way: your focus is your most valuable asset, and many products are designed to take it.</div>
+    <div><b>🚀 Seek convexity and leverage</b>Make many small, capped-downside bets, build assets with code and media, let them compound, and never risk ruin.</div>
+    <div><b>⏳ Own your time</b>Autonomy is a core need. Spend money and effort to buy back time, and don't let work expand to fill it.</div>
+    <div><b>🧪 Check the evidence</b>Keep what works (spaced repetition, WOOP, self-efficacy), and be honest about what's belief (manifesting) or oversold.</div>
     <div><b>🗺️ The map is not the territory</b>Every theory simplifies. Know its assumptions and where it stops working.</div>
   </div>
 </div>
@@ -1378,6 +1444,334 @@ const TH = [
     ["falsifiability", "plates", "germ", "creative"]],
 ];
 
+/* ---------- THEORIES: data, part 2 (self-mastery, leverage, thinking tools) ---------- */
+// New domains, spliced into reading order
+DOMAINS.splice(DOMAINS.findIndex(d => d[0] === "sys"), 0,
+  ["brain", "⚡", "Brain, attention & focus", "c5", "Your brain is plastic, prediction-driven and easily hijacked. These ideas explain how attention, motivation, habits and learning actually work, and how to take back control of them in an age of infinite feeds."],
+  ["self", "🪞", "Self-image, belief & wellbeing", "c4", "How beliefs about yourself shape what you do, why getting what you want rarely makes you happier for long, and what the evidence says about popular ideas from self-help, including some that aren't science at all."]);
+DOMAINS.splice(DOMAINS.findIndex(d => d[0] === "power"), 0,
+  ["lever", "🚀", "Leverage, wealth & modern strategy", "c3", "Why some people's effort multiplies while others' only adds up. These ideas cover asymmetric bets, compounding, code and media as leverage, escaping crowded competition, and owning your time."]);
+DOMAINS.push(["tools", "🧰", "Thinking tools & mental models", "c2", "Short, portable rules of thumb for thinking more clearly. They aren't laws of nature, but they're the habits that the best decision-makers use again and again."]);
+
+// Evidence badges: how much weight a claim can bear
+const EVID = {
+  sapirwhorf: ["mixed", "Weak version supported, strong version rejected"], ug: ["debated", "Actively debated"], memetics: ["debated", "Influential idea, weak as a science"], greatman: ["debated", "Largely rejected in its strong form"], powertransition: ["debated", "Influential, contested"], democraticpeace: ["debated", "Strong pattern, debated causes"], predictive: ["active", "Leading framework, active research"], gwt: ["active", "Leading framework, active research"],
+  neuroplasticity: ["strong", "Strong evidence"], dopamine: ["strong", "Strong evidence (popular versions oversimplify)"], dmn: ["strong", "Strong evidence"], attnresidue: ["good", "Good evidence"], flow: ["good", "Good evidence"], deepwork: ["frame", "Practical framework"], cogload: ["strong", "Strong evidence"], spaced: ["strong", "Very strong evidence"], sleep: ["strong", "Strong evidence"], zeigarnik: ["mixed", "Mixed evidence"], habits: ["good", "Good evidence"],
+  psychocyb: ["frame", "Classic self-help framework"], selfefficacy: ["strong", "Strong evidence"], mindset: ["mixed", "Real but small effects"], pygmalion: ["mixed", "Real but smaller than first claimed"], placebo: ["strong", "Strong evidence"], goddard: ["belief", "Belief system, not science"], mentalcontrast: ["good", "Good evidence"], hedonic: ["good", "Good evidence, with limits"], sdt: ["strong", "Strong evidence"], locus: ["good", "Good evidence"], stoic: ["frame", "Philosophy, backed by CBT evidence"], maximizers: ["mixed", "Mixed evidence"], peakend: ["good", "Good evidence"],
+  asymmetric: ["frame", "Maths + practical framework"], permissionless: ["frame", "Practical framework"], specificknow: ["frame", "Practical framework"], compounding: ["math", "Mathematics"], defaultgame: ["frame", "Practical framework"], valuemax: ["frame", "Practical framework"], owntime: ["good", "Good evidence"], influence: ["good", "Good evidence"], lindy: ["frame", "Heuristic"], antifragile: ["frame", "Framework"], kelly: ["math", "Mathematics"], ergodicity: ["math", "Mathematics"], matthew: ["strong", "Strong evidence"], truefans: ["frame", "Rule of thumb"], luck: ["frame", "Heuristic"],
+  firstprinciples: ["frame", "Thinking tool"], inversion: ["frame", "Thinking tool"], secondorder: ["frame", "Thinking tool"], competence: ["frame", "Thinking tool"], occam: ["frame", "Thinking tool"], goodhart: ["good", "Well documented"], parkinson: ["frame", "Observation / heuristic"], chesterton: ["frame", "Thinking tool"], mapterritory: ["frame", "Thinking tool"], regretmin: ["frame", "Thinking tool"], planning: ["strong", "Strong evidence"],
+};
+
+TH.push(
+  // ---- BRAIN, ATTENTION & FOCUS ----
+  ["neuroplasticity", "brain", "🌱", "Neuroplasticity & deliberate practice", "Maguire (2000), Draganski (2004), Ericsson (1993)", "Your brain physically changes with what you repeatedly do, at any age.",
+    "The adult brain isn't fixed. Repeated use strengthens synapses, grows new connections and insulates busy pathways with <b>myelin</b>, so signals get faster. London taxi drivers who learned \"the Knowledge\" had larger posterior hippocampi, the region used for spatial memory. Adults who learned to juggle grew grey matter in motion-processing areas, which shrank back when they stopped. The flip side is <b>use it or lose it</b>. Anders Ericsson showed that expert performance comes from <b>deliberate practice</b>: focused work at the edge of your ability, with fast feedback. Just logging hours isn't enough.",
+    "Your brain is being trained by whatever you repeat, whether that's doomscrolling or deep reading. Choosing what to repeat is choosing who you become. In an AI era, the skills you practise (not the ones you outsource) are the ones your brain keeps.",
+    "Stroke patients regain function through intensive, targeted rehabilitation, as healthy brain areas take over lost jobs.",
+    "\"Anything is possible with enough plasticity\" goes too far. Plasticity declines with age, critical periods matter (for example, for native-like accents), and whether adults grow new neurons is still debated. \"10,000 hours\" is a pop simplification of Ericsson's work.",
+    ["hebb", "habits", "sleep", "mindset", "spaced"], "practice"],
+  ["dopamine", "brain", "🎰", "Dopamine loops & reward prediction", "Wolfram Schultz (1997), Kent Berridge, B. F. Skinner", "Dopamine signals surprise and wanting, not pleasure, and unpredictable rewards hook it hardest.",
+    "Dopamine neurons fire when a reward is <b>better than expected</b>, stay quiet when it's exactly as expected, and dip when it's worse. This <b>reward prediction error</b> is a learning signal. Berridge showed dopamine drives <b>wanting</b> (craving, pursuit) rather than <b>liking</b> (pleasure). Skinner found that <b>variable-ratio</b> rewards, which come after an unpredictable number of tries, produce the most persistent behaviour. That's the logic of slot machines, and of feeds, notifications and loot boxes. Anna Lembke (<i>Dopamine Nation</i>, 2021) adds that the brain rebalances after intense pleasure, leaving a craving \"hangover\".",
+    "Knowing the loop lets you design against it: make rewards predictable, add friction to cues, and batch your checking. Designers use the same knowledge to hook users, so knowing it is self-defence.",
+    "Pull-to-refresh is a slot-machine lever. Sometimes there's something new and exciting, often there isn't, and that unpredictability keeps you pulling.",
+    "Dopamine isn't the \"pleasure chemical\", and a \"dopamine detox\" doesn't literally lower your dopamine. It's a useful habit reset, but the name is neuroscience-flavoured marketing.",
+    ["habits", "predictive", "attnresidue", "hedonic", "influence"], "slot"],
+  ["dmn", "brain", "🌀", "Default mode network", "Marcus Raichle et al., 2001", "When you stop focusing, a brain network for self, memory and imagination switches on.",
+    "Brain scans revealed a set of regions (medial prefrontal cortex, posterior cingulate and angular gyrus) that become <b>more</b> active when you're not doing a task. This <b>default mode network</b> handles mind-wandering, remembering the past, imagining the future, and thinking about yourself and other people. It usually works in opposition to the attention networks you use for focused work. Killingsworth and Gilbert (2010) found minds wander about <b>47% of waking hours</b>, and people were less happy while wandering.",
+    "Rest isn't idle. Incubation, shower thoughts and creative leaps rely on the DMN, so a day of nonstop input starves it. Too much DMN activity, in the form of rumination, is linked to depression. Meditation trains the switch between the two modes.",
+    "You get your best idea on a walk, not staring at the problem. Focused work loaded the pieces, and the default mode network rearranged them.",
+    "It isn't a \"daydreaming centre\" to be shut down. Healthy thinking needs both focus and the default mode, plus a smooth switch between them.",
+    ["attnresidue", "flow", "sleep", "predictive", "tom"]],
+  ["attnresidue", "brain", "🔀", "Attention residue", "Sophie Leroy, 2009", "When you switch tasks, part of your attention stays behind on the last one.",
+    "Leroy found that after switching away from an unfinished task, people performed worse on the next one, because thoughts about the first task lingered: <b>attention residue</b>. The effect is strongest when the first task was left incomplete or under time pressure. Gloria Mark's research found that attention on screens now shifts roughly every <b>47 seconds</b> on average, and that after an interruption it can take a long time to get fully back on track. Every notification is a task switch.",
+    "Knowledge work is increasingly about deep, uninterrupted thinking, including directing AI agents well. The person who protects long blocks of attention outperforms the person who is always available.",
+    "Glancing at email \"for a second\" between drafting paragraphs leaves half your mind composing a reply, and the draft gets worse.",
+    "Multitasking isn't doing two things at once. For attention-demanding work, it's rapid switching, and each switch has a cost.",
+    ["deepwork", "flow", "cogload", "zeigarnik", "dopamine"], "switch"],
+  ["flow", "brain", "🌊", "Flow state", "Mihaly Csikszentmihalyi, 1975 & 1990", "Total absorption happens when challenge and skill are both high and in balance.",
+    "Csikszentmihalyi studied artists, climbers and surgeons and found a shared state of effortless concentration, lost self-consciousness and distorted time. He called it <b>flow</b>. Its conditions include clear goals, immediate feedback, and a <b>challenge that slightly stretches your skill</b>. Too much challenge brings anxiety, and too little brings boredom. Using experience sampling (beeping people at random moments), his team found people often reported more flow at work than in passive leisure such as TV.",
+    "Flow is both the most productive and one of the most satisfying states humans reach. You can engineer it: raise the challenge when bored, break tasks down when anxious, and remove interruptions.",
+    "A gamer loses four hours because difficulty adapts to skill, goals are clear and feedback is instant. Good jobs and good learning can be designed the same way.",
+    "Flow isn't relaxation. It's often effortful, and it needs skill. You can't get flow from something you're bad at and not improving at.",
+    ["attnresidue", "deepwork", "sdt", "dmn", "neuroplasticity"], "flowmap"],
+  ["deepwork", "brain", "🧘", "Deep work", "Cal Newport, 2016", "Hard, distraction-free focus is becoming rare and valuable at the same time.",
+    "Newport distinguishes <b>deep work</b> (cognitively demanding tasks done in distraction-free concentration, which create new value and are hard to replicate) from <b>shallow work</b> (email, meetings, logistics). His argument: deep work is getting rarer because of open offices and constant messaging, and more valuable because the economy rewards people who can master hard things quickly and produce at an elite level. Strategies include time-blocking, scheduled rather than constant internet use, and embracing boredom.",
+    "It pairs with attention residue and flow research to form a practical operating system for knowledge work. With AI taking over more shallow tasks, what remains for humans is increasingly deep.",
+    "A developer blocks 9–12 each morning with notifications off, and ships more in those three hours than in the rest of the week's fragmented time.",
+    "It isn't a rule to never do shallow work, and it's not only for introverts. It's about deliberately protecting some deep time.",
+    ["attnresidue", "flow", "owntime", "valuemax", "parkinson"]],
+  ["cogload", "brain", "🧠", "Cognitive load theory", "John Sweller, 1988; George Miller (1956); Nelson Cowan (2001)", "Working memory is tiny, so learning fails when you overload it.",
+    "You can hold only about <b>4 chunks</b> of new information in working memory at once (Cowan), not the famous \"7 ± 2\". Sweller's theory splits load into <b>intrinsic</b> (the material's inherent complexity), <b>extraneous</b> (bad presentation) and <b>germane</b> (the effort that builds lasting mental schemas). Good teaching cuts extraneous load, and experts beat working-memory limits by <b>chunking</b>, recognising whole patterns as one unit.",
+    "It explains why clear docs, worked examples and good UI matter, and why piling on tools, tabs and notifications makes you dumber in the moment. Offloading to notes (or AI) frees working memory for thinking.",
+    "A chess master glances at a board and remembers it, because it's 5 familiar patterns, not 25 pieces. Random boards wipe out that advantage.",
+    "\"Just try harder\" doesn't help with overload. The fix is restructuring the material, not more effort.",
+    ["attnresidue", "spaced", "information", "bounded", "firstprinciples"]],
+  ["spaced", "brain", "📅", "Spaced repetition & the forgetting curve", "Hermann Ebbinghaus, 1885; Roediger & Karpicke, 2006", "You forget fast, but well-timed retrieval makes memories last.",
+    "Ebbinghaus memorised nonsense syllables and charted how quickly he forgot them: steeply at first, then more slowly (the <b>forgetting curve</b>). Reviewing just as a memory begins to fade resets and flattens the curve, so each review can come later: the <b>spacing effect</b>. <b>Retrieval practice</b> (testing yourself) beats rereading, a finding called the <b>testing effect</b>. Slightly effortful recall is a \"desirable difficulty\" that strengthens memory.",
+    "It's one of the most robust findings in learning science and one of the least used. Apps like Anki schedule reviews automatically, so you can learn a language, a codebase or a field with a fraction of the effort.",
+    "Instead of rereading notes five times the night before, quiz yourself one day, three days, a week and three weeks after learning.",
+    "Cramming works for tomorrow's test, but most of it is gone within weeks. Feeling fluent while rereading is not the same as remembering.",
+    ["neuroplasticity", "sleep", "cogload", "hebb"], "forget"],
+  ["sleep", "brain", "😴", "Sleep & memory consolidation", "Stickgold, Walker, Born and others (1990s–)", "Sleep isn't downtime: it's when the brain files, prunes and connects the day's learning.",
+    "During deep (slow-wave) sleep, the hippocampus replays the day's experiences and transfers them to the cortex for long-term storage. REM sleep seems to help integrate memories and extract patterns. Sleep also clears metabolic waste from the brain. Sleep-deprived people learn less, make riskier decisions, have worse emotional control, and badly underestimate their own impairment.",
+    "Trading sleep for work hours is one of the worst trades available. It lowers exactly the judgement and learning speed that knowledge work depends on.",
+    "People who learn a motor skill in the evening often perform it better after a night's sleep, without any extra practice.",
+    "\"I'm fine on 5 hours\" is rarely true: only a tiny fraction of people are genetically short sleepers. Some popular sleep books also overstate specific claims, so check the sources.",
+    ["neuroplasticity", "spaced", "dmn", "cogload"]],
+  ["zeigarnik", "brain", "📌", "Zeigarnik & Ovsiankina effects", "Bluma Zeigarnik (1927), Maria Ovsiankina (1928)", "Unfinished tasks nag at you until you finish them or make a plan.",
+    "Zeigarnik reported that people remembered interrupted tasks better than completed ones. Her colleague Ovsiankina found that people feel a strong urge to <b>resume</b> interrupted tasks. Later research found the memory advantage unreliable, but the pull of open loops holds up better. Masicampo and Baumeister (2011) found that simply <b>making a specific plan</b> for an unfinished goal reduced intrusive thoughts about it.",
+    "Open loops are a hidden tax on attention. Capturing tasks in a trusted system with a next step (the core of \"Getting Things Done\") frees your mind. Writers use the effect deliberately, stopping mid-sentence to make restarting easy.",
+    "TV cliffhangers and \"part 1 of 3\" posts exploit the urge to close the loop.",
+    "The claim that we <i>remember</i> unfinished tasks better is shakier than self-help books imply. The urge to resume is the more solid part.",
+    ["attnresidue", "mentalcontrast", "cogload"]],
+  ["habits", "brain", "🔄", "Habit formation (cue–routine–reward)", "Wendy Wood; Phillippa Lally et al., 2010; Charles Duhigg, 2012", "About 40% of what you do each day is habit, and habits run on cues, not willpower.",
+    "Habits form when a behaviour is repeated in a stable context until the <b>cue</b> triggers it automatically, with little thought. Wood's diary studies suggest around <b>43%</b> of daily actions are performed habitually. Lally's study of people adopting a new daily habit found it took a <b>median of 66 days</b> to reach near-full automaticity, ranging from 18 to 254 days depending on the person and behaviour. Missing a single day didn't derail the process. The most reliable levers are changing the <b>environment and cues</b>, making good actions easy, and making bad ones hard.",
+    "Designing your environment beats relying on willpower. It's how you install good behaviours, and how products install behaviours in you.",
+    "Putting running shoes by the bed and the phone charger in the kitchen changes more mornings than any resolution.",
+    "\"21 days to form a habit\" is a myth. It comes from a misreading of Maltz's <i>Psycho-Cybernetics</i>. Most real habits take longer, and it varies widely.",
+    ["dopamine", "psychocyb", "neuroplasticity", "selfefficacy", "compounding"], "habit"],
+
+  // ---- SELF-IMAGE, BELIEF & WELLBEING ----
+  ["psychocyb", "self", "🎯", "Psycho-Cybernetics (self-image as a guidance system)", "Maxwell Maltz, 1960", "You act in line with your self-image, so change the image and behaviour follows.",
+    "Maltz, a plastic surgeon, noticed that some patients still felt ugly after successful surgery, while others changed dramatically. He concluded that the <b>self-image</b> governs behaviour. Borrowing from Wiener's <b>cybernetics</b>, he described the mind as a goal-seeking <b>servo-mechanism</b>: set a clear target, and it steers towards it using feedback, correcting errors along the way. His tools were vivid mental rehearsal, relaxation, and treating failures as course-correction data rather than verdicts.",
+    "It's the origin of much modern self-help, including visualisation, affirmations and \"identity-based habits\". The useful core, that identity and self-efficacy drive action, is supported by later research. The mechanism is a metaphor, not neuroscience.",
+    "A salesperson who sees themself as \"bad with people\" avoids calls, which confirms the belief. Rehearsing successful calls and redefining the goal as \"learn from 10 conversations\" breaks the loop.",
+    "Maltz wrote that it takes \"a minimum of about 21 days\" for a self-image to shift. That became the myth that habits form in 21 days.",
+    ["cybernetics", "selfefficacy", "habits", "goddard", "pygmalion"]],
+  ["selfefficacy", "self", "💪", "Self-efficacy", "Albert Bandura, 1977", "Believing you can do a specific thing predicts whether you'll try, persist and succeed.",
+    "Self-efficacy is your belief in your ability to succeed at a <b>specific</b> task. It isn't general self-esteem. Bandura found it predicts effort, persistence and performance across health, education and work. He identified four sources: <b>mastery experiences</b> (the strongest: small wins), <b>vicarious experience</b> (seeing someone like you succeed), <b>verbal persuasion</b>, and how you interpret your <b>physiological state</b> (for example, reading nerves as readiness).",
+    "It's the evidence-based version of \"believe in yourself\", with a practical recipe: engineer small, real wins and find role models. It matters more now that many people must keep learning new skills.",
+    "A new coder who ships a tiny working app gains more confidence than from any pep talk, and attempts a bigger project next.",
+    "Self-efficacy isn't positive thinking. It's built mostly from real evidence of success, and overconfidence can backfire.",
+    ["psychocyb", "mindset", "locus", "sdt", "habits"]],
+  ["mindset", "self", "🌿", "Growth mindset", "Carol Dweck, 2006", "Seeing abilities as improvable changes how you respond to failure.",
+    "Dweck contrasted a <b>fixed mindset</b> (ability is innate, so failure reveals your limits) with a <b>growth mindset</b> (ability develops with effort, strategy and help, so failure is information). Students with a growth mindset were more likely to seek challenges and persist. The research has had a reality check, though. Large meta-analyses in 2018 found weak average effects, and a big 2019 US study found a short online intervention raised grades by a small but meaningful amount, mainly for lower-achieving students.",
+    "The core idea, that skills are trainable and setbacks are data, is valuable and consistent with neuroplasticity. Just don't expect a poster in the classroom to transform outcomes.",
+    "Praising a child for effort and strategy (\"you tried a new approach\") rather than talent (\"you're so smart\") made them more willing to try harder puzzles in Dweck's studies.",
+    "It isn't \"effort alone is enough\" or \"anyone can be anything\". Strategy, feedback and support matter too, and the measured effects are modest.",
+    ["neuroplasticity", "selfefficacy", "pygmalion", "falsifiability"]],
+  ["pygmalion", "self", "🔮", "Self-fulfilling prophecy & the Pygmalion effect", "Robert Merton (1948); Rosenthal & Jacobson (1968)", "Expectations can create the reality they predict.",
+    "Merton coined the <b>self-fulfilling prophecy</b>: a false belief that makes itself true, like a rumour that a sound bank is failing, which triggers a bank run. Rosenthal and Jacobson told teachers that some randomly chosen pupils were \"bloomers\", and those pupils showed larger IQ gains: the <b>Pygmalion effect</b>. Later reviews found teacher-expectation effects are <b>real but usually small</b>, and strongest for stigmatised or younger students. The reverse, low expectations dragging performance down, is called the <b>Golem effect</b>.",
+    "Your expectations of teams, children and yourself leak into behaviour through warmth, feedback and the opportunities you give. Leaders shape results partly by what they visibly expect.",
+    "A manager who expects a new hire to struggle gives them less interesting work and less feedback, and the hire does struggle.",
+    "Expectations don't magically bend reality. They work through behaviour, and the classic study's effects were smaller and less consistent than often cited.",
+    ["goddard", "placebo", "psychocyb", "mindset", "blackswan"]],
+  ["placebo", "self", "💊", "Placebo & expectation effects", "Henry Beecher (1955); Ted Kaptchuk and others (2000s–)", "Expectations change real bodily experiences, especially pain and symptoms.",
+    "Inert treatments can relieve pain, nausea, fatigue and other subjective symptoms, because expectation and conditioning change how the brain processes signals. They can trigger the release of the body's own opioids, for example. <b>Nocebo</b> effects, where warnings of side effects produce the side effects, are just as real. Remarkably, <b>open-label placebos</b>, which patients know are placebos, have helped in trials for conditions like IBS. Placebos don't shrink tumours or cure infections: the effects are mostly on symptoms we perceive.",
+    "It's hard evidence that the mind–body link is real, and a caution: how things are framed changes how they feel. Framing effects in medicine, product and leadership aren't \"just psychology\", they're part of the outcome.",
+    "Four placebo pills work better than two, and branded pills better than generic ones, even though all are sugar.",
+    "\"It's just a placebo\" isn't the same as \"it's fake\". But placebos also can't cure disease, so they're not a reason to skip real treatment.",
+    ["pygmalion", "predictive", "goddard", "peakend"]],
+  ["goddard", "self", "✨", "Neville Goddard's Law of Assumption", "Neville Goddard (1905–1972); <i>Feeling Is the Secret</i> (1944)", "\"Assume the feeling of the wish fulfilled.\" A spiritual teaching, with a scientific twist on what actually works.",
+    "Goddard, a mystic in the New Thought tradition, taught that <b>imagination creates reality</b>. If you vividly imagine and <b>feel</b> that your desire has already come true, especially as you fall asleep, and \"live in the end\", the world will rearrange to match. It's now hugely popular online as \"manifesting\" and the \"law of assumption\". It is a <b>belief system, not a scientific theory</b>: there's no evidence imagination alone changes external events. But research on its ingredients is revealing. <b>Mental rehearsal</b> of <i>how</i> you'll do something improves performance (Taylor &amp; Pham, 1998), and expectations change behaviour (Pygmalion, self-efficacy). However, Gabriele Oettingen found that indulging in <b>positive fantasies</b> of the end result predicted <i>lower</i> effort and achievement, because the brain relaxes as if the goal were already reached. Pairing the dream with the obstacle (<b>mental contrasting</b>) works much better.",
+    "Understanding why assumption practices <i>feel</i> powerful (motivation, noticing opportunities, confidence) lets you keep the useful parts and add the missing piece: a plan for obstacles.",
+    "Imagining yourself confidently giving a talk, step by step, helps. Only picturing the standing ovation, and skipping the rehearsal, tends to hurt.",
+    "It isn't evidence-based causation. Believing hard enough doesn't move markets or people, and blaming yourself for \"not believing enough\" when things go wrong is a trap.",
+    ["mentalcontrast", "psychocyb", "pygmalion", "placebo", "predictive"]],
+  ["mentalcontrast", "self", "🪜", "Mental contrasting & implementation intentions (WOOP)", "Gabriele Oettingen; Peter Gollwitzer (1999)", "Dream, then face the obstacle, then make an if–then plan.",
+    "Oettingen found that <b>positive fantasies</b> alone sap energy, while <b>mental contrasting</b>, which means imagining the desired future and then the main obstacle in the way, turns wishes into commitment when the goal is feasible. Gollwitzer showed that <b>implementation intentions</b> (\"If situation X occurs, then I'll do Y\") dramatically increase follow-through; a meta-analysis of 94 studies found a medium-to-large effect. Combined, they form <b>WOOP</b>: Wish, Outcome, Obstacle, Plan.",
+    "It's one of the best-evidenced, cheapest self-regulation tools there is. It takes five minutes, works for fitness, study and work goals, and fixes the gap in \"manifesting\".",
+    "\"If I feel like skipping my run after work, then I'll put on my running shoes and just go for 10 minutes.\"",
+    "It's not negative thinking. The dream stays; you just add a realistic plan for what gets in the way.",
+    ["goddard", "zeigarnik", "habits", "selfefficacy"], "woop"],
+  ["hedonic", "self", "🎡", "The hedonic treadmill", "Brickman & Campbell (1971); Brickman, Coates & Janoff-Bulman (1978)", "You adapt to most good and bad changes, so happiness drifts back toward a baseline.",
+    "People quickly get used to new circumstances, so a raise, a new car or a promotion delivers a burst of happiness that fades as expectations rise. A classic study found lottery winners weren't much happier than controls a while later. But the treadmill has limits. Long-term panel data (Lucas and others) show some events, like unemployment, disability and divorce, can shift happiness for years, and adaptation to noise or long commutes is poor. A 2023 collaboration between Kahneman and Killingsworth found happiness keeps rising with income for most people, with a plateau only for the least happy.",
+    "It explains why consumerism disappoints and why people chase the next thing. What resists adaptation? Relationships, autonomy, experiences, variety, gratitude, and meaningful progress.",
+    "The new phone thrills for a week, then it's just your phone. Weekly dinners with friends keep paying off.",
+    "It doesn't mean nothing matters. Circumstances do change wellbeing; you just adapt to most of them more than you predict.",
+    ["dopamine", "sdt", "owntime", "maximizers", "peakend"], "treadmill"],
+  ["sdt", "self", "🧭", "Self-determination theory", "Edward Deci & Richard Ryan, 1985", "Motivation thrives on autonomy, competence and relatedness.",
+    "SDT holds that humans have three basic psychological needs: <b>autonomy</b> (acting from your own choice), <b>competence</b> (feeling effective and growing) and <b>relatedness</b> (connection with others). When they're met, <b>intrinsic motivation</b> and wellbeing flourish. It also explains the <b>overjustification effect</b>: in Lepper's 1973 study, children rewarded for drawing later drew less when rewards stopped, because an external reward had crowded out the internal one. Hundreds of studies across cultures support the core model.",
+    "It's a blueprint for jobs, products, teams and a life worth living, and it explains why micromanagement and bribes backfire for creative work. Owning your time is largely an autonomy strategy.",
+    "Open-source developers work unpaid on hard problems for years, powered by autonomy, mastery and community.",
+    "Autonomy isn't independence or doing everything alone. You can freely choose to rely on others.",
+    ["flow", "owntime", "hedonic", "principalagent", "selfefficacy"]],
+  ["locus", "self", "🎛️", "Locus of control", "Julian Rotter, 1966", "Do you believe outcomes are driven by your actions or by outside forces?",
+    "People with an <b>internal locus of control</b> tend to believe their actions shape outcomes. Those with an <b>external</b> locus attribute results to luck, fate or powerful others. Internals tend to take more initiative, cope better and achieve more, though the relationships are moderate. Seligman's <b>learned helplessness</b> research showed the extreme external case: after repeated uncontrollable setbacks, animals and people stop trying even when control returns.",
+    "Leverage starts with a sense of agency. But a healthy locus is <i>accurate</i>: take ownership of what you control and don't blame yourself for what you don't. That's the Stoic dichotomy in modern form.",
+    "After a layoff, one person sends 50 targeted applications and learns a new skill, while another concludes \"the market is rigged\" and stops.",
+    "Extreme internality isn't healthy either. Believing everything is your fault leads to self-blame, and ignores luck and systems.",
+    ["stoic", "selfefficacy", "luck", "bounded"]],
+  ["stoic", "self", "🏛️", "Stoic dichotomy of control", "Epictetus (c. 125 AD); Marcus Aurelius, Seneca", "Focus on what's up to you, and accept what isn't.",
+    "Epictetus opened his handbook with: \"Some things are within our power, while others are not.\" Our judgements, intentions and actions are in our control. Other people, reputation, the economy and the past are not. Suffering comes largely from confusing the two. The Stoics practised <b>negative visualisation</b> (imagining loss to appreciate what you have), the <b>view from above</b>, and evening reviews. Albert Ellis and Aaron Beck explicitly drew on Stoicism in creating the cognitive therapies (REBT and CBT), which have strong evidence.",
+    "In a noisy world of news, markets and algorithms, it's a filter for where to spend attention and emotion. It pairs well with locus of control and antifragility.",
+    "You can't control whether you get the job. You can control your preparation and how you respond to the result.",
+    "Stoicism isn't suppressing emotion or passivity. The Stoics were active in public life; they just aimed effort where it could matter.",
+    ["locus", "antifragile", "hedonic", "dissonance"]],
+  ["maximizers", "self", "🛒", "Maximizers vs. satisficers (the paradox of choice)", "Barry Schwartz et al., 2002; Herbert Simon", "Always seeking the best option can make you less satisfied than settling for good enough.",
+    "Building on Simon's <b>satisficing</b>, Schwartz found that <b>maximizers</b>, who try to find the very best option, often achieve objectively better results (for example, higher starting salaries) but feel <b>worse</b> about them: more regret, more comparison, less satisfaction. His <i>Paradox of Choice</i> (2004) argued that too many options can paralyse. The famous jam study (24 jams vs. 6) has had mixed replications, so \"more choice is always bad\" is too strong. But the maximizer–regret link holds up reasonably well.",
+    "Endless options (apps, partners, jobs, AI tools) make maximizing easy and exhausting. Maximize on the few decisions that really matter, and satisfice everything else.",
+    "Spending three hours comparing 40 headphones, then feeling unsure, versus picking a well-reviewed pair in ten minutes.",
+    "Satisficing isn't low standards. It's setting clear criteria and stopping when you meet them.",
+    ["bounded", "hedonic", "valuemax", "regretmin"]],
+  ["peakend", "self", "⛰️", "Peak–end rule", "Daniel Kahneman et al., 1993", "We remember experiences by their best or worst moment and how they ended, not their total.",
+    "In the cold-hand experiment, people kept one hand in painfully cold water for 60 seconds, and the other for 60 seconds plus 30 more seconds of slightly less cold water. Most chose to repeat the <b>longer</b> trial, because it ended better. Memory neglects duration and averages the <b>peak</b> and the <b>end</b>. Redelmeier and Kahneman found colonoscopy patients whose procedures ended more gently remembered them as less painful.",
+    "Your \"remembering self\" makes your future choices. Design experiences, whether products, presentations, holidays or difficult conversations, with a strong peak and a good ending.",
+    "A holiday with one amazing day and a relaxing last evening is remembered better than a consistently fine one that ended with a missed flight.",
+    "It doesn't mean duration doesn't matter to how you actually feel. It's about memory, which differs from moment-to-moment experience.",
+    ["prospect", "dualprocess", "hedonic", "influence"]],
+
+  // ---- LEVERAGE, WEALTH & MODERN STRATEGY ----
+  ["asymmetric", "lever", "📐", "Asymmetric bets (convexity)", "Nassim Taleb; venture capital; Jeff Bezos (2015 letter)", "Take bets where the downside is small and capped, but the upside is huge.",
+    "An asymmetric bet has <b>limited downside and open-ended upside</b>. Its payoff is <b>convex</b>, so a portfolio of such bets can win even if most of them fail. Venture capital works this way: most startups fail, but one 100× success pays for all of them. Bezos wrote: \"Given a ten percent chance of a 100 times payoff, you should take that bet every time.\" The key is surviving the losses, which means sizing each bet small enough to make many of them.",
+    "The internet made many personal bets asymmetric: writing a post, launching a side project, emailing someone you admire. Each costs little, but each could change your life. Most people treat them as risky and never place them.",
+    "Spending 3 hours on a well-researched blog post: the worst case is 3 hours; the best case is a job offer, a cofounder or a new career.",
+    "Asymmetric doesn't mean \"likely to pay off\". Most asymmetric bets fail. The edge comes from the shape of the payoff and the number of bets.",
+    ["kelly", "antifragile", "powerlaw", "luck", "blackswan"], "bets"],
+  ["permissionless", "lever", "🛠️", "Permissionless leverage (code & media)", "Naval Ravikant, 2018", "Labour and capital need someone's permission. Code and media don't.",
+    "Naval described three kinds of <b>leverage</b> that multiply your judgement. <b>Labour</b> (people working for you) is the oldest and messiest. <b>Capital</b> (money) needs someone to trust you with it. <b>Products with no marginal cost of replication</b> (code and media: software, writing, video, podcasts) need <b>no one's permission</b>: \"they work for you while you sleep\". A piece of code or a video made once can serve millions at almost no extra cost. AI has now extended this: agents are a new kind of code-based labour.",
+    "It's the core mechanism behind solo creators, indie developers and small teams with huge reach. Its prerequisite is judgement and specific knowledge, because leverage also multiplies mistakes.",
+    "A teacher who records a great course reaches 100,000 students. The same teacher lecturing in person reaches 30 a year.",
+    "It's not passive income for free. It takes a long, unpaid build-up, most content and code gets little traction, and returns follow a power law.",
+    ["specificknow", "compounding", "powerlaw", "truefans", "asymmetric"], "leverage"],
+  ["specificknow", "lever", "🔑", "Specific knowledge", "Naval Ravikant (2018); F. A. Hayek (1945)", "Knowledge that can't be trained for, because it grew out of your curiosity and experience, is hard to compete with.",
+    "Naval defines <b>specific knowledge</b> as knowledge you can't easily be trained for: if it could be taught in a course, someone could be trained (or automated) to replace you. It's found by pursuing <b>genuine curiosity</b>, often at the intersection of unusual interests, and it's often tacit. It echoes Hayek's 1945 point that crucial economic knowledge is local and hard to centralise. Combine specific knowledge with accountability (putting your name on it) and leverage.",
+    "As AI commoditises codifiable knowledge, the premium shifts to judgement, taste, unusual combinations and context that doesn't appear in the training data.",
+    "A nurse who learned to code builds clinical software that pure engineers can't, because she knows how wards actually work.",
+    "It doesn't mean narrow specialisation. It's often a unique combination of fields, closer to a talent stack.",
+    ["valuemax", "permissionless", "defaultgame", "comparative"]],
+  ["compounding", "lever", "📈", "Compounding", "Mathematics; attributed wisdom from Einstein (apocryphal) to Buffett", "Small, consistent gains multiply into huge results, but only if you don't interrupt them.",
+    "When gains build on previous gains, growth is <b>exponential</b>: at 10% a year, money doubles about every 7 years (the <b>rule of 72</b>: 72 ÷ rate). Being 1% better every day for a year gives 1.01³⁶⁵ ≈ <b>37.8×</b>, while being 1% worse gives 0.99³⁶⁵ ≈ 0.03. Compounding applies to knowledge, relationships, reputation, code and audiences as well as money. Its defining feature is that most of the gains come <b>at the end</b>, so it rewards patience and punishes interruption.",
+    "It's the reason to start early, stay consistent and avoid ruin, since one wipeout resets the curve. Naval: \"All the returns in life, whether in wealth, relationships, or knowledge, come from compound interest.\"",
+    "Warren Buffett made roughly 99% of his wealth after his 50th birthday, because his compounding had decades to run.",
+    "The \"1% better every day\" maths is illustrative, not literal. Real skills plateau. The point is the shape: steady, stacked progress beats sporadic bursts.",
+    ["ergodicity", "habits", "matthew", "lindy", "powerlaw"], "compound"],
+  ["defaultgame", "lever", "🎲", "Escaping the default game", "Peter Thiel (2014), James Carse (1986), René Girard", "The crowded, pre-set game everyone plays is hard to win, so choose or create your own.",
+    "The <b>default game</b> is the path society hands you: the same credentials, ladders, and status markers as everyone else, competing for the same slots. René Girard's <b>mimetic theory</b> explains why: we want what others want, so rivalry piles up. Peter Thiel argues \"competition is for losers\": in perfect competition, profits and distinction are competed away, so aim for a <b>monopoly</b> on something new. James Carse distinguished <b>finite games</b> (played to win) from <b>infinite games</b> (played to keep playing). Naval summarises it: \"Escape competition through authenticity.\"",
+    "AI will compete hardest where the game is standardised and measurable. The escape is to play an infinite game in a niche that fits your specific knowledge, where you set the rules.",
+    "Instead of competing with 5,000 applicants for a generic analyst role, someone publishes deep analysis of an overlooked industry, and the jobs come to them.",
+    "It's not rejecting all conventional paths. Sometimes the default game is the right one. The point is choosing it on purpose.",
+    ["gametheory", "specificknow", "valuemax", "maximizers", "paradigm"]],
+  ["valuemax", "lever", "💎", "Value maxing (rare & valuable skills)", "Cal Newport (2012), Scott Adams (2013), Naval Ravikant", "Maximize the value you create that's rare and hard to replace, not just effort or credentials.",
+    "\"Value maxing\" (in the spirit of the online \"-maxxing\" trend) means deliberately becoming more valuable, not just busier. The best-supported version combines three ideas. <b>Career capital</b> (Newport, <i>So Good They Can't Ignore You</i>): the market pays for skills that are <b>rare and valuable</b>, so build them before expecting passion or freedom. The <b>talent stack</b> (Adams): being top 25% in two or three complementary skills can make you top 1% at their combination. And <b>getting paid for outcomes</b>: move from selling hours towards owning results and equity. One warning from Schwartz: maximize value, not every choice, or you'll drown in comparison.",
+    "In an AI economy, value shifts to what's scarce: judgement, taste, trust, accountability, and combinations of domain knowledge. Value maxing means regularly asking which of your skills are getting cheaper and which are getting rarer.",
+    "A designer who learns front-end code and product analytics becomes the rare person who can take an idea from sketch to measured launch alone.",
+    "It's not about grinding or status signalling. Rare and valuable is judged by the market and by what you enjoy getting better at, not by hours worked.",
+    ["specificknow", "comparative", "defaultgame", "deepwork", "maximizers"]],
+  ["owntime", "lever", "⏳", "Owning your time (time affluence)", "Ashley Whillans et al. (2017); Morgan Housel (2020); Paul Graham (2009)", "Control over your time is one of the strongest predictors of wellbeing, and it can be bought.",
+    "Research on <b>time affluence</b> finds that feeling you have enough time predicts wellbeing, often more than income. Whillans and colleagues found people who <b>spent money to buy time</b> (outsourcing disliked chores) reported greater life satisfaction, across income levels. Housel argues the highest dividend money pays is \"the ability to wake up every morning and say, 'I can do whatever I want today.'\" Paul Graham's essay \"Maker's Schedule, Manager's Schedule\" explains why a single meeting can wreck a creator's day. Oliver Burkeman's <i>Four Thousand Weeks</i> adds the humbling maths: an 80-year life is about 4,000 weeks.",
+    "Autonomy (SDT) is a core need, and time is the resource that permissionless leverage and compounding ultimately buy back. It's worth auditing who owns your hours.",
+    "Paying for a cleaner and grocery delivery to free 4 hours a week for family or a side project, if you can afford it, is money well spent according to the research.",
+    "It's not about maximizing free time. Idle, unstructured time with no purpose doesn't feel good either. It's about <i>choosing</i> how your time is used.",
+    ["sdt", "parkinson", "deepwork", "permissionless", "hedonic"], "timeaudit"],
+  ["influence", "lever", "📣", "From ideas to influence (persuasion & stickiness)", "Robert Cialdini (1984, 2016); Chip & Dan Heath (2007); Aristotle", "Good ideas don't spread by themselves: they need persuasion principles and a sticky shape.",
+    "Cialdini identified universal <b>principles of influence</b>: <b>reciprocity</b>, <b>commitment &amp; consistency</b>, <b>social proof</b>, <b>authority</b>, <b>liking</b>, <b>scarcity</b>, and later <b>unity</b> (shared identity). The Heaths' <i>Made to Stick</i> found memorable ideas are <b>Simple, Unexpected, Concrete, Credible, Emotional</b>, and told as <b>Stories</b> (SUCCESs). Aristotle got there first with <b>ethos</b> (credibility), <b>pathos</b> (emotion) and <b>logos</b> (logic).",
+    "In a world of infinite content, attention and trust are scarce. Turning ideas into influence is how builders, researchers and leaders get their work adopted. Knowing the principles also protects you from manipulation.",
+    "\"Most guests in this room reuse their towels\" increased towel reuse more than an environmental appeal did: that's social proof (Goldstein, Cialdini & Griskevicius, 2008).",
+    "Persuasion isn't manipulation when it's honest: the same principles help true ideas spread. Using them deceptively tends to destroy trust over repeated games.",
+    ["signaling", "memetics", "diffusion", "softpower", "peakend"], "cialdini"],
+  ["lindy", "lever", "🏺", "The Lindy effect", "Albert Goldman (1964); Benoît Mandelbrot; Nassim Taleb (2012)", "For non-perishable things like ideas, books and technologies, every year survived adds to expected life.",
+    "Named after Lindy's deli in New York, where comedians joked about career longevity, the <b>Lindy effect</b> says the expected remaining lifespan of non-perishable things grows with their current age. A book that has been in print for 100 years is likely to be read for another 100. One published last year probably won't last. Taleb framed it as survival being a signal of robustness, a filter only time can apply.",
+    "It's a filter for information overload: prefer old books, proven tools and time-tested principles over this week's hot take, and treat newness with healthy scepticism. It also explains why the theories on this page are worth learning.",
+    "Chairs, wheels and double-entry bookkeeping have outlived countless \"revolutionary\" replacements.",
+    "It doesn't apply to perishable things like people or phones, and it's a probability, not a guarantee. Old things do die.",
+    ["antifragile", "evolution", "compounding", "paradigm"]],
+  ["antifragile", "lever", "🔥", "Antifragility & optionality", "Nassim Nicholas Taleb, 2012", "Some things get stronger from stress and volatility, so design your life to be one of them.",
+    "Taleb introduced a triad. <b>Fragile</b> things break under stress (a wine glass). <b>Robust</b> things resist it (a rock). <b>Antifragile</b> things gain from it (muscles, immune systems, evolution, some businesses). Antifragility comes from <b>optionality</b> (the right, not the obligation, to act), small frequent failures, redundancy, and a <b>barbell strategy</b>: be very safe with most resources and take many small, high-upside risks with the rest. He also favours <b>via negativa</b>: often you improve most by removing harmful things.",
+    "In a world of black swans, forecasting is weak, but you can shape your exposure to uncertainty. Build buffers, keep options open, and make sure surprises help you more than they hurt.",
+    "A freelancer with savings, several clients and a side project gains from turbulence, while an employee with one income and no savings is fragile.",
+    "Antifragile doesn't mean seeking all risk. Ruin (bankruptcy, death, burnout) must be avoided at all costs, which is why the barbell keeps most resources safe.",
+    ["blackswan", "asymmetric", "kelly", "evolution", "stoic"]],
+  ["kelly", "lever", "🎯", "The Kelly criterion", "John L. Kelly Jr., Bell Labs, 1956", "The optimal bet size maximizes long-run growth, and overbetting ruins you even with an edge.",
+    "Kelly, working with Shannon's information theory, derived how much of your bankroll to stake on a favourable bet to maximize long-term growth: for an even-money bet with win probability p, bet <b>f* = 2p − 1</b> of your wealth. With a 60% edge, that's 20%. Betting more than Kelly increases volatility and <i>lowers</i> long-run growth; betting twice Kelly brings growth to roughly zero. Many professionals use <b>half-Kelly</b> for safety, because their edge estimates are uncertain.",
+    "It applies to any repeated risk: investing, startup bets, how much time to put into a speculative project. Having an edge isn't enough; sizing is what keeps you in the game.",
+    "Ed Thorp used Kelly sizing to beat blackjack in the 1960s, then to run one of the most successful hedge funds.",
+    "More isn't better. Even with a real edge, betting too big makes ruin likely, because losses compound multiplicatively.",
+    ["ergodicity", "asymmetric", "information", "antifragile", "compounding"], "kelly"],
+  ["ergodicity", "lever", "🎡", "Ergodicity (ensemble vs. time averages)", "Ole Peters (2019); Paul Samuelson; Taleb", "The average across many people isn't the average for one person over time.",
+    "Imagine a coin game where heads multiplies your wealth by 1.5 and tails by 0.6. The <b>expected value</b> per round is +5%, so across many players the average grows. But over time, a <b>typical individual</b> loses about 5% a round (√(1.5 × 0.6) ≈ 0.95), because losses compound. The two averages differ because the game is <b>non-ergodic</b>. Most real life (wealth, health, careers) is non-ergodic: you live one path, and ruin ends the game.",
+    "It's why \"positive expected value\" can still be a terrible bet for you, why avoiding ruin comes first, and why diversification and Kelly sizing matter. It also reframes risk aversion as rational rather than a bias.",
+    "Russian roulette with a $10M prize has a great average payout across 6 players. It's not a good bet for any one of them.",
+    "Ergodicity economics doesn't overturn all of standard economics. Many economists note that log utility captures the same insight. But it's a powerful intuition pump.",
+    ["kelly", "compounding", "antifragile", "utility", "blackswan"], "ergo"],
+  ["matthew", "lever", "🧲", "The Matthew effect (cumulative advantage)", "Robert K. Merton, 1968", "Advantage begets advantage, so early small leads can snowball.",
+    "Merton named it after the Gospel of Matthew (\"to every one who has will more be given\"). Famous scientists get more credit for the same work, so they get more funding and attention, and so on. The effect appears in citations, wealth, followers and school performance. The <b>MusicLab</b> experiment (Salganik, Dodds & Watts, 2006) showed that letting people see download counts made hits more unequal and unpredictable: the same song could be a hit in one \"world\" and a flop in another.",
+    "It explains power-law outcomes and why early momentum matters so much for products, careers and content. It's also a caution: success isn't always a pure measure of quality.",
+    "A children's book gets an early prize, is stocked in more shops, sells more, and wins more prizes. An equally good book never gets the first push.",
+    "It doesn't mean success is pure luck. Quality matters, but small random advantages get amplified, making outcomes less predictable than they look.",
+    ["powerlaw", "networks", "compounding", "luck", "tipping"]],
+  ["truefans", "lever", "🤝", "1,000 true fans", "Kevin Kelly, 2008", "You don't need millions of customers, just enough people who love what you make.",
+    "Kelly argued that a creator needs only about <b>1,000 true fans</b> (people who'll buy anything you produce) to make a living. If each spends $100 a year, that's $100,000. The internet makes it possible to find those fans anywhere, and to reach them directly without gatekeepers. The number is flexible: with higher prices you need fewer fans, and with lower prices, more.",
+    "It's the practical counterpart to permissionless leverage and escaping the default game. Aim to be loved by a niche rather than liked by everyone.",
+    "A craftsperson selling $200 of work a year to 500 loyal buyers, or a newsletter with 2,000 paying subscribers at $8 a month.",
+    "It's not easy. 1,000 true fans is hard-won and needs a direct relationship. And platforms can still change the rules on you.",
+    ["permissionless", "defaultgame", "powerlaw", "networks"]],
+  ["luck", "lever", "🍀", "Luck surface area", "Jason Roberts (2010); Richard Wiseman (2003)", "Luck = doing × telling: do interesting things and tell people about them.",
+    "Roberts proposed that the <b>luck surface area</b> of an endeavour is proportional to how much you <b>do</b> things you're passionate about, multiplied by how many people you <b>tell</b> about them. Psychologist Richard Wiseman studied self-described lucky and unlucky people and found the lucky ones noticed more opportunities, were more open to new experiences, and had wider networks. In one test, \"unlucky\" people flipping through a newspaper were more likely to miss a large message saying \"Tell the experimenter you have seen this and win £250.\"",
+    "In networked, power-law worlds, serendipity is a strategy. Sharing your work publicly turns random encounters into opportunities.",
+    "A developer posts a small open-source tool, a founder notices it, and it turns into a job offer. None of that happens if the tool stays private.",
+    "It doesn't mean luck isn't real or that unlucky people are to blame. It means you can increase your exposure to good luck.",
+    ["asymmetric", "matthew", "networks", "permissionless"]],
+
+  // ---- THINKING TOOLS ----
+  ["firstprinciples", "tools", "⚛️", "First-principles thinking", "Aristotle; popularised by Elon Musk and others", "Break a problem down to what's actually true, then rebuild from there, rather than reasoning by analogy.",
+    "Aristotle described a first principle as \"the first basis from which a thing is known\". <b>First-principles thinking</b> means stripping away assumptions and conventions to the fundamental truths, then reasoning up. The opposite is <b>reasoning by analogy</b> (\"this is how it's always done\"), which is faster but inherits old limitations. Musk's example: rather than accepting battery prices, ask what the raw materials cost on the commodity market, then ask why the gap is so large.",
+    "Analogies are what AI models learn best, so first-principles reasoning is increasingly where humans add value. It's also the basis of this whole site.",
+    "\"Rockets are expensive because they're thrown away\" led to reusable rockets, which cut launch costs dramatically.",
+    "It's slow and expensive to do for everything. Most of the time, analogy and convention are fine. Save first principles for the few problems where the conventional answer is suspect.",
+    ["inversion", "chesterton", "mapterritory", "occam", "paradigm"]],
+  ["inversion", "tools", "🙃", "Inversion", "Carl Jacobi (\"invert, always invert\"); Charlie Munger", "To find out how to succeed, first ask how you'd guarantee failure, and avoid that.",
+    "The mathematician Jacobi solved hard problems by restating them in reverse. Charlie Munger made <b>inversion</b> a life tool: \"All I want to know is where I'm going to die, so I'll never go there.\" Instead of asking \"how do I build a great team?\", ask \"what would definitely ruin a team?\", and eliminate those things. It often reveals obvious risks that forward thinking misses. It's also the idea behind the <b>pre-mortem</b> (Gary Klein): imagine the project has failed, and ask why.",
+    "Avoiding stupidity is often easier and more valuable than seeking brilliance, especially in non-ergodic situations where one big mistake ends the game.",
+    "A startup lists the ways it could die: running out of cash, a key person leaving, a single big client. Then it plans against each.",
+    "It isn't pessimism. It's a way of generating options you'd otherwise overlook.",
+    ["firstprinciples", "secondorder", "ergodicity", "antifragile"]],
+  ["secondorder", "tools", "🔭", "Second-order thinking", "Howard Marks (2011); Frédéric Bastiat (1850)", "Ask \"and then what?\" First-order effects are obvious; second-order effects decide outcomes.",
+    "Bastiat's essay \"That Which Is Seen and That Which Is Not Seen\" argued that good economists look beyond the immediate, visible effects of a policy to its later, hidden effects. Howard Marks: first-level thinking says \"it's a good company, let's buy the stock\"; second-level thinking asks \"everyone thinks it's good, so it's already priced in\". Most unintended consequences come from ignoring feedback loops and incentive changes.",
+    "In complex systems, the first-order effect is often reversed by the second. It's a core skill for policy, product decisions and investing.",
+    "Rent caps help current tenants (first order) but can reduce new housing supply and maintenance over time (second order), a pattern economists widely agree on.",
+    "It's not endless speculation. Consider the most likely next effects and the incentives they create, then decide.",
+    ["systems", "goodhart", "inversion", "gametheory"]],
+  ["competence", "tools", "⭕", "Circle of competence", "Warren Buffett & Charlie Munger (1996 letter)", "Know the edges of what you truly understand, and operate inside them.",
+    "Buffett wrote that what matters is not how big your <b>circle of competence</b> is, but how well you know its <b>boundaries</b>. Inside it, you have a real edge. Outside it, you're guessing, often confidently. The <b>Dunning–Kruger</b> research is related: people with low skill in a domain tend to overestimate it, though the popular version exaggerates the effect.",
+    "Generative AI makes everyone feel competent in every domain. Knowing where your judgement is actually reliable (and where to find people with real expertise) is more important than ever.",
+    "An engineer who invests only in industries they understand, and uses index funds for the rest.",
+    "It's not \"never learn new things\". You expand the circle deliberately, through study and practice, and stay humble at the edges.",
+    ["specificknow", "bounded", "kelly", "dualprocess"]],
+  ["occam", "tools", "🪒", "Occam's razor", "William of Ockham (14th century)", "Among explanations that fit the facts equally well, prefer the one with fewer assumptions.",
+    "Attributed to the friar William of Ockham, the <b>razor</b> says not to multiply entities beyond necessity. It's a heuristic, not a law: the simplest explanation isn't always right, but it's usually the best place to start, and each extra assumption is another way to be wrong. It has formal cousins in statistics (penalising model complexity to avoid overfitting) and in Kolmogorov complexity.",
+    "It's a guard against conspiracy theories and overfit stories, and a key idea in machine learning, where simpler models often generalise better.",
+    "The printer isn't sabotaged by IT. It's out of paper.",
+    "Occam's razor doesn't say the universe is simple. Quantum mechanics is weird, and it's still the simplest theory that fits the evidence.",
+    ["kolmogorov", "falsifiability", "firstprinciples", "bayes"]],
+  ["goodhart", "tools", "🎯", "Goodhart's law", "Charles Goodhart (1975); Marilyn Strathern's phrasing (1997)", "When a measure becomes a target, it ceases to be a good measure.",
+    "Goodhart, an economist at the Bank of England, observed that statistical relationships used for policy control tend to break down once targeted. Anthropologist Marilyn Strathern gave it its famous phrasing. People (and algorithms) optimise the number, not the goal behind it. <b>Campbell's law</b> is a close cousin for social indicators. In AI, the same thing is called <b>reward hacking</b> or specification gaming.",
+    "Metrics, OKRs, KPIs and AI reward functions are everywhere. Use several metrics with guardrails, and keep asking what the number is <i>for</i>.",
+    "Call centres targeted on call length hang up on hard calls. Schools targeted on pass rates teach to the test.",
+    "It doesn't mean measurement is bad. It means single targets get gamed, so measure broadly and rotate.",
+    ["principalagent", "secondorder", "mechanism", "systems"]],
+  ["parkinson", "tools", "⌛", "Parkinson's law", "C. Northcote Parkinson, 1955 (<i>The Economist</i>)", "Work expands to fill the time available for its completion.",
+    "Parkinson opened a satirical essay about the growth of British bureaucracy with the line that became his law. Given a week, a task takes a week; given a day, it takes a day, because we fill the available time with polishing, dithering and extra scope. He also noted that officials multiply subordinates, not rivals. A related idea: time spent on a decision is often inversely related to its importance (his \"law of triviality\", or bikeshedding).",
+    "Tight, self-imposed deadlines and time-boxing are simple productivity tools. Owning your time includes defending it from expansion.",
+    "A committee spends 45 minutes on the bike shed and 5 on the nuclear plant, because everyone understands bike sheds.",
+    "It's an observation, not a law of nature. Some work genuinely needs more time, and unrealistic deadlines produce low quality.",
+    ["owntime", "deepwork", "planning", "bounded"]],
+  ["chesterton", "tools", "🚧", "Chesterton's fence", "G. K. Chesterton, 1929", "Don't remove a fence until you know why it was put up.",
+    "Chesterton imagined a reformer who finds a fence across a road and says \"I don't see the use of this; let us clear it away.\" A wiser reformer replies: \"If you don't see the use of it, I certainly won't let you clear it away. Go away and think. Then, when you can come back and tell me that you do see the use of it, I may allow you to destroy it.\" Existing rules and structures often encode forgotten lessons.",
+    "It balances first-principles thinking: before you tear down a process, a legacy system or a tradition, find out what problem it solved.",
+    "An engineer deletes \"useless\" retry code, and the payment system starts failing on bad network days.",
+    "It isn't a rule to never change things. Once you understand the fence, you're free to remove it.",
+    ["firstprinciples", "secondorder", "lindy", "evolution"]],
+  ["mapterritory", "tools", "🗺️", "The map is not the territory", "Alfred Korzybski, 1931", "Every model, metric and word is a simplification of reality.",
+    "Korzybski, founder of general semantics, argued that our words, beliefs and models are <b>maps</b>: useful precisely because they leave things out, but never the thing itself. Statistician George Box added a famous corollary: \"All models are wrong, but some are useful.\" Confusing the map for the territory leads to overconfidence, from economic models to dashboards to AI benchmarks.",
+    "It's the meta-lesson of this whole page: each theory is a map. Use many maps, check them against the territory, and update them when they fail.",
+    "A dashboard shows green while customers are quietly leaving, because the metric doesn't capture what they care about.",
+    "It doesn't mean maps are useless. Without maps you're lost. It means holding them lightly.",
+    ["goodhart", "falsifiability", "paradigm", "predictive", "sapirwhorf"]],
+  ["regretmin", "tools", "🧓", "Regret minimization framework", "Jeff Bezos, 1994", "Project yourself to age 80 and ask which choice you'd regret more.",
+    "Deciding whether to leave a secure job to start an online bookstore, Bezos imagined being 80 and looking back. He realised he wouldn't regret trying and failing, but he might regret never trying. Research supports the asymmetry: Gilovich and Medvec found that in the short term people regret actions more, but in the long term they regret <b>inactions</b> (the things they never tried) more.",
+    "It's a tool for big, irreversible life decisions, especially asymmetric bets, which cut through short-term fear and status-quo bias.",
+    "Choosing between a safe promotion and a year building your own product.",
+    "It's not a licence for every risky leap. Pair it with Kelly-style sizing and avoiding ruin.",
+    ["asymmetric", "prospect", "maximizers", "inversion"]],
+  ["planning", "tools", "📆", "Planning fallacy & reference-class forecasting", "Kahneman & Tversky (1979); Bent Flyvbjerg", "We underestimate how long things take, even when we know past projects ran late.",
+    "People plan from the <b>inside view</b>: the specific steps of this project, imagined going smoothly. They underweight the <b>outside view</b>: how long similar projects actually took. Flyvbjerg's database of big projects found most go over budget and schedule, and a minority go catastrophically over. The fix is <b>reference-class forecasting</b>: start from the track record of similar projects, then adjust. Hofstadter's law captures the humour: \"It always takes longer than you expect, even when you take into account Hofstadter's law.\"",
+    "It's essential for anyone who plans software, launches, renovations or careers. It pairs naturally with Bayes (base rates) and Parkinson's law.",
+    "The Sydney Opera House was planned for 4 years at A$7 million. It took 14 years and cost A$102 million.",
+    "It's not simply \"people are lazy\". Even experts with good intentions do it, because the inside view feels so concrete.",
+    ["bayes", "parkinson", "dualprocess", "blackswan"]],
+);
+
 /* ---------- THEORIES: demo helpers ---------- */
 const REDRAW = new Set();
 document.addEventListener("themechange", () => REDRAW.forEach(f => f()));
@@ -1889,11 +2283,304 @@ DEMOS.wason = el => {
   }));
 };
 
+/* ---------- THEORIES: demos, part 2 ---------- */
+/* neuroplasticity: practice strengthens a pathway */
+DEMOS.practice = el => {
+  el.innerHTML = `<div class="w-title">Train a neural pathway</div><div class="w-sub">Each practice session strengthens the connection and adds myelin, so signals travel faster. Skipping practice lets it weaken. The chart shows the <b>power law of practice</b>: big gains early, smaller ones later.</div>
+  <div class="row"><button class="btn primary th-pr">🏋️ Practice session</button><button class="btn th-sk">😴 Skip a week</button><button class="btn th-rs">Reset</button></div>
+  <canvas class="th-cv" style="height:140px"></canvas><svg class="th-svg" data-c="pr"></svg><p class="small th-pr-note"></p>`;
+  let s = 0, hist = [[0, 60]], sess = 0, ph = 0;
+  const time = () => 10 + 50 * Math.pow(1 + s, -.55);
+  const upd = () => {
+    const pts = hist.length > 1 ? hist : [[0, 60], [0.001, 60]];
+    chart($("[data-c=pr]", el), [{ pts, c: "c5" }, { pts: hist, c: "c5", dots: 1, r: 3 }], { x0: 0, x1: Math.max(20, hist.length), y0: 0, y1: 65, xt: [0, 10, 20, 30, 40].filter(x => x <= Math.max(20, hist.length)), yt: [0, 20, 40, 60], fy: y => y + " s", xl: "sessions and breaks", yl: "time per attempt", h: 180 });
+    $(".th-pr-note", el).innerHTML = `Connection strength <b>${fmt(Math.min(100, s * 6), 0)}%</b> · a task that took 60 s now takes <b>${fmt(time(), 1)} s</b>. ${s > 12 ? "Gains are flattening: to keep improving, deliberate practice has to get harder." : "Early practice brings the biggest gains."}`;
+  };
+  $(".th-pr", el).addEventListener("click", () => { s += 1; sess++; hist.push([hist.length, time()]); upd(); });
+  $(".th-sk", el).addEventListener("click", () => { s = Math.max(0, s * .8 - .3); hist.push([hist.length, time()]); upd(); });
+  $(".th-rs", el).addEventListener("click", () => { s = 0; hist = [[0, 60]]; upd(); });
+  REDRAW.add(upd); upd();
+  const cv = $("canvas", el);
+  whenVisible(cv, dt => {
+    const { ctx, W, H } = fitCanvas(cv); ctx.clearRect(0, 0, W, H);
+    const st = Math.min(1, s / 16), a = [W * .15, H / 2], b = [W * .85, H / 2];
+    ctx.strokeStyle = hexA(C.c5, .25 + st * .75); ctx.lineWidth = 2 + st * 12; ctx.lineCap = "round";
+    ctx.beginPath(); ctx.moveTo(a[0] + 26, a[1]); ctx.lineTo(b[0] - 26, b[1]); ctx.stroke();
+    if (st > .15) { ctx.strokeStyle = hexA(C.c3, .6); ctx.lineWidth = 3; for (let x = a[0] + 40; x < b[0] - 40; x += 34) { ctx.beginPath(); ctx.moveTo(x, a[1] - 6 - st * 6); ctx.lineTo(x + 22, a[1] - 6 - st * 6); ctx.stroke(); } }
+    [a, b].forEach(([x, y]) => { ctx.fillStyle = C.c6; ctx.beginPath(); ctx.arc(x, y, 24, 0, 7); ctx.fill(); });
+    ph = (ph + dt / 1000 * (0.4 + st * 2.2) * (reduced ? .3 : 1)) % 1;
+    ctx.fillStyle = C.c3; ctx.beginPath(); ctx.arc(lerp(a[0] + 26, b[0] - 26, ph), a[1], 6 + st * 3, 0, 7); ctx.fill();
+    ctx.fillStyle = C.muted; ctx.font = "600 11px Inter"; ctx.textAlign = "center"; ctx.fillText(st > .15 ? "myelin (orange) speeds the signal" : "weak connection", W / 2, H - 12);
+  });
+};
+
+/* dopamine: reward prediction error */
+DEMOS.slot = el => {
+  el.innerHTML = `<div class="w-title">Why unpredictable rewards hook you</div><div class="w-sub">Pull the lever. Dopamine tracks <b>surprise</b>: reward minus what your brain predicted. With a predictable schedule the brain learns the pattern and the spikes fade. With a variable one, they never do.</div>
+  <div class="row"><button class="chip on" data-sch="fixed">Predictable: every 4th pull pays</button><button class="chip" data-sch="var">Variable: 1 in 4 on average</button></div>
+  <div class="row" style="margin-top:10px"><button class="btn primary th-pull">🎰 Pull</button><button class="btn th-auto">▶ Auto-pull 40</button><button class="btn th-rs">Reset</button><span class="th-slot"></span></div>
+  <svg class="th-svg" data-c="rpe"></svg><p class="small th-sl-n"></p>`;
+  let sch = "fixed", V, Vf, n, R, r = mulberry(4);
+  const reset = () => { V = 0; Vf = [0, 0, 0, 0]; n = 0; R = []; r = mulberry(4); for (let k = 0; k < 16; k++) pull(true); draw(); };
+  const pull = quiet => {
+    const win = sch === "fixed" ? n % 4 === 3 : r() < .25, rew = win ? 1 : 0;
+    let pred; if (sch === "fixed") { pred = Vf[n % 4]; Vf[n % 4] += .3 * (rew - pred); } else { pred = V; V += .1 * (rew - V); }
+    R.push(rew - pred); n++; if (quiet === true) return; $(".th-slot", el).textContent = win ? "🍒🍒🍒 +1" : "🍋🍇🔔"; draw();
+  };
+  const draw = () => {
+    const svg = $("[data-c=rpe]", el), last = R.slice(-40);
+    const g = chart(svg, [{ pts: [[0, 0], [40, 0]], c: "line", w: 1 }], { x0: 0, x1: 40, y0: -1, y1: 1, yt: [-1, 0, 1], xt: [], yl: "dopamine (surprise)", h: 190 });
+    last.forEach((v, i) => { const x = g.X(i + .5), y0 = g.Y(0), y1 = g.Y(v); svgEl("rect", { x: x - 5, y: Math.min(y0, y1), width: 10, height: Math.max(1, Math.abs(y1 - y0)), rx: 2, fill: v >= 0 ? C.c2 : C.c4 }, svg); });
+    const late = R.slice(-12), avg = late.length ? late.reduce((a, b) => a + Math.abs(b), 0) / late.length : 0;
+    $(".th-sl-n", el).innerHTML = `${n} pulls. Average surprise over the last 12: <b>${fmt(avg, 2)}</b>. ${sch === "fixed" ? "Once the brain learns the pattern, the payout is expected, so there's no burst and no dip: <b>boring</b>." : "Every win is a surprise and every miss a small dip. The prediction error never goes away, which keeps you pulling. Feeds, notifications and loot boxes work this way."}`;
+  };
+  chipGroup(el, "sch", s => { sch = s; reset(); });
+  $(".th-pull", el).addEventListener("click", () => pull());
+  $(".th-auto", el).addEventListener("click", () => { let k = 0; const t = setInterval(() => { pull(); if (++k >= 40) clearInterval(t); }, reduced ? 10 : 70); });
+  $(".th-rs", el).addEventListener("click", reset); REDRAW.add(draw); reset();
+};
+
+/* attention residue: feel the switch cost, then model a day */
+DEMOS.switch = el => {
+  el.innerHTML = `<div class="w-title">Feel the switching cost</div><div class="w-sub">Type the letters A–J and the numbers 1–10. First in two separate runs, then interleaved. Compare your times.</div>
+  <div class="th-q"><p><b>Run 1:</b> type <code>ABCDEFGHIJ12345678910</code></p><input class="th-in th-long" data-t="ABCDEFGHIJ12345678910" autocomplete="off" spellcheck="false" aria-label="Run 1"><span class="th-tm"></span></div>
+  <div class="th-q"><p><b>Run 2:</b> type <code>A1B2C3D4E5F6G7H8I9J10</code></p><input class="th-in th-long" data-t="A1B2C3D4E5F6G7H8I9J10" autocomplete="off" spellcheck="false" aria-label="Run 2"><span class="th-tm"></span></div>
+  <p class="small th-sw-res"></p>
+  <div class="w-title" style="margin-top:18px">Your day, modelled</div><div class="w-sub">An illustrative model: every switch leaves some minutes of reduced focus (attention residue).</div>
+  <div class="row">${sl("n", "Switches per hour", 0, 20, 1, 6)}${sl("c", "Minutes of residue per switch", 1, 15, 1, 5)}</div>
+  <div class="th-day"></div><div class="stats th-sw-st"></div>`;
+  const times = [];
+  $$(".th-long", el).forEach((inp, i) => {
+    let t0 = 0; inp.addEventListener("input", () => {
+      const tgt = inp.dataset.t, v = inp.value.toUpperCase();
+      if (v.length === 1 && !t0) t0 = performance.now();
+      inp.classList.toggle("bad", !tgt.startsWith(v));
+      if (v === tgt) { times[i] = (performance.now() - t0) / 1000; inp.nextElementSibling.textContent = ` ✓ ${fmt(times[i], 1)} s`; inp.disabled = true;
+        if (times[0] && times[1]) $(".th-sw-res", el).innerHTML = `Switching between letters and numbers took <b>${fmt(times[1] - times[0], 1)} s ${times[1] >= times[0] ? "longer" : "less (you're a rare one!)"}</b> (${fmt((times[1] / times[0] - 1) * 100, 0)}%) for the same 21 characters. Each switch forced your brain to reload a different \"rule set\". <button class="chip th-again">↺ Again</button>`, $(".th-again", el)?.addEventListener("click", () => { $$(".th-long", el).forEach(x => { x.value = ""; x.disabled = false; x.nextElementSibling.textContent = ""; }); times.length = 0; $(".th-sw-res", el).textContent = ""; }); }
+      if (!v) t0 = 0;
+    });
+  });
+  wire(el, v => {
+    const lost = Math.min(60, v.n * v.c), deep = 60 - lost;
+    $(".th-day", el).innerHTML = Array.from({ length: 8 }, (_, h) => `<div class="th-hr"><span>${9 + h}:00</span><i style="width:${deep / 60 * 100}%"></i><b style="width:${lost / 60 * 100}%"></b></div>`).join("");
+    $(".th-sw-st", el).innerHTML = stat(fmt(deep * 8 / 60, 1) + " h", "focused time in 8 h") + stat(fmt(lost * 8 / 60, 1) + " h", "lost to residue") + stat(v.n ? fmt(60 / v.n, 0) + " min" : "∞", "longest possible focus block");
+  });
+};
+
+/* flow: challenge vs skill (8-channel model) */
+DEMOS.flowmap = el => {
+  const CH = [["Control", "c5", "Comfortable mastery. Raise the challenge a little to tip into flow."], ["Flow", "c2", "High challenge met by high skill: absorption, lost sense of time, peak performance."], ["Arousal", "c3", "Stretching, alert and learning fast. Build a little skill and this becomes flow."], ["Anxiety", "c4", "Challenge far beyond skill. Break the task down, get help or learn first."], ["Worry", "c4", "Moderate challenge, low skill: nagging stress without much progress."], ["Apathy", "muted", "Low challenge and low skill: scrolling, zoning out. The most common state for TV watching in Csikszentmihalyi's studies."], ["Boredom", "c6", "Skill far exceeds challenge. Add constraints, speed or a harder goal."], ["Relaxation", "c5", "Easy and pleasant: good for recovery, but not for growth."]];
+  el.innerHTML = `<div class="w-title">Find your flow channel</div><div class="w-sub">Set how challenging a task is and how skilled you are at it. This is the 8-channel model from Csikszentmihalyi's research group (Massimini & Carli, 1988).</div>
+  <div class="row">${sl("sk", "Your skill", 0, 100, 1, 70)}${sl("ch", "The challenge", 0, 100, 1, 75)}</div>
+  <div class="th-sw-grid"><svg class="th-svg" data-c="fl" style="max-width:320px"></svg><div class="th-fl-out"></div></div>`;
+  wire(el, v => {
+    const svg = $("[data-c=fl]", el); svg.setAttribute("viewBox", "0 0 300 300"); svg.innerHTML = "";
+    const cx = 150, cy = 150, R = 140, X = s => 10 + s / 100 * 280, Y = c => 290 - c / 100 * 280;
+    CH.forEach(([n, c], i) => { const a0 = (i * 45 - 22.5) * Math.PI / 180, a1 = (i * 45 + 22.5) * Math.PI / 180, p = (a) => [cx + R * 3 * Math.cos(a), cy - R * 3 * Math.sin(a)]; const [x0, y0] = p(a0), [x1, y1] = p(a1); svgEl("path", { d: `M${cx},${cy} L${x0},${y0} L${x1},${y1} Z`, fill: hexA(C[c], .16), stroke: C.surface, "stroke-width": 1 }, svg); });
+    svgEl("circle", { cx: X(v.sk), cy: Y(v.ch), r: 9, fill: C.ink, stroke: C.surface, "stroke-width": 3 }, svg);
+    CH.forEach(([n, c], i) => { const a = i * 45 * Math.PI / 180, lx = cx + 100 * Math.cos(a), ly = cy - 100 * Math.sin(a); svgText(svg, lx, ly + 4, n, { "text-anchor": "middle", "font-size": 12, fill: C[c === "muted" ? "ink-2" : c], stroke: C.surface, "stroke-width": 3, "paint-order": "stroke" }); });
+    svgText(svg, 150, 296, "skill →", { "text-anchor": "middle", "font-size": 10, fill: C.muted });
+    svgText(svg, 8, 150, "challenge →", { "font-size": 10, fill: C.muted, transform: "rotate(-90 8 150)", "text-anchor": "middle" });
+    const dx = v.sk - 50, dy = v.ch - 50, d = Math.hypot(dx, dy);
+    let ang = Math.atan2(dy, dx) * 180 / Math.PI; if (ang < 0) ang += 360;
+    const k = Math.round(ang / 45) % 8, [n, c, t] = d < 10 ? ["Neutral", "muted", "Middling challenge and skill: an ordinary moment."] : CH[k];
+    $(".th-fl-out", el).innerHTML = `<div class="th-epoch" style="background:${hexA(C[c], .15)}"><b style="color:var(--${c === "muted" ? "ink" : c})">${n}</b> ${t}</div><p class="small muted">Flow needs <b>both</b> to be above your average, and in balance. That's why easy wins don't produce it.</p>`;
+  });
+};
+
+/* spaced repetition */
+DEMOS.forget = el => {
+  el.innerHTML = `<div class="w-title">Beat the forgetting curve</div><div class="w-sub">You learn something on day 0. Click days to schedule reviews, or pick a strategy. Each review restores the memory, and a review that comes just as you're starting to forget strengthens it most. (Illustrative model.)</div>
+  <div class="row"><button class="chip" data-fs="none">No review</button><button class="chip" data-fs="cram">Cram (3× on day 0)</button><button class="chip on" data-fs="spaced">Spaced (days 1, 3, 7, 21)</button></div>
+  <div class="th-days"></div><svg class="th-svg" data-c="fg"></svg><div class="stats th-fg-st"></div>`;
+  const days = new Set([1, 3, 7, 21]); let cram = false;
+  const DAYS = [1, 2, 3, 5, 7, 10, 14, 21, 30, 45];
+  const draw = () => {
+    $(".th-days", el).innerHTML = `<span class="small muted">Review on day:</span> ` + DAYS.map(d => `<button class="chip${days.has(d) ? " on" : ""}" data-day="${d}">${d}</button>`).join("");
+    $$("[data-day]", el).forEach(b => b.addEventListener("click", () => { const d = +b.dataset.day; days.has(d) ? days.delete(d) : days.add(d); cram = false; $$("[data-fs]", el).forEach(x => x.classList.remove("on")); draw(); }));
+    let S = cram ? 1.2 * 1.35 * 1.35 : 1.2, last = 0; const pts = [];
+    for (let t = 0; t <= 60; t += .25) {
+      if (days.has(t)) { const R = Math.exp(-(t - last) / S); S *= 1.3 + 3.2 * (1 - R); last = t; }
+      pts.push([t, 100 * Math.exp(-(t - last) / S)]);
+    }
+    const g = chart($("[data-c=fg]", el), [{ pts, c: "c5" }], { x0: 0, x1: 60, y0: 0, y1: 100, xt: [0, 10, 20, 30, 40, 50, 60], yt: [0, 50, 100], fy: y => y + "%", fx: x => "d" + x, xl: "days after learning", yl: "chance you recall it", h: 200 });
+    [...days].forEach(d => svgEl("line", { x1: g.X(d), y1: g.T, x2: g.X(d), y2: g.H - g.B, stroke: hexA(C.c3, .6), "stroke-dasharray": "3 3" }, $("[data-c=fg]", el)));
+    const at = t => pts.find(p => p[0] >= t)[1];
+    $(".th-fg-st", el).innerHTML = stat(fmt(at(30), 0) + "%", "recall on day 30") + stat(fmt(at(60), 0) + "%", "recall on day 60") + stat(days.size + (cram ? 3 : 0), "reviews");
+  };
+  chipGroup(el, "fs", s => { days.clear(); cram = s === "cram"; if (s === "spaced") [1, 3, 7, 21].forEach(d => days.add(d)); draw(); });
+  REDRAW.add(draw); draw();
+};
+
+/* habit automaticity (Lally et al. 2010) */
+DEMOS.habit = el => {
+  const H = [["💧 Glass of water after breakfast", 20], ["🍎 Fruit with lunch", 45], ["🚶 15-minute walk after dinner", 66], ["🏋️ 50 sit-ups after morning coffee", 110]];
+  el.innerHTML = `<div class="w-title">How long does a habit really take?</div><div class="w-sub">In Lally et al.'s study, automaticity rose along a curve and levelled off. The median person took 66 days to get 95% of the way there, with a range of 18 to 254 days. Pick a habit.</div>
+  <div class="row">${H.map(([n], i) => `<button class="chip${i === 2 ? " on" : ""}" data-h="${i}">${n}</button>`).join("")}</div>
+  ${sl("miss", "Days missed along the way", 0, 20, 1, 3)}<svg class="th-svg" data-c="hb"></svg><p class="small th-hb-n"></p>`;
+  let h = 2;
+  const upd = wire(el, v => {
+    const d95 = H[h][1] * (1 + v.miss * .012), tau = d95 / 3, pts = [];
+    for (let t = 0; t <= 150; t++) pts.push([t, 100 * (1 - Math.exp(-t / tau))]);
+    const svg = $("[data-c=hb]", el), g = chart(svg, [{ pts, c: "c5" }], { x0: 0, x1: 150, y0: 0, y1: 105, xt: [0, 21, 66, 100, 150], yt: [0, 50, 100], fy: y => y + "%", fx: x => "d" + x, xl: "days of repetition", yl: "automaticity", h: 200 });
+    svgEl("line", { x1: g.X(21), y1: g.T, x2: g.X(21), y2: g.H - g.B, stroke: C.c4, "stroke-dasharray": "4 4", "stroke-width": 2 }, svg); svgText(svg, g.X(21) + 4, g.T + 12, "the \"21-day\" myth", { fill: C.c4, "font-size": 11 });
+    if (d95 <= 150) { svgEl("circle", { cx: g.X(d95), cy: g.Y(95), r: 6, fill: C.c2 }, svg); svgText(svg, g.X(d95) + 8, g.Y(95) + 18, `95% at day ${Math.round(d95)}`, { fill: C.c2, "font-size": 11 }); }
+    $(".th-hb-n", el).innerHTML = `This habit reaches 95% automaticity after about <b>${Math.round(d95)} days</b>. ${v.miss <= 5 ? "Missing an occasional day barely slows it down, so don't quit after one slip." : "Missing lots of days slows things down. Consistency of cue and context matters more than perfection."} <span class="muted">(Illustrative curves based on the study's findings.)</span>`;
+  });
+  chipGroup(el, "h", i => { h = +i; upd(); });
+};
+
+/* WOOP builder */
+DEMOS.woop = el => {
+  el.innerHTML = `<div class="w-title">Build a WOOP plan in 2 minutes</div><div class="w-sub">Oettingen's method. Fill in each step, and keep each answer short and vivid.</div>
+  <div class="th-woop">${[["W", "Wish", "What do you want to achieve in the next few weeks? (challenging but feasible)", "Run a 5K without stopping"], ["O", "Outcome", "What's the best result? How will it feel?", "Feeling strong and proud at the finish"], ["O", "Obstacle", "What in <i>you</i> is most likely to stop you? (a habit, emotion or excuse)", "I'm tired after work and talk myself out of it"], ["P", "Plan", "What will you do when that obstacle shows up?", "put on my shoes and run just 10 minutes"]].map(([k, n, q, ph], i) => `<label class="th-wrow"><span class="th-wk">${k}</span><span><b>${n}</b><small>${q}</small><input class="th-win" data-w="${i}" placeholder="${ph}"></span></label>`).join("")}</div>
+  <div class="th-woop-card"></div>`;
+  const out = () => {
+    const v = $$(".th-win", el).map(i => i.value.trim() || i.placeholder);
+    $(".th-woop-card", el).innerHTML = `<div class="th-epoch"><b>Your if–then plan:</b> If <i>${v[2].replace(/^i /i, "I ").replace(/[.]$/, "").replace(/</g, "&lt;")}</i>, then I will <i>${v[3].replace(/[.]$/, "").replace(/</g, "&lt;")}</i>, because I want to <i>${v[0].charAt(0).toLowerCase() + v[0].slice(1).replace(/[.]$/, "").replace(/</g, "&lt;")}</i>.</div><p class="small muted">Say it to yourself a few times. Pre-deciding the response hands control to the situation cue, so you don't have to rely on willpower in the moment. Compare this with only visualising the outcome, which Oettingen found can <i>reduce</i> effort.</p>`;
+  };
+  $$(".th-win", el).forEach(i => i.addEventListener("input", out)); out();
+};
+
+/* hedonic treadmill */
+DEMOS.treadmill = el => {
+  const EV = { lottery: ["🎟️ Win the lottery", 2.6, .2, 1.2], raise: ["💼 Big pay rise", 1.2, .25, 1], car: ["🚗 New car", 1, 0, .5], marriage: ["💍 Get married", 1.4, .1, 1.5], unemploy: ["📉 Lose your job (and stay unemployed)", -2, -.8, 2], commute: ["🚌 Start a long daily commute", -.9, -.6, 1] };
+  el.innerHTML = `<div class="w-title">Ride the treadmill</div><div class="w-sub">Pick a life event and see how life satisfaction (0–10) responds over five years. Most good things fade. Some bad things linger. (Illustrative model based on panel studies.)</div>
+  <div class="row">${Object.entries(EV).map(([k, e], i) => `<button class="chip${i ? "" : " on"}" data-ev="${k}">${e[0]}</button>`).join("")}</div>
+  <label class="th-tog" style="margin-top:10px"><input type="checkbox"> 🙏 Add anti-adaptation habits (gratitude, variety, savouring)</label>
+  <svg class="th-svg" data-c="tr"></svg><p class="small th-tr-n"></p>`;
+  let ev = "lottery", aa = false;
+  const draw = () => {
+    const [n, jump, perm, tau] = EV[ev], t2 = aa && jump > 0 ? tau * 2.2 : tau, base = 7, pts = [[-1, base], [0, base]];
+    for (let t = 0; t <= 5; t += .05) pts.push([t, base + perm + (jump - perm) * Math.exp(-t / t2)]);
+    chart($("[data-c=tr]", el), [{ pts: [[-1, base], [5, base]], c: "line", dash: "4 4", w: 1.5 }, { pts, c: jump > 0 ? "c2" : "c4" }], { x0: -1, x1: 5, y0: 4, y1: 10, xt: [-1, 0, 1, 2, 3, 4, 5], yt: [4, 6, 8, 10], fx: x => x < 0 ? "before" : "yr " + x, yl: "life satisfaction", h: 200 });
+    $(".th-tr-n", el).innerHTML = `${n}: an initial ${jump > 0 ? "boost" : "drop"} of ${fmt(Math.abs(jump), 1)} points, settling ${perm === 0 ? "back at baseline" : `${fmt(Math.abs(perm), 1)} points ${perm > 0 ? "above" : "below"} baseline`}. ${jump > 0 ? (aa ? "Practices like gratitude, varied experiences and savouring slow down adaptation to good changes." : "Most of the gain fades within a year or two as expectations rise.") : "Some bad events have lasting effects: adaptation isn't complete for unemployment or long commutes."}`;
+  };
+  chipGroup(el, "ev", k => { ev = k; draw(); });
+  $("input", el).addEventListener("change", e => { aa = e.target.checked; draw(); }); REDRAW.add(draw); draw();
+};
+
+/* asymmetric bets */
+DEMOS.bets = el => {
+  el.innerHTML = `<div class="w-title">A portfolio of long shots</div><div class="w-sub">Make N small bets. Each costs 1 unit, succeeds with probability p, and pays M× if it does. We simulate 2,000 people making the same bets.</div>
+  <div class="row">${sl("n", "Number of bets", 1, 50, 1, 20)}${sl("p", "Chance each succeeds", 1, 50, 1, 10)}${sl("m", "Payoff if it succeeds", 2, 100, 1, 30)}</div>
+  <svg class="th-svg" data-c="bt"></svg><div class="stats th-bt-st"></div><p class="small th-bt-n"></p>`;
+  wire(el, v => {
+    const r = mulberry(21), P = 2000, res = [];
+    for (let k = 0; k < P; k++) { let w = 0; for (let i = 0; i < v.n; i++) if (r() < v.p / 100) w++; res.push(w * v.m - v.n); }
+    const ev = v.n * (v.p / 100 * v.m - 1), lose = res.filter(x => x < 0).length / P, big = res.filter(x => x >= v.n * 2).length / P;
+    const mx = Math.max(...res), mn = -v.n, bins = 24, w = (mx - mn) / bins || 1, h = new Array(bins).fill(0); res.forEach(x => h[Math.min(bins - 1, Math.floor((x - mn) / w))]++);
+    const svg = $("[data-c=bt]", el), hm = Math.max(...h), g = chart(svg, [], { x0: mn, x1: mn + w * bins, y0: 0, y1: hm * 1.05, xt: [mn, 0, Math.round(mn + w * bins)].filter((x, i, a) => a.indexOf(x) === i), yt: [], xl: "net result (units)", yl: "people", h: 190 });
+    h.forEach((c, i) => { const x0 = g.X(mn + i * w), x1 = g.X(mn + (i + 1) * w), mid = mn + (i + .5) * w; svgEl("rect", { x: x0 + 1, y: g.Y(c), width: Math.max(1, x1 - x0 - 2), height: g.Y(0) - g.Y(c), fill: mid < 0 ? C.c4 : C.c2, rx: 2 }, svg); });
+    svgEl("line", { x1: g.X(0), y1: g.T, x2: g.X(0), y2: g.H - g.B, stroke: C.ink, "stroke-dasharray": "3 3" }, svg);
+    $(".th-bt-st", el).innerHTML = stat((ev >= 0 ? "+" : "") + fmt(ev, 1), "expected net (units)") + stat(fmt(lose * 100, 0) + "%", "end up losing") + stat(fmt(big * 100, 0) + "%", "at least triple their stake") + stat("−" + v.n, "worst case (capped)");
+    $(".th-bt-n", el).innerHTML = v.p / 100 * v.m > 1 ? `Each bet fails ${100 - v.p}% of the time, yet the portfolio has a positive expected value, and the downside is capped at what you staked. <b>More bets means a better chance of catching the big one.</b>` : `Here p × M ≤ 1, so the bets are not worth taking however many you make. Asymmetry needs the payoff to outweigh the odds.`;
+  }, { p: x => x + "%", m: x => x + "×" });
+};
+
+/* permissionless leverage */
+DEMOS.leverage = el => {
+  el.innerHTML = `<div class="w-title">Hours vs. assets</div><div class="w-sub">Two people each spend 10 extra hours a week for 5 years. One sells the hours (labour). The other makes one piece of code or media a month: assets that keep earning, and that earn more as the audience grows. (Illustrative: most assets earn little, and a few earn a lot.)</div>
+  <div class="row">${sl("rate", "Hourly rate for selling time ($)", 20, 200, 5, 50)}${sl("g", "Audience growth per month", 0, 10, .5, 5)}${sl("hit", "What each piece earns per month at launch ($)", 1, 40, 1, 15)}</div>
+  <svg class="th-svg" data-c="lv"></svg><p class="small th-lv-n"></p>`;
+  wire(el, v => {
+    const L = [[0, 0]], A = [[0, 0]]; let cl = 0, ca = 0, cross = -1;
+    for (let m = 1; m <= 60; m++) {
+      cl += v.rate * 10 * 4.3; ca += m * v.hit * Math.pow(1 + v.g / 100, m);
+      L.push([m, cl]); A.push([m, ca]); if (cross < 0 && ca > cl) cross = m;
+    }
+    const mx = Math.max(cl, ca) * 1.05;
+    const g = chart($("[data-c=lv]", el), [{ pts: L, c: "c5" }, { pts: A, c: "c3" }], { x0: 0, x1: 60, y0: 0, y1: mx, xt: [0, 12, 24, 36, 48, 60], yt: [0, mx / 2, mx].map(x => Math.round(x / 1000) * 1000), fx: x => "m" + x, fy: y => y ? "$" + (y >= 1e6 ? fmt(y / 1e6, 1) + "M" : fmt(y / 1000, 0) + "k") : "$0", xl: "months", yl: "cumulative earnings", h: 210 });
+    $(".th-lv-n", el).innerHTML = `<span class="c5t">Selling hours</span> earns $${fmt(cl)} over 5 years, and stops the day you stop. <span style="color:var(--c3t)">Building assets</span> earns $${fmt(ca)}${cross > 0 ? ` and overtakes after <b>${cross} months</b>` : ", which doesn't overtake at these settings"}. Assets start slower, then compound because old work keeps earning. That's leverage that needs no one's permission. Lower the earnings or growth sliders to see how often it doesn't pay off.`;
+  }, { rate: x => "$" + x, g: x => x + "%", hit: x => "$" + x });
+};
+
+/* compounding */
+DEMOS.compound = el => {
+  el.innerHTML = `<div class="w-title">The shape of compounding</div><div class="w-sub">Change the daily improvement. Most of the growth arrives at the end.</div>
+  ${sl("d", "Daily change", -1, 1, .05, 1)}<svg class="th-svg" data-c="cp"></svg><div class="stats th-cp-st"></div>
+  <div class="row" style="margin-top:14px">${sl("r", "Annual return on savings", 1, 15, .5, 7)}${sl("y", "Years", 5, 50, 1, 30)}</div><p class="th-cp-m"></p>`;
+  wire(el, v => {
+    const f = 1 + v.d / 100, pts = []; for (let t = 0; t <= 365; t += 5) pts.push([t, Math.pow(f, t)]);
+    const end = Math.pow(f, 365), top = Math.max(2, end * 1.05);
+    chart($("[data-c=cp]", el), [{ pts: [[0, 1], [365, 1 + 365 * v.d / 100]], c: "line", dash: "4 4", w: 1.5 }, { pts, c: v.d >= 0 ? "c2" : "c4" }], { x0: 0, x1: 365, y0: 0, y1: top, xt: [0, 90, 180, 270, 365], yt: [0, 1, Math.round(top)], fy: y => y + "×", xl: "day", yl: "ability vs. day 1", h: 200 });
+    const half = pts.find(p => p[1] - 1 >= (end - 1) / 2);
+    $(".th-cp-st", el).innerHTML = stat(fmt(end, end < 1 ? 3 : 1) + "×", "after a year") + stat(fmt(1 + 365 * v.d / 100, 2) + "×", "if gains just added up (dashed)") + stat(v.d > 0 && half ? "day " + half[0] : "–", "when half the gain is reached");
+    const money = 10000 * Math.pow(1 + v.r / 100, v.y), money2 = 10000 * Math.pow(1 + v.r / 100, v.y - 10);
+    $(".th-cp-m", el).innerHTML = `$10,000 at ${v.r}% for ${v.y} years grows to <b>$${fmt(money)}</b>. Start 10 years later and you'd have $${fmt(money2)}: the last decade of compounding is worth <b>$${fmt(money - money2)}</b>. Rule of 72: it doubles every ~${fmt(72 / v.r, 1)} years.`;
+  }, { d: x => (x > 0 ? "+" : "") + (+x).toFixed(2) + "%", r: x => x + "%", y: x => x });
+};
+
+/* owning your time */
+DEMOS.timeaudit = el => {
+  el.innerHTML = `<div class="w-title">Who owns your week?</div><div class="w-sub">A week has 168 hours. Set your typical hours below and see what's truly yours.</div>
+  <div class="row">${sl("sl", "Sleep per night", 5, 10, .5, 7.5)}${sl("wk", "Paid work per week", 0, 80, 1, 45)}${sl("cm", "Commute per week", 0, 20, .5, 5)}${sl("ch", "Chores & admin per week", 0, 40, 1, 14)}${sl("ob", "Other obligations per week", 0, 40, 1, 10)}</div>
+  <div class="th-sw-grid"><svg class="th-svg" data-c="ta" style="max-width:260px"></svg><div class="th-ta-out"></div></div>`;
+  wire(el, v => {
+    const parts = [["Sleep", v.sl * 7, "c1"], ["Work", v.wk, "c5"], ["Commute", v.cm, "c4"], ["Chores & admin", v.ch, "c3"], ["Obligations", v.ob, "c6"]], used = parts.reduce((s, p) => s + p[1], 0), own = Math.max(0, 168 - used);
+    parts.push(["Yours", own, "c2"]);
+    const svg = $("[data-c=ta]", el); svg.setAttribute("viewBox", "0 0 240 240"); svg.innerHTML = ""; let a = -Math.PI / 2;
+    parts.forEach(([n, h, c]) => { if (h <= 0) return; const b = a + h / Math.max(168, used) * 2 * Math.PI, big = b - a > Math.PI ? 1 : 0, P = t => [120 + 100 * Math.cos(t), 120 + 100 * Math.sin(t)], [x0, y0] = P(a), [x1, y1] = P(b - 1e-6); svgEl("path", { d: `M120,120 L${x0},${y0} A100,100 0 ${big} 1 ${x1},${y1} Z`, fill: C[c], stroke: C.surface, "stroke-width": 2 }, svg); a = b; });
+    svgEl("circle", { cx: 120, cy: 120, r: 52, fill: C["surface-2"] }, svg);
+    svgText(svg, 120, 120, fmt(own, 0) + " h", { "text-anchor": "middle", "font-size": 22, "font-weight": 700 }); svgText(svg, 120, 138, "yours / week", { "text-anchor": "middle", "font-size": 11, fill: C.muted });
+    $(".th-ta-out", el).innerHTML = parts.map(([n, h, c]) => `<div class="th-bar"><code>${n}</code><i style="width:${h / 168 * 100}%;background:var(--${c})"></i><span>${fmt(h, 0)}h</span></div>`).join("") + `<p class="small">${used > 168 ? "<b class='c4t'>That's more than 168 hours!</b> Something has to give." : `That's about <b>${fmt(own / 7, 1)} hours a day</b> you actually own, including meals and rest.`} Research suggests buying back time from chores you dislike, and cutting commuting, raises wellbeing more than most purchases.</p>`;
+  }, { sl: x => x + " h", wk: x => x + " h", cm: x => x + " h", ch: x => x + " h", ob: x => x + " h" });
+};
+
+/* influence: sorter */
+DEMOS.cialdini = el => {
+  el.innerHTML = `<div class="w-title">Spot the principle of influence</div><div class="w-sub">Which of Cialdini's principles is at work in each example?</div><div class="sorter"></div>`;
+  makeSorter(el, ["🎁 Reciprocity", "📝 Commitment", "👥 Social proof", "🎓 Authority", "😊 Liking", "⏳ Scarcity", "🤝 Unity"], [
+    ["A charity mails you free address labels with its donation request.", 0, "A small gift creates a felt obligation to give back. It raised donation rates dramatically in real campaigns."],
+    ["\"Only 2 rooms left at this price!\"", 5, "Things seem more valuable when they're rare or about to disappear."],
+    ["\"Join 10,000 developers who use our tool every day.\"", 2, "Under uncertainty, we look at what people like us are doing."],
+    ["A salesperson first gets you to agree you care about safety, then shows the safest model.", 1, "Once we've taken a stand, we feel pressure to act consistently with it."],
+    ["A toothpaste ad features a dentist in a white coat.", 3, "We defer to credible experts, and to the symbols of expertise."],
+    ["\"As fellow parents, we know how precious your family's time is.\"", 6, "Unity: a shared identity (\"we\") makes us more open to influence. It's Cialdini's seventh principle, added in 2016."],
+    ["A friendly seller compliments you and mentions you went to the same university.", 4, "We say yes to people we like, and similarity and compliments build liking."],
+    ["A free trial that you must actively cancel.", 1, "Starting something, even for free, creates a commitment, plus status-quo inertia."],
+  ]);
+};
+
+/* Kelly criterion */
+DEMOS.kelly = el => {
+  el.innerHTML = `<div class="w-title">How much should you bet?</div><div class="w-sub">You have an edge: an even-money bet you win with probability p. Choose what fraction of your wealth to stake each round, over 200 rounds, for 40 people.</div>
+  <div class="row">${sl("p", "Win probability", 51, 75, 1, 60)}${sl("f", "Fraction bet each round", 1, 100, 1, 20)}</div>
+  <svg class="th-svg" data-c="kl"></svg><div class="stats th-k-st"></div><p class="small th-k-n"></p>`;
+  wire(el, v => {
+    const p = v.p / 100, f = v.f / 100, ks = 2 * p - 1, paths = [], fin = [];
+    for (let k = 0; k < 40; k++) { const r = mulberry(100 + k); let w = 1; const pts = [[0, 0]]; for (let t = 1; t <= 200; t++) { w *= r() < p ? 1 + f : 1 - f; w = Math.max(w, 1e-12); if (t % 4 === 0) pts.push([t, Math.log10(w)]); } paths.push(pts); fin.push(w); }
+    fin.sort((a, b) => a - b); const med = fin[20], ruin = fin.filter(w => w < .01).length;
+    const g = chart($("[data-c=kl]", el), paths.map((pts, i) => ({ pts, c: i % 2 ? "c1" : "c6", w: 1 })), { x0: 0, x1: 200, y0: -6, y1: 8, xt: [0, 50, 100, 150, 200], yt: [-6, -3, 0, 3, 6], fy: y => y ? "10" + SUP(y) : "1", xl: "round", yl: "wealth (log scale)", h: 210 });
+    $$("polyline", $("[data-c=kl]", el)).forEach(p => p.setAttribute("stroke-opacity", .45));
+    const gr = p * Math.log(1 + f) + (1 - p) * Math.log(1 - Math.min(f, .9999));
+    $(".th-k-st", el).innerHTML = stat(fmt(ks * 100, 0) + "%", "Kelly fraction") + stat(med >= 1e3 ? "×10" + SUP(Math.round(Math.log10(med))) : "×" + fmt(med, med < 1 ? 3 : 1), "median final wealth") + stat(ruin + " / 40", "essentially wiped out") + stat((gr >= 0 ? "+" : "") + fmt(gr * 100, 2) + "%", "expected log growth per round");
+    $(".th-k-n", el).innerHTML = f < ks * .6 ? "Well below Kelly: safe, but slow." : f <= ks * 1.2 ? "Near Kelly: the fastest long-run growth." : f < ks * 2 ? "Above Kelly: more volatility and <b>less</b> growth, even though every bet has an edge." : "Twice Kelly or more: growth stalls or turns negative, and ruin becomes likely. <b>A real edge plus oversizing still loses.</b>";
+  }, { p: x => x + "%", f: x => x + "%" });
+};
+
+/* ergodicity */
+DEMOS.ergo = el => {
+  el.innerHTML = `<div class="w-title">The +50% / −40% coin game</div><div class="w-sub">Heads: your wealth × 1.5 (on the part you bet). Tails: × 0.6. 1,000 people each play 60 rounds. Compare the <span style="color:var(--c3t)">average across people</span> with the <span class="c5t">typical (median) person</span>.</div>
+  ${sl("f", "Fraction of wealth you put in the game", 5, 100, 5, 100)}<svg class="th-svg" data-c="eg"></svg><p class="small th-eg-n"></p>`;
+  wire(el, v => {
+    const f = v.f / 100, N = 1000, T = 60, W = new Array(N).fill(1), r = mulberry(8), A = [[0, 0]], M = [[0, 0]];
+    for (let t = 1; t <= T; t++) { for (let i = 0; i < N; i++) W[i] *= r() < .5 ? 1 + .5 * f : 1 - .4 * f; const s = [...W].sort((a, b) => a - b); A.push([t, Math.log10(W.reduce((a, b) => a + b, 0) / N)]); M.push([t, Math.log10(s[N / 2])]); }
+    const lo = Math.min(-2, Math.floor(Math.min(...M.map(p => p[1])))), hi = Math.max(1, Math.ceil(Math.max(...A.map(p => p[1]), T * Math.log10(1 + .05 * f))));
+    const E = A.map(([t]) => [t, t * Math.log10(1 + .05 * f)]);
+    chart($("[data-c=eg]", el), [{ pts: [[0, 0], [T, 0]], c: "line", dash: "4 4", w: 1.5 }, { pts: E, c: "c3", dash: "6 4", w: 1.5 }, { pts: A, c: "c3" }, { pts: M, c: "c5" }], { x0: 0, x1: T, y0: lo, y1: hi, xt: [0, 20, 40, 60], yt: [lo, 0, hi], fy: y => y ? "10" + SUP(y) : "1", xl: "round", yl: "wealth (log scale)", h: 210 });
+    const g = Math.sqrt((1 + .5 * f) * (1 - .4 * f));
+    $(".th-eg-n", el).innerHTML = `The expected value is +${fmt(5 * f, 1)}% per round, but the typical person's growth is <b>${g >= 1 ? "+" : ""}${fmt((g - 1) * 100, 2)}% per round</b> (√((1 + ${fmt(.5 * f, 2)})(1 − ${fmt(.4 * f, 2)}))). ${f > .5 ? "The average is pulled up by a lucky few, while most people go broke." : "Betting only part of your wealth turns a losing path into a winning one: that's the Kelly idea."} (Dashed orange: the theoretical average with infinitely many players. Even 1,000 players fall short of it, because it's driven by vanishingly rare lucky streaks.) Most of life is played along one path, not averaged across many.`;
+  }, { f: x => x + "%" });
+};
+
 /* ---------- THEORIES: page ---------- */
 (() => {
   const DOM = Object.fromEntries(DOMAINS.map(d => [d[0], d]));
   const txt = c => c === "c1" ? "var(--c1)" : `var(--${c}t)`;
   const byId = Object.fromEntries(TH.map(t => [t[0], t]));
+  const EV = typeof EVID === "undefined" ? {} : EVID;
+  const ORD = Object.fromEntries(DOMAINS.map((d, i) => [d[0], i])), TILES = [...TH].sort((a, b) => ORD[a[1]] - ORD[b[1]]);
   let done = new Set();
   try { done = new Set(JSON.parse(localStorage.getItem("th-done") || "[]")); } catch (e) {}
   const save = () => { try { localStorage.setItem("th-done", JSON.stringify([...done])); } catch (e) {} };
@@ -1907,6 +2594,7 @@ DEMOS.wason = el => {
   <button class="th-h" aria-expanded="false"><span class="th-ic">${ic}</span><span class="th-tt"><b>${title}</b><small>${one}</small></span><span class="th-who">${who}</span><span class="th-ck" title="Understood">✓</span><span class="th-chev">▾</span></button>
   <div class="th-b" hidden>
     <p class="th-who-m small muted">${who}</p>
+    ${EV[id] ? `<span class="th-badge ev-${EV[id][0]}">Evidence: ${EV[id][1]}</span>` : ""}
     <p>${body}</p>
     <div class="th-edge"><h5>⚡ Why it gives you an edge now</h5><p>${edge}</p></div>
     <div class="th-2"><div><h5>🔍 Example</h5><p>${ex}</p></div><div><h5>⚠️ Common misconception</h5><p>${mis}</p></div></div>
@@ -1944,8 +2632,9 @@ DEMOS.wason = el => {
 
   // hub: tiles, search, filter, surprise
   const tiles = $("#thTiles");
-  tiles.innerHTML = TH.map(t => { const c = DOM[t[1]][3]; return `<button class="th-tile" data-t="${t[0]}" data-d="${t[1]}" style="--dc:var(--${c});--dcs:var(--${c}-soft)"><span>${t[2]}</span><b>${t[3]}</b><small>${t[5]}</small></button>`; }).join("");
-  $("#thDomChips").innerHTML = `<button class="chip on" data-dom="all">All ${TH.length}</button>` + DOMAINS.map(d => `<button class="chip" data-dom="${d[0]}">${d[1]} ${d[2].split(" & ")[0].split(",")[0]}</button>`).join("");
+  tiles.innerHTML = TILES.map(t => { const c = DOM[t[1]][3]; return `<button class="th-tile" data-t="${t[0]}" data-d="${t[1]}" style="--dc:var(--${c});--dcs:var(--${c}-soft)"><span>${t[2]}</span><b>${t[3]}</b><small>${t[5]}</small>${EV[t[0]] && /belief|debated|mixed/.test(EV[t[0]][0]) ? `<span class="th-tb ev-${EV[t[0]][0]}">${EV[t[0]][0] === "belief" ? "not science" : EV[t[0]][0]}</span>` : ""}</button>`; }).join("");
+  $("#thSearch").placeholder = `Search ${TH.length} theories, e.g. entropy, dopamine, Naval, Kuhn…`;
+  $("#thDomChips").innerHTML = `<button class="chip on" data-dom="all">All ${TH.length}</button>` + DOMAINS.map(d => `<button class="chip" data-dom="${d[0]}">${d[1]} ${d[2].split(" & ")[0].split(",")[0].replace("Thinking tools", "Tools")}</button>`).join("");
   let dom = "all", q = "";
   const filt = () => {
     let n = 0;
@@ -1975,6 +2664,12 @@ DEMOS.wason = el => {
     ["A handful of apps, books and creators capture most of the downloads, sales and followers. Which pattern is this?", ["Power law (fat tails, preferential attachment)", "The normal distribution", "The Red Queen", "Hebbian learning"], 0, "powerlaw", "When success feeds more success, outcomes follow a power law: a few giants and a long tail, not a bell curve."],
     ["A gossip spreads through a 5,000-person company in two days, despite most people knowing only their own team. Why so fast?", ["Small-world networks: a few bridging ties", "Kleiber's law", "Hofstede's dimensions", "The Big Bang"], 0, "networks", "A few people with links across teams act as shortcuts, so almost everyone is only a few hops away."],
     ["A new technology is adopted slowly, then explosively, then saturates. Which idea describes the curve and who adopts first?", ["Diffusion of innovations (S-curve)", "Transaction cost economics", "Noether's theorem", "Attachment theory"], 0, "diffusion", "Rogers's S-curve: innovators and early adopters first, then the early and late majority, and laggards last. Crossing from early adopters to the majority is the hard part."],
+    ["You check your phone every few minutes \"just in case\" something new has arrived, even though it usually hasn't. What's driving this?", ["Variable rewards and dopamine prediction errors", "The Lindy effect", "Comparative advantage", "Occam's razor"], 0, "dopamine", "Unpredictable rewards keep the prediction error alive, which is the slot-machine mechanism behind feeds and notifications."],
+    ["After a raise, you're thrilled for a month, then it just feels normal and you want the next one. Which idea explains this?", ["The hedonic treadmill", "Growth mindset", "Second-order thinking", "Game theory"], 0, "hedonic", "We adapt to most improvements as expectations rise, so the happiness boost fades."],
+    ["A coin game gains 50% on heads and loses 40% on tails. The average across players grows, but most individual players go broke. Why?", ["The game is non-ergodic: time averages differ from ensemble averages", "Regression to the mean", "The Matthew effect", "Cognitive dissonance"], 0, "ergodicity", "Losses compound multiplicatively along each person's single path, so the typical outcome is a loss (√(1.5 × 0.6) ≈ 0.95 per round)."],
+    ["A designer builds a library of video tutorials that earns money years after they were made, without anyone approving it. What kind of leverage is this?", ["Permissionless leverage (media & code)", "Labour leverage", "Capital leverage", "Soft power"], 0, "permissionless", "Media and code have near-zero marginal cost of replication and need no one's permission. They work while you sleep."],
+    ["You imagine your dream outcome in vivid detail every night, but make no plan for obstacles. What does the research suggest?", ["It can reduce effort. Add the obstacle and an if–then plan (mental contrasting)", "It guarantees success if you believe enough", "It has no effect at all", "It only works for visual learners"], 0, "mentalcontrast", "Oettingen found that positive fantasies alone predicted lower achievement. Contrasting the wish with obstacles, plus implementation intentions, works better."],
+    ["A team's KPI is \"tickets closed per week\", and soon tickets are being split into tiny pieces. Which law is this?", ["Goodhart's law", "Parkinson's law", "Moore's law", "The Lindy effect"], 0, "goodhart", "When a measure becomes a target, people optimise the number rather than the goal behind it."],
   ];
   let qi = 0, sc = 0, order = [];
   const shuffle = a => { const b = [...a]; for (let i = b.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [b[i], b[j]] = [b[j], b[i]]; } return b; };
@@ -2025,7 +2720,34 @@ DEMOS.wason = el => {
     ["The Structure of Scientific Revolutions", "Thomas Kuhn", 1962, "Culture", "Paradigms, anomalies and scientific revolutions."],
     ["The Beginning of Infinity", "David Deutsch", 2011, "Culture", "Good explanations, fallibilism and the reach of knowledge."],
     ["The Scout Mindset", "Julia Galef", 2021, "Mind", "Seeing things as they are, not as you wish: a practical companion to Bayesian thinking."],
-  ], ["Information", "Strategy", "Physics", "Life", "Mind", "Systems", "Economics", "Power", "Culture"]);
+    ["Psycho-Cybernetics", "Maxwell Maltz", 1960, "Self", "The classic on self-image as a goal-seeking guidance system."],
+    ["Feeling Is the Secret", "Neville Goddard", 1944, "Self", "The short primary source for the \"law of assumption\". Read it as spiritual writing, not science."],
+    ["Rethinking Positive Thinking", "Gabriele Oettingen", 2014, "Self", "Why positive fantasies backfire, and the evidence behind WOOP."],
+    ["Mindset", "Carol Dweck", 2006, "Self", "Fixed vs. growth mindsets. Read it alongside the later replication debates."],
+    ["The Paradox of Choice", "Barry Schwartz", 2004, "Self", "Maximizers, satisficers and the costs of too many options."],
+    ["Four Thousand Weeks", "Oliver Burkeman", 2021, "Self", "Time management for mortals: owning your time by accepting its limits."],
+    ["Flow", "Mihaly Csikszentmihalyi", 1990, "Brain", "The psychology of optimal experience."],
+    ["Deep Work", "Cal Newport", 2016, "Brain", "Rules for focused success in a distracted world."],
+    ["Attention Span", "Gloria Mark", 2023, "Brain", "Two decades of research on screens, switching and focus."],
+    ["Dopamine Nation", "Anna Lembke", 2021, "Brain", "Pleasure, pain and compulsive overconsumption, from a Stanford addiction psychiatrist."],
+    ["Atomic Habits", "James Clear", 2018, "Brain", "Cue, craving, response, reward: a practical habit system."],
+    ["Good Habits, Bad Habits", "Wendy Wood", 2019, "Brain", "The science of habit from one of its leading researchers."],
+    ["Make It Stick", "Brown, Roediger & McDaniel", 2014, "Brain", "The science of successful learning: retrieval, spacing and interleaving."],
+    ["Peak", "Anders Ericsson & Robert Pool", 2016, "Brain", "Deliberate practice from the researcher behind it."],
+    ["The Almanack of Naval Ravikant", "Eric Jorgenson", 2020, "Leverage", "Naval's ideas on specific knowledge, leverage and happiness, free online."],
+    ["Zero to One", "Peter Thiel", 2014, "Leverage", "\"Competition is for losers\": building something new instead."],
+    ["Finite and Infinite Games", "James Carse", 1986, "Leverage", "Playing to win vs. playing to keep playing."],
+    ["Wanting", "Luke Burgis", 2021, "Leverage", "René Girard's mimetic desire applied to modern life and work."],
+    ["So Good They Can't Ignore You", "Cal Newport", 2012, "Leverage", "Career capital: rare and valuable skills before passion."],
+    ["Antifragile", "Nassim Nicholas Taleb", 2012, "Leverage", "Things that gain from disorder, optionality and the barbell."],
+    ["The Psychology of Money", "Morgan Housel", 2020, "Leverage", "Compounding, luck, risk and why owning your time is the top dividend."],
+    ["Influence (new & expanded ed.)", "Robert Cialdini", 2021, "Leverage", "The seven principles of persuasion, including unity."],
+    ["Made to Stick", "Chip & Dan Heath", 2007, "Leverage", "Why some ideas survive and others die: SUCCESs."],
+    ["Fortune's Formula", "William Poundstone", 2005, "Leverage", "The story of the Kelly criterion, Shannon and Thorp."],
+    ["The Great Mental Models, Vol. 1", "Shane Parrish", 2019, "Tools", "First principles, inversion, second-order thinking and more."],
+    ["Poor Charlie's Almanack", "Charlie Munger", 2005, "Tools", "The latticework of mental models, in Munger's own words."],
+    ["How Big Things Get Done", "Bent Flyvbjerg & Dan Gardner", 2023, "Tools", "Why big projects overrun, and reference-class forecasting."],
+  ], ["Information", "Strategy", "Physics", "Life", "Mind", "Brain", "Self", "Systems", "Economics", "Leverage", "Power", "Culture", "Tools"]);
 })();
 
 })();
