@@ -7,8 +7,8 @@ Five interactive, Brilliant-style courses. Each is a single self-contained HTML 
 | `index.html` | **AI, Explained**: 19 chapters, from AI basics to Claude, agents and the frontier |
 | `product-management.html` | **Product Management, First Principles**: 8 chapters |
 | `platform-management.html` | **Platform Management, First Principles**: 12 chapters |
-| `theories.html` | **Big Ideas, Part 1**: 112 mind-expanding theories across 13 domains, with 37 simulations |
-| `models.html` | **Big Ideas, Part 2: Mental models & toolkits**: 93 models and tools across 7 sections, with 27 simulations |
+| `theories.html` | **Big Ideas, Part 1**: 135 mind-expanding theories across 15 domains (including a quantum physics deep dive and string theory), with 45 simulations |
+| `models.html` | **Big Ideas, Part 2: Mental models & toolkits**: 148 models and tools across 9 sections, with 39 simulations |
 
 A switcher in the top bar links the courses. Both Big Ideas parts sit under "Theories" and link to each other.
 
@@ -91,6 +91,8 @@ An interactive field guide to the theories that give you an edge today, covering
 |---|---|
 | **Information & computation** | Information theory 🎮, Bayesian probability 🎮, computability, complexity (P vs NP), cybernetics, Gödel's incompleteness, Kolmogorov complexity |
 | **Strategy & decisions** | Game theory (Axelrod tournament 🎮), expected utility, prospect theory 🎮, bounded rationality, mechanism design, Arrow's theorem (voting paradoxes 🎮), signaling |
+| **Quantum physics: a deeper dive** | Planck's quanta, the photoelectric effect 🎮, the Bohr atom (hydrogen spectrum 🎮), de Broglie waves, the Schrödinger equation (particle in a box 🎮), the Born rule, superposition & qubits 🎮, the uncertainty principle 🎮, tunnelling 🎮, spin (Stern–Gerlach 🎮), Pauli exclusion, entanglement & Bell tests 🎮, interpretations, decoherence, quantum field theory, the Standard Model, quantum computing, no-cloning & quantum cryptography |
+| **String theory & quantum gravity** | String theory & M-theory, the holographic principle, loop quantum gravity, Hawking radiation & the information paradox, the string landscape & multiverse debate |
 | **Physics & the cosmos** | Big Bang (cosmic timeline 🎮), relativity (twin paradox 🎮), quantum theory (double slit 🎮), thermodynamics (entropy 🎮), chaos (logistic map 🎮), Noether's theorem, plate tectonics |
 | **Life & evolution** | Natural selection (weasel program 🎮), the selfish gene, germ theory, endosymbiosis, the Red Queen, evolutionarily stable strategies, scaling laws (Kleiber 🎮) |
 | **Mind & behaviour** | Dual-process theory (Cognitive Reflection Test 🎮), predictive processing, cognitive dissonance, attachment, theory of mind, global workspace, Hebbian learning |
@@ -113,10 +115,12 @@ Practical models and untools-style frameworks for acting in the world. It uses t
 |---|---|
 | **Stoicism: the art of living** | Virtue as the only good (control sorter 🎮), judgements not things, the three disciplines, premeditatio malorum, memento mori (life in weeks 🎮), amor fati, the obstacle is the way, the view from above (powers of ten 🎮), voluntary discomfort, the evening review, Hierocles' circles |
 | **First principles of wealth** | Wealth vs. money vs. status, value creation, productivity, ownership, savings rate (years to financial independence 🎮), diversification 🎮, index funds & costs (fee drag 🎮), inflation, opportunity cost, human capital, debt (minimum-payment trap 🎮), enough |
-| **More mental models** | Hanlon's razor, survivorship bias (Wald's bombers 🎮), margin of safety, incentives, regression to the mean 🎮, sunk cost, availability, anchoring, resulting, local vs. global optima (hill climbing 🎮), leverage points, steelmanning, thought experiments, activation energy, moats, diminishing returns, cargo cult science |
+| **More mental models** | Hanlon's razor, survivorship bias (Wald's bombers 🎮), margin of safety, incentives, regression to the mean 🎮, sunk cost, availability, anchoring (wheel of fortune 🎮), resulting, local vs. global optima (hill climbing 🎮), leverage points, steelmanning, thought experiments, activation energy, moats, diminishing returns, cargo cult science |
+| **People & motivation** | Fundamental attribution error, the Ben Franklin effect, temporal motivation theory (procrastination equation 🎮), halo effect, IKEA effect, pratfall effect, mere exposure, spotlight effect, curse of knowledge, bystander effect 🎮, social loafing, reactance |
+| **Laws of work, tech & life** | Pareto principle, Hofstadter's law, the Peter principle 🎮, Hick's law (live reaction test 🎮), Dunning–Kruger 🎮, Murphy, Sturgeon, Moore, Amdahl 🎮, Gall, Metcalfe, Postel, Hyrum, Fitts, Jakob, Tesler and Cunningham's laws (plus links to Parkinson, Goodhart, Occam, Chesterton, Hanlon and Brooks) |
 | **Decision-making tools** | Eisenhower matrix 🎮, one-way vs. two-way doors, weighted decision matrix 🎮, impact–effort matrix, Cynefin 🎮, 10/10/10, pre-mortem, decision trees & expected value 🎮, OODA loop, six thinking hats, RAPID/DACI, WRAP |
 | **Problem-solving & communication** | Five whys 🎮, issue trees & MECE, the pyramid principle, abstraction laddering, the iceberg model 🎮, ladder of inference 🎮, fishbone diagrams, rubber duck debugging, the double diamond, SBI feedback, circles of concern & influence, radical candor 🎮 |
-| **Project management models** | Iron triangle 🎮, critical path 🎮, PERT 🎮, theory of constraints 🎮, Little's law & WIP limits 🎮, Brooks's law 🎮, WBS, Agile & Scrum, Kanban, cone of uncertainty, RACI, Tuckman's stages, Conway's law, the ninety-ninety rule, risk matrices |
-| **Product management models** | Kano model 🎮, crossing the chasm, the Hook model, AARRR pirate metrics 🎮, Lean Startup, product–market fit, HEART, MoSCoW, Business Model Canvas, Fogg behaviour model 🎮, Blue Ocean strategy, Shape Up, Wardley mapping, three horizons |
+| **Project management models** | Iron triangle 🎮, critical path 🎮, PERT 🎮, theory of constraints 🎮, Little's law & WIP limits 🎮, Brooks's law 🎮, WBS, Agile & Scrum, Kanban, cone of uncertainty, RACI, Tuckman's stages, Conway's law, the ninety-ninety rule, risk matrices, Gantt charts, earned value 🎮, burndown charts 🎮, planning poker, critical chain, Monte Carlo forecasting 🎮, stakeholder mapping, scope creep, retrospectives, PDCA, the seven wastes, Six Sigma DMAIC, rolling wave planning |
+| **Product management models** | Kano model 🎮, crossing the chasm, the Hook model, AARRR pirate metrics 🎮, Lean Startup, product–market fit, HEART, MoSCoW, Business Model Canvas, Fogg behaviour model 🎮, Blue Ocean strategy, Shape Up, Wardley mapping, three horizons, product life cycle, the innovator's dilemma, the hype cycle, growth loops, product-led growth, aha moments, Van Westendorp pricing 🎮, the decoy effect 🎮, Porter's five forces, the Ansoff matrix, the BCG matrix, outcome-driven innovation, dual-track agile |
 
-It ends with a "which tool fits?" challenge, a filterable reading list and a Monday-morning toolkit recap.
+An "11 laws of the universe" shortcut on the hub links to Parkinson, Hofstadter, Hanlon, Pareto, Peter, Hick, Goodhart, Dunning–Kruger, Occam, Chesterton and Brooks across both parts. It ends with a "which tool fits?" challenge, a filterable reading list and a Monday-morning toolkit recap.
