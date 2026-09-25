@@ -15,6 +15,6 @@ Open `index.html` in a browser, or serve the folder with a static server such as
 7. **Beyond text: diffusion** An interactive noise-to-image demo
 8. **Today's AI landscape** The AI stack and a filterable list of model families
 9. **Meet Claude** Model tiers, a feature explorer, the tool-use loop, a context window visualizer, and extended thinking
-10. **The frontier** A working in-browser mini-RAG, JEPA vs. generative prediction, a Mixture-of-Experts router, and test-time compute
+10. **The frontier** A working in-browser mini-RAG, JEPA vs. generative prediction, Jev and System One models (a typed parallel-decision race against a generative LLM, plus a calibration reliability diagram), a Mixture-of-Experts router, and test-time compute
 
 It supports light and dark themes, including a manual toggle, and respects `prefers-reduced-motion`.

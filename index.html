@@ -304,6 +304,26 @@ input[type=text]:focus{border-color:var(--c1)}
 .rag-stage span.done{background:var(--c2-soft);color:var(--c2)}
 
 .flow-dash{stroke-dasharray:6 6;animation:dash 1s linear infinite}
+.lanes{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}
+@media (max-width:720px){.lanes{grid-template-columns:1fr}}
+.lane{border:1px solid var(--line);border-radius:16px;padding:14px;background:var(--surface-2);min-width:0}
+.lane-head{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;font-size:.8rem;font-weight:800;margin-bottom:8px}
+.lane-bar{height:6px;border-radius:6px;background:var(--surface-3);overflow:hidden;margin-bottom:10px}
+.lane-bar i{display:block;height:100%;width:0;border-radius:6px}
+.jq{background:var(--surface);border-radius:12px;padding:10px 12px;margin-bottom:8px;opacity:.35;transition:opacity .3s}
+.jq.on{opacity:1;animation:pop .35s}
+.jq-name{display:flex;justify-content:space-between;font-family:"JetBrains Mono",ui-monospace,monospace;font-size:.78rem;font-weight:600;margin-bottom:6px}
+.jq-name span{color:var(--muted)}
+.opt-row{display:grid;grid-template-columns:110px 1fr 40px;gap:8px;align-items:center;font-size:.78rem;font-weight:600;margin:3px 0}
+.opt-row .track{height:10px;border-radius:6px;background:var(--surface-2);overflow:hidden}
+.opt-row .fill{height:100%;border-radius:6px;background:var(--c5);transition:width .4s cubic-bezier(.2,.7,.2,1)}
+.opt-row.best .fill{background:var(--c2)}
+.scale{position:relative;height:10px;border-radius:6px;background:linear-gradient(90deg,var(--c2),var(--c3),var(--c4));margin:14px 4px 6px}
+.scale b{position:absolute;top:-6px;width:4px;height:22px;border-radius:2px;background:var(--ink);transform:translateX(-50%);transition:left .5s cubic-bezier(.2,.7,.2,1)}
+.scale-labels{display:flex;justify-content:space-between;font-size:.7rem;font-weight:600;color:var(--muted)}
+.s12{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media (max-width:720px){.s12{grid-template-columns:1fr}}
+.s12 .card ul{margin:8px 0 0;padding-left:18px;font-size:.88rem;color:var(--ink-2)}
 @keyframes dash{to{stroke-dashoffset:-24}}
 
 .footer{padding:70px 20px 90px;text-align:center;color:var(--muted);font-size:.9rem;border-top:1px solid var(--line)}
@@ -334,7 +354,7 @@ input[type=text]:focus{border-color:var(--c1)}
   <a href="#ch7"><span class="num">7</span>Beyond text: diffusion</a>
   <a href="#ch8"><span class="num">8</span>Today's AI landscape</a>
   <a href="#ch9"><span class="num">9</span>Meet Claude</a>
-  <a href="#ch10"><span class="num">10</span>The frontier: RAG, JEPA &amp; more</a>
+  <a href="#ch10"><span class="num">10</span>The frontier: RAG, JEPA, Jev &amp; more</a>
   <a href="#recap"><span class="num">★</span>Recap</a>
 </nav>
 
@@ -812,7 +832,7 @@ input[type=text]:focus{border-color:var(--c1)}
 <div class="wrap">
   <div class="ch-head reveal">
     <span class="ch-tag" style="background:var(--c6-soft);color:var(--c6)">Chapter 10</span>
-    <h2>The frontier: RAG, JEPA &amp; beyond</h2>
+    <h2>The frontier: RAG, JEPA, Jev &amp; beyond</h2>
     <p class="lede">What comes after "a bigger transformer"? Here are the ideas pushing AI forward.</p>
   </div>
 
@@ -841,6 +861,78 @@ input[type=text]:focus{border-color:var(--c1)}
     <div class="row" style="margin-bottom:12px"><button class="chip on" data-j="gen">Generative (predict pixels)</button><button class="chip" data-j="jepa">JEPA (predict embeddings)</button></div>
     <div class="stage" style="padding:8px"><svg id="jepaSvg" viewBox="0 0 700 280" style="width:100%;display:block"></svg></div>
     <p class="small" id="jepaText" style="margin-top:12px"></p>
+  </div>
+
+  <h3 class="reveal">Jev: System One models</h3>
+  <p class="reveal">Most of this course has been about models that <b>generate</b> text, pixels or tokens. In September 2026, <b>TypeSafe AI</b>, a San Francisco startup founded in 2024, took a different approach with <b>Jev</b>, launched in early access on 15 September 2026. Jev <b>generates no text at all</b>. You give it some input (the "state") and a set of <b>typed questions</b>. It returns an answer to every question with a <b>calibrated probability</b>, all in a single parallel pass.</p>
+  <p class="reveal">TypeSafe calls this a <b>System One model</b>, after Daniel Kahneman's split between fast, intuitive <i>System 1</i> thinking and slow, deliberate <i>System 2</i> reasoning. LLMs that think step by step are System 2. Jev aims to be the fast, reflexive System 1: a judgment that software can call like any other function.</p>
+
+  <div class="s12 reveal">
+    <div class="card"><div class="ico" style="background:var(--c2-soft)">⚡</div><h4>System 1 · Jev</h4><p>Fast, structured, reflexive decisions.</p>
+      <ul><li>Output is typed answers, not prose</li><li>All questions answered in one parallel pass</li><li>About 70 to 500 ms end to end (most around 100 ms), as reported by TypeSafe</li><li>Probabilities trained to match reality</li></ul></div>
+    <div class="card"><div class="ico" style="background:var(--c1-soft)">🧠</div><h4>System 2 · LLMs like Claude</h4><p>Slow, deliberate, open-ended reasoning.</p>
+      <ul><li>Output is free-form text, code and plans</li><li>Generated token by token</li><li>Can think at length about hard problems</li><li>Good for writing, coding and multi-step analysis</li></ul></div>
+  </div>
+
+  <h4 class="reveal" style="margin:26px 0 8px;font-size:1.1rem">Three question types</h4>
+  <div class="cards reveal">
+    <div class="card"><div class="ico" style="background:var(--c5-soft)">◐</div><h4>Noul (yes/no)</h4><p>A single probability that something is true. <i>"Does this convey urgency?"</i> returns 0.93.</p></div>
+    <div class="card"><div class="ico" style="background:var(--c2-soft)">☰</div><h4>Choice</h4><p>One of the options you declared, with a probability for each. <i>billing 0.81 · bug 0.14 · account 0.05</i></p></div>
+    <div class="card"><div class="ico" style="background:var(--c3-soft)">📏</div><h4>Score</h4><p>A fractional position on two or more ordered levels you define, such as calm → annoyed → frustrated → furious.</p></div>
+  </div>
+
+  <div class="widget wide reveal">
+    <div class="w-head" style="color:var(--c2)">Simulation</div>
+    <div class="w-title">One call, every answer at once</div>
+    <div class="w-sub">A support-ticket triage task. Pick a ticket and press <b>Run</b>. The Jev lane gets all four answers back in one parallel pass. The LLM lane has to <i>write</i> its answer as JSON, token by token, and then your code has to parse it. <span class="muted">(Answers here are simulated in your browser. This page doesn't call the real Jev API, and the timings are illustrative, based on TypeSafe's published latency.)</span></div>
+    <div class="row" id="jevPresets"></div>
+    <input type="text" id="jevState" style="margin-top:10px" aria-label="Ticket text">
+    <div class="row" style="margin-top:10px"><button class="btn primary" id="jevRun">▶ Run</button><span class="readout" id="jevMeta"></span></div>
+    <div class="lanes">
+      <div class="lane">
+        <div class="lane-head"><span style="color:var(--c2)">⚡ Jev: typed, parallel</span><span class="readout" id="jevT">–</span></div>
+        <div class="lane-bar"><i id="jevBar" style="background:var(--c2)"></i></div>
+        <div id="jevAnswers"></div>
+      </div>
+      <div class="lane">
+        <div class="lane-head"><span style="color:var(--c1)">✍️ Generative LLM: text, token by token</span><span class="readout" id="llmT">–</span></div>
+        <div class="lane-bar"><i id="llmBar" style="background:var(--c1)"></i></div>
+        <div class="code" id="llmOut" style="min-height:250px"></div>
+      </div>
+    </div>
+    <details style="margin-top:14px"><summary class="small" style="cursor:pointer;font-weight:700">Show the request shape</summary>
+      <div class="code" id="jevReq" style="margin-top:10px;min-height:0"></div>
+      <p class="small muted" style="margin:8px 0 0">This is based on TypeSafe's published example (<code>state</code>, <code>model: "jev-latest"</code>, and named questions with a <code>type</code> and <code>instructions</code>). Field names for the choice and score options are simplified here, so check <a href="https://docs.typesafe.ai/api" target="_blank" rel="noopener">docs.typesafe.ai</a> for the exact API.</p>
+    </details>
+  </div>
+
+  <h4 class="reveal" style="margin:26px 0 8px;font-size:1.1rem">Why "calibrated" matters</h4>
+  <p class="reveal">If a model says <b>0.9</b> on a hundred inputs, about <b>ninety</b> of them should really be true. That's what <i>calibrated</i> means, and it lets software set thresholds: auto-approve above 0.95, send to a human below 0.6. TypeSafe says Jev is transformer-based, trained entirely on synthetic data using <b>Reinforcement Learning for Calibrated Decisions (RLCD)</b>, which optimizes probabilities against real outcomes rather than human preference ratings.</p>
+  <div class="widget reveal">
+    <div class="w-head" style="color:var(--c2)">Interactive</div>
+    <div class="w-title">Reliability diagram</div>
+    <div class="w-sub">Each dot groups predictions by stated confidence (x) and shows how often they were actually right (y). A perfectly calibrated model sits on the diagonal. Illustrative data.</div>
+    <div class="row" style="margin-bottom:10px"><button class="chip on" data-cal="good">Calibrated</button><button class="chip" data-cal="over">Overconfident</button><button class="chip" data-cal="under">Underconfident</button></div>
+    <div class="stage" style="padding:8px"><svg id="calSvg" viewBox="0 0 520 300" style="width:100%;display:block"></svg></div>
+    <p class="small" id="calText" style="margin-top:10px"></p>
+  </div>
+
+  <div class="grid2 reveal">
+    <div class="card"><div class="ico" style="background:var(--c2-soft)">✅</div><h4>Where it fits</h4><p>Ticket and email routing, content moderation, resume screening, scoring, verification, and agent guardrails. It can also choose which model or how much thinking a request needs. TypeSafe has even shown it making split-second choices in games like Doom.</p></div>
+    <div class="card"><div class="ico" style="background:var(--c4-soft)">⚠️</div><h4>Where it doesn't</h4><p>It doesn't write articles or code or answer open-ended questions. TypeSafe's documented limitations include exact counting, math and date comparison, deep multi-step reasoning, over-literal reading of instructions, and "context rot" when given lots of irrelevant input.</p></div>
+  </div>
+  <div class="key reveal"><p>The emerging pattern is <b>hybrid</b>. A System One model like Jev handles the fast, high-volume decisions (classify, route, score, guard), and a System Two LLM like Claude is called only when open-ended reasoning or generation is actually needed. TypeSafe reports pricing of <b>$0.042 per million input tokens, with output free</b>, and says Jev is up to 200× faster and 400× cheaper than comparable LLMs on classification tasks. These are the company's own figures, and it's still early access.</p></div>
+  <p class="small muted reveal">Sources: <a href="https://typesafe.ai/blog/introducing-system-one-models-and-jev" target="_blank" rel="noopener">TypeSafe AI: "Introducing System One Models &amp; Jev"</a> · <a href="https://docs.typesafe.ai/introduction" target="_blank" rel="noopener">TypeSafe docs</a> · <a href="https://www.marktechpost.com/2026/09/19/typesafe-ai-releases-jev/" target="_blank" rel="noopener">MarkTechPost</a> · <a href="https://www.theregister.com/ai-and-ml/2026/09/16/typesafe-ai-debuts-model-for-machines-that-plays-doom/5296711" target="_blank" rel="noopener">The Register</a></p>
+
+  <div class="quiz reveal" data-correct="1">
+    <div class="q-label">Quick check</div>
+    <div class="q">Which job is the best fit for a System One model like Jev?</div>
+    <div class="opts">
+      <button class="opt">Writing a 1,000-word blog post</button>
+      <button class="opt">Flagging which of 10,000 comments break a moderation policy, with a confidence for each</button>
+      <button class="opt">Working out the number of days between two dates</button>
+    </div>
+    <div class="explain">It's a high-volume, typed decision where calibrated confidence lets you auto-act or escalate. Long-form writing belongs to a generative LLM, and TypeSafe lists date arithmetic as a known weakness. That's a job for ordinary code.</div>
   </div>
 
   <h3 class="reveal">Mixture of Experts (MoE)</h3>
@@ -901,7 +993,7 @@ input[type=text]:focus{border-color:var(--c1)}
     <div><b>LLMs predict tokens</b>Pretraining, then fine-tuning and RLHF or Constitutional AI, turns a predictor into an assistant.</div>
     <div><b>Diffusion paints from noise</b>Image and video models learn to reverse a noising process.</div>
     <div><b>Claude</b>Anthropic's safety-focused models, with tools, long context, extended thinking and agents.</div>
-    <div><b>The frontier</b>RAG for grounding, JEPA and world models, MoE, test-time compute, and alignment.</div>
+    <div><b>The frontier</b>RAG for grounding, JEPA and world models, Jev and System One decision models, MoE, test-time compute, and alignment.</div>
   </div>
 </div>
 </section>
@@ -1260,6 +1352,7 @@ $$(".quiz").forEach(q => {
     ["2024", "Claude 3 · Artifacts · Computer use · MCP", "claude", "The Claude 3 family (Haiku, Sonnet, Opus) arrives in March, then Claude 3.5 Sonnet with Artifacts. OpenAI's o1 popularizes reasoning models. Anthropic ships computer use in beta and open-sources the Model Context Protocol.", true],
     ["2025", "Reasoning & agents · Claude 4 · Claude Code", "claude", "DeepSeek-R1 shows strong open reasoning. Claude 3.7 Sonnet brings hybrid extended thinking, and Claude Code launches as an agentic coding tool. Claude 4 models follow, and agents that browse, code and use apps go mainstream. V-JEPA 2 advances world models.", true],
     ["2026", "The agentic era", "claude", "Frontier models (including the Claude 5 family) work on longer and more autonomous tasks. The questions now are about reliability, safety and how AI is used across the economy."],
+    ["Sep 2026", "Jev: System One models", "product", "TypeSafe AI releases Jev in early access. It is a \"System One\" model that generates no text: it answers typed questions about some input with calibrated probabilities, all in one parallel pass taking about 70 to 500 ms."],
   ];
   const track = $("#tlTrack"), det = $("#tlDetail");
   const items = ev.map((e, i) => { const d = document.createElement("div"); d.className = "tl-item" + (e[4] ? " big" : ""); d.innerHTML = `<div class="tl-year">${e[0]}</div><div class="tl-dot"></div><div class="tl-name">${e[1]}</div>`; d.addEventListener("click", () => { stop(); sel(i); }); track.appendChild(d); return d; });
@@ -1679,6 +1772,136 @@ stepper($("#caiSteps"), $("#caiBody"), $("#caiPrev"), $("#caiNext"), [
     }
   };
   chipGroup(svg.closest(".widget"), "j", j => { mode = j; draw(); }); draw(); document.addEventListener("themechange", draw);
+})();
+
+/* ---------- CH10: Jev (System One) ---------- */
+(() => {
+  const PRESETS = [
+    "Help! My payouts have been failing for 3 days.",
+    "Hi, how do I change the email on my account? No rush.",
+    "Your app crashes EVERY time I upload a photo. This is ridiculous!!!",
+    "Thanks for the quick fix yesterday, everything works great now.",
+  ];
+  const LEVELS = ["calm", "annoyed", "frustrated", "furious"];
+  const CATS = ["billing", "bug", "account", "other"];
+  const ROUTES = ["fast model", "reasoning model", "human agent"];
+  const inp = $("#jevState"), box = $("#jevAnswers"), llm = $("#llmOut");
+  PRESETS.forEach((p, i) => { const b = document.createElement("button"); b.className = "chip" + (i ? "" : " on"); b.dataset.pre = i; b.textContent = p.length > 34 ? p.slice(0, 32) + "…" : p; $("#jevPresets").appendChild(b); });
+  inp.value = PRESETS[0];
+  chipGroup($("#jevPresets"), "pre", i => { inp.value = PRESETS[+i]; run(); });
+
+  const sig = z => 1 / (1 + Math.exp(-z));
+  const softmax = z => { const m = Math.max(...z), e = z.map(v => Math.exp(v - m)), s = e.reduce((a, b) => a + b, 0); return e.map(v => v / s); };
+  const hits = (t, words) => words.reduce((n, w) => n + (t.includes(w) ? 1 : 0), 0);
+  // Toy stand-in for the model: keyword heuristics that produce typed, probabilistic answers.
+  const answer = raw => {
+    const t = raw.toLowerCase(), bangs = (raw.match(/!/g) || []).length, caps = (raw.match(/\b[A-Z]{3,}\b/g) || []).length;
+    const pos = hits(t, ["thanks", "thank", "great", "works", "love", "no rush", "whenever"]);
+    const urgent = sig(1.3 * hits(t, ["help", "urgent", "asap", "failing", "down", "days", "immediately", "can't", "cannot", "crash", "every time", "now"]) + .6 * bangs + .5 * caps - 1.6 - 1.8 * pos);
+    const cat = softmax([
+      1.6 * hits(t, ["payout", "payment", "charge", "invoice", "refund", "card", "billing", "paid", "money"]),
+      1.6 * hits(t, ["error", "crash", "bug", "broken", "doesn't work", "not working", "upload"]),
+      1.6 * hits(t, ["password", "login", "log in", "account", "email", "2fa", "username"]),
+      .9,
+    ]);
+    const frus = clamp(.45 * bangs + .6 * caps + .7 * hits(t, ["ridiculous", "terrible", "worst", "again", "every time", "still", "failing", "help"]) - 1.1 * pos + .3, 0, 3);
+    const lv = softmax(LEVELS.map((_, i) => -1.4 * (i - frus) ** 2));
+    const ci = cat.indexOf(Math.max(...cat));
+    const route = softmax([1.2 - 1.5 * urgent - .5 * frus, CATS[ci] === "bug" ? 1.4 : .1, 2.4 * urgent + .6 * frus - 1.2]);
+    return { urgent, cat, frus, lv, route };
+  };
+
+  const QS = [
+    ["is_urgent", "noul", "Does this convey urgency?"],
+    ["category", "choice", "What is this ticket about?"],
+    ["frustration", "score", "How frustrated is the customer?"],
+    ["route_to", "choice", "Who should handle this?"],
+  ];
+  $("#jevReq").innerHTML = `<span class="c">// illustrative request</span>
+{ <span class="k">"model"</span>: <span class="s">"jev-latest"</span>,
+  <span class="k">"state"</span>: <span class="s" id="jevReqState"></span>,
+  <span class="k">"questions"</span>: {
+    <span class="k">"is_urgent"</span>:   { <span class="k">"type"</span>: <span class="s">"noul"</span>,   <span class="k">"instructions"</span>: <span class="s">"Does this convey urgency?"</span> },
+    <span class="k">"category"</span>:    { <span class="k">"type"</span>: <span class="s">"choice"</span>, <span class="k">"options"</span>: [<span class="s">"billing"</span>, <span class="s">"bug"</span>, <span class="s">"account"</span>, <span class="s">"other"</span>] },
+    <span class="k">"frustration"</span>: { <span class="k">"type"</span>: <span class="s">"score"</span>,  <span class="k">"levels"</span>: [<span class="s">"calm"</span>, <span class="s">"annoyed"</span>, <span class="s">"frustrated"</span>, <span class="s">"furious"</span>] },
+    <span class="k">"route_to"</span>:    { <span class="k">"type"</span>: <span class="s">"choice"</span>, <span class="k">"options"</span>: [<span class="s">"fast model"</span>, <span class="s">"reasoning model"</span>, <span class="s">"human agent"</span>] }
+  } }`;
+
+  const bars = (names, ps) => { const best = ps.indexOf(Math.max(...ps)); return names.map((n, i) => `<div class="opt-row${i === best ? " best" : ""}"><span>${n}</span><div class="track"><div class="fill" style="width:0" data-w="${(ps[i] * 100).toFixed(1)}"></div></div><span class="mono">${ps[i].toFixed(2)}</span></div>`).join(""); };
+  const esc = s => s.replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
+  let timers = [], raf = 0;
+  function run() {
+    timers.forEach(clearTimeout); timers = []; cancelAnimationFrame(raf);
+    const state = inp.value.trim() || PRESETS[0], A = answer(state);
+    $("#jevReqState").textContent = JSON.stringify(state);
+    const bestCat = CATS[A.cat.indexOf(Math.max(...A.cat))], bestRoute = ROUTES[A.route.indexOf(Math.max(...A.route))];
+    box.innerHTML = QS.map(q => `<div class="jq"><div class="jq-name">${q[0]} <span>${q[1]}</span></div>${
+      q[0] === "is_urgent" ? bars(["P(true)"], [A.urgent]) :
+      q[0] === "category" ? bars(CATS, A.cat) :
+      q[0] === "route_to" ? bars(ROUTES, A.route) :
+      `<div class="scale"><b style="left:0%"></b></div><div class="scale-labels">${LEVELS.map(l => `<span>${l}</span>`).join("")}</div><div class="small mono" style="margin-top:4px">position ${(A.frus / 3).toFixed(2)} → ${LEVELS[A.lv.indexOf(Math.max(...A.lv))]}</div>`
+    }</div>`).join("");
+    const jevMs = Math.round(80 + Math.random() * 60);
+    const json = `{\n  "is_urgent": ${A.urgent > .5},\n  "category": "${bestCat}",\n  "frustration": "${LEVELS[A.lv.indexOf(Math.max(...A.lv))]}",\n  "route_to": "${bestRoute}",\n  "reasoning": "The customer ${A.urgent > .5 ? "sounds urgent" : "does not sound urgent"} and the issue looks like ${bestCat}..."\n}`;
+    const llmMs = 1800 + json.length * 6;
+    llm.textContent = ""; $("#jevBar").style.width = "0"; $("#llmBar").style.width = "0"; $("#jevT").textContent = "…"; $("#llmT").textContent = "…";
+    $("#jevMeta").textContent = "";
+    const t0 = performance.now(), jevVis = reduced ? 50 : 450; // slowed down so the eye can see it
+    const tick = t => {
+      const el = t - t0;
+      $("#jevBar").style.width = Math.min(100, el / jevVis * 100) + "%";
+      if (el >= jevVis && !box.dataset.done) {
+        box.dataset.done = 1; $("#jevT").textContent = `~${jevMs} ms · 1 pass`;
+        $$(".jq", box).forEach(q => q.classList.add("on"));
+        requestAnimationFrame(() => { $$(".fill", box).forEach(f => f.style.width = f.dataset.w + "%"); const b = $(".scale b", box); if (b) b.style.left = (A.frus / 3 * 100) + "%"; });
+      }
+      const p = Math.min(1, el / (reduced ? 300 : llmMs));
+      $("#llmBar").style.width = p * 100 + "%";
+      llm.textContent = json.slice(0, Math.floor(json.length * p)) + (p < 1 ? "▍" : "");
+      $("#llmT").textContent = p < 1 ? `generating… ${Math.round(json.length * p / 4)} tokens` : `~${(llmMs / 1000).toFixed(1)} s · ${Math.round(json.length / 4)} tokens, then parse`;
+      if (p < 1) raf = requestAnimationFrame(tick);
+      else $("#jevMeta").textContent = `Jev: typed answers + probabilities. LLM: text you must parse and validate, with no calibrated confidence.`;
+    };
+    delete box.dataset.done; raf = requestAnimationFrame(tick);
+  }
+  $("#jevRun").addEventListener("click", run);
+  inp.addEventListener("keydown", e => { if (e.key === "Enter") run(); });
+  new IntersectionObserver((es, o) => { if (es[0].isIntersecting) { run(); o.disconnect(); } }, { threshold: .3 }).observe(box.closest(".widget"));
+})();
+
+/* ---------- CH10: calibration ---------- */
+(() => {
+  const svg = $("#calSvg"); let mode = "good";
+  const X = p => 60 + p * 420, Y = p => 260 - p * 230;
+  const DATA = {
+    good: [[.1, .12], [.2, .19], [.3, .31], [.4, .38], [.5, .52], [.6, .59], [.7, .71], [.8, .78], [.9, .91], [.97, .96]],
+    over: [[.1, .22], [.2, .3], [.3, .36], [.4, .42], [.5, .47], [.6, .52], [.7, .56], [.8, .6], [.9, .64], [.97, .68]],
+    under: [[.1, .02], [.2, .06], [.3, .15], [.4, .3], [.5, .5], [.6, .7], [.7, .85], [.8, .94], [.9, .98], [.97, 1]],
+  };
+  const TXT = {
+    good: "<b>Calibrated:</b> when the model says 0.9, it's right about 90% of the time. You can set thresholds you can trust. This is what RLCD training aims for.",
+    over: "<b>Overconfident:</b> it says 0.9 but is right only about 64% of the time. Its confidence scores can't be used as thresholds, and this is a common failure of models that just <i>say</i> a confidence number.",
+    under: "<b>Underconfident:</b> it hedges near 0.5 even when it's usually right, so you end up escalating cases that didn't need it.",
+  };
+  const draw = () => {
+    svg.innerHTML = "";
+    for (let v = 0; v <= 1.001; v += .25) {
+      svgEl("line", { x1: X(0), x2: X(1), y1: Y(v), y2: Y(v), stroke: C.line }, svg);
+      const a = svgEl("text", { x: X(0) - 8, y: Y(v) + 4, "text-anchor": "end", "font-size": 11, fill: C.muted }, svg); a.textContent = v.toFixed(2);
+      const b = svgEl("text", { x: X(v), y: 280, "text-anchor": "middle", "font-size": 11, fill: C.muted }, svg); b.textContent = v.toFixed(2);
+    }
+    const l1 = svgEl("text", { x: X(.5), y: 298, "text-anchor": "middle", "font-size": 11, "font-weight": 700, fill: C["ink-2"] }, svg); l1.textContent = "stated confidence";
+    const l2 = svgEl("text", { x: 14, y: Y(.5), "text-anchor": "middle", "font-size": 11, "font-weight": 700, fill: C["ink-2"], transform: `rotate(-90 14 ${Y(.5)})` }, svg); l2.textContent = "actually correct";
+    svgEl("line", { x1: X(0), y1: Y(0), x2: X(1), y2: Y(1), stroke: C.muted, "stroke-dasharray": "5 5", "stroke-width": 2 }, svg);
+    const pd = svgEl("text", { x: X(.78), y: Y(.86), "font-size": 11, "font-weight": 700, fill: C.muted, transform: `rotate(-29 ${X(.78)} ${Y(.86)})` }, svg); pd.textContent = "perfect calibration";
+    const col = mode === "good" ? C.c2 : mode === "over" ? C.c4 : C.c3, pts = DATA[mode];
+    const path = svgEl("path", { d: pts.map((p, i) => (i ? "L" : "M") + X(p[0]) + " " + Y(p[1])).join(""), fill: "none", stroke: col, "stroke-width": 3 }, svg);
+    const len = path.getTotalLength(); path.style.strokeDasharray = len; path.animate?.([{ strokeDashoffset: len }, { strokeDashoffset: 0 }], { duration: reduced ? 1 : 700, easing: "ease-out" });
+    pts.forEach((p, i) => { const c = svgEl("circle", { cx: X(p[0]), cy: Y(p[1]), r: 6, fill: col, stroke: C.surface, "stroke-width": 2 }, svg); c.animate?.([{ opacity: 0, transform: "scale(0)" }, { opacity: 1, transform: "scale(1)" }], { duration: 300, delay: i * 50, fill: "backwards" }); c.style.transformOrigin = `${X(p[0])}px ${Y(p[1])}px`; });
+    $("#calText").innerHTML = TXT[mode];
+  };
+  chipGroup(svg.closest(".widget"), "cal", m => { mode = m; draw(); });
+  draw(); document.addEventListener("themechange", draw);
 })();
 
 /* ---------- CH10: MoE ---------- */
