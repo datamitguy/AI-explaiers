@@ -1,6 +1,6 @@
 # AI, Explained, plus Product, Platform courses and The Book of Big Ideas
 
-Interactive, Brilliant-style courses, plus **The Book of Big Ideas**, an interactive book in fourteen parts. Each is a single self-contained HTML file with no build step:
+Interactive, Brilliant-style courses, plus **The Book of Big Ideas**, an interactive book in nineteen parts. Each is a single self-contained HTML file with no build step:
 
 | Page | Course |
 |---|---|
@@ -21,9 +21,14 @@ Interactive, Brilliant-style courses, plus **The Book of Big Ideas**, an interac
 | `data.html` | **Book of Big Ideas, Part 12: Numbers & data**: 28 ideas on describing data, probability and risk, samples and inference, and correlation vs causation, with 5 interactive tools |
 | `craft.html` | **Book of Big Ideas, Part 13: Craft: writing, career & design**: 33 ideas on writing and storytelling, career craft and design thinking, with a story builder and a "How might we" generator |
 | `world.html` | **Book of Big Ideas, Part 14: The planet & the rules**: 23 ideas on climate and energy and on everyday law (contracts, work, consumer rights, IP, privacy, wills, AI law), with a footprint comparison. Law cards are educational, not legal advice |
+| `life.html` | **Book of Big Ideas, Part 15: Life & medicine**: 20 ideas on biology basics and how medicine works, with inheritance, antibiotic resistance and herd immunity simulations. Educational, not medical advice |
+| `tech.html` | **Book of Big Ideas, Part 16: How technology works**: 20 ideas on computers, the internet, AI, security and privacy, with a binary explorer and an on-device password strength checker |
+| `geo.html` | **Book of Big Ideas, Part 17: Geography & geopolitics**: 20 ideas on why places differ and on trade, power and conflict, with a demographic transition model |
+| `arts.html` | **Book of Big Ideas, Part 18: Art, music & creativity**: 20 ideas on appreciating art, music and film and the science of creativity, with an interval player and an alternative-uses challenge |
+| `home.html` | **Book of Big Ideas, Part 19: Home: family & food**: 20 ideas on child development, parenting, ageing parents and food in practice, with a food label traffic-light checker |
 | `book.html` | **The Book of Big Ideas: contents**: all parts with sections and counts, reading progress across parts, reading paths by goal, a search index over every idea, and a list of topics coming next |
 
-A switcher in the top bar links the courses. All fourteen parts form The Book of Big Ideas; the "📖 Big Ideas" tab opens its contents page (book.html) and link to each other; related-card chips jump between parts, and old links to a card that moved (for example `theories.html#t-maslow`) redirect to its new page.
+A switcher in the top bar links the courses. All nineteen parts form The Book of Big Ideas; the "📖 Big Ideas" tab opens its contents page (book.html) and link to each other; related-card chips jump between parts, and old links to a card that moved (for example `theories.html#t-maslow`) redirect to its new page.
 
 ---
 
@@ -256,5 +261,15 @@ Guided paths cover social anxiety, confidence at work, friends as an adult, a st
 | **12 · Numbers & data** (`data.html`) | Describing data (mean vs median 🎮, spread, distributions, percentages, chart crimes 🎮, good charts, Anscombe's quartet); probability (expected value, Bayes and screening 🎮, regression to the mean, randomness, small samples, risk communication); inference (sampling, margin of error 🎮, p-values, effect sizes, p-hacking 🎮, replication, power); causation (confounding, RCTs, natural experiments, A/B tests, selection effects, Simpson's paradox, Goodhart) |
 | **13 · Craft** (`craft.html`) | Writing (plain language, structure, editing, And-But-Therefore 🎮, story shapes, show don't tell, hooks, emails, slides, voice, writing with AI); career (career capital, passion, T-shaped skills, networking, reputation, job search, negotiation, managing up, promotion, side bets, sustainable careers, careers in the AI era); design thinking (user research, How Might We 🎮, ideation, prototyping, usability, affordances, heuristics, accessibility, dark patterns) |
 | **14 · The planet & the rules** (`world.html`) | Climate and energy (greenhouse effect, evidence, carbon budgets, feedbacks, impacts, energy systems, clean-tech costs, nuclear, footprints 🎮, offsets, adaptation, the Kaya identity); law basics (legal systems, contracts, reading a contract, employment rights, IP, privacy, consumer rights, disputes, renting, wills, law and AI) |
+
+## Book of Big Ideas, Parts 15–19
+
+| Part | Sections (🎮 = interactive) |
+|---|---|
+| **15 · Life & medicine** (`life.html`) | Biology (cells, DNA, inheritance 🎮, epigenetics, evolution in practice 🎮, microbes, immunity 🎮, ageing, brain and body, CRISPR); medicine (how drugs are tested, risk, screening, and getting the most from healthcare) |
+| **16 · How technology works** (`tech.html`) | Computing (binary 🎮, the internet, the cloud, algorithms, AI); security and privacy (passwords 🎮, scams, privacy, staying safe online) |
+| **17 · Geography & geopolitics** (`geo.html`) | Geography (maps, population 🎮, cities, resources, development); geopolitics (trade, chokepoints, power, sanctions, deterrence, conflict, reading the news) |
+| **18 · Art, music & creativity** (`arts.html`) | Art and music (looking at art, movements, composition, colour, how music works 🎮, music and the brain, taste, stories, film, beauty); creativity (divergent thinking 🎮, myths, incubation, constraints, quantity, practice, creative block, play, AI) |
+| **19 · Home: family & food** (`home.html`) | Family (development, attachment, parenting styles, language, screens, children's sleep, discipline, teens, ageing parents, parenting with a chronic illness); food (labels 🎮, the plate, protein, fibre, salt, cooking, batch cooking, food safety, budget, myths) |
 
 Every Big Ideas page now links to the book contents plus the previous and next part (sidebar, part cards and footer), generated from one part registry in the build.
