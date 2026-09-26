@@ -1,6 +1,6 @@
 # AI, Explained, plus Product, Platform & Big Ideas courses
 
-Six interactive, Brilliant-style courses. Each is a single self-contained HTML file with no build step:
+Seven interactive, Brilliant-style courses. Each is a single self-contained HTML file with no build step:
 
 | Page | Course |
 |---|---|
@@ -9,9 +9,10 @@ Six interactive, Brilliant-style courses. Each is a single self-contained HTML f
 | `platform-management.html` | **Platform Management, First Principles**: 12 chapters |
 | `theories.html` | **Big Ideas, Part 1: Big theories**: 128 theories across 14 domains (science, quantum physics, strategy, life, the brain, self, systems, economics, leverage, culture, thinking tools), with 43 simulations |
 | `models.html` | **Big Ideas, Part 2: Mental models & toolkits**: 148 models and tools across 9 sections, with 39 simulations |
-| `society.html` | **Big Ideas, Part 3: Society, politics & the human mind**: 121 theories across 7 domains (psychology, sociology, political theories, power, economic schools, ethics, philosophy), with 23 simulations |
+| `society.html` | **Big Ideas, Part 3: Society, politics & the human mind**: 140 theories across 8 domains (psychology, sociology, political theories, power, theories of history, economic schools, ethics, philosophy), with 27 simulations |
+| `biases.html` | **Big Ideas, Part 4: The cognitive bias codex**: 200 biases in 8 sections, each with how to counter it and an evidence note, plus 6 interactive experiments |
 
-A switcher in the top bar links the courses. All three Big Ideas parts sit under "Theories" and link to each other; related-card chips jump between parts, and old links to a card that moved (for example `theories.html#t-maslow`) redirect to its new page.
+A switcher in the top bar links the courses. All four Big Ideas parts sit under "Theories" and link to each other; related-card chips jump between parts, and old links to a card that moved (for example `theories.html#t-maslow`) redirect to its new page.
 
 ---
 
@@ -136,6 +137,24 @@ The social sciences and humanities, split out of Part 1 to keep pages fast. Same
 | **Sociology: how societies work** | Conflict theory ("which lens?" sorter 🎮), functionalism, symbolic interactionism, Goffman's dramaturgy, anomie and strain, Weber, the social construction of reality, labelling theory, social capital, Bourdieu, the strength of weak ties 🎮, social mobility & the Great Gatsby curve 🎮, intersectionality, McDonaldization, risk society, the network society, the panopticon and surveillance, cultural hegemony, broken windows, the contact hypothesis, secularisation |
 | **Political theories & ideologies** | The left–right spectrum (two-axis questionnaire 🎮), liberalism, libertarianism, conservatism, socialism, communism, social democracy, anarchism, fascism, totalitarianism, nationalism, feminism, green politics, communitarianism, republicanism, Machiavelli, populism, theories of democracy, pluralism, the iron law of oligarchy, separation of powers, the median voter theorem (race to the middle 🎮), the Overton window |
 | **Power, politics & history** | Realism, power transition (Thucydides Trap 🎮), hegemonic stability, social contract, democratic peace, soft power, Great Man vs. forces |
+| **Theories of history** | Cyclical history, Ibn Khaldun's asabiyyah (dynasty cycle 🎮), Spengler & Toynbee, cliodynamics (secular cycles 🎮), Kondratiev waves, Strauss–Howe generations, progress & Whig history, historical materialism, the Annales school, geographic determinism, the Malthusian trap 🎮, collapse, path dependence (lock-in 🎮), contingency & counterfactuals, the Great Divergence, the Axial Age, world-systems theory, the clash of civilisations, Glubb's Fate of Empires, each with an honest evidence rating |
 | **Schools of economic thought** | Mercantilism, classical economics (Adam Smith), Marxian economics, the marginal revolution, Keynesian economics (spending multiplier 🎮), the Austrian school ("which school said it?" 🎮), monetarism (MV = PY 🎮), the Phillips curve 🎮, rational expectations, New Keynesian economics (Taylor rule 🎮), MMT, Minsky's financial instability hypothesis, supply-side economics (Laffer curve 🎮), public choice, institutional economics, the efficient market hypothesis, behavioural economics, Georgism, Sen's capability approach |
 | **Ethics: how should we live?** | Utilitarianism, deontology (Kant), virtue ethics, trolley problems 🎮, Rawls's veil of ignorance 🎮, care ethics, Mill's harm principle, Hume's is–ought gap, moral relativism vs. realism, Nozick's experience machine 🎮 |
 | **Existence, mind & knowledge** | Existentialism, absurdism (Camus), Nietzsche, Plato's cave, rationalism vs. empiricism, the problem of induction (the turkey 🎮), the mind–body problem, the hard problem of consciousness, the Chinese Room, free will, personal identity (Ship of Theseus 🎮), pragmatism, Wittgenstein, Buddhist philosophy, Taoism |
+
+## Big Ideas, Part 4: The cognitive bias codex (`biases.html`)
+
+200 cognitive biases, heuristics and fallacies, organised after Buster Benson's "cognitive bias codex" by the four problems they solve (too much information, not enough meaning, the need to act fast, what to remember). Each compact card explains the bias, why it happens, **how to counter it**, an example and an **evidence note** (some famous biases, such as the backfire effect or stereotype threat, are much weaker than first reported; some, like Berkson's or Simpson's paradox, are statistical fallacies rather than mental quirks). Cards with a full deep-dive elsewhere link to it.
+
+| Section | Examples (🎮 = interactive experiment) |
+|---|---|
+| **What grabs our attention** | Availability, illusory truth, mere exposure, negativity bias, anchoring, framing (the "Asian disease" problem 🎮), base rate neglect (the cab problem 🎮), inattentional blindness, empathy gap |
+| **Seeing what we already believe** | Confirmation bias, belief perseverance, backfire effect, motivated reasoning, the Barnum effect (personal reading 🎮), bias blind spot, naive realism, illusion of explanatory depth |
+| **Patterns, probability & statistics** | Clustering illusion, the gambler's fallacy 🎮, hot hand, conjunction fallacy (the Linda problem 🎮), scope insensitivity, prosecutor's fallacy, Berkson's and Simpson's paradoxes, narrative fallacy |
+| **Judging people & groups** | Fundamental attribution error, halo and horn effects, in-group bias, just-world hypothesis, curse of knowledge, spotlight effect, false consensus, identifiable victim effect |
+| **Overconfidence & the self** | Overconfidence and overprecision, illusory superiority, optimism bias, planning fallacy, illusion of control, self-serving bias, end-of-history illusion, impostor phenomenon |
+| **Decisions, risk & value** | Loss aversion, endowment effect, status quo and default bias, sunk cost, zero-risk bias, ambiguity aversion, hyperbolic discounting, mental accounting, choice overload, bikeshedding |
+| **Social influence & groups** | Bandwagon effect, groupthink, authority and automation bias, pluralistic ignorance, the Abilene paradox, foot-in-the-door, information cascades, normalisation of deviance |
+| **What we remember** | Hindsight bias, rosy retrospection, the misinformation effect, false memory, serial position effect (memory test 🎮), peak–end rule, the Google effect, testing and spacing effects |
+
+It ends with a "spot the bias" challenge, a reading list and a debiasing toolkit.
