@@ -1,6 +1,6 @@
 # AI, Explained, plus Product, Platform & Big Ideas courses
 
-Nine interactive, Brilliant-style courses. Each is a single self-contained HTML file with no build step:
+Ten interactive, Brilliant-style courses. Each is a single self-contained HTML file with no build step:
 
 | Page | Course |
 |---|---|
@@ -13,8 +13,9 @@ Nine interactive, Brilliant-style courses. Each is a single self-contained HTML 
 | `biases.html` | **Big Ideas, Part 4: The bias & fallacy codex**: 200 cognitive biases in 8 sections and 40 logical fallacies in 2 sections, each with how to counter it and an evidence note, plus 9 interactive experiments |
 | `lab.html` | **Big Ideas, Part 5: Communication & the Pattern Lab**: 21 first principles of communication, 22 negotiation theories, 21 persuasion and influence theories, 14 pattern-recognition models, 9 demos and the interactive **Meeting Pattern Lab** |
 | `leadership.html` | **Big Ideas, Part 6: Leadership, management & strategy**: 22 leadership, 22 management and 22 strategy theories (OKRs, Deming, Porter, VRIO, Rumelt, 7 Powers and more), with 9 simulations |
+| `health.html` | **Big Ideas, Part 7: Health & wellbeing**: 81 evidence-rated topics in 7 sections (foundations, immunity and axSpA, allergies, spine, fatigue and brain fog, mental health, evidence literacy), 7 interactive tools and a private daily **Health Pattern Lab** |
 
-A switcher in the top bar links the courses. All six Big Ideas parts sit under "Theories" and link to each other; related-card chips jump between parts, and old links to a card that moved (for example `theories.html#t-maslow`) redirect to its new page.
+A switcher in the top bar links the courses. All seven Big Ideas parts sit under "Theories" and link to each other; related-card chips jump between parts, and old links to a card that moved (for example `theories.html#t-maslow`) redirect to its new page.
 
 ---
 
@@ -184,3 +185,19 @@ Each fallacy card says when the same move is actually reasonable (for example, d
 | **Strategy** | What is strategy? (Porter), Porter's generic strategies (the value stick 🎮), the value chain, Porter's diamond and clusters, the resource-based view (run the VRIO test 🎮), core competencies, dynamic capabilities, good strategy/bad strategy (Rumelt), Playing to Win, 7 Powers, deliberate vs. emergent strategy, SWOT and PESTLE (and their limits), the experience curve 🎮, first-mover advantage, co-opetition and the value net, platforms and two-sided markets, strategy under uncertainty, scenario planning, transient advantage, simple rules, Sun Tzu and Clausewitz, and the strategy execution gap. Porter's five forces, moats, blue ocean and disruption are in Part 2 |
 
 Evidence ratings flag the popular-but-weak ideas (situational leadership, Goleman's styles, *Good to Great*, the Hawthorne effect, forced ranking) alongside the well-supported ones (goal-setting, structured hiring, Deming's system variation, basic management practices). The page ends with a quiz, a reading list and a manager's checklist. Old links to leadership cards on `lab.html` redirect here.
+
+## Big Ideas, Part 7: Health & wellbeing (`health.html`)
+
+An evidence-rated guide to body and mind, with extra depth on autoimmune disease (especially axial spondyloarthritis), allergies, posture and scoliosis, fatigue and brain fog. Cards use "What you can do" and "Evidence & caveats" headings, follow mainstream guidelines (ASAS-EULAR, ARIA, NICE, WHO, AASM), give no drug doses, and flag red-flag symptoms. **Educational, not medical advice.**
+
+| Section | Contents (🎮 = interactive) |
+|---|---|
+| **Foundations** | Sleep architecture, circadian rhythm, insomnia and CBT-I, sleep apnoea, activity guidelines, cardio fitness, strength training, sitting, protein, dietary patterns, ultra-processed food, alcohol, caffeine (bedtime caffeine calculator 🎮), weight and metabolic health, stress physiology, breathing, sunlight |
+| **Immunity, autoimmunity & axSpA** | Immune system basics, inflammation and CRP, autoimmunity, what axSpA is, the ASAS-EULAR treatment ladder, exercise as treatment, monitoring (BASDAI calculator 🎮), uveitis and other extra-musculoskeletal features, living well, flares |
+| **Allergies, gut & inflammation claims** | How allergy works, the hygiene and old-friends hypotheses, allergic rhinitis treatment, antihistamines and brain fog, allergen avoidance, immunotherapy, the gut microbiome, anti-inflammatory diets, vitamin D, omega-3 |
+| **Posture, back & spine** | Posture myths (and the axSpA exception), "your next posture", back pain and red flags, pain science, fear-avoidance, scoliosis, scoliosis exercise, ergonomics, core stability, thoracic mobility, "text neck", a daily mobility routine (3-minute desk reset 🎮) |
+| **Fatigue, brain fog & memory** | Fatigue in inflammatory disease, what to get checked, pacing (boom-and-bust vs pacing 🎮), brain fog, working memory, going blank under pressure, word-finding, an external brain, breaks, naps, exercise and cognition, sleep debt (the debt you can't feel 🎮) |
+| **Mental health & resilience** | Stress mindset, anxiety, depression, living with chronic illness, ACT, mindfulness, self-compassion, rumination, burnout, loneliness, expressive writing, the pain–sleep–mood cycle, getting help |
+| **Health evidence literacy** | Weighing evidence, relative vs absolute risk 🎮, supplements, self-experiments and regression to the mean (did the remedy work? 🎮), getting more from appointments, the nocebo effect, wellness myths |
+
+The hub has guided paths (living with axSpA; allergies and a foggy head; posture and scoliosis; tired all the time; forgetful and going blank; mind and chronic illness) and an urgent red-flags box. **The Health Pattern Lab** is a one-minute daily log (energy, pain, morning stiffness, brain fog, allergies, mood, stress, sleep, exercise, alcohol, mobility routine, late caffeine, weekly BASDAI, notes) with 60-day trends, correlations in your own data (hidden until there are 14+ data points, with causation caveats), and an editable one-page summary for appointments. Data stays in the browser; export/import as JSON.
