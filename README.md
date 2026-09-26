@@ -1,16 +1,17 @@
 # AI, Explained, plus Product, Platform & Big Ideas courses
 
-Five interactive, Brilliant-style courses. Each is a single self-contained HTML file with no build step:
+Six interactive, Brilliant-style courses. Each is a single self-contained HTML file with no build step:
 
 | Page | Course |
 |---|---|
 | `index.html` | **AI, Explained**: 19 chapters, from AI basics to Claude, agents and the frontier |
 | `product-management.html` | **Product Management, First Principles**: 8 chapters |
 | `platform-management.html` | **Platform Management, First Principles**: 12 chapters |
-| `theories.html` | **Big Ideas, Part 1**: 226 mind-expanding theories across 20 domains (including a quantum physics deep dive, string theory, philosophy, schools of economic thought, classic psychology and sociology), with 65 simulations |
+| `theories.html` | **Big Ideas, Part 1: Big theories**: 128 theories across 14 domains (science, quantum physics, strategy, life, the brain, self, systems, economics, leverage, culture, thinking tools), with 43 simulations |
 | `models.html` | **Big Ideas, Part 2: Mental models & toolkits**: 148 models and tools across 9 sections, with 39 simulations |
+| `society.html` | **Big Ideas, Part 3: Society, politics & the human mind**: 121 theories across 7 domains (psychology, sociology, political theories, power, economic schools, ethics, philosophy), with 23 simulations |
 
-A switcher in the top bar links the courses. Both Big Ideas parts sit under "Theories" and link to each other.
+A switcher in the top bar links the courses. All three Big Ideas parts sit under "Theories" and link to each other; related-card chips jump between parts, and old links to a card that moved (for example `theories.html#t-maslow`) redirect to its new page.
 
 ---
 
@@ -83,7 +84,7 @@ It ends with a filterable library of 26 books, papers and reports (2009–2026),
 
 It ends with a library of 23 sources (including Domain-Driven Design, the EU AI Act and the FCA Consumer Duty), including *Reshuffle* (2025), *Team Topologies* 2nd ed. (2025), *Platform Engineering* (2025), *Frictionless* (2025), *Platform Strategy* (2024), *The Cold Start Problem* (2021) and *Platform Revolution* (2016), plus foundational papers (Rochet & Tirole 2003; Eisenmann, Parker & Van Alstyne 2006).
 
-## Big Ideas: 62 theories that expand your mind (`theories.html`)
+## Big Ideas, Part 1: Big theories (`theories.html`)
 
 An interactive field guide to the theories that give you an edge today, covering the outer world (science, economics, power) and the inner game (brain, belief, leverage, mental models). A **theory map** at the top lets you search, filter by domain, pick a theory at random, and track which ones you've marked as understood (saved in your browser). Each theory card covers the core idea, *why it gives you an edge now*, an example, a common misconception, and links to related theories. Cards in the self-help-adjacent sections carry an **evidence rating**, from "very strong evidence" to "belief system, not science". You can deep-link to any card, for example `theories.html#t-bayes`.
 
@@ -98,19 +99,14 @@ An interactive field guide to the theories that give you an edge today, covering
 | **Mind & behaviour** | Dual-process theory (Cognitive Reflection Test 🎮), predictive processing, cognitive dissonance, attachment, theory of mind, global workspace, Hebbian learning |
 | **Brain, attention & focus** | Neuroplasticity & deliberate practice 🎮, dopamine loops 🎮, default mode network, attention residue 🎮, flow 🎮, deep work, cognitive load, spaced repetition 🎮, sleep & memory, Zeigarnik/Ovsiankina, habit formation 🎮 |
 | **Self-image, belief & wellbeing** | Psycho-Cybernetics, self-efficacy, growth mindset, Pygmalion effect, placebo, Neville Goddard's law of assumption (with what the evidence says), WOOP 🎮, hedonic treadmill 🎮, self-determination theory, locus of control, Stoic dichotomy of control, maximizers vs. satisficers, peak–end rule |
-| **Classic psychology** | Maslow's hierarchy (rate your needs 🎮), adult attachment styles, psychoanalysis, Jung, classical conditioning (Pavlov/Rescorla–Wagner 🎮), operant conditioning, Piaget, Vygotsky, Erikson, the Big Five (10-item TIPI test 🎮), social learning, Milgram (shock board 🎮), Asch (line-judgement test 🎮), the Stanford prison experiment, learned helplessness, positive psychology, CBT, humanistic psychology, IQ and g, multiple intelligences, emotional intelligence, the marshmallow test, Yerkes–Dodson 🎮, grief stages, Dunbar's number, terror management theory, each with an honest evidence rating |
 | **Systems & complexity** | Systems thinking (thermostat 🎮), small-world networks 🎮, emergence, power laws 🎮, tipping points (Granovetter 🎮), black swans |
 | **Economics & society** | Comparative advantage (Ricardo 🎮), tragedy of the commons & Ostrom 🎮, principal–agent, creative destruction, diffusion of innovations, transaction costs |
 | **Leverage, wealth & modern strategy** | Asymmetric bets 🎮, permissionless leverage 🎮, specific knowledge, compounding 🎮, escaping the default game, value maxing, owning your time 🎮, ideas to influence 🎮, Lindy effect, antifragility, Kelly criterion 🎮, ergodicity 🎮, Matthew effect, 1,000 true fans, luck surface area |
-| **Schools of economic thought** | Mercantilism, classical economics (Adam Smith), Marxian economics, the marginal revolution, Keynesian economics (spending multiplier 🎮), the Austrian school ("which school said it?" 🎮), monetarism (MV = PY 🎮), the Phillips curve 🎮, rational expectations, New Keynesian economics (Taylor rule 🎮), MMT, Minsky's financial instability hypothesis, supply-side economics (Laffer curve 🎮), public choice, institutional economics, the efficient market hypothesis, behavioural economics, Georgism, Sen's capability approach |
-| **Power, politics & history** | Realism, power transition (Thucydides Trap 🎮), hegemonic stability, social contract, democratic peace, soft power, Great Man vs. forces |
-| **Sociology: how societies work** | Conflict theory ("which lens?" sorter 🎮), functionalism, symbolic interactionism, Goffman's dramaturgy, anomie and strain, Weber, the social construction of reality, labelling theory, social capital, Bourdieu, the strength of weak ties 🎮, social mobility & the Great Gatsby curve 🎮, intersectionality, McDonaldization, risk society, the network society, the panopticon and surveillance, cultural hegemony, broken windows, the contact hypothesis, secularisation |
 | **Language, culture & knowledge** | Sapir–Whorf, universal grammar, speech acts, semiotics, memetics, Hofstede's cultural dimensions 🎮, falsifiability (Wason 2-4-6 🎮), paradigm shifts |
-| **Ethics: how should we live?** | Utilitarianism, deontology (Kant), virtue ethics, trolley problems 🎮, Rawls's veil of ignorance 🎮, care ethics, Mill's harm principle, Hume's is–ought gap, moral relativism vs. realism, Nozick's experience machine 🎮 |
-| **Existence, mind & knowledge** | Existentialism, absurdism (Camus), Nietzsche, Plato's cave, rationalism vs. empiricism, the problem of induction (the turkey 🎮), the mind–body problem, the hard problem of consciousness, the Chinese Room, free will, personal identity (Ship of Theseus 🎮), pragmatism, Wittgenstein, Buddhist philosophy, Taoism |
 | **Thinking tools & mental models** | First principles, inversion, second-order thinking, circle of competence, Occam's razor, Goodhart's law, Parkinson's law, Chesterton's fence, the map is not the territory, regret minimization, planning fallacy |
 
 It ends with an 18-question "which theory explains it?" challenge, a 57-book reading list, and a recap on how to think in models.
+
 
 ## Big Ideas, Part 2: Mental models & toolkits (`models.html`)
 
@@ -129,3 +125,17 @@ Practical models and untools-style frameworks for acting in the world. It uses t
 | **Product management models** | Kano model 🎮, crossing the chasm, the Hook model, AARRR pirate metrics 🎮, Lean Startup, product–market fit, HEART, MoSCoW, Business Model Canvas, Fogg behaviour model 🎮, Blue Ocean strategy, Shape Up, Wardley mapping, three horizons, product life cycle, the innovator's dilemma, the hype cycle, growth loops, product-led growth, aha moments, Van Westendorp pricing 🎮, the decoy effect 🎮, Porter's five forces, the Ansoff matrix, the BCG matrix, outcome-driven innovation, dual-track agile |
 
 An "11 laws of the universe" shortcut on the hub links to Parkinson, Hofstadter, Hanlon, Pareto, Peter, Hick, Goodhart, Dunning–Kruger, Occam, Chesterton and Brooks across both parts. It ends with a "which tool fits?" challenge, a filterable reading list and a Monday-morning toolkit recap.
+
+## Big Ideas, Part 3: Society, politics & the human mind (`society.html`)
+
+The social sciences and humanities, split out of Part 1 to keep pages fast. Same card format, evidence ratings, search, progress tracking and deep links. Every theory is presented at its strongest, then its critics and its record.
+
+| Domain | Theories (🎮 = interactive simulation) |
+|---|---|
+| **Classic psychology** | Maslow's hierarchy (rate your needs 🎮), adult attachment styles, psychoanalysis, Jung, classical conditioning (Pavlov/Rescorla–Wagner 🎮), operant conditioning, Piaget, Vygotsky, Erikson, the Big Five (10-item TIPI test 🎮), social learning, Milgram (shock board 🎮), Asch (line-judgement test 🎮), the Stanford prison experiment, learned helplessness, positive psychology, CBT, humanistic psychology, IQ and g, multiple intelligences, emotional intelligence, the marshmallow test, Yerkes–Dodson 🎮, grief stages, Dunbar's number, terror management theory, each with an honest evidence rating |
+| **Sociology: how societies work** | Conflict theory ("which lens?" sorter 🎮), functionalism, symbolic interactionism, Goffman's dramaturgy, anomie and strain, Weber, the social construction of reality, labelling theory, social capital, Bourdieu, the strength of weak ties 🎮, social mobility & the Great Gatsby curve 🎮, intersectionality, McDonaldization, risk society, the network society, the panopticon and surveillance, cultural hegemony, broken windows, the contact hypothesis, secularisation |
+| **Political theories & ideologies** | The left–right spectrum (two-axis questionnaire 🎮), liberalism, libertarianism, conservatism, socialism, communism, social democracy, anarchism, fascism, totalitarianism, nationalism, feminism, green politics, communitarianism, republicanism, Machiavelli, populism, theories of democracy, pluralism, the iron law of oligarchy, separation of powers, the median voter theorem (race to the middle 🎮), the Overton window |
+| **Power, politics & history** | Realism, power transition (Thucydides Trap 🎮), hegemonic stability, social contract, democratic peace, soft power, Great Man vs. forces |
+| **Schools of economic thought** | Mercantilism, classical economics (Adam Smith), Marxian economics, the marginal revolution, Keynesian economics (spending multiplier 🎮), the Austrian school ("which school said it?" 🎮), monetarism (MV = PY 🎮), the Phillips curve 🎮, rational expectations, New Keynesian economics (Taylor rule 🎮), MMT, Minsky's financial instability hypothesis, supply-side economics (Laffer curve 🎮), public choice, institutional economics, the efficient market hypothesis, behavioural economics, Georgism, Sen's capability approach |
+| **Ethics: how should we live?** | Utilitarianism, deontology (Kant), virtue ethics, trolley problems 🎮, Rawls's veil of ignorance 🎮, care ethics, Mill's harm principle, Hume's is–ought gap, moral relativism vs. realism, Nozick's experience machine 🎮 |
+| **Existence, mind & knowledge** | Existentialism, absurdism (Camus), Nietzsche, Plato's cave, rationalism vs. empiricism, the problem of induction (the turkey 🎮), the mind–body problem, the hard problem of consciousness, the Chinese Room, free will, personal identity (Ship of Theseus 🎮), pragmatism, Wittgenstein, Buddhist philosophy, Taoism |
