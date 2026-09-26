@@ -1,6 +1,6 @@
 # AI, Explained, plus Product, Platform courses and The Book of Big Ideas
 
-Interactive, Brilliant-style courses, plus **The Book of Big Ideas**, an interactive book in nineteen parts. Each is a single self-contained HTML file with no build step:
+Interactive, Brilliant-style courses, plus **The Book of Big Ideas**, an interactive book in twenty parts. Each is a single self-contained HTML file with no build step:
 
 | Page | Course |
 |---|---|
@@ -26,9 +26,10 @@ Interactive, Brilliant-style courses, plus **The Book of Big Ideas**, an interac
 | `geo.html` | **Book of Big Ideas, Part 17: Geography & geopolitics**: 20 ideas on why places differ and on trade, power and conflict, with a demographic transition model |
 | `arts.html` | **Book of Big Ideas, Part 18: Art, music & creativity**: 20 ideas on appreciating art, music and film and the science of creativity, with an interval player and an alternative-uses challenge |
 | `home.html` | **Book of Big Ideas, Part 19: Home: family & food**: 20 ideas on child development, parenting, ageing parents and food in practice, with a food label traffic-light checker |
+| `yoga.html` | **Book of Big Ideas, Part 20: Yoga**: 63 ideas on yoga's roots and philosophy, styles, poses and sequencing, breath and meditation, the health evidence and practising safely, with a sun salutation guide, sequence checker, pranayama pacer, style finder, safety adapter and the **Yoga Lab** (session builder, timer and log). Educational, not medical advice |
 | `book.html` | **The Book of Big Ideas: contents**: all parts with sections and counts, reading progress across parts, reading paths by goal, a search index over every idea, and a list of topics coming next |
 
-A switcher in the top bar links the courses. All nineteen parts form The Book of Big Ideas; the "📖 Big Ideas" tab opens its contents page (book.html) and link to each other; related-card chips jump between parts, and old links to a card that moved (for example `theories.html#t-maslow`) redirect to its new page.
+A switcher in the top bar links the courses. All twenty parts form The Book of Big Ideas; the "📖 Big Ideas" tab opens its contents page (book.html) and link to each other; related-card chips jump between parts, and old links to a card that moved (for example `theories.html#t-maslow`) redirect to its new page.
 
 ---
 
@@ -271,5 +272,18 @@ Guided paths cover social anxiety, confidence at work, friends as an adult, a st
 | **17 · Geography & geopolitics** (`geo.html`) | Geography (maps, population 🎮, cities, resources, development); geopolitics (trade, chokepoints, power, sanctions, deterrence, conflict, reading the news) |
 | **18 · Art, music & creativity** (`arts.html`) | Art and music (looking at art, movements, composition, colour, how music works 🎮, music and the brain, taste, stories, film, beauty); creativity (divergent thinking 🎮, myths, incubation, constraints, quantity, practice, creative block, play, AI) |
 | **19 · Home: family & food** (`home.html`) | Family (development, attachment, parenting styles, language, screens, children's sleep, discipline, teens, ageing parents, parenting with a chronic illness); food (labels 🎮, the plate, protein, fibre, salt, cooking, batch cooking, food safety, budget, myths) |
+
+## Book of Big Ideas, Part 20: Yoga
+
+| Section | Ideas (🎮 = interactive) |
+|---|---|
+| Roots & philosophy | What yoga is, history, the Yoga Sutras, the eight limbs, yamas, niyamas, the Bhagavad Gita, hatha texts, modern postural yoga, practising respectfully |
+| Styles | Hatha, vinyasa, Ashtanga, Iyengar, yin, restorative, hot, Kundalini, chair and therapeutic yoga, choosing a class 🎮 |
+| Poses & sequencing | Pose families 🎮, sun salutation 🎮, standing, balance, forward bends, backbends, twists, hip openers, inversions, savasana, alignment myths, props |
+| Breath & mind | Pranayama, ujjayi, alternate nostril, slow breathing 🎮, forceful breathing cautions, humming breath, yoga nidra, meditation, mantra, body awareness |
+| Health | The evidence, back pain, mental health, sleep, balance, heart, axSpA, scoliosis, arthritis, fatigue, fitness |
+| Safety | Injuries, adapting for conditions 🎮, the neck, osteoporosis, hypermobility, pregnancy, myths, teachers and consent, home practice, habit |
+
+The **Yoga Lab** builds a session from a goal (morning mobility, axSpA spine & chest, back-friendly, desk break, balance, wind-down, flare day), a length and an intensity. It swaps or drops poses for 11 conditions (including axSpA, a fused neck, osteoporosis, scoliosis, high blood pressure/glaucoma, pregnancy and hypermobility) and runs a timed player with optional bell and spoken cues. It also has a pose library, saved sessions and a log of stiffness before and after each session. Data stays in the browser.
 
 Every Big Ideas page now links to the book contents plus the previous and next part (sidebar, part cards and footer), generated from one part registry in the build.
