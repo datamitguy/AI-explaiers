@@ -1,6 +1,6 @@
 # AI, Explained, plus Product, Platform courses and The Book of Big Ideas
 
-Interactive, Brilliant-style courses, plus **The Book of Big Ideas**, an interactive book in nine parts. Each is a single self-contained HTML file with no build step:
+Interactive, Brilliant-style courses, plus **The Book of Big Ideas**, an interactive book in ten parts. Each is a single self-contained HTML file with no build step:
 
 | Page | Course |
 |---|---|
@@ -16,9 +16,10 @@ Interactive, Brilliant-style courses, plus **The Book of Big Ideas**, an interac
 | `health.html` | **Book of Big Ideas, Part 7: Health & wellbeing**: 81 evidence-rated topics in 7 sections (foundations, immunity and axSpA, allergies, spine, fatigue and brain fog, mental health, evidence literacy), 7 interactive tools and a private daily **Health Pattern Lab** |
 | `people.html` | **Book of Book of Big Ideas, Part 8: Relationships & social life**: 56 evidence-rated ideas in 5 sections (love, friendship, social anxiety and confidence, emotions, boundaries and family), with 6 interactive tools |
 | `self.html` | **Book of Big Ideas, Part 9: Attention, calm & self-help**: 54 evidence-rated ideas in 5 sections (attention and focus; calm, stillness and equanimity; habits and self-change; meaning, values and inner life; reading self-help critically), 6 interactive tools and a daily **Calm & Focus Lab** |
+| `learn.html` | **Book of Big Ideas, Part 10: Learning & memory**: 51 evidence-rated ideas in 5 sections (how memory works, study techniques, memory techniques, skill and expertise, everyday memory), 6 interactive tools and a spaced-repetition **Memory Lab** |
 | `book.html` | **The Book of Big Ideas: contents**: all parts with sections and counts, reading progress across parts, reading paths by goal, a search index over every idea, and a list of topics coming next |
 
-A switcher in the top bar links the courses. All nine parts form The Book of Big Ideas; the "📖 Big Ideas" tab opens its contents page (book.html) and link to each other; related-card chips jump between parts, and old links to a card that moved (for example `theories.html#t-maslow`) redirect to its new page.
+A switcher in the top bar links the courses. All ten parts form The Book of Big Ideas; the "📖 Big Ideas" tab opens its contents page (book.html) and link to each other; related-card chips jump between parts, and old links to a card that moved (for example `theories.html#t-maslow`) redirect to its new page.
 
 ---
 
@@ -230,3 +231,15 @@ Guided paths cover social anxiety, confidence at work, friends as an adult, a st
 | **Reading self-help critically** | How to evaluate a claim (claim checker 🎮), bibliotherapy (what works), positive thinking vs mental contrasting, the law of attraction, toxic positivity, grit, power posing, the 10,000-hour rule, morning routines |
 
 **The Calm & Focus Lab** has timed focus sessions (one task, a distraction notepad, a focus rating and weekly totals) and a daily practice tracker (14-day grid, streaks, "never miss twice" nudges). Data stays in the browser.
+
+## Book of Big Ideas, Part 10: Learning & memory (`learn.html`)
+
+| Section | Contents (🎮 = interactive) |
+|---|---|
+| **How memory works** | Encoding, storage and retrieval, models of memory, the forgetting curve (review planner 🎮), consolidation and sleep, reconstructive memory, schemas and prior knowledge, emotion and flashbulb memories, context-dependent memory, desirable difficulties, learning myths, memory and ageing |
+| **Study techniques that work** | Dunlosky's ranking (technique sorter 🎮), retrieval practice (reread vs test 🎮), spacing, interleaving, elaboration and self-explanation, dual coding, concrete examples, the Feynman technique (plain-English checker 🎮), fluency illusions, pretesting, note-taking |
+| **Memory techniques** | Memory palace (trainer 🎮), peg systems, chunking (digit span test 🎮), acronyms and acrostics, remembering names, the keyword method, the story method, the major system, memory athletes |
+| **Skill & expertise** | Deliberate practice, feedback (when it backfires), stages of skill, transfer and brain training, metacognition, ultralearning, learning by teaching, curiosity, motivation, plateaus, learning with AI |
+| **Memory in everyday life** | Remembering to do things, misplacing things, remembering meetings, reading to remember, memory with brain fog, personal knowledge management, stress and memory, learning languages, lifelong learning and cognitive reserve |
+
+**The Memory Lab** is a spaced-repetition flashcard system (Leitner boxes with gaps of 1, 3, 7, 16, 35 and 80 days): add cards one at a time or in bulk ("question | answer" per line), review with recall-then-rate (Again, Hard, Good, Easy), and track due cards, boxes and a review streak. It includes a sample deck on learning science; data stays in the browser with export/import.
