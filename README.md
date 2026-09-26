@@ -1,6 +1,6 @@
 # AI, Explained, plus Product, Platform courses and The Book of Big Ideas
 
-Interactive, Brilliant-style courses, plus **The Book of Big Ideas**, an interactive book in ten parts. Each is a single self-contained HTML file with no build step:
+Interactive, Brilliant-style courses, plus **The Book of Big Ideas**, an interactive book in fourteen parts. Each is a single self-contained HTML file with no build step:
 
 | Page | Course |
 |---|---|
@@ -17,9 +17,13 @@ Interactive, Brilliant-style courses, plus **The Book of Big Ideas**, an interac
 | `people.html` | **Book of Book of Big Ideas, Part 8: Relationships & social life**: 56 evidence-rated ideas in 5 sections (love, friendship, social anxiety and confidence, emotions, boundaries and family), with 6 interactive tools |
 | `self.html` | **Book of Big Ideas, Part 9: Attention, calm & self-help**: 54 evidence-rated ideas in 5 sections (attention and focus; calm, stillness and equanimity; habits and self-change; meaning, values and inner life; reading self-help critically), 6 interactive tools and a daily **Calm & Focus Lab** |
 | `learn.html` | **Book of Big Ideas, Part 10: Learning & memory**: 51 evidence-rated ideas in 5 sections (how memory works, study techniques, memory techniques, skill and expertise, everyday memory), 6 interactive tools and a spaced-repetition **Memory Lab** |
+| `money.html` | **Book of Big Ideas, Part 11: Money**: 45 ideas on money basics, investing, retirement, protection and money psychology, 4 calculators and a private **Money Lab** (budget, net worth, goals). Educational, not financial advice |
+| `data.html` | **Book of Big Ideas, Part 12: Numbers & data**: 28 ideas on describing data, probability and risk, samples and inference, and correlation vs causation, with 5 interactive tools |
+| `craft.html` | **Book of Big Ideas, Part 13: Craft: writing, career & design**: 33 ideas on writing and storytelling, career craft and design thinking, with a story builder and a "How might we" generator |
+| `world.html` | **Book of Big Ideas, Part 14: The planet & the rules**: 23 ideas on climate and energy and on everyday law (contracts, work, consumer rights, IP, privacy, wills, AI law), with a footprint comparison. Law cards are educational, not legal advice |
 | `book.html` | **The Book of Big Ideas: contents**: all parts with sections and counts, reading progress across parts, reading paths by goal, a search index over every idea, and a list of topics coming next |
 
-A switcher in the top bar links the courses. All ten parts form The Book of Big Ideas; the "📖 Big Ideas" tab opens its contents page (book.html) and link to each other; related-card chips jump between parts, and old links to a card that moved (for example `theories.html#t-maslow`) redirect to its new page.
+A switcher in the top bar links the courses. All fourteen parts form The Book of Big Ideas; the "📖 Big Ideas" tab opens its contents page (book.html) and link to each other; related-card chips jump between parts, and old links to a card that moved (for example `theories.html#t-maslow`) redirect to its new page.
 
 ---
 
@@ -243,3 +247,14 @@ Guided paths cover social anxiety, confidence at work, friends as an adult, a st
 | **Memory in everyday life** | Remembering to do things, misplacing things, remembering meetings, reading to remember, memory with brain fog, personal knowledge management, stress and memory, learning languages, lifelong learning and cognitive reserve |
 
 **The Memory Lab** is a spaced-repetition flashcard system (Leitner boxes with gaps of 1, 3, 7, 16, 35 and 80 days): add cards one at a time or in bulk ("question | answer" per line), review with recall-then-rate (Again, Hard, Good, Easy), and track due cards, boxes and a review streak. It includes a sample deck on learning science; data stays in the browser with export/import.
+
+## Book of Big Ideas, Parts 11–14
+
+| Part | Sections (🎮 = interactive) |
+|---|---|
+| **11 · Money** (`money.html`) | Money foundations (budgeting, emergency funds, debt payoff 🎮, credit cards, credit scores, APR, net worth, lifestyle creep, automation, tax brackets); investing (simple portfolios, asset allocation, risk, growth and fees 🎮, lump sum vs averaging, market timing, rebalancing, the behaviour gap, bonds, crypto, rent vs buy 🎮); retirement (pensions, tax-advantaged accounts, the 4% rule 🎮, FIRE, annuities, sequence risk, longevity, state pensions); protection (insurance, income protection, life and health cover, scams, wills, money with a chronic illness); money psychology. Plus the **Money Lab**: budget vs 50/30/20, emergency fund target, net worth snapshots, goal timelines |
+| **12 · Numbers & data** (`data.html`) | Describing data (mean vs median 🎮, spread, distributions, percentages, chart crimes 🎮, good charts, Anscombe's quartet); probability (expected value, Bayes and screening 🎮, regression to the mean, randomness, small samples, risk communication); inference (sampling, margin of error 🎮, p-values, effect sizes, p-hacking 🎮, replication, power); causation (confounding, RCTs, natural experiments, A/B tests, selection effects, Simpson's paradox, Goodhart) |
+| **13 · Craft** (`craft.html`) | Writing (plain language, structure, editing, And-But-Therefore 🎮, story shapes, show don't tell, hooks, emails, slides, voice, writing with AI); career (career capital, passion, T-shaped skills, networking, reputation, job search, negotiation, managing up, promotion, side bets, sustainable careers, careers in the AI era); design thinking (user research, How Might We 🎮, ideation, prototyping, usability, affordances, heuristics, accessibility, dark patterns) |
+| **14 · The planet & the rules** (`world.html`) | Climate and energy (greenhouse effect, evidence, carbon budgets, feedbacks, impacts, energy systems, clean-tech costs, nuclear, footprints 🎮, offsets, adaptation, the Kaya identity); law basics (legal systems, contracts, reading a contract, employment rights, IP, privacy, consumer rights, disputes, renting, wills, law and AI) |
+
+Every Big Ideas page now links to the book contents plus the previous and next part (sidebar, part cards and footer), generated from one part registry in the build.
