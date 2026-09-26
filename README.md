@@ -1,6 +1,6 @@
 # AI, Explained, plus Product, Platform & Big Ideas courses
 
-Seven interactive, Brilliant-style courses. Each is a single self-contained HTML file with no build step:
+Eight interactive, Brilliant-style courses. Each is a single self-contained HTML file with no build step:
 
 | Page | Course |
 |---|---|
@@ -10,9 +10,10 @@ Seven interactive, Brilliant-style courses. Each is a single self-contained HTML
 | `theories.html` | **Big Ideas, Part 1: Big theories**: 128 theories across 14 domains (science, quantum physics, strategy, life, the brain, self, systems, economics, leverage, culture, thinking tools), with 43 simulations |
 | `models.html` | **Big Ideas, Part 2: Mental models & toolkits**: 148 models and tools across 9 sections, with 39 simulations |
 | `society.html` | **Big Ideas, Part 3: Society, politics & the human mind**: 140 theories across 8 domains (psychology, sociology, political theories, power, theories of history, economic schools, ethics, philosophy), with 27 simulations |
-| `biases.html` | **Big Ideas, Part 4: The cognitive bias codex**: 200 biases in 8 sections, each with how to counter it and an evidence note, plus 6 interactive experiments |
+| `biases.html` | **Big Ideas, Part 4: The bias & fallacy codex**: 200 cognitive biases in 8 sections and 40 logical fallacies in 2 sections, each with how to counter it and an evidence note, plus 9 interactive experiments |
+| `lab.html` | **Big Ideas, Part 5: Communication & the Pattern Lab**: 21 first principles of communication, 14 pattern-recognition models, 3 demos and the interactive **Meeting Pattern Lab** |
 
-A switcher in the top bar links the courses. All four Big Ideas parts sit under "Theories" and link to each other; related-card chips jump between parts, and old links to a card that moved (for example `theories.html#t-maslow`) redirect to its new page.
+A switcher in the top bar links the courses. All five Big Ideas parts sit under "Theories" and link to each other; related-card chips jump between parts, and old links to a card that moved (for example `theories.html#t-maslow`) redirect to its new page.
 
 ---
 
@@ -142,7 +143,7 @@ The social sciences and humanities, split out of Part 1 to keep pages fast. Same
 | **Ethics: how should we live?** | Utilitarianism, deontology (Kant), virtue ethics, trolley problems 🎮, Rawls's veil of ignorance 🎮, care ethics, Mill's harm principle, Hume's is–ought gap, moral relativism vs. realism, Nozick's experience machine 🎮 |
 | **Existence, mind & knowledge** | Existentialism, absurdism (Camus), Nietzsche, Plato's cave, rationalism vs. empiricism, the problem of induction (the turkey 🎮), the mind–body problem, the hard problem of consciousness, the Chinese Room, free will, personal identity (Ship of Theseus 🎮), pragmatism, Wittgenstein, Buddhist philosophy, Taoism |
 
-## Big Ideas, Part 4: The cognitive bias codex (`biases.html`)
+## Big Ideas, Part 4: The bias & fallacy codex (`biases.html`)
 
 200 cognitive biases, heuristics and fallacies, organised after Buster Benson's "cognitive bias codex" by the four problems they solve (too much information, not enough meaning, the need to act fast, what to remember). Each compact card explains the bias, why it happens, **how to counter it**, an example and an **evidence note** (some famous biases, such as the backfire effect or stereotype threat, are much weaker than first reported; some, like Berkson's or Simpson's paradox, are statistical fallacies rather than mental quirks). Cards with a full deep-dive elsewhere link to it.
 
@@ -157,4 +158,16 @@ The social sciences and humanities, split out of Part 1 to keep pages fast. Same
 | **Social influence & groups** | Bandwagon effect, groupthink, authority and automation bias, pluralistic ignorance, the Abilene paradox, foot-in-the-door, information cascades, normalisation of deviance |
 | **What we remember** | Hindsight bias, rosy retrospection, the misinformation effect, false memory, serial position effect (memory test 🎮), peak–end rule, the Google effect, testing and spacing effects |
 
-It ends with a "spot the bias" challenge, a reading list and a debiasing toolkit.
+| **Fallacies of relevance** | Ad hominem (spot the fallacy 🎮), tu quoque and whataboutism, straw man, red herring, misplaced appeal to authority, appeals to popularity, emotion, fear, nature, tradition and novelty, argument from ignorance, genetic fallacy, poisoning the well, loaded question, shifting the burden of proof, Gish gallop, motte-and-bailey, the fallacy fallacy |
+| **Fallacies of structure, cause & evidence** | Affirming the consequent (valid or invalid? 🎮), denying the antecedent, undistributed middle, circular reasoning, false dilemma, slippery slope, post hoc, correlation vs. causation (spurious correlations 🎮), hasty generalisation, cherry-picking, composition and division, equivocation, no true Scotsman, special pleading, moving the goalposts, argument to moderation, false equivalence, the nirvana fallacy, the ecological fallacy |
+
+Each fallacy card says when the same move is actually reasonable (for example, deferring to genuine experts, or a slippery slope with a real mechanism). The page ends with a "spot the bias" challenge, a reading list and a debiasing toolkit.
+
+## Big Ideas, Part 5: Communication & the Pattern Lab (`lab.html`)
+
+| Section | Contents (🎮 = interactive) |
+|---|---|
+| **First principles of communication** | Communication as a noisy channel 🎮, start from the audience, bottom line up front, commander's intent, Grice's maxims 🎮, "one cannot not communicate", the four-sides model, the 7-38-55 myth, active listening, the Johari window, psychological safety, Nonviolent Communication, crucial conversations, storytelling, signal vs. noise, narrative memos vs. slides, the medium is the message, read-back and teach-back, the rule of three, asking good questions, feedback that lands |
+| **Pattern recognition & reading people** | The Sherlock Holmes method, abductive reasoning, recognition-primed decisions, when to trust intuition, chunking, thin slicing, informal networks, pre-wiring and nemawashi, meeting dynamics (HiPPOs, anchors, hidden information), base rates for people, forecasting and calibration 🎮, field notes, emotional contagion, and the dark side: false patterns |
+
+**The Meeting Pattern Lab** turns Holmes-style observation into a habit: record the people in your meetings (what persuades them, what they push back on), log each meeting (who objected, who supported, who stayed quiet, what won the room), and the Lab builds each person's patterns: an influence score, an objection heat map by topic and which tactics work. Before your next meeting, describe the proposal and the Lab predicts who is likely to object, the order to pre-wire people in and the chance of approval. Save the prediction, record what happened, and a scorecard (Brier score, objector hit rate) shows whether your read of the room is actually improving. It comes with a fictional sample team, three Sherlock-style practice cases, and JSON export/import. All data stays in your browser (localStorage); nothing is sent anywhere.
