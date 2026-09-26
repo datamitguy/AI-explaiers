@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Book of Big Ideas</title>
+<meta name="description" content="An interactive book of 937 big ideas in 8 parts: theories, mental models, society, biases, communication, leadership and strategy, health, and relationships, with honest evidence ratings and simulations.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#faf9f6; --surface:#ffffff; --surface-2:#f3f2ed; --surface-3:#e9e7df;
+  --ink:#16161d; --ink-2:#4a4a57; --muted:#6b6b78; --line:#e4e2da;
+  --c1:#5b5bf0; --c1-d:#3f3fc4; --c1-soft:#ececfe;
+  --c2:#10a574; --c2-d:#0b7d58; --c2-soft:#e2f6ee;
+  --c3:#f09a0b; --c3-soft:#fdf1dc;
+  --c4:#e8466a; --c4-soft:#fde6eb;
+  --c5:#0e98d6; --c5-soft:#e0f2fb;
+  --c6:#9b4ff0; --c6-soft:#f1e7fd;
+  --claude:#d97757; --claude-soft:#fbeae3;
+  --c2t:#0a7a56; --c3t:#9a5a00; --c4t:#c42a4f; --c5t:#0a6f9e; --c6t:#8338e0; --claudet:#b0502f; --c1-btn:#5b5bf0;
+  --shadow:0 1px 2px rgba(20,20,40,.04),0 10px 30px rgba(20,20,40,.06);
+  --radius:20px;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0e0e13; --surface:#16161e; --surface-2:#1e1e28; --surface-3:#282834;
+    --ink:#ececf2; --ink-2:#b6b6c4; --muted:#9090a2; --line:#2a2a37;
+    --c1:#8484ff; --c1-d:#5d5de0; --c1-soft:#23234a;
+    --c2:#2fd09b; --c2-d:#1a9e72; --c2-soft:#133329;
+    --c3:#ffb640; --c3-soft:#3a2c12;
+    --c4:#ff6b8b; --c4-soft:#3d1a24;
+    --c5:#3dbdf5; --c5-soft:#11303f;
+    --c6:#b98aff; --c6-soft:#2d1f45;
+    --claude:#e8906f; --claude-soft:#3a241c;
+    --c2t:var(--c2); --c3t:var(--c3); --c4t:var(--c4); --c5t:var(--c5); --c6t:var(--c6); --claudet:var(--claude); --c1-btn:#5d5de0;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 30px rgba(0,0,0,.35);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0e0e13; --surface:#16161e; --surface-2:#1e1e28; --surface-3:#282834;
+  --ink:#ececf2; --ink-2:#b6b6c4; --muted:#9090a2; --line:#2a2a37;
+  --c1:#8484ff; --c1-d:#5d5de0; --c1-soft:#23234a;
+  --c2:#2fd09b; --c2-d:#1a9e72; --c2-soft:#133329;
+  --c3:#ffb640; --c3-soft:#3a2c12;
+  --c4:#ff6b8b; --c4-soft:#3d1a24;
+  --c5:#3dbdf5; --c5-soft:#11303f;
+  --c6:#b98aff; --c6-soft:#2d1f45;
+  --claude:#e8906f; --claude-soft:#3a241c;
+    --c2t:var(--c2); --c3t:var(--c3); --c4t:var(--c4); --c5t:var(--c5); --c6t:var(--c6); --claudet:var(--claude); --c1-btn:#5d5de0;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 30px rgba(0,0,0,.35);
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif;font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3,h4{font-family:"Space Grotesk",Inter,sans-serif;line-height:1.15;letter-spacing:-.02em;margin:0}
+p{margin:0 0 1em}
+a{color:var(--c1)}
+code,.mono{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:.88em}
+button{font:inherit;color:inherit}
+svg text{font-family:Inter,sans-serif}
+
+/* ---------- top bar ---------- */
+.topbar{position:fixed;inset:0 0 auto 0;height:60px;z-index:50;display:flex;align-items:center;gap:14px;padding:0 18px;background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:10px;font-family:"Space Grotesk",Inter,system-ui,sans-serif;font-weight:700;font-size:1.05rem;text-decoration:none;color:var(--ink)}
+.brand-mark{width:30px;height:30px;border-radius:9px;background:conic-gradient(from 200deg,var(--c1),var(--c6),var(--c4),var(--c3),var(--c2),var(--c5),var(--c1));display:grid;place-items:center;color:#fff;font-size:.8rem}
+.progress{position:absolute;left:0;bottom:-1px;height:3px;width:0;background:linear-gradient(90deg,var(--c1),var(--c6),var(--c4));transition:width .1s linear}
+.top-actions{margin-left:auto;display:flex;gap:8px}
+.icon-btn{width:38px;height:38px;border-radius:12px;border:1px solid var(--line);background:var(--surface);display:grid;place-items:center;cursor:pointer}
+.icon-btn:hover{border-color:var(--c1)}
+#menuBtn{display:none}
+
+/* ---------- sidebar ---------- */
+.sidebar{position:fixed;top:60px;left:0;bottom:0;width:270px;padding:22px 14px;overflow:auto;border-right:1px solid var(--line);background:var(--bg);z-index:40}
+.sidebar h4{font-family:Inter,system-ui,sans-serif;font-size:.7rem;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin:0 10px 10px}
+.sidebar a{display:flex;align-items:center;gap:10px;padding:8px 10px;border-radius:12px;color:var(--ink-2);text-decoration:none;font-size:.9rem;font-weight:500;line-height:1.3}
+.sidebar a .num{flex:none;min-width:26px;padding:0 4px;height:26px;border-radius:8px;display:grid;place-items:center;font-size:.75rem;font-weight:700;background:var(--surface-2);color:var(--muted);transition:.25s}
+.sidebar a:hover{background:var(--surface-2)}
+.sidebar a.active{color:var(--ink);background:var(--surface)}
+.sidebar a.active .num{background:var(--c1);color:#fff}
+.sidebar a.done .num{background:var(--c2-soft);color:var(--c2t)}
+main{margin-left:270px;padding-top:60px}
+@media (max-width:1100px){
+  body.menu-open::after{content:"";position:fixed;inset:60px 0 0 0;background:rgba(0,0,0,.35);z-index:39}
+  .sidebar{transform:translateX(-100%);transition:transform .3s;box-shadow:var(--shadow)}
+  .sidebar.open{transform:none}
+  main{margin-left:0}
+  #menuBtn{display:grid}
+}
+
+/* ---------- layout ---------- */
+.wrap{max-width:780px;margin:0 auto;padding:0 20px}
+.wide{max-width:980px;margin-left:auto;margin-right:auto}
+.chapter{padding:90px 0 40px;border-top:1px solid var(--line)}
+.ch-head{display:flex;flex-direction:column;gap:14px;margin-bottom:34px}
+.ch-tag{display:inline-flex;align-items:center;gap:8px;align-self:flex-start;font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:6px 12px;border-radius:99px;background:var(--c1-soft);color:var(--c1)}
+.ch-head h2{font-size:clamp(2rem,5vw,3rem)}
+.ch-head .lede{font-size:1.2rem;color:var(--ink-2);margin:0}
+h3{font-size:1.45rem;margin:46px 0 14px}
+.muted{color:var(--muted)}
+.small{font-size:.85rem}
+
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:calc(100vh - 60px);display:flex;align-items:center;overflow:hidden}
+#heroCanvas{position:absolute;inset:0;width:100%;height:100%}
+.hero-inner{position:relative;z-index:1;padding:60px 20px;max-width:860px;margin:0 auto}
+.hero h1{font-size:clamp(2.6rem,7vw,5rem);letter-spacing:-.04em}
+.hero h1 .grad{background:linear-gradient(90deg,var(--c1),var(--c6),var(--c4));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{font-size:1.25rem;color:var(--ink-2);max-width:640px;margin:22px 0 30px}
+.hero-stats{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.hero-stats span{padding:8px 14px;border-radius:99px;background:var(--surface);border:1px solid var(--line);font-size:.85rem;font-weight:600;color:var(--ink-2)}
+
+/* ---------- widgets ---------- */
+.widget{background:var(--surface);border:1px solid var(--line);border-radius:24px;box-shadow:var(--shadow);padding:24px;margin:30px 0}
+.widget.wide{margin-left:max(-100px,min(0px,calc((1050px - 100vw)/2 + 20px)));margin-right:max(-100px,min(0px,calc((1050px - 100vw)/2 + 20px)))}
+@media (max-width:1100px){.widget.wide{margin-left:0;margin-right:0}}
+.w-head{display:flex;align-items:center;gap:10px;margin-bottom:6px;font-size:.72rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--c1)}
+.w-head::before{content:"";width:8px;height:8px;border-radius:50%;background:currentColor;box-shadow:0 0 0 4px color-mix(in srgb,currentColor 20%,transparent)}
+.w-title{font-family:"Space Grotesk",Inter,system-ui,sans-serif;font-size:1.3rem;font-weight:700;margin-bottom:4px}
+.w-sub{color:var(--ink-2);font-size:.95rem;margin-bottom:18px}
+.row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media (max-width:720px){.grid2{grid-template-columns:1fr!important}}
+.btn{cursor:pointer;border:1px solid var(--line);background:var(--surface);padding:9px 16px;border-radius:12px;font-weight:600;font-size:.9rem;box-shadow:0 3px 0 var(--line);transition:transform .08s,box-shadow .08s,background .2s}
+.btn:hover{background:var(--surface-2)}
+.btn:active{transform:translateY(2px);box-shadow:0 1px 0 var(--line)}
+.btn.primary{background:var(--c1-btn);color:#fff;border-color:var(--c1-btn);box-shadow:0 3px 0 var(--c1-d)}
+.btn.primary:hover{filter:brightness(1.07)}
+.btn.primary:active{box-shadow:0 1px 0 var(--c1-d)}
+.btn:disabled{opacity:.45;cursor:default}
+.chip{cursor:pointer;border:1px solid var(--line);background:var(--surface-2);padding:6px 13px;border-radius:99px;font-size:.84rem;font-weight:600;color:var(--ink-2);transition:.2s}
+.chip:hover{border-color:var(--c1)}
+.chip.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.stage{background:var(--surface-2);border-radius:16px;position:relative;overflow:hidden}
+canvas{display:block;width:100%}
+label.slider{display:flex;flex-direction:column;gap:4px;font-size:.85rem;font-weight:600;color:var(--ink-2);flex:1;min-width:150px}
+label.slider b{color:var(--ink);font-family:"JetBrains Mono",ui-monospace,monospace;font-weight:600}
+input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:6px;border-radius:9px;background:var(--surface-3);outline:none}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:20px;height:20px;border-radius:50%;background:var(--c1);border:3px solid var(--surface);box-shadow:0 1px 4px rgba(0,0,0,.25);cursor:pointer}
+input[type=range]::-moz-range-thumb{width:16px;height:16px;border-radius:50%;background:var(--c1);border:3px solid var(--surface);cursor:pointer}
+input[type=text]{width:100%;padding:12px 14px;border-radius:12px;border:1px solid var(--line);background:var(--surface-2);color:var(--ink);font:inherit;outline:none}
+input[type=text]:focus{border-color:var(--c1)}
+.readout{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:.85rem;color:var(--ink-2)}
+.pill{display:inline-block;padding:2px 9px;border-radius:99px;font-size:.78rem;font-weight:700}
+
+/* callouts */
+.key{border-left:4px solid var(--c1);background:var(--c1-soft);padding:16px 20px;border-radius:0 16px 16px 0;margin:26px 0}
+.key::before{content:"Key idea";display:block;font-size:.7rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--c1);margin-bottom:4px}
+.key.warn{border-color:var(--c3);background:var(--c3-soft)}
+.key.warn::before{content:"Worth knowing";color:var(--c3t)}
+.key p:last-child{margin:0}
+
+/* quiz */
+.quiz{border:2px dashed var(--line);border-radius:22px;padding:22px;margin:34px 0;background:var(--surface)}
+.quiz .q-label{font-size:.72rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--c3t)}
+.quiz .q{font-weight:700;font-size:1.08rem;margin:6px 0 14px}
+.quiz .opts{display:grid;gap:10px}
+.quiz .opt{text-align:left;cursor:pointer;padding:12px 16px;border-radius:14px;border:2px solid var(--line);background:var(--surface);font-weight:500;box-shadow:0 3px 0 var(--line);transition:.15s}
+.quiz .opt:hover{border-color:var(--c1)}
+.quiz .opt.right{border-color:var(--c2);background:var(--c2-soft);box-shadow:0 3px 0 var(--c2)}
+.quiz .opt.wrong{border-color:var(--c4);background:var(--c4-soft);box-shadow:0 3px 0 var(--c4);animation:shake .35s}
+.quiz .explain{display:none;margin-top:14px;padding:14px 16px;border-radius:14px;background:var(--surface-2);font-size:.95rem}
+.quiz.answered .explain{display:block;animation:pop .35s}
+@keyframes shake{25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+@keyframes pop{from{opacity:0;transform:translateY(6px)}}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+
+/* cards */
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:18px;transition:transform .25s,box-shadow .25s,opacity .3s}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.card h4{font-size:1.05rem;margin:8px 0 6px}
+.card p{font-size:.88rem;color:var(--ink-2);margin:0}
+.card .ico{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;font-size:1.25rem}
+.card.hide{display:none}
+
+/* ---------- specific widgets ---------- */
+#rings circle{cursor:pointer;transition:filter .2s,opacity .3s}
+#rings circle:hover{filter:brightness(1.08)}
+#rings text{pointer-events:none;font-weight:700}
+.info-panel{background:var(--surface-2);border-radius:16px;padding:18px;min-height:150px}
+.info-panel h4{font-size:1.2rem;margin-bottom:6px}
+.info-panel .ex{margin-top:10px;font-size:.88rem;color:var(--ink-2)}
+
+.spectrum{position:relative;height:14px;border-radius:99px;background:linear-gradient(90deg,var(--c2),var(--c3),var(--c4));margin:34px 8px 12px}
+.spectrum .mark{position:absolute;top:-30px;transform:translateX(-50%);font-size:.75rem;font-weight:700;white-space:nowrap;color:var(--ink)}
+.spectrum .mark::after{content:"";position:absolute;left:50%;top:22px;width:3px;height:22px;background:var(--ink);transform:translateX(-50%);border-radius:2px}
+.spectrum-labels{display:flex;justify-content:space-between;font-size:.8rem;font-weight:700;color:var(--ink-2)}
+
+#neuronSvg line{transition:stroke-width .2s,stroke .2s}
+#neuronOut{transition:fill .25s}
+
+.timeline{position:relative;overflow-x:auto;padding:26px 6px 8px;scrollbar-width:thin}
+.tl-track{position:relative;display:flex;gap:0;min-width:max-content;padding:0 20px}
+.tl-track::before{content:"";position:absolute;left:0;right:0;top:44px;height:3px;background:var(--line)}
+.tl-item{position:relative;width:86px;flex:none;text-align:center;cursor:pointer;padding-top:4px}
+.tl-year{font-size:.75rem;font-weight:700;color:var(--muted);height:22px}
+.tl-dot{width:18px;height:18px;border-radius:50%;margin:5px auto 8px;background:var(--surface);border:3px solid var(--muted);transition:.25s;position:relative;z-index:1}
+.tl-item.big .tl-dot{width:26px;height:26px;margin-top:1px;margin-bottom:4px}
+.tl-name{font-size:.72rem;font-weight:600;color:var(--ink-2);line-height:1.25;padding:0 4px}
+.tl-item:hover .tl-dot{transform:scale(1.2)}
+.tl-item.sel .tl-dot{background:var(--c1);border-color:var(--c1);box-shadow:0 0 0 6px var(--c1-soft)}
+.tl-item.sel .tl-name{color:var(--ink)}
+.tl-detail{margin-top:14px;background:var(--surface-2);border-radius:16px;padding:18px 20px;min-height:130px}
+.tl-detail h4{font-size:1.2rem;margin:6px 0}
+.tag{display:inline-block;padding:2px 10px;border-radius:99px;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em}
+.tag.paper{background:var(--c6-soft);color:var(--c6t)}
+.tag.milestone{background:var(--c5-soft);color:var(--c5t)}
+.tag.product{background:var(--c2-soft);color:var(--c2t)}
+.tag.claude{background:var(--claude-soft);color:var(--claudet)}
+
+.paper-card{background:linear-gradient(135deg,var(--c6-soft),var(--c1-soft));border-radius:24px;padding:28px;margin:30px 0;position:relative;overflow:hidden}
+.paper-card .ptitle{font-family:"Space Grotesk",Inter,system-ui,sans-serif;font-size:1.8rem;font-weight:700;margin:4px 0 6px}
+.paper-card .authors{font-size:.85rem;color:var(--ink-2)}
+.paper-card blockquote{margin:16px 0 0;padding:14px 18px;background:var(--surface);border-radius:14px;font-size:.95rem;font-style:italic;color:var(--ink-2)}
+
+.tf{display:flex;flex-direction:column-reverse;gap:8px;position:relative}
+.tf-block{cursor:pointer;border-radius:12px;padding:10px 14px;font-weight:600;font-size:.9rem;text-align:center;border:2px solid transparent;transition:.2s}
+.tf-block:hover,.tf-block.sel{border-color:var(--ink);transform:scale(1.02)}
+.tf-group{border:2px dashed var(--muted);border-radius:16px;padding:10px;display:flex;flex-direction:column-reverse;gap:8px;position:relative}
+.tf-group::after{content:"× N layers";position:absolute;right:-8px;top:-12px;background:var(--surface);padding:0 8px;font-size:.75rem;font-weight:700;color:var(--muted)}
+.tf-flow{position:absolute;left:-14px;top:0;bottom:0;width:4px;border-radius:4px;background:linear-gradient(0deg,var(--c1),var(--c6),var(--c4),var(--c1));background-size:100% 300%;animation:flow 2.5s linear infinite}
+@keyframes flow{to{background-position:0 300%}}
+
+.tokens{display:flex;flex-wrap:wrap;gap:3px;margin-top:14px;min-height:44px;font-family:"JetBrains Mono",ui-monospace,monospace;font-size:.92rem}
+.tok{padding:4px 5px;border-radius:6px;white-space:pre;animation:pop .3s both}
+.stats{display:flex;gap:18px;margin-top:14px;flex-wrap:wrap}
+.stat{background:var(--surface-2);border-radius:12px;padding:10px 14px;min-width:100px}
+.stat b{display:block;font-family:"Space Grotesk",Inter,system-ui,sans-serif;font-size:1.5rem}
+.stat span{font-size:.75rem;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+
+.att-wrap{position:relative;overflow-x:auto;padding-top:110px}
+.att-words{display:flex;gap:6px;white-space:nowrap;padding:0 8px 8px;position:relative;z-index:1;min-width:max-content}
+.att-word{cursor:pointer;padding:8px 10px;border-radius:10px;font-weight:600;border:2px solid transparent;transition:background .25s,border-color .2s;position:relative}
+.att-word.src{border-color:var(--ink)}
+.att-word.future{opacity:.3}
+.att-word .bar{position:absolute;left:6px;right:6px;bottom:-8px;height:4px;border-radius:3px;background:var(--c1);transform-origin:left;transition:transform .3s}
+#attSvg{position:absolute;left:0;top:0;pointer-events:none;overflow:visible}
+#attSvg path{fill:none;stroke:var(--c1);stroke-linecap:round;transition:stroke-width .3s,opacity .3s}
+
+.probs{display:grid;gap:7px;margin-top:14px}
+.prob{display:grid;grid-template-columns:90px 1fr 56px;align-items:center;gap:10px;font-weight:600;font-size:.92rem}
+.prob .track{height:26px;border-radius:8px;background:var(--surface-2);overflow:hidden}
+.prob .fill{height:100%;border-radius:8px;background:linear-gradient(90deg,var(--c1),var(--c6));transition:width .35s cubic-bezier(.2,.7,.2,1)}
+.prob.picked .fill{background:linear-gradient(90deg,var(--c2),var(--c5))}
+.sentence{font-size:1.35rem;font-family:"Space Grotesk",Inter,system-ui,sans-serif;font-weight:600}
+.sentence .next{color:var(--c1);border-bottom:3px solid var(--c1);padding:0 4px;display:inline-block;min-width:60px;transition:.2s}
+.samples{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px;min-height:30px}
+.samples span{padding:3px 10px;border-radius:99px;background:var(--surface-2);font-size:.8rem;font-weight:600;animation:pop .3s}
+
+#embSvg .pt circle{transition:r .3s}
+#embSvg text{font-size:13px;font-weight:600;fill:var(--ink)}
+#embSvg .vec{stroke-width:3;fill:none;stroke-dasharray:400;stroke-dashoffset:400;transition:stroke-dashoffset 1s ease}
+#embSvg .vec.on{stroke-dashoffset:0}
+
+.steps{display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap}
+.step-dot{flex:1;min-width:90px;padding:10px 12px;border-radius:12px;background:var(--surface-2);font-size:.8rem;font-weight:700;color:var(--muted);cursor:pointer;transition:.25s;border:2px solid transparent}
+.step-dot.on{background:var(--c1-soft);color:var(--c1);border-color:var(--c1)}
+.step-dot.done{color:var(--c2t)}
+.step-body{min-height:150px;animation:pop .4s}
+.step-body .big-ico{font-size:2.4rem}
+
+.stack{display:flex;flex-direction:column;gap:8px}
+.layer{border-radius:14px;padding:14px 18px;display:flex;justify-content:space-between;align-items:center;gap:12px;font-weight:600;transition:transform .3s;cursor:default}
+.layer:hover{transform:translateX(6px)}
+.layer small{font-weight:500;color:var(--ink-2);text-align:right}
+
+.tier{cursor:pointer;border:2px solid var(--line);border-radius:18px;padding:16px;background:var(--surface);transition:.25s}
+.tier.on{border-color:var(--claude);background:var(--claude-soft)}
+.tier h4{font-size:1.15rem}
+.meter{display:grid;grid-template-columns:100px 1fr;align-items:center;gap:10px;font-size:.85rem;font-weight:600;margin:8px 0}
+.meter .track{height:12px;border-radius:9px;background:var(--surface-2);overflow:hidden}
+.meter .fill{height:100%;border-radius:9px;background:var(--claude);transition:width .5s cubic-bezier(.2,.7,.2,1)}
+
+.code{background:#15151d;color:#e6e6ee;border-radius:14px;padding:14px 16px;font-family:"JetBrains Mono",ui-monospace,monospace;font-size:.8rem;line-height:1.55;white-space:pre-wrap;overflow-x:auto;min-height:120px}
+.code .k{color:#ff9e7a}.code .s{color:#8fe3b0}.code .c{color:#8a8aa0}
+
+.books{display:flex;flex-wrap:wrap;gap:5px;margin-top:14px;min-height:60px;align-items:flex-end}
+.book{width:14px;height:44px;border-radius:3px;animation:pop .3s both}
+.page{width:18px;height:24px;border-radius:2px;background:var(--surface-3);border:1px solid var(--line);animation:pop .3s both}
+
+.think{border:1px solid var(--line);border-radius:14px;margin-top:14px;overflow:hidden}
+.think-head{padding:10px 14px;font-size:.8rem;font-weight:700;background:var(--surface-2);display:flex;align-items:center;gap:8px;color:var(--ink-2)}
+.think-body{padding:12px 14px;font-size:.88rem;color:var(--ink-2);font-family:"JetBrains Mono",ui-monospace,monospace;white-space:pre-wrap;min-height:40px}
+.answer{margin-top:12px;padding:14px 16px;border-radius:14px;background:var(--claude-soft);font-weight:600;display:none}
+.spin{width:12px;height:12px;border-radius:50%;border:2px solid var(--claude);border-right-color:transparent;animation:rot .8s linear infinite}
+@keyframes rot{to{transform:rotate(360deg)}}
+
+.rag-docs{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:8px;margin-top:12px}
+.rag-doc{border-radius:12px;padding:10px 12px;font-size:.78rem;background:var(--surface-2);border:2px solid transparent;transition:.35s;position:relative}
+.rag-doc .score{position:absolute;top:6px;right:8px;font-family:"JetBrains Mono",ui-monospace,monospace;font-size:.72rem;font-weight:700;opacity:0;transition:.3s}
+.rag-doc.scored .score{opacity:1}
+.rag-doc.top{border-color:var(--c2);background:var(--c2-soft);transform:scale(1.03)}
+.rag-doc.dim{opacity:.4}
+.rag-doc b{display:block;font-size:.8rem;margin-bottom:2px;padding-right:40px}
+.vecbar{display:flex;gap:2px;height:28px;align-items:flex-end;margin-top:8px}
+.vecbar i{flex:1;border-radius:2px;background:var(--c1);transition:height .4s}
+.rag-stage{display:flex;gap:6px;margin:14px 0;flex-wrap:wrap}
+.rag-stage span{flex:1;min-width:110px;text-align:center;padding:8px;border-radius:10px;font-size:.78rem;font-weight:700;background:var(--surface-2);color:var(--muted);transition:.3s}
+.rag-stage span.on{background:var(--c1-btn);color:#fff}
+.rag-stage span.done{background:var(--c2-soft);color:var(--c2t)}
+
+.flow-dash{stroke-dasharray:6 6;animation:dash 1s linear infinite}
+.lanes{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}
+@media (max-width:720px){.lanes{grid-template-columns:1fr}}
+.lane{border:1px solid var(--line);border-radius:16px;padding:14px;background:var(--surface-2);min-width:0}
+.lane-head{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;font-size:.8rem;font-weight:800;margin-bottom:8px}
+.lane-bar{height:6px;border-radius:6px;background:var(--surface-3);overflow:hidden;margin-bottom:10px}
+.lane-bar i{display:block;height:100%;width:0;border-radius:6px}
+.jq{background:var(--surface);border-radius:12px;padding:10px 12px;margin-bottom:8px;opacity:.35;transition:opacity .3s}
+.jq.on{opacity:1;animation:pop .35s}
+.jq-name{display:flex;justify-content:space-between;font-family:"JetBrains Mono",ui-monospace,monospace;font-size:.78rem;font-weight:600;margin-bottom:6px}
+.jq-name span{color:var(--muted)}
+.opt-row{display:grid;grid-template-columns:110px 1fr 40px;gap:8px;align-items:center;font-size:.78rem;font-weight:600;margin:3px 0}
+.opt-row .track{height:10px;border-radius:6px;background:var(--surface-2);overflow:hidden}
+.opt-row .fill{height:100%;border-radius:6px;background:var(--c5);transition:width .4s cubic-bezier(.2,.7,.2,1)}
+.opt-row.best .fill{background:var(--c2)}
+.scale{position:relative;height:10px;border-radius:6px;background:linear-gradient(90deg,var(--c2),var(--c3),var(--c4));margin:14px 4px 6px}
+.scale b{position:absolute;top:-6px;width:4px;height:22px;border-radius:2px;background:var(--ink);transform:translateX(-50%);transition:left .5s cubic-bezier(.2,.7,.2,1)}
+.scale-labels{display:flex;justify-content:space-between;font-size:.7rem;font-weight:600;color:var(--muted)}
+.s12{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media (max-width:720px){.s12{grid-template-columns:1fr}}
+.s12 .card ul{margin:8px 0 0;padding-left:18px;font-size:.88rem;color:var(--ink-2)}
+@keyframes dash{to{stroke-dashoffset:-24}}
+
+.footer{padding:70px 20px 90px;text-align:center;color:var(--muted);font-size:.9rem;border-top:1px solid var(--line)}
+.recap{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
+.recap div{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:16px;font-size:.9rem}
+.recap b{display:block;font-family:"Space Grotesk",Inter,system-ui,sans-serif;font-size:1rem;margin-bottom:4px}
+@media (max-width:720px){
+  .stage:has(> svg){overflow-x:auto;-webkit-overflow-scrolling:touch}
+  #netSvg,#jepaSvg,#moeSvg,#calSvg,#ttcSvg,#embSvg,#ofSvg,#cmSvg,#fairSvg,#ctxSim,#patSvg,#vitSvg{min-width:540px}
+  #toolSvg{min-width:440px}
+  .step-dot{font-size:.72rem;min-width:70px;padding:8px;overflow-wrap:anywhere}
+  .layer{flex-direction:column;align-items:flex-start;gap:2px}.layer small{text-align:left}
+}
+.scroll-hint{display:none;font-size:.72rem;color:var(--muted);margin-top:6px}
+@media (max-width:720px){.scroll-hint{display:block}}
+/* ---------- ML engineering chapters ---------- */
+.dtable{width:100%;min-width:480px;border-collapse:separate;border-spacing:0;font-size:.85rem}
+.dtable th{text-align:left;font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);padding:8px 10px;border-bottom:2px solid var(--line)}
+.dtable td{padding:8px 10px;border-bottom:1px solid var(--line);font-family:"JetBrains Mono",ui-monospace,monospace;transition:background .4s,color .4s,opacity .4s}
+.dtable td.bad{background:var(--c4-soft);color:var(--c4t);font-weight:700;cursor:help}
+.dtable td.fixed{background:var(--c2-soft);color:var(--c2t);font-weight:700}
+.dtable tr.gone td{opacity:.3;text-decoration:line-through}
+.mini{border-collapse:separate;border-spacing:0;font-size:.82rem;width:100%}
+.mini th{text-align:left;font-size:.7rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);padding:6px 8px;border-bottom:2px solid var(--line);white-space:nowrap}
+.mini td{padding:6px 8px;border-bottom:1px solid var(--line)}
+.mini.ev td:first-child{font-weight:600}
+.mini tr.reg td{background:var(--c3-soft)}
+.recipe{display:grid;grid-template-columns:1fr auto 1fr;gap:14px;align-items:center}
+.recipe>div{background:var(--surface-2);border-radius:12px;padding:8px}
+.recipe-arrow{font-size:1.6rem;font-weight:800;color:var(--c3t);background:none!important;animation:nudge 1.4s ease-in-out infinite}
+@keyframes nudge{50%{transform:translateX(5px)}}
+@media (max-width:720px){.recipe{grid-template-columns:1fr}.recipe-arrow{transform:rotate(90deg);text-align:center;animation:none}}
+.split-grid{display:grid;grid-template-columns:repeat(20,1fr);gap:4px}
+.split-grid i{aspect-ratio:1;border-radius:3px;transition:background .5s,transform .5s cubic-bezier(.2,.7,.2,1)}
+.cm{display:grid;grid-template-columns:auto 1fr 1fr;gap:6px;font-size:.78rem}
+.cm-h{font-weight:700;color:var(--muted);text-align:center;align-self:end;font-size:.72rem}
+.cm-r{text-align:right;align-self:center}
+.cm-cell{border-radius:12px;padding:12px 6px;text-align:center;transition:background .3s}
+.cm-cell b{display:block;font-family:"Space Grotesk",Inter,system-ui,sans-serif;font-size:1.5rem}
+.cm-cell span{font-size:.7rem;font-weight:700;color:var(--ink-2)}
+.dash{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:720px){.dash{grid-template-columns:1fr}}
+.panel{background:var(--surface-2);border-radius:14px;padding:12px 14px}
+.panel-head{display:flex;justify-content:space-between;gap:8px;font-size:.78rem;font-weight:700}
+.panel-head .st{white-space:nowrap;font-size:.72rem}
+.panel .mono{color:var(--ink-2);margin-top:2px}
+.alerts{margin-top:12px;height:130px;overflow:auto;background:var(--surface-2);border-radius:12px;padding:10px 12px;font-family:"JetBrains Mono",ui-monospace,monospace;font-size:.75rem}
+.alerts div{padding:2px 0;animation:pop .3s}
+.alerts .bad{color:var(--c4t);font-weight:600}.alerts .ok{color:var(--c2t);font-weight:600}.alerts .ev{color:var(--ink-2)}
+.xai{display:grid;grid-template-columns:minmax(120px,190px) 1fr minmax(50px,auto);gap:10px;align-items:center;font-size:.85rem;font-weight:600;margin:6px 0}
+.xai-track{position:relative;height:16px;border-radius:8px;background:var(--surface-2)}
+.xai-track::after{content:"";position:absolute;left:50%;top:-3px;bottom:-3px;width:2px;background:var(--line)}
+.xai-fill{position:absolute;top:0;height:100%;border-radius:8px;transition:width .5s cubic-bezier(.2,.7,.2,1)}
+.pyr{display:flex;flex-direction:column;align-items:center;gap:6px}
+.pyr-level{cursor:pointer;text-align:center;padding:12px 8px;border-radius:10px;border:2px solid;font-weight:700;font-size:.88rem;transition:transform .2s,box-shadow .2s}
+.pyr-level:hover{transform:scale(1.03)}
+.pyr-level.sel{box-shadow:0 0 0 4px var(--surface-3)}
+.sidebar .grp{margin:18px 10px 6px;font-size:.66rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+/* ---------- first model ---------- */
+.fm-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:start}
+@media (max-width:860px){.fm-grid{grid-template-columns:1fr}}
+.fm-body{min-height:360px;animation:pop .35s}
+.fm-body h4{font-size:1.2rem;margin:0 0 8px}
+.fm-body p{font-size:.95rem}
+.fm-legend{display:flex;gap:14px;flex-wrap:wrap;font-size:.75rem;font-weight:600;color:var(--ink-2);margin-top:8px}
+.fm-legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;vertical-align:-1px}
+.step-dot.locked{opacity:.4;cursor:not-allowed}
+.fm-opts{display:grid;gap:8px}
+.fm-opt{text-align:left;cursor:pointer;padding:10px 14px;border-radius:12px;border:2px solid var(--line);background:var(--surface);font-weight:600;font-size:.9rem;box-shadow:0 3px 0 var(--line)}
+.fm-opt:hover{border-color:var(--c1)}
+.fm-opt.right{border-color:var(--c2);background:var(--c2-soft);box-shadow:0 3px 0 var(--c2)}
+.fm-opt.wrong{border-color:var(--c4);background:var(--c4-soft);animation:shake .35s}
+.fm-checks{display:grid;gap:8px}
+.fm-checks label{display:flex;gap:10px;align-items:flex-start;font-size:.9rem;cursor:pointer}
+.fm-checks input{margin-top:5px;width:17px;height:17px;accent-color:var(--c1);flex:none}
+td.fm-bad{background:var(--c4-soft);color:var(--c4t);font-weight:700}
+/* ---------- glossary ---------- */
+.gl-tools{position:sticky;top:70px;z-index:5;padding:16px 18px}
+@media (max-width:720px){.gl-tools{position:static}.gl-card{scroll-margin-top:80px}}
+.gl-letters{display:flex;flex-wrap:wrap;gap:4px;margin-top:10px}
+.gl-l{cursor:pointer;border:none;background:var(--surface-2);border-radius:8px;min-width:30px;height:30px;font-weight:700;font-size:.8rem;color:var(--ink-2)}
+.gl-l:hover{background:var(--surface-3)}.gl-l.on{background:var(--ink);color:var(--bg)}
+.gl-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}
+.gl-letter{grid-column:1/-1;font-family:"Space Grotesk",Inter,system-ui,sans-serif;font-size:1.6rem;font-weight:700;color:var(--muted);margin:14px 0 -4px;border-bottom:2px solid var(--line)}
+.gl-card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:14px 16px;scroll-margin-top:230px}
+.gl-card:target{border-color:var(--c1);box-shadow:0 0 0 4px var(--c1-soft)}
+.gl-card h4{font-size:1rem;margin:0}
+.gl-card p{font-size:.88rem;color:var(--ink-2);margin:8px 0}
+.gl-card a{text-decoration:none;font-weight:600}
+.gl-term,.gl-demo{text-decoration:underline dotted var(--c1);text-decoration-thickness:2px;text-underline-offset:3px;cursor:help;font-weight:700}
+.gl-term:focus-visible{outline:2px solid var(--c1);outline-offset:2px;border-radius:3px}
+.gl-pop{position:fixed;z-index:80;max-width:320px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:12px 14px;box-shadow:0 12px 40px rgba(0,0,0,.18);font-size:.85rem;opacity:0;pointer-events:none;transform:translateY(4px);transition:opacity .15s,transform .15s}
+.gl-pop.on{opacity:1;pointer-events:auto;transform:none}
+.gl-pop p{margin:6px 0 8px;color:var(--ink-2)}
+.gl-pop a{text-decoration:none;font-weight:700}
+/* ---------- agents ---------- */
+.ag-log{background:var(--surface-2);border-radius:14px;padding:10px;max-height:380px;min-height:200px;overflow:auto;display:flex;flex-direction:column;gap:6px}
+.ag-line{background:var(--surface);border-radius:10px;padding:8px 10px;font-size:.84rem;border-left:4px solid var(--line);animation:pop .3s;position:relative}
+.ag-line div{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:.78rem;margin-top:3px;white-space:pre-wrap;overflow-wrap:anywhere}
+.ag-tag{font-size:.66rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.ag-tok{position:absolute;right:10px;top:8px;font-size:.68rem;font-weight:700;color:var(--muted);font-family:"JetBrains Mono",ui-monospace,monospace}
+.ag-user{border-left-color:var(--c1)}.ag-think{border-left-color:var(--c6)}.ag-tool{border-left-color:var(--c3)}.ag-result{border-left-color:var(--c5)}.ag-final{border-left-color:var(--c2)}.ag-hook{border-left-color:var(--claude);background:var(--claude-soft)}
+.ag-hook .ag-tag{color:var(--claudet)}
+.hook-events{display:flex;flex-wrap:wrap;align-items:center;gap:4px}
+.hk-ev{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:.72rem;font-weight:600;padding:4px 8px;border-radius:8px;background:var(--surface-2);color:var(--muted);transition:.25s}
+.hk-ev.on{background:var(--claude);color:#fff;box-shadow:0 0 0 3px var(--claude-soft)}
+.hk-arrow{color:var(--muted);font-size:.75rem}
+.perm-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:6px}
+.perm-row{display:flex;justify-content:space-between;align-items:center;gap:8px;background:var(--surface-2);border-radius:10px;padding:8px 12px;font-size:.88rem;font-weight:600}
+.perm-row .pill{white-space:nowrap}
+.tier .tg{display:inline-block;margin-top:4px;font-size:.68rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--claudet)}
+.tier .px{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:.72rem;color:var(--muted);margin-top:6px}
+/* ---------- RL ---------- */
+.bandits{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+@media (max-width:560px){.bandits{grid-template-columns:repeat(2,1fr)}}
+.bandit{cursor:pointer;border:2px solid var(--line);background:var(--surface);border-radius:16px;padding:12px 8px;text-align:center;box-shadow:0 3px 0 var(--line);transition:transform .1s}
+.bandit:active{transform:translateY(2px)}
+.bandit.win{border-color:var(--c2);background:var(--c2-soft)}.bandit.lose{border-color:var(--c4)}
+.b-emoji{font-size:1.8rem}.b-name{font-weight:800;font-size:.85rem;margin:2px 0 6px}
+.b-bar{position:relative;height:70px;width:28px;margin:0 auto 6px;border-radius:8px;background:var(--surface-2);overflow:hidden}
+.b-bar i{position:absolute;left:0;right:0;bottom:0;background:var(--c3);border-radius:8px;transition:height .25s}
+.b-bar em{position:absolute;left:-4px;right:-4px;height:3px;background:var(--ink)}
+/* ---------- vision ---------- */
+.px-canvas{width:100%;display:block;border-radius:12px;background:#000;cursor:crosshair}
+.px-nums{display:grid;grid-template-columns:repeat(14,1fr);gap:1px;font-family:"JetBrains Mono",ui-monospace,monospace;font-size:.68rem;color:var(--muted);text-align:center;background:var(--surface-2);border-radius:10px;padding:8px}
+.conv-grid{display:grid;grid-template-columns:1fr 160px 1fr;gap:16px;align-items:center}
+@media (max-width:720px){.conv-grid{grid-template-columns:1fr}}
+.conv-mid{text-align:center}
+.kgrid{display:grid;grid-template-columns:repeat(3,44px);gap:4px;justify-content:center;margin-top:6px}
+.kgrid span{height:44px;border-radius:8px;display:grid;place-items:center;font-family:"JetBrains Mono",ui-monospace,monospace;font-size:.72rem;font-weight:700}
+.cnn-row{display:flex;align-items:center;gap:8px;overflow-x:auto;padding:4px}
+.cnn-col{flex:1;min-width:110px;background:var(--surface-2);border-radius:14px;padding:10px;text-align:center;animation:pop .6s both}
+.cnn-cells{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;margin:8px 0}
+.cnn-cells span{aspect-ratio:1;display:grid;place-items:center;background:var(--surface);border-radius:8px;font-size:1.2rem}
+.cnn-arrow{font-size:1.3rem;font-weight:800;color:var(--c5)}
+/* ---------- course switcher ---------- */
+.courses{display:flex;gap:3px;margin-left:14px;background:var(--surface-2);padding:4px;border-radius:99px}
+.courses a{padding:6px 12px;border-radius:99px;font-size:.8rem;font-weight:700;color:var(--ink-2);text-decoration:none;white-space:nowrap}
+.courses a:hover{background:var(--surface-3)}
+.courses a.on{background:var(--ink);color:var(--bg)}
+@media (max-width:760px){.brand-txt{display:none}.courses{margin-left:2px}.courses a{padding:5px 8px;font-size:.72rem}}
+@media (max-width:430px){.top-actions a.icon-btn{display:none}.courses a .ci{display:none}}
+/* sw4 */@media (max-width:480px){.topbar{gap:8px;padding:0 10px}.topbar .brand{display:none}.courses{min-width:0;overflow-x:auto;scrollbar-width:none;margin-left:0}.courses::-webkit-scrollbar{display:none}.courses a{padding:5px 8px;font-size:.72rem}.courses a .ci{display:none}}
+/* ---------- course switcher ---------- */
+.courses{display:flex;gap:3px;margin-left:14px;background:var(--surface-2);padding:4px;border-radius:99px}
+.courses a{padding:6px 12px;border-radius:99px;font-size:.8rem;font-weight:700;color:var(--ink-2);text-decoration:none;white-space:nowrap}
+.courses a:hover{background:var(--surface-3)}
+.courses a.on{background:var(--ink);color:var(--bg)}
+@media (max-width:760px){.brand-txt{display:none}.courses{margin-left:2px}.courses a{padding:5px 8px;font-size:.72rem}}
+@media (max-width:430px){.top-actions a.icon-btn{display:none}.courses a .ci{display:none}}
+/* sw4 */@media (max-width:480px){.topbar{gap:8px;padding:0 10px}.topbar .brand{display:none}.courses{min-width:0;overflow-x:auto;scrollbar-width:none;margin-left:0}.courses::-webkit-scrollbar{display:none}.courses a{padding:5px 8px;font-size:.72rem}.courses a .ci{display:none}}
+/* ---------- sorter ---------- */
+.sorter{min-height:230px}
+.sort-progress{display:flex;justify-content:space-between;font-size:.78rem;font-weight:700;color:var(--muted)}
+.sort-bar{height:5px;border-radius:5px;background:var(--surface-2);margin:6px 0 14px;overflow:hidden}.sort-bar i{display:block;height:100%;background:var(--c1);transition:width .3s}
+.sort-card{font-size:1.12rem;font-weight:600;padding:18px 20px;border-radius:16px;background:var(--surface-2);animation:pop .35s}
+.sort-buckets{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.sort-b{flex:1;min-width:130px;cursor:pointer;padding:12px;border-radius:14px;border:2px solid var(--line);background:var(--surface);font-weight:700;box-shadow:0 3px 0 var(--line);transition:.15s}
+.sort-b:hover{border-color:var(--c1)}.sort-b.right{border-color:var(--c2);background:var(--c2-soft)}.sort-b.wrong{border-color:var(--c4);background:var(--c4-soft);animation:shake .35s}
+.sort-fb{margin-top:12px;animation:pop .3s}.sort-fb p{margin:0 0 10px;font-size:.95rem}
+.sort-done{text-align:center;padding:24px}.sort-big{font-family:"Space Grotesk",Inter,system-ui,sans-serif;font-size:3rem;font-weight:700}
+/* ---------- library ---------- */
+.lib{display:grid;gap:10px}
+.lib-book{display:grid;grid-template-columns:64px 1fr;gap:14px;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:14px 16px}
+.book-year{font-family:"Space Grotesk",Inter,system-ui,sans-serif;font-size:1.35rem;font-weight:700;color:var(--c1)}
+.lib-book h4{font-size:1.02rem;margin:0 0 3px}.lib-book p{font-size:.9rem;color:var(--ink-2);margin:6px 0 0}
+/* ---------- PM widgets ---------- */
+.rice{display:grid;gap:6px;overflow-x:auto;padding-bottom:4px}
+.rice-h,.rice-r{display:grid;grid-template-columns:150px 1.2fr .9fr 1fr 1.6fr;gap:10px;align-items:center;min-width:760px}
+.rice-h{font-size:.68rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);padding:0 10px}
+.rice-r{background:var(--surface-2);border-radius:12px;padding:8px 10px;font-size:.88rem}
+.rice-r label{display:flex;align-items:center;gap:8px}.rice-r label span{min-width:44px}
+select{font:inherit;font-size:.8rem;padding:6px 8px;border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--ink);max-width:100%}
+.am-row{display:flex;align-items:center;gap:6px;padding:7px 0;border-bottom:1px solid var(--line);flex-wrap:wrap}.am-row .chip{font-size:.7rem;padding:4px 9px}
+.am-n{width:22px;height:22px;border-radius:50%;background:var(--surface-3);display:grid;place-items:center;font-size:.72rem;font-weight:800;flex:none}
+.ft-row{display:grid;grid-template-columns:170px 1fr;gap:14px;padding:10px 0;border-bottom:1px solid var(--line)}
+.ft-feat{color:var(--c4t);font-weight:600}.ft-emp{color:var(--c2t);font-weight:600}
+@media (max-width:560px){.ft-row{grid-template-columns:1fr;gap:2px}}
+.auto-ladder{display:flex;flex-direction:column;gap:6px}
+.ladder-step{display:flex;gap:10px;align-items:center;padding:10px 12px;border-radius:12px;background:var(--surface-2);opacity:.45;transition:.3s;font-size:.9rem}
+.ladder-step.on{opacity:1;background:var(--claude-soft);box-shadow:inset 0 0 0 2px var(--claude);transform:scale(1.02)}
+/* ---------- platform widgets ---------- */
+.wta-row{display:flex;gap:10px;align-items:flex-start;padding:8px 0;border-bottom:1px solid var(--line);font-size:.92rem;font-weight:600;cursor:pointer}.wta-row input{width:18px;height:18px;margin-top:3px;accent-color:var(--c6);flex:none}
+.gp-row{display:grid;grid-template-columns:minmax(180px,1.3fr) 1fr 64px;gap:10px;align-items:center;font-size:.86rem;font-weight:600;margin:7px 0}
+.gp-row .track{height:14px;border-radius:8px;background:var(--surface-2);overflow:hidden}.gp-row .fill{height:100%;border-radius:8px;transition:width .5s cubic-bezier(.2,.7,.2,1),background .3s}
+@media (max-width:560px){.gp-row{grid-template-columns:1fr 64px}.gp-row .track{grid-column:1/-1;order:3}}
+.dora-q{padding:10px 0;border-bottom:1px solid var(--line)}.dora-q .row{margin-top:6px;gap:6px}
+.dora-result{display:flex;gap:16px;align-items:center;margin-top:14px;flex-wrap:wrap}
+.dora-tier{border:2px solid;border-radius:16px;padding:10px 20px;display:flex;flex-direction:column;align-items:center}.dora-tier b{font-family:"Space Grotesk",Inter,system-ui,sans-serif;font-size:1.7rem}
+.dora-result p{flex:1;min-width:220px}
+.mm-row{padding:8px 0;border-bottom:1px solid var(--line)}.mm-row .row{margin-top:4px;gap:6px}.mm-row .chip{min-width:34px}
+/* ---------- domain platforms ---------- */
+.capmap{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;overflow-x:auto}
+@media (max-width:860px){.capmap{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:520px){.capmap{grid-template-columns:repeat(2,1fr)}}
+.cap-col{display:flex;flex-direction:column;gap:6px;min-width:0}
+.cap-h{font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em;padding:6px 8px;border-radius:8px;text-align:center}
+.cap{cursor:pointer;text-align:left;font-size:.8rem;font-weight:600;padding:9px 10px;border-radius:10px;border:1.5px solid var(--line);background:var(--surface);transition:.2s;overflow-wrap:anywhere}
+.cap:hover{border-color:var(--c1)}.cap.on{border-color:var(--c1);background:var(--c1-soft);box-shadow:0 0 0 3px var(--c1-soft)}
+.cap-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media (max-width:560px){.cap-grid{grid-template-columns:1fr}}
+.cap-grid div{background:var(--surface);border-radius:10px;padding:10px 12px}.cap-grid b{display:block;font-size:.78rem;margin-bottom:3px}.cap-grid span{font-size:.88rem;color:var(--ink-2)}
+.sc-row{display:flex;flex-direction:column;gap:2px;padding:10px 0;border-bottom:1px solid var(--line)}
+.lev{display:grid;gap:6px;overflow-x:auto;padding-bottom:4px}
+.lev-h,.lev-r{display:grid;grid-template-columns:2.2fr 1.1fr 1fr 70px 110px;gap:10px;align-items:center;min-width:720px}
+.lev-h{font-size:.68rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);padding:0 10px}
+.lev-r{background:var(--surface-2);border-radius:12px;padding:8px 10px}
+.lev-r label{display:flex;align-items:center;gap:8px}.lev-r input[type=checkbox]{accent-color:var(--c4);width:16px;height:16px}
+.lev-bar{display:grid;grid-template-columns:minmax(200px,1.6fr) 1fr auto;gap:10px;align-items:center;margin:6px 0}
+.lev-bar .track{height:14px;border-radius:8px;background:var(--surface-2);overflow:hidden}.lev-bar .fill{height:100%;border-radius:8px;transition:width .4s}
+@media (max-width:640px){.lev-bar{grid-template-columns:1fr auto}.lev-bar .track{grid-column:1/-1;order:3}}
+@media (max-width:720px){#ostSvg,#riceSvg,#abSvg,#retSvg,#ppSvg,#nfSvg,#trSvg,#ttSvg,#cmapSvg{min-width:560px}}
+/* ---------- theories ---------- */
+.th-hub-tools{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:8px 0 12px}
+.th-search{flex:1;min-width:200px;font:inherit;font-size:.95rem;padding:11px 16px;border-radius:14px;border:2px solid var(--line);background:var(--surface);color:var(--ink);outline:none}
+.th-search:focus{border-color:var(--c1)}
+#thCount{font-size:.8rem;font-weight:700;color:var(--muted)}
+.th-prog{display:flex;align-items:center;gap:12px;font-size:.85rem;color:var(--ink-2);margin:10px 0 16px;flex-wrap:wrap}
+.th-prog-bar{flex:1;min-width:140px;height:10px;border-radius:9px;background:var(--surface-2);overflow:hidden}
+.th-prog-bar i{display:block;height:100%;background:linear-gradient(90deg,var(--c1),var(--c6));transition:width .5s}
+.th-tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:8px;margin-top:12px}
+.th-tile{cursor:pointer;text-align:left;display:flex;flex-direction:column;gap:2px;padding:12px 13px;border-radius:14px;border:1.5px solid var(--line);border-top:4px solid var(--dc);background:var(--surface);color:var(--ink);transition:transform .15s,box-shadow .15s;position:relative;font:inherit}
+.th-tile:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(0,0,0,.08);background:var(--dcs)}
+.th-tile span{font-size:1.3rem}.th-tile b{font-size:.9rem;line-height:1.25}.th-tile small{font-size:.75rem;color:var(--muted);line-height:1.35}
+.th-tile.done::after{content:"✓";position:absolute;top:8px;right:10px;width:20px;height:20px;border-radius:50%;background:var(--c2);color:#fff;font-size:.72rem;font-weight:800;display:grid;place-items:center}
+.th-dom-meta{display:flex;justify-content:space-between;align-items:center;gap:10px;margin:14px 0 8px;flex-wrap:wrap;font-size:.82rem;font-weight:700;color:var(--muted)}
+.th-list{display:grid;gap:10px}
+.th{border:1.5px solid var(--line);border-left:5px solid var(--dc);border-radius:18px;background:var(--surface);transition:box-shadow .2s;scroll-margin-top:80px}
+.th.open{box-shadow:var(--shadow)}
+.th-h{all:unset;box-sizing:border-box;cursor:pointer;display:flex;align-items:center;gap:12px;width:100%;padding:14px 16px}
+.th-h:focus-visible{outline:3px solid var(--c1);outline-offset:2px;border-radius:16px}
+.th-ic{font-size:1.6rem;width:44px;height:44px;border-radius:12px;background:var(--dcs);display:grid;place-items:center;flex:none}
+.th-tt{flex:1;min-width:0;display:flex;flex-direction:column}
+.th-tt b{font-family:"Space Grotesk",Inter,system-ui,sans-serif;font-size:1.08rem;color:var(--ink)}
+.th-tt small{font-size:.86rem;color:var(--ink-2);margin-top:1px}
+.th-who{font-size:.74rem;font-weight:700;color:var(--dct);white-space:nowrap;max-width:210px;overflow:hidden;text-overflow:ellipsis}
+.th-ck{width:22px;height:22px;border-radius:50%;border:2px solid var(--line);color:transparent;display:grid;place-items:center;font-size:.72rem;font-weight:800;flex:none}
+.th.done .th-ck{background:var(--c2);border-color:var(--c2);color:#fff}
+.th-chev{transition:transform .25s;color:var(--muted);flex:none}.th.open .th-chev{transform:rotate(180deg)}
+.th-who-m{display:none;margin:0 0 6px}
+.th-b{padding:0 18px 18px;animation:pop .3s}
+.th-b>p{margin:0 0 12px}
+.th-b h5{margin:0 0 4px;font-size:.74rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.th-edge{background:var(--dcs);border-radius:14px;padding:12px 16px;margin:12px 0}.th-edge h5{color:var(--dct)}.th-edge p{margin:0}
+.th-2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.th-2>div{background:var(--surface-2);border-radius:14px;padding:12px 16px}.th-2 p{margin:0;font-size:.93rem}
+.th-2>div:last-child h5{color:var(--c3t)}.th-2>div:first-child h5{color:var(--c5t)}
+.th-demo{margin:16px 0}
+.th-rel{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:14px 0 12px}
+.th-rel>span{font-size:.72rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-right:4px}
+.th-rel .chip{font-size:.78rem;padding:5px 11px;white-space:normal;text-align:left;max-width:100%}
+.th-b,.th-tt{min-width:0;overflow-wrap:anywhere}.th{min-width:0}
+.th.done .th-done-btn{border-color:var(--c2);background:var(--c2-soft)}
+@media (max-width:700px){.th-who{display:none}.th-who-m{display:block}.th-2{grid-template-columns:1fr}.th-h{gap:10px;padding:12px}.th-ic{width:38px;height:38px;font-size:1.35rem}.th-b{padding:0 14px 14px}}
+/* demo parts */
+.th-svg{width:100%;display:block;margin-top:10px;background:var(--surface-2);border-radius:14px}
+.th-cv{width:100%;display:block;background:var(--surface-2);border-radius:14px;margin-top:10px}
+.th-ta{width:100%;box-sizing:border-box;font:inherit;font-family:"JetBrains Mono",ui-monospace,monospace;font-size:.9rem;padding:10px 12px;border-radius:12px;border:2px solid var(--line);background:var(--surface);color:var(--ink);resize:vertical;margin-top:10px}
+.th-bars{margin-top:10px}
+.th-bar{display:grid;grid-template-columns:minmax(40px,auto) 1fr 48px;gap:10px;align-items:center;margin:4px 0;font-size:.82rem}
+.th-bar code{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:.8rem;min-width:28px;white-space:nowrap}
+.th-bar i{display:block;height:14px;border-radius:7px;background:var(--c1);transition:width .4s cubic-bezier(.2,.7,.2,1);min-width:2px}
+.th-bar span{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:.8rem;text-align:right}
+.th-rank{grid-template-columns:170px 1fr 48px}
+@media (max-width:520px){.th-rank{grid-template-columns:130px 1fr 40px}.th-rank code{font-size:.7rem;white-space:normal}}
+.th-grid100{display:grid;grid-template-columns:repeat(20,minmax(0,1fr));gap:3px;margin:14px 0 8px;max-width:520px}
+.th-grid100 i{aspect-ratio:1;border-radius:3px}.th-grid100 .tp{background:var(--c2)}.th-grid100 .fp{background:var(--c4);opacity:.75}
+.c2t{color:var(--c2t)}.c4t{color:var(--c4t)}.c5t{color:var(--c5t)}
+.th-q{background:var(--surface-2);border-radius:14px;padding:12px 16px;margin:10px 0}.th-q p{margin:0 0 8px}
+.btn.sel{border-color:var(--c1);background:var(--c1-soft);box-shadow:0 3px 0 var(--c1)}
+.th-in{font:inherit;width:90px;padding:8px 10px;border-radius:10px;border:2px solid var(--line);background:var(--surface);color:var(--ink)}
+.th-fb{margin:8px 0 0}
+.th-ord{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:.8rem}
+.th-vcards{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:8px;margin-top:12px}
+.th-vcard{background:var(--surface-2);border-radius:14px;padding:12px;display:flex;flex-direction:column;gap:2px}
+.th-vcard span{font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.th-vcard b{font-family:"Space Grotesk",Inter,system-ui,sans-serif;font-size:1.6rem;color:var(--c6t)}.th-vcard small{font-size:.78rem;color:var(--ink-2)}
+.th-epoch{margin-top:12px;padding:12px 16px;border-radius:14px;background:var(--c6-soft);animation:pop .3s}.th-epoch b{color:var(--c6t);margin-right:4px}
+.th-tog{display:flex;align-items:center;gap:6px;font-size:.88rem;font-weight:700;cursor:pointer}.th-tog input{width:18px;height:18px;accent-color:var(--c6)}
+.th-weasel{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:clamp(.8rem,3.2vw,1.35rem);font-weight:600;letter-spacing:.05em;background:var(--surface-2);border-radius:12px;padding:14px;overflow-wrap:anywhere}
+.th-weasel span{color:var(--muted)}.th-weasel span.ok{color:var(--c2t)}
+.th-sw-grid{display:grid;grid-template-columns:minmax(0,320px) 1fr;gap:16px;align-items:center}
+@media (max-width:620px){.th-sw-grid{grid-template-columns:1fr}.th-sw-grid svg{margin:0 auto}}
+.th-crowd{display:grid;grid-template-columns:repeat(20,minmax(0,1fr));gap:3px;margin:12px 0 6px}
+.th-crowd i{aspect-ratio:1;border-radius:4px;background:var(--surface-3);font-style:normal;font-size:.55rem;display:grid;place-items:center;color:var(--muted);transition:background .25s,color .25s}
+.th-crowd i.on{background:var(--c4);color:#fff}
+.th-tbl{display:grid;grid-template-columns:auto 1fr 1fr;gap:6px 14px;max-width:360px;margin-top:8px;font-size:.9rem}
+.th-cases{margin-top:10px;font-size:.88rem;display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.th-war{background:var(--c4-soft);color:var(--c4t)}.th-peace{background:var(--c2-soft);color:var(--c2t)}
+.th-hrow{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:14px;padding:10px 0;border-bottom:1px solid var(--line)}
+.th-hrow>div:first-child{display:flex;flex-direction:column;gap:2px}
+.th-hbars .th-bar{grid-template-columns:96px 1fr 34px}
+@media (max-width:620px){.th-hrow{grid-template-columns:1fr;gap:4px}}
+.th-log{display:flex;flex-direction:column;gap:4px;margin-top:10px;max-height:160px;overflow:auto}
+.th-logrow{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:.85rem;padding:5px 10px;border-radius:8px;animation:pop .25s}
+.th-logrow.y{background:var(--c2-soft)}.th-logrow.n{background:var(--c4-soft)}
+.th-lattice{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px}
+.th-lattice div{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:14px 16px;font-size:.9rem}
+.th-lattice b{display:block;margin-bottom:4px}
+@media (max-width:520px){.th-crowd{gap:2px}.th-crowd i{font-size:0}}
+.th-b .stats{gap:8px}.th-b .stat{flex:1 1 130px;min-width:0}
+@media (max-width:520px){.th-b .stat{flex-basis:40%}.th-b .stat b{font-size:1.2rem}}
+#thQuiz .opts{display:grid;gap:10px}
+#thQuiz .opt{font:inherit;color:var(--ink);text-align:left;cursor:pointer;padding:12px 16px;border-radius:14px;border:2px solid var(--line);background:var(--surface);font-weight:500;box-shadow:0 3px 0 var(--line);transition:.15s}
+#thQuiz .opt:hover{border-color:var(--c1)}
+#thQuiz .opt.right{border-color:var(--c2);background:var(--c2-soft);box-shadow:0 3px 0 var(--c2)}
+#thQuiz .opt.wrong{border-color:var(--c4);background:var(--c4-soft);box-shadow:0 3px 0 var(--c4);animation:shake .35s}
+.th-tile[hidden],.th-b[hidden]{display:none}
+.th-long{width:100%;max-width:340px;font-family:"JetBrains Mono",ui-monospace,monospace;box-sizing:border-box}.th-in.bad{border-color:var(--c4)}
+.th-day{display:grid;gap:4px;margin:12px 0 6px}
+.th-hr{display:flex;align-items:center;font-size:.72rem;font-weight:700;color:var(--muted)}.th-hr>span{width:48px;flex:none}.th-hr i,.th-hr b{display:block;height:14px;transition:width .4s}.th-hr i{background:var(--c2);border-radius:7px 0 0 7px}.th-hr b{background:var(--c4);opacity:.6;border-radius:0 7px 7px 0}
+.th-woop{display:grid;gap:8px}
+.th-wrow{display:flex;gap:12px;align-items:flex-start;background:var(--surface-2);border-radius:14px;padding:10px 12px}
+.th-wrow>span:last-child{flex:1;display:flex;flex-direction:column;gap:3px;min-width:0}.th-wrow small{color:var(--muted);font-size:.8rem}
+.th-wk{width:30px;height:30px;border-radius:50%;background:var(--c4);color:#fff;display:grid;place-items:center;font-weight:800;flex:none}
+.th-win{font:inherit;font-size:.9rem;padding:8px 10px;border-radius:10px;border:2px solid var(--line);background:var(--surface);color:var(--ink);width:100%;box-sizing:border-box}
+.th-days{display:flex;flex-wrap:wrap;gap:5px;align-items:center;margin-top:10px}.th-days .chip{padding:4px 10px;font-size:.78rem}
+.th-badge{display:inline-block;font-size:.7rem;font-weight:800;letter-spacing:.04em;padding:3px 9px;border-radius:99px;margin:0 0 10px}
+.ev-strong,.ev-math{background:var(--c2-soft);color:var(--c2t)}.ev-good{background:var(--c5-soft);color:var(--c5t)}.ev-active{background:var(--c1-soft);color:var(--c1)}.ev-mixed,.ev-debated{background:var(--c3-soft);color:var(--c3t)}.ev-frame{background:var(--surface-3);color:var(--ink-2)}.ev-belief{background:var(--c4-soft);color:var(--c4t)}
+.th-tile .th-tb{font-size:.62rem;font-weight:800;margin-top:4px;align-self:flex-start;padding:1px 7px;border-radius:99px}
+@media (max-width:520px){.th-tiles{grid-template-columns:1fr 1fr;gap:6px}.th-tile{padding:10px}.th-tile small{display:none}.th-tile b{font-size:.82rem}}
+.th-xlink{text-decoration:none;color:var(--ink-2);border-style:dashed}
+.th-mx-g{display:grid;gap:6px;align-items:center;font-size:.8rem;overflow-x:auto}
+.th-mx-g>b{font-size:.72rem;text-align:center}.th-mx-o{font-weight:700;font-size:.82rem}
+.th-mx-c{cursor:pointer;border:1px solid var(--line);border-radius:10px;padding:8px 0;font-weight:800;font-size:.95rem;color:var(--ink);font-family:inherit}
+.th-mx-res{margin-top:12px}
+.th-whys{display:grid;gap:6px;margin:12px 0}
+.th-why-row{background:var(--surface-2);border-radius:12px;padding:10px 14px;font-size:.92rem;animation:pop .3s;border-left:4px solid var(--c5)}.th-why-row span{display:block;font-size:.7rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--c5t)}
+.th-ladder{display:flex;flex-direction:column;gap:5px;margin:12px 0}
+.th-rung{display:grid;grid-template-columns:170px 1fr;gap:12px;padding:9px 14px;border-radius:10px;background:var(--surface-2);font-size:.88rem;opacity:.5;transition:.3s}.th-rung.on{opacity:1;background:var(--c1-soft)}.th-rung span{color:var(--ink-2)}
+@media (max-width:560px){.th-rung{grid-template-columns:1fr;gap:2px}}
+.th-fun{display:flex;flex-direction:column;align-items:center;gap:4px;margin:14px 0}
+.th-funrow{display:flex;justify-content:space-between;gap:8px;padding:9px 12px;border-radius:10px;color:#fff;font-size:.82rem;min-width:170px;box-sizing:border-box;transition:width .4s}
+.th-part{display:grid;gap:2px;text-decoration:none;color:var(--ink);background:linear-gradient(120deg,var(--c1-soft),var(--c6-soft));border:1px solid var(--line);border-radius:18px;padding:16px 20px;margin:18px 0;transition:transform .15s}
+.th-part:hover{transform:translateY(-2px)}.th-part span{font-size:.72rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--c1)}.th-part b{font-family:"Space Grotesk",Inter,system-ui,sans-serif;font-size:1.2rem}.th-part small{color:var(--ink-2);font-size:.9rem}
+.th-2col{display:grid;grid-template-columns:1fr 1fr;gap:10px}@media (max-width:620px){.th-2col{grid-template-columns:1fr}}
+.th-spec{position:relative;height:34px;margin:10px 0 18px;border-radius:8px;overflow:visible}
+.th-spec-bg{position:absolute;inset:0;border-radius:8px;background:linear-gradient(90deg,#8b5cf6,#3b82f6,#06b6d4,#22c55e,#eab308,#f97316,#ef4444);opacity:.18}
+.th-spec b{position:absolute;top:0;bottom:0;width:4px;margin-left:-2px;border-radius:2px;box-shadow:0 0 8px currentColor}
+.th-spec span{position:absolute;top:36px;left:0;font-size:.68rem;color:var(--muted)}
+.th-hk{display:flex;gap:8px;flex-wrap:wrap;min-height:58px;align-items:center;margin:12px 0}
+.th-hkb{width:52px;height:52px;border-radius:12px;border:2px solid var(--line);background:var(--surface-2);font-weight:800;font-size:1rem;color:var(--ink);cursor:pointer;font-family:inherit}
+.th-hkb.lit{background:var(--c2);border-color:var(--c2);color:#fff;transform:scale(1.08)}.th-hkb.miss{animation:shake .3s}
+.th-wheel{font-family:"Space Grotesk",Inter,system-ui,sans-serif;font-size:2rem;min-width:60px;text-align:center}
+.th-laws{background:var(--c3-soft);border-radius:18px;padding:14px 18px;margin:18px 0;display:grid;gap:6px}.th-laws .chip{text-decoration:none;color:var(--ink)}
+.th-veil{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:8px;margin-top:10px}
+.th-soc{cursor:pointer;display:flex;flex-direction:column;gap:6px;align-items:flex-start;text-align:left;padding:12px;border-radius:14px;border:2px solid var(--line);background:var(--surface);color:var(--ink);font:inherit}
+.th-soc.on{border-color:var(--c1);background:var(--c1-soft)}.th-soc small{font-size:.74rem;color:var(--ink-2)}
+.th-bars5{display:flex;align-items:flex-end;gap:4px;height:72px}.th-bars5 i{width:14px;border-radius:4px 4px 0 0;transition:background .3s}
+.th-gauge{position:relative;height:18px;border-radius:9px;margin:26px 0 12px;background:linear-gradient(90deg,var(--c5),var(--c2),var(--c3),var(--c4))}
+.th-gauge i{position:absolute;top:-8px;width:6px;height:34px;margin-left:-3px;border-radius:3px;background:var(--ink);transition:left .3s}
+.th-gauge span{position:absolute;top:-20px;font-size:.7rem;color:var(--muted);transform:translateX(-50%)}
+.th-dog{display:flex;align-items:center;gap:8px;margin:12px 0;font-size:2.4rem;min-height:56px}.th-drool{font-size:1.2rem}
+.th-tipi{display:grid;gap:6px;margin-top:10px}
+.th-tq{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;padding:6px 0;border-bottom:1px solid var(--line);font-size:.9rem}
+.th-sc{display:flex;gap:3px}.th-sc button{width:30px;height:30px;border-radius:8px;border:1px solid var(--line);background:var(--surface-2);color:var(--ink);font:inherit;font-size:.8rem;font-weight:700;cursor:pointer}.th-sc button.on{background:var(--c1);color:#fff;border-color:var(--c1)}
+.th-b5{margin-top:14px}
+.th-volt-bar{height:18px;border-radius:9px;background:var(--surface-2);overflow:hidden;margin:10px 0 4px}.th-volt-bar i{display:block;height:100%;background:linear-gradient(90deg,var(--c3),var(--c4));transition:width .3s}
+.th-group{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0}.th-group span{background:var(--surface-2);border-radius:99px;padding:5px 10px;font-size:.85rem;font-weight:600;animation:pop .3s backwards}.th-group .me{background:var(--c1-soft);color:var(--c1)}
+.th-parts{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px;margin:18px 0}.th-parts .th-part{margin:0}
+.th-sc button{width:auto;min-width:30px;padding:0 5px;white-space:nowrap}
+/* ---------- pattern lab ---------- */
+.lab-steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:8px;margin:14px 0}
+.lab-steps div{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:12px 14px;font-size:.86rem}.lab-steps b{display:block;color:var(--c6t);margin-bottom:3px}
+.lab-top{display:grid;gap:10px;margin-bottom:14px}.lab-tabs .chip{font-size:.85rem}
+.lab-data{gap:6px}.lab-data .btn{padding:6px 11px;font-size:.8rem}
+.lab-form{display:grid;gap:8px;background:var(--surface-2);border-radius:16px;padding:14px 16px;margin-bottom:14px}
+.lab-grid2{display:grid;grid-template-columns:1fr 1fr;gap:8px}@media (max-width:560px){.lab-grid2{grid-template-columns:1fr}}
+.lab-in{width:100%;box-sizing:border-box}.lab-form .th-ta{margin-top:0}
+.lab-list{display:grid;gap:8px}
+.lab-card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:12px 14px}
+.lab-card summary{cursor:pointer}.lab-card-h{display:flex;gap:8px;align-items:baseline;flex-wrap:wrap}
+.lab-x{margin-left:auto;border:0;background:none;color:var(--muted);cursor:pointer;font-size:1rem}.lab-x2{margin-top:8px;padding:5px 10px;font-size:.78rem}
+.lab-pill{background:var(--surface-2);color:var(--ink-2);margin:2px 0}
+.lab-mini{font-size:.78rem;color:var(--ink-2);margin-top:6px;padding-top:6px;border-top:1px dashed var(--line)}
+.lab-empty{text-align:center;padding:26px 14px;color:var(--ink-2);display:grid;gap:12px;justify-items:center}
+.lab-att{display:grid;gap:6px}
+.lab-arow{display:flex;flex-wrap:wrap;gap:6px;align-items:center;background:var(--surface);border-radius:12px;padding:8px 10px}
+.lab-arow .chip{font-size:.74rem;padding:4px 8px}.lab-chk{display:flex;gap:5px;align-items:center;cursor:pointer}.lab-chk b{min-width:70px}
+.lab-ot,.lab-out{font:inherit;font-size:.8rem;padding:5px 8px;border-radius:9px;border:1px solid var(--line);background:var(--surface);color:var(--ink)}
+.lab-conf{background:var(--c3-soft);border-radius:12px;padding:10px 14px;font-size:.86rem;margin-bottom:12px}
+.lab-cols{display:grid;grid-template-columns:1fr 1fr;gap:18px}@media (max-width:700px){.lab-cols{grid-template-columns:1fr}}
+.lab-body h4{margin:18px 0 6px;font-size:1rem}
+.lab-heat{display:grid;gap:3px;min-width:560px;font-size:.72rem}
+.lab-hh{font-weight:800;text-align:center;color:var(--muted);font-size:.66rem;text-transform:uppercase}.lab-hn{font-weight:700;align-self:center}
+.lab-hc{border-radius:6px;min-height:28px;display:grid;place-items:center;font-weight:700;border:1px solid var(--line)}
+.lab-ins{margin:6px 0;padding-left:20px;font-size:.9rem}.lab-ins li{margin:5px 0}
+.lab-prow p{margin:0 0 8px}
+
+/* ---------- Part 7: health ---------- */
+.hl-disclaimer{border-left:4px solid var(--c1)}
+.hl-red{margin-top:12px;padding:14px 16px;border-radius:14px;background:var(--c4-soft);color:var(--ink);border:1px solid var(--c4);font-size:.95rem;line-height:1.55}
+.hl-paths{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px;margin-top:10px}
+.hl-path{padding:14px 16px;border-radius:14px;background:var(--surface);border:1px solid var(--line)}
+.hl-path b{display:block;font-size:1.02rem}
+.hl-path small{display:block;color:var(--ink-2);margin:2px 0 8px}
+.hl-links{display:flex;flex-wrap:wrap;gap:6px}
+.hl-links a{font-size:.82rem;padding:4px 10px;border-radius:999px;background:var(--surface-2);color:var(--ink);text-decoration:none;border:1px solid var(--line)}
+.hl-links a:hover{border-color:var(--c1);color:var(--c1)}
+
+/* ---------- the book ---------- */
+.bk-parts{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px;margin-top:14px}
+.bk-part{display:flex;flex-direction:column;gap:6px;padding:18px;border-radius:18px;background:var(--surface);border:1px solid var(--line);border-top:5px solid var(--dc);color:var(--ink);text-decoration:none;transition:transform .15s}
+.bk-part:hover{transform:translateY(-2px);border-color:var(--dc)}
+.bk-n{font-size:.75rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--dc)}
+.bk-part b{font-size:1.15rem;line-height:1.3}
+.bk-part small{color:var(--ink-2)}
+.bk-doms{display:flex;flex-wrap:wrap;gap:4px;margin-top:4px}
+.bk-doms span{font-size:.75rem;padding:2px 8px;border-radius:999px;background:var(--surface-2);color:var(--ink-2)}
+.bk-doms i{font-style:normal;opacity:.6}
+.bk-bar{height:6px;border-radius:3px;background:var(--surface-3);overflow:hidden;margin-top:6px}
+.bk-bar span{display:block;height:100%;background:var(--dc)}
+.bk-res{display:flex;flex-direction:column;gap:4px;margin-top:10px;max-height:420px;overflow:auto}
+.bk-res a{display:flex;gap:8px;align-items:center;padding:8px 10px;border-radius:10px;background:var(--surface-2);color:var(--ink);text-decoration:none}
+.bk-res a small{margin-left:auto;color:var(--ink-3,var(--ink-2));white-space:nowrap}
+.bk-res a:hover{outline:1px solid var(--c1)}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <button class="icon-btn" id="menuBtn" aria-label="Open chapters">☰</button>
+  <a class="brand" href="#top"><span class="brand-mark">BI</span><span class="brand-txt">The Book of Big Ideas</span></a>
+  <nav class="courses" aria-label="Courses"><a href="index.html"><span class="ci">🤖 </span>AI</a><a href="product-management.html"><span class="ci">🧭 </span>Product</a><a href="platform-management.html"><span class="ci">🏗️ </span>Platforms</a><a href="book.html" class="on"><span class="ci">📖 </span>Big Ideas</a></nav>
+  <div class="top-actions"><button class="icon-btn" id="themeBtn" aria-label="Toggle theme">◐</button></div>
+  <div class="progress" id="progress"></div>
+</header>
+<nav class="sidebar" id="sidebar">
+  <h4>Course</h4>
+  <a href="#hub"><span class="num">📖</span>Contents</a>
+  <a href="#paths"><span class="num">🧭</span>Reading paths</a>
+  <a href="#find"><span class="num">🔎</span>Search the book</a>
+  <a href="#next"><span class="num">🗺️</span>Coming next</a>
+  <a href="theories.html"><span class="num">1</span>Big theories</a>
+  <a href="models.html"><span class="num">2</span>Mental models &amp; toolkits</a>
+  <a href="society.html"><span class="num">3</span>Society, politics &amp; the human mind</a>
+  <a href="biases.html"><span class="num">4</span>The bias &amp; fallacy codex</a>
+  <a href="lab.html"><span class="num">5</span>Communication &amp; the Pattern Lab</a>
+  <a href="leadership.html"><span class="num">6</span>Leadership, management &amp; strategy</a>
+  <a href="health.html"><span class="num">7</span>Health &amp; wellbeing</a>
+  <a href="people.html"><span class="num">8</span>Relationships &amp; social life</a>
+</nav>
+<main id="top">
+<section class="hero">
+  <canvas id="heroCanvas" aria-hidden="true"></canvas>
+  <div class="hero-inner reveal">
+    <span class="ch-tag">An interactive book in 8 parts</span>
+    <h1 style="margin-top:18px">The Book of <span class="grad">Big Ideas</span>.</h1>
+    <p>937 of the most useful ideas people have found for understanding the world, thinking clearly, working with others, leading, and living well: each explained in plain English, with an honest rating of the evidence, a real example, links to related ideas, and more than a hundred hands-on simulations and tools. Read it front to back, follow a reading path, or search for what you need today.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:8px"><a class="btn primary" href="#hub" style="text-decoration:none;padding:13px 24px;font-size:1rem">Open the contents →</a><a class="btn" href="#paths" style="text-decoration:none;padding:13px 24px;font-size:1rem">Reading paths</a></div>
+    <div class="hero-stats"><span>8 parts</span><span>937 ideas</span><span>3 personal labs</span></div>
+  </div>
+</section>
+<!-- ============ CONTENTS ============ -->
+<section class="chapter" id="hub">
+<div class="wrap">
+  <div class="ch-head reveal">
+    <span class="ch-tag">Contents</span>
+    <h2>Eight parts, one book</h2>
+    <p class="lede">Each part stands alone. Tick "Mark as understood" on any card and your progress shows here, stored only in this browser.</p>
+  </div>
+  <div class="stats reveal" id="bkTot"></div>
+  <div class="bk-parts reveal" id="bkParts"></div>
+</div>
+</section>
+
+<section class="chapter" id="paths">
+<div class="wrap">
+  <div class="ch-head reveal">
+    <span class="ch-tag" style="background:var(--c2-soft);color:var(--c2t)">Reading paths</span>
+    <h2>Where to start</h2>
+    <p class="lede">Short journeys across the book, by goal.</p>
+  </div>
+  <div class="hl-paths reveal"><div class="hl-path"><b>🧠 Think more clearly</b><small>The core tools of good judgement.</small><div class="hl-links"><a href="theories.html#t-firstprinciples">First principles</a><a href="theories.html#t-bayes">Bayes</a><a href="theories.html#t-inversion">Inversion</a><a href="theories.html#t-secondorder">Second-order thinking</a><a href="biases.html#t-b-confirmation">Confirmation bias</a><a href="biases.html#t-f-strawman">Straw man</a><a href="lab.html#t-p-calibration">Calibration</a></div></div><div class="hl-path"><b>💼 Get better at work</b><small>Communicate, influence and deliver.</small><div class="hl-links"><a href="lab.html#t-c-bluf">Bottom line up front</a><a href="lab.html#t-n-batna">BATNA</a><a href="lab.html#t-s-elm">How persuasion works</a><a href="lab.html#t-p-prewiring">Pre-wiring</a><a href="leadership.html#t-m-okr">OKRs</a><a href="leadership.html#t-g-rumelt">Good strategy</a><a href="theories.html#t-deepwork">Deep work</a></div></div><div class="hl-path"><b>🧭 Lead people</b><small>From first-time manager to leader.</small><div class="hl-links"><a href="leadership.html#t-l-situational">Situational leadership</a><a href="leadership.html#t-l-hackman">Team design</a><a href="leadership.html#t-l-highoutput">Managerial leverage</a><a href="leadership.html#t-m-deming">Deming</a><a href="leadership.html#t-m-hiring">Hiring well</a><a href="lab.html#t-c-psychsafety">Psychological safety</a></div></div><div class="hl-path"><b>🌱 Live well</b><small>Body, energy and mind.</small><div class="hl-links"><a href="health.html#t-h-sleeparch">Sleep</a><a href="health.html#t-h-activity">Exercise</a><a href="health.html#t-h-fatigue">Fatigue</a><a href="health.html#t-h-goingblank">Going blank</a><a href="health.html#t-h-act">ACT</a><a href="models.html#t-stoicism">Stoicism</a><a href="theories.html#t-compounding">Compounding</a></div></div><div class="hl-path"><b>🤝 Connect with people</b><small>Friends, partners and confidence.</small><div class="hl-links"><a href="people.html#t-r-likinggap">The liking gap</a><a href="people.html#t-r-capitalization">Responding to good news</a><a href="people.html#t-r-clarkwells">Why social anxiety persists</a><a href="people.html#t-r-exposure">Fear ladder</a><a href="people.html#t-r-assertive">Assertiveness</a><a href="people.html#t-r-gottman">Gottman</a></div></div><div class="hl-path"><b>🌍 Understand the world</b><small>Big forces behind history and society.</small><div class="hl-links"><a href="theories.html#t-evolution">Evolution</a><a href="theories.html#t-gametheory">Game theory</a><a href="society.html#t-keynesian">Keynes</a><a href="society.html#t-ibnkhaldun">Ibn Khaldun</a><a href="theories.html#t-powerlaw">Power laws</a><a href="theories.html#t-blackswan">Black swans</a></div></div></div>
+</div>
+</section>
+
+<section class="chapter" id="find">
+<div class="wrap">
+  <div class="ch-head reveal">
+    <span class="ch-tag" style="background:var(--c6-soft);color:var(--c6t)">Index</span>
+    <h2>Search the whole book</h2>
+    <p class="lede">Every idea in all eight parts.</p>
+  </div>
+  <div class="widget wide reveal"><div class="w-head">Search</div><input class="th-search" id="bkQ" type="search" placeholder="e.g. entropy, OKR, axSpA, Gottman, sunk cost" aria-label="Search the book" style="width:100%"><div id="bkRes" class="bk-res"></div></div>
+</div>
+</section>
+
+<section class="chapter" id="next">
+<div class="wrap">
+  <div class="ch-head reveal">
+    <span class="ch-tag" style="background:var(--c3-soft);color:var(--c3t)">Coming next</span>
+    <h2>What the book doesn't cover yet</h2>
+    <p class="lede">The biggest remaining gaps, in rough order of usefulness.</p>
+  </div>
+  <div class="th-lattice reveal">
+    <div><b>📚 Learning & memory in practice</b>How to study, remember and master skills: retrieval, spacing, interleaving, note-taking, learning with AI.</div>
+    <div><b>💷 Personal finance</b>Budgeting, index investing, pensions, tax-efficient accounts, insurance, behavioural money traps.</div>
+    <div><b>📊 Statistics & data literacy</b>Distributions, sampling, significance and p-hacking, reading charts, forecasting.</div>
+    <div><b>✍️ Writing & storytelling</b>Clear writing, structure, editing, narrative and presentations.</div>
+    <div><b>🚀 Career & craft</b>Career capital, networking, job search, reputation, side projects.</div>
+    <div><b>🌡️ Climate, energy & the planet</b>Energy systems, climate science, trade-offs and solutions.</div>
+    <div><b>⚖️ Law & contracts basics</b>Contracts, employment rights, intellectual property, data protection.</div>
+    <div><b>🎨 Design thinking</b>How designers frame problems, prototype and test.</div>
+  </div>
+</div>
+</section>
+
+<footer class="footer"><b>The Book of Big Ideas</b> · part of the <a href="index.html">AI, Explained</a> series · ideas are simplified for learning and evidence strength varies; health and relationship parts are educational, not professional advice.</footer>
+</main>
+<script>
+(() => {
+"use strict";
+const $ = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+const NS = "http://www.w3.org/2000/svg";
+const svgEl = (tag, attrs = {}, parent) => { const e = document.createElementNS(NS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); if (parent) parent.appendChild(e); return e; };
+const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
+const lerp = (a, b, t) => a + (b - a) * t;
+const rand = (a, b) => a + Math.random() * (b - a);
+const gauss = () => { let u = 0, v = 0; while (!u) u = Math.random(); while (!v) v = Math.random(); return Math.sqrt(-2 * Math.log(u)) * Math.cos(2 * Math.PI * v); };
+const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
+let C = {};
+const readColors = () => { ["--c1","--c2","--c3","--c4","--c5","--c6","--ink","--ink-2","--muted","--line","--surface","--surface-2","--surface-3","--claude","--bg"].forEach(k => C[k.slice(2)] = css(k)); };
+readColors();
+const hexA = (hex, a) => { const h = hex.replace("#", ""); const n = parseInt(h.length === 3 ? h.split("").map(c => c + c).join("") : h, 16); return `rgba(${n >> 16 & 255},${n >> 8 & 255},${n & 255},${a})`; };
+
+function fitCanvas(cv) {
+  const r = cv.getBoundingClientRect(), d = devicePixelRatio || 1;
+  cv.width = Math.round(r.width * d); cv.height = Math.round(r.height * d);
+  const ctx = cv.getContext("2d"); ctx.setTransform(d, 0, 0, d, 0, 0);
+  return { ctx, W: r.width, H: r.height };
+}
+function whenVisible(el, fn) {
+  let vis = false, raf = 0, last = 0;
+  const tick = t => { const dt = Math.min(50, last ? t - last : 16); last = t; fn(dt, t); raf = vis ? requestAnimationFrame(tick) : 0; if (!vis) last = 0; };
+  new IntersectionObserver(es => { vis = es[0].isIntersecting; if (vis && !raf) raf = requestAnimationFrame(tick); }, { threshold: 0.05 }).observe(el);
+}
+function chipGroup(container, attr, cb) {
+  $$(`[data-${attr}]`, container).forEach(b => b.addEventListener("click", () => {
+    $$(`[data-${attr}]`, container).forEach(x => x.classList.toggle("on", x === b)); cb(b.dataset[attr]);
+  }));
+}
+
+/* ---------- theme, progress, nav, reveal ---------- */
+$("#themeBtn").addEventListener("click", () => {
+  const root = document.documentElement;
+  const dark = root.dataset.theme ? root.dataset.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
+  root.dataset.theme = dark ? "light" : "dark";
+  try { localStorage.setItem("ai-theme", root.dataset.theme); } catch (e) {}
+  readColors(); document.dispatchEvent(new Event("themechange"));
+});
+matchMedia("(prefers-color-scheme: dark)").addEventListener?.("change", () => { if (!document.documentElement.dataset.theme) { readColors(); document.dispatchEvent(new Event("themechange")); } });
+try { const t = localStorage.getItem("ai-theme"); if (t) { document.documentElement.dataset.theme = t; readColors(); } } catch (e) {}
+const sb = $("#sidebar"), mb = $("#menuBtn");
+const setMenu = open => { sb.classList.toggle("open", open); mb.setAttribute("aria-expanded", open); document.body.classList.toggle("menu-open", open); };
+mb.setAttribute("aria-expanded", "false");
+mb.addEventListener("click", e => { e.stopPropagation(); setMenu(!sb.classList.contains("open")); });
+document.addEventListener("click", e => { if (sb.classList.contains("open") && !sb.contains(e.target)) setMenu(false); });
+document.addEventListener("keydown", e => { if (e.key === "Escape") setMenu(false); });
+$$("#sidebar a").forEach(a => a.addEventListener("click", () => $("#sidebar").classList.remove("open")));
+addEventListener("scroll", () => { const h = document.documentElement; $("#progress").style.width = (h.scrollTop / (h.scrollHeight - h.clientHeight) * 100) + "%"; }, { passive: true });
+const navLinks = $$("#sidebar a");
+const secObs = new IntersectionObserver(es => es.forEach(e => {
+  if (!e.isIntersecting) return;
+  const i = navLinks.findIndex(a => a.getAttribute("href") === "#" + e.target.id);
+  navLinks.forEach((a, j) => { a.classList.toggle("active", j === i); a.classList.toggle("done", j < i); });
+}), { rootMargin: "-45% 0px -50% 0px" });
+$$("section.chapter").forEach(s => secObs.observe(s));
+const revObs = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("in"); revObs.unobserve(e.target); } }), { threshold: 0, rootMargin: "0px 0px -8% 0px" });
+$$(".reveal").forEach(el => revObs.observe(el));
+
+/* ---------- quizzes ---------- */
+$$(".quiz").forEach(q => {
+  const correct = +q.dataset.correct;
+  $$(".opt", q).forEach((b, i) => b.addEventListener("click", () => {
+    if (q.classList.contains("answered")) return;
+    if (i === correct) { b.classList.add("right"); q.classList.add("answered"); $(".explain", q).insertAdjacentHTML("afterbegin", "<b>✓ Correct!</b> "); }
+    else { b.classList.remove("wrong"); void b.offsetWidth; b.classList.add("wrong"); }
+  }));
+});
+
+/* ---------- hero particles ---------- */
+(() => {
+  const cv = $("#heroCanvas"); let ctx, W, H, pts = [], mouse = { x: -999, y: -999 };
+  const init = () => { ({ ctx, W, H } = fitCanvas(cv)); const n = Math.round(clamp(W * H / 14000, 30, 110)); pts = Array.from({ length: n }, () => ({ x: rand(0, W), y: rand(0, H), vx: rand(-.3, .3), vy: rand(-.3, .3), r: rand(1.5, 3.2), c: ["c1","c6","c4","c5"][Math.floor(rand(0, 4))] })); };
+  init(); addEventListener("resize", init);
+  cv.parentElement.addEventListener("mousemove", e => { const r = cv.getBoundingClientRect(); mouse = { x: e.clientX - r.left, y: e.clientY - r.top }; });
+  cv.parentElement.addEventListener("mouseleave", () => mouse = { x: -999, y: -999 });
+  whenVisible(cv, () => {
+    ctx.clearRect(0, 0, W, H);
+    const sp = reduced ? .2 : 1;
+    for (const p of pts) {
+      const dx = mouse.x - p.x, dy = mouse.y - p.y, d = Math.hypot(dx, dy);
+      if (d < 160) { p.vx += dx / d * .02; p.vy += dy / d * .02; }
+      p.vx *= .99; p.vy *= .99; p.x += p.vx * sp; p.y += p.vy * sp;
+      if (p.x < 0 || p.x > W) p.vx *= -1; if (p.y < 0 || p.y > H) p.vy *= -1;
+    }
+    for (let i = 0; i < pts.length; i++) for (let j = i + 1; j < pts.length; j++) {
+      const a = pts[i], b = pts[j], d = Math.hypot(a.x - b.x, a.y - b.y);
+      if (d < 120) { ctx.strokeStyle = hexA(C.c1, (1 - d / 120) * .25); ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(a.x, a.y); ctx.lineTo(b.x, b.y); ctx.stroke(); }
+    }
+    for (const p of pts) { ctx.fillStyle = hexA(C[p.c], .7); ctx.beginPath(); ctx.arc(p.x, p.y, p.r, 0, 7); ctx.fill(); }
+  });
+})();
+
+
+/* ---------- shared: sorter game ---------- */
+function makeSorter(root, buckets, items) {
+  const box = $(".sorter", root); let i = 0, score = 0, locked = false;
+  const render = () => {
+    if (i >= items.length) {
+      box.innerHTML = `<div class="sort-done"><div class="sort-big">${score} / ${items.length}</div><p>${score === items.length ? "Perfect! You've got this principle down." : score >= items.length * .7 ? "Nice work. Review the ones you missed above." : "Worth another pass: these distinctions are the heart of the chapter."}</p><button class="btn" data-again>↺ Try again</button></div>`;
+      $("[data-again]", box).addEventListener("click", () => { i = 0; score = 0; render(); }); return;
+    }
+    const it = items[i]; locked = false;
+    box.innerHTML = `<div class="sort-progress"><span>${i + 1} / ${items.length}</span><span>score ${score}</span></div><div class="sort-bar"><i style="width:${i / items.length * 100}%"></i></div><div class="sort-card">“${it[0]}”</div><div class="sort-buckets">${buckets.map((b, k) => `<button class="sort-b" data-k="${k}">${b}</button>`).join("")}</div><div class="sort-fb"></div>`;
+    $$(".sort-b", box).forEach(btn => btn.addEventListener("click", () => {
+      if (locked) return; locked = true; const k = +btn.dataset.k, ok = k === it[1]; if (ok) score++;
+      btn.classList.add(ok ? "right" : "wrong"); if (!ok) $$(".sort-b", box)[it[1]].classList.add("right");
+      const fb = $(".sort-fb", box); fb.innerHTML = `<p><b>${ok ? "✓ Right." : "✗ It's " + buckets[it[1]].replace(/^\S+\s/, "") + "."}</b> ${it[2]}</p><button class="btn primary">${i === items.length - 1 ? "See score →" : "Next →"}</button>`;
+      $("button", fb).addEventListener("click", () => { i++; render(); });
+    }));
+  };
+  render();
+}
+
+/* ---------- shared: library ---------- */
+function makeLibrary(items, themes) {
+  const lib = $("#lib"), f = $("#rlFilter"); let cur = "All";
+  f.innerHTML = ["All", ...themes].map((t, i) => `<button class="chip${i ? "" : " on"}" data-th="${t}">${t}</button>`).join("");
+  const render = () => {
+    lib.innerHTML = items.filter(b => cur === "All" || b[3] === cur).sort((a, b) => b[2] - a[2]).map(b => `<div class="lib-book"><div class="book-year">${b[2] < 1000 ? `<small style="font-size:.7rem">c.</small>${b[2]}` : b[2]}</div><div><h4>${b[0]}</h4><div class="small muted" style="font-weight:600">${b[1]} · <span class="pill" style="background:var(--surface-2);color:var(--ink-2)">${b[3]}</span></div><p>${b[4]}</p></div></div>`).join("");
+    $$(".lib-book", lib).forEach((el, k) => el.animate?.([{ opacity: 0, transform: "translateY(8px)" }, { opacity: 1, transform: "none" }], { duration: 300, delay: k * 25, fill: "backwards" }));
+  };
+  chipGroup(f, "th", t => { cur = t; render(); }); render();
+}
+
+const BOOK = [["theories.html", 1, "Big theories", "Science, quantum physics, strategy, life, the brain, the self, systems, economics, leverage and thinking tools.", "c1", [["📡", "Information & computation", 7], ["♟️", "Strategy & decisions", 7], ["🌌", "Physics & the cosmos", 7], ["⚛️", "Quantum physics: a deeper dive", 18], ["🎻", "String theory & quantum gravity", 5], ["🧬", "Life & evolution", 7], ["🧠", "Mind & behaviour", 7], ["⚡", "Brain, attention & focus", 11], ["🪞", "Self-image, belief & wellbeing", 13], ["🕸️", "Systems & complexity", 6], ["💱", "Economics & society", 6], ["🚀", "Leverage, wealth & modern strategy", 15], ["🗣️", "Language, culture & knowledge", 8], ["🧰", "Thinking tools & mental models", 11]], ["information", "bayes", "computability", "complexity", "cybernetics", "godel", "kolmogorov", "gametheory", "utility", "prospect", "bounded", "mechanism", "arrow", "signaling", "bigbang", "relativity", "quantum", "thermo", "chaos", "noether", "plates", "evolution", "selfishgene", "germ", "endosymbiosis", "redqueen", "ess", "scaling", "dualprocess", "predictive", "dissonance", "attachment", "tom", "gwt", "hebb", "systems", "networks", "emergence", "powerlaw", "tipping", "blackswan", "comparative", "commons", "principalagent", "creative", "diffusion", "transaction", "sapirwhorf", "ug", "speechact", "semiotics", "memetics", "hofstede", "falsifiability", "paradigm", "neuroplasticity", "dopamine", "dmn", "attnresidue", "flow", "deepwork", "cogload", "spaced", "sleep", "zeigarnik", "habits", "psychocyb", "selfefficacy", "mindset", "pygmalion", "placebo", "goddard", "mentalcontrast", "hedonic", "sdt", "locus", "stoic", "maximizers", "peakend", "asymmetric", "permissionless", "specificknow", "compounding", "defaultgame", "valuemax", "owntime", "influence", "lindy", "antifragile", "kelly", "ergodicity", "matthew", "truefans", "luck", "firstprinciples", "inversion", "secondorder", "competence", "occam", "goodhart", "parkinson", "chesterton", "mapterritory", "regretmin", "planning", "planck", "photoelectric", "bohr", "debroglie", "schrodinger", "born", "superposition", "uncertainty", "tunnelling", "spin", "pauli", "entanglement", "interpretations", "decoherence", "qft", "standardmodel", "qcomputing", "nocloning", "stringtheory", "holographic", "lqg", "hawkingrad", "landscape"]], ["models.html", 2, "Mental models & toolkits", "Stoicism, wealth, mental models, the 11 laws, decisions, problem-solving, projects and products.", "c2", [["🏛️", "Stoicism: the art of living", 11], ["💰", "First principles of wealth", 12], ["🧠", "More mental models", 17], ["🤝", "People & motivation", 12], ["📜", "Laws of work, tech & life", 17], ["🧭", "Decision-making tools", 12], ["🔧", "Problem-solving & communication", 12], ["📋", "Project management models", 28], ["🧩", "Product management models", 27]], ["stoicism", "impressions", "threedisc", "premeditatio", "mementomori", "amorfati", "obstacleway", "viewabove", "discomfort", "eveningreview", "hierocles", "wealthmoney", "valuecreation", "productivity", "ownership", "savingsrate", "diversify", "indexcost", "inflation", "opportunitycost", "humancapital", "debt", "enough", "hanlon", "survivorship", "marginsafety", "incentives", "regression", "sunkcost", "availability", "anchoring", "resulting", "localoptimum", "leveragepoints", "steelman", "thoughtexp", "activation", "moats", "diminishing", "cargocult", "eisenhower", "twodoors", "decisionmatrix", "impacteffort", "cynefin", "tententen", "premortem", "dectree", "ooda", "sixhats", "rapid", "wrap", "fivewhys", "issuetree", "minto", "abstraction", "iceberg", "ladder", "fishbone", "rubberduck", "doublediamond", "sbi", "covey", "radicalcandor", "irontriangle", "cpm", "pert", "toc", "littles", "brooks", "wbs", "agile", "kanban", "cone", "raci", "tuckman", "conway", "ninety", "riskmatrix", "kano", "chasm", "hook", "aarrr", "leanstartup", "pmf", "heart", "moscow", "bmc", "fogg", "blueocean", "shapeup", "wardley", "threehorizons", "pareto", "hofstadter", "peter", "hicks", "dunningkruger", "murphy", "sturgeon", "moore", "amdahl", "gall", "metcalfe", "postel", "hyrum", "fitts", "jakob", "tesler", "cunningham", "fae", "benfranklin", "tmt", "halo", "ikea", "pratfall", "mereexposure", "spotlight", "curseknowledge", "bystander", "ringelmann", "reactance", "gantt", "evm", "burndown", "planningpoker", "criticalchain", "montecarlo", "stakeholdermap", "scopecreep", "retro", "pdca", "sevenwastes", "dmaic", "rollingwave", "plc", "innovatorsdilemma", "hypecycle", "growthloops", "plg", "ahamoment", "vanwestendorp", "decoy", "porter5", "ansoff", "bcg", "odi", "dualtrack"]], ["society.html", 3, "Society, politics & the human mind", "Psychology, sociology, political theory, power, history, economic schools, ethics and philosophy.", "c5", [["🛋️", "Classic psychology", 26], ["👥", "Sociology: how societies work", 21], ["🗳️", "Political theories & ideologies", 23], ["🏛️", "Power, politics & history", 7], ["⏳", "Theories of history", 19], ["📚", "Schools of economic thought", 19], ["⚖️", "Ethics: how should we live?", 10], ["🦉", "Existence, mind & knowledge", 15]], ["realism", "powertransition", "hegemonic", "socialcontract", "democraticpeace", "softpower", "greatman", "utilitarianism", "deontology", "virtueethics", "trolley", "rawls", "careethics", "harmprinciple", "isought", "relativism", "experiencemachine", "existentialism", "absurdism", "nietzsche", "platocave", "rationalism", "induction", "mindbody", "hardproblem", "chineseroom", "freewill", "personalidentity", "pragmatism", "wittgenstein", "buddhistphil", "taoism", "mercantilism", "classical", "marxian", "marginalism", "keynesian", "austrian", "monetarism", "phillips", "ratexp", "newkeynesian", "mmt", "minsky", "supplyside", "publicchoice", "institutional", "emh", "behavioralecon", "georgism", "capabilities", "maslow", "adultattachment", "psychoanalysis", "jung", "classicalcond", "operant", "piaget", "vygotsky", "erikson", "bigfive", "sociallearning", "milgram", "asch", "stanfordprison", "learnedhelpless", "positivepsych", "cbt", "humanistic", "iq", "multipleintel", "eq", "marshmallow", "yerkesdodson", "griefstages", "dunbar", "terrormgmt", "conflicttheory", "functionalism", "symbolicinteraction", "dramaturgy", "anomie", "weber", "socialconstruction", "labelling", "socialcapital", "bourdieu", "weakties", "mobility", "intersectionality", "mcdonaldization", "risksociety", "networksociety", "panopticon", "hegemony", "brokenwindows", "contacthyp", "secularisation", "leftright", "liberalism", "libertarianism", "conservatism", "socialism", "communism", "socialdemocracy", "anarchism", "fascism", "totalitarianism", "nationalism", "feminism", "greenpolitics", "communitarianism", "republicanism", "machiavelli", "populism", "democracytheory", "pluralism", "ironlaw", "separationpowers", "medianvoter", "overton", "cyclical", "ibnkhaldun", "spengler", "cliodynamics", "kondratiev", "generations", "progress", "histmaterialism", "annales", "geodeterminism", "malthus", "collapse", "pathdependence", "contingency", "greatdivergence", "axialage", "worldsystems", "clashcivs", "fateofempires"]], ["biases.html", 4, "The bias & fallacy codex", "200 cognitive biases and 40 logical fallacies: what each is and how to counter it.", "c4", [["👀", "What grabs our attention", 25], ["🔒", "Seeing what we already believe", 25], ["🎲", "Patterns, probability & statistics", 25], ["👥", "Judging people & groups", 25], ["🪞", "Overconfidence & the self", 25], ["⚖️", "Decisions, risk & value", 25], ["🐑", "Social influence & groups", 25], ["🧠", "What we remember", 25], ["🥊", "Fallacies of relevance", 20], ["🧩", "Fallacies of structure, cause & evidence", 20]], ["b-availability", "b-attentional", "b-illusorytruth", "b-mereexposure", "b-frequency", "b-salience", "b-negativity", "b-vonrestorff", "b-bizarreness", "b-humor", "b-picturesup", "b-selfreference", "b-context", "b-contrast", "b-distinction", "b-anchoring", "b-framing", "b-focusing", "b-weberfechner", "b-moneyillusion", "b-baserate", "b-empathygap", "b-inattentional", "b-changeblind", "b-novelty", "b-confirmation", "b-congruence", "b-beliefbias", "b-perseverance", "b-backfire", "b-continuedinfluence", "b-semmelweis", "b-selectiveperception", "b-observerexpectancy", "b-subjectivevalidation", "b-forer", "b-choicesupportive", "b-postpurchase", "b-ostrich", "b-motivated", "b-blindspot", "b-naiverealism", "b-naivecynicism", "b-myside", "b-hostilemedia", "b-explanatorydepth", "b-illusionvalidity", "b-attitudepolarization", "b-reactivedevaluation", "b-notinventedhere", "b-clustering", "b-gamblers", "b-hothand", "b-illusorycorrelation", "b-pareidolia", "b-samplesize", "b-smallnumbers", "b-probneglect", "b-conjunction", "b-representativeness", "b-texassharpshooter", "b-subadditivity", "b-scope", "b-probmatching", "b-prosecutors", "b-recency", "b-exponential", "b-normalcy", "b-berkson", "b-simpson", "b-ludic", "b-narrative", "b-agentdetection", "b-anthropomorphism", "b-magicalthinking", "b-fae", "b-actorobserver", "b-groupattribution", "b-ultimateattribution", "b-halo", "b-horn", "b-ingroup", "b-outgroup", "b-crossrace", "b-stereotyping", "b-justworld", "b-defensiveattr", "b-traitascription", "b-asymmetricinsight", "b-transparency", "b-curseknowledge", "b-spotlight", "b-falseconsensus", "b-falseuniqueness", "b-extrinsicincentives", "b-cheerleader", "b-identifiablevictim", "b-moralluck", "b-systemjustification", "b-hostileattribution", "b-overconfidence", "b-overprecision", "b-illusorysuperiority", "b-dunningkruger", "b-optimism", "b-pessimism", "b-planningfallacy", "b-illusioncontrol", "b-selfserving", "b-egocentric", "b-hardeasy", "b-restraint", "b-endofhistory", "b-projection", "b-impact", "b-introspection", "b-selfhandicapping", "b-effortjustification", "b-morallicensing", "b-proinnovation", "b-thirdperson", "b-socialdesirability", "b-imposter", "b-complexity", "b-selfconsistency", "b-lossaversion", "b-endowment", "b-statusquo", "b-default", "b-sunkcost", "b-escalation", "b-zerorisk", "b-pseudocertainty", "b-certainty", "b-ambiguity", "b-disposition", "b-hyperbolic", "b-decoy", "b-compromise", "b-lessisbetter", "b-denomination", "b-mentalaccounting", "b-housemoney", "b-unitbias", "b-informationbias", "b-omission", "b-riskcompensation", "b-choiceoverload", "b-bikeshedding", "b-outcome", "b-bandwagon", "b-groupthink", "b-authority", "b-automation", "b-socialproof", "b-pluralistic", "b-diffusion", "b-grouppolarization", "b-sharedinfo", "b-abilene", "b-courtesy", "b-liking", "b-reciprocity", "b-commitment", "b-footinthedoor", "b-doorinface", "b-scarcity", "b-socialcomparison", "b-availabilitycascade", "b-informationcascade", "b-herd", "b-stereotypethreat", "b-normalizationdeviance", "b-conformity", "b-obedience", "b-hindsight", "b-rosyretro", "b-declinism", "b-fadingaffect", "b-misinformation", "b-falsememory", "b-sourceconfusion", "b-cryptomnesia", "b-suggestibility", "b-consistencymem", "b-serialpos", "b-peakend", "b-durationneglect", "b-googleeffect", "b-testing", "b-spacing", "b-nextinline", "b-tipoftongue", "b-levelsprocessing", "b-generation", "b-telescoping", "b-leveling", "b-verbatim", "b-reminiscence", "b-moodcongruent", "f-adhominem", "f-tuquoque", "f-strawman", "f-redherring", "f-authority", "f-popularity", "f-emotion", "f-fear", "f-nature", "f-tradition", "f-novelty", "f-ignorance", "f-consequences", "f-genetic", "f-poisonwell", "f-loadedquestion", "f-burden", "f-gishgallop", "f-motteandbailey", "f-fallacyfallacy", "f-affirmconsequent", "f-denyantecedent", "f-undistributed", "f-circular", "f-falsedilemma", "f-slipperyslope", "f-postthoc", "f-cumhoc", "f-hasty", "f-cherrypicking", "f-composition", "f-division", "f-equivocation", "f-notruescotsman", "f-specialpleading", "f-movinggoalposts", "f-middleground", "f-falseequivalence", "f-nirvana", "f-ecological"]], ["lab.html", 5, "Communication & the Pattern Lab", "Communication, negotiation, persuasion, pattern recognition and a lab to predict your next meeting.", "c6", [["🗣️", "First principles of communication", 21], ["🤝", "Negotiation", 22], ["📣", "Persuasion & influence", 21], ["🕵️", "Pattern recognition & reading people", 14]], ["c-shannon", "c-audiencefirst", "c-bluf", "c-intent", "c-grice", "c-watzlawick", "c-foursides", "c-mehrabian", "c-activelistening", "c-johari", "c-psychsafety", "c-nvc", "c-crucial", "c-story", "c-signalnoise", "c-memo", "c-medium", "c-readback", "c-ruleofthree", "c-questions", "c-feedforward", "n-batna", "n-zopa", "n-principled", "n-interests", "n-integrative", "n-fixedpie", "n-anchoring", "n-nash", "n-ultimatum", "n-rubinstein", "n-schelling", "n-voss", "n-concessions", "n-mesos", "n-precise", "n-emotions", "n-twolevel", "n-repeated", "n-deadlines", "n-salary", "n-mediation", "n-3d", "s-rhetoric", "s-elm", "s-socialjudgment", "s-source", "s-sleeper", "s-inoculation", "s-twosided", "s-twostep", "s-moralreframing", "s-deepcanvass", "s-fear", "s-nudge", "s-currencies", "s-bases", "s-minority", "s-selfpersuasion", "s-because", "s-minimal", "s-selfaffirmation", "s-firehose", "s-ethics", "p-sherlock", "p-abduction", "p-rpd", "p-intuitionconditions", "p-chunking", "p-thinslicing", "p-informalnetwork", "p-prewiring", "p-hippo", "p-baseratespeople", "p-calibration", "p-fieldnotes", "p-emotionalcontagion", "p-falsepatterns"]], ["leadership.html", 6, "Leadership, management & strategy", "Leadership theories, OKRs, Deming, team design and strategy from Porter to 7 Powers.", "c3", [["🧭", "Leadership", 22], ["📋", "Management", 22], ["♟️", "Strategy", 22]], ["l-trait", "l-styles", "l-behaviour", "l-fiedler", "l-situational", "l-pathgoal", "l-lmx", "l-transform", "l-servant", "l-authentic", "l-charisma", "l-level5", "l-theoryxy", "l-herzberg", "l-hackman", "l-adaptive", "l-goleman", "l-highoutput", "l-leaderleader", "l-shared", "l-followership", "l-romance", "m-okr", "m-goalsetting", "m-mbo", "m-northstar", "m-scorecard", "m-taylor", "m-fayol", "m-hawthorne", "m-mintzberg", "m-structure", "m-span", "m-7s", "m-deming", "m-lean", "m-learningorg", "m-kotter", "m-stackrank", "m-teamtopologies", "m-selfmanagement", "m-drucker", "m-hiring", "m-wms", "g-whatis", "g-generic", "g-valuechain", "g-diamond", "g-rbv", "g-corecomp", "g-dynamic", "g-rumelt", "g-playtowin", "g-7powers", "g-emergent", "g-swot", "g-experience", "g-firstmover", "g-coopetition", "g-platforms", "g-uncertainty", "g-scenario", "g-transient", "g-simplerules", "g-classics", "g-execution"]], ["health.html", 7, "Health & wellbeing", "Sleep, movement, autoimmunity and axSpA, allergies, posture, fatigue, brain fog and mental health, with a tracker and exercise plan builder.", "c2", [["🌱", "Foundations: sleep, movement, food & stress", 17], ["🛡️", "Immunity, autoimmunity & axSpA", 10], ["🤧", "Allergies, gut & inflammation claims", 10], ["🦴", "Posture, back & spine", 12], ["🔋", "Fatigue, brain fog & memory", 12], ["🧠", "Mental health & resilience", 13], ["🔬", "Health evidence literacy", 7]], ["h-sleeparch", "h-circadian", "h-insomnia", "h-apnea", "h-activity", "h-cardio", "h-strength", "h-sitting", "h-protein", "h-dietpattern", "h-upf", "h-alcohol", "h-caffeine", "h-weight", "h-allostatic", "h-breathing", "h-sunlight", "h-immune101", "h-inflammation", "h-autoimmunity", "h-axspa", "h-axspatreat", "h-axspaexercise", "h-axspamonitor", "h-extramsk", "h-axspalife", "h-flares", "h-allergy101", "h-hygiene", "h-rhinitis", "h-antihist", "h-avoidance", "h-immunotherapy", "h-microbiome", "h-antiinflamdiet", "h-vitd", "h-omega3", "h-posturemyth", "h-nextposture", "h-backpain", "h-painscience", "h-fearavoid", "h-scoliosis", "h-scoliosisex", "h-ergonomics", "h-core", "h-thoracic", "h-textneck", "h-mobility", "h-fatigue", "h-fatiguecheck", "h-pacing", "h-brainfog", "h-workingmem", "h-goingblank", "h-wordfinding", "h-externalbrain", "h-breaks", "h-naps", "h-exercisebrain", "h-sleepdebt", "h-stressmindset", "h-anxiety", "h-depression", "h-chronicillness", "h-act", "h-mindfulness", "h-selfcompassion", "h-rumination", "h-burnout", "h-loneliness", "h-journaling", "h-painmood", "h-gettinghelp", "h-evidence", "h-absrisk", "h-supplements", "h-nof1", "h-doctor", "h-nocebo", "h-wellnessmyths"]], ["people.html", 8, "Relationships & social life", "Love, friendship, social anxiety and confidence, emotions, boundaries and family.", "c4", [["💞", "Love & partnerships", 14], ["🤝", "Friendship & connection", 10], ["😶‍🌫️", "Social anxiety & confidence", 12], ["🎭", "Emotions & regulation", 9], ["🧱", "Boundaries, conflict & family", 11]], ["r-gottman", "r-bids", "r-ratio", "r-adultattach", "r-lovelanguages", "r-sternberg", "r-investment", "r-capitalization", "r-responsiveness", "r-selfexpansion", "r-36questions", "r-repair", "r-breakup", "r-illnesscouple", "r-friendhours", "r-likinggap", "r-beautifulmess", "r-selfdisclosure", "r-proximity", "r-adultfriends", "r-weakties", "r-strangers", "r-workfriends", "r-maintenance", "r-sad", "r-clarkwells", "r-safety", "r-exposure", "r-postevent", "r-shyintro", "r-smalltalk", "r-rejection", "r-cbtsad", "r-speaking", "r-meetings", "r-socialconfidence", "r-emotiontheory", "r-granularity", "r-affectlabel", "r-regulation", "r-empathy", "r-anger", "r-grief", "r-envy", "r-shame", "r-boundaries", "r-assertive", "r-sayno", "r-difficult", "r-forgiveness", "r-apology", "r-conflictstyles", "r-parenting", "r-family", "r-caregiving", "r-unhealthy"]]];
+const XREF = {"information": ["📡", "Information theory", "theories.html"], "bayes": ["🎲", "Bayesian probability", "theories.html"], "computability": ["🖥️", "Computability & the halting problem", "theories.html"], "complexity": ["⏳", "Computational complexity (P vs NP)", "theories.html"], "cybernetics": ["🔁", "Cybernetics & feedback control", "theories.html"], "godel": ["🔒", "Gödel's incompleteness theorems", "theories.html"], "kolmogorov": ["🗜️", "Algorithmic information (Kolmogorov complexity)", "theories.html"], "gametheory": ["♟️", "Game theory", "theories.html"], "utility": ["⚖️", "Expected utility theory", "theories.html"], "prospect": ["📉", "Prospect theory", "theories.html"], "bounded": ["🧮", "Bounded rationality", "theories.html"], "mechanism": ["🛠️", "Mechanism design & auction theory", "theories.html"], "arrow": ["🗳️", "Social choice & Arrow's impossibility theorem", "theories.html"], "signaling": ["🦚", "Signaling theory", "theories.html"], "bigbang": ["💥", "Big Bang cosmology", "theories.html"], "relativity": ["⏱️", "Relativity", "theories.html"], "quantum": ["⚛️", "Quantum theory", "theories.html"], "thermo": ["🔥", "Thermodynamics & entropy", "theories.html"], "chaos": ["🦋", "Chaos theory", "theories.html"], "noether": ["🪞", "Noether's theorem (symmetry & conservation)", "theories.html"], "plates": ["🌍", "Plate tectonics", "theories.html"], "evolution": ["🐒", "Evolution by natural selection", "theories.html"], "selfishgene": ["🧬", "The gene-centred view & kin selection", "theories.html"], "germ": ["🦠", "Germ theory of disease", "theories.html"], "endosymbiosis": ["🔋", "Endosymbiosis", "theories.html"], "redqueen": ["👑", "The Red Queen hypothesis", "theories.html"], "ess": ["🕊️", "Evolutionarily stable strategies", "theories.html"], "scaling": ["🐘", "Biological scaling laws", "theories.html"], "dualprocess": ["⚡", "Dual-process theory (System 1 & System 2)", "theories.html"], "predictive": ["🔮", "Predictive processing", "theories.html"], "dissonance": ["🎭", "Cognitive dissonance", "theories.html"], "attachment": ["🤝", "Attachment theory", "theories.html"], "tom": ["👁️", "Theory of mind", "theories.html"], "gwt": ["💡", "Global workspace theory of consciousness", "theories.html"], "hebb": ["🧩", "Hebbian learning & neuroplasticity", "theories.html"], "systems": ["🛁", "Systems thinking (stocks, flows & feedback loops)", "theories.html"], "networks": ["🕸️", "Network theory (small worlds & scale-free networks)", "theories.html"], "emergence": ["🐜", "Emergence & complex adaptive systems", "theories.html"], "powerlaw": ["📈", "Power laws & the Pareto principle", "theories.html"], "tipping": ["🔥", "Tipping points & threshold models", "theories.html"], "blackswan": ["🦢", "Black swans & fat-tailed risk", "theories.html"], "comparative": ["🍷", "Comparative advantage", "theories.html"], "commons": ["🐟", "Tragedy of the commons & Ostrom's design principles", "theories.html"], "principalagent": ["🤵", "Principal–agent theory", "theories.html"], "creative": ["🌪️", "Creative destruction", "theories.html"], "diffusion": ["📣", "Diffusion of innovations", "theories.html"], "transaction": ["🏢", "Transaction cost theory (why firms exist)", "theories.html"], "sapirwhorf": ["🗣️", "Linguistic relativity (Sapir–Whorf)", "theories.html"], "ug": ["🔤", "Universal grammar & generative linguistics", "theories.html"], "speechact": ["💬", "Speech act theory", "theories.html"], "semiotics": ["🔣", "Semiotics (signs & meaning)", "theories.html"], "memetics": ["🧫", "Memetics & cultural evolution", "theories.html"], "hofstede": ["🗺️", "Cultural dimensions theory", "theories.html"], "falsifiability": ["🔬", "Falsifiability", "theories.html"], "paradigm": ["🔄", "Paradigm shifts", "theories.html"], "neuroplasticity": ["🌱", "Neuroplasticity & deliberate practice", "theories.html"], "dopamine": ["🎰", "Dopamine loops & reward prediction", "theories.html"], "dmn": ["🌀", "Default mode network", "theories.html"], "attnresidue": ["🔀", "Attention residue", "theories.html"], "flow": ["🌊", "Flow state", "theories.html"], "deepwork": ["🧘", "Deep work", "theories.html"], "cogload": ["🧠", "Cognitive load theory", "theories.html"], "spaced": ["📅", "Spaced repetition & the forgetting curve", "theories.html"], "sleep": ["😴", "Sleep & memory consolidation", "theories.html"], "zeigarnik": ["📌", "Zeigarnik & Ovsiankina effects", "theories.html"], "habits": ["🔄", "Habit formation (cue–routine–reward)", "theories.html"], "psychocyb": ["🎯", "Psycho-Cybernetics (self-image as a guidance system)", "theories.html"], "selfefficacy": ["💪", "Self-efficacy", "theories.html"], "mindset": ["🌿", "Growth mindset", "theories.html"], "pygmalion": ["🔮", "Self-fulfilling prophecy & the Pygmalion effect", "theories.html"], "placebo": ["💊", "Placebo & expectation effects", "theories.html"], "goddard": ["✨", "Neville Goddard's Law of Assumption", "theories.html"], "mentalcontrast": ["🪜", "Mental contrasting & implementation intentions (WOOP)", "theories.html"], "hedonic": ["🎡", "The hedonic treadmill", "theories.html"], "sdt": ["🧭", "Self-determination theory", "theories.html"], "locus": ["🎛️", "Locus of control", "theories.html"], "stoic": ["🏛️", "Stoic dichotomy of control", "theories.html"], "maximizers": ["🛒", "Maximizers vs. satisficers (the paradox of choice)", "theories.html"], "peakend": ["⛰️", "Peak–end rule", "theories.html"], "asymmetric": ["📐", "Asymmetric bets (convexity)", "theories.html"], "permissionless": ["🛠️", "Permissionless leverage (code & media)", "theories.html"], "specificknow": ["🔑", "Specific knowledge", "theories.html"], "compounding": ["📈", "Compounding", "theories.html"], "defaultgame": ["🎲", "Escaping the default game", "theories.html"], "valuemax": ["💎", "Value maxing (rare & valuable skills)", "theories.html"], "owntime": ["⏳", "Owning your time (time affluence)", "theories.html"], "influence": ["📣", "From ideas to influence (persuasion & stickiness)", "theories.html"], "lindy": ["🏺", "The Lindy effect", "theories.html"], "antifragile": ["🔥", "Antifragility & optionality", "theories.html"], "kelly": ["🎯", "The Kelly criterion", "theories.html"], "ergodicity": ["🎡", "Ergodicity (ensemble vs. time averages)", "theories.html"], "matthew": ["🧲", "The Matthew effect (cumulative advantage)", "theories.html"], "truefans": ["🤝", "1,000 true fans", "theories.html"], "luck": ["🍀", "Luck surface area", "theories.html"], "firstprinciples": ["⚛️", "First-principles thinking", "theories.html"], "inversion": ["🙃", "Inversion", "theories.html"], "secondorder": ["🔭", "Second-order thinking", "theories.html"], "competence": ["⭕", "Circle of competence", "theories.html"], "occam": ["🪒", "Occam's razor", "theories.html"], "goodhart": ["🎯", "Goodhart's law", "theories.html"], "parkinson": ["⌛", "Parkinson's law", "theories.html"], "chesterton": ["🚧", "Chesterton's fence", "theories.html"], "mapterritory": ["🗺️", "The map is not the territory", "theories.html"], "regretmin": ["🧓", "Regret minimization framework", "theories.html"], "planning": ["📆", "Planning fallacy & reference-class forecasting", "theories.html"], "planck": ["🌡️", "Planck's quanta and black-body radiation", "theories.html"], "photoelectric": ["☀️", "The photoelectric effect and photons", "theories.html"], "bohr": ["🌈", "The Bohr atom and spectral lines", "theories.html"], "debroglie": ["🌊", "Matter waves", "theories.html"], "schrodinger": ["🎸", "The Schrödinger equation", "theories.html"], "born": ["🎲", "The Born rule", "theories.html"], "superposition": ["🐈", "Superposition and qubits", "theories.html"], "uncertainty": ["📏", "The uncertainty principle", "theories.html"], "tunnelling": ["🚇", "Quantum tunnelling", "theories.html"], "spin": ["🧲", "Spin and the Stern-Gerlach experiment", "theories.html"], "pauli": ["🧱", "The Pauli exclusion principle", "theories.html"], "entanglement": ["🔗", "Entanglement and Bell's theorem", "theories.html"], "interpretations": ["🤔", "Interpretations of quantum mechanics", "theories.html"], "decoherence": ["🌫️", "Decoherence", "theories.html"], "qft": ["✨", "Quantum field theory and QED", "theories.html"], "standardmodel": ["🧩", "The Standard Model of particle physics", "theories.html"], "qcomputing": ["🖥️", "Quantum computing", "theories.html"], "nocloning": ["🔐", "No-cloning and quantum cryptography", "theories.html"], "stringtheory": ["🎻", "String theory", "theories.html"], "holographic": ["🪟", "The holographic principle and AdS/CFT", "theories.html"], "lqg": ["➰", "Loop quantum gravity", "theories.html"], "hawkingrad": ["🕳️", "Hawking radiation and the information paradox", "theories.html"], "landscape": ["🏔️", "The string landscape and the multiverse", "theories.html"], "realism": ["🏰", "Realism & great-power politics", "society.html"], "powertransition": ["⚔️", "Power transition theory & the Thucydides trap", "society.html"], "hegemonic": ["🌐", "Hegemonic stability theory", "society.html"], "socialcontract": ["📜", "Social contract theory", "society.html"], "democraticpeace": ["🕊️", "Democratic peace theory", "society.html"], "softpower": ["🎬", "Soft power", "society.html"], "greatman": ["🗿", "Great man vs. structural theories of history", "society.html"], "utilitarianism": ["⚖️", "Utilitarianism", "society.html"], "deontology": ["📜", "Deontology and Kant's categorical imperative", "society.html"], "virtueethics": ["🏺", "Virtue ethics", "society.html"], "trolley": ["🚋", "The trolley problem", "society.html"], "rawls": ["🎭", "Rawls's veil of ignorance", "society.html"], "careethics": ["🤲", "The ethics of care", "society.html"], "harmprinciple": ["🗽", "Mill's harm principle", "society.html"], "isought": ["🌉", "Hume's is-ought gap", "society.html"], "relativism": ["🌍", "Moral relativism vs moral realism", "society.html"], "experiencemachine": ["🥽", "Nozick's experience machine", "society.html"], "existentialism": ["🚪", "Existentialism", "society.html"], "absurdism": ["🪨", "Camus and the absurd", "society.html"], "nietzsche": ["⚡", "Nietzsche: God is dead and the revaluation of values", "society.html"], "platocave": ["🕯️", "Plato's allegory of the cave", "society.html"], "rationalism": ["🧠", "Rationalism vs empiricism", "society.html"], "induction": ["🦃", "Hume's problem of induction", "society.html"], "mindbody": ["🫀", "The mind-body problem", "society.html"], "hardproblem": ["🦇", "The hard problem of consciousness", "society.html"], "chineseroom": ["🀄", "Searle's Chinese Room", "society.html"], "freewill": ["🎲", "Free will and determinism", "society.html"], "personalidentity": ["🚢", "Personal identity and the Ship of Theseus", "society.html"], "pragmatism": ["🔧", "Pragmatism", "society.html"], "wittgenstein": ["🗣️", "Wittgenstein: meaning as use", "society.html"], "buddhistphil": ["☸️", "Buddhist philosophy: impermanence and no-self", "society.html"], "taoism": ["☯️", "Taoism: wu wei and the way", "society.html"], "mercantilism": ["⚓", "Mercantilism", "society.html"], "classical": ["📌", "Classical economics", "society.html"], "marxian": ["⚒️", "Marxian economics", "society.html"], "marginalism": ["📐", "The marginal revolution and neoclassical economics", "society.html"], "keynesian": ["🎩", "Keynesian economics", "society.html"], "austrian": ["🏔️", "The Austrian school", "society.html"], "monetarism": ["💵", "Monetarism", "society.html"], "phillips": ["📉", "The Phillips curve", "society.html"], "ratexp": ["🔮", "Rational expectations and new classical economics", "society.html"], "newkeynesian": ["🏦", "The New Keynesian synthesis and inflation targeting", "society.html"], "mmt": ["🖨️", "Modern Monetary Theory (MMT)", "society.html"], "minsky": ["🎢", "Minsky's financial instability hypothesis", "society.html"], "supplyside": ["✂️", "Supply-side economics and the Laffer curve", "society.html"], "publicchoice": ["🗳️", "Public choice theory", "society.html"], "institutional": ["🏛️", "Institutional economics", "society.html"], "emh": ["📈", "The efficient market hypothesis", "society.html"], "behavioralecon": ["🧠", "Behavioural economics", "society.html"], "georgism": ["🏡", "Georgism and the land value tax", "society.html"], "capabilities": ["🌱", "Development economics and Sen's capability approach", "society.html"], "maslow": ["🔺", "Maslow's hierarchy of needs", "society.html"], "adultattachment": ["💞", "Adult attachment styles", "society.html"], "psychoanalysis": ["🛋️", "Freud and psychoanalysis", "society.html"], "jung": ["🌓", "Jung: archetypes, the shadow and psychological types", "society.html"], "classicalcond": ["🔔", "Classical conditioning", "society.html"], "operant": ["🐀", "Operant conditioning", "society.html"], "piaget": ["🧒", "Piaget's stages of cognitive development", "society.html"], "vygotsky": ["🪜", "Vygotsky's zone of proximal development", "society.html"], "erikson": ["🌱", "Erikson's psychosocial stages", "society.html"], "bigfive": ["🖐️", "The Big Five personality traits", "society.html"], "sociallearning": ["👀", "Social learning theory", "society.html"], "milgram": ["⚡", "Milgram's obedience experiments", "society.html"], "asch": ["📏", "Asch's conformity experiments", "society.html"], "stanfordprison": ["🔒", "The Stanford prison experiment", "society.html"], "learnedhelpless": ["🐕", "Learned helplessness", "society.html"], "positivepsych": ["😊", "Positive psychology and PERMA", "society.html"], "cbt": ["🧠", "Cognitive behavioural therapy", "society.html"], "humanistic": ["🌻", "Humanistic psychology and Carl Rogers", "society.html"], "iq": ["🧮", "General intelligence (g) and IQ", "society.html"], "multipleintel": ["🎨", "Multiple intelligences (and the learning styles myth)", "society.html"], "eq": ["💬", "Emotional intelligence", "society.html"], "marshmallow": ["🍡", "The marshmallow test (delay of gratification)", "society.html"], "yerkesdodson": ["📈", "Yerkes-Dodson law (arousal and performance)", "society.html"], "griefstages": ["🕯️", "The five stages of grief", "society.html"], "dunbar": ["👥", "Dunbar's number", "society.html"], "terrormgmt": ["💀", "Terror management theory", "society.html"], "conflicttheory": ["⚔️", "Conflict theory", "society.html"], "functionalism": ["🧩", "Structural functionalism", "society.html"], "symbolicinteraction": ["🪞", "Symbolic interactionism", "society.html"], "dramaturgy": ["🎭", "Goffman's dramaturgy", "society.html"], "anomie": ["🌫️", "Anomie and strain theory", "society.html"], "weber": ["🏛️", "Weber: rationalisation, bureaucracy and authority", "society.html"], "socialconstruction": ["🧱", "The social construction of reality", "society.html"], "labelling": ["🏷️", "Labelling theory", "society.html"], "socialcapital": ["🤝", "Social capital", "society.html"], "bourdieu": ["🎻", "Bourdieu: habitus, field and cultural capital", "society.html"], "weakties": ["🕸️", "The strength of weak ties", "society.html"], "mobility": ["🪜", "Social stratification and mobility", "society.html"], "intersectionality": ["🔀", "Intersectionality", "society.html"], "mcdonaldization": ["🍟", "McDonaldization", "society.html"], "risksociety": ["☢️", "Risk society", "society.html"], "networksociety": ["🌐", "The network society", "society.html"], "panopticon": ["👁️", "The panopticon and surveillance", "society.html"], "hegemony": ["📣", "Cultural hegemony", "society.html"], "brokenwindows": ["🪟", "Broken windows theory", "society.html"], "contacthyp": ["🤲", "The contact hypothesis", "society.html"], "secularisation": ["⛪", "The secularisation thesis", "society.html"], "leftright": ["🧭", "The left–right spectrum", "society.html"], "liberalism": ["🗽", "Liberalism", "society.html"], "libertarianism": ["🔓", "Libertarianism", "society.html"], "conservatism": ["🌳", "Conservatism", "society.html"], "socialism": ["🤝", "Socialism", "society.html"], "communism": ["🚩", "Communism", "society.html"], "socialdemocracy": ["🏘️", "Social democracy", "society.html"], "anarchism": ["🏴", "Anarchism", "society.html"], "fascism": ["🪖", "Fascism", "society.html"], "totalitarianism": ["👁️", "Totalitarianism", "society.html"], "nationalism": ["🗺️", "Nationalism", "society.html"], "feminism": ["♀️", "Feminism", "society.html"], "greenpolitics": ["🌿", "Green political theory", "society.html"], "communitarianism": ["🏡", "Communitarianism", "society.html"], "republicanism": ["🏛️", "Civic republicanism", "society.html"], "machiavelli": ["🦊", "Machiavelli's political realism", "society.html"], "populism": ["📣", "Populism", "society.html"], "democracytheory": ["🗳️", "Theories of democracy", "society.html"], "pluralism": ["🕸️", "Pluralism and its critics", "society.html"], "ironlaw": ["⛓️", "The iron law of oligarchy", "society.html"], "separationpowers": ["⚖️", "Separation of powers", "society.html"], "medianvoter": ["🎯", "The median voter theorem", "society.html"], "overton": ["🪟", "The Overton window", "society.html"], "cyclical": ["🔄", "Cyclical theories of history", "society.html"], "ibnkhaldun": ["🐪", "Ibn Khaldun and asabiyyah", "society.html"], "spengler": ["🍂", "Spengler and Toynbee: civilisations as life cycles", "society.html"], "cliodynamics": ["📈", "Cliodynamics and structural-demographic theory", "society.html"], "kondratiev": ["🌊", "Kondratiev waves and techno-economic cycles", "society.html"], "generations": ["👪", "Strauss–Howe generational theory", "society.html"], "progress": ["🪜", "The idea of progress and Whig history", "society.html"], "histmaterialism": ["🏭", "Historical materialism", "society.html"], "annales": ["🗺️", "The Annales school and the longue durée", "society.html"], "geodeterminism": ["🌍", "Geographic determinism", "society.html"], "malthus": ["🌾", "The Malthusian trap", "society.html"], "collapse": ["🏚️", "Theories of societal collapse", "society.html"], "pathdependence": ["⌨️", "Path dependence and lock-in", "society.html"], "contingency": ["🎲", "Contingency and counterfactual history", "society.html"], "greatdivergence": ["⚙️", "The Great Divergence", "society.html"], "axialage": ["🕯️", "The Axial Age", "society.html"], "worldsystems": ["🕸️", "World-systems theory", "society.html"], "clashcivs": ["🌐", "The clash of civilisations", "society.html"], "fateofempires": ["🏛️", "Glubb's Fate of Empires", "society.html"], "stoicism": ["🏛️", "Stoicism: virtue as the only good", "models.html"], "impressions": ["👁️", "Judgements, not things, upset us", "models.html"], "threedisc": ["🔺", "The three disciplines", "models.html"], "premeditatio": ["🌧️", "Premeditatio malorum (negative visualisation)", "models.html"], "mementomori": ["⏳", "Memento mori", "models.html"], "amorfati": ["🔥", "Amor fati (love of fate)", "models.html"], "obstacleway": ["🧗", "The obstacle is the way", "models.html"], "viewabove": ["🌍", "The view from above", "models.html"], "discomfort": ["🧊", "Voluntary discomfort", "models.html"], "eveningreview": ["🌙", "The evening review", "models.html"], "hierocles": ["⭕", "Hierocles' circles (the expanding circle)", "models.html"], "wealthmoney": ["💎", "Wealth vs. money vs. status", "models.html"], "valuecreation": ["🥧", "Wealth is created: the pie isn't fixed", "models.html"], "productivity": ["⚙️", "Productivity: the long-run engine", "models.html"], "ownership": ["🏠", "Ownership vs. renting your time", "models.html"], "savingsrate": ["🏁", "Savings rate & financial independence", "models.html"], "diversify": ["🧺", "Diversification", "models.html"], "indexcost": ["📉", "Index funds & the cost of costs", "models.html"], "inflation": ["🎈", "Inflation & real returns", "models.html"], "opportunitycost": ["⚖️", "Opportunity cost", "models.html"], "humancapital": ["🎓", "Human capital", "models.html"], "debt": ["⛓️", "Debt & compounding in reverse", "models.html"], "enough": ["🫖", "Enough (lifestyle creep & moving goalposts)", "models.html"], "hanlon": ["🤷", "Hanlon's razor", "models.html"], "survivorship": ["✈️", "Survivorship bias", "models.html"], "marginsafety": ["🛡️", "Margin of safety", "models.html"], "incentives": ["🥕", "Incentives drive behaviour", "models.html"], "regression": ["↩️", "Regression to the mean", "models.html"], "sunkcost": ["🕳️", "Sunk cost fallacy", "models.html"], "availability": ["📰", "Availability heuristic", "models.html"], "anchoring": ["⚓", "Anchoring", "models.html"], "resulting": ["🃏", "Resulting (decisions vs outcomes)", "models.html"], "localoptimum": ["⛰️", "Local vs global optimum", "models.html"], "leveragepoints": ["🎚️", "Leverage points", "models.html"], "steelman": ["🏗️", "Steelmanning & the principle of charity", "models.html"], "thoughtexp": ["💭", "Thought experiments", "models.html"], "activation": ["🧪", "Activation energy & catalysts", "models.html"], "moats": ["🏰", "Economic moats", "models.html"], "diminishing": ["📉", "Diminishing returns", "models.html"], "cargocult": ["🛬", "Cargo cult thinking", "models.html"], "eisenhower": ["📥", "The Eisenhower matrix (urgent vs important)", "models.html"], "twodoors": ["🚪", "One-way and two-way doors", "models.html"], "decisionmatrix": ["🧮", "Weighted decision matrix", "models.html"], "impacteffort": ["🎯", "Impact-effort matrix", "models.html"], "cynefin": ["🧭", "Cynefin framework", "models.html"], "tententen": ["🔟", "10/10/10", "models.html"], "premortem": ["⚰️", "The pre-mortem", "models.html"], "dectree": ["🌳", "Expected value & decision trees", "models.html"], "ooda": ["🔁", "The OODA loop", "models.html"], "sixhats": ["🎩", "Six Thinking Hats", "models.html"], "rapid": ["🗳️", "Decision rights: RAPID & DACI", "models.html"], "wrap": ["🎁", "The WRAP process", "models.html"], "fivewhys": ["❓", "The five whys", "models.html"], "issuetree": ["🌳", "Issue trees & MECE", "models.html"], "minto": ["🔺", "The pyramid principle (SCQA)", "models.html"], "abstraction": ["🪜", "Abstraction laddering", "models.html"], "iceberg": ["🧊", "The iceberg model", "models.html"], "ladder": ["🪜", "The ladder of inference", "models.html"], "fishbone": ["🐟", "Fishbone (Ishikawa) diagram", "models.html"], "rubberduck": ["🦆", "Rubber duck debugging", "models.html"], "doublediamond": ["💠", "The double diamond", "models.html"], "sbi": ["💬", "Situation–Behaviour–Impact feedback", "models.html"], "covey": ["⭕", "Circle of concern vs circle of influence", "models.html"], "radicalcandor": ["🎯", "Radical Candor", "models.html"], "irontriangle": ["🔺", "The iron triangle", "models.html"], "cpm": ["🛤️", "Critical path method", "models.html"], "pert": ["📐", "PERT & three-point estimates", "models.html"], "toc": ["⛓️", "Theory of constraints", "models.html"], "littles": ["🚰", "Little's law & WIP limits", "models.html"], "brooks": ["👥", "Brooks's law", "models.html"], "wbs": ["🧱", "Work breakdown structure", "models.html"], "agile": ["🔄", "Agile & Scrum", "models.html"], "kanban": ["🗂️", "Kanban", "models.html"], "cone": ["🍦", "The cone of uncertainty", "models.html"], "raci": ["📋", "RACI matrix", "models.html"], "tuckman": ["👫", "Forming, storming, norming, performing", "models.html"], "conway": ["🏗️", "Conway's law", "models.html"], "ninety": ["⏳", "The ninety-ninety rule", "models.html"], "riskmatrix": ["🟥", "Risk matrix", "models.html"], "kano": ["😍", "The Kano model", "models.html"], "chasm": ["🌉", "Crossing the chasm", "models.html"], "hook": ["🪝", "The Hook model", "models.html"], "aarrr": ["🏴‍☠️", "Pirate metrics (AARRR)", "models.html"], "leanstartup": ["🧪", "The Lean Startup", "models.html"], "pmf": ["🧩", "Product–market fit", "models.html"], "heart": ["❤️", "The HEART framework", "models.html"], "moscow": ["📌", "MoSCoW prioritisation", "models.html"], "bmc": ["🧾", "Business Model Canvas", "models.html"], "fogg": ["⚙️", "Fogg behaviour model (B = MAP)", "models.html"], "blueocean": ["🌊", "Blue ocean strategy", "models.html"], "shapeup": ["⛰️", "Shape Up", "models.html"], "wardley": ["🗺️", "Wardley mapping", "models.html"], "threehorizons": ["🌅", "Three horizons of growth", "models.html"], "pareto": ["🥧", "The Pareto principle (80/20 rule)", "models.html"], "hofstadter": ["🌀", "Hofstadter's law", "models.html"], "peter": ["🪜", "The Peter Principle", "models.html"], "hicks": ["🔀", "Hick's law (Hick-Hyman law)", "models.html"], "dunningkruger": ["🏔️", "The Dunning-Kruger effect", "models.html"], "murphy": ["🍞", "Murphy's law", "models.html"], "sturgeon": ["🗑️", "Sturgeon's law", "models.html"], "moore": ["💾", "Moore's law", "models.html"], "amdahl": ["🧮", "Amdahl's law", "models.html"], "gall": ["🌱", "Gall's law", "models.html"], "metcalfe": ["🕸️", "Metcalfe's law", "models.html"], "postel": ["📨", "Postel's law (the robustness principle)", "models.html"], "hyrum": ["🔗", "Hyrum's law", "models.html"], "fitts": ["🎯", "Fitts's law", "models.html"], "jakob": ["🧭", "Jakob's law", "models.html"], "tesler": ["⚖️", "Tesler's law (conservation of complexity)", "models.html"], "cunningham": ["💬", "Cunningham's law", "models.html"], "fae": ["🔍", "The fundamental attribution error", "models.html"], "benfranklin": ["📖", "The Ben Franklin effect", "models.html"], "tmt": ["⏳", "Temporal motivation theory (the procrastination equation)", "models.html"], "halo": ["😇", "The halo effect", "models.html"], "ikea": ["🔧", "The IKEA effect", "models.html"], "pratfall": ["☕", "The pratfall effect", "models.html"], "mereexposure": ["🔁", "The mere exposure effect", "models.html"], "spotlight": ["🔦", "The spotlight effect", "models.html"], "curseknowledge": ["🥁", "The curse of knowledge", "models.html"], "bystander": ["🚶", "The bystander effect", "models.html"], "ringelmann": ["🪢", "The Ringelmann effect and social loafing", "models.html"], "reactance": ["🚫", "Psychological reactance", "models.html"], "gantt": ["📊", "Gantt charts", "models.html"], "evm": ["💹", "Earned value management", "models.html"], "burndown": ["📉", "Burndown charts & velocity", "models.html"], "planningpoker": ["🃏", "Planning poker & story points", "models.html"], "criticalchain": ["🔗", "Critical chain", "models.html"], "montecarlo": ["🎲", "Monte Carlo forecasting", "models.html"], "stakeholdermap": ["🎯", "Stakeholder mapping (power–interest grid)", "models.html"], "scopecreep": ["🐛", "Scope creep & change control", "models.html"], "retro": ["🔁", "Retrospectives & blameless postmortems", "models.html"], "pdca": ["♻️", "PDCA (the Deming cycle)", "models.html"], "sevenwastes": ["🗑️", "The seven wastes (muda)", "models.html"], "dmaic": ["📏", "Six Sigma & DMAIC", "models.html"], "rollingwave": ["🔭", "Rolling wave planning", "models.html"], "plc": ["📈", "Product life cycle", "models.html"], "innovatorsdilemma": ["🧨", "The innovator's dilemma", "models.html"], "hypecycle": ["🎢", "The hype cycle", "models.html"], "growthloops": ["➰", "Growth loops", "models.html"], "plg": ["🚀", "Product-led growth", "models.html"], "ahamoment": ["💡", "Aha moments & activation", "models.html"], "vanwestendorp": ["💷", "Van Westendorp price sensitivity meter", "models.html"], "decoy": ["🎭", "The decoy effect", "models.html"], "porter5": ["🖐️", "Porter's five forces", "models.html"], "ansoff": ["🧭", "The Ansoff matrix", "models.html"], "bcg": ["🐄", "BCG growth-share matrix", "models.html"], "odi": ["🔍", "Outcome-driven innovation", "models.html"], "dualtrack": ["🔀", "Dual-track agile (continuous discovery)", "models.html"], "b-availability": ["🧠", "Availability heuristic", "biases.html"], "b-attentional": ["🎯", "Attentional bias", "biases.html"], "b-illusorytruth": ["🔁", "Illusory truth effect", "biases.html"], "b-mereexposure": ["👀", "Mere exposure effect", "biases.html"], "b-frequency": ["🔭", "Frequency illusion (Baader-Meinhof phenomenon)", "biases.html"], "b-salience": ["💡", "Salience bias", "biases.html"], "b-negativity": ["⚡", "Negativity bias", "biases.html"], "b-vonrestorff": ["🟥", "Von Restorff effect (isolation effect)", "biases.html"], "b-bizarreness": ["🦄", "Bizarreness effect", "biases.html"], "b-humor": ["😂", "Humour effect", "biases.html"], "b-picturesup": ["🖼️", "Picture superiority effect", "biases.html"], "b-selfreference": ["🪞", "Self-reference effect", "biases.html"], "b-context": ["🧩", "Context effect", "biases.html"], "b-contrast": ["⚖️", "Contrast effect", "biases.html"], "b-distinction": ["🔍", "Distinction bias", "biases.html"], "b-anchoring": ["⚓", "Anchoring bias", "biases.html"], "b-framing": ["🖌️", "Framing effect", "biases.html"], "b-focusing": ["🔦", "Focusing illusion", "biases.html"], "b-weberfechner": ["📏", "Weber-Fechner law", "biases.html"], "b-moneyillusion": ["💵", "Money illusion", "biases.html"], "b-baserate": ["🚕", "Base rate neglect", "biases.html"], "b-empathygap": ["🥵", "Hot-cold empathy gap", "biases.html"], "b-inattentional": ["🦍", "Inattentional blindness", "biases.html"], "b-changeblind": ["🔄", "Change blindness", "biases.html"], "b-novelty": ["✨", "Novelty bias", "biases.html"], "b-confirmation": ["🔎", "Confirmation bias", "biases.html"], "b-congruence": ["🧪", "Congruence bias", "biases.html"], "b-beliefbias": ["📐", "Belief bias", "biases.html"], "b-perseverance": ["🧱", "Belief perseverance", "biases.html"], "b-backfire": ["🪃", "Backfire effect", "biases.html"], "b-continuedinfluence": ["🔥", "Continued influence effect", "biases.html"], "b-semmelweis": ["🧼", "Semmelweis reflex", "biases.html"], "b-selectiveperception": ["🏈", "Selective perception", "biases.html"], "b-observerexpectancy": ["🐴", "Observer-expectancy effect", "biases.html"], "b-subjectivevalidation": ["🔮", "Subjective validation", "biases.html"], "b-forer": ["🎭", "Barnum effect (Forer effect)", "biases.html"], "b-choicesupportive": ["✅", "Choice-supportive bias", "biases.html"], "b-postpurchase": ["🛍️", "Post-purchase rationalisation", "biases.html"], "b-ostrich": ["🙈", "Ostrich effect", "biases.html"], "b-motivated": ["🧲", "Motivated reasoning", "biases.html"], "b-blindspot": ["🕶️", "Bias blind spot", "biases.html"], "b-naiverealism": ["🌍", "Naive realism", "biases.html"], "b-naivecynicism": ["🤨", "Naive cynicism", "biases.html"], "b-myside": ["🚩", "Myside bias", "biases.html"], "b-hostilemedia": ["📺", "Hostile media effect", "biases.html"], "b-explanatorydepth": ["🚽", "Illusion of explanatory depth", "biases.html"], "b-illusionvalidity": ["🪖", "Illusion of validity", "biases.html"], "b-attitudepolarization": ["🧨", "Attitude polarisation", "biases.html"], "b-reactivedevaluation": ["🤝", "Reactive devaluation", "biases.html"], "b-notinventedhere": ["🏗️", "Not-invented-here syndrome", "biases.html"], "b-clustering": ["🎯", "Clustering illusion", "biases.html"], "b-gamblers": ["🎰", "Gambler's fallacy", "biases.html"], "b-hothand": ["🏀", "Hot-hand fallacy", "biases.html"], "b-illusorycorrelation": ["🔗", "Illusory correlation", "biases.html"], "b-pareidolia": ["🌝", "Pareidolia", "biases.html"], "b-samplesize": ["🏥", "Insensitivity to sample size", "biases.html"], "b-smallnumbers": ["🔢", "Belief in the law of small numbers", "biases.html"], "b-probneglect": ["⚡", "Neglect of probability", "biases.html"], "b-conjunction": ["👩‍💼", "Conjunction fallacy (Linda problem)", "biases.html"], "b-representativeness": ["🪞", "Representativeness heuristic", "biases.html"], "b-texassharpshooter": ["🤠", "Texas sharpshooter fallacy", "biases.html"], "b-subadditivity": ["➕", "Subadditivity effect", "biases.html"], "b-scope": ["🐦", "Scope insensitivity", "biases.html"], "b-probmatching": ["🎲", "Probability matching", "biases.html"], "b-prosecutors": ["⚖️", "Prosecutor's fallacy", "biases.html"], "b-recency": ["📅", "Recency bias", "biases.html"], "b-exponential": ["📈", "Exponential growth bias", "biases.html"], "b-normalcy": ["🌊", "Normalcy bias", "biases.html"], "b-berkson": ["🎓", "Berkson's paradox", "biases.html"], "b-simpson": ["🔀", "Simpson's paradox", "biases.html"], "b-ludic": ["🃏", "Ludic fallacy", "biases.html"], "b-narrative": ["📖", "Narrative fallacy", "biases.html"], "b-agentdetection": ["👣", "Hyperactive agency detection", "biases.html"], "b-anthropomorphism": ["🤖", "Anthropomorphism", "biases.html"], "b-magicalthinking": ["🔮", "Magical thinking", "biases.html"], "b-fae": ["👉", "Fundamental attribution error", "biases.html"], "b-actorobserver": ["🎭", "Actor–observer asymmetry", "biases.html"], "b-groupattribution": ["🏛️", "Group attribution error", "biases.html"], "b-ultimateattribution": ["🧭", "Ultimate attribution error", "biases.html"], "b-halo": ["😇", "Halo effect", "biases.html"], "b-horn": ["😈", "Horn effect", "biases.html"], "b-ingroup": ["🧢", "In-group favouritism", "biases.html"], "b-outgroup": ["👥", "Out-group homogeneity", "biases.html"], "b-crossrace": ["🧑‍🤝‍🧑", "Cross-race effect", "biases.html"], "b-stereotyping": ["🏷️", "Stereotyping", "biases.html"], "b-justworld": ["⚖️", "Just-world hypothesis", "biases.html"], "b-defensiveattr": ["🛡️", "Defensive attribution", "biases.html"], "b-traitascription": ["🎨", "Trait ascription bias", "biases.html"], "b-asymmetricinsight": ["🔍", "Illusion of asymmetric insight", "biases.html"], "b-transparency": ["🫥", "Illusion of transparency", "biases.html"], "b-curseknowledge": ["🧠", "Curse of knowledge", "biases.html"], "b-spotlight": ["🔦", "Spotlight effect", "biases.html"], "b-falseconsensus": ["🙋", "False consensus effect", "biases.html"], "b-falseuniqueness": ["🦄", "False uniqueness effect", "biases.html"], "b-extrinsicincentives": ["💵", "Extrinsic incentives bias", "biases.html"], "b-cheerleader": ["📣", "Cheerleader effect", "biases.html"], "b-identifiablevictim": ["🧒", "Identifiable victim effect", "biases.html"], "b-moralluck": ["🍀", "Moral luck", "biases.html"], "b-systemjustification": ["🏰", "System justification", "biases.html"], "b-hostileattribution": ["😠", "Hostile attribution bias", "biases.html"], "b-overconfidence": ["🦚", "Overconfidence effect", "biases.html"], "b-overprecision": ["🎯", "Overprecision", "biases.html"], "b-illusorysuperiority": ["🏅", "Illusory superiority (better-than-average effect)", "biases.html"], "b-dunningkruger": ["📉", "Dunning-Kruger effect", "biases.html"], "b-optimism": ["🌈", "Optimism bias", "biases.html"], "b-pessimism": ["🌧️", "Pessimism bias", "biases.html"], "b-planningfallacy": ["📅", "Planning fallacy", "biases.html"], "b-illusioncontrol": ["🎲", "Illusion of control", "biases.html"], "b-selfserving": ["🏆", "Self-serving bias", "biases.html"], "b-egocentric": ["🪞", "Egocentric bias", "biases.html"], "b-hardeasy": ["⚖️", "Hard-easy effect", "biases.html"], "b-restraint": ["🍩", "Restraint bias", "biases.html"], "b-endofhistory": ["🔚", "End-of-history illusion", "biases.html"], "b-projection": ["🔮", "Projection bias", "biases.html"], "b-impact": ["💥", "Impact bias", "biases.html"], "b-introspection": ["🔍", "Introspection illusion", "biases.html"], "b-selfhandicapping": ["🩹", "Self-handicapping", "biases.html"], "b-effortjustification": ["🧗", "Effort justification", "biases.html"], "b-morallicensing": ["😇", "Moral licensing", "biases.html"], "b-proinnovation": ["🚀", "Pro-innovation bias", "biases.html"], "b-thirdperson": ["📺", "Third-person effect", "biases.html"], "b-socialdesirability": ["🎭", "Social desirability bias", "biases.html"], "b-imposter": ["🥸", "Impostor phenomenon", "biases.html"], "b-complexity": ["🧶", "Complexity bias", "biases.html"], "b-selfconsistency": ["🧩", "Self-consistency bias", "biases.html"], "b-lossaversion": ["💸", "Loss aversion", "biases.html"], "b-endowment": ["☕", "Endowment effect", "biases.html"], "b-statusquo": ["🛋️", "Status quo bias", "biases.html"], "b-default": ["⚙️", "Default effect", "biases.html"], "b-sunkcost": ["🕳️", "Sunk cost fallacy", "biases.html"], "b-escalation": ["📈", "Escalation of commitment", "biases.html"], "b-zerorisk": ["0️⃣", "Zero-risk bias", "biases.html"], "b-pseudocertainty": ["🫧", "Pseudocertainty effect", "biases.html"], "b-certainty": ["🔒", "Certainty effect (Allais paradox)", "biases.html"], "b-ambiguity": ["🌫️", "Ambiguity aversion", "biases.html"], "b-disposition": ["📊", "Disposition effect", "biases.html"], "b-hyperbolic": ["⏳", "Hyperbolic discounting (present bias)", "biases.html"], "b-decoy": ["🪤", "Decoy effect", "biases.html"], "b-compromise": ["🥉", "Compromise effect", "biases.html"], "b-lessisbetter": ["🍦", "Less-is-better effect", "biases.html"], "b-denomination": ["💵", "Denomination effect", "biases.html"], "b-mentalaccounting": ["🗂️", "Mental accounting", "biases.html"], "b-housemoney": ["🎰", "House money effect", "biases.html"], "b-unitbias": ["🥨", "Unit bias", "biases.html"], "b-informationbias": ["🔎", "Information bias", "biases.html"], "b-omission": ["🙈", "Omission bias", "biases.html"], "b-riskcompensation": ["⛑️", "Risk compensation", "biases.html"], "b-choiceoverload": ["🍓", "Choice overload", "biases.html"], "b-bikeshedding": ["🚲", "Bikeshedding (law of triviality)", "biases.html"], "b-outcome": ["🎬", "Outcome bias", "biases.html"], "b-bandwagon": ["🚌", "Bandwagon effect", "biases.html"], "b-groupthink": ["🫥", "Groupthink", "biases.html"], "b-authority": ["🎖️", "Authority bias", "biases.html"], "b-automation": ["🤖", "Automation bias", "biases.html"], "b-socialproof": ["👣", "Social proof", "biases.html"], "b-pluralistic": ["🙊", "Pluralistic ignorance", "biases.html"], "b-diffusion": ["🌫️", "Diffusion of responsibility", "biases.html"], "b-grouppolarization": ["🧲", "Group polarisation", "biases.html"], "b-sharedinfo": ["🧩", "Shared information bias", "biases.html"], "b-abilene": ["🌵", "Abilene paradox", "biases.html"], "b-courtesy": ["🙏", "Courtesy bias", "biases.html"], "b-liking": ["😊", "Liking bias", "biases.html"], "b-reciprocity": ["🎁", "Reciprocity bias", "biases.html"], "b-commitment": ["🔗", "Commitment and consistency", "biases.html"], "b-footinthedoor": ["🚪", "Foot-in-the-door technique", "biases.html"], "b-doorinface": ["🧱", "Door-in-the-face technique", "biases.html"], "b-scarcity": ["⏳", "Scarcity effect", "biases.html"], "b-socialcomparison": ["🪞", "Social comparison bias", "biases.html"], "b-availabilitycascade": ["📣", "Availability cascade", "biases.html"], "b-informationcascade": ["🌊", "Information cascade", "biases.html"], "b-herd": ["🐑", "Herd behaviour", "biases.html"], "b-stereotypethreat": ["🎭", "Stereotype threat", "biases.html"], "b-normalizationdeviance": ["🚀", "Normalisation of deviance", "biases.html"], "b-conformity": ["📏", "Conformity (Asch effect)", "biases.html"], "b-obedience": ["⚡", "Obedience to authority", "biases.html"], "b-hindsight": ["🔮", "Hindsight bias", "biases.html"], "b-rosyretro": ["🌹", "Rosy retrospection", "biases.html"], "b-declinism": ["📉", "Declinism", "biases.html"], "b-fadingaffect": ["🌅", "Fading affect bias", "biases.html"], "b-misinformation": ["🚗", "Misinformation effect", "biases.html"], "b-falsememory": ["🎈", "False memory", "biases.html"], "b-sourceconfusion": ["🗂️", "Source confusion", "biases.html"], "b-cryptomnesia": ["🎸", "Cryptomnesia", "biases.html"], "b-suggestibility": ["🗣️", "Suggestibility", "biases.html"], "b-consistencymem": ["🔁", "Consistency bias (memory)", "biases.html"], "b-serialpos": ["📋", "Serial position effect", "biases.html"], "b-peakend": ["🏔️", "Peak–end rule", "biases.html"], "b-durationneglect": ["⏱️", "Duration neglect", "biases.html"], "b-googleeffect": ["🔎", "Google effect (digital amnesia)", "biases.html"], "b-testing": ["📝", "Testing effect (retrieval practice)", "biases.html"], "b-spacing": ["📅", "Spacing effect", "biases.html"], "b-nextinline": ["🎤", "Next-in-line effect", "biases.html"], "b-tipoftongue": ["👅", "Tip-of-the-tongue state", "biases.html"], "b-levelsprocessing": ["🧠", "Levels of processing effect", "biases.html"], "b-generation": ["✍️", "Generation effect", "biases.html"], "b-telescoping": ["🔭", "Telescoping effect", "biases.html"], "b-leveling": ["📞", "Leveling and sharpening", "biases.html"], "b-verbatim": ["💬", "Verbatim effect", "biases.html"], "b-reminiscence": ["🎞️", "Reminiscence bump", "biases.html"], "b-moodcongruent": ["🌧️", "Mood-congruent memory", "biases.html"], "f-adhominem": ["🥊", "Ad hominem", "biases.html"], "f-tuquoque": ["🪞", "Tu quoque and whataboutism", "biases.html"], "f-strawman": ["🌾", "Straw man", "biases.html"], "f-redherring": ["🐟", "Red herring", "biases.html"], "f-authority": ["🎓", "Appeal to authority (misplaced)", "biases.html"], "f-popularity": ["👥", "Appeal to popularity", "biases.html"], "f-emotion": ["😢", "Appeal to emotion", "biases.html"], "f-fear": ["😱", "Appeal to fear", "biases.html"], "f-nature": ["🌿", "Appeal to nature", "biases.html"], "f-tradition": ["🏛️", "Appeal to tradition", "biases.html"], "f-novelty": ["✨", "Appeal to novelty", "biases.html"], "f-ignorance": ["❓", "Argument from ignorance", "biases.html"], "f-consequences": ["🔮", "Appeal to consequences", "biases.html"], "f-genetic": ["🧬", "Genetic fallacy", "biases.html"], "f-poisonwell": ["☠️", "Poisoning the well", "biases.html"], "f-loadedquestion": ["🎣", "Loaded question", "biases.html"], "f-burden": ["🏋️", "Shifting the burden of proof", "biases.html"], "f-gishgallop": ["🐎", "Gish gallop", "biases.html"], "f-motteandbailey": ["🏰", "Motte-and-bailey", "biases.html"], "f-fallacyfallacy": ["🔄", "Fallacy fallacy", "biases.html"], "f-affirmconsequent": ["🔁", "Affirming the consequent", "biases.html"], "f-denyantecedent": ["🚫", "Denying the antecedent", "biases.html"], "f-undistributed": ["🔺", "Undistributed middle", "biases.html"], "f-circular": ["🌀", "Circular reasoning (begging the question)", "biases.html"], "f-falsedilemma": ["🔀", "False dilemma", "biases.html"], "f-slipperyslope": ["⛷️", "Slippery slope", "biases.html"], "f-postthoc": ["⏱️", "Post hoc ergo propter hoc", "biases.html"], "f-cumhoc": ["📈", "Correlation implies causation", "biases.html"], "f-hasty": ["🏃", "Hasty generalisation", "biases.html"], "f-cherrypicking": ["🍒", "Cherry-picking", "biases.html"], "f-composition": ["🧱", "Fallacy of composition", "biases.html"], "f-division": ["✂️", "Fallacy of division", "biases.html"], "f-equivocation": ["🔤", "Equivocation", "biases.html"], "f-notruescotsman": ["🧣", "No true Scotsman", "biases.html"], "f-specialpleading": ["🎫", "Special pleading", "biases.html"], "f-movinggoalposts": ["🥅", "Moving the goalposts", "biases.html"], "f-middleground": ["🤝", "Argument to moderation", "biases.html"], "f-falseequivalence": ["🟰", "False equivalence", "biases.html"], "f-nirvana": ["🌈", "Nirvana fallacy", "biases.html"], "f-ecological": ["🗺️", "Ecological fallacy", "biases.html"], "c-shannon": ["📡", "Communication as a noisy channel", "lab.html"], "c-audiencefirst": ["🎯", "Start from the audience", "lab.html"], "c-bluf": ["⬆️", "Bottom line up front (BLUF)", "lab.html"], "c-intent": ["🧭", "Commander's intent", "lab.html"], "c-grice": ["🤝", "Grice's maxims", "lab.html"], "c-watzlawick": ["🔁", "One cannot not communicate", "lab.html"], "c-foursides": ["👂", "The four-sides model", "lab.html"], "c-mehrabian": ["🗣️", "The 7-38-55 myth", "lab.html"], "c-activelistening": ["🎧", "Active listening", "lab.html"], "c-johari": ["🪟", "The Johari window", "lab.html"], "c-psychsafety": ["🛟", "Psychological safety", "lab.html"], "c-nvc": ["🕊️", "Nonviolent Communication", "lab.html"], "c-crucial": ["🔥", "Crucial conversations", "lab.html"], "c-story": ["📖", "Storytelling and narrative transportation", "lab.html"], "c-signalnoise": ["🔇", "Signal versus noise", "lab.html"], "c-memo": ["📝", "Narrative memos versus slides", "lab.html"], "c-medium": ["📺", "The medium is the message", "lab.html"], "c-readback": ["🔂", "Closing the loop: read-back and teach-back", "lab.html"], "c-ruleofthree": ["3️⃣", "The rule of three", "lab.html"], "c-questions": ["❓", "Asking good questions", "lab.html"], "c-feedforward": ["📬", "Feedback that lands (and feedforward)", "lab.html"], "n-batna": ["🚪", "BATNA: your best alternative", "lab.html"], "n-zopa": ["↔️", "ZOPA and reservation points", "lab.html"], "n-principled": ["🤝", "Principled negotiation (Getting to Yes)", "lab.html"], "n-interests": ["🍊", "Interests, not positions", "lab.html"], "n-integrative": ["🧩", "Distributive vs. integrative bargaining", "lab.html"], "n-fixedpie": ["🥧", "The fixed-pie bias", "lab.html"], "n-anchoring": ["⚓", "First offers and anchoring", "lab.html"], "n-nash": ["⚖️", "The Nash bargaining solution", "lab.html"], "n-ultimatum": ["🎲", "The ultimatum game and fairness", "lab.html"], "n-rubinstein": ["⏳", "Patience and time pressure", "lab.html"], "n-schelling": ["🔥", "Commitment and credible threats", "lab.html"], "n-voss": ["🎙️", "Tactical empathy (Never Split the Difference)", "lab.html"], "n-concessions": ["🪜", "Concessions and reciprocity", "lab.html"], "n-mesos": ["🎛️", "MESOs: several offers at once", "lab.html"], "n-precise": ["🎯", "Precise numbers", "lab.html"], "n-emotions": ["😠", "Emotions in negotiation", "lab.html"], "n-twolevel": ["🏛️", "Two-level games", "lab.html"], "n-repeated": ["🔁", "The shadow of the future", "lab.html"], "n-deadlines": ["⏰", "Deadlines and time pressure", "lab.html"], "n-salary": ["💼", "Salary negotiation and the social cost of asking", "lab.html"], "n-mediation": ["🕊️", "Mediation and third parties", "lab.html"], "n-3d": ["🗺️", "3-D negotiation: set up the table", "lab.html"], "s-rhetoric": ["🏛️", "Ethos, pathos, logos (and kairos)", "lab.html"], "s-elm": ["🛣️", "The elaboration likelihood model", "lab.html"], "s-socialjudgment": ["🎯", "Social judgment theory: latitudes of acceptance", "lab.html"], "s-source": ["🎓", "Source credibility and the Yale approach", "lab.html"], "s-sleeper": ["😴", "The sleeper effect", "lab.html"], "s-inoculation": ["💉", "Inoculation theory and prebunking", "lab.html"], "s-twosided": ["⚖️", "Two-sided messages", "lab.html"], "s-twostep": ["🗣️", "Two-step flow and opinion leaders", "lab.html"], "s-moralreframing": ["🧭", "Moral reframing", "lab.html"], "s-deepcanvass": ["🚪", "Deep canvassing and the power of listening", "lab.html"], "s-fear": ["😨", "Fear appeals (and why efficacy matters)", "lab.html"], "s-nudge": ["👉", "Nudges and choice architecture", "lab.html"], "s-currencies": ["💱", "Influence without authority", "lab.html"], "s-bases": ["👑", "Five bases of power", "lab.html"], "s-minority": ["✊", "Minority influence", "lab.html"], "s-selfpersuasion": ["🪞", "Self-persuasion and motivational interviewing", "lab.html"], "s-because": ["📠", "The power of 'because'", "lab.html"], "s-minimal": ["📉", "Persuasion is harder than it looks", "lab.html"], "s-selfaffirmation": ["🛡️", "Self-affirmation and defensiveness", "lab.html"], "s-firehose": ["🚒", "The firehose of falsehood", "lab.html"], "s-ethics": ["⚖️", "Persuasion vs. manipulation", "lab.html"], "p-sherlock": ["🔍", "The Sherlock Holmes method", "lab.html"], "p-abduction": ["💡", "Abductive reasoning", "lab.html"], "p-rpd": ["🚒", "Recognition-primed decisions", "lab.html"], "p-intuitionconditions": ["🎯", "When to trust intuition", "lab.html"], "p-chunking": ["♟️", "Chunking and expert perception", "lab.html"], "p-thinslicing": ["⏱️", "Thin slicing", "lab.html"], "p-informalnetwork": ["🕸️", "Informal networks and real influence", "lab.html"], "p-prewiring": ["🌱", "Pre-wiring and nemawashi", "lab.html"], "p-hippo": ["🦛", "Meeting dynamics: HiPPOs, anchors and hidden information", "lab.html"], "p-baseratespeople": ["📊", "Base rates for people", "lab.html"], "p-calibration": ["🎲", "Forecasting and calibration", "lab.html"], "p-fieldnotes": ["📝", "Field notes: observe, record, reflect", "lab.html"], "p-emotionalcontagion": ["🌡️", "Emotional contagion and reading the room", "lab.html"], "p-falsepatterns": ["🌀", "False patterns: the dark side of reading people", "lab.html"], "l-trait": ["🧬", "Trait theories: are leaders born?", "leadership.html"], "l-styles": ["🗳️", "Autocratic, democratic, laissez-faire", "leadership.html"], "l-behaviour": ["📐", "Task vs. people: the behavioural school", "leadership.html"], "l-fiedler": ["🧩", "Fiedler's contingency model", "leadership.html"], "l-situational": ["🎚️", "Situational leadership", "leadership.html"], "l-pathgoal": ["🛤️", "Path–goal theory", "leadership.html"], "l-lmx": ["🔗", "Leader–member exchange (LMX)", "leadership.html"], "l-transform": ["🔥", "Transformational vs. transactional leadership", "leadership.html"], "l-servant": ["🙇", "Servant leadership", "leadership.html"], "l-authentic": ["🪞", "Authentic leadership", "leadership.html"], "l-charisma": ["✨", "Charisma and the dark side of leadership", "leadership.html"], "l-level5": ["🏔️", "Level 5 leadership", "leadership.html"], "l-theoryxy": ["🔀", "Theory X and Theory Y", "leadership.html"], "l-herzberg": ["⚖️", "Herzberg's two-factor theory", "leadership.html"], "l-hackman": ["🧱", "Hackman's conditions for effective teams", "leadership.html"], "l-adaptive": ["🌊", "Adaptive leadership", "leadership.html"], "l-goleman": ["🎨", "Goleman's six leadership styles", "leadership.html"], "l-highoutput": ["📈", "High output management: managerial leverage", "leadership.html"], "l-leaderleader": ["⚓", "Leader–leader and mission command", "leadership.html"], "l-shared": ["🤝", "Shared and distributed leadership", "leadership.html"], "l-followership": ["👣", "Followership", "leadership.html"], "l-romance": ["💘", "The romance of leadership", "leadership.html"], "m-okr": ["🎯", "OKRs: objectives and key results", "leadership.html"], "m-goalsetting": ["🏹", "Goal-setting theory", "leadership.html"], "m-mbo": ["📝", "Management by objectives", "leadership.html"], "m-northstar": ["⭐", "North Star metrics and input metrics", "leadership.html"], "m-scorecard": ["📊", "The balanced scorecard", "leadership.html"], "m-taylor": ["⏱️", "Scientific management (Taylorism)", "leadership.html"], "m-fayol": ["🏗️", "Fayol's functions of management", "leadership.html"], "m-hawthorne": ["💡", "The Hawthorne studies and human relations", "leadership.html"], "m-mintzberg": ["📓", "What managers really do", "leadership.html"], "m-structure": ["🌿", "Mechanistic vs. organic organisations", "leadership.html"], "m-span": ["🌳", "Span of control and layers", "leadership.html"], "m-7s": ["🧩", "The McKinsey 7-S framework", "leadership.html"], "m-deming": ["🔴", "Deming: it's the system, not the worker", "leadership.html"], "m-lean": ["🏭", "Lean and the Toyota Production System", "leadership.html"], "m-learningorg": ["🧠", "The learning organisation", "leadership.html"], "m-kotter": ["🚀", "Leading change: Lewin and Kotter", "leadership.html"], "m-stackrank": ["📉", "Forced ranking (rank and yank)", "leadership.html"], "m-teamtopologies": ["🧬", "Team Topologies", "leadership.html"], "m-selfmanagement": ["🌀", "Self-management: holacracy and teal", "leadership.html"], "m-drucker": ["🕰️", "The effective executive", "leadership.html"], "m-hiring": ["🧑‍💼", "Evidence-based hiring", "leadership.html"], "m-wms": ["🌍", "Does management matter? The evidence", "leadership.html"], "g-whatis": ["🧭", "What is strategy? (Porter)", "leadership.html"], "g-generic": ["⚔️", "Porter's generic strategies", "leadership.html"], "g-valuechain": ["⛓️", "The value chain", "leadership.html"], "g-diamond": ["💎", "Porter's diamond and clusters", "leadership.html"], "g-rbv": ["🏛️", "The resource-based view and VRIO", "leadership.html"], "g-corecomp": ["🌱", "Core competencies", "leadership.html"], "g-dynamic": ["🔄", "Dynamic capabilities", "leadership.html"], "g-rumelt": ["🎯", "Good strategy, bad strategy", "leadership.html"], "g-playtowin": ["🏆", "Playing to Win: the strategy choice cascade", "leadership.html"], "g-7powers": ["7️⃣", "7 Powers", "leadership.html"], "g-emergent": ["🌿", "Deliberate vs. emergent strategy", "leadership.html"], "g-swot": ["🔲", "SWOT and PESTLE", "leadership.html"], "g-experience": ["📉", "The experience curve", "leadership.html"], "g-firstmover": ["🥇", "First-mover advantage (and its limits)", "leadership.html"], "g-coopetition": ["🤜", "Co-opetition and the value net", "leadership.html"], "g-platforms": ["🕸️", "Platform strategy and two-sided markets", "leadership.html"], "g-uncertainty": ["🌫️", "Strategy under uncertainty", "leadership.html"], "g-scenario": ["🎬", "Scenario planning", "leadership.html"], "g-transient": ["⏳", "Transient advantage and hypercompetition", "leadership.html"], "g-simplerules": ["📏", "Strategy as simple rules", "leadership.html"], "g-classics": ["🏯", "Sun Tzu and Clausewitz: strategy's military roots", "leadership.html"], "g-execution": ["🛠️", "The strategy execution gap", "leadership.html"], "h-sleeparch": ["🌙", "Sleep stages and cycles", "health.html"], "h-circadian": ["🌅", "Circadian rhythm and light", "health.html"], "h-insomnia": ["🛏️", "Insomnia and CBT-I", "health.html"], "h-apnea": ["😮‍💨", "Obstructive sleep apnoea", "health.html"], "h-activity": ["🚶", "How much activity? The WHO guidelines", "health.html"], "h-cardio": ["❤️", "Cardiorespiratory fitness", "health.html"], "h-strength": ["🏋️", "Strength training", "health.html"], "h-sitting": ["🪑", "Sitting, sedentary time and NEAT", "health.html"], "h-protein": ["🥚", "Protein: how much and when", "health.html"], "h-dietpattern": ["🥗", "Dietary patterns over single nutrients", "health.html"], "h-upf": ["🍟", "Ultra-processed foods", "health.html"], "h-alcohol": ["🍷", "Alcohol and health", "health.html"], "h-caffeine": ["☕", "Caffeine and sleep", "health.html"], "h-weight": ["⚖️", "Weight and metabolic health", "health.html"], "h-allostatic": ["🌀", "Stress physiology and allostatic load", "health.html"], "h-breathing": ["🌬️", "Slow breathing and the physiological sigh", "health.html"], "h-sunlight": ["☀️", "Sunlight: vitamin D, body clock and skin", "health.html"], "h-immune101": ["🛡️", "The immune system in plain English", "health.html"], "h-inflammation": ["🔥", "Inflammation, cytokines and blood tests", "health.html"], "h-autoimmunity": ["🧬", "Autoimmunity and immune-mediated disease", "health.html"], "h-axspa": ["🦴", "Axial spondyloarthritis (including ankylosing spondylitis)", "health.html"], "h-axspatreat": ["💊", "Treating axSpA: the ASAS-EULAR approach", "health.html"], "h-axspaexercise": ["🏊", "Exercise as treatment in axSpA", "health.html"], "h-axspamonitor": ["📈", "Tracking disease activity: BASDAI, BASFI, ASDAS", "health.html"], "h-extramsk": ["👁️", "Beyond the spine: uveitis, skin, gut and more", "health.html"], "h-axspalife": ["🌅", "Living well with axSpA", "health.html"], "h-flares": ["🌩️", "Flares: triggers, plans and what really helped", "health.html"], "h-allergy101": ["🤧", "How allergy works", "health.html"], "h-hygiene": ["🐄", "The hygiene hypothesis and \"old friends\"", "health.html"], "h-rhinitis": ["🌾", "Managing hay fever and allergic rhinitis", "health.html"], "h-antihist": ["💊", "Antihistamines and the brain", "health.html"], "h-avoidance": ["🏠", "Allergen avoidance: what actually helps", "health.html"], "h-immunotherapy": ["💉", "Allergen immunotherapy (desensitisation)", "health.html"], "h-microbiome": ["🦠", "The gut microbiome and immunity", "health.html"], "h-antiinflamdiet": ["🥗", "Anti-inflammatory diets and supplements", "health.html"], "h-vitd": ["☀️", "Vitamin D: what it does and doesn't do", "health.html"], "h-omega3": ["🐟", "Omega-3 fats: fish, oils and hype", "health.html"], "h-posturemyth": ["🧍", "The posture myth (and the axSpA exception)", "health.html"], "h-nextposture": ["🔄", "Your best posture is your next posture", "health.html"], "h-backpain": ["🩻", "Low back pain: what helps and the red flags", "health.html"], "h-painscience": ["🧠", "Modern pain science", "health.html"], "h-fearavoid": ["🛑", "The fear-avoidance cycle", "health.html"], "h-scoliosis": ["〰️", "Scoliosis: what it is and isn't", "health.html"], "h-scoliosisex": ["🤸", "Scoliosis exercise, bracing and surgery", "health.html"], "h-ergonomics": ["🖥️", "Workstation ergonomics", "health.html"], "h-core": ["🏋️", "The \"weak core\" myth", "health.html"], "h-thoracic": ["🫁", "Thoracic spine mobility and chest expansion", "health.html"], "h-textneck": ["📱", "\"Text neck\": a viral scare", "health.html"], "h-mobility": ["🧘", "Building a daily mobility routine", "health.html"], "h-fatigue": ["🔋", "Fatigue vs sleepiness", "health.html"], "h-fatiguecheck": ["🩺", "Medical causes of tiredness worth checking", "health.html"], "h-pacing": ["🥄", "Pacing and energy management", "health.html"], "h-brainfog": ["🌫️", "Brain fog", "health.html"], "h-workingmem": ["🧮", "Working memory limits", "health.html"], "h-goingblank": ["😶", "Going blank under pressure", "health.html"], "h-wordfinding": ["💬", "Word-finding and tip-of-the-tongue moments", "health.html"], "h-externalbrain": ["📓", "External memory systems", "health.html"], "h-breaks": ["⏸️", "Breaks and attention", "health.html"], "h-naps": ["😴", "Napping", "health.html"], "h-exercisebrain": ["🏃", "Exercise and the brain", "health.html"], "h-sleepdebt": ["📉", "Sleep debt and chronic sleep restriction", "health.html"], "h-stressmindset": ["🔄", "Stress reappraisal and stress mindset", "health.html"], "h-anxiety": ["😰", "Anxiety and anxiety disorders", "health.html"], "h-depression": ["🌧️", "Depression", "health.html"], "h-chronicillness": ["🧩", "Living with chronic illness", "health.html"], "h-act": ["🧭", "Acceptance and Commitment Therapy (ACT)", "health.html"], "h-mindfulness": ["🧘", "Mindfulness-based programmes", "health.html"], "h-selfcompassion": ["🤲", "Self-compassion", "health.html"], "h-rumination": ["🌀", "Rumination and worry", "health.html"], "h-burnout": ["🔥", "Burnout", "health.html"], "h-loneliness": ["🤝", "Social connection and health", "health.html"], "h-journaling": ["✍️", "Expressive writing and journaling", "health.html"], "h-painmood": ["🔁", "The pain, sleep, mood and fatigue cycle", "health.html"], "h-gettinghelp": ["🛟", "Getting psychological help", "health.html"], "h-evidence": ["🔬", "How to weigh health evidence", "health.html"], "h-absrisk": ["📊", "Relative vs. absolute risk", "health.html"], "h-supplements": ["💊", "Supplements: what the evidence says", "health.html"], "h-nof1": ["🧪", "Self-experiments and regression to the mean", "health.html"], "h-doctor": ["🩺", "Getting more from medical appointments", "health.html"], "h-nocebo": ["😟", "The nocebo effect", "health.html"], "h-wellnessmyths": ["🧃", "Wellness myths and how to spot them", "health.html"], "r-gottman": ["🐎", "Gottman's four horsemen and their antidotes", "people.html"], "r-bids": ["🙋", "Bids for connection", "people.html"], "r-ratio": ["⚖️", "The 5:1 ratio", "people.html"], "r-adultattach": ["🔗", "Adult attachment", "people.html"], "r-lovelanguages": ["💌", "The five love languages", "people.html"], "r-sternberg": ["🔺", "Sternberg's triangular theory of love", "people.html"], "r-investment": ["🏦", "Rusbult's investment model", "people.html"], "r-capitalization": ["🎉", "Sharing good news: capitalization", "people.html"], "r-responsiveness": ["🤝", "Perceived partner responsiveness", "people.html"], "r-selfexpansion": ["🧗", "Self-expansion and novel activities", "people.html"], "r-36questions": ["❓", "The 36 questions", "people.html"], "r-repair": ["🩹", "Conflict that works: repair and flooding", "people.html"], "r-breakup": ["💔", "Breakups and heartbreak", "people.html"], "r-illnesscouple": ["🫶", "Relationships and chronic illness", "people.html"], "r-friendhours": ["⏳", "How many hours it takes to make a friend", "people.html"], "r-likinggap": ["🙂", "The liking gap", "people.html"], "r-beautifulmess": ["🎨", "The beautiful mess effect", "people.html"], "r-selfdisclosure": ["🧅", "Self-disclosure and social penetration", "people.html"], "r-proximity": ["🏘️", "Proximity: why neighbours become friends", "people.html"], "r-adultfriends": ["🤝", "Making friends as an adult", "people.html"], "r-weakties": ["☕", "Casual connections and everyday well-being", "people.html"], "r-strangers": ["🚆", "Talking to strangers", "people.html"], "r-workfriends": ["💼", "Friends at work", "people.html"], "r-maintenance": ["🌱", "Keeping friendships alive", "people.html"], "r-sad": ["😶", "Social anxiety disorder", "people.html"], "r-clarkwells": ["🔁", "The Clark and Wells model of social anxiety", "people.html"], "r-safety": ["🛟", "Safety behaviours", "people.html"], "r-exposure": ["🪜", "Graded exposure and the fear ladder", "people.html"], "r-postevent": ["🔍", "Post-event processing: the social post-mortem", "people.html"], "r-shyintro": ["🌙", "Shyness, introversion and social anxiety", "people.html"], "r-smalltalk": ["💬", "Conversation skills: questions, listening and exits", "people.html"], "r-rejection": ["💔", "Rejection sensitivity and social pain", "people.html"], "r-cbtsad": ["🧠", "Treating social anxiety: what works", "people.html"], "r-speaking": ["🎤", "Public speaking anxiety", "people.html"], "r-meetings": ["🗣️", "Speaking up in meetings", "people.html"], "r-socialconfidence": ["🌱", "Building social confidence over time", "people.html"], "r-emotiontheory": ["🎭", "What emotions are: the great debate", "people.html"], "r-granularity": ["🎨", "Emotional granularity", "people.html"], "r-affectlabel": ["🏷️", "Affect labelling: name it to tame it", "people.html"], "r-regulation": ["🎛️", "Emotion regulation: the process model", "people.html"], "r-empathy": ["🤝", "Empathy versus compassion", "people.html"], "r-anger": ["😠", "Anger: why venting backfires", "people.html"], "r-grief": ["🕯️", "Grief: beyond the five stages", "people.html"], "r-envy": ["💚", "Envy and jealousy", "people.html"], "r-shame": ["🙈", "Shame versus guilt", "people.html"], "r-boundaries": ["🚧", "Personal boundaries", "people.html"], "r-assertive": ["🗣️", "Assertiveness and the DESC script", "people.html"], "r-sayno": ["🙅", "Saying no and people-pleasing", "people.html"], "r-difficult": ["🌩️", "Dealing with difficult people", "people.html"], "r-forgiveness": ["🕊️", "Forgiveness", "people.html"], "r-apology": ["🙏", "How to apologise well", "people.html"], "r-conflictstyles": ["⚖️", "Conflict styles: the Thomas-Kilmann model", "people.html"], "r-parenting": ["👨‍👩‍👧", "Parenting styles", "people.html"], "r-family": ["🏡", "Family dynamics", "people.html"], "r-caregiving": ["🤲", "Caring and being cared for", "people.html"], "r-unhealthy": ["🚨", "Unhealthy and abusive relationships", "people.html"]};
+/* ---------- The Book of Big Ideas: contents, progress and search ---------- */
+(() => {
+  const stat = (v, l) => `<div class="stat"><b>${v}</b><span>${l}</span></div>`;
+  let done = new Set(); try { done = new Set(JSON.parse(localStorage.getItem("th-done") || "[]")); } catch (e) { }
+  const tot = BOOK.reduce((s, b) => s + b[6].length, 0), got = BOOK.reduce((s, b) => s + b[6].filter(i => done.has(i)).length, 0);
+  document.getElementById("bkTot").innerHTML = stat(BOOK.length, "parts") + stat(tot, "ideas") + stat(got, "marked as understood");
+  document.getElementById("bkParts").innerHTML = BOOK.map(([f, n, t, blurb, c, doms, ids]) => { const g = ids.filter(i => done.has(i)).length, pc = ids.length ? g / ids.length * 100 : 0; return `<a class="bk-part" href="${f}" style="--dc:var(--${c})"><span class="bk-n">Part ${n}</span><b>${t.replace(/&/g, "&amp;")}</b><small>${blurb}</small><span class="bk-doms">${doms.map(([ic, nm, k]) => `<span title="${nm.replace(/"/g, "")}">${ic} ${nm.replace(/&/g, "&amp;")} <i>${k}</i></span>`).join("")}</span><span class="bk-bar"><span style="width:${pc}%"></span></span><span class="small muted">${ids.length} ideas${g ? ` · ${g} understood` : ""}</span></a>`; }).join("");
+  const q = document.getElementById("bkQ"), res = document.getElementById("bkRes"), part = Object.fromEntries(BOOK.map(b => [b[0], b[1]]));
+  const all = Object.entries(XREF).map(([id, [ic, t, pg]]) => ({ id, ic, t, pg, s: (t + " " + id).toLowerCase() }));
+  const run = () => { const v = q.value.trim().toLowerCase(); if (v.length < 2) { res.innerHTML = `<p class="small muted">${all.length} ideas indexed. Type at least two letters.</p>`; return; } const words = v.split(/\s+/), hits = all.filter(x => words.every(w => x.s.includes(w))).slice(0, 60); res.innerHTML = hits.length ? hits.map(x => `<a href="${x.pg}#t-${x.id}"><span>${x.ic}</span> ${x.t.replace(/&/g, "&amp;").replace(/</g, "&lt;")} <small>Part ${part[x.pg] || ""}</small></a>`).join("") : `<p class="small muted">No matches.</p>`; };
+  q.addEventListener("input", run); run();
+})();
+
+})();
+</script>
+</body>
+</html>

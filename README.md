@@ -1,21 +1,23 @@
-# AI, Explained, plus Product, Platform & Big Ideas courses
+# AI, Explained, plus Product, Platform courses and The Book of Big Ideas
 
-Ten interactive, Brilliant-style courses. Each is a single self-contained HTML file with no build step:
+Interactive, Brilliant-style courses, plus **The Book of Big Ideas**, an interactive book in eight parts. Each is a single self-contained HTML file with no build step:
 
 | Page | Course |
 |---|---|
 | `index.html` | **AI, Explained**: 19 chapters, from AI basics to Claude, agents and the frontier |
 | `product-management.html` | **Product Management, First Principles**: 8 chapters |
 | `platform-management.html` | **Platform Management, First Principles**: 12 chapters |
-| `theories.html` | **Big Ideas, Part 1: Big theories**: 128 theories across 14 domains (science, quantum physics, strategy, life, the brain, self, systems, economics, leverage, culture, thinking tools), with 43 simulations |
-| `models.html` | **Big Ideas, Part 2: Mental models & toolkits**: 148 models and tools across 9 sections, with 39 simulations |
-| `society.html` | **Big Ideas, Part 3: Society, politics & the human mind**: 140 theories across 8 domains (psychology, sociology, political theories, power, theories of history, economic schools, ethics, philosophy), with 27 simulations |
-| `biases.html` | **Big Ideas, Part 4: The bias & fallacy codex**: 200 cognitive biases in 8 sections and 40 logical fallacies in 2 sections, each with how to counter it and an evidence note, plus 9 interactive experiments |
-| `lab.html` | **Big Ideas, Part 5: Communication & the Pattern Lab**: 21 first principles of communication, 22 negotiation theories, 21 persuasion and influence theories, 14 pattern-recognition models, 9 demos and the interactive **Meeting Pattern Lab** |
-| `leadership.html` | **Big Ideas, Part 6: Leadership, management & strategy**: 22 leadership, 22 management and 22 strategy theories (OKRs, Deming, Porter, VRIO, Rumelt, 7 Powers and more), with 9 simulations |
-| `health.html` | **Big Ideas, Part 7: Health & wellbeing**: 81 evidence-rated topics in 7 sections (foundations, immunity and axSpA, allergies, spine, fatigue and brain fog, mental health, evidence literacy), 7 interactive tools and a private daily **Health Pattern Lab** |
+| `theories.html` | **Book of Big Ideas, Part 1: Big theories**: 128 theories across 14 domains (science, quantum physics, strategy, life, the brain, self, systems, economics, leverage, culture, thinking tools), with 43 simulations |
+| `models.html` | **Book of Big Ideas, Part 2: Mental models & toolkits**: 148 models and tools across 9 sections, with 39 simulations |
+| `society.html` | **Book of Big Ideas, Part 3: Society, politics & the human mind**: 140 theories across 8 domains (psychology, sociology, political theories, power, theories of history, economic schools, ethics, philosophy), with 27 simulations |
+| `biases.html` | **Book of Big Ideas, Part 4: The bias & fallacy codex**: 200 cognitive biases in 8 sections and 40 logical fallacies in 2 sections, each with how to counter it and an evidence note, plus 9 interactive experiments |
+| `lab.html` | **Book of Big Ideas, Part 5: Communication & the Pattern Lab**: 21 first principles of communication, 22 negotiation theories, 21 persuasion and influence theories, 14 pattern-recognition models, 9 demos and the interactive **Meeting Pattern Lab** |
+| `leadership.html` | **Book of Big Ideas, Part 6: Leadership, management & strategy**: 22 leadership, 22 management and 22 strategy theories (OKRs, Deming, Porter, VRIO, Rumelt, 7 Powers and more), with 9 simulations |
+| `health.html` | **Book of Big Ideas, Part 7: Health & wellbeing**: 81 evidence-rated topics in 7 sections (foundations, immunity and axSpA, allergies, spine, fatigue and brain fog, mental health, evidence literacy), 7 interactive tools and a private daily **Health Pattern Lab** |
+| `people.html` | **Book of Book of Big Ideas, Part 8: Relationships & social life**: 56 evidence-rated ideas in 5 sections (love, friendship, social anxiety and confidence, emotions, boundaries and family), with 6 interactive tools |
+| `book.html` | **The Book of Big Ideas: contents**: all eight parts with sections and counts, reading progress across parts, reading paths by goal, a search index over every idea, and a list of topics coming next |
 
-A switcher in the top bar links the courses. All seven Big Ideas parts sit under "Theories" and link to each other; related-card chips jump between parts, and old links to a card that moved (for example `theories.html#t-maslow`) redirect to its new page.
+A switcher in the top bar links the courses. All eight parts form The Book of Big Ideas; the "📖 Big Ideas" tab opens its contents page (book.html) and link to each other; related-card chips jump between parts, and old links to a card that moved (for example `theories.html#t-maslow`) redirect to its new page.
 
 ---
 
@@ -88,7 +90,7 @@ It ends with a filterable library of 26 books, papers and reports (2009–2026),
 
 It ends with a library of 23 sources (including Domain-Driven Design, the EU AI Act and the FCA Consumer Duty), including *Reshuffle* (2025), *Team Topologies* 2nd ed. (2025), *Platform Engineering* (2025), *Frictionless* (2025), *Platform Strategy* (2024), *The Cold Start Problem* (2021) and *Platform Revolution* (2016), plus foundational papers (Rochet & Tirole 2003; Eisenmann, Parker & Van Alstyne 2006).
 
-## Big Ideas, Part 1: Big theories (`theories.html`)
+## Book of Big Ideas, Part 1: Big theories (`theories.html`)
 
 An interactive field guide to the theories that give you an edge today, covering the outer world (science, economics, power) and the inner game (brain, belief, leverage, mental models). A **theory map** at the top lets you search, filter by domain, pick a theory at random, and track which ones you've marked as understood (saved in your browser). Each theory card covers the core idea, *why it gives you an edge now*, an example, a common misconception, and links to related theories. Cards in the self-help-adjacent sections carry an **evidence rating**, from "very strong evidence" to "belief system, not science". You can deep-link to any card, for example `theories.html#t-bayes`.
 
@@ -112,7 +114,7 @@ An interactive field guide to the theories that give you an edge today, covering
 It ends with an 18-question "which theory explains it?" challenge, a 57-book reading list, and a recap on how to think in models.
 
 
-## Big Ideas, Part 2: Mental models & toolkits (`models.html`)
+## Book of Big Ideas, Part 2: Mental models & toolkits (`models.html`)
 
 Practical models and untools-style frameworks for acting in the world. It uses the same card format, evidence ratings, search, progress tracking and deep links as Part 1, and related-card chips marked ↗ jump between the two parts.
 
@@ -130,7 +132,7 @@ Practical models and untools-style frameworks for acting in the world. It uses t
 
 An "11 laws of the universe" shortcut on the hub links to Parkinson, Hofstadter, Hanlon, Pareto, Peter, Hick, Goodhart, Dunning–Kruger, Occam, Chesterton and Brooks across both parts. It ends with a "which tool fits?" challenge, a filterable reading list and a Monday-morning toolkit recap.
 
-## Big Ideas, Part 3: Society, politics & the human mind (`society.html`)
+## Book of Big Ideas, Part 3: Society, politics & the human mind (`society.html`)
 
 The social sciences and humanities, split out of Part 1 to keep pages fast. Same card format, evidence ratings, search, progress tracking and deep links. Every theory is presented at its strongest, then its critics and its record.
 
@@ -145,7 +147,7 @@ The social sciences and humanities, split out of Part 1 to keep pages fast. Same
 | **Ethics: how should we live?** | Utilitarianism, deontology (Kant), virtue ethics, trolley problems 🎮, Rawls's veil of ignorance 🎮, care ethics, Mill's harm principle, Hume's is–ought gap, moral relativism vs. realism, Nozick's experience machine 🎮 |
 | **Existence, mind & knowledge** | Existentialism, absurdism (Camus), Nietzsche, Plato's cave, rationalism vs. empiricism, the problem of induction (the turkey 🎮), the mind–body problem, the hard problem of consciousness, the Chinese Room, free will, personal identity (Ship of Theseus 🎮), pragmatism, Wittgenstein, Buddhist philosophy, Taoism |
 
-## Big Ideas, Part 4: The bias & fallacy codex (`biases.html`)
+## Book of Big Ideas, Part 4: The bias & fallacy codex (`biases.html`)
 
 200 cognitive biases, heuristics and fallacies, organised after Buster Benson's "cognitive bias codex" by the four problems they solve (too much information, not enough meaning, the need to act fast, what to remember). Each compact card explains the bias, why it happens, **how to counter it**, an example and an **evidence note** (some famous biases, such as the backfire effect or stereotype threat, are much weaker than first reported; some, like Berkson's or Simpson's paradox, are statistical fallacies rather than mental quirks). Cards with a full deep-dive elsewhere link to it.
 
@@ -165,7 +167,7 @@ The social sciences and humanities, split out of Part 1 to keep pages fast. Same
 
 Each fallacy card says when the same move is actually reasonable (for example, deferring to genuine experts, or a slippery slope with a real mechanism). The page ends with a "spot the bias" challenge, a reading list and a debiasing toolkit.
 
-## Big Ideas, Part 5: Communication & the Pattern Lab (`lab.html`)
+## Book of Big Ideas, Part 5: Communication & the Pattern Lab (`lab.html`)
 
 | Section | Contents (🎮 = interactive) |
 |---|---|
@@ -176,7 +178,7 @@ Each fallacy card says when the same move is actually reasonable (for example, d
 
 **The Meeting Pattern Lab** turns Holmes-style observation into a habit: record the people in your meetings (what persuades them, what they push back on), log each meeting (who objected, who supported, who stayed quiet, what won the room), and the Lab builds each person's patterns: an influence score, an objection heat map by topic and which tactics work. Before your next meeting, describe the proposal and the Lab predicts who is likely to object, the order to pre-wire people in and the chance of approval. Save the prediction, record what happened, and a scorecard (Brier score, objector hit rate) shows whether your read of the room is actually improving. It comes with a fictional sample team, three Sherlock-style practice cases, and JSON export/import. All data stays in your browser (localStorage); nothing is sent anywhere.
 
-## Big Ideas, Part 6: Leadership, management & strategy (`leadership.html`)
+## Book of Big Ideas, Part 6: Leadership, management & strategy (`leadership.html`)
 
 | Section | Contents (🎮 = interactive) |
 |---|---|
@@ -186,7 +188,7 @@ Each fallacy card says when the same move is actually reasonable (for example, d
 
 Evidence ratings flag the popular-but-weak ideas (situational leadership, Goleman's styles, *Good to Great*, the Hawthorne effect, forced ranking) alongside the well-supported ones (goal-setting, structured hiring, Deming's system variation, basic management practices). The page ends with a quiz, a reading list and a manager's checklist. Old links to leadership cards on `lab.html` redirect here.
 
-## Big Ideas, Part 7: Health & wellbeing (`health.html`)
+## Book of Big Ideas, Part 7: Health & wellbeing (`health.html`)
 
 An evidence-rated guide to body and mind, with extra depth on autoimmune disease (especially axial spondyloarthritis), allergies, posture and scoliosis, fatigue and brain fog. Cards use "What you can do" and "Evidence & caveats" headings, follow mainstream guidelines (ASAS-EULAR, ARIA, NICE, WHO, AASM), give no drug doses, and flag red-flag symptoms. **Educational, not medical advice.**
 
@@ -203,3 +205,15 @@ An evidence-rated guide to body and mind, with extra depth on autoimmune disease
 **The axSpA exercise plan builder** composes a session from a library of 25 exercises commonly used in axSpA programmes (breathing and rib expansion, neck, rotation, side bending, extension, prone lying, floor mobility, strength, balance and aerobic work). You choose the time (5–30 min), activity level and goals, and flag floor access, a resistance band, a flare, fusion or osteoporosis, and neck or hip involvement. It adapts the selection, doses and cautions, gives a weekly plan (daily mobility, strength 2–3 days, aerobic most days), runs a guided timer, logs completed sessions into the Health Pattern Lab, and records monthly progress checks (head-to-wall distance, chest expansion, side bend). It is a draft to review with a physiotherapist, not a prescription.
 
 The hub has guided paths (living with axSpA; allergies and a foggy head; posture and scoliosis; tired all the time; forgetful and going blank; mind and chronic illness) and an urgent red-flags box. **The Health Pattern Lab** is a one-minute daily log (energy, pain, morning stiffness, brain fog, allergies, mood, stress, sleep, exercise, alcohol, mobility routine, late caffeine, weekly BASDAI, notes) with 60-day trends, correlations in your own data (hidden until there are 14+ data points, with causation caveats), and an editable one-page summary for appointments. Data stays in the browser; export/import as JSON.
+
+## Book of Big Ideas, Part 8: Relationships & social life (`people.html`)
+
+| Section | Contents (🎮 = interactive) |
+|---|---|
+| **Love & partnerships** | Gottman's four horsemen (with honest caveats on divorce prediction), bids for connection, the 5:1 ratio, adult attachment, love languages (weak evidence), Sternberg's triangle, the investment model, responding to good news (active-constructive sorter 🎮), responsiveness, self-expansion, closeness questions 🎮, conflict and repair, breakups, relationships and chronic illness |
+| **Friendship & connection** | How long friendship takes (hours calculator 🎮), the liking gap, the beautiful mess effect, self-disclosure, proximity, making friends as an adult, casual interactions, talking to strangers, work friends, keeping friendships |
+| **Social anxiety & confidence** | Social anxiety disorder, the Clark and Wells model, safety behaviours, graded exposure (fear ladder builder 🎮), post-event processing, shyness vs introversion, conversation skills, rejection sensitivity, CBT and treatment, public speaking, speaking up in meetings, building confidence |
+| **Emotions & regulation** | Basic vs constructed emotion, emotional granularity (name it precisely 🎮), affect labelling, Gross's process model, empathy vs compassion, anger (why venting fails), grief (beyond the five stages), envy and jealousy, shame vs guilt |
+| **Boundaries, conflict & family** | Boundaries, assertiveness (DESC script builder 🎮), saying no, difficult people, forgiveness, apologies, conflict styles, parenting styles, family dynamics, caregiving, unhealthy and abusive relationships (with helplines) |
+
+Guided paths cover social anxiety, confidence at work, friends as an adult, a stronger relationship, big feelings, and boundaries. A safety box links domestic abuse and crisis helplines. Educational, not therapy.
