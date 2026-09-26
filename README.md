@@ -1,6 +1,6 @@
 # AI, Explained, plus Product, Platform courses and The Book of Big Ideas
 
-Interactive, Brilliant-style courses, plus **The Book of Big Ideas**, an interactive book in eight parts. Each is a single self-contained HTML file with no build step:
+Interactive, Brilliant-style courses, plus **The Book of Big Ideas**, an interactive book in nine parts. Each is a single self-contained HTML file with no build step:
 
 | Page | Course |
 |---|---|
@@ -15,9 +15,10 @@ Interactive, Brilliant-style courses, plus **The Book of Big Ideas**, an interac
 | `leadership.html` | **Book of Big Ideas, Part 6: Leadership, management & strategy**: 22 leadership, 22 management and 22 strategy theories (OKRs, Deming, Porter, VRIO, Rumelt, 7 Powers and more), with 9 simulations |
 | `health.html` | **Book of Big Ideas, Part 7: Health & wellbeing**: 81 evidence-rated topics in 7 sections (foundations, immunity and axSpA, allergies, spine, fatigue and brain fog, mental health, evidence literacy), 7 interactive tools and a private daily **Health Pattern Lab** |
 | `people.html` | **Book of Book of Big Ideas, Part 8: Relationships & social life**: 56 evidence-rated ideas in 5 sections (love, friendship, social anxiety and confidence, emotions, boundaries and family), with 6 interactive tools |
-| `book.html` | **The Book of Big Ideas: contents**: all eight parts with sections and counts, reading progress across parts, reading paths by goal, a search index over every idea, and a list of topics coming next |
+| `self.html` | **Book of Big Ideas, Part 9: Attention, calm & self-help**: 54 evidence-rated ideas in 5 sections (attention and focus; calm, stillness and equanimity; habits and self-change; meaning, values and inner life; reading self-help critically), 6 interactive tools and a daily **Calm & Focus Lab** |
+| `book.html` | **The Book of Big Ideas: contents**: all parts with sections and counts, reading progress across parts, reading paths by goal, a search index over every idea, and a list of topics coming next |
 
-A switcher in the top bar links the courses. All eight parts form The Book of Big Ideas; the "📖 Big Ideas" tab opens its contents page (book.html) and link to each other; related-card chips jump between parts, and old links to a card that moved (for example `theories.html#t-maslow`) redirect to its new page.
+A switcher in the top bar links the courses. All nine parts form The Book of Big Ideas; the "📖 Big Ideas" tab opens its contents page (book.html) and link to each other; related-card chips jump between parts, and old links to a card that moved (for example `theories.html#t-maslow`) redirect to its new page.
 
 ---
 
@@ -217,3 +218,15 @@ The hub has guided paths (living with axSpA; allergies and a foggy head; posture
 | **Boundaries, conflict & family** | Boundaries, assertiveness (DESC script builder 🎮), saying no, difficult people, forgiveness, apologies, conflict styles, parenting styles, family dynamics, caregiving, unhealthy and abusive relationships (with helplines) |
 
 Guided paths cover social anxiety, confidence at work, friends as an adult, a stronger relationship, big feelings, and boundaries. A safety box links domestic abuse and crisis helplines. Educational, not therapy.
+
+## Book of Big Ideas, Part 9: Attention, calm & self-help (`self.html`)
+
+| Section | Contents (🎮 = interactive) |
+|---|---|
+| **Attention & focus** | How attention works, mind-wandering, multitasking and switch costs (switch-cost test 🎮), smartphones and attention (with replication caveats), the goldfish myth, boredom, timeboxing, internal triggers, dopamine detox (hype check), adult ADHD, the vigilance decrement |
+| **Calm, stillness & equanimity** | The physiology of calm and HRV (breathing pacer 🎮), types of meditation (stillness timer 🎮), equanimity, solitude and silence, nature, awe, savouring, impermanence and non-attachment, doing vs being mode, NSDR and yoga nidra, rest and slowness, cold and heat (hype check) |
+| **Habits & self-change** | If-then planning (planner 🎮), tiny habits, identity-based habits, how long habits take (not 21 days), temptation bundling, the fresh start effect, commitment devices, environment design, ego depletion (failed replications), self-control as strategy, streaks and "never miss twice", lapses and relapse |
+| **Meaning, values & inner life** | Values (values sort 🎮), meaning in life, ikigai (and the Western Venn diagram), gratitude, kindness, character strengths, self-distancing, self-esteem vs self-compassion, post-traumatic growth, hedonic vs eudaimonic wellbeing |
+| **Reading self-help critically** | How to evaluate a claim (claim checker 🎮), bibliotherapy (what works), positive thinking vs mental contrasting, the law of attraction, toxic positivity, grit, power posing, the 10,000-hour rule, morning routines |
+
+**The Calm & Focus Lab** has timed focus sessions (one task, a distraction notepad, a focus rating and weekly totals) and a daily practice tracker (14-day grid, streaks, "never miss twice" nudges). Data stays in the browser.
