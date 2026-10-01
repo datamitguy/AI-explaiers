@@ -6,7 +6,7 @@ Interactive, Brilliant-style courses, plus **The Book of Big Ideas**, an interac
 |---|---|
 | `index.html` | **AI, Explained**: 19 chapters, from AI basics to Claude, agents and the frontier |
 | `product-management.html` | **Product Management, First Principles**: 8 chapters |
-| `platform-management.html` | **Platform Management, First Principles**: 20 chapters, including Part D on making the case for a central Power Platform team in credit, with 9 labs and a deck builder |
+| `platform-management.html` | **Platform Management, First Principles**: 28 chapters, including Part D on making the case for a central Power Platform team in credit (9 labs and a deck builder) and Part E, the pitch to value streams (7 labs, a 65-block catalogue, Q&A bank and pitch deck) |
 | `theories.html` | **Book of Big Ideas, Part 1: Big theories**: 128 theories across 14 domains (science, quantum physics, strategy, life, the brain, self, systems, economics, leverage, culture, thinking tools), with 43 simulations |
 | `models.html` | **Book of Big Ideas, Part 2: Mental models & toolkits**: 148 models and tools across 9 sections, with 39 simulations |
 | `society.html` | **Book of Big Ideas, Part 3: Society, politics & the human mind**: 140 theories across 8 domains (psychology, sociology, political theories, power, theories of history, economic schools, ethics, philosophy), with 27 simulations |
@@ -109,6 +109,16 @@ It ends with a filterable library of 26 books, papers and reports (2009–2026),
 18. **Governance that speeds people up**: **Lab 6**, risk tiering with the controls each tier needs; environment, DLP, ALM, visibility, resilience and AI guardrails
 19. **Team, roadmap, metrics & funding**: team roles, **Lab 7** (a Now/Next/Later roadmap with dependency checks), **Lab 8** (a balanced scorecard picker) and four funding models
 20. **Build your deck**: **Lab 9**, a deck builder with 23 slides (action titles, bullets, visual suggestions, speaker notes), audience presets, numbers pulled from the other labs, Markdown/text export, and 14 objection-handling answers
+
+**Part E · The pitch to value streams**
+21. **Why join? The pitch**: one-sentence pitch, federated-vs-platform comparison, **Lab 10** (a tailored "what's in it for this value stream" one-pager), a benefits register with measures, and the commitments on each side
+22. **Team Topologies & its limits**: team types and interaction modes applied to credit, the rationale step by step, 12 known failure modes with mitigations, and an interaction-mode sorting game
+23. **Intake & sprint planning**: two-level (quarterly + sprint) planning, the front door and triage routes, **Lab 11** (platform capacity allocation), ceremonies, and Definitions of Ready and Done
+24. **Solution design & review**: design principles, 10 reference patterns, **Lab 12** (a solution design assistant that suggests pattern, blocks, tier and review route), and tiered solution review
+25. **Release governance**: release gates, standard/normal/emergency changes, **Lab 13** (release path by tier vs a manual federated release) and versioning rules for shared blocks
+26. **The Lego block catalogue**: **Lab 14** (65 blocks in 13 categories and 8 types, filterable and exportable), a block-candidate test and the block life cycle
+27. **Onboarding a value stream**: Discover, Land, Adopt and Optimise, and **Lab 15** (an onboarding timeline and first actions)
+28. **Q&A and pitch deck**: 34 questions with answers and rationale (filterable and exportable) and **Lab 16**, a 15-slide pitch deck with speaker notes
 
 It ends with a library of 23 sources (including Domain-Driven Design, the EU AI Act and the FCA Consumer Duty), including *Reshuffle* (2025), *Team Topologies* 2nd ed. (2025), *Platform Engineering* (2025), *Frictionless* (2025), *Platform Strategy* (2024), *The Cold Start Problem* (2021) and *Platform Revolution* (2016), plus foundational papers (Rochet & Tirole 2003; Eisenmann, Parker & Van Alstyne 2006).
 

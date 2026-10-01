@@ -577,6 +577,15 @@ select{font:inherit;font-size:.8rem;padding:6px 8px;border-radius:10px;border:1p
   <a href="#pl18"><span class="num">18</span>Governance that speeds up</a>
   <a href="#pl19"><span class="num">19</span>Team, roadmap &amp; funding</a>
   <a href="#pl20"><span class="num">20</span>Build your deck</a>
+  <div class="grp">Part E · The pitch to value streams</div>
+  <a href="#pl21"><span class="num">21</span>Why join? The pitch</a>
+  <a href="#pl22"><span class="num">22</span>Team Topologies &amp; its limits</a>
+  <a href="#pl23"><span class="num">23</span>Intake &amp; sprint planning</a>
+  <a href="#pl24"><span class="num">24</span>Solution design &amp; review</a>
+  <a href="#pl25"><span class="num">25</span>Release governance</a>
+  <a href="#pl26"><span class="num">26</span>The Lego block catalogue</a>
+  <a href="#pl27"><span class="num">27</span>Onboarding a value stream</a>
+  <a href="#pl28"><span class="num">28</span>Q&amp;A and pitch deck</a>
   <a href="#plread"><span class="num">📚</span>Reading list &amp; research</a>
   <a href="#recap"><span class="num">★</span>Recap</a>
 </nav>
@@ -586,9 +595,9 @@ select{font:inherit;font-size:.8rem;padding:6px 8px;border-radius:10px;border:1p
   <div class="hero-inner reveal">
     <span class="ch-tag">An interactive course</span>
     <h1 style="margin-top:18px">Platforms, <span class="grad">from first principles</span>.</h1>
-    <p>Two kinds of platform, one idea: make it cheaper for others to create value. Launch a two-sided marketplace, find the take-rate sweet spot, map your teams with Team Topologies, build a golden path, assess your internal platform with DORA and CNCF maturity models, and, if you lead a domain platform such as credit and lending, finally answer "who are my customers?" Then make the case for a central Power Platform team in credit, with a business-case calculator, an entitlements and segregation-of-duties lab, a reuse simulator, risk tiering, a roadmap builder and a deck builder that exports your slides.</p>
+    <p>Two kinds of platform, one idea: make it cheaper for others to create value. Launch a two-sided marketplace, find the take-rate sweet spot, map your teams with Team Topologies, build a golden path, assess your internal platform with DORA and CNCF maturity models, and, if you lead a domain platform such as credit and lending, finally answer "who are my customers?" Then make the case for a central Power Platform team in credit, with a business-case calculator, an entitlements and segregation-of-duties lab, a reuse simulator, risk tiering, a roadmap builder and a deck builder that exports your slides. Finally, pitch the platform to the value streams still building on their own: benefits, Team Topologies and its limits, sprint planning, solution design and review, release governance, a 65-block Lego catalogue, onboarding and a full Q&amp;A.</p>
     <a class="btn primary" href="#pl1" style="text-decoration:none;padding:13px 24px;font-size:1rem">Start learning →</a>
-    <div class="hero-stats"><span>20 chapters</span><span>Platform businesses · internal platforms · domain platforms · the Power Platform case</span><span>23 books, papers &amp; reports</span></div>
+    <div class="hero-stats"><span>28 chapters</span><span>Platform businesses · internal platforms · domain platforms · the Power Platform case · the pitch to value streams</span><span>23 books, papers &amp; reports</span></div>
   </div>
 </section>
 <!-- ============ PL1 ============ -->
@@ -1278,6 +1287,334 @@ details.pd-q summary{cursor:pointer;font-weight:700}
 </div>
 </section>
 
+<style>
+.pe-tbl{border-collapse:collapse;width:100%;font-size:.84rem;min-width:560px}
+.pe-tbl th,.pe-tbl td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+.pe-tbl th{font-size:.75rem;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+.pe-tbl td:first-child{font-weight:700}
+.pe-step{display:flex;gap:10px;align-items:flex-start;padding:10px 12px;margin:6px 0;border-radius:12px;background:var(--surface-2)}
+.pe-step .n{flex:none;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;color:#fff;background:var(--c1-btn)}
+.pe-block{border:1px solid var(--line);border-radius:12px;padding:10px 12px;background:var(--surface)}
+.pe-block h5{margin:0 0 4px;font-size:.9rem}
+.pe-tag{display:inline-block;font-size:.68rem;font-weight:700;padding:1px 7px;border-radius:99px;margin:2px 4px 0 0;background:var(--surface-3)}
+</style>
+
+<!-- ============ PL21 ============ -->
+<section class="chapter" id="pl21">
+<div class="wrap">
+  <div class="ch-head reveal">
+    <span class="ch-tag" style="background:var(--c2-soft);color:var(--c2t)">Chapter 21 · Part E: The pitch to value streams</span>
+    <h2>Why join the platform? The pitch</h2>
+    <p class="lede">You've built the model. Now you need other sub-value streams, who have been building on their own outside common governance, to choose to join it. This part is the sales pitch, the operating details they'll ask about, and the answers.</p>
+  </div>
+
+  <div class="key reveal"><p><b>The pitch in one sentence:</b> "Keep building what your business needs, with the people who know it, but stop rebuilding the plumbing, stop carrying the control risk alone, and get to production faster, because the platform gives you secure foundations, ready-made building blocks, a fast and safe release path, and support, as a service."</p></div>
+
+  <p class="reveal">Selling a platform to teams who already have something that works is different from selling it to executives. Executives buy <b>risk reduction and efficiency</b>. Value-stream leaders buy <b>speed, less hassle and keeping control of their roadmap</b>. Their makers buy <b>better tools and less boring work</b>. Their risk partners buy <b>evidence without paperwork</b>. A good pitch speaks to all four, and never implies that what they built so far was wrong.</p>
+
+  <h3 class="reveal">Three principles for the pitch</h3>
+  <div class="cards reveal">
+    <div class="card"><div class="ico" style="background:var(--c2-soft)">🤝</div><h4>Earn adoption, don't mandate it</h4><p>Teams forced onto a platform comply on paper and build around it. Make the platform the easiest way to do the right thing, then set a sensible date after which new production apps must be on governed environments.</p></div>
+    <div class="card"><div class="ico" style="background:var(--c1-soft)">🎁</div><h4>Lead with what they get</h4><p>Start with the things that remove pain today: connectors they've been waiting for, an approval block, faster access set-up, someone to call when a flow fails. Governance comes along with those, not ahead of them.</p></div>
+    <div class="card"><div class="ico" style="background:var(--c3-soft)">🏆</div><h4>Show, don't tell</h4><p>Bring a real app from a value stream that's already onboarded: before and after, with their product owner presenting. Peer proof beats any slide.</p></div>
+  </div>
+
+  <h3 class="reveal">Federated today vs on the platform</h3>
+  <div class="pd-scroll reveal"><table class="pe-tbl">
+    <tr><th>What you deal with</th><th>Building alone today</th><th>On the platform</th></tr>
+    <tr><td>Getting started</td><td>Request environments, licences and connectors one by one; weeks of set-up</td><td>A governed environment, pipeline and starter template on request, often the same day</td></tr>
+    <tr><td>Connecting to core systems</td><td>Build and maintain your own integration, or copy data into spreadsheets</td><td>Supported connectors to the loan system, core banking, bureaus and rating models</td></tr>
+    <tr><td>Common features</td><td>Build approvals, audit logs, document generation and notifications yourself</td><td>Reuse tested, supported blocks; build only what's specific to your process</td></tr>
+    <tr><td>Access and roles</td><td>Your own roles, your own access requests, your own reviews</td><td>Personas and groups set up once; joiners and leavers handled automatically</td></tr>
+    <tr><td>Releasing changes</td><td>Manual exports, edits in production, change records by hand</td><td>One-click pipeline promotion with built-in approvals and automatic change records</td></tr>
+    <tr><td>Controls and audit</td><td>Each team answers each audit question separately</td><td>Controls built in; the platform produces the evidence</td></tr>
+    <tr><td>When something breaks</td><td>The one person who built it, if they're around</td><td>Monitoring, alerting and a support model with service levels</td></tr>
+    <tr><td>Skills</td><td>Learn alone, on the job</td><td>Training paths, office hours, champions and a community of makers</td></tr>
+    <tr><td>Data</td><td>Local copies with local definitions</td><td>A shared credit data model and certified reports</td></tr>
+    <tr><td>AI and Copilot</td><td>Unclear what's allowed; each team works it out</td><td>Approved patterns, guardrails and reusable AI blocks</td></tr>
+  </table></div>
+
+  <div class="widget wide reveal">
+    <div class="w-head" style="color:var(--c2t)">Lab 10 · Tailored pitch</div>
+    <div class="w-title">What's in it for this value stream?</div>
+    <div class="w-sub">Describe the value stream you're pitching to: its size and its pain points. You'll get the benefits to lead with, an estimate of onboarding effort, and talking points for each audience. Export it as a one-pager.</div>
+    <div id="peWiifm"></div>
+  </div>
+
+  <h3 class="reveal">The benefits we will realise, and how we'll prove them</h3>
+  <p class="reveal">Make every benefit measurable, give it an owner, and report it. These are the benefits of a common platform, run as a product, with the measure that proves each one.</p>
+  <div class="reveal" id="peBenefits"></div>
+
+  <h3 class="reveal">The deal: what each side commits to</h3>
+  <div class="grid2 reveal">
+    <div class="card"><h4>🏛️ The platform team commits to</h4><p>• Published service levels (environment set-up, access changes, support response, release windows)<br>• A public roadmap shaped with a customer council of value streams<br>• Building blocks that are documented, versioned and supported, with deprecation notice<br>• Onboarding help: a named contact and time-boxed collaboration to get you live<br>• Measuring itself by <b>your</b> speed and satisfaction, not by its own activity</p></div>
+    <div class="card"><h4>🚀 Each value stream commits to</h4><p>• Building production apps in governed environments, through the pipeline<br>• Using platform blocks where they exist, or explaining why not<br>• Naming a product owner and a backup owner for each app<br>• Keeping its app inventory and risk tiers current<br>• Contributing useful components back, and joining the customer council</p></div>
+  </div>
+</div>
+</section>
+
+<!-- ============ PL22 ============ -->
+<section class="chapter" id="pl22">
+<div class="wrap">
+  <div class="ch-head reveal">
+    <span class="ch-tag" style="background:var(--c3-soft);color:var(--c3t)">Chapter 22</span>
+    <h2>Platform as a product, through Team Topologies</h2>
+    <p class="lede">The model behind the pitch, the rationale for it, and an honest list of where it goes wrong.</p>
+  </div>
+  <p class="reveal">Matthew Skelton and Manuel Pais's <i>Team Topologies</i> (2019; second edition 2025) is the most widely used vocabulary for this kind of operating model. Its core argument: <b>team cognitive load is limited</b>, so organise teams so that the ones closest to the business can focus on business outcomes, and give them platforms that absorb the undifferentiated work. Applied to a credit Power Platform:</p>
+  <div class="pd-grid reveal">
+    <div class="pd-tile" style="border-top:4px solid var(--c2)"><h5>🚀 Stream-aligned teams</h5><p class="small" style="margin:0">Each sub-value stream's fusion team (product owner, makers, business analysts, sometimes a pro developer). Owns its apps and outcomes end to end.</p></div>
+    <div class="pd-tile" style="border-top:4px solid var(--c1)"><h5>🏛️ Platform team</h5><p class="small" style="margin:0">The central Credit Power Platform team. Provides foundations and building blocks <b>as a service</b>, so stream-aligned teams don't need to be experts in environments, ALM, security or integration.</p></div>
+    <div class="pd-tile" style="border-top:4px solid var(--c3)"><h5>🎓 Enabling team</h5><p class="small" style="margin:0">Coaches who help value streams adopt the platform and level up skills, then step back. Often part of the platform team in practice (the enablement lead and champions).</p></div>
+    <div class="pd-tile" style="border-top:4px solid var(--c5)"><h5>🧩 Complicated-subsystem team</h5><p class="small" style="margin:0">Specialists for genuinely hard parts, such as the integration layer to core banking, the rating-model service, or an AI document-extraction model.</p></div>
+  </div>
+  <h3 class="reveal">Three ways teams interact</h3>
+  <div class="cards reveal">
+    <div class="card"><div class="ico" style="background:var(--c1-soft)">🔌</div><h4>X-as-a-Service (the default)</h4><p>Value streams consume the platform through self-service and clear interfaces, with little meeting time. This is the goal state, and what makes the platform scale.</p></div>
+    <div class="card"><div class="ico" style="background:var(--c3-soft)">🤝</div><h4>Collaboration (time-boxed)</h4><p>Platform and value stream work closely together for a few sprints, for example to onboard a value stream or build a new block they need first. Then it ends, deliberately.</p></div>
+    <div class="card"><div class="ico" style="background:var(--c2-soft)">🎓</div><h4>Facilitating</h4><p>The enabling function coaches a team (for example on ALM or the data model) until it can work independently.</p></div>
+  </div>
+  <p class="reveal">Two more ideas from the book help the pitch. The <b>thinnest viable platform</b>: start with the smallest platform that genuinely helps (sometimes just good documentation, standards and a few blocks) and grow it only as demand proves out. And <b>Conway's law</b> (Melvin Conway, 1968): systems end up mirroring the communication structure of the organisation that builds them. Ten teams building separately produce ten separate access models, data copies and release processes. If you want a coherent estate, you need a structure that produces one.</p>
+
+  <h3 class="reveal">The rationale, step by step</h3>
+  <div class="reveal" id="peWhy"></div>
+
+  <h3 class="reveal">Where Team Topologies and platform teams go wrong (and what we'll do about it)</h3>
+  <p class="reveal">Value-stream leaders have often seen "central teams" fail before. Name the failure modes yourself; it builds trust. Tap each one.</p>
+  <div class="reveal" id="peIssues"></div>
+
+  <div class="widget reveal" id="peModeSorter">
+    <div class="w-head" style="color:var(--c3t)">Interactive</div>
+    <div class="w-title">Which interaction mode fits?</div>
+    <div class="w-sub">For each situation, choose how the platform team and the value stream should work together.</div>
+    <div class="sorter"></div>
+  </div>
+</div>
+</section>
+
+<!-- ============ PL23 ============ -->
+<section class="chapter" id="pl23">
+<div class="wrap">
+  <div class="ch-head reveal">
+    <span class="ch-tag" style="background:var(--c6-soft);color:var(--c6t)">Chapter 23</span>
+    <h2>How work flows: intake, quarterly and sprint planning</h2>
+    <p class="lede">"How will sprint planning work?" is code for "will I lose control of my roadmap, and will I be stuck waiting for you?" Answer both clearly.</p>
+  </div>
+  <p class="reveal">The principle: <b>value streams plan their own work; the platform plans its own work; the two meet at a short quarterly planning session and a visible dependency board.</b> Nobody hands their backlog to the platform team. Most value-stream sprints should need nothing from the platform at all, because what they need is already self-service.</p>
+
+  <h3 class="reveal">Two levels of planning</h3>
+  <div class="grid2 reveal">
+    <div class="card"><h4>🗓️ Quarterly (every 12 weeks or so)</h4><p>• <b>Customer council</b>: value-stream product owners and the platform product owner review the platform roadmap, outcomes and metrics.<br>• Each value stream brings its next-quarter objectives and the platform capabilities it will need.<br>• The platform agrees what it will deliver, and when, with leverage-based prioritisation (how many teams benefit × value ÷ effort) and regulatory deadlines first.<br>• Dependencies go on a shared board with dates and owners.<br>• Output: a published platform roadmap and an agreed list of cross-team dependencies.</p></div>
+    <div class="card"><h4>🔄 Sprint (typically 2 weeks)</h4><p>• Each value stream runs its own sprint planning, review and retrospective, as today.<br>• The platform team runs its own sprints on the platform backlog.<br>• Aligning sprint calendars across teams (same start day) makes dependencies easier to coordinate, but isn't mandatory.<br>• A <b>platform liaison</b> (a named platform engineer per few value streams) joins sprint planning only when a dependency is in play.<br>• A short weekly platform sync or office hour handles questions without meetings for everyone.</p></div>
+  </div>
+
+  <h3 class="reveal">The front door: how a request is handled</h3>
+  <div class="reveal" id="peTriage"></div>
+
+  <div class="widget wide reveal">
+    <div class="w-head" style="color:var(--c6t)">Lab 11 · Capacity</div>
+    <div class="w-title">Allocate the platform team's capacity</div>
+    <div class="w-sub">A platform team that spends everything on requests never builds the roadmap; one that ignores requests loses its customers. Set the split and team size and see what each quarter can deliver.</div>
+    <div id="peCap"></div>
+  </div>
+
+  <h3 class="reveal">Ceremonies: who attends what</h3>
+  <div class="pd-scroll reveal"><table class="pe-tbl">
+    <tr><th>Ceremony</th><th>Cadence</th><th>Who</th><th>Purpose</th></tr>
+    <tr><td>Customer council</td><td>Monthly</td><td>Value-stream product owners, platform product owner, risk partner</td><td>Roadmap feedback, priorities, escalations, block adoption</td></tr>
+    <tr><td>Quarterly planning</td><td>Quarterly</td><td>Same plus tech leads</td><td>Agree platform deliverables and cross-team dependencies</td></tr>
+    <tr><td>Value-stream sprint planning</td><td>Every sprint</td><td>Each value stream; platform liaison if a dependency is involved</td><td>Plan the value stream's own work</td></tr>
+    <tr><td>Platform sprint planning</td><td>Every sprint</td><td>Platform team</td><td>Plan platform roadmap, onboarding, run and debt work</td></tr>
+    <tr><td>Platform demo</td><td>Every sprint or monthly</td><td>Open to all makers</td><td>Show new blocks and features; drives adoption</td></tr>
+    <tr><td>Design authority</td><td>Weekly slot, used as needed</td><td>Platform architect, value-stream tech lead, security, risk (tier 1)</td><td>Review new patterns and tier 1 designs (Chapter 24)</td></tr>
+    <tr><td>Release review</td><td>Per release window</td><td>Release manager, product owners of changes going live</td><td>Confirm readiness for tier 1–2 releases (Chapter 25)</td></tr>
+    <tr><td>Office hours</td><td>Weekly</td><td>Anyone</td><td>Questions, design advice, quick unblocking</td></tr>
+  </table></div>
+
+  <h3 class="reveal">Definition of Ready and Done, with platform standards built in</h3>
+  <div class="grid2 reveal">
+    <div class="card"><h4>✅ Ready (before a story enters a sprint)</h4><p>• Business outcome and acceptance criteria clear<br>• App risk tier known<br>• Platform blocks identified (reuse first)<br>• Data sources agreed (system of record, not a copy)<br>• Access personas identified<br>• Dependencies on the platform agreed and dated</p></div>
+    <div class="card"><h4>🏁 Done (before it can be released)</h4><p>• Built in a solution in the right environment, in source control<br>• Solution checker clean (or exceptions recorded)<br>• Tests passed at the level its tier requires<br>• Accessibility checked<br>• Access via platform personas; no personal-account connections<br>• Documentation and runbook updated; app inventory current</p></div>
+  </div>
+</div>
+</section>
+
+<!-- ============ PL24 ============ -->
+<section class="chapter" id="pl24">
+<div class="wrap">
+  <div class="ch-head reveal">
+    <span class="ch-tag" style="background:var(--c5-soft);color:var(--c5t)">Chapter 24</span>
+    <h2>Designing solutions on a platform</h2>
+    <p class="lede">On a platform, design starts with "which pattern and which blocks?" rather than a blank page. Review effort matches risk.</p>
+  </div>
+  <p class="reveal">Most credit apps are variations on a handful of patterns. The platform publishes those patterns as <b>reference architectures</b>, each with recommended blocks, data approach, security set-up and the standard review route. A design is then mostly a set of choices from that menu, plus the business logic that's unique to the process. Anything that doesn't fit a pattern goes to the design authority, and if it recurs it becomes a new pattern.</p>
+
+  <h3 class="reveal">Design principles for every solution</h3>
+  <div class="pd-grid reveal">
+    <div class="pd-tile"><h5>♻️ Reuse first</h5><p class="small" style="margin:0">Use an existing block; extend one; only then build new (and consider contributing it).</p></div>
+    <div class="pd-tile"><h5>📍 Data at the source</h5><p class="small" style="margin:0">Read from systems of record via connectors or virtual tables; don't copy into spreadsheets or lists.</p></div>
+    <div class="pd-tile"><h5>🔐 Secure by default</h5><p class="small" style="margin:0">Platform personas and roles, least privilege, service accounts for connections, no personal credentials in production.</p></div>
+    <div class="pd-tile"><h5>🧾 Auditable</h5><p class="small" style="margin:0">Use the audit block for every decision or change that matters; record who, what, when and why.</p></div>
+    <div class="pd-tile"><h5>🔁 Built for ALM</h5><p class="small" style="margin:0">Solutions, environment variables and connection references from day one, so moving to production is a pipeline run.</p></div>
+    <div class="pd-tile"><h5>🧱 Right tool</h5><p class="small" style="margin:0">Canvas for task-focused screens, model-driven for data-heavy case work, Power Automate for workflow, Power BI for analysis, pro-code when you outgrow low-code.</p></div>
+    <div class="pd-tile"><h5>🙂 Consistent experience</h5><p class="small" style="margin:0">Design-system components and credit UX patterns; accessible by default.</p></div>
+    <div class="pd-tile"><h5>📏 Proportionate</h5><p class="small" style="margin:0">Design depth, testing and review match the app's risk tier.</p></div>
+  </div>
+
+  <h3 class="reveal">The reference patterns</h3>
+  <div class="reveal" id="pePatterns"></div>
+
+  <div class="widget wide reveal">
+    <div class="w-head" style="color:var(--c5t)">Lab 12 · Solution design</div>
+    <div class="w-title">Design a solution on the platform</div>
+    <div class="w-sub">Answer a few questions about what the business needs. You'll get a recommended pattern, the blocks to use, the review route and a draft design summary you can paste into a design document.</div>
+    <div id="peDesign"></div>
+  </div>
+
+  <h3 class="reveal">Solution review: proportionate, fast and mostly automated</h3>
+  <p class="reveal">Solution review is the part value streams fear most ("another committee"). Make it tiered, time-boxed and largely self-service. Automated checks and checklists do the routine work; people review only what's new or risky.</p>
+  <div class="pd-scroll reveal"><table class="pe-tbl">
+    <tr><th>Route</th><th>When</th><th>Who</th><th>How long</th><th>What's reviewed</th></tr>
+    <tr><td>Self-certify</td><td>Tier 4 and 3, using a standard pattern and blocks only</td><td>The maker and product owner, with a checklist</td><td>Same day</td><td>Checklist: pattern, blocks, data source, personas, tier</td></tr>
+    <tr><td>Peer review</td><td>Tier 2, or tier 3 with a deviation</td><td>A platform engineer or certified senior maker</td><td>1–3 days</td><td>Design summary, data model, security roles, ALM set-up, solution checker results</td></tr>
+    <tr><td>Design authority</td><td>Tier 1, a new pattern, a new integration, AI that informs decisions, or a request to deviate from standards</td><td>Platform architect, security, risk partner, value-stream tech lead</td><td>Weekly slot; decision within a week</td><td>Architecture decision record, risks and controls, non-functional requirements, exit plan</td></tr>
+  </table></div>
+  <p class="reveal small muted">Record significant decisions as short <b>architecture decision records</b> (ADRs): context, decision, consequences. They make reviews faster next time and explain to auditors why things are the way they are.</p>
+</div>
+</section>
+
+<!-- ============ PL25 ============ -->
+<section class="chapter" id="pl25">
+<div class="wrap">
+  <div class="ch-head reveal">
+    <span class="ch-tag" style="background:var(--c4-soft);color:var(--c4t)">Chapter 25</span>
+    <h2>Release governance</h2>
+    <p class="lede">The safe path to production should also be the fastest. Pipelines do the heavy lifting; people approve what matters.</p>
+  </div>
+  <p class="reveal">In a federated estate, releases are often manual: export a solution, import it into production (or worse, edit production directly), and raise a change record by hand, if at all. On the platform, every change moves through the same pipeline: <b>Development → Test → UAT → Production</b>, as managed solutions, with approvals and change records triggered automatically. Power Platform pipelines support approval steps (extensible with Power Automate), and Azure DevOps or GitHub pipelines with the Power Platform Build Tools can integrate with your IT service management tool.</p>
+
+  <h3 class="reveal">Release gates</h3>
+  <div class="reveal">
+    <div class="pe-step"><span class="n">0</span><div><b>Tier confirmed</b><div class="small">The app's risk tier sets which gates apply. Tier changes trigger a review.</div></div></div>
+    <div class="pe-step"><span class="n">1</span><div><b>Build quality (automated)</b><div class="small">Solution checker, automated tests where required, no unmanaged changes, environment variables and connection references set, version number incremented.</div></div></div>
+    <div class="pe-step"><span class="n">2</span><div><b>User acceptance</b><div class="small">The value stream's product owner signs off in UAT. Evidence is attached automatically to the release record.</div></div></div>
+    <div class="pe-step"><span class="n">3</span><div><b>Release approval</b><div class="small">Tier 3–4: product owner approval in the pipeline. Tier 2: product owner plus platform release check. Tier 1: formal change approval (CAB or equivalent) with risk sign-off. The person who built the change cannot approve their own release to production.</div></div></div>
+    <div class="pe-step"><span class="n">4</span><div><b>Deploy and verify</b><div class="small">Pipeline deploys in the release window; smoke test; monitoring watches for failures; rollback plan ready (redeploy the previous managed version).</div></div></div>
+    <div class="pe-step"><span class="n">5</span><div><b>Post-release</b><div class="small">Release notes published, change record closed automatically, incidents linked, and lessons fed back into the pattern library.</div></div></div>
+  </div>
+
+  <h3 class="reveal">Release windows and change types</h3>
+  <div class="cards reveal">
+    <div class="card"><div class="ico" style="background:var(--c2-soft)">🟢</div><h4>Standard change</h4><p>Pre-approved, low-risk change types (for example, a label change, a new report column, a tier 4 app) go through the pipeline any working day with product-owner approval.</p></div>
+    <div class="card"><div class="ico" style="background:var(--c3-soft)">🟡</div><h4>Normal change</h4><p>Most changes: scheduled into a weekly or fortnightly release window, with the gates for the app's tier.</p></div>
+    <div class="card"><div class="ico" style="background:var(--c4-soft)">🔴</div><h4>Emergency change</h4><p>A production fix under an expedited approval, still through the pipeline (never by editing production), reviewed after the event.</p></div>
+  </div>
+
+  <div class="widget wide reveal">
+    <div class="w-head" style="color:var(--c4t)">Lab 13 · Release path</div>
+    <div class="w-title">How does this change get to production?</div>
+    <div class="w-sub">Pick a tier and change type to see the gates, approvers, evidence and lead time, compared with a typical manual federated release.</div>
+    <div id="peRelease"></div>
+  </div>
+
+  <h3 class="reveal">Releasing shared blocks safely</h3>
+  <p class="reveal">Blocks are used by many apps, so they need their own release rules. Use <b>semantic versioning</b> (major.minor.patch: a major version may break consumers; minor adds features; patch fixes bugs), publish release notes, test new versions against consuming apps where possible, and give notice before breaking changes or retirement (for example, support the previous major version for two quarters). Consumers choose when to upgrade within that window, which keeps their sprint plans in their hands.</p>
+</div>
+</section>
+
+<!-- ============ PL26 ============ -->
+<section class="chapter" id="pl26">
+<div class="wrap">
+  <div class="ch-head reveal">
+    <span class="ch-tag" style="background:var(--c2-soft);color:var(--c2t)">Chapter 26</span>
+    <h2>The Lego block catalogue</h2>
+    <p class="lede">What the blocks are, what can become a block, and how blocks are born, supported and retired.</p>
+  </div>
+  <p class="reveal">A <b>Lego block</b> is any reusable, owned and supported piece of the platform that teams can plug into their solutions instead of building it themselves. Blocks come in eight types: <b>connectors</b>, <b>UI components</b>, <b>flows</b>, <b>templates</b>, <b>data</b> (shared tables and models), <b>services</b> (capabilities the platform runs for you, such as monitoring), <b>AI</b> (models and agents) and <b>guides</b> (patterns, checklists and standards). Microsoft's catalog in Power Platform can publish templates and components inside your tenant; a simple catalogue page with owners and versions works too.</p>
+
+  <div class="widget wide reveal">
+    <div class="w-head" style="color:var(--c2t)">Lab 14 · Catalogue</div>
+    <div class="w-title">Browse the block catalogue</div>
+    <div class="w-sub">An illustrative catalogue for a credit Power Platform. Filter by category or type, search, and mark which blocks you already have. Export it as a starting backlog.</div>
+    <div id="peCat"></div>
+  </div>
+
+  <h3 class="reveal">What should become a block?</h3>
+  <div class="widget reveal">
+    <div class="w-head" style="color:var(--c2t)">Interactive</div>
+    <div class="w-title">Block-candidate test</div>
+    <div class="w-sub">Tick what's true of the candidate. A good block is needed by several teams, stable, and worth owning.</div>
+    <div id="peCand"></div>
+  </div>
+
+  <h3 class="reveal">The block life cycle</h3>
+  <div class="pd-flow reveal">
+    <div><b>💡 Proposed</b><br>Raised through the front door, or harvested from a value stream's app. Assessed with the candidate test.</div>
+    <div><b>🧪 Incubating</b><br>Built or hardened with one or two pilot teams (collaboration mode). Not yet supported for everyone.</div>
+    <div><b>✅ Supported</b><br>Documented, versioned, tested, in the catalogue, with an owner, service levels and a support route.</div>
+    <div><b>⚠️ Deprecated</b><br>Replaced or no longer needed. Consumers get notice and a migration path.</div>
+    <div><b>🗄️ Retired</b><br>Removed after consumers have moved. Recorded in the catalogue history.</div>
+  </div>
+  <p class="reveal"><b>Inner source</b> keeps the catalogue growing without a huge central team: value streams can contribute blocks, the platform reviews and hardens them, and the contributing team gets credit (and fewer things to maintain themselves).</p>
+</div>
+</section>
+
+<!-- ============ PL27 ============ -->
+<section class="chapter" id="pl27">
+<div class="wrap">
+  <div class="ch-head reveal">
+    <span class="ch-tag" style="background:var(--c6-soft);color:var(--c6t)">Chapter 27</span>
+    <h2>Onboarding a value stream, end to end</h2>
+    <p class="lede">A clear, low-disruption path from "building on our own" to "building on the platform", in four phases.</p>
+  </div>
+  <div class="reveal">
+    <div class="pe-step"><span class="n">1</span><div><b>Discover (2–4 weeks)</b><div class="small">Inventory the value stream's apps, flows, connectors, data sources and makers. Assign risk tiers. Identify duplicates and the blocks they'd use. Agree an onboarding plan with the value stream's product owner. Nothing changes for users.</div></div></div>
+    <div class="pe-step"><span class="n">2</span><div><b>Land (4–8 weeks)</b><div class="small">Move apps into governed environments as solutions, set up pipelines, switch access to platform personas, and set up monitoring. Critical (tier 1–2) apps first. Collaboration mode with a named platform engineer.</div></div></div>
+    <div class="pe-step"><span class="n">3</span><div><b>Adopt (1–2 quarters)</b><div class="small">Replace home-built plumbing with blocks as apps are next changed (not all at once): connectors, approval, audit, documents. Makers complete the training path. Move to X-as-a-Service.</div></div></div>
+    <div class="pe-step"><span class="n">4</span><div><b>Optimise (ongoing)</b><div class="small">Consolidate duplicate apps, retire what's unused, contribute blocks back, join the customer council, and track the value stream's metrics.</div></div></div>
+  </div>
+
+  <div class="widget wide reveal">
+    <div class="w-head" style="color:var(--c6t)">Lab 15 · Onboarding plan</div>
+    <div class="w-title">Plan a value stream's onboarding</div>
+    <div class="w-sub">Enter the value stream's estate. You'll get an indicative timeline, the platform effort needed, and the first five things to do.</div>
+    <div id="peOnb"></div>
+  </div>
+
+  <h3 class="reveal">What doesn't change for the value stream</h3>
+  <div class="cards reveal">
+    <div class="card"><div class="ico" style="background:var(--c2-soft)">🎯</div><h4>Your priorities</h4><p>You still decide what your apps do and when. The platform doesn't own your backlog.</p></div>
+    <div class="card"><div class="ico" style="background:var(--c1-soft)">👩‍💻</div><h4>Your people</h4><p>Your makers stay in your team. They get training, tools and a community, not a new reporting line.</p></div>
+    <div class="card"><div class="ico" style="background:var(--c3-soft)">📱</div><h4>Your users</h4><p>Apps keep working during the move; changes are scheduled with you and communicated to users.</p></div>
+  </div>
+</div>
+</section>
+
+<!-- ============ PL28 ============ -->
+<section class="chapter" id="pl28">
+<div class="wrap">
+  <div class="ch-head reveal">
+    <span class="ch-tag" style="background:var(--c1-soft);color:var(--c1-d)">Chapter 28</span>
+    <h2>The questions you'll get, and the pitch deck</h2>
+    <p class="lede">Every objection with a short answer and the rationale behind it, plus a pitch deck for value-stream leaders.</p>
+  </div>
+  <p class="reveal">Answer briefly, then give the reason. Senior leaders accept "here's the trade-off and here's how we manage it" far more readily than "there's no downside". Filter by theme or search.</p>
+  <div class="widget wide reveal">
+    <div class="w-head">Q&amp;A bank</div>
+    <div class="w-title">Questions and answers</div>
+    <div id="peFaq"></div>
+  </div>
+
+  <div class="widget wide reveal">
+    <div class="w-head">Lab 16 · Pitch deck</div>
+    <div class="w-title">The value-stream pitch deck</div>
+    <div class="w-sub">A ready-made storyline for senior leaders of the value streams you want to bring onto the platform. Switch slides on or off and export as Markdown or text, with speaker notes. Benefits and talking points from Lab 10 are included.</div>
+    <div id="pePitch"></div>
+  </div>
+  <div class="key reveal"><p><b>Before the meeting:</b> meet each value-stream leader one to one first and ask about their pain points; bring a peer who has already onboarded; offer a no-commitment "Discover" phase so the first step is easy to say yes to; and leave with a concrete next step and date.</p></div>
+</div>
+</section>
+
 <!-- ============ READING ============ -->
 <section class="chapter" id="plread">
 <div class="wrap">
@@ -1310,6 +1647,8 @@ details.pd-q summary{cursor:pointer;font-weight:700}
     <div><b>Centralise the commons, federate the journeys</b>A hub-and-spoke platform keeps business speed and ownership while adding reuse, consistency and control.</div>
     <div><b>Controls are half the story</b>Governance, standards, blocks, data, design and entitlements matter, but so do the paved road, support, enablement, licensing and running the platform as a product.</div>
     <div><b>Govern in proportion to risk</b>Light for team productivity apps, strict for apps that make or record credit decisions.</div>
+    <div><b>Earn adoption</b>Pitch value streams on what they get: speed, blocks, support and evidence. Keep their people and roadmaps with them.</div>
+    <div><b>Make the safe path the fast path</b>Patterns, tiered reviews and pipeline gates turn governance into a service rather than a queue.</div>
     <div><b>Lead with the ask</b>State the decision first, use action titles, show honest ranges, and answer the objections before they're asked.</div>
   </div>
 </div>
@@ -2092,6 +2431,308 @@ makeSorter($("#boundSorter"), ["🏛️ Platform builds & owns", "🎛️ Self-s
 
   /* keep deck numbers fresh: redraw whenever the deck builder scrolls into view */
   if ("IntersectionObserver" in window) new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) en.target.dispatchEvent(new Event("pd-redraw")); })).observe($("#pdDeck"));
+})();
+
+/* ---------- PL-E: the pitch to value streams ---------- */
+(() => {
+  if (!$("#pl21")) return;
+  const KEY = "pe-v1";
+  let S; try { S = JSON.parse(localStorage.getItem(KEY)); } catch (e) { }
+  S = S || {};
+  const save = () => { try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) { } };
+  const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  const st = (v, l) => `<div class="stat"><b>${v}</b><span>${l}</span></div>`;
+  const dl = (name, text, type = "text/markdown") => { const a = document.createElement("a"); a.href = URL.createObjectURL(new Blob([text], { type })); a.download = name; a.click(); };
+  const copy = (text, btn) => { try { navigator.clipboard.writeText(text).then(() => { if (btn) { const t = btn.textContent; btn.textContent = "✓ Copied"; setTimeout(() => btn.textContent = t, 1400); } }, () => { }); } catch (e) { } };
+  const chips = (arr, cur, attr) => arr.map((x, i) => `<button class="chip${i === cur ? " on" : ""}" data-${attr}="${i}">${x}</button>`).join("");
+
+  /* ===== Lab 10: what's in it for this value stream ===== */
+  const PAIN = [
+    ["env", "Slow to get environments, licences or connectors", "Same-day governed environments and a starter template", "Self-service environment and pipeline set-up", "You'll start building on day one instead of week three."],
+    ["integ", "Hard to connect to core credit systems", "Supported connectors to the loan system, core banking, bureaus and ratings", "Integration connectors", "No more spreadsheets copied from core systems; your apps read the real data."],
+    ["rebuild", "We keep rebuilding approvals, audit logs and documents", "Reusable blocks for approvals, audit, document generation and notifications", "Workflow, audit and document blocks", "Build only what's unique to your process; the rest snaps in."],
+    ["access", "Access requests and reviews take too much effort", "One persona-based entitlement model; joiners and leavers automated", "Entitlement model", "Your team stops administering access by email."],
+    ["audit", "Audit findings or EUC concerns on our apps", "Controls and evidence built into the paved road", "Risk tiering, ALM and audit evidence", "Audit asks the platform, not each of your makers."],
+    ["keyperson", "Key-person risk: one maker understands each app", "Standard build, documentation and shared support", "Standards, support model", "Apps survive people moving on."],
+    ["breaks", "Failures aren't noticed until users complain", "Monitoring, alerting and a support model with service levels", "Monitoring and support", "Someone knows within minutes when a flow fails."],
+    ["release", "Releases are manual or done directly in production", "One-click pipeline releases with approvals and automatic change records", "ALM pipelines", "Safer releases that take minutes, with the paperwork done for you."],
+    ["data", "Our data doesn't match other teams' data", "A shared credit data model and certified reports", "Credit data model", "Your numbers match everyone else's in the next committee pack."],
+    ["cost", "Licences and capacity are expensive or messy", "Pooled licences and capacity, with visible costs", "Licensing and FinOps", "Pay for what you use, without managing licences yourself."],
+    ["ai", "We want AI and Copilot but don't know what's allowed", "Approved AI patterns, guardrails and reusable AI blocks", "AI guardrails and blocks", "Use AI safely now instead of waiting for a policy."],
+    ["skills", "Our makers learn alone and get stuck", "Training paths, office hours, champions and a community", "Enablement", "Your makers get better faster, and have somewhere to ask."],
+  ];
+  S.w = S.w || { name: "Commercial lending", apps: 25, crit: 4, makers: 8, pains: ["integ", "rebuild", "access", "release"] };
+  (() => {
+    const el = $("#peWiifm");
+    const draw = () => {
+      const W = S.w, sel = PAIN.filter(p => W.pains.includes(p[0]));
+      const weeks = Math.round(3 + Math.min(10, 2 + W.apps * .12 + W.crit * .6));
+      const pd = Math.round(10 + W.apps * 1.5 + W.crit * 6 + W.makers * .5);
+      const AUD = [["Value-stream head", "Faster delivery of your priorities, lower control risk on your apps, and no new costs to manage. You keep your people and your roadmap."], ["Product owners", `Less time on plumbing and paperwork: ${sel.slice(0, 2).map(p => p[3].toLowerCase()).join(" and ") || "shared blocks and pipelines"} come ready-made, and releases take minutes.`], ["Makers", "Better tools, reusable components, training and a community; less repetitive work and fewer 3am failures."], ["Risk and control partners", "Controls designed once and evidenced automatically; one entitlement model; proportionate governance by risk tier."]];
+      el.innerHTML = `<div class="pd-grid" style="grid-template-columns:repeat(auto-fill,minmax(170px,1fr))"><label class="small">Value stream<input class="pd-in" data-wf="name" value="${esc(W.name)}" style="width:100%"></label><label class="small">Apps and flows<input class="pd-in" type="number" min="1" data-wf="apps" value="${W.apps}" style="width:100%"></label><label class="small">Of which tier 1–2<input class="pd-in" type="number" min="0" data-wf="crit" value="${W.crit}" style="width:100%"></label><label class="small">Makers<input class="pd-in" type="number" min="0" data-wf="makers" value="${W.makers}" style="width:100%"></label></div>
+        <div class="small" style="margin-top:10px"><b>Their pain points</b> (tick what you've heard from them)</div>
+        <div class="pd-grid" style="grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:6px;margin-top:4px">${PAIN.map(p => `<label class="small" style="display:flex;gap:6px;align-items:flex-start;padding:6px 8px;border-radius:10px;background:var(--surface-2);cursor:pointer"><input type="checkbox" data-wp="${p[0]}"${W.pains.includes(p[0]) ? " checked" : ""} style="margin-top:3px"> ${p[1]}</label>`).join("")}</div>
+        <div class="stats">${st(sel.length, "pain points the platform addresses")}${st("~" + weeks + " weeks", "to land on the platform")}${st("~" + pd + " days", "platform effort to onboard")}</div>
+        ${sel.length ? `<div class="small" style="margin-top:10px"><b>Lead with these benefits for ${esc(W.name)}</b></div><ol class="small" style="margin:4px 0;padding-left:20px">${sel.map(p => `<li><b>${p[2]}.</b> ${p[4]} <span class="muted">(${p[3]})</span></li>`).join("")}</ol>` : `<p class="small muted">Tick at least one pain point to tailor the pitch.</p>`}
+        <div class="small" style="margin-top:10px"><b>Talking points by audience</b></div>${AUD.map(a => `<div class="sc-row"><b>${a[0]}</b><span class="small">${a[1]}</span></div>`).join("")}
+        <div class="row" style="gap:6px;margin-top:8px"><button class="btn" data-wx="copy">📋 Copy one-pager</button><button class="btn" data-wx="md">⬇️ Download one-pager</button></div>`;
+      S.wOut = { sel, AUD, weeks, pd };
+      const md = () => `# Why ${W.name} should build on the Credit Power Platform\n\n**${W.apps} apps and flows · ${W.crit} business-critical · ${W.makers} makers**\n\n## What you get\n\n${sel.map((p, i) => `${i + 1}. **${p[2]}.** ${p[4]}`).join("\n")}\n\n## What it means for you\n\n${AUD.map(a => `- **${a[0]}:** ${a[1]}`).join("\n")}\n\n## What it takes\n\n- About ${weeks} weeks to land on the platform (critical apps first), with a named platform engineer\n- About ${pd} days of platform-team effort; your team's time mostly in discovery and testing\n- Nothing changes for your users during the move; you keep your people and your roadmap\n\n## Next step\n\nA no-commitment Discover phase (2–4 weeks): inventory, risk tiers and an onboarding plan agreed with you.\n`;
+      $$("[data-wf]", el).forEach(i => i.addEventListener("change", () => { const k = i.dataset.wf; W[k] = k === "name" ? i.value.slice(0, 60) || "This value stream" : Math.max(0, +i.value || 0); save(); draw(); }));
+      $$("[data-wp]", el).forEach(c => c.addEventListener("change", () => { const k = c.dataset.wp; W.pains = c.checked ? [...W.pains, k] : W.pains.filter(x => x !== k); save(); draw(); }));
+      $$("[data-wx]", el).forEach(b => b.addEventListener("click", () => b.dataset.wx === "copy" ? copy(md(), b) : dl("platform-one-pager.md", md())));
+      save();
+    };
+    draw();
+  })();
+
+  /* ===== benefits register ===== */
+  const BEN = [
+    ["Faster time to production", "🚀 Speed", "Paved road, templates, self-service environments, blocks", "Median days from approved idea to live app", "From quarter 2"],
+    ["Less rework and duplicated build", "📦 Scale & cost", "Reusable blocks and connectors built once", "Reuse rate; person-days saved per new app", "From quarter 2–3"],
+    ["Lower run and maintenance cost", "📦 Scale & cost", "Shared blocks maintained centrally; duplicate apps retired", "Maintenance effort per app; apps retired", "Year 1–2"],
+    ["Lower licence and capacity cost", "📦 Scale & cost", "Pooled licences, utilisation reviews, capacity planning", "Licence utilisation; cost per app", "Within 2 quarters"],
+    ["Consistent controls on every app", "🛡️ Safety", "Risk tiering, pipelines, standards built into the paved road", "Share of tier 1–2 apps on ALM; control exceptions", "From quarter 1–2"],
+    ["Fewer audit findings and faster audits", "🛡️ Safety", "Central evidence, one entitlement model, inventory", "Open and repeat audit findings; time to answer audit requests", "Year 1"],
+    ["Segregation of duties enforced", "🛡️ Safety", "Persona model and cross-app SoD checks", "Open SoD conflicts; leaver access removal time", "From quarter 2"],
+    ["Lower key-person and operational risk", "🛡️ Safety", "Standards, documentation, monitoring and a support model", "Apps with backup owners; incidents caught by monitoring", "From quarter 2"],
+    ["Consistent, trusted credit data", "🧠 Data & AI", "Shared credit data model, connectors to systems of record", "Apps using the shared model; data quality issues", "Year 1–2"],
+    ["Safe AI and Copilot at scale", "🧠 Data & AI", "AI guardrails, approved patterns, reusable AI blocks", "AI use cases live with guardrail sign-off; time to approve a use case", "Year 1"],
+    ["Better experience for users", "🚀 Speed", "Design system and credit UX patterns across apps", "User satisfaction; training time for new joiners", "Year 1–2"],
+    ["Stronger maker skills and retention", "🚀 Speed", "Training paths, champions, community", "Certified makers; maker satisfaction", "Ongoing"],
+    ["Visibility for leaders", "🛡️ Safety", "One inventory, scorecard and roadmap", "Quarterly scorecard published", "From quarter 1"],
+    ["Faster onboarding of new value streams and products", "🚀 Speed", "Repeatable onboarding and templates", "Weeks to onboard a value stream", "From the second value stream"],
+  ];
+  $("#peBenefits").innerHTML = `<div class="pd-scroll"><table class="pe-tbl"><tr><th>Benefit</th><th>Outcome</th><th>How the platform delivers it</th><th>How we'll measure it</th><th>When</th></tr>${BEN.map(b => `<tr><td>${b[0]}</td><td>${b[1]}</td><td>${b[2]}</td><td>${b[3]}</td><td>${b[4]}</td></tr>`).join("")}</table></div>`;
+
+  /* ===== Chapter 22: rationale, issues, sorter ===== */
+  const WHY = [["Low-code worked, so it spread", "Business teams built what they needed quickly. That's the success we're building on."], ["Spread creates sprawl", "Without shared foundations, every team rebuilds the same plumbing, copies data, and invents its own access and release process (Conway's law at work)."], ["That plumbing isn't where the value is", "Environments, connectors, approvals, audit and pipelines are undifferentiated: they don't make one value stream's process better than another's, but they consume a big share of every build."], ["Cognitive load is the real constraint", "Makers who must also be experts in security, ALM, integration and audit have less attention for the business problem. A platform absorbs that load."], ["Controls built once are stronger and cheaper", "One well-designed entitlement model, pipeline and audit block beats twenty partial ones, and produces the evidence regulators and auditors expect."], ["Every block makes the platform more valuable", "Each new block or connector benefits every current and future team, so the platform's value compounds as more value streams join."], ["Run it as a product, or it becomes a bottleneck", "A product mindset (customers, roadmap, service levels, self-service, adoption earned not mandated) is what separates a platform from a central approval queue."], ["Data and AI need common foundations", "Copilot and AI agents are only as safe and useful as the data and access controls underneath. A shared model and guardrails make AI adoption possible at scale."]];
+  $("#peWhy").innerHTML = WHY.map((w, i) => `<div class="pe-step"><span class="n">${i + 1}</span><div><b>${w[0]}</b><div class="small">${w[1]}</div></div></div>`).join("");
+  const ISS = [["The platform becomes a bottleneck", "Requests queue up behind a small central team, and value streams wait.", "Self-service first; published service levels; capacity reserved for onboarding and requests; anything not on the platform yet can still be built by the value stream within guardrails."], ["It becomes a gatekeeper, not a service", "\"Central team\" slides into approval committee; teams feel policed.", "Measure the platform by customers' speed and satisfaction; tiered, mostly automated reviews; a customer council with real say over the roadmap."], ["Cognitive load is hard to measure", "The core idea of Team Topologies is persuasive but fuzzy; critics say it's easy to assert and hard to prove.", "Use proxies: lead time, number of tools and steps to production, time spent on plumbing, maker survey scores. Measure before and after onboarding."], ["Banks fund projects, not long-lived teams", "Team Topologies assumes stable, long-lived teams; project funding breaks teams up after each delivery.", "Fund the platform as a standing product team; encourage value streams to keep stable fusion teams; show the cost of rebuilding knowledge each project."], ["Reorganising is disruptive", "Applying Conway's law (the inverse Conway manoeuvre) can sound like a reorg, which triggers resistance.", "No reporting-line changes for value streams. Only the platform team is new; everyone else changes how they build, not who they report to."], ["\"Platform team\" is old shared services rebranded", "Teams who've seen central IT functions fail are sceptical.", "Show the differences: self-service, product management, service levels, inner source, published roadmap. Prove it with the first onboarded value stream."], ["The interaction modes are too neat", "Real life mixes collaboration, service and facilitation, and collaboration can drag on indefinitely.", "Time-box collaboration explicitly (start and end dates, exit criteria) and review interaction modes each quarter."], ["X-as-a-Service takes time to mature", "Early on, self-service is limited and the platform team does a lot by hand.", "Be honest about the roadmap; start with the thinnest viable platform; automate the most frequent requests first."], ["Value streams compete for platform capacity", "Whoever shouts loudest gets their block first.", "Leverage-based prioritisation (how many teams benefit), regulatory deadlines first, and decisions made openly at the customer council."], ["Over-building the platform", "The platform builds for hypothetical future needs; gold-plated blocks nobody uses.", "The rule of three (build a block when three teams need it), pilot with real consumers, and retire unused blocks."], ["Loss of autonomy", "Makers fear they can't innovate or try new connectors.", "Sandbox environments for experiments, a fast route to approve new connectors, and an exception process with clear criteria."], ["Single point of failure", "If the platform's pipeline or connector breaks, every team is affected.", "Treat the platform as tier 1 itself: monitoring, resilience, change control and a rollback plan for platform changes."]];
+  $("#peIssues").innerHTML = ISS.map(i => `<details class="pd-q"><summary>⚠️ ${i[0]}</summary><p class="small" style="margin:6px 0 0"><b>The risk:</b> ${i[1]}</p><p class="small" style="margin:6px 0 0"><b style="color:var(--c2t)">What we'll do:</b> ${i[2]}</p></details>`).join("");
+  makeSorter($("#peModeSorter"), ["🔌 X-as-a-Service", "🤝 Collaboration (time-boxed)", "🎓 Facilitating"], [
+    ["A value stream needs a new environment for a tier 3 app", 0, "A routine request: self-service through the portal, no meetings needed."],
+    ["Onboarding the Commercial Lending value stream's 25 apps onto the platform", 1, "A time-boxed joint effort with a named platform engineer, ending when they're landed."],
+    ["A team's makers have never used solutions or pipelines", 2, "Coach them through it with training and pairing until they're self-sufficient."],
+    ["A value stream wants to reuse the approval block", 0, "Documented block, self-service consumption."],
+    ["Building the first version of a covenant-testing block with the team that needs it most", 1, "Co-develop with the pilot consumer (incubating), then support it for everyone."],
+    ["A team wants to learn the credit data model to design a new app", 2, "Teach the model and review their first design; then they work independently."],
+    ["Releasing a change to a tier 2 app", 0, "Pipeline with built-in gates; no platform involvement needed."],
+    ["Designing an AI financial-spreading pilot with a value stream", 1, "New pattern, shared risk: work closely for a few sprints, then publish the pattern."],
+  ]);
+
+  /* ===== Chapter 23: triage + capacity ===== */
+  const TRI = [["🛒 Self-service", "Environment, access persona, using an existing block or template", "Portal or catalogue; no ticket needed", "Minutes to 1 day"], ["⚙️ Configuration", "New connector reference, DLP exception within policy, new security role mapping", "Front door → platform engineer", "2–5 days"], ["🧱 New block or capability", "A connector to a new system, a new reusable component", "Front door → triage → customer council / roadmap", "Prioritised quarterly"], ["🚀 Value-stream build", "A new app or change to an app", "The value stream builds it; platform gives design advice if asked", "The value stream's own sprint"], ["🧯 Incident or support", "A failing flow, broken connector, access problem", "Support route with service levels (L1 value stream, L2–L3 platform)", "By severity"], ["⚖️ Exception", "Deviation from a standard or pattern", "Design authority with criteria", "Within a week"]];
+  $("#peTriage").innerHTML = `<div class="pd-scroll"><table class="pe-tbl"><tr><th>Request type</th><th>Examples</th><th>Route</th><th>Typical time</th></tr>${TRI.map(t => `<tr><td>${t[0]}</td><td>${t[1]}</td><td>${t[2]}</td><td>${t[3]}</td></tr>`).join("")}</table></div>`;
+  S.cap = S.cap || { team: 6, split: [45, 20, 15, 10, 10] };
+  (() => {
+    const el = $("#peCap"), L = [["🗺️ Roadmap: new blocks & capabilities", "c1"], ["🤝 Onboarding & collaboration", "c3"], ["🧯 Run: support, monitoring, admin", "c4"], ["🧹 Technical debt & upgrades", "c6"], ["🎓 Enablement & community", "c2"]];
+    const draw = () => {
+      const C = S.cap, tot = C.split.reduce((a, b) => a + b, 0) || 1, days = C.team * 60 * .8, d = C.split.map(x => x / tot * days);
+      const warn = []; if (d[2] / days < .1) warn.push("Under 10% on run: incidents will interrupt everything else."); if (d[3] / days < .05) warn.push("Under 5% on technical debt: the platform will slow down and break over time."); if (d[1] / days < .1) warn.push("Little onboarding capacity: value streams will wait to join."); if (d[0] / days < .3) warn.push("Under 30% on the roadmap: the platform won't grow fast enough to earn adoption."); if (d[4] / days < .05) warn.push("Almost no enablement: the team risks becoming a gatekeeper.");
+      el.innerHTML = `<label class="small">Platform team size <input class="pd-in" type="number" min="1" max="40" data-ct value="${C.team}" style="width:70px"></label>
+        ${L.map((l, i) => `<div style="margin:8px 0"><div class="small" style="display:flex;justify-content:space-between"><span>${l[0]}</span><b>${Math.round(C.split[i] / tot * 100)}% · ${Math.round(d[i])} days/qtr</b></div><input type="range" min="0" max="100" value="${C.split[i]}" data-cs="${i}" style="width:100%" aria-label="${l[0]}"></div>`).join("")}
+        <div class="stats">${st(Math.round(days), "person-days per quarter (80% focus)")}${st("~" + Math.floor(d[0] / 15), "new blocks per quarter (≈15 days each)")}${st("~" + Math.floor(d[1] / 25), "value-stream onboardings per quarter (≈25 days each)")}${st("~" + Math.round(d[2] / .5), "support requests handled (≈½ day each)")}</div>
+        ${warn.length ? `<div class="key warn" style="margin:10px 0 0"><p class="small">${warn.join("<br>")}</p></div>` : `<p class="small" style="color:var(--c2t)"><b>✓ A sustainable split.</b> A common starting point is roughly 40–50% roadmap, 15–25% onboarding, 10–20% run, 10% debt and 10% enablement, shifting toward the roadmap as self-service matures.</p>`}
+        <p class="small muted">Rough unit sizes for illustration; use your own team's history once you have it.</p>`;
+      $("[data-ct]", el).addEventListener("change", e => { C.team = Math.max(1, +e.target.value || 1); save(); draw(); });
+      $$("[data-cs]", el).forEach(r => r.addEventListener("change", () => { C.split[+r.dataset.cs] = +r.value; save(); draw(); }));
+    };
+    draw();
+  })();
+
+  /* ===== Chapter 24: patterns + design lab ===== */
+  const PAT = [
+    ["task", "📱 Task app", "A focused app for a specific job: capture a request, record a decision, look something up.", "Canvas app on Dataverse", ["App shell & theme", "Sign-in & personas", "Audit trail", "Counterparty search"], "Tier 3–4 usually; tier 2 if it records decisions.", "Don't let it grow into a case-management system; switch pattern if it does."],
+    ["case", "🗂️ Case management", "Work that moves through stages with many people: credit applications, annual reviews, watchlist cases.", "Model-driven app with business process flows, on Dataverse", ["Credit data model", "Approval with delegated authority", "Document upload", "Audit trail", "Notifications", "Personas & SoD"], "Tier 2 typically; tier 1 if it records credit decisions.", "Design the data model first; agree stages with the business owner."],
+    ["flow", "🔁 Workflow automation", "Automate a process across systems: reminders, escalations, approvals, hand-offs.", "Power Automate cloud flows, packaged in a solution", ["Approval block", "Notifications", "Error handling & alerting", "Connection references"], "Depends on what it automates; alerting is mandatory for tier 1–2.", "Use service accounts, not personal connections; handle failures explicitly."],
+    ["tracker", "📋 Data capture & tracker (spreadsheet replacement)", "Replace a shared spreadsheet or list with a governed app: covenants, collateral, exceptions.", "Canvas or model-driven app on Dataverse", ["Credit data model", "Audit trail", "Reporting template", "Import tool"], "Often tier 2–3; review the EUC register entry it replaces.", "Link to systems of record instead of re-keying data that exists elsewhere."],
+    ["bi", "📊 Reporting & analytics", "Dashboards and reports for portfolio, pipeline, exposure or operations.", "Power BI on certified semantic models", ["Certified credit semantic model", "Report theme", "Row-level security by persona"], "Tier 1 if used for regulatory or committee reporting.", "Build on the certified model; avoid personal datasets for shared reports."],
+    ["integ", "🔌 Integration-led app", "An app whose main job is to show or update data in core systems.", "Custom connectors or virtual tables via API management", ["Core-system connectors", "Error handling", "Personas"], "Usually tier 2; tier 1 if it writes to systems of record.", "Integrations go through the platform's connector, never direct database access."],
+    ["doc", "📄 Document processing", "Extract data from documents such as financial statements or valuations.", "AI Builder document processing + human review + Dataverse", ["AI extraction block", "Human review screen", "Document storage & retention", "Audit trail"], "Tier 2 at least; model-risk review if outputs feed credit decisions.", "Always keep a human review step and record overrides."],
+    ["agent", "🤖 Conversational agent", "A Copilot Studio agent that answers policy questions or helps users find information.", "Copilot Studio with approved knowledge sources", ["AI guardrails", "Approved knowledge sources", "Personas", "Usage logging"], "Tier 2+; never makes credit decisions.", "Restrict to approved sources; test answers; label it as AI."],
+    ["portal", "🌐 External portal", "Let external parties (customers, brokers, valuers) submit or view information.", "Power Pages with external identity", ["External identity", "Document upload", "Audit trail", "Security review"], "Tier 1–2; security review always.", "Higher security bar: penetration testing, data minimisation, external-access policy."],
+    ["rpa", "🖱️ Desktop automation (RPA)", "Automate legacy screens with no API, as a last resort.", "Power Automate desktop flows", ["RPA standards", "Credential vault", "Monitoring"], "Tier 2+ if it touches core systems.", "Fragile when screens change; prefer an API or connector; plan to replace."],
+  ];
+  (() => {
+    const el = $("#pePatterns"); let cur = 0;
+    const draw = () => { const p = PAT[cur]; el.innerHTML = `<div class="row" style="gap:6px">${PAT.map((x, i) => `<button class="chip${i === cur ? " on" : ""}" data-pt="${i}">${x[1]}</button>`).join("")}</div><div class="info-panel" style="margin-top:10px;min-height:0"><b>${p[1]}</b><p class="small" style="margin:6px 0">${p[2]}</p><p class="small" style="margin:4px 0"><b>Built with:</b> ${p[3]}</p><p class="small" style="margin:4px 0"><b>Blocks:</b> ${p[4].map(b => `<span class="pe-tag">${b}</span>`).join("")}</p><p class="small" style="margin:4px 0"><b>Typical tier:</b> ${p[5]}</p><p class="small" style="margin:4px 0"><b>Watch out:</b> ${p[6]}</p></div>`; $$("[data-pt]", el).forEach(b => b.addEventListener("click", () => { cur = +b.dataset.pt; draw(); })); };
+    draw();
+  })();
+  (() => {
+    const Q = [["What does the business mainly need?", [["Capture or track data (replace a spreadsheet)", "tracker"], ["Manage cases through stages with several people", "case"], ["Automate approvals or hand-offs", "flow"], ["Dashboards and reports", "bi"], ["Extract data from documents", "doc"], ["Answer questions for users", "agent"], ["A quick task-focused tool", "task"], ["External parties submit or view information", "portal"], ["Automate a legacy screen with no API", "rpa"]]], ["Who uses it?", [["A team", 0], ["A department", 1], ["Across the bank", 2], ["External parties too", 3]]], ["Where does the data come from?", [["New data the app owns", 0], ["Core systems (read)", 1], ["Core systems (read and write)", 2]]], ["How is it used in credit decisions?", [["Not at all", 0], ["Informs decisions or reporting", 1], ["Records or makes decisions, or regulatory reporting", 2]]], ["Does it use AI on outputs people act on?", [["No", 0], ["Yes", 1]]]];
+    const A = [0, 1, 1, 1, 0], el = $("#peDesign");
+    const draw = () => {
+      const pk = Q[0][1][A[0]][1], p = PAT.find(x => x[0] === pk), u = A[1], d = A[2], dec = A[3], ai = A[4];
+      let tier = 4 - (u >= 1 ? 1 : 0) - (dec >= 1 ? 1 : 0) - (dec === 2 || d === 2 || u === 3 ? 1 : 0); tier = Math.max(1, Math.min(4, tier)); if (pk === "portal") tier = Math.min(tier, 2);
+      const blocks = [...new Set([...p[4], ...(d ? ["Core-system connectors"] : []), ...(dec ? ["Approval with delegated authority", "Audit trail"] : []), ...(ai ? ["AI guardrails", "Human review screen"] : []), "Sign-in & personas", "ALM pipeline"])];
+      const route = tier === 1 || ai && dec || pk === "portal" ? "Design authority" : tier === 2 ? "Peer review" : "Self-certify with checklist";
+      const md = `## Solution design summary\n\n- **Pattern:** ${p[1].replace(/^\S+\s/, "")} (${p[3]})\n- **Risk tier:** ${tier}\n- **Review route:** ${route}\n- **Platform blocks:** ${blocks.join(", ")}\n- **Data:** ${["App-owned tables in Dataverse", "Read from systems of record via platform connectors or virtual tables", "Read and write via platform connectors; writes logged and reconciled"][d]}\n- **Access:** platform personas via Entra ID groups; ${dec === 2 ? "segregation-of-duties check required" : "least privilege"}\n- **Release:** pipeline Dev → Test → UAT → Prod with tier ${tier} gates\n${ai ? "- **AI:** human review of every output that is acted on; outputs labelled; model-risk check if it informs decisions\n" : ""}- **Watch out:** ${p[6]}\n`;
+      el.innerHTML = Q.map((q, i) => `<div style="margin:8px 0"><div class="small"><b>${q[0]}</b></div><div class="row" style="gap:6px;margin-top:4px">${q[1].map((o, j) => `<button class="chip${A[i] === j ? " on" : ""}" data-dq="${i}-${j}">${o[0]}</button>`).join("")}</div></div>`).join("") +
+        `<div class="info-panel" style="margin-top:10px;min-height:0"><div class="stats" style="margin-top:0">${st(p[1], "recommended pattern")}${st("Tier " + tier, "indicative risk tier")}${st(route, "review route")}</div><p class="small" style="margin:10px 0 4px"><b>Blocks to use:</b> ${blocks.map(b => `<span class="pe-tag">${b}</span>`).join("")}</p><p class="small" style="margin:4px 0"><b>Built with:</b> ${p[3]}</p><p class="small" style="margin:4px 0"><b>Watch out:</b> ${p[6]}</p><button class="btn" data-dcopy style="margin-top:6px">📋 Copy design summary</button></div>`;
+      $$("[data-dq]", el).forEach(b => b.addEventListener("click", () => { const [i, j] = b.dataset.dq.split("-").map(Number); A[i] = j; draw(); }));
+      $("[data-dcopy]", el).addEventListener("click", e => copy(md, e.target));
+    };
+    draw();
+  })();
+
+  /* ===== Chapter 25: release path ===== */
+  (() => {
+    const el = $("#peRelease"); let tier = 1, ct = 1;
+    const draw = () => {
+      const T = tier + 1, std = ct === 0, em = ct === 2;
+      const gates = [["Automated build checks (solution checker, tests, versioning)", true, "Pipeline"], ["UAT sign-off by the product owner", !std && !em, "Value-stream product owner"], ["Release approval in the pipeline", true, T >= 3 ? "Product owner (not the builder)" : "Product owner + platform release check"], ["Formal change approval (CAB or equivalent) and risk sign-off", T === 1 && !std && !em, "Change board / risk partner"], ["Release window", !std && !em, T === 1 ? "Fortnightly window" : "Weekly window"], ["Expedited approval and post-incident review", em, "Duty manager + platform on-call"], ["Smoke test, monitoring and rollback plan", T <= 2, "Platform + value stream"], ["Change record created and closed automatically", true, "Pipeline ↔ ITSM tool"]].filter(g => g[1]);
+      const lead = std ? "Same day" : em ? "Hours" : T === 1 ? "Up to 2 weeks (next window)" : T === 2 ? "Within a week" : "1–3 days";
+      el.innerHTML = `<div class="small"><b>App tier</b></div><div class="row" style="gap:6px">${chips(["Tier 1 · Critical", "Tier 2 · Important", "Tier 3 · Departmental", "Tier 4 · Team"], tier, "rt")}</div><div class="small" style="margin-top:8px"><b>Change type</b></div><div class="row" style="gap:6px">${chips(["🟢 Standard (pre-approved)", "🟡 Normal", "🔴 Emergency fix"], ct, "rc")}</div>
+        <div class="grid2" style="margin-top:12px;gap:14px"><div class="info-panel" style="min-height:0"><b>On the platform</b>${gates.map((g, i) => `<div class="small" style="margin:6px 0">${i + 1}. ${g[0]} <span class="muted">· ${g[2]}</span></div>`).join("")}<div class="stats">${st(lead, "typical lead time")}${st("Automatic", "evidence & change record")}</div></div>
+        <div class="info-panel" style="min-height:0;background:var(--c4-soft)"><b>Typical federated release today</b><div class="small" style="margin:6px 0">1. Export the solution manually (or edit production directly)</div><div class="small" style="margin:6px 0">2. Import by hand; environment settings fixed after the fact</div><div class="small" style="margin:6px 0">3. Change record raised manually, if at all</div><div class="small" style="margin:6px 0">4. Builder often approves their own change</div><div class="small" style="margin:6px 0">5. No automated checks; rollback means rebuilding</div><div class="stats">${st("Varies", "lead time")}${st("Manual", "evidence")}</div></div></div>`;
+      $$("[data-rt]", el).forEach(b => b.addEventListener("click", () => { tier = +b.dataset.rt; draw(); }));
+      $$("[data-rc]", el).forEach(b => b.addEventListener("click", () => { ct = +b.dataset.rc; draw(); }));
+    };
+    draw();
+  })();
+
+  /* ===== Chapter 26: block catalogue ===== */
+  const TY = ["Connector", "UI component", "Flow", "Template", "Data", "Service", "AI", "Guide"];
+  const CAT = [
+    ["🔐 Identity & access", [["Sign-in & persona roles", 5, "Standard security roles and Entra ID group mapping for every app"], ["Segregation-of-duties check", 5, "Checks a user's combined permissions against SoD rules across apps"], ["Delegated authority lookup", 4, "Returns a user's credit approval authority (amount, product, risk grade)"], ["Access request & recertification flow", 2, "Request, approve and periodically recertify persona membership"], ["Service-account connection standard", 7, "How to connect flows with service accounts, never personal credentials"]]],
+    ["🗄️ Data", [["Credit data model tables", 4, "Counterparty, facility, exposure, collateral, rating, covenant, decision"], ["Reference data (products, sectors, countries, grades)", 4, "Shared, owned lists so every app uses the same codes"], ["Counterparty hierarchy", 4, "Group structures and connected parties"], ["Data import tool", 3, "Validated import from spreadsheets during migration"], ["Data quality rules", 5, "Checks and alerts on shared credit data"]]],
+    ["🔌 Integration", [["Loan origination system connector", 0, "Read and update applications and facilities"], ["Core banking connector", 0, "Balances, limits, drawdowns, exposure"], ["Credit bureau connector", 0, "Bureau reports and scores where permitted"], ["Rating model service connector", 0, "Retrieve ratings and model outputs"], ["Collateral system connector", 0, "Collateral items and valuations"], ["CRM connector", 0, "Customer and relationship data"], ["Document management connector", 0, "Store and retrieve documents with retention classes"], ["ITSM connector", 0, "Create and update change records and incidents"]]],
+    ["✅ Workflow & approvals", [["Approval with delegated authority", 2, "Routes approvals by amount, product and authority; maker-checker enforced"], ["Escalation & SLA timer", 2, "Escalates overdue tasks and tracks service levels"], ["Four-eyes check", 2, "Second-person verification for sensitive changes"], ["Task assignment & queues", 2, "Work queues with assignment rules"], ["Exception & deviation request", 2, "Request and approve policy exceptions with reasons"]]],
+    ["📄 Documents", [["Document generation", 2, "Credit memos, letters and packs from templates"], ["Document upload & checklist", 1, "Required-documents checklist with upload and status"], ["E-signature integration", 0, "Send documents for signature and track status"], ["Retention & legal hold", 5, "Apply retention classes and holds"]]],
+    ["🎨 UI & experience", [["App shell, theme & navigation", 1, "Standard header, navigation, colours and layout"], ["Counterparty header", 1, "Name, group, rating, exposure and status at a glance"], ["Exposure summary card", 1, "Limits, utilisation and headroom"], ["Approval panel", 1, "Shows decision, approver, authority and conditions"], ["Audit timeline", 1, "Who changed what, when and why"], ["Accessible form controls", 1, "Inputs, validation and error messages that meet accessibility standards"]]],
+    ["🔔 Notifications", [["Email & Teams notifications", 2, "Standard, branded notifications with links"], ["Reminder scheduler", 2, "Date-based reminders (reviews, covenant tests, expiries)"], ["Adaptive card approvals in Teams", 2, "Approve from Teams with full audit"]]],
+    ["🧾 Audit & compliance", [["Audit trail", 5, "Records who, what, when and why for key actions"], ["Decision record", 4, "Standard record of credit decisions and reasons"], ["Evidence pack generator", 5, "Collects control evidence for audits"], ["Data classification labels", 7, "How to label and protect sensitive data"]]],
+    ["📊 Reporting", [["Certified credit semantic model", 4, "Shared Power BI model on the credit data model"], ["Report template & theme", 3, "Standard Power BI layout and visuals"], ["Platform usage dashboard", 5, "Adoption, reuse and health of the estate"]]],
+    ["🤖 AI & automation", [["Financial statement extraction", 6, "AI Builder extraction with confidence scores and human review"], ["Credit file summariser", 6, "Summarises a credit file for reviewers, with sources"], ["Policy Q&A agent", 6, "Copilot Studio agent grounded on approved policy documents"], ["Human review screen", 1, "Review, correct and approve AI outputs; overrides recorded"], ["AI guardrails pattern", 7, "Rules, testing and labelling for AI use"], ["RPA standards & credential vault", 7, "Safe desktop-flow practices"]]],
+    ["🔁 DevOps & quality", [["ALM pipeline", 5, "Dev → Test → UAT → Prod with gates"], ["Environment provisioning", 5, "Self-service environments with settings applied"], ["Automated test templates", 3, "Test Engine templates for common screens and flows"], ["Error handling & alerting pattern", 2, "Try/catch scopes, logging and alerts for flows"], ["Monitoring & alerting", 5, "Central monitoring of flow and app health"]]],
+    ["🚀 Templates & accelerators", [["Credit app starter template", 3, "Shell, personas, audit, data model and pipeline pre-wired"], ["Case management starter", 3, "Model-driven app with stages and approvals"], ["Tracker starter", 3, "Spreadsheet-replacement template"], ["Design document & ADR templates", 7, "Lightweight design and decision records"], ["Onboarding checklist", 7, "Steps for a value stream joining the platform"]]],
+    ["🏦 Credit domain", [["Covenant tester", 2, "Calculates covenant tests from financials and flags breaches"], ["Limit utilisation & headroom calculator", 5, "Utilisation, headroom and excess flags"], ["Collateral coverage calculator", 5, "Coverage ratios with haircuts"], ["Annual review scheduler", 2, "Tracks review dates and triggers workflows"], ["Watchlist trigger engine", 2, "Applies early-warning triggers and creates cases"], ["Pricing & return calculator", 5, "Indicative pricing and risk-adjusted return (connected to approved models)"]]],
+  ];
+  S.have = S.have || [];
+  (() => {
+    const el = $("#peCat"); let cf = -1, tf = -1, q = "";
+    const all = CAT.flatMap(([c, bs], ci) => bs.map(b => ({ c, ci, n: b[0], t: b[1], d: b[2] })));
+    el.innerHTML = `<div class="row" style="gap:6px"><input class="pd-in pe-q" type="search" placeholder="Search blocks" style="flex:1;min-width:160px;max-width:260px"><select class="pd-in pe-cf"><option value="-1">All categories</option>${CAT.map((c, i) => `<option value="${i}">${c[0]}</option>`).join("")}</select><select class="pd-in pe-tf"><option value="-1">All types</option>${TY.map((t, i) => `<option value="${i}">${t}</option>`).join("")}</select><button class="btn" data-cx>⬇️ Export backlog</button></div><div class="pe-cs" style="margin-top:8px"></div><div class="pe-cl" style="margin-top:8px"></div>`;
+    const draw = () => {
+      const L = all.filter(b => (cf < 0 || b.ci === cf) && (tf < 0 || b.t === tf) && (b.n + " " + b.d).toLowerCase().includes(q));
+      $(".pe-cs", el).innerHTML = `<div class="stats" style="margin-top:0">${st(all.length, "blocks in the catalogue")}${st(CAT.length, "categories")}${st(S.have.length, "you already have")}${st(L.length, "shown")}</div>`;
+      $(".pe-cl", el).innerHTML = CAT.map((c, ci) => { const bs = L.filter(b => b.ci === ci); return bs.length ? `<div class="small" style="margin:10px 0 4px"><b>${c[0]}</b></div><div class="pd-grid" style="grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:6px">${bs.map(b => { const h = S.have.includes(b.n); return `<div class="pe-block" style="${h ? "border-color:var(--c2);background:var(--c2-soft)" : ""}"><h5>${esc(b.n)}</h5><div class="small">${esc(b.d)}</div><span class="pe-tag">${TY[b.t]}</span><label class="small" style="display:inline-flex;gap:4px;align-items:center;margin-left:6px;cursor:pointer"><input type="checkbox" data-hv="${esc(b.n)}"${h ? " checked" : ""}> we have this</label></div>`; }).join("")}</div>` : ""; }).join("") || `<p class="small muted">No blocks match.</p>`;
+      $$("[data-hv]", el).forEach(c => c.addEventListener("change", () => { const n = c.dataset.hv; S.have = c.checked ? [...S.have, n] : S.have.filter(x => x !== n); save(); draw(); }));
+    };
+    $(".pe-q", el).addEventListener("input", e => { q = e.target.value.toLowerCase(); draw(); });
+    $(".pe-cf", el).addEventListener("change", e => { cf = +e.target.value; draw(); });
+    $(".pe-tf", el).addEventListener("change", e => { tf = +e.target.value; draw(); });
+    $("[data-cx]", el).addEventListener("click", () => dl("lego-block-backlog.md", "# Credit Power Platform block catalogue\n\n" + CAT.map(([c, bs]) => `## ${c}\n\n| Block | Type | Description | Status |\n|---|---|---|---|\n` + bs.map(b => `| ${b[0]} | ${TY[b[1]]} | ${b[2]} | ${S.have.includes(b[0]) ? "Have" : "Backlog"} |`).join("\n")).join("\n\n") + "\n"));
+    draw();
+  })();
+  (() => {
+    const C = [["Three or more teams need it now (the rule of three)", 3], ["The requirements are fairly stable", 2], ["It's undifferentiated: it doesn't make any one value stream's process special", 2], ["It reduces risk or enforces a control", 2], ["It would take more than a few days to build each time", 1], ["Someone will own it: support, versions, documentation", 2], ["It has a clear, simple interface", 1], ["Microsoft or an existing system doesn't already provide it", 1]];
+    const el = $("#peCand"), on = new Set();
+    const draw = () => {
+      const s = [...on].reduce((a, i) => a + C[i][1], 0), max = C.reduce((a, c) => a + c[1], 0);
+      const v = !on.has(5) && on.size ? ["c4", "Not yet: no owner means no block. Find an owner first."] : s >= 10 ? ["c2", "Strong candidate: incubate it with a pilot team."] : s >= 6 ? ["c3", "Possible: start as a shared pattern or guide, and promote it when more teams need it."] : ["c4", "Keep it in the value stream for now; revisit if demand grows."];
+      el.innerHTML = C.map((c, i) => `<label class="small" style="display:flex;gap:6px;align-items:flex-start;margin:5px 0;cursor:pointer"><input type="checkbox" data-cc="${i}"${on.has(i) ? " checked" : ""} style="margin-top:3px"> ${c[0]}</label>`).join("") + `<div style="margin-top:10px;padding:10px 12px;border-radius:12px;background:var(--${v[0]}-soft);border:1px solid var(--${v[0]})"><b>${s} / ${max}</b> · ${v[1]}</div>`;
+      $$("[data-cc]", el).forEach(c => c.addEventListener("change", () => { const i = +c.dataset.cc; c.checked ? on.add(i) : on.delete(i); draw(); }));
+    };
+    draw();
+  })();
+
+  /* ===== Chapter 27: onboarding planner ===== */
+  S.onb = S.onb || { apps: 25, crit: 4, flows: 30, conn: 3, dup: 4, makers: 8 };
+  (() => {
+    const el = $("#peOnb"), F = [["apps", "Apps"], ["crit", "Tier 1–2 apps"], ["flows", "Flows"], ["conn", "Home-built integrations"], ["dup", "Likely duplicates"], ["makers", "Makers"]];
+    const draw = () => {
+      const o = S.onb, disc = Math.min(4, 2 + Math.round((o.apps + o.flows) / 40)), land = Math.min(12, 3 + Math.round(o.crit * .8 + (o.apps + o.flows) / 25 + o.conn * .5)), adopt = 12 + Math.min(12, o.conn * 2 + o.dup);
+      const pd = Math.round(8 + (o.apps + o.flows) * .8 + o.crit * 5 + o.conn * 8 + o.makers * 1.5);
+      const W = 640, sc = W / (disc + land + adopt + 8), seg = [[disc, "Discover", "c6"], [land, "Land", "c1"], [adopt, "Adopt", "c3"], [8, "Optimise →", "c2"]]; let x = 0;
+      el.innerHTML = `<div class="pd-grid" style="grid-template-columns:repeat(auto-fill,minmax(130px,1fr))">${F.map(([k, l]) => `<label class="small">${l}<input class="pd-in" type="number" min="0" data-ob="${k}" value="${o[k]}" style="width:100%"></label>`).join("")}</div>
+        <svg viewBox="0 0 ${W} 60" style="width:100%;height:auto;margin-top:12px" role="img" aria-label="Onboarding timeline">${seg.map(([w, l, c]) => { const r = `<rect x="${x * sc}" y="8" width="${w * sc - 3}" height="30" rx="8" fill="var(--${c})"/><text x="${x * sc + 8}" y="28" font-size="12" font-weight="700" fill="#fff">${l}</text><text x="${x * sc + 4}" y="54" font-size="11" fill="var(--muted)">wk ${x}</text>`; x += w; return r; }).join("")}</svg>
+        <div class="stats">${st(disc + " wks", "discover")}${st(land + " wks", "land (critical apps first)")}${st("~" + Math.round(adopt / 4) + " months", "adopt blocks as apps change")}${st("~" + pd + " days", "platform effort")}</div>
+        <div class="small" style="margin-top:8px"><b>First five things to do</b></div><ol class="small" style="margin:4px 0;padding-left:20px"><li>Agree a sponsor and product-owner contact in the value stream; book the Discover kick-off.</li><li>Run the inventory for its ${o.apps} apps and ${o.flows} flows; confirm owners and tiers.</li><li>Land the ${o.crit} tier 1–2 apps first: governed environment, pipeline, personas, monitoring.</li><li>${o.conn ? `Map the ${o.conn} home-built integrations to platform connectors (or add them to the roadmap).` : "Confirm all data sources use platform connectors."}</li><li>${o.dup ? `Review the ${o.dup} likely duplicates with their owners and agree consolidate-or-keep.` : `Enrol the ${o.makers} makers on the training path.`}</li></ol><p class="small muted">Indicative only: real effort depends on app complexity and data migration.</p>`;
+      $$("[data-ob]", el).forEach(i => i.addEventListener("change", () => { o[i.dataset.ob] = Math.max(0, +i.value || 0); save(); draw(); }));
+    };
+    draw();
+  })();
+
+  /* ===== Chapter 28: FAQ + pitch deck ===== */
+  const FAQ = [
+    ["Autonomy", "Will we lose control of our apps and roadmap?", "No. You keep owning your apps, requirements, backlog and priorities.", "The platform owns shared foundations, not your business logic. Team Topologies' stream-aligned teams own outcomes end to end; the platform exists to make them faster."],
+    ["Autonomy", "Can we still experiment and try new things?", "Yes, in sandbox environments with lighter rules, and new connectors can be requested through a fast route.", "Innovation and control aren't opposites: experiments are cheap and safe in a sandbox; only production needs the full paved road."],
+    ["Autonomy", "Do our makers have to move into the central team?", "No. Makers stay in your value stream; the central team is small and focused on foundations.", "Moving makers away from the business would lose the main benefit of low-code: people who know the process building the solution."],
+    ["Autonomy", "What if a block doesn't fit our need?", "Extend it, ask for a change, or build your own with a short justification.", "Blocks are defaults, not mandates. Repeated deviations tell us the block needs to change."],
+    ["Speed", "Won't this slow us down?", "It shouldn't, and we'll measure it: lead time to production is a headline metric.", "Most of what slows teams today (set-up, integration, manual releases, access admin) is exactly what the platform removes. If lead times rise, the platform is failing and the council will say so."],
+    ["Speed", "How long will onboarding take?", "Typically a few weeks to land critical apps, with blocks adopted as apps are next changed.", "Phasing avoids a big-bang migration and lets you keep delivering during the move."],
+    ["Speed", "What if the platform team is busy when we need something?", "Most needs are self-service; for the rest, there's reserved onboarding capacity and published service levels.", "Capacity allocation (roadmap, onboarding, run, debt, enablement) is planned explicitly so requests don't starve."],
+    ["Cost & funding", "Who pays for the platform?", "The core platform is centrally funded at first; premium or dedicated services may be charged later, with costs visible to each value stream.", "Charging early discourages adoption; showback keeps costs transparent until usage settles."],
+    ["Cost & funding", "Will our costs go up?", "For most value streams they go down: less build and maintenance effort, pooled licences, fewer incidents.", "You stop paying separately for things every team needs. The business case shows the estimate for the bank as a whole."],
+    ["Cost & funding", "What about licences we've already bought?", "They're pooled and reallocated, not wasted.", "Central licence management usually finds unused licences that offset new needs."],
+    ["Risk & compliance", "Why can't we just follow the standards ourselves?", "You could, but standards without shared tools are applied unevenly and audited one app at a time.", "Built-in controls are stronger and cheaper than documented ones, and produce evidence automatically."],
+    ["Risk & compliance", "Does this replace our EUC or change-management policy?", "No. The platform implements those policies in the tooling, working with risk and IT.", "Policy ownership stays where it is; the platform turns policy into paved-road controls."],
+    ["Risk & compliance", "How does this help with audit?", "One inventory, one entitlement model, automatic change records and central evidence.", "Auditors get consistent answers across apps instead of a different story from each team."],
+    ["Risk & compliance", "Is Power Platform safe for business-critical credit processes?", "For many workflow, case and tracking processes, yes, with tier 1 controls. Some may belong on strategic or pro-code systems.", "Risk tiering makes that decision explicit, and the platform helps move apps that outgrow low-code."],
+    ["Technology", "What exactly is a Lego block?", "A reusable, owned and supported piece you plug into your app: a connector, component, flow, template, data table, service, AI model or guide.", "Blocks remove undifferentiated work. The catalogue (Chapter 26) lists what's available and what's planned."],
+    ["Technology", "What happens when a block changes?", "Blocks are versioned; breaking changes get notice and a support window, and you choose when to upgrade.", "Semantic versioning and deprecation policies keep consumers in control of their own sprint plans."],
+    ["Technology", "What if the platform goes down?", "The platform is run as a tier 1 service: monitoring, change control, resilience and rollback.", "Shared foundations concentrate risk, so they get the strongest controls."],
+    ["Technology", "Can we use pro-code when we need it?", "Yes. The platform includes pro developers for connectors and components, and supports moving apps to pro-code when needed.", "Low-code and pro-code are complementary; fusion teams combine both."],
+    ["Technology", "How are solutions designed on the platform?", "Pick a reference pattern, use the blocks, add your business logic, and take the review route for your tier.", "Patterns make design faster and reviews lighter because most decisions are already made and approved."],
+    ["People & skills", "What training will our makers get?", "A training path by level, office hours, a champions network and a pattern library.", "Enablement is what stops a platform becoming a gatekeeper: capable makers need less help."],
+    ["People & skills", "Is this a reorganisation?", "No. Only the platform team is new; value-stream reporting lines don't change.", "We're changing how we build, not who reports to whom."],
+    ["People & skills", "What's expected of our product owners?", "Own your apps and tiers, plan your sprints, approve releases, and join the customer council.", "Product owners shape the platform roadmap through the council, which is how the platform stays useful."],
+    ["Team Topologies", "Why Team Topologies?", "It gives a clear, widely used vocabulary for platform, stream-aligned and enabling teams and how they interact.", "Its central idea, limiting each team's cognitive load, explains why teams close to the business should be freed from undifferentiated platform work."],
+    ["Team Topologies", "Isn't 'platform team' just central IT rebranded?", "The difference is how it works: self-service, product management, service levels, a public roadmap and inner source.", "Judge it by results: the first onboarded value stream's lead time, reuse and satisfaction."],
+    ["Team Topologies", "Team Topologies assumes long-lived teams; we fund projects.", "True, and it's a real tension. The platform is funded as a standing team; we encourage value streams to keep stable fusion teams.", "Knowledge and productivity are lost every time a project team disbands; stable teams compound learning."],
+    ["Team Topologies", "What if collaboration with the platform team never ends?", "Collaboration is time-boxed with exit criteria, then moves to self-service.", "Endless collaboration is a sign of a missing capability; it goes on the roadmap."],
+    ["Process", "How will sprint planning work?", "You plan your own sprints. Platform dependencies are agreed at quarterly planning and tracked on a shared board; a platform liaison joins your planning only when needed.", "Two levels of planning keep autonomy and make cross-team dependencies visible early."],
+    ["Process", "How do we request something from the platform?", "Through one front door. Requests are triaged: self-service, configuration, new block, support or exception.", "One door makes demand visible, so the roadmap reflects real needs."],
+    ["Process", "How will release governance work?", "Every change goes through the pipeline with gates set by the app's tier; approvals happen in the pipeline and change records are automatic.", "Proportionate, automated gates make the safe path the fast path."],
+    ["Process", "Who approves a release?", "Your product owner (never the person who built the change), plus a platform check for tier 2 and formal change approval for tier 1.", "Segregation of duties in releases is a basic control auditors expect."],
+    ["Process", "How does solution review work?", "Self-certify for low-risk apps on standard patterns, peer review for tier 2, design authority for tier 1 and new patterns.", "Review effort follows risk, so most teams spend minutes, not weeks."],
+    ["Process", "What happens in an emergency?", "An expedited fix still goes through the pipeline, with fast approval and a review afterwards.", "Never editing production directly keeps fixes traceable and reversible."],
+    ["Process", "How will we know it's working?", "A quarterly scorecard (speed, safety, reuse, adoption, satisfaction) reviewed at the customer council.", "Publishing results keeps the platform accountable to its customers."],
+    ["Process", "What if we don't join?", "Existing apps keep running, but new production apps will need governed environments from an agreed date, and you'll miss the shared blocks and support.", "Common controls only work if they're common; we'd rather earn adoption than mandate it, but the bank needs one standard for production."],
+  ];
+  (() => {
+    const el = $("#peFaq"), TH = [...new Set(FAQ.map(f => f[0]))]; let th = -1, q = "";
+    el.innerHTML = `<div class="row" style="gap:6px"><button class="chip on" data-ft="-1">All (${FAQ.length})</button>${TH.map((t, i) => `<button class="chip" data-ft="${i}">${t}</button>`).join("")}</div><input class="pd-in pe-fq" type="search" placeholder="Search questions" style="width:100%;max-width:320px;margin-top:8px"><div class="pe-fl" style="margin-top:8px"></div><button class="btn" data-fx style="margin-top:8px">⬇️ Export Q&amp;A</button>`;
+    const draw = () => { const L = FAQ.filter(f => (th < 0 || f[0] === TH[th]) && (f[1] + f[2] + f[3]).toLowerCase().includes(q)); $(".pe-fl", el).innerHTML = L.map(f => `<details class="pd-q"><summary>${f[1]} <span class="pe-tag">${f[0]}</span></summary><p class="small" style="margin:8px 0 0"><b>Answer:</b> ${f[2]}</p><p class="small" style="margin:6px 0 0"><b>Rationale:</b> ${f[3]}</p></details>`).join("") || `<p class="small muted">No questions match.</p>`; };
+    $$("[data-ft]", el).forEach(b => b.addEventListener("click", () => { th = +b.dataset.ft; $$("[data-ft]", el).forEach(x => x.classList.toggle("on", x === b)); draw(); }));
+    $(".pe-fq", el).addEventListener("input", e => { q = e.target.value.toLowerCase(); draw(); });
+    $("[data-fx]", el).addEventListener("click", () => dl("platform-q-and-a.md", "# Credit Power Platform: questions and answers\n\n" + TH.map(t => `## ${t}\n\n` + FAQ.filter(f => f[0] === t).map(f => `**${f[1]}**\n\n${f[2]}\n\n*Rationale:* ${f[3]}\n`).join("\n")).join("\n")));
+    draw();
+  })();
+  const PS = [
+    ["Building faster and safer, together: the Credit Power Platform", () => ["An invitation to build on a common platform", "[Presenter, date, value streams invited]"], "Title with logos of value streams already on the platform.", "Frame it as an invitation and a partnership, not a mandate."],
+    ["You've proved low-code works for credit; now let's make it scale", () => ["Value streams have built [N] apps that run real credit processes", "That speed and business ownership is worth protecting", "Growth has brought duplication, control gaps and support risk"], "Estate map across value streams.", "Credit their success first."],
+    ["Every team is rebuilding the same plumbing, and carrying the risk alone", () => ["Connectors, approvals, audit, access and releases rebuilt in each value stream", "Each team answers audit separately", "Failures depend on one person noticing"], "Side-by-side of three teams' versions of the same capability.", "Use a real example from their area if you can."],
+    ["The platform: you build the business value, we provide the foundations", () => ["Governed environments, connectors to core systems, reusable blocks, one entitlement model", "A paved road to production with built-in controls", "Support, monitoring, training and a community", "Run as a product, with your input on the roadmap"], "City analogy: shared infrastructure, your buildings.", "Emphasise 'as a service'."],
+    ["What's in it for you", () => (S.wOut && S.wOut.sel.length ? S.wOut.sel.slice(0, 6).map(p => `${p[2]}: ${p[4]}`) : ["Faster delivery", "Lower control risk", "Less plumbing, more business value"]), "Benefit icons tailored to this audience (from Lab 10).", "Pick the three benefits that match their pain points."],
+    ["What you keep, and what changes", () => ["You keep: your people, your apps, your roadmap, your priorities", "What changes: production apps run in governed environments, through the pipeline, using blocks where they exist", "You gain: support, blocks, faster releases, audit evidence"], "Two columns: keep vs change.", "Address loss-of-control fears directly."],
+    ["How we work together: platform as a product", () => ["Self-service by default (X-as-a-Service)", "Time-boxed collaboration to onboard you", "Coaching and training for your makers", "A customer council where you shape the roadmap"], "Team Topologies diagram: stream-aligned teams + platform + enabling.", "Name the failure modes and how we avoid them (Chapter 22)."],
+    ["Planning stays yours; dependencies become visible", () => ["You run your own sprints", "Quarterly planning for platform dependencies", "One front door for requests, triaged by type", "Platform capacity reserved for onboarding and support"], "Two-level planning diagram.", "This answers 'how will sprint planning work?'."],
+    ["Design starts from proven patterns and blocks", () => ["Ten reference patterns for credit apps", "Reuse first; blocks for access, data, approvals, audit, documents and more", "Review effort matched to risk: self-certify, peer review or design authority"], "Pattern menu and block catalogue snapshot.", "Show the block catalogue (Chapter 26)."],
+    ["Releases are faster and safer through one pipeline", () => ["Dev → Test → UAT → Prod with automated checks", "Approvals in the pipeline; builders never approve their own release", "Change records and evidence created automatically", "Standard, normal and emergency routes"], "Pipeline diagram with gates by tier.", "Contrast with manual releases today."],
+    ["The benefits we'll realise, and how we'll prove them", () => BEN.slice(0, 7).map(b => `${b[0]}: measured by ${b[3].toLowerCase()}`), "Benefits register table.", "Commit to publishing the scorecard quarterly."],
+    ["Joining is phased and low-disruption", () => ["Discover (2–4 weeks): inventory and tiers, no change for users", "Land: critical apps first, with a named platform engineer", "Adopt: blocks as apps are next changed", "Optimise: consolidate, retire, contribute"], "Onboarding timeline (Lab 15).", "Make the first step easy to say yes to."],
+    ["We've thought about what could go wrong", () => ISS.slice(0, 5).map(i => `${i[0]} → ${i[2].split(";")[0]}`), "Risk / mitigation table.", "Owning the risks builds credibility."],
+    ["Proof: [value stream] on the platform", () => ["Before: [lead time, effort, incidents]", "After: [lead time, effort, incidents]", "In their words: [quote from their product owner]"], "Before/after metrics with a quote.", "Bring the peer to present this slide."],
+    ["Next step: a no-commitment Discover phase", () => ["Nominate a sponsor and a product-owner contact", "2–4 week Discover: inventory, tiers, onboarding plan agreed with you", "Join the next customer council", "Decision point after Discover"], "Three numbered next steps with dates.", "Leave with a date in the diary."],
+    ["Appendix: questions and answers", () => FAQ.slice(0, 8).map(f => `${f[1]} ${f[2]}`), "Q&A table.", "Keep the full Q&A bank handy (Chapter 28)."],
+  ];
+  S.pon = S.pon || PS.map((_, i) => i);
+  (() => {
+    const el = $("#pePitch");
+    const md = ids => ids.map((i, k) => `## Slide ${k + 1}: ${PS[i][0]}\n\n${PS[i][1]().map(b => "- " + b).join("\n")}\n\n*Visual:* ${PS[i][2]}\n\n*Speaker notes:* ${PS[i][3]}\n`).join("\n");
+    const draw = () => {
+      const on = PS.map((_, i) => i).filter(i => S.pon.includes(i));
+      el.innerHTML = `<div class="row" style="gap:6px"><b class="small">${on.length} of ${PS.length} slides</b><button class="btn" data-px="copy">📋 Copy all</button><button class="btn" data-px="md">⬇️ Markdown</button><button class="btn" data-px="txt">⬇️ Plain text</button></div>${PS.map((s, i) => { const o = S.pon.includes(i); return `<div class="pd-slide${o ? "" : " off"}"><label style="display:flex;gap:8px;align-items:flex-start;cursor:pointer"><input type="checkbox" data-po="${i}"${o ? " checked" : ""} style="margin-top:4px"><span style="flex:1;min-width:0"><h5>${i + 1}. ${esc(s[0])}</h5>${o ? `<ul>${s[1]().map(b => `<li>${esc(b)}</li>`).join("")}</ul><div class="small muted" style="margin-top:4px">🖼️ ${s[2]}<br>🗣️ ${s[3]}</div>` : ""}</span></label></div>`; }).join("")}`;
+      $$("[data-po]", el).forEach(c => c.addEventListener("change", () => { const i = +c.dataset.po; S.pon = c.checked ? [...S.pon, i] : S.pon.filter(x => x !== i); save(); draw(); }));
+      $$("[data-px]", el).forEach(b => b.addEventListener("click", () => { const t = "# Credit Power Platform: value-stream pitch\n\n" + md(on), a = b.dataset.px; if (a === "copy") copy(t, b); else if (a === "md") dl("value-stream-pitch.md", t); else dl("value-stream-pitch.txt", t.replace(/^#+ /gm, "").replace(/\*/g, ""), "text/plain"); }));
+    };
+    el.addEventListener("pe-redraw", draw);
+    if ("IntersectionObserver" in window) new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) draw(); })).observe(el);
+    draw();
+  })();
 })();
 
 })();
