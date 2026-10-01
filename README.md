@@ -6,7 +6,7 @@ Interactive, Brilliant-style courses, plus **The Book of Big Ideas**, an interac
 |---|---|
 | `index.html` | **AI, Explained**: 19 chapters, from AI basics to Claude, agents and the frontier |
 | `product-management.html` | **Product Management, First Principles**: 8 chapters |
-| `platform-management.html` | **Platform Management, First Principles**: 12 chapters |
+| `platform-management.html` | **Platform Management, First Principles**: 20 chapters, including Part D on making the case for a central Power Platform team in credit, with 9 labs and a deck builder |
 | `theories.html` | **Book of Big Ideas, Part 1: Big theories**: 128 theories across 14 domains (science, quantum physics, strategy, life, the brain, self, systems, economics, leverage, culture, thinking tools), with 43 simulations |
 | `models.html` | **Book of Big Ideas, Part 2: Mental models & toolkits**: 148 models and tools across 9 sections, with 39 simulations |
 | `society.html` | **Book of Big Ideas, Part 3: Society, politics & the human mind**: 140 theories across 8 domains (psychology, sociology, political theories, power, theories of history, economic schools, ethics, philosophy), with 27 simulations |
@@ -99,6 +99,16 @@ It ends with a filterable library of 26 books, papers and reports (2009–2026),
 10. **Who are my customers?**: an interactive customer map separating direct customers (journey teams, partners), operators, end customers (borrowers), guardrail owners and sponsors, plus a role-sorting game ("customers are per capability")
 11. **Drawing the platform boundary**: a loan-lifecycle capability map (customers, interface, metric and guardrail owners for each capability), and a platform vs. self-service config vs. journey-team sorting game
 12. **Running a lending platform as a product**: a job to be done for each customer, an outcome scorecard, leverage-based prioritization with regulatory deadlines, operating model and anti-patterns
+
+**Part D · Making the case: a central Power Platform team for credit**
+13. **Why a central team?**: an executive definition of a platform, an SCQA storyline, fragmentation symptoms and **Lab 1**, a business-case calculator (editable assumptions, cautious/base/optimistic scenarios, payback and break-even chart, any currency)
+14. **Everything a platform does**: a 14-pillar capability catalogue with Power Platform features and credit examples, and **Lab 2**, a 56-item self-assessment with heatmap, top gaps and export
+15. **Central, federated or hub-and-spoke?**: **Lab 3** compares four operating models; a "central, shared or federated?" sorting game
+16. **Entitlements as a platform service**: **Lab 4a** (role explosion: app-by-app access vs a persona model) and **Lab 4b** (a persona-permission matrix that flags segregation-of-duties conflicts)
+17. **Lego blocks, data & design**: **Lab 5**, a reuse simulator that builds credit apps from shared blocks; a starter credit data model; design system patterns
+18. **Governance that speeds people up**: **Lab 6**, risk tiering with the controls each tier needs; environment, DLP, ALM, visibility, resilience and AI guardrails
+19. **Team, roadmap, metrics & funding**: team roles, **Lab 7** (a Now/Next/Later roadmap with dependency checks), **Lab 8** (a balanced scorecard picker) and four funding models
+20. **Build your deck**: **Lab 9**, a deck builder with 23 slides (action titles, bullets, visual suggestions, speaker notes), audience presets, numbers pulled from the other labs, Markdown/text export, and 14 objection-handling answers
 
 It ends with a library of 23 sources (including Domain-Driven Design, the EU AI Act and the FCA Consumer Duty), including *Reshuffle* (2025), *Team Topologies* 2nd ed. (2025), *Platform Engineering* (2025), *Frictionless* (2025), *Platform Strategy* (2024), *The Cold Start Problem* (2021) and *Platform Revolution* (2016), plus foundational papers (Rochet & Tirole 2003; Eisenmann, Parker & Van Alstyne 2006).
 

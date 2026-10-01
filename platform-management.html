@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Platform Management, First Principles</title>
-<meta name="description" content="An interactive, first-principles course on platform management: multi-sided platform businesses (network effects, cold start, pricing, governance) and internal developer platforms (Team Topologies, platform as a product, DORA, maturity), grounded in the latest books and research.">
+<meta name="description" content="An interactive, first-principles course on platform management: multi-sided platform businesses (network effects, cold start, pricing, governance) and internal developer platforms (Team Topologies, platform as a product, DORA, maturity), domain platforms for credit, and the case for a central Power Platform team, with labs and a deck builder.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
@@ -568,6 +568,15 @@ select{font:inherit;font-size:.8rem;padding:6px 8px;border-radius:10px;border:1p
   <a href="#pl10"><span class="num">10</span>Who are my customers?</a>
   <a href="#pl11"><span class="num">11</span>Drawing the boundary</a>
   <a href="#pl12"><span class="num">12</span>Running it as a product</a>
+  <div class="grp">Part D · Making the case (Power Platform)</div>
+  <a href="#pl13"><span class="num">13</span>Why a central team?</a>
+  <a href="#pl14"><span class="num">14</span>Everything a platform does</a>
+  <a href="#pl15"><span class="num">15</span>Central, federated or hub?</a>
+  <a href="#pl16"><span class="num">16</span>Entitlements</a>
+  <a href="#pl17"><span class="num">17</span>Lego blocks, data &amp; design</a>
+  <a href="#pl18"><span class="num">18</span>Governance that speeds up</a>
+  <a href="#pl19"><span class="num">19</span>Team, roadmap &amp; funding</a>
+  <a href="#pl20"><span class="num">20</span>Build your deck</a>
   <a href="#plread"><span class="num">📚</span>Reading list &amp; research</a>
   <a href="#recap"><span class="num">★</span>Recap</a>
 </nav>
@@ -577,9 +586,9 @@ select{font:inherit;font-size:.8rem;padding:6px 8px;border-radius:10px;border:1p
   <div class="hero-inner reveal">
     <span class="ch-tag">An interactive course</span>
     <h1 style="margin-top:18px">Platforms, <span class="grad">from first principles</span>.</h1>
-    <p>Two kinds of platform, one idea: make it cheaper for others to create value. Launch a two-sided marketplace, find the take-rate sweet spot, map your teams with Team Topologies, build a golden path, assess your internal platform with DORA and CNCF maturity models, and, if you lead a domain platform such as credit and lending, finally answer "who are my customers?"</p>
+    <p>Two kinds of platform, one idea: make it cheaper for others to create value. Launch a two-sided marketplace, find the take-rate sweet spot, map your teams with Team Topologies, build a golden path, assess your internal platform with DORA and CNCF maturity models, and, if you lead a domain platform such as credit and lending, finally answer "who are my customers?" Then make the case for a central Power Platform team in credit, with a business-case calculator, an entitlements and segregation-of-duties lab, a reuse simulator, risk tiering, a roadmap builder and a deck builder that exports your slides.</p>
     <a class="btn primary" href="#pl1" style="text-decoration:none;padding:13px 24px;font-size:1rem">Start learning →</a>
-    <div class="hero-stats"><span>12 chapters</span><span>Platform businesses · internal platforms · domain platforms</span><span>23 books, papers &amp; reports</span></div>
+    <div class="hero-stats"><span>20 chapters</span><span>Platform businesses · internal platforms · domain platforms · the Power Platform case</span><span>23 books, papers &amp; reports</span></div>
   </div>
 </section>
 <!-- ============ PL1 ============ -->
@@ -947,6 +956,328 @@ select{font:inherit;font-size:.8rem;padding:6px 8px;border-radius:10px;border:1p
 </div>
 </section>
 
+<style>
+.pd-in{font:inherit;font-size:.85rem;padding:6px 8px;border-radius:8px;border:1px solid var(--line);background:var(--surface);color:var(--ink);max-width:100%}
+.pd-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px}
+.pd-tile{background:var(--surface-2);border-radius:14px;padding:12px 14px}
+.pd-tile h5{margin:0 0 6px;font-size:.95rem}
+.pd-tile ul{margin:0;padding-left:18px;font-size:.84rem}
+.pd-tile li{margin:2px 0}
+.pd-hm{border-collapse:collapse;width:100%;font-size:.8rem}
+.pd-hm td,.pd-hm th{padding:5px 6px;border-bottom:1px solid var(--line);text-align:left;vertical-align:middle}
+.pd-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.pd-bar{height:10px;border-radius:5px;background:var(--surface-3);position:relative;overflow:hidden}
+.pd-bar i{position:absolute;left:0;top:0;bottom:0;border-radius:5px}
+.pd-slide{border:1px solid var(--line);border-radius:14px;padding:12px 14px;margin:8px 0;background:var(--surface)}
+.pd-slide.off{opacity:.45}
+.pd-slide h5{margin:0;font-size:.98rem}
+.pd-slide ul{margin:6px 0 0;padding-left:18px;font-size:.84rem}
+.pd-pill{display:inline-block;padding:1px 8px;border-radius:99px;font-size:.7rem;font-weight:700;background:var(--surface-3);margin-right:4px}
+.pd-mx{border-collapse:collapse;font-size:.78rem;min-width:620px}
+.pd-mx th{font-weight:600;padding:4px;text-align:center;vertical-align:bottom}
+.pd-mx td{padding:3px;text-align:center;border-bottom:1px solid var(--line)}
+.pd-mx td:first-child,.pd-mx th:first-child{text-align:left;position:sticky;left:0;background:var(--surface);z-index:1;min-width:130px}
+.pd-ck{width:22px;height:22px;border-radius:6px;border:1px solid var(--line);background:var(--surface-2);cursor:pointer}
+.pd-ck.on{background:var(--c2);border-color:var(--c2)}
+.pd-ck.bad{background:var(--c4);border-color:var(--c4)}
+details.pd-q{background:var(--surface-2);border-radius:12px;padding:10px 14px;margin:6px 0}
+details.pd-q summary{cursor:pointer;font-weight:700}
+.pd-flow{display:flex;flex-wrap:wrap;gap:6px;align-items:stretch}
+.pd-flow>div{flex:1;min-width:120px;background:var(--surface-2);border-radius:12px;padding:10px;font-size:.82rem}
+</style>
+
+<!-- ============ PL13 ============ -->
+<section class="chapter" id="pl13">
+<div class="wrap">
+  <div class="ch-head reveal">
+    <span class="ch-tag" style="background:var(--c1-soft);color:var(--c1-d)">Chapter 13 · Part D: Making the case</span>
+    <h2>Why a central Power Platform team for credit?</h2>
+    <p class="lede">You lead a credit platform built on Microsoft Power Platform. Development today is fragmented and federated. This part gives you the narrative, the numbers and the labs to make the case to senior management, and the slides to take away.</p>
+  </div>
+
+  <h3 class="reveal">First, say what a platform is in one sentence</h3>
+  <div class="key reveal"><p><b>"A digital platform is a foundation of self-service APIs, tools, services, knowledge and support which are arranged as a compelling internal product."</b> That's Evan Bottcher's 2018 definition, and it's still the clearest. For a senior audience, simplify it to: <b>a platform is a shared set of building blocks, rules and services, run as a product, that makes it faster, cheaper and safer for many teams to build what the business needs.</b> The platform doesn't build every app. It makes every app easier, safer and cheaper to build.</p></div>
+  <p class="reveal">For a Power Platform estate in credit, that means: the environments, connectors to core credit systems, a shared credit data model, reusable components, entitlements, guardrails, pipelines, support and know-how that every team uses, so that the teams who know the business (credit risk, underwriting, portfolio management, operations) can deliver apps and automations quickly <b>without</b> each one reinventing the plumbing or carrying the risk alone.</p>
+
+  <h3 class="reveal">The story in four lines (SCQA)</h3>
+  <p class="reveal">Executives remember a story, not a list. Barbara Minto's <b>Situation, Complication, Question, Answer</b> structure (from <i>The Pyramid Principle</i>) is the standard way consultants frame a recommendation. Here is a draft you can adapt:</p>
+  <div class="pd-grid reveal">
+    <div class="pd-tile" style="border-top:4px solid var(--c2)"><h5>📍 Situation</h5><p class="small" style="margin:0">Power Platform has become how credit gets things done. Dozens of teams have built apps and flows close to the business: credit applications, covenant tracking, limit reviews, watchlists, reporting. It delivered speed.</p></div>
+    <div class="pd-tile" style="border-top:4px solid var(--c4)"><h5>⚠️ Complication</h5><p class="small" style="margin:0">Because every team builds alone, we now pay for it: the same capabilities rebuilt many times, inconsistent credit data, access granted app by app, uneven controls on apps that touch credit decisions, key-person risk, licence waste, and no safe foundation for AI and Copilot.</p></div>
+    <div class="pd-tile" style="border-top:4px solid var(--c3)"><h5>❓ Question</h5><p class="small" style="margin:0">How do we keep the speed and business ownership of federated development, while gaining the scale, consistency and control of a platform?</p></div>
+    <div class="pd-tile" style="border-top:4px solid var(--c1)"><h5>✅ Answer</h5><p class="small" style="margin:0">Create a small central <b>Credit Power Platform team</b>, run as a product, that <b>centralises the commons and federates the journeys</b>: one paved road to production, shared building blocks, one data model, one entitlement model and risk-based guardrails, while business-aligned teams keep building.</p></div>
+  </div>
+
+  <h3 class="reveal">The symptoms of fragmentation (do you recognise these?)</h3>
+  <div class="cards reveal">
+    <div class="card"><div class="ico" style="background:var(--c4-soft)">🔁</div><h4>Duplication</h4><p>Five versions of "approval workflow", three customer search screens, several connectors to the same loan system, each built and maintained separately.</p></div>
+    <div class="card"><div class="ico" style="background:var(--c3-soft)">🧩</div><h4>Inconsistent data</h4><p>Exposure, limits and ratings copied into SharePoint lists and Excel, with different definitions, no lineage and no single source of truth.</p></div>
+    <div class="card"><div class="ico" style="background:var(--c5-soft)">🔐</div><h4>Access sprawl</h4><p>Every app has its own roles and its own access process. Nobody can answer "who can approve what, across all our apps?" quickly, and leavers keep access.</p></div>
+    <div class="card"><div class="ico" style="background:var(--c6-soft)">🧯</div><h4>Uneven control</h4><p>Some apps go through testing, review and change control; others are edited live in production by one person. Audit findings arrive one app at a time.</p></div>
+    <div class="card"><div class="ico" style="background:var(--c2-soft)">🧑‍🔧</div><h4>Key-person risk</h4><p>Critical apps are understood by one maker. When they move on, the app becomes a black box, and nobody dares change it.</p></div>
+    <div class="card"><div class="ico" style="background:var(--c1-soft)">💸</div><h4>Hidden cost</h4><p>Licences bought per team and under-used, premium capacity in the wrong places, environment sprawl, and the same skills hired several times.</p></div>
+  </div>
+  <p class="reveal">None of this means federated development was a mistake. It is the normal life cycle: <b>low-code spreads because it works</b>, and then the organisation needs a platform to make that spread sustainable. Your message isn't "teams did it wrong". It's "we've succeeded enough that it's time to industrialise".</p>
+
+  <div class="widget wide reveal">
+    <div class="w-head">Lab 1 · Business case</div>
+    <div class="w-title">What is fragmentation costing us?</div>
+    <div class="w-sub">Every number is an editable assumption, set to illustrative values. Replace them with your own estimates (even rough ranges are fine), and the case updates. The result feeds the business-case slide in the deck builder (Chapter 20).</div>
+    <div id="pdCost"></div>
+  </div>
+  <div class="key warn reveal"><p><b>Use honest numbers.</b> Senior audiences discount business cases that look too good. Use conservative assumptions, show the range (the low/high toggle), and lead with risk reduction and speed as much as cost: in a regulated credit business, avoiding one serious audit finding or one bad-data credit decision can be worth more than the efficiency savings.</p></div>
+</div>
+</section>
+
+<!-- ============ PL14 ============ -->
+<section class="chapter" id="pl14">
+<div class="wrap">
+  <div class="ch-head reveal">
+    <span class="ch-tag" style="background:var(--c2-soft);color:var(--c2t)">Chapter 14</span>
+    <h2>Everything a platform team can do</h2>
+    <p class="lede">Governance, standards, Lego blocks, data, design and entitlements are a good start. They are about five of the fourteen things a mature platform team does.</p>
+  </div>
+  <p class="reveal">You're not thinking in the wrong direction. You're thinking about the <b>controls and assets</b>. The missing half is the <b>service</b>: how makers get from idea to production, how apps are run and supported, how people learn, how money and licences are managed, and how the platform itself is run as a product with a roadmap and metrics. Senior management will also want to hear the <b>value</b> in their language, so group the capabilities under four outcomes:</p>
+  <div class="pd-grid reveal">
+    <div class="pd-tile" style="border-left:4px solid var(--c1)"><h5>🚀 Speed</h5><p class="small" style="margin:0">Idea to production in days, not months: paved road, templates, reusable blocks, self-service environments.</p></div>
+    <div class="pd-tile" style="border-left:4px solid var(--c4)"><h5>🛡️ Safety</h5><p class="small" style="margin:0">Controls built in once, for everyone: entitlements, segregation of duties, data loss prevention, audit trails, risk-tiered governance, resilience.</p></div>
+    <div class="pd-tile" style="border-left:4px solid var(--c2)"><h5>📦 Scale & cost</h5><p class="small" style="margin:0">Build once, reuse many times: shared components, connectors and data; licence and capacity optimisation; fewer, better apps.</p></div>
+    <div class="pd-tile" style="border-left:4px solid var(--c5)"><h5>🧠 Data & AI readiness</h5><p class="small" style="margin:0">One credit data model and trusted data products, so reporting, Copilot and AI agents work on the same, governed truth.</p></div>
+  </div>
+
+  <h3 class="reveal">The full capability catalogue</h3>
+  <p class="reveal">Fourteen pillars. Tap one to see what it includes, the Power Platform features that deliver it, and what it means for credit.</p>
+  <div class="widget wide reveal">
+    <div class="w-head" style="color:var(--c2t)">Explore</div>
+    <div class="w-title">The Credit Power Platform capability map</div>
+    <div class="row" id="pdPillarChips"></div>
+    <div class="info-panel" id="pdPillarInfo" style="margin-top:12px"></div>
+  </div>
+
+  <div class="widget wide reveal">
+    <div class="w-head" style="color:var(--c2t)">Lab 2 · Self-assessment</div>
+    <div class="w-title">Where are we today, and what matters most?</div>
+    <div class="w-sub">Rate each capability's current maturity (0 none, 1 ad hoc, 2 partly standardised, 3 platform-grade) and its importance to credit (low, medium, high). The heatmap and gap list update; export them for your deck. Saved in this browser.</div>
+    <div id="pdAssess"></div>
+  </div>
+</div>
+</section>
+
+<!-- ============ PL15 ============ -->
+<section class="chapter" id="pl15">
+<div class="wrap">
+  <div class="ch-head reveal">
+    <span class="ch-tag" style="background:var(--c3-soft);color:var(--c3t)">Chapter 15</span>
+    <h2>Central, federated, or hub-and-spoke?</h2>
+    <p class="lede">"Bring it all together" doesn't have to mean "a central team builds everything". It usually shouldn't.</p>
+  </div>
+  <p class="reveal">The biggest risk in your pitch is that senior management hears "centralise" and imagines a new bottleneck, or that business teams hear it and fear losing control. The model most large organisations converge on for low-code is <b>hub-and-spoke</b>: a central platform team (the hub, sometimes called a Center of Excellence) owns the shared foundation and guardrails, while <b>fusion teams</b> in the business (makers, business analysts and professional developers working together) keep building the apps. Microsoft's own Power Platform guidance describes this pattern, and it matches Team Topologies: the hub is a <b>platform team</b> plus an <b>enabling team</b>; the spokes are <b>stream-aligned</b> teams.</p>
+
+  <div class="widget wide reveal">
+    <div class="w-head" style="color:var(--c3t)">Lab 3 · Operating models</div>
+    <div class="w-title">Compare the four operating models</div>
+    <div class="w-sub">Tap a model to see its trade-offs. Scores are qualitative (based on common experience in large organisations), not measured data.</div>
+    <div id="pdModels"></div>
+  </div>
+
+  <h3 class="reveal">The rule: centralise the commons, federate the journeys</h3>
+  <div class="cards reveal">
+    <div class="card"><div class="ico" style="background:var(--c1-soft)">🏛️</div><h4>Central platform team owns</h4><p>Tenant and environment strategy, DLP and security policy, the entitlement model, ALM pipelines, shared connectors to core credit systems, the credit data model, the component library and design system, monitoring, licensing, and the maker community.</p></div>
+    <div class="card"><div class="ico" style="background:var(--c3-soft)">🤝</div><h4>Shared (agreed together)</h4><p>Standards, the roadmap, the intake and prioritisation process, risk tiering, reusable-block contributions (federated teams build blocks the platform adopts), support model and service levels.</p></div>
+    <div class="card"><div class="ico" style="background:var(--c2-soft)">🚀</div><h4>Federated teams own</h4><p>Their apps, flows and reports: the business process, the screens, the requirements, user acceptance, day-to-day changes within guardrails, and first-line user support.</p></div>
+  </div>
+
+  <div class="widget reveal" id="pdCentralSorter">
+    <div class="w-head" style="color:var(--c3t)">Interactive</div>
+    <div class="w-title">Central, shared, or federated?</div>
+    <div class="w-sub">Where should each responsibility live in a hub-and-spoke Credit Power Platform?</div>
+    <div class="sorter"></div>
+  </div>
+
+  <div class="quiz reveal" data-correct="2">
+    <div class="q-label">Quick check</div>
+    <div class="q">A senior stakeholder says: "A central team will slow everyone down. Let teams keep building however they like." What's the strongest response?</div>
+    <div class="opts">
+      <button class="opt">Agree, and drop the proposal</button>
+      <button class="opt">Insist all apps must be built by the central team from now on</button>
+      <button class="opt">Agree that a ticket-queue central team would slow things down, which is why the proposal keeps building in the business and has the platform team provide self-service foundations and guardrails that make teams faster</button>
+    </div>
+    <div class="explain">The concern is valid for a "service desk" central team. The answer is a platform run as a product: teams self-serve the paved road, and the platform's success is measured by how much faster and safer they deliver.</div>
+  </div>
+</div>
+</section>
+
+<!-- ============ PL16 ============ -->
+<section class="chapter" id="pl16">
+<div class="wrap">
+  <div class="ch-head reveal">
+    <span class="ch-tag" style="background:var(--c5-soft);color:var(--c5t)">Chapter 16</span>
+    <h2>Entitlements as a platform service</h2>
+    <p class="lede">Platform-wide entitlements are not a side topic. In credit, "who can see and approve what" is one of the strongest reasons to have a platform at all.</p>
+  </div>
+  <p class="reveal">In a fragmented estate, each app invents its own roles, stores them in its own table or SharePoint list, and grants access by email request. The result: role explosion, slow joiners, leavers who keep access, and no way to prove <b>segregation of duties</b> (SoD), for example that the person who prepares a credit application can't also approve it. A platform-wide entitlement model fixes this once:</p>
+  <div class="pd-flow reveal">
+    <div><b>1. Personas</b><br>Define business personas once: relationship manager, credit analyst, approver (by authority level), credit risk, operations, auditor, maker, platform admin.</div>
+    <div><b>2. Groups</b><br>Map each persona to Microsoft Entra ID security groups, fed by HR joiner/mover/leaver events where possible.</div>
+    <div><b>3. Roles</b><br>Map groups to standard Dataverse security roles, teams and business units (plus field-level security for sensitive data) used by every app.</div>
+    <div><b>4. Policies</b><br>Encode SoD rules and delegated authority limits (who can approve what amount) as shared data and checks, not code in each app.</div>
+    <div><b>5. Evidence</b><br>Run periodic access recertification and keep audit logs centrally, so audit gets one answer for all apps.</div>
+  </div>
+
+  <div class="widget wide reveal">
+    <div class="w-head" style="color:var(--c5t)">Lab 4a · Role explosion</div>
+    <div class="w-title">App-by-app access vs a platform entitlement model</div>
+    <div class="w-sub">Adjust the estate. See how many role assignments, access requests and recertification checks each model creates per year.</div>
+    <div id="pdRoles"></div>
+  </div>
+
+  <div class="widget wide reveal">
+    <div class="w-head" style="color:var(--c5t)">Lab 4b · Segregation of duties</div>
+    <div class="w-title">Design the persona-permission matrix</div>
+    <div class="w-sub">Tick which permissions each persona has. Conflicts that break common SoD rules turn red and are explained below. Try "Load a typical fragmented setup" to see what often happens.</div>
+    <div id="pdSod"></div>
+  </div>
+  <div class="key reveal"><p><b>For the deck:</b> "Today we can't answer 'who can approve credit across our apps?' without asking each app owner. With a platform entitlement model, it's one query, access changes when people change jobs, and segregation of duties is enforced by design." That one sentence often lands better with risk-minded executives than any efficiency number.</p></div>
+</div>
+</section>
+
+<!-- ============ PL17 ============ -->
+<section class="chapter" id="pl17">
+<div class="wrap">
+  <div class="ch-head reveal">
+    <span class="ch-tag" style="background:var(--c6-soft);color:var(--c6t)">Chapter 17</span>
+    <h2>Lego blocks, data &amp; design</h2>
+    <p class="lede">Reuse is where a platform turns into speed. But blocks only get reused if they're easy to find, trustworthy and better than building your own.</p>
+  </div>
+  <p class="reveal">The "Lego blocks" for a credit Power Platform come in five kinds: <b>connectors</b> (custom connectors and APIs to the loan origination system, core banking, credit bureaus, rating models, collateral and document stores), <b>components</b> (Power Apps component libraries and code components built with the Power Apps component framework (PCF)), <b>flow patterns</b> (approval, escalation, notification, document generation), <b>templates</b> (starter apps and solutions with the right security and logging already in place), and <b>data</b> (shared Dataverse tables for the credit data model). Each is a small product with an owner, documentation, versioning and a support promise.</p>
+
+  <div class="widget wide reveal">
+    <div class="w-head" style="color:var(--c6t)">Lab 5 · Reuse</div>
+    <div class="w-title">Build a credit app from blocks</div>
+    <div class="w-sub">Pick an app the business wants. Toggle which blocks the platform already provides. See how much of the app is assembled rather than built, and what that saves across a year's portfolio.</div>
+    <div id="pdLego"></div>
+  </div>
+
+  <h3 class="reveal">A shared credit data model</h3>
+  <p class="reveal">Most of the long-term value is in <b>data</b>: if every app uses the same definitions for a counterparty, a facility and an exposure, then reporting, risk aggregation and AI all get easier. Start small with the entities almost every credit app touches, owned by the platform and fed from the systems of record (never re-keyed):</p>
+  <div class="pd-grid reveal" id="pdData"></div>
+  <p class="reveal small muted">Banks may recognise this as an application of the Basel Committee's <b>BCBS 239</b> principles for risk data aggregation and reporting (2013): accuracy, completeness, timeliness and clear ownership of risk data. Microsoft's Common Data Model and industry models such as BIAN can provide names and structures to start from.</p>
+
+  <h3 class="reveal">Design: one experience across many apps</h3>
+  <div class="cards reveal">
+    <div class="card"><div class="ico" style="background:var(--c1-soft)">🎨</div><h4>Design system</h4><p>A Power Apps theme, component library and page templates (headers, navigation, forms, tables, status badges) so every credit app looks and behaves the same, and users don't relearn each one.</p></div>
+    <div class="card"><div class="ico" style="background:var(--c2-soft)">♿</div><h4>Accessibility by default</h4><p>Accessible components (contrast, keyboard use, screen-reader labels) built once. The Power Apps accessibility checker helps, but accessible blocks do most of the work.</p></div>
+    <div class="card"><div class="ico" style="background:var(--c3-soft)">🧭</div><h4>Credit UX patterns</h4><p>Standard patterns for the things credit does all the time: a counterparty header, an exposure summary, an approval panel with authority level, a document checklist, an audit timeline.</p></div>
+  </div>
+</div>
+</section>
+
+<!-- ============ PL18 ============ -->
+<section class="chapter" id="pl18">
+<div class="wrap">
+  <div class="ch-head reveal">
+    <span class="ch-tag" style="background:var(--c4-soft);color:var(--c4t)">Chapter 18</span>
+    <h2>Governance that speeds people up</h2>
+    <p class="lede">The best governance is proportionate to risk and built into the paved road, so the safe way is also the easiest way.</p>
+  </div>
+  <p class="reveal">One-size-fits-all governance fails both ways: a simple team tracker drowns in paperwork, while a spreadsheet-replacing app that feeds credit decisions slips through as "just a low-code app". Banks usually treat such apps as <b>end-user computing (EUC)</b> or end-user developed applications, with controls set by how critical they are. Risk-tiering lets you go light where risk is low and strict where it's high.</p>
+
+  <div class="widget wide reveal">
+    <div class="w-head" style="color:var(--c4t)">Lab 6 · Risk tiering</div>
+    <div class="w-title">What controls does this app need?</div>
+    <div class="w-sub">Describe an app. It's assigned a tier with the controls that tier needs. The tiers and controls are an illustrative model to adapt to your bank's EUC, model-risk and change policies.</div>
+    <div id="pdTier"></div>
+  </div>
+
+  <h3 class="reveal">The guardrails the platform provides</h3>
+  <div class="pd-grid reveal">
+    <div class="pd-tile"><h5>🌍 Environment strategy</h5><ul><li>Dev, test and production environments per solution or domain, not one shared default</li><li>The default environment kept for personal productivity, with tight data policies</li><li>Managed Environments and environment groups to apply rules at scale</li><li>Self-service environment requests with automatic setup</li></ul></div>
+    <div class="pd-tile"><h5>🚦 Data loss prevention</h5><ul><li>Data policies that group connectors into business, non-business and blocked</li><li>Stricter policies for production and sensitive data</li><li>Custom connectors approved and published centrally</li><li>Tenant isolation to control cross-tenant connections</li></ul></div>
+    <div class="pd-tile"><h5>🔁 ALM (application life cycle management)</h5><ul><li>Everything in solutions, with environment variables and connection references</li><li>Source control and automated deployment (Power Platform pipelines, or Azure DevOps or GitHub with the Power Platform Build Tools)</li><li>Solution checker, code review and automated tests for higher tiers</li><li>No direct editing in production</li></ul></div>
+    <div class="pd-tile"><h5>🔍 Visibility</h5><ul><li>An inventory of every app, flow, maker, connector and environment (for example, the CoE Starter Kit)</li><li>Ownership and orphaned-app clean-up when makers leave</li><li>Usage telemetry to find duplicates and retire unused apps</li><li>Audit logs into the bank's security monitoring</li></ul></div>
+    <div class="pd-tile"><h5>🧯 Resilience</h5><ul><li>Criticality assessment for apps that support important business services</li><li>Backup, restore and business continuity plans for tier 1 apps</li><li>Monitoring and alerting on failed flows</li><li>Operational-resilience and third-party-risk evidence</li></ul></div>
+    <div class="pd-tile"><h5>🤖 AI guardrails</h5><ul><li>Rules for Copilot Studio agents and AI Builder: data access, human review and testing</li><li>No AI-only credit decisions; human in the loop and explainability</li><li>Prompt and agent catalogue with owners</li><li>Alignment with model-risk policy where outputs inform decisions</li></ul></div>
+  </div>
+  <div class="key warn reveal"><p><b>Regulation is a reason for a platform, not a reason for paperwork.</b> Credit is subject to rules on fair lending, consumer outcomes, operational resilience, data protection and model risk. Examples include the UK FCA's Consumer Duty, the EU AI Act (which treats creditworthiness assessment of individuals as high-risk), the EU Digital Operational Resilience Act and model-risk guidance such as the US Federal Reserve's SR 11-7 and the UK PRA's SS1/23. When the platform builds audit trails, access control, change control and evidence into the paved road, every app inherits compliance instead of each team re-solving it. Check which rules apply to your bank with your risk and compliance partners.</p></div>
+</div>
+</section>
+
+<!-- ============ PL19 ============ -->
+<section class="chapter" id="pl19">
+<div class="wrap">
+  <div class="ch-head reveal">
+    <span class="ch-tag" style="background:var(--c2-soft);color:var(--c2t)">Chapter 19</span>
+    <h2>Team, roadmap, metrics &amp; funding</h2>
+    <p class="lede">Senior management will ask four practical questions: who, what first, how will we know, and who pays?</p>
+  </div>
+
+  <h3 class="reveal">Who: a small team with the right mix</h3>
+  <div class="pd-grid reveal">
+    <div class="pd-tile"><h5>🧭 Platform product owner</h5><p class="small" style="margin:0">Owns the vision, roadmap, intake and value story. Treats makers and business teams as customers. (Probably you.)</p></div>
+    <div class="pd-tile"><h5>🏗️ Platform architect</h5><p class="small" style="margin:0">Environment strategy, integration patterns, data model, security design, standards.</p></div>
+    <div class="pd-tile"><h5>⚙️ Platform engineers / admins</h5><p class="small" style="margin:0">Tenant and environment administration, pipelines, monitoring, DLP, licensing, automation of the platform itself.</p></div>
+    <div class="pd-tile"><h5>🧑‍💻 Pro developers</h5><p class="small" style="margin:0">Custom connectors, PCF components, Azure integration, complex reusable blocks.</p></div>
+    <div class="pd-tile"><h5>🗄️ Data engineer / modeller</h5><p class="small" style="margin:0">Credit data model, data products, integration with systems of record, Power BI semantic models.</p></div>
+    <div class="pd-tile"><h5>🎨 UX designer</h5><p class="small" style="margin:0">Design system, credit UX patterns, accessibility, user research with business teams.</p></div>
+    <div class="pd-tile"><h5>🎓 Enablement lead</h5><p class="small" style="margin:0">Maker training paths, champions network, office hours, documentation and community.</p></div>
+    <div class="pd-tile"><h5>🛡️ Risk & control partner</h5><p class="small" style="margin:0">Embedded from risk/compliance: risk tiering, EUC policy alignment, evidence and audit liaison.</p></div>
+  </div>
+  <p class="reveal small muted">Start smaller than this if you need to (some roles part-time or shared), but cover product ownership, architecture, engineering and enablement from day one. A platform team with no enablement becomes a gatekeeper; one with no product owner becomes a ticket queue.</p>
+
+  <div class="widget wide reveal">
+    <div class="w-head" style="color:var(--c2t)">Lab 7 · Roadmap</div>
+    <div class="w-title">Build a Now / Next / Later roadmap</div>
+    <div class="w-sub">Tap an initiative to cycle it through Now, Next, Later and Not planned. Dependencies are checked: you'll be warned if something is planned before what it depends on. Export the result for your deck.</div>
+    <div id="pdRoad"></div>
+  </div>
+
+  <div class="widget wide reveal">
+    <div class="w-head" style="color:var(--c2t)">Lab 8 · Scorecard</div>
+    <div class="w-title">Pick the metrics for your platform scorecard</div>
+    <div class="w-sub">Choose 6–10 metrics across the four outcomes. Aim for a balance: a scorecard that's all control metrics tells executives you're a cost centre; one that's all adoption metrics worries risk.</div>
+    <div id="pdScore"></div>
+  </div>
+
+  <h3 class="reveal">Who pays: funding models</h3>
+  <div class="widget reveal">
+    <div class="w-head" style="color:var(--c2t)">Explore</div>
+    <div class="w-title">Four ways to fund a platform team</div>
+    <div class="row" id="pdFundChips"></div>
+    <div class="info-panel" id="pdFundInfo" style="margin-top:12px;min-height:0"></div>
+  </div>
+</div>
+</section>
+
+<!-- ============ PL20 ============ -->
+<section class="chapter" id="pl20">
+<div class="wrap">
+  <div class="ch-head reveal">
+    <span class="ch-tag" style="background:var(--c1-soft);color:var(--c1-d)">Chapter 20</span>
+    <h2>Building your deck</h2>
+    <p class="lede">Pick the slides you need, put them in order, and export a draft with titles, bullets, visual suggestions and speaker notes.</p>
+  </div>
+  <h3 class="reveal">Five rules for a senior-management deck</h3>
+  <div class="cards reveal">
+    <div class="card"><div class="ico" style="background:var(--c1-soft)">🎯</div><h4>Ask first</h4><p>Put the decision you want on slide 2: "We're asking for approval to set up a central Credit Power Platform team of N people, funded by X, starting in Q?".</p></div>
+    <div class="card"><div class="ico" style="background:var(--c2-soft)">📰</div><h4>Action titles</h4><p>Every slide title is a full sentence that states the point ("Fragmentation costs us about £X a year"), not a label ("Costs"). Read only the titles and the story should still make sense.</p></div>
+    <div class="card"><div class="ico" style="background:var(--c3-soft)">1️⃣</div><h4>One message per slide</h4><p>If a slide needs two messages, it's two slides. Put the detail in an appendix.</p></div>
+    <div class="card"><div class="ico" style="background:var(--c5-soft)">🧾</div><h4>Evidence they trust</h4><p>Use your own estate data (app counts, duplicate builds, audit findings, access requests) over industry statistics. One real example beats ten bullet points.</p></div>
+    <div class="card"><div class="ico" style="background:var(--c4-soft)">🛡️</div><h4>Pre-empt the objections</h4><p>Know the five questions they'll ask and answer them in the deck or the appendix. Meet the key stakeholders one-to-one before the meeting.</p></div>
+  </div>
+
+  <div class="widget wide reveal">
+    <div class="w-head">Lab 9 · Deck builder</div>
+    <div class="w-title">Assemble your storyline</div>
+    <div class="w-sub">Choose a preset for your audience, then switch slides on or off and reorder them. Numbers from the business-case lab (Chapter 13) and your roadmap (Chapter 19) are filled in automatically. Export as Markdown or plain text to paste into PowerPoint, or copy one slide at a time.</div>
+    <div id="pdDeck"></div>
+  </div>
+
+  <h3 class="reveal">Objection handling: the questions you'll get</h3>
+  <p class="reveal">Rehearse a short, honest answer to each. Tap a question to reveal a suggested answer.</p>
+  <div class="reveal" id="pdObj"></div>
+</div>
+</section>
+
 <!-- ============ READING ============ -->
 <section class="chapter" id="plread">
 <div class="wrap">
@@ -976,6 +1307,10 @@ select{font:inherit;font-size:.8rem;padding:6px 8px;border-radius:10px;border:1p
     <div><b>Separate customers from stakeholders</b>Customers are whose success you create (per capability). Stakeholders constrain, govern or fund you.</div>
     <div><b>Draw the boundary</b>Common, controlled and slow-changing work goes in the platform. Varying work within guardrails goes into self-service configuration. Differentiating work goes to journey teams.</div>
     <div><b>AI amplifies foundations</b>Good platforms turn AI into speed, and weak ones into accelerated chaos.</div>
+    <div><b>Centralise the commons, federate the journeys</b>A hub-and-spoke platform keeps business speed and ownership while adding reuse, consistency and control.</div>
+    <div><b>Controls are half the story</b>Governance, standards, blocks, data, design and entitlements matter, but so do the paved road, support, enablement, licensing and running the platform as a product.</div>
+    <div><b>Govern in proportion to risk</b>Light for team productivity apps, strict for apps that make or record credit decisions.</div>
+    <div><b>Lead with the ask</b>State the decision first, use action titles, show honest ranges, and answer the objections before they're asked.</div>
   </div>
 </div>
 </section>
@@ -1430,6 +1765,333 @@ makeSorter($("#boundSorter"), ["🏛️ Platform builds & owns", "🎛️ Self-s
   };
   $$(".lev-r", tbl).forEach(r => $$("[data-f]", r).forEach(inp => inp.addEventListener(inp.type === "checkbox" ? "change" : "input", () => { const row = R[+r.dataset.i], f = +inp.dataset.f; row[f] = inp.type === "checkbox" ? inp.checked : +inp.value; const sp = inp.type === "range" && inp.parentElement.querySelector("span"); if (sp) sp.textContent = inp.value; draw(); })));
   draw();
+})();
+
+/* ---------- PL-D: making the case for a central Power Platform team (credit) ---------- */
+(() => {
+  if (!$("#pl13")) return;
+  const KEY = "pd-v1";
+  let S; try { S = JSON.parse(localStorage.getItem(KEY)); } catch (e) { }
+  S = S || {};
+  const save = () => { try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) { } };
+  const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  const st = (v, l) => `<div class="stat"><b>${v}</b><span>${l}</span></div>`;
+  const n0 = v => Math.round(v).toLocaleString("en-GB");
+  const cur = () => S.cur || "£";
+  const money = v => { const a = Math.abs(v), s = v < 0 ? "−" : ""; return s + cur() + (a >= 1e6 ? (a / 1e6).toFixed(a >= 1e7 ? 0 : 1) + "m" : a >= 1e3 ? Math.round(a / 1e3) + "k" : Math.round(a)); };
+  const pct = v => Math.round(v * 100) + "%";
+  const dl = (name, text, type = "text/markdown") => { const a = document.createElement("a"); a.href = URL.createObjectURL(new Blob([text], { type })); a.download = name; a.click(); };
+  const copy = (text, btn) => { const done = () => { if (btn) { const t = btn.textContent; btn.textContent = "✓ Copied"; setTimeout(() => btn.textContent = t, 1400); } }; try { navigator.clipboard.writeText(text).then(done, () => { }); } catch (e) { } };
+  const OUT = ["🚀 Speed", "🛡️ Safety", "📦 Scale & cost", "🧠 Data & AI"];
+
+  /* ===== Lab 1: business case ===== */
+  const CF = [
+    ["Your estate", [["teams", "Teams building on Power Platform", 12], ["apps", "Live apps and flows", 150], ["newApps", "New apps per year", 40], ["users", "Licensed users", 800]]],
+    ["Build & run effort", [["rate", "Blended day rate (fully loaded)", 700], ["buildDays", "Average build effort per new app (days)", 40], ["common", "Share of each build that is common plumbing (%)", 40], ["capture", "Share of that plumbing the platform removes (%)", 60], ["maintDays", "Maintenance per app per year (days)", 8], ["maintCut", "Maintenance reduction from shared blocks (%)", 25], ["dup", "Apps that duplicate others and could be retired (%)", 15]]],
+    ["Risk, control & licences", [["incidents", "Incidents or control issues per year", 6], ["incCost", "Average cost per incident", 25000], ["incCut", "Reduction with platform guardrails (%)", 50], ["ctrlDays", "Audit, EUC and access admin effort per year (days)", 350], ["ctrlCut", "Reduction from central controls and automation (%)", 50], ["licPrice", "Licence price per user per month", 20], ["licWaste", "Share of licence spend recoverable (%)", 15]]],
+    ["The platform team", [["team", "Platform team size (people)", 6], ["realloc", "Platform-type work already done inside teams that moves to the platform (FTE)", 3], ["ppCost", "Cost per person per year", 110000], ["tools", "Tooling and services per year", 50000], ["setup", "One-off setup cost", 150000]]],
+  ];
+  const CD = Object.fromEntries(CF.flatMap(g => g[1].map(f => [f[0], f[2]])));
+  S.cost = Object.assign({}, CD, S.cost || {}); if (S.cost.v !== 2) { S.cost = Object.assign({}, CD); S.cost.v = 2; } S.scen = S.scen || "base";
+  const calc = () => {
+    const c = S.cost, m = { low: .6, base: 1, high: 1.3 }[S.scen], P = x => x / 100;
+    const B = [
+      ["Reuse on new builds", c.newApps * c.buildDays * P(c.common) * P(c.capture) * c.rate],
+      ["Lower maintenance", c.apps * (1 - P(c.dup)) * c.maintDays * P(c.maintCut) * c.rate],
+      ["Retiring duplicate apps", c.apps * P(c.dup) * c.maintDays * c.rate],
+      ["Fewer incidents and control issues", c.incidents * c.incCost * P(c.incCut)],
+      ["Less audit, EUC and access admin", c.ctrlDays * P(c.ctrlCut) * c.rate],
+      ["Licence optimisation", c.users * c.licPrice * 12 * P(c.licWaste)],
+    ].map(([l, v]) => [l, v * m]);
+    const re = c.realloc * c.ppCost; B.push(["Platform work no longer duplicated in teams", re]);
+    const ben = B.reduce((a, b) => a + b[1], 0), run = c.team * c.ppCost + c.tools, ramp = [.35, .8, 1];
+    let cum = -c.setup, pay = null; const series = [[0, cum]];
+    for (let mo = 1; mo <= 36; mo++) { const y = Math.ceil(mo / 12) - 1; cum += ((ben - re) * ramp[y] + re - run) / 12; series.push([mo, cum]); if (pay == null && cum >= 0) pay = mo; }
+    return { B, ben, run, net3: cum, pay, series, roi: cum / (c.setup + run * 3) };
+  };
+  S.calc = calc();
+  (() => {
+    const el = $("#pdCost");
+    el.innerHTML = `<div class="row" style="gap:6px;margin-bottom:8px">Currency ${["£", "$", "€", "₹"].map(x => `<button class="chip${cur() === x ? " on" : ""}" data-pcur="${x}">${x}</button>`).join("")}<span style="width:12px"></span>Scenario ${[["low", "Cautious"], ["base", "Base"], ["high", "Optimistic"]].map(([k, t]) => `<button class="chip${S.scen === k ? " on" : ""}" data-pscen="${k}">${t}</button>`).join("")}<button class="btn" data-preset style="margin-left:auto">↺ Reset</button></div>
+      <details><summary class="small" style="cursor:pointer"><b>Edit the assumptions</b> (tap to open)</summary><div class="pd-grid" style="margin-top:8px">${CF.map(([g, fs]) => `<div class="pd-tile"><h5>${g}</h5>${fs.map(([k, l]) => `<label class="small" style="display:flex;justify-content:space-between;gap:8px;align-items:center;margin:4px 0"><span>${l}</span><input class="pd-in" type="number" min="0" data-pc="${k}" value="${S.cost[k]}" style="width:92px"></label>`).join("")}</div>`).join("")}</div></details>
+      <div class="pd-out" style="margin-top:12px"></div>`;
+    const draw = () => {
+      const r = S.calc = calc(); save();
+      const mx = Math.max(...r.B.map(b => b[1]), 1);
+      const W = 640, H = 170, lo = Math.min(...r.series.map(p => p[1]), 0), hi = Math.max(...r.series.map(p => p[1]), 1), X = m => 40 + m / 36 * (W - 50), Y = v => 10 + (hi - v) / (hi - lo) * (H - 30);
+      $(".pd-out", el).innerHTML = `<div class="stats">${st(money(r.ben), "benefit per year at full run rate")}${st(money(r.run), "platform run cost per year")}${st(money(r.net3), "net value over 3 years")}${st(r.pay ? (r.pay <= 12 ? r.pay + " months" : (r.pay / 12).toFixed(1) + " years") : "> 3 years", "payback")}${st(pct(r.roi), "3-year return on cost")}</div>
+        <div class="small" style="margin-top:12px"><b>Where the benefit comes from</b> (per year, full run rate)</div>
+        ${r.B.map(([l, v]) => `<div style="margin:6px 0"><div class="small" style="display:flex;justify-content:space-between"><span>${l}</span><b>${money(v)}</b></div><div class="pd-bar"><i style="width:${v / mx * 100}%;background:var(--c2)"></i></div></div>`).join("")}
+        <div class="small" style="margin-top:12px"><b>Cumulative net value</b> (benefits ramp up: 35% in year 1, 80% in year 2, 100% in year 3; reallocated work counts from day one)</div>
+        <svg viewBox="0 0 ${W} ${H}" style="width:100%;height:auto;max-height:200px" role="img" aria-label="Cumulative net value over 36 months"><line x1="40" x2="${W - 10}" y1="${Y(0)}" y2="${Y(0)}" stroke="var(--line)" stroke-width="1.5"/>${[0, 12, 24, 36].map(m => `<text x="${X(m)}" y="${H - 4}" font-size="11" text-anchor="middle" fill="var(--muted)">${m ? "yr " + m / 12 : "start"}</text>`).join("")}<text x="36" y="${Y(0) + 4}" font-size="11" text-anchor="end" fill="var(--muted)">0</text><polyline fill="none" stroke="var(--c1)" stroke-width="3" points="${r.series.map(p => X(p[0]) + "," + Y(p[1])).join(" ")}"/>${r.pay ? `<circle cx="${X(r.pay)}" cy="${Y(0)}" r="5" fill="var(--c2)"/><text x="${X(r.pay)}" y="${Y(0) - 9}" font-size="11" text-anchor="middle" fill="var(--ink)">break-even</text>` : ""}</svg>
+        <p class="small muted">Illustrative model, not a forecast. It leaves out benefits that are real but hard to price: faster time to market for credit changes, better data for risk decisions, lower key-person risk, and readiness for AI.</p>`;
+    };
+    $$("[data-pc]", el).forEach(i => i.addEventListener("input", () => { S.cost[i.dataset.pc] = Math.max(0, +i.value || 0); draw(); }));
+    $$("[data-pcur]", el).forEach(b => b.addEventListener("click", () => { S.cur = b.dataset.pcur; $$("[data-pcur]", el).forEach(x => x.classList.toggle("on", x === b)); draw(); }));
+    $$("[data-pscen]", el).forEach(b => b.addEventListener("click", () => { S.scen = b.dataset.pscen; $$("[data-pscen]", el).forEach(x => x.classList.toggle("on", x === b)); draw(); }));
+    $("[data-preset]", el).addEventListener("click", () => { S.cost = Object.assign({}, CD); $$("[data-pc]", el).forEach(i => i.value = S.cost[i.dataset.pc]); draw(); });
+    draw();
+  })();
+
+  /* ===== Chapter 14: capability catalogue + Lab 2 self-assessment ===== */
+  const PIL = [
+    ["strategy", "🧭", "Platform product & strategy", 0, "Run the platform as a product: a vision, a roadmap, a front door for requests, and a value story.", ["Platform vision, charter and roadmap", "Intake, triage and prioritisation of requests", "Value and adoption tracking", "Customer council with business teams"], "Roadmap tooling, a platform portal (often itself a Power Pages or SharePoint site), CoE Starter Kit dashboards.", "One roadmap for credit's apps, instead of each team negotiating with IT separately."],
+    ["env", "🌍", "Environments & tenant", 0, "Where things get built and run, set up so the right thing is the easy thing.", ["Environment strategy (dev, test, prod per domain)", "Self-service environment provisioning", "Managed Environments and environment groups", "Capacity management (storage, API requests)"], "Power Platform admin center, Managed Environments, environment groups and rules, Dataverse capacity reports.", "Credit apps live in governed credit environments, not the default environment where anyone can build anything."],
+    ["ent", "🔐", "Identity & entitlements", 1, "One model for who can see, do and approve what, across every app.", ["Persona-based roles mapped to Entra ID groups", "Standard Dataverse security roles and business units", "Segregation of duties and delegated authority", "Joiner, mover, leaver automation and access recertification"], "Microsoft Entra ID security groups, Dataverse security roles, teams, business units, field-level security; access reviews.", "Approval authority limits and maker-checker enforced the same way everywhere; audit gets one answer."],
+    ["gov", "🛡️", "Governance, risk & compliance", 1, "Risk-proportionate guardrails and evidence, built into the paved road.", ["Risk tiering aligned to the EUC policy", "Data loss prevention (connector) policies", "Inventory, ownership and orphaned-app clean-up", "Audit evidence and control attestation"], "Data policies (DLP), CoE Starter Kit inventory, Microsoft Purview audit, tenant isolation, Managed Environment sharing limits.", "Apps that touch credit decisions get the right controls, and low-risk apps aren't buried in paperwork."],
+    ["alm", "🔁", "ALM & engineering standards", 1, "A paved road from idea to production: packaged, versioned, tested and deployed automatically.", ["Solutions, source control and branching standards", "Automated deployment pipelines", "Testing, solution checker and peer review", "Naming, coding and documentation standards"], "Solutions, environment variables, connection references, Power Platform pipelines, Power Platform Build Tools for Azure DevOps or GitHub, pac CLI, Power Apps Test Engine, solution checker.", "No more editing live credit apps in production; every change is traceable."],
+    ["blocks", "🧱", "Reusable components (Lego blocks)", 1, "Build once, reuse everywhere: components, flows and templates with owners and versions.", ["Component library (canvas components, PCF controls)", "Flow patterns: approval, escalation, notification, document generation", "Starter templates for credit apps", "A block catalogue with versioning and support"], "Component libraries, Power Apps component framework (PCF), templates, managed solutions, Dataverse solution layering.", "An approval-with-delegated-authority block used by every credit app, instead of a new one each time."],
+    ["integ", "🔌", "Integration & connectors", 0, "Safe, supported connections to core credit systems.", ["Custom connectors to LOS, core banking, bureaus and rating models", "API management and integration patterns", "On-premises data gateway management", "Event-driven and batch patterns"], "Custom connectors, Azure API Management, on-premises data gateway, Dataverse virtual tables, Azure integration services.", "Apps read facility and exposure data from the systems of record, rather than copying spreadsheets."],
+    ["data", "🗄️", "Data & reporting", 1, "One credit data model and trusted data products for apps, reports and AI.", ["Shared credit data model in Dataverse", "Golden sources, lineage and data ownership", "Data quality rules and monitoring", "Certified Power BI semantic models"], "Dataverse, virtual tables, Power BI and Microsoft Fabric, Microsoft Purview data catalogue.", "Exposure, limits and ratings mean the same thing in every app, which supports risk data aggregation principles (BCBS 239)."],
+    ["design", "🎨", "Design & experience", 1, "One consistent, accessible experience across credit apps.", ["Design system and theme", "Credit UX patterns (counterparty header, approval panel, audit timeline)", "Accessibility by default", "User research with credit teams"], "Modern controls and themes, component libraries, the accessibility checker, page templates.", "Underwriters and RMs don't have to relearn every app; training and errors go down."],
+    ["ai", "🤖", "AI & automation", 0, "Make AI and automation safe and repeatable, not one-off experiments.", ["Copilot Studio agent standards and guardrails", "AI Builder document processing (e.g. financial statements)", "RPA (desktop flow) standards", "Process mining to find automation opportunities"], "Copilot Studio, AI Builder, Power Automate desktop flows, Power Automate Process Mining, Copilot in Power Apps.", "Spreading financial statements or summarising credit files with AI, with human review and an audit trail."],
+    ["ops", "🧯", "Operations, support & resilience", 0, "Run what's built: support, monitoring and continuity.", ["Support model (L1, L2, L3) and service levels", "Monitoring and alerting for apps and flows", "Business continuity and recovery for critical apps", "Incident and problem management"], "Admin analytics, flow run monitoring, Application Insights integration, Dataverse backup and restore.", "When the limit-review flow fails at month-end, someone knows within minutes and knows how to fix it."],
+    ["enable", "🎓", "Enablement & community", 0, "Grow capable makers and a community, so the platform scales through people.", ["Maker training paths and certification levels", "Champions network across credit teams", "Office hours, documentation and a pattern library", "Maker onboarding (a 'licence to build')"], "Microsoft Learn paths, the CoE Starter Kit's nurture components, Teams communities, internal docs site.", "Business makers build within guardrails confidently, and the central team isn't a bottleneck."],
+    ["finops", "💳", "Licensing & FinOps", 0, "Spend money on Power Platform deliberately and visibly.", ["Licence allocation and optimisation", "Capacity planning (storage, requests, add-ons)", "Showback or chargeback", "Vendor management and roadmap with Microsoft"], "Licence reports in the admin center, pay-as-you-go plans, capacity add-ons. Licensing changes often, so check current terms.", "Premium licences go to the people who need them; costs are visible per business area."],
+    ["portfolio", "🗂️", "Portfolio & lifecycle", 0, "Manage the estate as a portfolio: fewer, better apps.", ["App inventory and portfolio review", "Consolidation and retirement of duplicates", "Technical debt management", "Moving outgrown apps to strategic or pro-code solutions"], "CoE Starter Kit inventory and usage, archiving and app quarantine, solution upgrades.", "Five covenant trackers become one; critical spreadsheets and EUCs move onto the paved road or to strategic systems."],
+  ];
+  (() => {
+    const chips = $("#pdPillarChips"), info = $("#pdPillarInfo");
+    chips.innerHTML = PIL.map((p, i) => `<button class="chip${i ? "" : " on"}" data-pp="${i}">${p[1]} ${p[2]}${p[3] ? " ✓" : ""}</button>`).join("");
+    const show = i => { const p = PIL[i]; info.innerHTML = `<b style="font-size:1.05rem">${p[1]} ${p[2]}</b>${p[3] ? ` <span class="tag" style="background:var(--c2-soft);color:var(--c2t)">on your list</span>` : ` <span class="tag" style="background:var(--c3-soft);color:var(--c3t)">often missed</span>`}<p style="margin:6px 0">${p[4]}</p><div class="grid2" style="gap:12px"><div><div class="small"><b>What it includes</b></div><ul class="small" style="margin:4px 0;padding-left:18px">${p[5].map(x => `<li>${x}</li>`).join("")}</ul></div><div><div class="small"><b>Power Platform features</b></div><p class="small" style="margin:4px 0">${p[6]}</p><div class="small"><b>What it means for credit</b></div><p class="small" style="margin:4px 0">${p[7]}</p></div></div>`; };
+    $$("[data-pp]", chips).forEach(b => b.addEventListener("click", () => { $$("[data-pp]", chips).forEach(x => x.classList.toggle("on", x === b)); show(+b.dataset.pp); }));
+    show(0);
+    const nm = PIL.filter(p => p[3]).length;
+    chips.insertAdjacentHTML("afterend", `<p class="small muted" style="margin:8px 0 0">✓ = the ${nm} areas you already named (governance, standards, Lego blocks, data, design, entitlements). The other ${PIL.length - nm} are what turn a set of controls into a platform people want to use.</p>`);
+  })();
+  S.as = S.as || {};
+  (() => {
+    const el = $("#pdAssess"), MAT = ["None", "Ad hoc", "Partly", "Platform-grade"], IMP = ["Low", "Med", "High"];
+    const rows = PIL.flatMap((p, pi) => p[5].map((it, ii) => [pi + "-" + ii, p, it]));
+    const g = k => S.as[k] || [0, 1];
+    el.innerHTML = `<div class="row" style="gap:6px"><button class="btn" data-ax="md">⬇️ Export (Markdown)</button><button class="btn" data-ax="csv">⬇️ Export (CSV)</button><button class="btn" data-ax="clr">↺ Clear</button></div><div class="pd-heat" style="margin-top:10px"></div><details style="margin-top:10px"><summary class="small" style="cursor:pointer"><b>Rate the ${rows.length} capabilities</b> (tap to open)</summary><div class="pd-scroll" style="margin-top:6px"><table class="pd-hm"><tr><th>Capability</th><th>Today</th><th>Importance</th></tr>${PIL.map((p, pi) => `<tr><td colspan="3" style="background:var(--surface-2)"><b>${p[1]} ${p[2]}</b></td></tr>` + p[5].map((it, ii) => `<tr><td>${it}</td><td><select class="pd-in" data-am="${pi}-${ii}">${MAT.map((m, k) => `<option value="${k}"${g(pi + "-" + ii)[0] === k ? " selected" : ""}>${k} ${m}</option>`).join("")}</select></td><td><select class="pd-in" data-ai="${pi}-${ii}">${IMP.map((m, k) => `<option value="${k}"${g(pi + "-" + ii)[1] === k ? " selected" : ""}>${m}</option>`).join("")}</select></td></tr>`).join("")).join("")}</table></div></details><div class="pd-gaps" style="margin-top:10px"></div>`;
+    const draw = () => {
+      $(".pd-heat", el).innerHTML = `<div class="small"><b>Maturity heatmap</b> (average of each pillar, 0–3)</div><div class="pd-grid" style="grid-template-columns:repeat(auto-fill,minmax(150px,1fr));margin-top:6px">${PIL.map((p, pi) => { const v = p[5].reduce((a, _, ii) => a + g(pi + "-" + ii)[0], 0) / p[5].length, c = v < 1 ? "c4" : v < 2 ? "c3" : "c2"; return `<div style="padding:8px 10px;border-radius:10px;background:var(--${c}-soft);border:1px solid var(--${c})"><div class="small"><b>${p[1]} ${p[2]}</b></div><div style="font-weight:800">${v.toFixed(1)}</div></div>`; }).join("")}</div>`;
+      const gaps = rows.map(([k, p, it]) => { const [m, i] = g(k); return [k, p, it, (3 - m) * (i + 1), m, i]; }).filter(r => r[3] > 0).sort((a, b) => b[3] - a[3]).slice(0, 8);
+      S.gaps = gaps.map(r => `${r[2]} (${r[1][2]}): today ${r[4]}/3, importance ${IMP[r[5]]}`);
+      $(".pd-gaps", el).innerHTML = `<div class="small"><b>Top gaps</b> (biggest distance from platform-grade × importance)</div><ol class="small" style="margin:4px 0;padding-left:20px">${gaps.map(r => `<li>${r[1][1]} ${r[2]} <span class="muted">· ${r[1][2]} · today ${r[4]}/3 · ${IMP[r[5]]}</span></li>`).join("")}</ol>`;
+      save();
+    };
+    $$("[data-am],[data-ai]", el).forEach(s => s.addEventListener("change", () => { const k = s.dataset.am || s.dataset.ai, v = g(k).slice(); v[s.dataset.am ? 0 : 1] = +s.value; S.as[k] = v; draw(); }));
+    $$("[data-ax]", el).forEach(b => b.addEventListener("click", () => {
+      const a = b.dataset.ax;
+      if (a === "clr") { S.as = {}; $$("[data-am]", el).forEach(s => s.value = 0); $$("[data-ai]", el).forEach(s => s.value = 1); draw(); return; }
+      if (a === "csv") { dl("platform-self-assessment.csv", "pillar,capability,maturity_0_3,importance\n" + rows.map(([k, p, it]) => `"${p[2]}","${it}",${g(k)[0]},${IMP[g(k)[1]]}`).join("\n"), "text/csv"); return; }
+      dl("platform-self-assessment.md", "# Credit Power Platform self-assessment\n\n| Pillar | Average maturity (0–3) |\n|---|---|\n" + PIL.map((p, pi) => `| ${p[2]} | ${(p[5].reduce((s, _, ii) => s + g(pi + "-" + ii)[0], 0) / p[5].length).toFixed(1)} |`).join("\n") + "\n\n## Top gaps\n\n" + S.gaps.map((x, i) => `${i + 1}. ${x}`).join("\n") + "\n");
+    }));
+    draw();
+  })();
+
+  /* ===== Chapter 15: operating models + sorter ===== */
+  (() => {
+    const D = ["Speed for business teams", "Control & consistency", "Reuse & cost efficiency", "Business ownership", "Freedom from bottlenecks", "Data & AI readiness"];
+    const M = [
+      ["🏝️ Fully federated", [5, 1, 1, 5, 5, 1], "Every team builds its own way, with its own environments, roles and connectors. Where many organisations start.", "Fast and close to the business at first. Over time: duplication, inconsistent data and controls, access sprawl, key-person risk. Speed falls as the estate grows.", "Small estates, early experimentation."],
+      ["📏 Federated with standards", [4, 2, 2, 5, 5, 2], "Teams still build alone, but a policy document sets standards (naming, DLP, review).", "Cheap to set up, but standards without a paved road are followed unevenly, and nothing is reused. Audit sees paper controls rather than built-in ones.", "A first step while funding a platform."],
+      ["🎡 Hub-and-spoke (recommended)", [4, 4, 4, 4, 4, 4], "A central platform team (the hub) owns foundations, guardrails and shared blocks as a product; fusion teams in the business (the spokes) build apps on the paved road.", "Keeps business speed and ownership while adding reuse, consistency and control. Needs product management and enablement to avoid becoming a ticket queue.", "Medium to large estates, regulated environments: most banks."],
+      ["🏰 Fully centralised", [2, 5, 4, 2, 1, 4], "A central team builds and runs all apps; the business submits requests.", "Strong control, but slow, far from the business, and it pushes people back to spreadsheets and shadow IT. Defeats the point of low-code.", "A handful of critical, complex systems (which might belong on pro-code anyway)."],
+    ];
+    const el = $("#pdModels"); let cur = 2;
+    const draw = () => {
+      const m = M[cur];
+      el.innerHTML = `<div class="row" style="gap:6px">${M.map((x, i) => `<button class="chip${i === cur ? " on" : ""}" data-pm="${i}">${x[0]}</button>`).join("")}</div>
+        <div class="grid2" style="margin-top:12px;gap:16px"><div>${D.map((d, i) => `<div style="margin:7px 0"><div class="small" style="display:flex;justify-content:space-between"><span>${d}</span><b>${m[1][i]}/5</b></div><div class="pd-bar"><i style="width:${m[1][i] * 20}%;background:var(--${m[1][i] >= 4 ? "c2" : m[1][i] >= 3 ? "c3" : "c4"})"></i></div></div>`).join("")}</div>
+        <div class="info-panel" style="min-height:0"><b>${m[0]}</b><p class="small" style="margin:6px 0"><b>What it is:</b> ${m[2]}</p><p class="small" style="margin:6px 0"><b>Trade-offs:</b> ${m[3]}</p><p class="small" style="margin:6px 0"><b>Fits:</b> ${m[4]}</p></div></div>`;
+      $$("[data-pm]", el).forEach(b => b.addEventListener("click", () => { cur = +b.dataset.pm; draw(); }));
+    };
+    draw();
+  })();
+  makeSorter($("#pdCentralSorter"), ["🏛️ Central platform team", "🤝 Shared / agreed together", "🚀 Federated business team"], [
+    ["Defining data loss prevention (connector) policies for the tenant", 0, "Tenant-wide security policy has to be consistent and owned in one place."],
+    ["Designing the screens of the covenant monitoring app", 2, "The business team knows the process and users best. The platform provides the components and patterns."],
+    ["Building the custom connector to the loan origination system", 0, "Many apps need it and it touches a core system: build it once, secure it and support it centrally."],
+    ["Deciding which apps count as tier 1 critical", 1, "The platform owns the tiering method; the business and risk agree each app's tier together."],
+    ["Writing the user acceptance tests for a limit-review app", 2, "Acceptance is a business responsibility. The platform supplies test tools and templates."],
+    ["Maintaining the persona-to-role entitlement model", 0, "One model across all apps is the point. Business teams request personas; the platform owns the model."],
+    ["Prioritising the platform roadmap", 1, "The platform product owner decides, but with a customer council of business teams, not alone."],
+    ["Fixing a bug in a team's own flow", 2, "The owning team supports its apps (with platform help for L3 issues)."],
+    ["Running the ALM deployment pipelines", 0, "A single paved road to production, maintained once."],
+    ["Contributing a useful component another team built to the shared catalogue", 1, "Federated teams can build blocks; the platform reviews, hardens and adopts them (an 'inner source' model)."],
+    ["Licence allocation and capacity planning", 0, "Pooling licences and capacity centrally avoids waste and gives visibility."],
+    ["Deciding the business requirements for a new watchlist app", 2, "Requirements belong to the business owners of the process."],
+    ["Setting service levels for platform support", 1, "Agreed with customers, published by the platform."],
+    ["Monitoring failed flows across all production environments", 0, "Central monitoring catches problems that individual teams miss, especially out of hours."],
+  ]);
+
+  /* ===== Chapter 16: entitlements ===== */
+  S.rl = Object.assign({ apps: 40, roles: 4, users: 600, perUser: 5, jml: 20, recert: 2, mins: 20, personas: 10, hr: 1 }, S.rl || {});
+  (() => {
+    const el = $("#pdRoles"), F = [["apps", "Apps with their own access", 1, 300], ["roles", "Roles per app", 1, 20], ["users", "Users", 10, 10000], ["perUser", "Apps per user", 1, 30], ["jml", "Joiners, movers, leavers per year (%)", 0, 100], ["recert", "Access reviews per year", 0, 12], ["mins", "Minutes per manual access task", 1, 120], ["personas", "Platform personas", 3, 40]];
+    el.innerHTML = `<div class="pd-grid" style="grid-template-columns:repeat(auto-fill,minmax(180px,1fr))">${F.map(([k, l, a, b]) => `<label class="small">${l}<input class="pd-in" type="number" min="${a}" max="${b}" data-rl="${k}" value="${S.rl[k]}" style="width:100%"></label>`).join("")}<label class="small" style="display:flex;gap:6px;align-items:center"><input type="checkbox" data-rlhr${S.rl.hr ? " checked" : ""}> HR feed automates joiner/mover/leaver</label></div><div class="pd-rlo" style="margin-top:10px"></div>`;
+    const draw = () => {
+      const r = S.rl, J = r.jml / 100;
+      const fr = { defs: r.apps * r.roles, asg: r.users * r.perUser, jml: r.users * J * r.perUser, rec: r.users * r.perUser * r.recert };
+      const pl = { defs: r.personas + Math.round(r.apps * .3), asg: r.users * 1.3, jml: r.users * J * (r.hr ? .2 : 1), rec: r.users * 1.3 * r.recert };
+      const hrs = o => (o.jml + o.rec * .25) * r.mins / 60;
+      const rows = [["Role definitions to maintain", "defs"], ["Access assignments", "asg"], ["Manual joiner/mover/leaver tasks per year", "jml"], ["Access-review checks per year", "rec"]];
+      el.querySelector(".pd-rlo").innerHTML = rows.map(([l, k]) => { const m = Math.max(fr[k], pl[k], 1); return `<div style="margin:8px 0"><div class="small"><b>${l}</b></div><div class="small" style="display:flex;gap:8px;align-items:center"><span style="width:92px">App by app</span><div class="pd-bar" style="flex:1"><i style="width:${fr[k] / m * 100}%;background:var(--c4)"></i></div><b style="width:64px;text-align:right">${n0(fr[k])}</b></div><div class="small" style="display:flex;gap:8px;align-items:center"><span style="width:92px">Platform</span><div class="pd-bar" style="flex:1"><i style="width:${pl[k] / m * 100}%;background:var(--c2)"></i></div><b style="width:64px;text-align:right">${n0(pl[k])}</b></div></div>`; }).join("") + `<div class="stats">${st(n0(hrs(fr)) + " h", "access admin per year, app by app")}${st(n0(hrs(pl)) + " h", "with the platform model")}${st(pct(1 - hrs(pl) / Math.max(1, hrs(fr))), "less effort")}</div><p class="small muted">Simplified model: assumes a review check takes a quarter of a manual task, and that platform users hold about 1.3 group memberships each. The bigger gains are qualitative: leavers lose all access at once, and segregation of duties can be checked across apps.</p>`;
+      save();
+    };
+    $$("[data-rl]", el).forEach(i => i.addEventListener("input", () => { S.rl[i.dataset.rl] = Math.max(0, +i.value || 0); draw(); }));
+    $("[data-rlhr]", el).addEventListener("change", e => { S.rl.hr = e.target.checked ? 1 : 0; draw(); });
+    draw();
+  })();
+  (() => {
+    const PE = ["Relationship manager", "Credit analyst", "Credit approver", "Credit risk policy", "Credit operations", "Maker (app builder)", "Platform admin", "Internal auditor"];
+    const PM = ["Create or edit credit application", "Edit financials and rating inputs", "Approve credit (within authority)", "Change credit policy rules", "Book facility / release funds", "Grant or change user access", "Change apps in production", "View audit logs"];
+    const RULES = [[[0, 2], "Maker-checker: the same person can prepare and approve a credit."], [[1, 2], "Approving a credit whose financial or rating inputs you can edit."], [[2, 4], "Approving a credit and booking it or releasing the funds."], [[3, 2], "Setting the credit rules and approving deals under them."], [[5, 0], "An access administrator who can also create credit applications."], [[5, 2], "An access administrator who can grant themselves approval rights and approve."], [[5, 4], "An access administrator who can also book or release funds."], [[6, 2], "Changing the app that enforces the controls while also approving credits."], [[6, 4], "Changing the app that books facilities while also booking them."]];
+    const GOOD = [[0], [0, 1], [2, 7], [3], [4], [], [5, 6], [7]], BAD = [[0, 2], [0, 1, 2], [1, 2, 4], [3, 2], [4, 5], [6, 0, 5], [5, 6, 2], [7, 0]];
+    const toM = A => PE.map((_, i) => PM.map((_, j) => A[i].includes(j) ? 1 : 0));
+    S.sod = S.sod && S.sod.length === PE.length ? S.sod : toM(GOOD);
+    const el = $("#pdSod");
+    const draw = () => {
+      const M = S.sod, bad = new Set(), found = [];
+      M.forEach((row, i) => { RULES.forEach(([[a, b], t]) => { if (row[a] && row[b]) { bad.add(i + "-" + a); bad.add(i + "-" + b); found.push([PE[i], t]); } }); if (i === 7 && row.some((v, j) => v && j !== 7)) { row.forEach((v, j) => { if (v && j !== 7) bad.add(i + "-" + j); }); found.push([PE[i], "Auditors should be independent and read-only: no business or change permissions."]); } });
+      el.innerHTML = `<div class="row" style="gap:6px"><button class="btn" data-sp="good">✅ Load a well-designed setup</button><button class="btn" data-sp="bad">⚠️ Load a typical fragmented setup</button><button class="btn" data-sp="clr">Clear</button></div>
+        <div class="pd-scroll" style="margin-top:10px"><table class="pd-mx"><tr><th>Persona \\ permission</th>${PM.map(p => `<th style="max-width:80px"><span class="small">${p}</span></th>`).join("")}</tr>${PE.map((p, i) => `<tr><td>${p}</td>${PM.map((_, j) => `<td><button class="pd-ck${M[i][j] ? (bad.has(i + "-" + j) ? " bad" : " on") : ""}" data-sx="${i}-${j}" aria-label="${p}: ${PM[j]}" aria-pressed="${!!M[i][j]}"></button></td>`).join("")}</tr>`).join("")}</table></div>
+        <div class="stats">${st(found.length, "segregation-of-duties conflicts")}${st(M.flat().filter(Boolean).length, "permissions granted")}</div>
+        ${found.length ? `<ul class="small" style="margin:6px 0;padding-left:18px">${found.map(([p, t]) => `<li><b style="color:var(--c4t)">${p}:</b> ${t}</li>`).join("")}</ul>` : `<p class="small" style="color:var(--c2t)"><b>No conflicts.</b> Each persona's permissions are separated.</p>`}
+        <p class="small muted">Real banks sometimes allow exceptions (for example, small-ticket approval authority for relationship managers) with compensating controls. On a platform, those exceptions are recorded, approved and reported in one place rather than hidden inside individual apps.</p>`;
+      $$("[data-sx]", el).forEach(b => b.addEventListener("click", () => { const [i, j] = b.dataset.sx.split("-").map(Number); S.sod[i][j] ^= 1; save(); draw(); }));
+      $$("[data-sp]", el).forEach(b => b.addEventListener("click", () => { const k = b.dataset.sp; S.sod = k === "good" ? toM(GOOD) : k === "bad" ? toM(BAD) : PE.map(() => PM.map(() => 0)); save(); draw(); }));
+    };
+    draw();
+  })();
+
+  /* ===== Chapter 17: Lego blocks + data model ===== */
+  const BL = [["sso", "🔐 Sign-in and role-based access (entitlement model)", 4], ["search", "🔎 Counterparty search (CRM / core connector)", 6], ["los", "🏦 Loan system connector (facilities, exposure)", 8], ["bureau", "📊 Credit bureau / rating model connector", 6], ["approve", "✅ Approval workflow with delegated authority", 8], ["docgen", "📝 Document generation (credit memo, letters)", 5], ["docs", "📎 Document upload, storage and retention", 4], ["audit", "🧾 Audit trail and change log", 4], ["notify", "🔔 Notifications and escalations", 2], ["shell", "🎨 App shell, theme and navigation", 3], ["bi", "📈 Reporting template (Power BI)", 5], ["alm", "🔁 Environment, ALM pipeline and test setup", 5], ["model", "🗄️ Credit data model tables", 6], ["ai", "🤖 AI financial statement extraction", 8]];
+  const APPS = [["Annual credit review", ["sso", "search", "los", "bureau", "approve", "docgen", "docs", "audit", "notify", "shell", "bi", "alm", "model"], 15], ["Covenant monitoring tracker", ["sso", "search", "los", "docs", "audit", "notify", "shell", "bi", "alm", "model"], 12], ["Watchlist and early warning", ["sso", "search", "los", "bureau", "approve", "audit", "notify", "shell", "bi", "alm", "model"], 12], ["Collateral valuation tracker", ["sso", "search", "los", "docs", "audit", "notify", "shell", "alm", "model"], 10], ["Financial spreading assistant", ["sso", "search", "docs", "audit", "shell", "alm", "model", "ai"], 15], ["Policy exception log", ["sso", "search", "approve", "audit", "notify", "shell", "bi", "alm"], 6]];
+  S.lego = S.lego || { app: 0, have: ["sso", "shell", "alm", "audit", "notify", "approve", "search", "los"], perYear: 20 };
+  (() => {
+    const el = $("#pdLego");
+    const draw = () => {
+      const L = S.lego, A = APPS[L.app], need = A[1].map(k => BL.find(b => b[0] === k));
+      const scratch = A[2] + need.reduce((a, b) => a + b[2], 0), withP = A[2] + need.reduce((a, b) => a + (L.have.includes(b[0]) ? .5 : b[2]), 0), asm = need.filter(b => L.have.includes(b[0])).reduce((a, b) => a + b[2], 0) / scratch;
+      const avgSave = APPS.reduce((a, ap) => a + ap[1].reduce((s, k) => s + (L.have.includes(k) ? BL.find(b => b[0] === k)[2] - .5 : 0), 0), 0) / APPS.length, rate = (S.cost && S.cost.rate) || 700;
+      S.legoOut = { app: A[0], scratch, withP, asm, yearly: avgSave * L.perYear * rate };
+      el.innerHTML = `<div class="row" style="gap:6px">${APPS.map((a, i) => `<button class="chip${i === L.app ? " on" : ""}" data-la="${i}">${a[0]}</button>`).join("")}</div>
+        <div class="small" style="margin-top:10px"><b>Blocks this app needs</b> (tap to toggle whether the platform provides it)</div>
+        <div class="pd-grid" style="grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:6px;margin-top:6px">${need.map(b => `<button class="btn" data-lb="${b[0]}" style="text-align:left;justify-content:flex-start;${L.have.includes(b[0]) ? "background:var(--c2-soft);border-color:var(--c2)" : ""}">${L.have.includes(b[0]) ? "✓ " : ""}${b[1]} <span class="small muted">· ${b[2]}d</span></button>`).join("")}<div class="pd-tile small">✍️ App-specific screens and logic · ${A[2]}d (always built by the team)</div></div>
+        <div class="stats">${st(scratch + " days", "from scratch")}${st(Math.round(withP) + " days", "on the platform")}${st(pct(asm), "assembled from blocks")}${st(Math.round(withP / 10) + "–" + Math.round(withP / 5) + " wks", "elapsed, team of 1–2")}</div>
+        <label class="small" style="display:block;margin-top:8px">New apps per year <input class="pd-in" type="number" min="1" data-lpy value="${L.perYear}" style="width:80px"></label>
+        <p class="small">With the blocks ticked, across a typical mix of apps that's about <b>${n0(avgSave * L.perYear)} person-days</b> (≈ <b>${money(avgSave * L.perYear * rate)}</b>) a year saved on new builds alone, and every app inherits the same access model, audit trail and design. Block sizes are illustrative.</p>`;
+      $$("[data-la]", el).forEach(b => b.addEventListener("click", () => { L.app = +b.dataset.la; save(); draw(); }));
+      $$("[data-lb]", el).forEach(b => b.addEventListener("click", () => { const k = b.dataset.lb; L.have = L.have.includes(k) ? L.have.filter(x => x !== k) : [...L.have, k]; save(); draw(); }));
+      $("[data-lpy]", el).addEventListener("change", e => { L.perYear = Math.max(1, +e.target.value || 1); save(); draw(); });
+    };
+    draw();
+  })();
+  $("#pdData").innerHTML = [["👥 Counterparty", "Customer or borrower, group structure and connected parties.", "CRM or customer master"], ["🏦 Facility", "Limit, product, tenor, pricing, status.", "Loan origination / core banking"], ["📉 Exposure", "Drawn and undrawn amounts over time, by facility and counterparty.", "Core banking / risk data"], ["🏠 Collateral & guarantees", "Type, valuation, valuation date, linkage to facilities.", "Collateral system"], ["⭐ Rating & risk parameters", "Internal rating, PD and LGD where used, rating date, model version.", "Rating models"], ["📜 Covenant", "Covenant terms, test dates, results and breaches.", "Platform (if no system of record)"], ["📝 Credit application & decision", "Request, recommendation, decision, conditions, approver and authority level.", "Platform or LOS"], ["🚩 Watchlist status", "Risk status, triggers, actions and owners.", "Platform"], ["📎 Document", "Type, version, retention class, link to counterparty or facility.", "Document management"], ["🔑 User & authority", "Persona, delegated credit authority, business unit.", "Entra ID + platform"]].map(([t, d, s]) => `<div class="pd-tile"><h5>${t}</h5><p class="small" style="margin:0">${d}</p><p class="small muted" style="margin:4px 0 0">Source: ${s}</p></div>`).join("");
+
+  /* ===== Chapter 18: risk tiering ===== */
+  (() => {
+    const Q = [["How many people use it?", [["Just me or my team (under 10)", 0], ["A department (10–100)", 1], ["Across the business (100+)", 2]]], ["What data does it handle?", [["Public or internal", 0], ["Confidential", 1], ["Customer personal data or credit-sensitive data", 2]]], ["How is it used in decisions?", [["Productivity only", 0], ["Informs credit decisions or management reporting", 2], ["Records or makes credit decisions, or feeds regulatory or financial reporting", 3]]], ["Financial impact if it's wrong?", [["Low", 0], ["Medium", 1], ["High", 2]]], ["Does it support an important business service or time-critical process?", [["No", 0], ["Yes", 2]]], ["Does it use AI to produce outputs people act on?", [["No", 0], ["Yes", 1]]]];
+    const T = { 4: ["Tier 4 · Personal & team productivity", "c2", "Same day", ["Registered in the inventory with a named owner and a backup owner", "Built in a personal-productivity or team environment with strict data policies", "No sensitive data, no production use for decisions"]], 3: ["Tier 3 · Departmental", "c6", "A few days", ["Team environment and solution packaging", "Basic testing and user sign-off", "Standard components, theme and audit block", "Access through Entra ID groups"]], 2: ["Tier 2 · Business-important", "c3", "1–2 weeks of mostly automated steps", ["ALM pipeline: no direct edits in production", "Peer review and solution checker", "Platform entitlement model with segregation-of-duties check", "Audit logging and data classification with retention", "Support runbook and failed-run alerting", "Annual access recertification"]], 1: ["Tier 1 · Critical or regulatory", "c4", "Planned with risk partners", ["Recorded on the EUC or critical-application register with control attestation", "Independent testing and formal change approval", "Business continuity, recovery testing and monitoring", "Model-risk review if it calculates or decides", "Quarterly access recertification", "Human-in-the-loop and testing for any AI output", "Periodic review: should it move to a strategic or pro-code system?"]] };
+    const el = $("#pdTier"), A = Q.map(() => 0);
+    const draw = () => {
+      const s = A.reduce((a, v, i) => a + Q[i][1][v][1], 0), dec = Q[2][1][A[2]][1], crit = Q[4][1][A[4]][1];
+      let t = s <= 2 ? 4 : s <= 4 ? 3 : s <= 7 ? 2 : 1; if (dec === 3) t = Math.min(t, 2); if (dec === 3 && crit) t = 1; if (Q[1][1][A[1]][1] === 2) t = Math.min(t, 3);
+      const ctl = [4, 3, 2, 1].filter(k => k >= t).flatMap(k => T[k][3].map(c => [k, c]));
+      el.innerHTML = Q.map((q, i) => `<div style="margin:8px 0"><div class="small"><b>${q[0]}</b></div><div class="row" style="gap:6px;margin-top:4px">${q[1].map((o, j) => `<button class="chip${A[i] === j ? " on" : ""}" data-tq="${i}-${j}">${o[0]}</button>`).join("")}</div></div>`).join("") +
+        `<div style="margin-top:12px;padding:14px;border-radius:14px;background:var(--${T[t][1]}-soft);border:2px solid var(--${T[t][1]})"><b style="font-size:1.1rem">${T[t][0]}</b><div class="small">Time to get started on the paved road: <b>${T[t][2]}</b></div><ul class="small" style="margin:8px 0 0;padding-left:18px">${ctl.map(([k, c]) => `<li>${c}${k !== t ? ` <span class="muted">(tier ${k})</span>` : ""}</li>`).join("")}</ul></div>`;
+      $$("[data-tq]", el).forEach(b => b.addEventListener("click", () => { const [i, j] = b.dataset.tq.split("-").map(Number); A[i] = j; draw(); }));
+    };
+    draw();
+  })();
+
+  /* ===== Chapter 19: roadmap, scorecard, funding ===== */
+  const RI = [["i1", "Appoint platform product owner; agree charter", "strategy", []], ["i2", "Inventory the estate (CoE Starter Kit) and baseline metrics", "gov", []], ["i16", "Front door: intake, triage and platform portal", "strategy", ["i1"]], ["i3", "Environment strategy and Managed Environments", "env", ["i2"]], ["i4", "Redesign data loss prevention policies", "gov", ["i2"]], ["i5", "Risk tiering aligned to the EUC policy", "gov", ["i2"]], ["i6", "ALM pipelines and solution standards", "alm", ["i3"]], ["i7", "Persona-based entitlement model (Entra ID groups)", "ent", ["i3"]], ["i8", "Segregation-of-duties and delegated-authority service", "ent", ["i7"]], ["i9", "Automated access recertification", "ent", ["i7"]], ["i10", "Credit data model v1 (counterparty, facility, exposure)", "data", ["i3"]], ["i11", "Custom connectors to loan system and core banking", "integ", ["i3"]], ["i12", "Approval workflow block with delegated authority", "blocks", ["i6", "i8"]], ["i13", "Component library and design system v1", "design", ["i6"]], ["i14", "Starter template for credit apps", "blocks", ["i12", "i13", "i10"]], ["i15", "Maker training paths and champions network", "enable", ["i1"]], ["i17", "Support model, monitoring and alerting", "ops", ["i6"]], ["i18", "Licence optimisation and showback", "finops", ["i2"]], ["i19", "Retire and consolidate duplicate apps", "portfolio", ["i2", "i14"]], ["i20", "Move tier 1 apps onto the paved road", "portfolio", ["i5", "i6", "i7"]], ["i21", "Certified Power BI models on the credit data model", "data", ["i10"]], ["i22", "AI guardrails and Copilot Studio standards", "ai", ["i4", "i5"]], ["i23", "AI financial statement extraction block", "ai", ["i22", "i10"]], ["i24", "Business continuity and recovery for critical apps", "ops", ["i17", "i20"]]];
+  const SUG = { i1: 1, i2: 1, i16: 1, i3: 1, i4: 1, i5: 1, i6: 1, i7: 1, i15: 1, i8: 2, i10: 2, i11: 2, i12: 2, i13: 2, i17: 2, i18: 2, i22: 2, i9: 3, i14: 3, i19: 3, i20: 3, i21: 3, i23: 3, i24: 3 };
+  const PN = { strategy: "🧭", env: "🌍", ent: "🔐", gov: "🛡️", alm: "🔁", blocks: "🧱", integ: "🔌", data: "🗄️", design: "🎨", ai: "🤖", ops: "🧯", enable: "🎓", finops: "💳", portfolio: "🗂️" };
+  S.road = S.road || Object.assign({}, SUG);
+  (() => {
+    const el = $("#pdRoad"), COL = [["Not planned", "surface-3"], ["Now (0–3 months)", "c2"], ["Next (3–6 months)", "c3"], ["Later (6–12 months)", "c6"]];
+    const draw = () => {
+      const R = S.road, warn = [];
+      RI.forEach(([k, t, , d]) => { const s = R[k] || 0; if (!s) return; d.forEach(x => { const sx = R[x] || 0; if (!sx || sx > s) warn.push(`“${t}” is planned before it depends on “${RI.find(r => r[0] === x)[1]}”.`); }); });
+      el.innerHTML = `<div class="row" style="gap:6px"><button class="btn" data-rr="sug">💡 Suggested plan</button><button class="btn" data-rr="clr">Clear</button><button class="btn" data-rr="md">⬇️ Export</button></div>
+        <div class="pd-grid" style="grid-template-columns:repeat(auto-fill,minmax(220px,1fr));margin-top:10px">${[1, 2, 3, 0].map(c => `<div class="pd-tile" style="border-top:4px solid var(--${COL[c][1]})"><h5>${COL[c][0]} <span class="muted small">(${RI.filter(r => (R[r[0]] || 0) === c).length})</span></h5>${RI.filter(r => (R[r[0]] || 0) === c).map(([k, t, p]) => `<button class="btn" data-ri="${k}" style="display:block;width:100%;text-align:left;margin:4px 0;font-size:.8rem;padding:6px 8px">${PN[p]} ${t}</button>`).join("") || `<p class="small muted" style="margin:0">Nothing here.</p>`}</div>`).join("")}</div>
+        ${warn.length ? `<div class="key warn" style="margin:10px 0 0"><p class="small"><b>Dependency check:</b><br>${warn.map(esc).join("<br>")}</p></div>` : `<p class="small" style="color:var(--c2t);margin-top:8px"><b>✓ Dependencies in order.</b></p>`}`;
+      $$("[data-ri]", el).forEach(b => b.addEventListener("click", () => { const k = b.dataset.ri; R[k] = ((R[k] || 0) + 1) % 4; save(); draw(); }));
+      $$("[data-rr]", el).forEach(b => b.addEventListener("click", () => { const a = b.dataset.rr; if (a === "sug") S.road = Object.assign({}, SUG); else if (a === "clr") S.road = {}; else { dl("platform-roadmap.md", "# Credit Power Platform roadmap\n\n" + [1, 2, 3].map(c => `## ${COL[c][0]}\n\n` + RI.filter(r => (S.road[r[0]] || 0) === c).map(r => `- ${r[1]}`).join("\n")).join("\n\n") + "\n"); return; } save(); draw(); }));
+    };
+    draw();
+  })();
+  const MET = [[0, "Lead time from idea to production", "Median days from approved request to live app", "Halve within 12 months"], [0, "Share of new apps on the paved road", "New apps built from templates and the ALM pipeline", "80%+"], [0, "Time to provision an environment", "From request to a ready, governed environment", "Under 1 day (self-service)"], [0, "Maker satisfaction", "Quarterly survey (e.g. NPS or a developer-experience score)", "Rising each quarter"], [1, "Apps with a named owner in the inventory", "Share of apps and flows with an active owner and backup", "100% for tiers 1–3"], [1, "Critical apps on ALM (no edits in production)", "Share of tier 1–2 apps deployed only through pipelines", "100%"], [1, "Open segregation-of-duties conflicts", "Conflicts found by the cross-app check and not yet resolved", "Zero unapproved"], [1, "Time to remove a leaver's access", "From leaving date to access removed in all apps", "Same day"], [1, "Audit findings on Power Platform apps", "Open findings and repeat findings", "Down year on year; no repeats"], [1, "Production flows with failure alerting", "Share of tier 1–2 flows monitored", "100%"], [2, "Reuse rate", "Share of apps using 3+ platform blocks", "60%+"], [2, "Duplicate apps retired", "Apps consolidated or retired this year", "Agreed target from the inventory"], [2, "Licence utilisation", "Share of paid licences actively used in the last 30 days", "85%+"], [2, "Active makers and apps", "Adoption across credit teams", "Growing, in governed environments"], [3, "Apps using the shared credit data model", "Instead of local copies of exposure, limits or ratings", "Most new apps"], [3, "Data quality issues", "Open issues on shared credit data", "Falling"], [3, "AI agents in production with guardrail sign-off", "Copilot Studio agents and AI Builder models that passed review", "100% of those live"], [3, "Reports on certified semantic models", "Share of credit reports built on certified models", "Rising"]];
+  S.sc = S.sc || [0, 1, 4, 5, 6, 8, 10, 12, 14];
+  (() => {
+    const el = $("#pdScore");
+    const draw = () => {
+      const by = OUT.map((_, o) => S.sc.filter(i => MET[i][0] === o).length), n = S.sc.length;
+      const msg = !n ? "Pick some metrics." : n < 6 ? "Add a few more: 6–10 gives a rounded picture." : n > 10 ? "That's a lot for an executive audience: keep the extras for an appendix." : by.some(c => !c) ? `Add at least one ${OUT[by.findIndex(c => !c)]} metric for balance.` : "Balanced scorecard ✓";
+      el.innerHTML = `<div class="stats">${OUT.map((o, i) => st(by[i], o)).join("")}</div><p class="small"><b>${msg}</b></p>${OUT.map((o, oi) => `<div class="small" style="margin-top:10px"><b>${o}</b></div>` + MET.map((m, i) => m[0] === oi ? `<label class="small" style="display:flex;gap:8px;align-items:flex-start;padding:6px 8px;margin:3px 0;border-radius:10px;background:var(--surface-2);cursor:pointer"><input type="checkbox" data-sm="${i}"${S.sc.includes(i) ? " checked" : ""} style="margin-top:3px"><span><b>${m[1]}</b> · <span class="muted">${m[2]}.</span> Target: ${m[3]}</span></label>` : "").join("")).join("")}<button class="btn" data-sme style="margin-top:8px">⬇️ Export scorecard</button>`;
+      $$("[data-sm]", el).forEach(c => c.addEventListener("change", () => { const i = +c.dataset.sm; S.sc = c.checked ? [...S.sc, i] : S.sc.filter(x => x !== i); save(); draw(); }));
+      $("[data-sme]", el).addEventListener("click", () => dl("platform-scorecard.md", "# Credit Power Platform scorecard\n\n| Outcome | Metric | Definition | Target |\n|---|---|---|---|\n" + S.sc.map(i => `| ${OUT[MET[i][0]]} | ${MET[i][1]} | ${MET[i][2]} | ${MET[i][3]} |`).join("\n") + "\n"));
+    };
+    draw();
+  })();
+  (() => {
+    const F = [["🏛️ Central funding", "The platform is funded from a central (CIO, COO or credit-function) budget.", "Simple; encourages adoption because using the platform is free; best for the first 12–18 months.", "Can look like an unexplained cost centre; demand isn't priced, so prioritisation must be strong."], ["👀 Showback", "Costs are funded centrally, but each business area sees what its usage costs.", "Builds cost awareness without billing friction; good evidence for future budgets.", "No direct incentive to change behaviour; needs usage data per area."], ["💳 Chargeback", "Business areas pay for what they use (per app, per user, per environment).", "Demand is priced; costs follow value.", "Discourages adoption early on; teams may route around the platform to save money; admin overhead."], ["⚖️ Hybrid (common choice)", "The core platform (guardrails, blocks, enablement) is centrally funded; premium or dedicated services (extra capacity, dedicated build support) are charged.", "Keeps the paved road free to use while pricing extra demand.", "Needs a clear line between core and premium services."]];
+    const c = $("#pdFundChips"), inf = $("#pdFundInfo");
+    c.innerHTML = F.map((f, i) => `<button class="chip${i === 3 ? " on" : ""}" data-fu="${i}">${f[0]}</button>`).join("");
+    const show = i => { const f = F[i]; inf.innerHTML = `<b>${f[0]}</b><p class="small" style="margin:6px 0">${f[1]}</p><p class="small" style="margin:4px 0"><b style="color:var(--c2t)">For:</b> ${f[2]}</p><p class="small" style="margin:4px 0"><b style="color:var(--c4t)">Against:</b> ${f[3]}</p>`; };
+    $$("[data-fu]", c).forEach(b => b.addEventListener("click", () => { $$("[data-fu]", c).forEach(x => x.classList.toggle("on", x === b)); show(+b.dataset.fu); }));
+    show(3);
+  })();
+
+  /* ===== Chapter 20: deck builder + objections ===== */
+  const V = () => { const r = S.calc || calc(), c = S.cost || CD, L = S.legoOut || {}; const road = k => RI.filter(x => (S.road || {})[x[0]] === k).map(x => x[1]); return { r, c, L, now: road(1), next: road(2), later: road(3) }; };
+  const SL = [
+    ["s1", "Opening", "Credit Power Platform: from federated apps to a platform that scales", v => ["Proposal to establish a central Credit Power Platform team", "[Presenter, role, date]"], "Title slide with a simple hub-and-spoke graphic.", "Set the frame: this is about building on success, not fixing failure."],
+    ["s2", "Opening", "We're asking for approval to set up a central Credit Power Platform team", v => [`The ask: a team of ${v.c.team} people, about ${money(v.r.run)} a year plus ${money(v.c.setup)} set-up`, `What it fixes: duplication, inconsistent data, access sprawl and uneven controls across ${v.c.apps} apps`, `What it returns: about ${money(v.r.ben)} a year at full run rate; payback in ${v.r.pay ? (v.r.pay <= 12 ? v.r.pay + " months" : (v.r.pay / 12).toFixed(1) + " years") : "over 3 years"}`, "Decision needed today: approve the team, funding and first 90 days"], "Executive summary: three boxes (problem, proposal, return) and the ask in bold.", "State the decision first. If you only had this slide, could they decide?"],
+    ["s3", "Situation", "Power Platform has become how credit gets work done", v => [`${v.c.apps} live apps and flows built by ${v.c.teams} teams`, "Examples: [annual reviews, covenant tracking, watchlist, limit requests…]", "It delivered speed and business ownership: a success worth protecting"], "Estate map: apps by team or process, sized by users.", "Celebrate the makers. You need them on your side."],
+    ["s4", "Situation", "Our success has created fragmentation that now costs us speed, money and control", v => ["Duplication: the same capabilities rebuilt by different teams", "Inconsistent data: exposure and limits copied with different definitions", "Access sprawl: no single view of who can approve what", "Uneven controls on apps that touch credit decisions", "Key-person risk and licence waste"], "Six symptom icons, each with one real number from your estate.", "Use your own numbers. One real example per symptom."],
+    ["s5", "Situation", "One example: we have built approval workflows [N] times", v => ["[Name the apps and teams]", "[Effort spent, differences in rules, an incident or audit point it caused]", "With a platform: one approval block with delegated authority, reused everywhere"], "Side-by-side screenshots of the different versions.", "A concrete story makes the abstract case real."],
+    ["s6", "Vision", "A platform makes it faster, cheaper and safer for many teams to build", v => ["A shared set of building blocks, rules and services, run as a product", "The platform doesn't build every app; it makes every app easier to build", "Analogy: a city provides roads, utilities and building codes; residents build their own houses"], "City analogy graphic: infrastructure layer under many buildings.", "Bottcher's definition: self-service APIs, tools, services, knowledge and support, arranged as a compelling internal product."],
+    ["s7", "Vision", "We propose hub-and-spoke: centralise the commons, federate the journeys", v => ["Hub (platform team): environments, entitlements, guardrails, pipelines, shared blocks, data model, support, enablement", "Spokes (business teams): their apps, processes, requirements and day-to-day changes", "Shared: standards, roadmap, risk tiering, contributions to the block catalogue"], "Hub-and-spoke diagram with the three columns.", "Address the 'central bottleneck' fear here, before anyone raises it."],
+    ["s8", "Vision", "The platform provides 14 capabilities across four outcomes", v => ["🚀 Speed: paved road, templates, self-service environments", "🛡️ Safety: entitlements, guardrails, audit, resilience", "📦 Scale & cost: reusable blocks, connectors, licence optimisation, fewer apps", "🧠 Data & AI: one credit data model, certified reporting, safe AI"], "Capability map grid (14 tiles in four colour groups).", "Use the Chapter 14 catalogue as an appendix slide with detail."],
+    ["s9", "Vision", "One entitlement model lets us answer 'who can approve what?' in minutes", v => ["Personas mapped to Entra ID groups and standard roles across all apps", "Segregation of duties and delegated authority enforced by design", "Leavers lose all access at once; one access review for all apps"], "Before/after: many app-specific role tables vs one persona model.", "This slide often matters most to risk and audit."],
+    ["s10", "Vision", "Shared building blocks and one credit data model turn months into weeks", v => [v.L.app ? `Example: ${v.L.app} takes ${Math.round(v.L.withP)} days on the platform vs ${v.L.scratch} from scratch (${pct(v.L.asm)} assembled)` : "Example: [app] built in weeks from shared blocks", "Blocks: connectors to core credit systems, approval with delegated authority, audit trail, document generation, app shell", "One data model: counterparty, facility, exposure, collateral, rating"], "Lego-style diagram of an app assembled from blocks.", "Numbers are illustrative unless you've measured them; say so."],
+    ["s11", "Vision", "Risk-tiered guardrails: light for low-risk apps, strict for critical ones", v => ["Tier 4 personal and team productivity: registered, same-day start", "Tier 3 departmental: packaged, tested, standard components", "Tier 2 business-important: pipelines, SoD checks, audit logging, support", "Tier 1 critical or regulatory: EUC register, independent testing, BCP, model-risk review"], "Four-step pyramid with controls per tier.", "Governance proportional to risk is what makes it fast."],
+    ["s12", "Case", v => v.r.pay ? `The platform pays back in about ${v.r.pay <= 12 ? v.r.pay + " months" : (v.r.pay / 12).toFixed(1) + " years"}, but the bigger prize is speed and control` : "On cost alone the case is marginal; the real case is speed, control and AI readiness", v => [`About ${money(v.r.ben)} a year in benefits at full run rate vs ${money(v.r.run)} a year to run`, `3-year net value: ${money(v.r.net3)}; payback ${v.r.pay ? "in " + (v.r.pay <= 12 ? v.r.pay + " months" : (v.r.pay / 12).toFixed(1) + " years") : "beyond 3 years"}`, ...v.r.B.slice().sort((a, b) => b[1] - a[1]).slice(0, 3).map(([l, x]) => `${l}: ${money(x)} a year`), "Conservative assumptions; ranges in the appendix"], "Bar chart of benefit sources plus a cumulative break-even line.", "Lead with ranges and say which numbers are measured vs estimated."],
+    ["s13", "Case", "It also reduces our regulatory and operational risk", v => ["Consistent controls on every app that touches credit decisions", "Audit evidence produced by the platform, not reconstructed per app", "Lower key-person risk: standard build, documentation and support", "Resilience for apps supporting important business services"], "Risk heatmap: today vs with platform.", "Link to known audit findings or EUC risks if you can."],
+    ["s14", "Case", "A platform is the precondition for safe AI and Copilot at scale", v => ["AI is only as good as the data and access controls beneath it", "Shared guardrails for Copilot Studio agents and AI Builder", "Reusable AI blocks (e.g. financial statement extraction) with human review"], "Layered diagram: data → entitlements → guardrails → AI use cases.", "Executives are being asked about AI; this connects your ask to theirs."],
+    ["s15", "Plan", `A small team of ${"{team}"} people, mixing product, engineering, data, design and risk`, v => [`${v.c.team} people: product owner, architect, platform engineers, pro developer, data, UX, enablement (some part-time)`, "An embedded risk and control partner", "Business teams keep their makers; the platform team enables them"], "Org chart of the hub with links to business spokes.", "Show you are not building an empire."],
+    ["s16", "Plan", "First 12 months: foundations, then building blocks, then scale", v => [`Now (0–3 months): ${v.now.slice(0, 5).join("; ") || "[foundations]"}`, `Next (3–6 months): ${v.next.slice(0, 5).join("; ") || "[blocks and data]"}`, `Later (6–12 months): ${v.later.slice(0, 5).join("; ") || "[scale and AI]"}`], "Now / Next / Later roadmap with quick wins highlighted.", "Name one visible quick win in the first 90 days."],
+    ["s17", "Plan", "We'll measure success by speed, safety, reuse and adoption", v => (S.sc || []).slice(0, 8).map(i => `${MET[i][1]}: ${MET[i][3]}`), "Scorecard table with baseline, target and owner.", "Commit to reporting quarterly."],
+    ["s18", "Plan", "Funded centrally at first, then a hybrid model", v => ["Months 0–18: central funding to drive adoption", "Then: core platform centrally funded; premium services charged", "Showback from day one so costs are visible"], "Timeline of funding stages.", "Pre-empt 'who pays' before it's asked."],
+    ["s19", "Ask", "The main risks are bottleneck, low adoption and scope creep, and we've planned for them", v => ["Bottleneck → self-service paved road, published service levels, product management", "Low adoption → enablement, champions, blocks better than building your own", "Scope creep → clear boundary: platform owns the commons, teams own their apps", "Disruption to existing apps → phased migration by risk tier"], "Risk/mitigation table.", "Naming your own risks builds credibility."],
+    ["s20", "Ask", "Decision today: approve the team, the funding and the first 90 days", v => [`Approve a ${v.c.team}-person Credit Power Platform team`, `Approve funding of ${money(v.r.run + v.c.setup)} for year 1`, "Nominate an executive sponsor and a business customer council", "Agree a 90-day checkpoint with the first metrics"], "Three numbered asks.", "End on the ask, not on 'questions?'"],
+    ["s21", "Appendix", "Appendix: questions you may have", v => OBJ.slice(0, 6).map(o => o[0]), "Q&A table.", "Keep the full objection list ready."],
+    ["s22", "Appendix", "Appendix: assumptions behind the business case", v => CF.flatMap(g => g[1].map(([k, l]) => `${l}: ${["rate", "incCost", "licPrice", "ppCost", "tools", "setup"].includes(k) ? money(v.c[k]) : v.c[k]}`)), "Assumptions table with source for each number.", "Mark each as measured, estimated or industry benchmark."],
+    ["s23", "Appendix", "Appendix: our platform maturity today", v => (S.gaps || []).slice(0, 8).length ? S.gaps.slice(0, 8) : ["[Complete the self-assessment in Chapter 14 to fill this slide]"], "Heatmap of the 14 pillars.", "Shows you've done the homework and where the gaps are."],
+  ];
+  const PRE = { "Executive (10 min)": ["s1", "s2", "s4", "s6", "s7", "s12", "s16", "s20", "s22"], "Steering committee (30 min)": ["s1", "s2", "s3", "s4", "s5", "s6", "s7", "s8", "s9", "s10", "s11", "s12", "s13", "s14", "s15", "s16", "s17", "s18", "s19", "s20", "s21", "s22", "s23"], "Risk & audit": ["s1", "s2", "s4", "s7", "s9", "s11", "s13", "s14", "s17", "s20", "s22"], "Business teams & makers": ["s1", "s3", "s4", "s6", "s7", "s8", "s10", "s15", "s16", "s20"] };
+  const OBJ = [["Won't a central team slow us down?", "It would if it were a ticket queue. This team builds the paved road and shared blocks that teams self-serve; business teams keep building. We'll publish service levels and measure lead time; if teams aren't faster, we're failing."], ["Why can't each team just follow standards?", "Standards without shared tools are followed unevenly, and they don't create reuse. A platform makes the standard way the easy way: templates, pipelines and blocks with the controls already built in."], ["What happens to the apps we already have?", "Nothing breaks. We inventory them, tier them by risk, and move critical ones onto the paved road first. Duplicates are consolidated over time with their owners."], ["Who pays? Is this extra headcount?", "Partly reallocated (people already doing platform-type work in several teams), partly new. Funded centrally at first, then a hybrid model; the business case shows the payback."], ["Will business teams lose control of their apps?", "No. They own their apps, requirements and changes. They gain support, reusable components and a faster route to production."], ["Is Power Platform suitable for critical credit processes?", "For many workflow, tracking and review processes, yes, with proper ALM, security and support. Where an app outgrows low-code, the platform helps move it to a strategic or pro-code solution. Tiering makes that decision explicit."], ["Why not just use pro-code or a vendor system?", "We will for some things. Low-code lets business experts deliver quickly; the platform makes that safe. It's not either/or: the platform team includes pro developers for connectors and complex components."], ["Isn't governance IT's or risk's job?", "Policy stays with risk and IT. The platform turns policy into built-in controls and evidence, so the first line can comply by default."], ["How is this different from a CoE we tried before?", "Earlier CoEs often focused on policy and approvals. This team is run as a product: roadmap, customers, service levels, and success measured by teams' speed and safety."], ["How will we know it's working?", "A quarterly scorecard: lead time, reuse, apps on the paved road, access and audit metrics, adoption and maker satisfaction, with a 90-day checkpoint."], ["What about AI: should we wait?", "AI makes this more urgent. Copilot and agents need clean data, consistent access control and guardrails; the platform provides them once for every team."], ["What's the risk if we do nothing?", "Costs and risks grow with the estate: more duplication, more unowned apps, more audit findings, and AI adoption on weak foundations. Fixing it later costs more."], ["Why now?", "The estate has reached the size where duplication and control gaps cost more than a platform team, and AI adoption is starting. Acting before the next wave of apps is cheaper than retrofitting."], ["Can we start smaller?", "Yes: start with 2–3 people on the foundations (inventory, environments, entitlements, pipelines) and one high-value block, with a 90-day checkpoint before scaling."]];
+  S.deck = S.deck && S.deck.order ? S.deck : { order: SL.map(s => s[0]), on: PRE["Executive (10 min)"].slice(), pre: "Executive (10 min)" };
+  (() => {
+    const el = $("#pdDeck"), byId = Object.fromEntries(SL.map(s => [s[0], s]));
+    const title = (s, v) => (typeof s[2] === "function" ? s[2](v) : s[2]).replace("{team}", v.c.team);
+    const md = (ids, v) => ids.map((id, i) => { const s = byId[id]; return `## Slide ${i + 1}: ${title(s, v)}\n\n${s[3](v).map(b => "- " + b).join("\n")}\n\n*Visual:* ${s[4]}\n\n*Speaker notes:* ${s[5]}\n`; }).join("\n");
+    const draw = () => {
+      const D = S.deck, v = V(), on = D.order.filter(id => D.on.includes(id));
+      el.innerHTML = `<div class="row" style="gap:6px">${Object.keys(PRE).map(k => `<button class="chip${D.pre === k ? " on" : ""}" data-dp="${k}">${k}</button>`).join("")}</div>
+        <div class="row" style="gap:6px;margin-top:8px"><b class="small">${on.length} slides selected</b><button class="btn" data-dx="copy">📋 Copy all</button><button class="btn" data-dx="md">⬇️ Markdown</button><button class="btn" data-dx="txt">⬇️ Plain text</button></div>
+        <div style="margin-top:8px">${D.order.map((id, i) => { const s = byId[id], isOn = D.on.includes(id); return `<div class="pd-slide${isOn ? "" : " off"}"><div style="display:flex;gap:8px;align-items:flex-start"><input type="checkbox" data-don="${id}"${isOn ? " checked" : ""} aria-label="Include slide" style="margin-top:4px"><div style="flex:1;min-width:0"><span class="pd-pill">${s[1]}</span><h5 style="display:inline">${esc(title(s, v))}</h5>${isOn ? `<ul>${s[3](v).map(b => `<li>${esc(b)}</li>`).join("")}</ul><div class="small muted" style="margin-top:4px">🖼️ ${s[4]}<br>🗣️ ${s[5]}</div>` : ""}</div><div class="row" style="gap:2px;flex-wrap:nowrap;margin:0"><button class="btn" data-du="${i}" aria-label="Move up" style="padding:0 7px">↑</button><button class="btn" data-dd="${i}" aria-label="Move down" style="padding:0 7px">↓</button>${isOn ? `<button class="btn" data-dc="${id}" style="padding:0 7px" aria-label="Copy slide">📋</button>` : ""}</div></div></div>`; }).join("")}</div>`;
+      $$("[data-dp]", el).forEach(b => b.addEventListener("click", () => { const k = b.dataset.dp; D.pre = k; D.on = PRE[k].slice(); D.order = [...PRE[k], ...SL.map(s => s[0]).filter(x => !PRE[k].includes(x))]; save(); draw(); }));
+      $$("[data-don]", el).forEach(c => c.addEventListener("change", () => { const id = c.dataset.don; D.on = c.checked ? [...D.on, id] : D.on.filter(x => x !== id); D.pre = ""; save(); draw(); }));
+      $$("[data-du]", el).forEach(b => b.addEventListener("click", () => { const i = +b.dataset.du; if (i > 0) [D.order[i - 1], D.order[i]] = [D.order[i], D.order[i - 1]]; save(); draw(); }));
+      $$("[data-dd]", el).forEach(b => b.addEventListener("click", () => { const i = +b.dataset.dd; if (i < D.order.length - 1) [D.order[i + 1], D.order[i]] = [D.order[i], D.order[i + 1]]; save(); draw(); }));
+      $$("[data-dc]", el).forEach(b => b.addEventListener("click", () => copy(md([b.dataset.dc], V()).replace(/^## Slide 1: /, ""), b)));
+      $$("[data-dx]", el).forEach(b => b.addEventListener("click", () => { const t = "# Credit Power Platform: deck draft\n\n" + md(on, V()), a = b.dataset.dx; if (a === "copy") copy(t, b); else if (a === "md") dl("credit-power-platform-deck.md", t); else dl("credit-power-platform-deck.txt", t.replace(/^#+ /gm, "").replace(/\*/g, ""), "text/plain"); }));
+    };
+    el.addEventListener("pd-redraw", draw);
+    draw();
+  })();
+  $("#pdObj").innerHTML = OBJ.map(([q, a]) => `<details class="pd-q"><summary>${q}</summary><p class="small" style="margin:8px 0 0">${a}</p></details>`).join("");
+
+  /* keep deck numbers fresh: redraw whenever the deck builder scrolls into view */
+  if ("IntersectionObserver" in window) new IntersectionObserver(es => es.forEach(en => { if (en.isIntersecting) en.target.dispatchEvent(new Event("pd-redraw")); })).observe($("#pdDeck"));
 })();
 
 })();
