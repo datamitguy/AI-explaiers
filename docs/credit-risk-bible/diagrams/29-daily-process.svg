@@ -1,0 +1,154 @@
+<svg width="100%"
+ viewBox="0.00 0.00 565.80 717.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 703.4)">
+<title>DailyProcess</title>
+<polygon fill="white" stroke="transparent" points="-14.4,14.4 -14.4,-703.4 551.4,-703.4 551.4,14.4 -14.4,14.4"/>
+<g id="node1" class="node">
+<title>Start</title>
+<path fill="#1f2937" stroke="#1f2937" d="M216,-689C216,-689 105,-689 105,-689 99,-689 93,-683 93,-677 93,-677 93,-663 93,-663 93,-657 99,-651 105,-651 105,-651 216,-651 216,-651 222,-651 228,-657 228,-663 228,-663 228,-677 228,-677 228,-683 222,-689 216,-689"/>
+<text text-anchor="middle" x="160.5" y="-673.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Trading day ends</text>
+<text text-anchor="middle" x="160.5" y="-660.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">(close of business)</text>
+</g>
+<g id="node2" class="node">
+<title>Trades</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M131,-620C131,-620 12,-620 12,-620 6,-620 0,-614 0,-608 0,-608 0,-581 0,-581 0,-575 6,-569 12,-569 12,-569 131,-569 131,-569 137,-569 143,-575 143,-581 143,-581 143,-608 143,-608 143,-614 137,-620 131,-620"/>
+<text text-anchor="middle" x="71.5" y="-604.4" font-family="Helvetica,sans-Serif" font-size="12.00">Trade capture</text>
+<text text-anchor="middle" x="71.5" y="-591.4" font-family="Helvetica,sans-Serif" font-size="12.00">front&#45;office systems</text>
+<text text-anchor="middle" x="71.5" y="-578.4" font-family="Helvetica,sans-Serif" font-size="12.00">freeze positions</text>
+</g>
+<g id="edge1" class="edge">
+<title>Start&#45;&gt;Trades</title>
+<path fill="none" stroke="#4b5563" d="M138.5,-650.83C128.94,-642.94 117.51,-633.5 106.82,-624.66"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="108.26,-622.68 101.3,-620.11 105.14,-626.46 108.26,-622.68"/>
+</g>
+<g id="node3" class="node">
+<title>MD</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M322.5,-620C322.5,-620 180.5,-620 180.5,-620 174.5,-620 168.5,-614 168.5,-608 168.5,-608 168.5,-581 168.5,-581 168.5,-575 174.5,-569 180.5,-569 180.5,-569 322.5,-569 322.5,-569 328.5,-569 334.5,-575 334.5,-581 334.5,-581 334.5,-608 334.5,-608 334.5,-614 328.5,-620 322.5,-620"/>
+<text text-anchor="middle" x="251.5" y="-604.4" font-family="Helvetica,sans-Serif" font-size="12.00">Market data snapshot</text>
+<text text-anchor="middle" x="251.5" y="-591.4" font-family="Helvetica,sans-Serif" font-size="12.00">curves, surfaces, prices</text>
+<text text-anchor="middle" x="251.5" y="-578.4" font-family="Helvetica,sans-Serif" font-size="12.00">from the golden source</text>
+</g>
+<g id="edge5" class="edge">
+<title>Start&#45;&gt;MD</title>
+<path fill="none" stroke="#4b5563" d="M182.99,-650.83C192.77,-642.94 204.46,-633.5 215.39,-624.66"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="217.12,-626.42 221.03,-620.11 214.04,-622.61 217.12,-626.42"/>
+</g>
+<g id="node5" class="node">
+<title>Val</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M336.5,-538C336.5,-538 166.5,-538 166.5,-538 160.5,-538 154.5,-532 154.5,-526 154.5,-526 154.5,-499 154.5,-499 154.5,-493 160.5,-487 166.5,-487 166.5,-487 336.5,-487 336.5,-487 342.5,-487 348.5,-493 348.5,-499 348.5,-499 348.5,-526 348.5,-526 348.5,-532 342.5,-538 336.5,-538"/>
+<text text-anchor="middle" x="251.5" y="-522.4" font-family="Helvetica,sans-Serif" font-size="12.00">Valuation</text>
+<text text-anchor="middle" x="251.5" y="-509.4" font-family="Helvetica,sans-Serif" font-size="12.00">mark&#45;to&#45;market every trade</text>
+<text text-anchor="middle" x="251.5" y="-496.4" font-family="Helvetica,sans-Serif" font-size="12.00">daily P&amp;L</text>
+</g>
+<g id="edge2" class="edge">
+<title>Trades&#45;&gt;Val</title>
+<path fill="none" stroke="#4b5563" d="M126.97,-568.84C146.83,-560.02 169.32,-550.02 189.68,-540.98"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="190.81,-543.16 196.21,-538.07 188.82,-538.68 190.81,-543.16"/>
+</g>
+<g id="edge3" class="edge">
+<title>MD&#45;&gt;Val</title>
+<path fill="none" stroke="#4b5563" d="M251.5,-568.63C251.5,-561.18 251.5,-552.92 251.5,-545.1"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="253.95,-545.08 251.5,-538.08 249.05,-545.08 253.95,-545.08"/>
+</g>
+<g id="node4" class="node">
+<title>Static</title>
+<path fill="#6b7280" stroke="#6b7280" d="M525,-620C525,-620 372,-620 372,-620 366,-620 360,-614 360,-608 360,-608 360,-581 360,-581 360,-575 366,-569 372,-569 372,-569 525,-569 525,-569 531,-569 537,-575 537,-581 537,-581 537,-608 537,-608 537,-614 531,-620 525,-620"/>
+<text text-anchor="middle" x="448.5" y="-604.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Static and reference data</text>
+<text text-anchor="middle" x="448.5" y="-591.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">products, books, desks,</text>
+<text text-anchor="middle" x="448.5" y="-578.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">issuers, calendars</text>
+</g>
+<g id="edge4" class="edge">
+<title>Static&#45;&gt;Val</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M388.05,-568.95C366.13,-560.05 341.23,-549.94 318.75,-540.81"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="319.58,-538.5 312.17,-538.14 317.73,-543.04 319.58,-538.5"/>
+</g>
+<g id="node6" class="node">
+<title>Sens</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M225.5,-456C225.5,-456 99.5,-456 99.5,-456 93.5,-456 87.5,-450 87.5,-444 87.5,-444 87.5,-417 87.5,-417 87.5,-411 93.5,-405 99.5,-405 99.5,-405 225.5,-405 225.5,-405 231.5,-405 237.5,-411 237.5,-417 237.5,-417 237.5,-444 237.5,-444 237.5,-450 231.5,-456 225.5,-456"/>
+<text text-anchor="middle" x="162.5" y="-440.4" font-family="Helvetica,sans-Serif" font-size="12.00">Sensitivities</text>
+<text text-anchor="middle" x="162.5" y="-427.4" font-family="Helvetica,sans-Serif" font-size="12.00">delta, vega, DV01, ...</text>
+<text text-anchor="middle" x="162.5" y="-414.4" font-family="Helvetica,sans-Serif" font-size="12.00">per risk factor</text>
+</g>
+<g id="edge6" class="edge">
+<title>Val&#45;&gt;Sens</title>
+<path fill="none" stroke="#4b5563" d="M223.83,-486.63C214.78,-478.5 204.65,-469.39 195.27,-460.96"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="196.69,-458.94 189.85,-456.08 193.42,-462.59 196.69,-458.94"/>
+</g>
+<g id="node12" class="node">
+<title>Fin</title>
+<path fill="#6b7280" stroke="#6b7280" d="M406,-449.5C406,-449.5 275,-449.5 275,-449.5 269,-449.5 263,-443.5 263,-437.5 263,-437.5 263,-423.5 263,-423.5 263,-417.5 269,-411.5 275,-411.5 275,-411.5 406,-411.5 406,-411.5 412,-411.5 418,-417.5 418,-423.5 418,-423.5 418,-437.5 418,-437.5 418,-443.5 412,-449.5 406,-449.5"/>
+<text text-anchor="middle" x="340.5" y="-433.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Finance P&amp;L</text>
+<text text-anchor="middle" x="340.5" y="-420.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">(reconcile to risk P&amp;L)</text>
+</g>
+<g id="edge13" class="edge">
+<title>Val&#45;&gt;Fin</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M279.17,-486.63C290.57,-476.38 303.7,-464.58 314.88,-454.53"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="316.63,-456.25 320.2,-449.75 313.35,-452.61 316.63,-456.25"/>
+</g>
+<g id="node7" class="node">
+<title>Sim</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M254,-374C254,-374 71,-374 71,-374 65,-374 59,-368 59,-362 59,-362 59,-335 59,-335 59,-329 65,-323 71,-323 71,-323 254,-323 254,-323 260,-323 266,-329 266,-335 266,-335 266,-362 266,-362 266,-368 260,-374 254,-374"/>
+<text text-anchor="middle" x="162.5" y="-358.4" font-family="Helvetica,sans-Serif" font-size="12.00">Scenario engine</text>
+<text text-anchor="middle" x="162.5" y="-345.4" font-family="Helvetica,sans-Serif" font-size="12.00">VaR, stressed VaR,</text>
+<text text-anchor="middle" x="162.5" y="-332.4" font-family="Helvetica,sans-Serif" font-size="12.00">expected shortfall, stress tests</text>
+</g>
+<g id="edge7" class="edge">
+<title>Sens&#45;&gt;Sim</title>
+<path fill="none" stroke="#4b5563" d="M162.5,-404.63C162.5,-397.18 162.5,-388.92 162.5,-381.1"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="164.95,-381.08 162.5,-374.08 160.05,-381.08 164.95,-381.08"/>
+</g>
+<g id="node8" class="node">
+<title>Lim</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M239.5,-292C239.5,-292 85.5,-292 85.5,-292 79.5,-292 73.5,-286 73.5,-280 73.5,-280 73.5,-253 73.5,-253 73.5,-247 79.5,-241 85.5,-241 85.5,-241 239.5,-241 239.5,-241 245.5,-241 251.5,-247 251.5,-253 251.5,-253 251.5,-280 251.5,-280 251.5,-286 245.5,-292 239.5,-292"/>
+<text text-anchor="middle" x="162.5" y="-276.4" font-family="Helvetica,sans-Serif" font-size="12.00">Limit check</text>
+<text text-anchor="middle" x="162.5" y="-263.4" font-family="Helvetica,sans-Serif" font-size="12.00">VaR, sensitivity, stop&#45;loss,</text>
+<text text-anchor="middle" x="162.5" y="-250.4" font-family="Helvetica,sans-Serif" font-size="12.00">concentration</text>
+</g>
+<g id="edge8" class="edge">
+<title>Sim&#45;&gt;Lim</title>
+<path fill="none" stroke="#4b5563" d="M162.5,-322.63C162.5,-315.18 162.5,-306.92 162.5,-299.1"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="164.95,-299.08 162.5,-292.08 160.05,-299.08 164.95,-299.08"/>
+</g>
+<g id="node9" class="node">
+<title>Chk</title>
+<path fill="#fef3c7" stroke="#d97706" d="M150.86,-207.09C150.86,-207.09 102.16,-194.91 102.16,-194.91 96.34,-193.46 96.34,-190.54 102.16,-189.09 102.16,-189.09 150.86,-176.91 150.86,-176.91 156.68,-175.46 168.32,-175.46 174.14,-176.91 174.14,-176.91 222.84,-189.09 222.84,-189.09 228.66,-190.54 228.66,-193.46 222.84,-194.91 222.84,-194.91 174.14,-207.09 174.14,-207.09 168.32,-208.54 156.68,-208.54 150.86,-207.09"/>
+<text text-anchor="middle" x="162.5" y="-188.9" font-family="Helvetica,sans-Serif" font-size="12.00">Breach?</text>
+</g>
+<g id="edge9" class="edge">
+<title>Lim&#45;&gt;Chk</title>
+<path fill="none" stroke="#4b5563" d="M162.5,-240.95C162.5,-233.44 162.5,-225.17 162.5,-217.64"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="164.95,-217.42 162.5,-210.42 160.05,-217.42 164.95,-217.42"/>
+</g>
+<g id="node10" class="node">
+<title>Esc</title>
+<path fill="#991b1b" stroke="#991b1b" d="M163.5,-133C163.5,-133 35.5,-133 35.5,-133 29.5,-133 23.5,-127 23.5,-121 23.5,-121 23.5,-94 23.5,-94 23.5,-88 29.5,-82 35.5,-82 35.5,-82 163.5,-82 163.5,-82 169.5,-82 175.5,-88 175.5,-94 175.5,-94 175.5,-121 175.5,-121 175.5,-127 169.5,-133 163.5,-133"/>
+<text text-anchor="middle" x="99.5" y="-117.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Escalate</text>
+<text text-anchor="middle" x="99.5" y="-104.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">trader, desk head,</text>
+<text text-anchor="middle" x="99.5" y="-91.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">market risk, approval</text>
+</g>
+<g id="edge10" class="edge">
+<title>Chk&#45;&gt;Esc</title>
+<path fill="none" stroke="#4b5563" d="M151.53,-176.63C143.58,-166.22 132.54,-151.77 122.68,-138.85"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="124.44,-137.12 118.24,-133.04 120.54,-140.09 124.44,-137.12"/>
+<text text-anchor="middle" x="146.5" y="-151" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151">yes</text>
+</g>
+<g id="node11" class="node">
+<title>Rep</title>
+<path fill="#065f46" stroke="#065f46" d="M231.5,-51C231.5,-51 93.5,-51 93.5,-51 87.5,-51 81.5,-45 81.5,-39 81.5,-39 81.5,-12 81.5,-12 81.5,-6 87.5,0 93.5,0 93.5,0 231.5,0 231.5,0 237.5,0 243.5,-6 243.5,-12 243.5,-12 243.5,-39 243.5,-39 243.5,-45 237.5,-51 231.5,-51"/>
+<text text-anchor="middle" x="162.5" y="-35.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Daily risk report</text>
+<text text-anchor="middle" x="162.5" y="-22.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">to senior management</text>
+<text text-anchor="middle" x="162.5" y="-9.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">by start of next day</text>
+</g>
+<g id="edge11" class="edge">
+<title>Chk&#45;&gt;Rep</title>
+<path fill="none" stroke="#4b5563" d="M171.09,-175.81C177.01,-164.43 184.35,-148.25 187.5,-133 192.08,-110.8 192.26,-104.16 187.5,-82 185.77,-73.93 182.76,-65.62 179.43,-57.97"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="181.45,-56.49 176.3,-51.15 176.99,-58.53 181.45,-56.49"/>
+<text text-anchor="middle" x="198" y="-105" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151">no</text>
+</g>
+<g id="edge12" class="edge">
+<title>Esc&#45;&gt;Rep</title>
+<path fill="none" stroke="#4b5563" d="M119.09,-81.63C125.31,-73.73 132.26,-64.9 138.74,-56.67"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="140.73,-58.1 143.14,-51.08 136.88,-55.07 140.73,-58.1"/>
+</g>
+</g>
+</svg>

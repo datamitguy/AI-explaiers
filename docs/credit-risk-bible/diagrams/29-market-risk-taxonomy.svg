@@ -1,0 +1,169 @@
+<svg width="100%"
+ viewBox="0.00 0.00 587.80 470.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 456.4)">
+<title>MarketRiskTaxonomy</title>
+<polygon fill="white" stroke="transparent" points="-14.4,14.4 -14.4,-456.4 573.4,-456.4 573.4,14.4 -14.4,14.4"/>
+<g id="clust1" class="cluster">
+<title>cluster_f</title>
+<polygon fill="white" stroke="#9ca3af" stroke-dasharray="5,2" points="156,-14 156,-362 345,-362 345,-14 156,-14"/>
+<text text-anchor="middle" x="250.5" y="-347.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">Risk factors (what moves)</text>
+</g>
+<g id="clust2" class="cluster">
+<title>cluster_d</title>
+<polygon fill="white" stroke="#9ca3af" stroke-dasharray="5,2" points="372,-8 372,-434 551,-434 551,-8 372,-8"/>
+<text text-anchor="middle" x="461.5" y="-419.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">Where it mainly lives</text>
+</g>
+<g id="node1" class="node">
+<title>MR</title>
+<path fill="#1f2937" stroke="#1f2937" d="M109,-202.5C109,-202.5 12,-202.5 12,-202.5 6,-202.5 0,-196.5 0,-190.5 0,-190.5 0,-163.5 0,-163.5 0,-157.5 6,-151.5 12,-151.5 12,-151.5 109,-151.5 109,-151.5 115,-151.5 121,-157.5 121,-163.5 121,-163.5 121,-190.5 121,-190.5 121,-196.5 115,-202.5 109,-202.5"/>
+<text text-anchor="middle" x="60.5" y="-186.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Market risk</text>
+<text text-anchor="middle" x="60.5" y="-173.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">prices move,</text>
+<text text-anchor="middle" x="60.5" y="-160.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">nobody defaults</text>
+</g>
+<g id="node2" class="node">
+<title>IR</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M317,-332C317,-332 183,-332 183,-332 177,-332 171,-326 171,-320 171,-320 171,-306 171,-306 171,-300 177,-294 183,-294 183,-294 317,-294 317,-294 323,-294 329,-300 329,-306 329,-306 329,-320 329,-320 329,-326 323,-332 317,-332"/>
+<text text-anchor="middle" x="250" y="-316.4" font-family="Helvetica,sans-Serif" font-size="12.00">Interest rates</text>
+<text text-anchor="middle" x="250" y="-303.4" font-family="Helvetica,sans-Serif" font-size="12.00">and yield curves</text>
+</g>
+<g id="edge1" class="edge">
+<title>MR&#45;&gt;IR</title>
+<path fill="none" stroke="#4b5563" d="M77.58,-202.53C94.31,-227.08 122.7,-263.55 156,-285 159.19,-287.05 162.54,-288.96 165.99,-290.74"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="164.94,-292.95 172.31,-293.79 167.07,-288.54 164.94,-292.95"/>
+</g>
+<g id="node3" class="node">
+<title>CS</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M317,-276C317,-276 183,-276 183,-276 177,-276 171,-270 171,-264 171,-264 171,-252 171,-252 171,-246 177,-240 183,-240 183,-240 317,-240 317,-240 323,-240 329,-246 329,-252 329,-252 329,-264 329,-264 329,-270 323,-276 317,-276"/>
+<text text-anchor="middle" x="250" y="-254.9" font-family="Helvetica,sans-Serif" font-size="12.00">Credit spreads</text>
+</g>
+<g id="edge2" class="edge">
+<title>MR&#45;&gt;CS</title>
+<path fill="none" stroke="#4b5563" d="M101.35,-202.57C117.82,-212.38 137.38,-223.11 156,-231 161.45,-233.31 167.16,-235.5 172.96,-237.55"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="172.38,-239.94 179.8,-239.89 173.97,-235.3 172.38,-239.94"/>
+</g>
+<g id="node4" class="node">
+<title>FX</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M321,-222C321,-222 179,-222 179,-222 173,-222 167,-216 167,-210 167,-210 167,-198 167,-198 167,-192 173,-186 179,-186 179,-186 321,-186 321,-186 327,-186 333,-192 333,-198 333,-198 333,-210 333,-210 333,-216 327,-222 321,-222"/>
+<text text-anchor="middle" x="250" y="-200.9" font-family="Helvetica,sans-Serif" font-size="12.00">Foreign exchange rates</text>
+</g>
+<g id="edge3" class="edge">
+<title>MR&#45;&gt;FX</title>
+<path fill="none" stroke="#4b5563" d="M121.08,-185.58C133.39,-187.35 146.6,-189.25 159.7,-191.14"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="159.68,-193.61 166.96,-192.19 160.38,-188.76 159.68,-193.61"/>
+</g>
+<g id="node5" class="node">
+<title>EQ</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M317,-168C317,-168 183,-168 183,-168 177,-168 171,-162 171,-156 171,-156 171,-144 171,-144 171,-138 177,-132 183,-132 183,-132 317,-132 317,-132 323,-132 329,-138 329,-144 329,-144 329,-156 329,-156 329,-162 323,-168 317,-168"/>
+<text text-anchor="middle" x="250" y="-146.9" font-family="Helvetica,sans-Serif" font-size="12.00">Equity prices</text>
+</g>
+<g id="edge4" class="edge">
+<title>MR&#45;&gt;EQ</title>
+<path fill="none" stroke="#4b5563" d="M121.08,-168.42C134.63,-166.47 149.28,-164.36 163.66,-162.29"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="164.12,-164.7 170.7,-161.28 163.42,-159.85 164.12,-164.7"/>
+</g>
+<g id="node6" class="node">
+<title>CO</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M317,-114C317,-114 183,-114 183,-114 177,-114 171,-108 171,-102 171,-102 171,-90 171,-90 171,-84 177,-78 183,-78 183,-78 317,-78 317,-78 323,-78 329,-84 329,-90 329,-90 329,-102 329,-102 329,-108 323,-114 317,-114"/>
+<text text-anchor="middle" x="250" y="-92.9" font-family="Helvetica,sans-Serif" font-size="12.00">Commodity prices</text>
+</g>
+<g id="edge5" class="edge">
+<title>MR&#45;&gt;CO</title>
+<path fill="none" stroke="#4b5563" d="M101.35,-151.43C117.82,-141.62 137.38,-130.89 156,-123 161.45,-120.69 167.16,-118.5 172.96,-116.45"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="173.97,-118.7 179.8,-114.11 172.38,-114.06 173.97,-118.7"/>
+</g>
+<g id="node7" class="node">
+<title>VOL</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M319,-60C319,-60 181,-60 181,-60 175,-60 169,-54 169,-48 169,-48 169,-34 169,-34 169,-28 175,-22 181,-22 181,-22 319,-22 319,-22 325,-22 331,-28 331,-34 331,-34 331,-48 331,-48 331,-54 325,-60 319,-60"/>
+<text text-anchor="middle" x="250" y="-44.4" font-family="Helvetica,sans-Serif" font-size="12.00">Volatility</text>
+<text text-anchor="middle" x="250" y="-31.4" font-family="Helvetica,sans-Serif" font-size="12.00">(how jumpy prices are)</text>
+</g>
+<g id="edge6" class="edge">
+<title>MR&#45;&gt;VOL</title>
+<path fill="none" stroke="#4b5563" d="M77.58,-151.47C94.31,-126.92 122.7,-90.45 156,-69 159.19,-66.95 162.54,-65.04 165.99,-63.26"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="167.07,-65.46 172.31,-60.21 164.94,-61.05 167.07,-65.46"/>
+</g>
+<g id="node8" class="node">
+<title>RD</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M528.5,-404C528.5,-404 394.5,-404 394.5,-404 388.5,-404 382.5,-398 382.5,-392 382.5,-392 382.5,-378 382.5,-378 382.5,-372 388.5,-366 394.5,-366 394.5,-366 528.5,-366 528.5,-366 534.5,-366 540.5,-372 540.5,-378 540.5,-378 540.5,-392 540.5,-392 540.5,-398 534.5,-404 528.5,-404"/>
+<text text-anchor="middle" x="461.5" y="-388.4" font-family="Helvetica,sans-Serif" font-size="12.00">Rates desk</text>
+<text text-anchor="middle" x="461.5" y="-375.4" font-family="Helvetica,sans-Serif" font-size="12.00">bonds, swaps, options</text>
+</g>
+<g id="edge7" class="edge">
+<title>IR&#45;&gt;RD</title>
+<path fill="none" stroke="#4b5563" d="M302.05,-332.11C323.57,-340.02 348.93,-349.16 372,-357 378.52,-359.22 385.34,-361.47 392.16,-363.7"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="391.56,-366.08 398.97,-365.9 393.07,-361.42 391.56,-366.08"/>
+</g>
+<g id="node14" class="node">
+<title>TR</title>
+<path fill="#6b7280" stroke="#6b7280" d="M531,-347.5C531,-347.5 392,-347.5 392,-347.5 386,-347.5 380,-341.5 380,-335.5 380,-335.5 380,-308.5 380,-308.5 380,-302.5 386,-296.5 392,-296.5 392,-296.5 531,-296.5 531,-296.5 537,-296.5 543,-302.5 543,-308.5 543,-308.5 543,-335.5 543,-335.5 543,-341.5 537,-347.5 531,-347.5"/>
+<text text-anchor="middle" x="461.5" y="-331.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Treasury, banking book</text>
+<text text-anchor="middle" x="461.5" y="-318.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">IRRBB and CSRBB</text>
+<text text-anchor="middle" x="461.5" y="-305.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">(Pillar 2, not FRTB)</text>
+</g>
+<g id="edge13" class="edge">
+<title>IR&#45;&gt;TR</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M329.01,-316.35C343.31,-316.97 358.32,-317.61 372.87,-318.24"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="372.88,-320.69 379.97,-318.54 373.09,-315.79 372.88,-320.69"/>
+</g>
+<g id="node9" class="node">
+<title>CD</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M528.5,-278C528.5,-278 394.5,-278 394.5,-278 388.5,-278 382.5,-272 382.5,-266 382.5,-266 382.5,-252 382.5,-252 382.5,-246 388.5,-240 394.5,-240 394.5,-240 528.5,-240 528.5,-240 534.5,-240 540.5,-246 540.5,-252 540.5,-252 540.5,-266 540.5,-266 540.5,-272 534.5,-278 528.5,-278"/>
+<text text-anchor="middle" x="461.5" y="-262.4" font-family="Helvetica,sans-Serif" font-size="12.00">Credit trading desk</text>
+<text text-anchor="middle" x="461.5" y="-249.4" font-family="Helvetica,sans-Serif" font-size="12.00">corporate bonds, CDS</text>
+</g>
+<g id="edge8" class="edge">
+<title>CS&#45;&gt;CD</title>
+<path fill="none" stroke="#4b5563" d="M329.01,-258.37C344.14,-258.44 360.07,-258.52 375.42,-258.59"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="375.41,-261.04 382.42,-258.63 375.44,-256.14 375.41,-261.04"/>
+</g>
+<g id="edge14" class="edge">
+<title>CS&#45;&gt;TR</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M314.79,-276.04C324.91,-278.98 335.25,-282.04 345,-285 354.66,-287.93 364.75,-291.07 374.77,-294.22"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="374.28,-296.63 381.69,-296.4 375.76,-291.96 374.28,-296.63"/>
+</g>
+<g id="node10" class="node">
+<title>FD</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M530,-222C530,-222 393,-222 393,-222 387,-222 381,-216 381,-210 381,-210 381,-196 381,-196 381,-190 387,-184 393,-184 393,-184 530,-184 530,-184 536,-184 542,-190 542,-196 542,-196 542,-210 542,-210 542,-216 536,-222 530,-222"/>
+<text text-anchor="middle" x="461.5" y="-206.4" font-family="Helvetica,sans-Serif" font-size="12.00">FX desk</text>
+<text text-anchor="middle" x="461.5" y="-193.4" font-family="Helvetica,sans-Serif" font-size="12.00">spot, forwards, options</text>
+</g>
+<g id="edge9" class="edge">
+<title>FX&#45;&gt;FD</title>
+<path fill="none" stroke="#4b5563" d="M333.2,-203.61C346.57,-203.54 360.46,-203.48 373.94,-203.41"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="373.95,-205.86 380.94,-203.38 373.93,-200.96 373.95,-205.86"/>
+</g>
+<g id="node11" class="node">
+<title>ED</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M528.5,-166C528.5,-166 394.5,-166 394.5,-166 388.5,-166 382.5,-160 382.5,-154 382.5,-154 382.5,-140 382.5,-140 382.5,-134 388.5,-128 394.5,-128 394.5,-128 528.5,-128 528.5,-128 534.5,-128 540.5,-134 540.5,-140 540.5,-140 540.5,-154 540.5,-154 540.5,-160 534.5,-166 528.5,-166"/>
+<text text-anchor="middle" x="461.5" y="-150.4" font-family="Helvetica,sans-Serif" font-size="12.00">Equities desk</text>
+<text text-anchor="middle" x="461.5" y="-137.4" font-family="Helvetica,sans-Serif" font-size="12.00">shares, index options</text>
+</g>
+<g id="edge10" class="edge">
+<title>EQ&#45;&gt;ED</title>
+<path fill="none" stroke="#4b5563" d="M329.01,-148.88C344.14,-148.67 360.07,-148.44 375.42,-148.22"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="375.46,-150.67 382.42,-148.12 375.39,-145.77 375.46,-150.67"/>
+</g>
+<g id="node12" class="node">
+<title>KD</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M528.5,-110C528.5,-110 394.5,-110 394.5,-110 388.5,-110 382.5,-104 382.5,-98 382.5,-98 382.5,-84 382.5,-84 382.5,-78 388.5,-72 394.5,-72 394.5,-72 528.5,-72 528.5,-72 534.5,-72 540.5,-78 540.5,-84 540.5,-84 540.5,-98 540.5,-98 540.5,-104 534.5,-110 528.5,-110"/>
+<text text-anchor="middle" x="461.5" y="-94.4" font-family="Helvetica,sans-Serif" font-size="12.00">Commodities desk</text>
+<text text-anchor="middle" x="461.5" y="-81.4" font-family="Helvetica,sans-Serif" font-size="12.00">oil, metals, power</text>
+</g>
+<g id="edge11" class="edge">
+<title>CO&#45;&gt;KD</title>
+<path fill="none" stroke="#4b5563" d="M329.01,-94.14C344.14,-93.78 360.07,-93.4 375.42,-93.03"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="375.49,-95.48 382.42,-92.86 375.37,-90.58 375.49,-95.48"/>
+</g>
+<g id="node13" class="node">
+<title>OD</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M528.5,-54C528.5,-54 394.5,-54 394.5,-54 388.5,-54 382.5,-48 382.5,-42 382.5,-42 382.5,-28 382.5,-28 382.5,-22 388.5,-16 394.5,-16 394.5,-16 528.5,-16 528.5,-16 534.5,-16 540.5,-22 540.5,-28 540.5,-28 540.5,-42 540.5,-42 540.5,-48 534.5,-54 528.5,-54"/>
+<text text-anchor="middle" x="461.5" y="-38.4" font-family="Helvetica,sans-Serif" font-size="12.00">Options books</text>
+<text text-anchor="middle" x="461.5" y="-25.4" font-family="Helvetica,sans-Serif" font-size="12.00">on every desk</text>
+</g>
+<g id="edge12" class="edge">
+<title>VOL&#45;&gt;OD</title>
+<path fill="none" stroke="#4b5563" d="M331.1,-38.71C345.49,-38.29 360.55,-37.86 375.08,-37.45"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="375.25,-39.89 382.17,-37.24 375.11,-34.99 375.25,-39.89"/>
+</g>
+</g>
+</svg>

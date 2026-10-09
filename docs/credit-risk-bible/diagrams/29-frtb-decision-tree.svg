@@ -1,0 +1,144 @@
+<svg width="100%"
+ viewBox="0.00 0.00 777.80 704.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 690.4)">
+<title>FRTB</title>
+<polygon fill="white" stroke="transparent" points="-14.4,14.4 -14.4,-690.4 763.4,-690.4 763.4,14.4 -14.4,14.4"/>
+<g id="node1" class="node">
+<title>Start</title>
+<path fill="#1f2937" stroke="#1f2937" d="M241.5,-676C241.5,-676 90.5,-676 90.5,-676 84.5,-676 78.5,-670 78.5,-664 78.5,-664 78.5,-652 78.5,-652 78.5,-646 84.5,-640 90.5,-640 90.5,-640 241.5,-640 241.5,-640 247.5,-640 253.5,-646 253.5,-652 253.5,-652 253.5,-664 253.5,-664 253.5,-670 247.5,-676 241.5,-676"/>
+<text text-anchor="middle" x="166" y="-654.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">A position the bank holds</text>
+</g>
+<g id="node2" class="node">
+<title>TB</title>
+<path fill="#fef3c7" stroke="#d97706" d="M154.53,-605.48C154.53,-605.48 11.47,-561.52 11.47,-561.52 5.74,-559.76 5.74,-556.24 11.47,-554.48 11.47,-554.48 154.53,-510.52 154.53,-510.52 160.26,-508.76 171.74,-508.76 177.47,-510.52 177.47,-510.52 320.53,-554.48 320.53,-554.48 326.26,-556.24 326.26,-559.76 320.53,-561.52 320.53,-561.52 177.47,-605.48 177.47,-605.48 171.74,-607.24 160.26,-607.24 154.53,-605.48"/>
+<text text-anchor="middle" x="166" y="-567.9" font-family="Helvetica,sans-Serif" font-size="12.00">Trading book?</text>
+<text text-anchor="middle" x="166" y="-554.9" font-family="Helvetica,sans-Serif" font-size="12.00">(held for trading or</text>
+<text text-anchor="middle" x="166" y="-541.9" font-family="Helvetica,sans-Serif" font-size="12.00">on the presumptive list)</text>
+</g>
+<g id="edge1" class="edge">
+<title>Start&#45;&gt;TB</title>
+<path fill="none" stroke="#4b5563" d="M166,-639.93C166,-633.16 166,-624.95 166,-616.39"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="168.45,-616.14 166,-609.14 163.55,-616.14 168.45,-616.14"/>
+</g>
+<g id="node3" class="node">
+<title>BB</title>
+<path fill="#6b7280" stroke="#6b7280" d="M226.5,-453.5C226.5,-453.5 63.5,-453.5 63.5,-453.5 57.5,-453.5 51.5,-447.5 51.5,-441.5 51.5,-441.5 51.5,-414.5 51.5,-414.5 51.5,-408.5 57.5,-402.5 63.5,-402.5 63.5,-402.5 226.5,-402.5 226.5,-402.5 232.5,-402.5 238.5,-408.5 238.5,-414.5 238.5,-414.5 238.5,-441.5 238.5,-441.5 238.5,-447.5 232.5,-453.5 226.5,-453.5"/>
+<text text-anchor="middle" x="145" y="-437.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Banking book</text>
+<text text-anchor="middle" x="145" y="-424.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">credit risk rules for default;</text>
+<text text-anchor="middle" x="145" y="-411.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">IRRBB, CSRBB in Pillar 2</text>
+</g>
+<g id="edge2" class="edge">
+<title>TB&#45;&gt;BB</title>
+<path fill="none" stroke="#4b5563" d="M158.18,-509.34C155.51,-493.09 152.6,-475.34 150.19,-460.66"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="152.61,-460.23 149.06,-453.72 147.77,-461.03 152.61,-460.23"/>
+<text text-anchor="middle" x="161.5" y="-484" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151">no</text>
+</g>
+<g id="node4" class="node">
+<title>Small</title>
+<path fill="#fef3c7" stroke="#d97706" d="M432.26,-463.52C432.26,-463.52 275.74,-430.48 275.74,-430.48 269.87,-429.24 269.87,-426.76 275.74,-425.52 275.74,-425.52 432.26,-392.48 432.26,-392.48 438.13,-391.24 449.87,-391.24 455.74,-392.48 455.74,-392.48 612.26,-425.52 612.26,-425.52 618.13,-426.76 618.13,-429.24 612.26,-430.48 612.26,-430.48 455.74,-463.52 455.74,-463.52 449.87,-464.76 438.13,-464.76 432.26,-463.52"/>
+<text text-anchor="middle" x="444" y="-431.4" font-family="Helvetica,sans-Serif" font-size="12.00">Small trading book and</text>
+<text text-anchor="middle" x="444" y="-418.4" font-family="Helvetica,sans-Serif" font-size="12.00">allowed the simplified SA?</text>
+</g>
+<g id="edge3" class="edge">
+<title>TB&#45;&gt;Small</title>
+<path fill="none" stroke="#4b5563" d="M231.18,-526.99C276.76,-506 337.27,-478.14 382.11,-457.5"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="383.27,-459.66 388.61,-454.51 381.22,-455.21 383.27,-459.66"/>
+<text text-anchor="middle" x="339" y="-484" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151">yes</text>
+</g>
+<g id="node5" class="node">
+<title>SSA</title>
+<path fill="#6b7280" stroke="#6b7280" d="M441.5,-330C441.5,-330 302.5,-330 302.5,-330 296.5,-330 290.5,-324 290.5,-318 290.5,-318 290.5,-304 290.5,-304 290.5,-298 296.5,-292 302.5,-292 302.5,-292 441.5,-292 441.5,-292 447.5,-292 453.5,-298 453.5,-304 453.5,-304 453.5,-318 453.5,-318 453.5,-324 447.5,-330 441.5,-330"/>
+<text text-anchor="middle" x="372" y="-314.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Simplified standardised</text>
+<text text-anchor="middle" x="372" y="-301.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">approach</text>
+</g>
+<g id="edge4" class="edge">
+<title>Small&#45;&gt;SSA</title>
+<path fill="none" stroke="#4b5563" d="M423.37,-394.05C411.92,-375.76 397.93,-353.41 387.43,-336.65"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="389.25,-334.93 383.46,-330.3 385.09,-337.53 389.25,-334.93"/>
+<text text-anchor="middle" x="420" y="-367" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151">yes</text>
+</g>
+<g id="node6" class="node">
+<title>Desk</title>
+<path fill="#fef3c7" stroke="#d97706" d="M602.45,-345.75C602.45,-345.75 490.55,-314.25 490.55,-314.25 484.78,-312.63 484.78,-309.37 490.55,-307.75 490.55,-307.75 602.45,-276.25 602.45,-276.25 608.22,-274.63 619.78,-274.63 625.55,-276.25 625.55,-276.25 737.45,-307.75 737.45,-307.75 743.22,-309.37 743.22,-312.63 737.45,-314.25 737.45,-314.25 625.55,-345.75 625.55,-345.75 619.78,-347.37 608.22,-347.37 602.45,-345.75"/>
+<text text-anchor="middle" x="614" y="-314.4" font-family="Helvetica,sans-Serif" font-size="12.00">Desk approved for</text>
+<text text-anchor="middle" x="614" y="-301.4" font-family="Helvetica,sans-Serif" font-size="12.00">internal models?</text>
+</g>
+<g id="edge5" class="edge">
+<title>Small&#45;&gt;Desk</title>
+<path fill="none" stroke="#4b5563" d="M486.02,-398.57C511.33,-381.45 543.53,-359.67 569.3,-342.24"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="570.94,-344.08 575.37,-338.13 568.2,-340.03 570.94,-344.08"/>
+<text text-anchor="middle" x="540.5" y="-367" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151">no</text>
+</g>
+<g id="node7" class="node">
+<title>BT</title>
+<path fill="#fef3c7" stroke="#d97706" d="M452.06,-230.76C452.06,-230.76 302.06,-215.24 302.06,-215.24 296.09,-214.62 296.09,-213.38 302.06,-212.76 302.06,-212.76 452.06,-197.24 452.06,-197.24 458.03,-196.62 469.97,-196.62 475.94,-197.24 475.94,-197.24 625.94,-212.76 625.94,-212.76 631.91,-213.38 631.91,-214.62 625.94,-215.24 625.94,-215.24 475.94,-230.76 475.94,-230.76 469.97,-231.38 458.03,-231.38 452.06,-230.76"/>
+<text text-anchor="middle" x="464" y="-210.9" font-family="Helvetica,sans-Serif" font-size="12.00">Desk passes backtesting?</text>
+</g>
+<g id="edge7" class="edge">
+<title>Desk&#45;&gt;BT</title>
+<path fill="none" stroke="#4b5563" d="M573.41,-284.29C548.19,-268.32 516.34,-248.15 493.52,-233.7"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="494.56,-231.45 487.34,-229.78 491.94,-235.59 494.56,-231.45"/>
+<text text-anchor="middle" x="539" y="-250" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151">yes</text>
+</g>
+<g id="node10" class="node">
+<title>SA</title>
+<path fill="#991b1b" stroke="#991b1b" d="M716.5,-38C716.5,-38 577.5,-38 577.5,-38 571.5,-38 565.5,-32 565.5,-26 565.5,-26 565.5,-12 565.5,-12 565.5,-6 571.5,0 577.5,0 577.5,0 716.5,0 716.5,0 722.5,0 728.5,-6 728.5,-12 728.5,-12 728.5,-26 728.5,-26 728.5,-32 722.5,-38 716.5,-38"/>
+<text text-anchor="middle" x="647" y="-22.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Standardised approach</text>
+<text text-anchor="middle" x="647" y="-9.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">SBM + DRC + RRAO</text>
+</g>
+<g id="edge6" class="edge">
+<title>Desk&#45;&gt;SA</title>
+<path fill="none" stroke="#4b5563" d="M632.2,-278.01C639.09,-264.29 646.18,-247.8 650,-232 667.55,-159.36 655.44,-138.72 657,-64 657.1,-59.11 657.72,-57.84 657,-53 656.62,-50.42 656.08,-47.76 655.44,-45.13"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="657.78,-44.4 653.58,-38.28 653.05,-45.68 657.78,-44.4"/>
+<text text-anchor="middle" x="665.5" y="-173" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151">no</text>
+</g>
+<g id="node8" class="node">
+<title>PLA</title>
+<path fill="#fef3c7" stroke="#d97706" d="M438.52,-151.51C438.52,-151.51 336.48,-120.49 336.48,-120.49 330.74,-118.75 330.74,-115.25 336.48,-113.51 336.48,-113.51 438.52,-82.49 438.52,-82.49 444.26,-80.75 455.74,-80.75 461.48,-82.49 461.48,-82.49 563.52,-113.51 563.52,-113.51 569.26,-115.25 569.26,-118.75 563.52,-120.49 563.52,-120.49 461.48,-151.51 461.48,-151.51 455.74,-153.25 444.26,-153.25 438.52,-151.51"/>
+<text text-anchor="middle" x="450" y="-120.4" font-family="Helvetica,sans-Serif" font-size="12.00">Desk passes P&amp;L</text>
+<text text-anchor="middle" x="450" y="-107.4" font-family="Helvetica,sans-Serif" font-size="12.00">attribution test?</text>
+</g>
+<g id="edge9" class="edge">
+<title>BT&#45;&gt;PLA</title>
+<path fill="none" stroke="#4b5563" d="M461.5,-196.02C460.05,-186.2 458.16,-173.37 456.33,-160.96"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="458.71,-160.29 455.26,-153.73 453.86,-161.01 458.71,-160.29"/>
+<text text-anchor="middle" x="468" y="-173" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151">yes</text>
+</g>
+<g id="edge8" class="edge">
+<title>BT&#45;&gt;SA</title>
+<path fill="none" stroke="#4b5563" d="M509.17,-200.65C535.04,-191.62 566.52,-177.04 588,-155 618.29,-123.93 634.34,-74.77 641.73,-45.12"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="644.18,-45.41 643.42,-38.03 639.41,-44.27 644.18,-45.41"/>
+<text text-anchor="middle" x="637.5" y="-114.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151">no</text>
+</g>
+<g id="node9" class="node">
+<title>IMA</title>
+<path fill="#065f46" stroke="#065f46" d="M322,-38C322,-38 168,-38 168,-38 162,-38 156,-32 156,-26 156,-26 156,-12 156,-12 156,-6 162,0 168,0 168,0 322,0 322,0 328,0 334,-6 334,-12 334,-12 334,-26 334,-26 334,-32 328,-38 322,-38"/>
+<text text-anchor="middle" x="245" y="-22.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Internal models approach</text>
+<text text-anchor="middle" x="245" y="-9.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">ES + NMRF charge + DRC</text>
+</g>
+<g id="edge10" class="edge">
+<title>PLA&#45;&gt;IMA</title>
+<path fill="none" stroke="#4b5563" d="M401.94,-93.49C368.1,-77.65 323.11,-56.58 289.98,-41.06"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="290.89,-38.79 283.51,-38.04 288.82,-43.22 290.89,-38.79"/>
+<text text-anchor="middle" x="350" y="-56" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151">green</text>
+</g>
+<g id="edge12" class="edge">
+<title>PLA&#45;&gt;SA</title>
+<path fill="none" stroke="#4b5563" d="M496.94,-93.13C529.24,-77.39 571.84,-56.63 603.39,-41.25"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="604.73,-43.32 609.95,-38.05 602.59,-38.92 604.73,-43.32"/>
+<text text-anchor="middle" x="585" y="-56" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151">red</text>
+</g>
+<g id="node11" class="node">
+<title>Amber</title>
+<path fill="#fef3c7" stroke="#d97706" d="M528.5,-38C528.5,-38 371.5,-38 371.5,-38 365.5,-38 359.5,-32 359.5,-26 359.5,-26 359.5,-12 359.5,-12 359.5,-6 365.5,0 371.5,0 371.5,0 528.5,0 528.5,0 534.5,0 540.5,-6 540.5,-12 540.5,-12 540.5,-26 540.5,-26 540.5,-32 534.5,-38 528.5,-38"/>
+<text text-anchor="middle" x="450" y="-22.4" font-family="Helvetica,sans-Serif" font-size="12.00">Amber zone: stays on IMA</text>
+<text text-anchor="middle" x="450" y="-9.4" font-family="Helvetica,sans-Serif" font-size="12.00">with a capital surcharge</text>
+</g>
+<g id="edge11" class="edge">
+<title>PLA&#45;&gt;Amber</title>
+<path fill="none" stroke="#4b5563" d="M450,-78.88C450,-67.68 450,-55.63 450,-45.37"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="452.45,-45.26 450,-38.26 447.55,-45.26 452.45,-45.26"/>
+<text text-anchor="middle" x="466" y="-56" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151">amber</text>
+</g>
+</g>
+</svg>

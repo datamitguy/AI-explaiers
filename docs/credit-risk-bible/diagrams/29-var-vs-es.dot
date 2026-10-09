@@ -1,0 +1,21 @@
+digraph VaRvsES {
+  graph [rankdir=TB, splines=true, nodesep=0.35, ranksep=0.4, fontname="Helvetica", fontsize=13, bgcolor="white", newrank=true, pad=0.2];
+  node  [shape=box, style="rounded,filled", fillcolor="#eef2ff", color="#6366f1", fontname="Helvetica", fontsize=12, margin="0.16,0.08"];
+  edge  [color="#4b5563", arrowsize=0.7, fontname="Helvetica", fontsize=10, fontcolor="#374151"];
+
+  Start [label="Today's portfolio", fillcolor="#1f2937", fontcolor="white", color="#1f2937"];
+  Scen [label="Apply many scenarios\n(e.g. 250 past days, or\n10,000 simulated days)"];
+  List [label="One P&L per scenario\na long list of gains and losses"];
+  Sort [label="Sort from worst loss\nto best gain"];
+  Cut [label="Choose confidence level\n99% VaR or 97.5% ES"];
+  VaR [label="Value at risk (VaR)\nthe loss AT the cut-off\n\"a bad day is at least this bad\""];
+  ES [label="Expected shortfall (ES)\nthe AVERAGE loss beyond\nthe cut-off, the whole tail"];
+  Blind [label="VaR is blind to how big\nthe tail losses are", fillcolor="#991b1b", fontcolor="white", color="#991b1b"];
+  See [label="ES grows when the tail\ngets fatter", fillcolor="#065f46", fontcolor="white", color="#065f46"];
+  Cap [label="FRTB internal models\nuse ES, scaled for\nliquidity horizons", fillcolor="#1f2937", fontcolor="white", color="#1f2937"];
+
+  Start -> Scen -> List -> Sort -> Cut;
+  Cut -> VaR; Cut -> ES;
+  VaR -> Blind; ES -> See;
+  See -> Cap;
+}

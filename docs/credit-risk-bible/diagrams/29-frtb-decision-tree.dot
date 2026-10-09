@@ -1,0 +1,30 @@
+digraph FRTB {
+  graph [rankdir=TB, splines=true, nodesep=0.35, ranksep=0.4, fontname="Helvetica", fontsize=13, bgcolor="white", newrank=true, pad=0.2];
+  node  [shape=box, style="rounded,filled", fillcolor="#eef2ff", color="#6366f1", fontname="Helvetica", fontsize=12, margin="0.16,0.08"];
+  edge  [color="#4b5563", arrowsize=0.7, fontname="Helvetica", fontsize=10, fontcolor="#374151"];
+
+  Start [label="A position the bank holds", fillcolor="#1f2937", fontcolor="white", color="#1f2937"];
+  TB [label="Trading book?\n(held for trading or\non the presumptive list)", shape=diamond, fillcolor="#fef3c7", color="#d97706"];
+  BB [label="Banking book\ncredit risk rules for default;\nIRRBB, CSRBB in Pillar 2", fillcolor="#6b7280", fontcolor="white", color="#6b7280"];
+  Small [label="Small trading book and\nallowed the simplified SA?", shape=diamond, fillcolor="#fef3c7", color="#d97706"];
+  SSA [label="Simplified standardised\napproach", fillcolor="#6b7280", fontcolor="white", color="#6b7280"];
+  Desk [label="Desk approved for\ninternal models?", shape=diamond, fillcolor="#fef3c7", color="#d97706"];
+  BT [label="Desk passes backtesting?", shape=diamond, fillcolor="#fef3c7", color="#d97706"];
+  PLA [label="Desk passes P&L\nattribution test?", shape=diamond, fillcolor="#fef3c7", color="#d97706"];
+  IMA [label="Internal models approach\nES + NMRF charge + DRC", fillcolor="#065f46", fontcolor="white", color="#065f46"];
+  SA [label="Standardised approach\nSBM + DRC + RRAO", fillcolor="#991b1b", fontcolor="white", color="#991b1b"];
+  Amber [label="Amber zone: stays on IMA\nwith a capital surcharge", fillcolor="#fef3c7", color="#d97706"];
+
+  Start -> TB;
+  TB -> BB [label="no"];
+  TB -> Small [label="yes"];
+  Small -> SSA [label="yes"];
+  Small -> Desk [label="no"];
+  Desk -> SA [label="no"];
+  Desk -> BT [label="yes"];
+  BT -> SA [label="no"];
+  BT -> PLA [label="yes"];
+  PLA -> IMA [label="green"];
+  PLA -> Amber [label="amber"];
+  PLA -> SA [label="red"];
+}

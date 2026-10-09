@@ -1,0 +1,29 @@
+digraph DailyProcess {
+  graph [rankdir=TB, splines=true, nodesep=0.35, ranksep=0.4, fontname="Helvetica", fontsize=13, bgcolor="white", newrank=true, pad=0.2];
+  node  [shape=box, style="rounded,filled", fillcolor="#eef2ff", color="#6366f1", fontname="Helvetica", fontsize=12, margin="0.16,0.08"];
+  edge  [color="#4b5563", arrowsize=0.7, fontname="Helvetica", fontsize=10, fontcolor="#374151"];
+
+  Start [label="Trading day ends\n(close of business)", fillcolor="#1f2937", fontcolor="white", color="#1f2937"];
+  Trades [label="Trade capture\nfront-office systems\nfreeze positions"];
+  MD [label="Market data snapshot\ncurves, surfaces, prices\nfrom the golden source"];
+  Static [label="Static and reference data\nproducts, books, desks,\nissuers, calendars", fillcolor="#6b7280", fontcolor="white", color="#6b7280"];
+  Val [label="Valuation\nmark-to-market every trade\ndaily P&L"];
+  Sens [label="Sensitivities\ndelta, vega, DV01, ...\nper risk factor"];
+  Sim [label="Scenario engine\nVaR, stressed VaR,\nexpected shortfall, stress tests"];
+  Lim [label="Limit check\nVaR, sensitivity, stop-loss,\nconcentration"];
+  Chk [label="Breach?", shape=diamond, fillcolor="#fef3c7", color="#d97706"];
+  Esc [label="Escalate\ntrader, desk head,\nmarket risk, approval", fillcolor="#991b1b", fontcolor="white", color="#991b1b"];
+  Rep [label="Daily risk report\nto senior management\nby start of next day", fillcolor="#065f46", fontcolor="white", color="#065f46"];
+  Fin [label="Finance P&L\n(reconcile to risk P&L)", fillcolor="#6b7280", fontcolor="white", color="#6b7280"];
+
+  Start -> Trades;
+  Trades -> Val; MD -> Val; Static -> Val [style=dashed];
+  {rank=same; Trades MD Static}
+  Start -> MD;
+  Val -> Sens -> Sim -> Lim -> Chk;
+  Chk -> Esc [label="yes"];
+  Chk -> Rep [label="no"];
+  Esc -> Rep;
+  Val -> Fin [style=dashed];
+  {rank=same; Sens Fin}
+}
