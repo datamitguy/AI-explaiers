@@ -1,0 +1,148 @@
+digraph Basel {
+  graph [rankdir=TB, splines=true, ordering=out, nodesep=0.35, ranksep=0.55, fontname="Helvetica", fontsize=13, bgcolor="white", newrank=true, pad=0.2];
+  node  [shape=box, style="rounded,filled", fillcolor="#eef2ff", color="#6366f1", fontname="Helvetica", fontsize=12, margin="0.18,0.10"];
+  edge  [color="#4b5563", arrowsize=0.7, fontname="Helvetica", fontsize=10, fontcolor="#374151"];
+
+  /* ---------- Header ---------- */
+  Start    [label="Bank credit exposure\n(Basel III consolidated framework)", fillcolor="#1f2937", fontcolor="white", color="#1f2937", fontsize=14];
+  Boundary [label="Banking book\nor trading book?", shape=diamond, style=filled, fillcolor="#fef3c7", color="#d97706", margin="0.05,0.05"];
+  Market   [label="Market risk framework (FRTB, MAR)\nCredit RWA out of scope,\nbut CCR below still applies", fillcolor="#6b7280", fontcolor="white", color="#6b7280"];
+  ExpType  [label="How does the exposure arise?", shape=diamond, style=filled, fillcolor="#fef3c7", color="#d97706", margin="0.05,0.05"];
+
+  Start -> Boundary;
+  Boundary -> Market  [label="  trading book"];
+  Boundary -> ExpType [label="  banking book"];
+
+  /* ---------- 1. On-balance sheet ---------- */
+  subgraph cluster_on {
+    label="1. On-balance sheet (funded)"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
+    Direct   [label="Loans, advances, debt securities,\nplacements and deposits with banks"];
+    EADdir   [label="EAD = carrying amount\nnet of specific provisions"];
+    Direct -> EADdir;
+  }
+
+  /* ---------- 2. Off-balance sheet ---------- */
+  subgraph cluster_off {
+    label="2. Off-balance sheet (unfunded): CCF by instrument (CRE20)"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
+    OffBS  [label="Instrument type?", shape=diamond, style=filled, fillcolor="#fef3c7", color="#d97706", margin="0.05,0.05"];
+    CCF100 [label="100%\nDirect credit substitutes:\nfinancial guarantees,\nstandby LCs, acceptances"];
+    CCF50  [label="50%\nTransaction-related:\nperformance and bid bonds,\nwarranties, NIFs and RUFs"];
+    CCF40  [label="40%\nCommitted facilities\n(not unconditionally\ncancellable)"];
+    CCF20  [label="20%\nShort-term\nself-liquidating\ntrade LCs"];
+    CCF10  [label="10%\nUnconditionally\ncancellable\ncommitments"];
+    EADoff [label="EAD = notional x CCF\n(A-IRB own CCFs only for revolving commitments)"];
+    { rank=same; CCF100 -> CCF50 -> CCF40 -> CCF20 -> CCF10 [style=invis]; }
+    OffBS -> {CCF100 CCF50 CCF40 CCF20 CCF10};
+    {CCF100 CCF50 CCF40 CCF20 CCF10} -> EADoff;
+  }
+
+  /* ---------- 3. Counterparty credit risk ---------- */
+  subgraph cluster_ccr {
+    label="3. Counterparty credit risk (pre-settlement, both books)"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
+    CCR    [label="Contract type?", shape=diamond, style=filled, fillcolor="#fef3c7", color="#d97706", margin="0.05,0.05"];
+    SACCR  [label="Derivatives (OTC, exchange-traded),\nlong settlement transactions\nSA-CCR (CRE52): EAD = 1.4 x (RC + PFE)\nper netting set, or IMM (CRE53)"];
+    SFT    [label="SFTs: repo, reverse repo,\nsecurities lending, margin lending\nComprehensive approach with\nsupervisory haircuts (CRE22), VaR or IMM"];
+    CCP    [label="Cleared via a QCCP (CRE54)\n2% RW on trade exposures,\nformula for default-fund contributions"];
+    Netting [label="Netting set = enforceable bilateral\nnetting agreement (ISDA / CSA)\nCollateral enters via RC and NICA,\nnot as a later CRM step"];
+    CVA    [label="CVA risk capital (MAR50)\nBA-CVA or SA-CVA\nSeparate Pillar 1 charge,\nnot part of credit RWA", fillcolor="#6b7280", fontcolor="white", color="#6b7280"];
+    { rank=same; SACCR -> SFT -> CCP [style=invis]; }
+    CCR -> {SACCR SFT CCP};
+    {SACCR SFT} -> Netting;
+    {SACCR SFT} -> CVA [style=dashed];
+  }
+
+  /* ---------- 4. Settlement risk ---------- */
+  subgraph cluster_settle {
+    label="4. Unsettled or failed trades (CRE70)"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
+    Settle [label="DvP or PvP\n(e.g. CLS)?", shape=diamond, style=filled, fillcolor="#fef3c7", color="#d97706", margin="0.05,0.05"];
+    DvP    [label="Yes: no charge until the trade fails\nAfter 5 business days: positive current\nexposure charged at 8% rising to 100%"];
+    NonDvP [label="No (free delivery): after paying first leg,\ntreat as a loan to the counterparty\nAfter 4 business days: deduct full\nvalue from capital"];
+    Settle -> DvP   [label=" yes"];
+    Settle -> NonDvP [label=" no"];
+  }
+
+  /* ---------- 5 and 6. Other frameworks ---------- */
+  subgraph cluster_other {
+    label="5 and 6. Separate frameworks"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
+    Sec   [label="Securitisation tranche (CRE40)\nHierarchy: SEC-IRBA,\nthen SEC-ERBA, then SEC-SA"];
+    Funds [label="Equity in investment funds (CRE60)\nLook-through, mandate-based,\nor 1250% fall-back"];
+  }
+
+  ExpType -> Direct;
+  ExpType -> OffBS;
+  ExpType -> CCR;
+  ExpType -> Settle;
+  ExpType -> Sec;
+  ExpType -> Funds;
+
+  /* ---------- Exposure class ---------- */
+  Class [label="Assign exposure class\n(CRE20 SA, CRE30 IRB)", shape=diamond, style=filled, fillcolor="#fef3c7", color="#d97706", margin="0.05,0.05"];
+  {EADdir EADoff Netting} -> Class;
+
+  subgraph cluster_class {
+    label="Exposure classes"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
+    Sov    [label="Sovereigns, central banks,\nPSEs, MDBs"];
+    Banks  [label="Banks and\nsecurities firms"];
+    Corp   [label="Corporates: general, SME,\nspecialised lending (project,\nobject, commodities), IPRE"];
+    Retail [label="Regulatory retail: QRRE\n(transactors, revolvers),\nother retail, SME retail"];
+    RE     [label="Real estate: residential,\ncommercial, ADC\n(LTV and cash-flow dependence)"];
+    Other  [label="Equity, subordinated debt,\ncovered bonds, defaulted\nexposures (90 days past due)"];
+  }
+  { rank=same; Sov -> Banks -> Corp -> Retail -> RE -> Other [style=invis]; }
+  Class -> {Sov Banks Corp Retail RE Other};
+
+  /* ---------- Approach ---------- */
+  Approach [label="Which approach is permitted\nand approved for this class?", shape=diamond, style=filled, fillcolor="#fef3c7", color="#d97706", margin="0.05,0.05"];
+  {Sov Banks Corp Retail RE Other} -> Approach;
+
+  subgraph cluster_approach {
+    label="Approach"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
+    SA   [label="Standardised approach (SA)\nRisk weight from table, no PD or LGD\nExternal rating (ECRA), or SCRA grades A, B, C for unrated banks\nLTV buckets for real estate; 75% regulatory retail\n100% unrated corporate, 85% SME"];
+    FIRB [label="Foundation IRB (F-IRB)\nBank estimates PD; supervisory LGD, EAD and M\nNot available for retail; equity is SA only"];
+    AIRB [label="Advanced IRB (A-IRB)\nBank estimates PD, LGD, EAD, M\nNot permitted for banks, financial institutions,\nor corporates with group revenue above EUR 500m"];
+    Floors [label="Input floors: PD 5bp corporate and most retail,\n10bp QRRE revolvers; LGD and EAD floors for A-IRB"];
+    {FIRB AIRB} -> Floors;
+  }
+  { rank=same; SA -> FIRB -> AIRB [style=invis]; }
+  Approach -> {SA FIRB AIRB};
+
+  /* ---------- CRM ---------- */
+  CRM [label="Eligible credit risk mitigation?\n(CRE22, legal certainty required)", shape=diamond, style=filled, fillcolor="#fef3c7", color="#d97706", margin="0.05,0.05"];
+  {SA Floors} -> CRM;
+
+  subgraph cluster_crm {
+    label="Credit risk mitigation"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
+    Coll   [label="Eligible financial collateral\nSimple: substitute collateral RW (20% floor)\nComprehensive: haircut-adjusted net exposure"];
+    Guar   [label="Guarantee or credit derivative\nSubstitution: protected portion\ntakes guarantor's RW or PD"];
+    OBSNet [label="On-balance sheet netting\nNet loans against deposits\nwith the same counterparty"];
+    Phys   [label="Physical collateral, receivables\n(IRB only)\nF-IRB: supervisory LGD reduction\nA-IRB: own LGD estimate"];
+    NoCRM  [label="None eligible\nUnsecured exposure"];
+    Mismatch [label="Adjust for maturity mismatch\nand currency mismatch"];
+    {Coll Guar OBSNet Phys} -> Mismatch;
+  }
+  { rank=same; Coll -> Guar -> OBSNet -> Phys -> NoCRM [style=invis]; }
+  CRM -> {Coll Guar OBSNet Phys NoCRM};
+
+  /* ---------- RWA and capital ---------- */
+  RWA [label="Credit RWA\nSA: EAD x RW\nIRB: EAD x K(PD, LGD, M) x 12.5 (old 1.06 scaling factor removed)\nIRB: expected loss vs provisions; shortfall deducted from CET1", fillcolor="#1e3a8a", fontcolor="white", color="#1e3a8a", fontsize=13];
+  {Mismatch NoCRM CCP DvP NonDvP Sec Funds} -> RWA;
+
+  subgraph cluster_cap {
+    label="From RWA to the capital stack"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
+    Floor    [label="Output floor\nTotal RWA at least 72.5% of full-SA RWA\nBCBS phase-in 50% (2023) to 72.5% (2028)\nLocal timelines differ"];
+    Capital  [label="Pillar 1 minimums\nCET1 4.5%, Tier 1 6%, Total 8% of RWA\nPlus conservation buffer 2.5%, countercyclical,\nG-SIB and D-SIB buffers"];
+    Leverage [label="Leverage ratio\nTier 1 at least 3% of total exposure\nNo risk weights"];
+    LEX      [label="Large exposures (LEX)\nSingle counterparty at most 25% of Tier 1\n15% between G-SIBs"];
+    P2       [label="Pillar 2 (ICAAP, SREP): concentration,\nIRRBB, stress testing\nPillar 3: public disclosure"];
+    { rank=same; Floor; Capital; Leverage; LEX; P2; }
+    Floor -> Capital -> Leverage -> LEX -> P2;
+  }
+  RWA -> Floor;
+
+  Decision [label="Bank credit decision\n(internal policy, not a Basel rule)", shape=diamond, style=filled, fillcolor="#111827", fontcolor="white", color="#111827", margin="0.05,0.05"];
+  P2 -> Decision;
+  Approve [label="Approve and set limit", fillcolor="#065f46", fontcolor="white", color="#065f46"];
+  Reject  [label="Decline, add CRM, reprice, or restructure", fillcolor="#991b1b", fontcolor="white", color="#991b1b"];
+  Decision -> Approve [label=" within risk appetite, limits\n and return on RWA hurdle"];
+  Decision -> Reject  [label=" breaches limits, capital\n or return hurdle"];
+}
