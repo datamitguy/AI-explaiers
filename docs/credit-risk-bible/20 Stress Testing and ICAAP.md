@@ -1,6 +1,6 @@
 # Stress Testing and ICAAP
 
-**Why this matters to you.** A stress test asks a simple question with a very expensive answer: if the economy went badly wrong, would this bank still have enough capital to keep going? The answer decides how much capital the regulator makes the bank hold, whether it can pay dividends, how big its risk appetite and limits can be, and sometimes whether the chief executive keeps their job. Every year the bank also writes a long self-assessment called the internal capital adequacy assessment process, or ICAAP, which uses stress testing to prove to the board and the supervisor that it has enough capital for all its risks. For a platform lead, stress testing is one of the heaviest workloads you will carry: it takes the whole loan book, pushes it through dozens of models under several made-up futures, three to five years at a time, and has to do it reproducibly, under deadline, and again whenever someone asks "what if?".
+**Why this matters to you.** A stress test asks a simple question with an expensive answer: if the economy went badly wrong, would this bank still have enough capital? The answer decides how much capital the regulator demands, whether dividends can be paid, and how large risk appetite and limits can be. Every year the bank also runs its internal capital adequacy assessment process, or ICAAP, a self-assessment that uses stress testing to show the board and supervisor it has enough capital for all its risks. For a platform lead, this is one of the heaviest workloads you will carry: the whole loan book pushed through dozens of models under several imagined futures, three to five years at a time, reproducibly, under deadline, and again whenever someone asks "what if?".
 
 ## Table of contents
 
@@ -27,26 +27,24 @@
 
 ## The fire drill version
 
-Every school has a fire drill. Nobody thinks the school is on fire. The bell rings, everyone files out, the teachers count heads in the playground, and the head teacher finds out things that would be disastrous to discover during a real fire: the back staircase is blocked by a stack of chairs, one class did not hear the bell, the register is out of date so nobody knows whether everyone got out.
+Nobody thinks the school is on fire during a fire drill. But when the bell rings and everyone files out, the head teacher discovers things that would be disastrous to find out in a real fire: the back staircase is blocked by chairs, one class did not hear the bell, the register is out of date.
 
-A bank stress test is a fire drill for money. Nobody thinks the recession is coming next year. But the bank pretends it is: it writes down a story where unemployment doubles, house prices fall by a quarter and interest rates jump, and then it works out, loan by loan, what would happen to its losses, its profits and its capital. The point is not to predict the future. The point is to find the blocked staircase while there is still time to move the chairs: a concentration in commercial property that would wipe out a year of profit, a model that has never been tested in a downturn, a capital plan that only works if nothing goes wrong.
+A bank stress test is a fire drill for money. The bank pretends a recession is coming, writes down a story where unemployment doubles and house prices fall by a quarter, and works out loan by loan what would happen to its losses, profits and capital. The point is not to predict the future. It is to find the blocked staircase while there is time to move the chairs: a commercial property concentration that would wipe out a year of profit, a model never tested in a downturn, a capital plan that only works if nothing goes wrong.
 
-There is a second lesson from the fire drill. If the drill takes three hours because nobody can find the register, the drill itself has failed, even if the building is fine. Regulators care just as much about whether the bank *can* run a stress test quickly and reliably as about the answer it gets. That is where the platform comes in.
+And if the drill takes three hours because nobody can find the register, the drill has failed even if the building is fine. Regulators care as much about whether the bank *can* run a stress test quickly and reliably as about the answer. That is where the platform comes in.
 
 ## What a stress test is
 
-A **stress test** is an exercise that estimates how a bank's losses, earnings, balance sheet, capital and liquidity would behave under hypothetical adverse conditions. The conditions are chosen to be **severe but plausible**: bad enough to be a real test, but not so extreme that nobody takes the result seriously (an asteroid strike is severe but tells you nothing useful).
-
-Every stress test has the same four parts:
+A **stress test** estimates how a bank's losses, earnings, capital and liquidity would behave under hypothetical adverse conditions that are **severe but plausible** (an asteroid strike is severe but tells you nothing useful). Every stress test has four parts:
 
 | Part | What it is | Example |
 |---|---|---|
-| Starting point | A snapshot of the bank's balance sheet on a given date | All loans, securities, deposits and capital as at 31 December |
-| Shock or scenario | What goes wrong | Unemployment rises from 4% to 9% over two years |
-| Transmission | Models that translate the shock into numbers | Satellite models that turn unemployment into higher probability of default |
-| Outcome measure | What you look at to judge pass or fail | The lowest point of the Common Equity Tier 1 (CET1) ratio over the horizon |
+| Starting point | Balance sheet snapshot | All positions as at 31 December |
+| Scenario | What goes wrong | Unemployment rises from 4% to 9% |
+| Transmission | Models that turn the shock into numbers | Satellite models raising probability of default |
+| Outcome measure | How pass or fail is judged | Lowest Common Equity Tier 1 (CET1) ratio over the horizon |
 
-Most of this note is about **credit risk stress testing**, because loans are usually the largest source of stress losses for a commercial bank. But a full stress test also covers market risk (trading losses), counterparty risk (see [[19 Counterparty Credit Risk and Derivatives]]), operational risk (fines, fraud), interest rate risk in the banking book, net interest income, fees and costs. The answer that matters is the combination of all of them, expressed as a capital ratio path, as described in [[18 Regulatory Capital and Basel - the Short Version]].
+This note focuses on **credit risk stress testing**, because loans are usually a commercial bank's largest source of stress losses. A full stress test also covers market, counterparty (see [[19 Counterparty Credit Risk and Derivatives]]) and operational risk, interest income, fees and costs, combined into one capital ratio path (see [[18 Regulatory Capital and Basel - the Short Version]]).
 
 ## Why regulators require them after 2008
 
@@ -56,7 +54,7 @@ Before the 2008 global financial crisis, stress tests were small, owned by a sin
 2. **Nobody could add up the risk quickly.** Many banks could not say within days what their total exposure was to a failing counterparty. That led directly to the data principles in [[22 Credit Risk Data, Systems and BCBS 239]].
 3. **Markets did not trust bank numbers.** In 2009 United States supervisors ran a public stress test on the largest banks, told the weak ones how much capital to raise, and published the results. Confidence returned faster there, and supervisors elsewhere took note.
 
-Since then, supervisory stress testing has become a core tool of regulation: to set capital buffers, decide whether banks may pay dividends, compare banks on the same scenario and look at the system as a whole. Banks must also run their own stress tests as part of the ICAAP and use them in risk management. The Basel Committee publishes stress testing principles; each country's regime differs in detail.
+Supervisory stress testing is now a core regulatory tool for setting buffers, approving dividends and comparing banks. Banks must also run their own as part of the ICAAP. The Basel Committee publishes principles; national regimes differ in detail.
 
 ## Types of stress test: sensitivity, scenario and reverse
 
@@ -64,35 +62,35 @@ There are three families, and a mature bank runs all of them.
 
 ### Sensitivity analysis
 
-A **sensitivity test** changes one thing at a time and holds everything else still. "What if house prices fall 20%?" "What if every corporate borrower is downgraded by one notch?" "What if interest rates rise 2 percentage points?" It is quick, easy to explain, and good for finding which single factor the bank is most exposed to. Its weakness is that in real downturns things go wrong together: unemployment, house prices and rates move at the same time.
+A **sensitivity test** changes one thing and holds everything else still. "What if house prices fall 20%?" "What if every corporate is downgraded one notch?" It is quick and isolates drivers, but in real downturns things go wrong together.
 
-**Illustrative example.** The bank's mortgage book is 30,000 (all figures in millions, illustrative). A sensitivity test drops house prices by 20% with nothing else changing. Loans with a loan-to-value ratio above 80% before the fall now have negative equity. The model says the expected loss on the book rises from 30 to 75. A quick answer: a 20% house price fall costs about 45 of extra provisions on its own.
+**Illustrative example.** The mortgage book is 30,000 (all figures in millions, illustrative). Drop house prices 20% with nothing else changing, and loans that were above 80% loan-to-value fall into negative equity. Expected loss rises from 30 to 75: the house price fall alone costs about 45.
 
 ### Scenario analysis
 
-A **scenario test** tells a coherent story of a whole economy over several years, with many variables moving together in a consistent way. A global recession scenario might combine falling gross domestic product (GDP), rising unemployment, falling house and commercial property prices, a stock market crash and widening credit spreads. Scenarios can be **historical** (replay 2008, or the early 1990s property crash) or **hypothetical** (a new story, such as a sudden energy shock or a disorderly climate transition, see [[25 Climate, ESG and Emerging Credit Risks]]). Almost all regulatory exercises are scenario tests.
+A **scenario test** tells a coherent multi-year story with many variables moving together: falling gross domestic product (GDP), rising unemployment, falling property prices, a stock market crash. Scenarios can be **historical** (replay 2008) or **hypothetical** (an energy shock, or a disorderly climate transition, see [[25 Climate, ESG and Emerging Credit Risks]]). Almost all regulatory exercises are scenario tests.
 
 ### Reverse stress testing
 
-A **reverse stress test** turns the question upside down. Instead of "here is a scenario, what is the loss?", it asks "what scenario would break us?". The bank starts from the outcome (the business model is no longer viable, or capital falls below the regulatory minimum) and works backwards to find the combination of events that would cause it.
+A **reverse stress test** asks "what would break us?". The bank starts from failure (capital below the minimum, or a business model no longer viable) and works backwards.
 
-**Illustrative example.** The bank has CET1 capital of 10,000 and risk-weighted assets (RWA) of 80,000. Suppose the point of non-viability is a CET1 ratio of 6%, and that in a deep stress RWA would inflate to 90,000. Capital would need to fall to 5,400 (6% of 90,000), a loss of 4,600 after any profits. The team then asks: what would produce 4,600 of net losses? Perhaps a commercial property collapse of 50% combined with the failure of the two largest corporate borrowers and a 30% house price fall. The value is not the number. It is the conversation: is that combination truly implausible, or is the bank closer to the edge than it thought? Reverse stress testing is especially good at exposing concentrations, as described in [[14 Risk Appetite, Limits and Concentration]].
+**Illustrative example.** The bank has CET1 capital of 10,000 and risk-weighted assets (RWA) of 80,000. If non-viability is a 6% CET1 ratio and RWA would inflate to 90,000 in a deep stress, capital must fall to 5,400, a net loss of 4,600. What would produce that? Perhaps a 50% commercial property collapse, the failure of the two largest corporate borrowers and a 30% house price fall. The value is the conversation: is that truly implausible, or is the bank closer to the edge than it thought? Reverse tests are especially good at exposing concentrations (see [[14 Risk Appetite, Limits and Concentration]]).
 
-| Type | Question | Strength | Weakness | Typical use |
-|---|---|---|---|---|
-| Sensitivity | What if one thing moves? | Quick, clear, isolates drivers | Ignores things moving together | Limit setting, daily risk management, model checks |
-| Scenario | What if this story happens? | Realistic, joined up | Slow, depends on the scenario chosen | Regulatory exercises, ICAAP, capital planning |
-| Reverse | What would break us? | Finds hidden vulnerabilities | Hard to quantify, many possible answers | ICAAP, recovery planning, board discussion |
+| Type | Question | Weakness | Typical use |
+|---|---|---|---|
+| Sensitivity | What if one thing moves? | Ignores things moving together | Limits, model checks |
+| Scenario | What if this story happens? | Slow, depends on the story | Regulatory exercises, ICAAP |
+| Reverse | What would break us? | Many possible answers | ICAAP, recovery planning |
 
 ## Baseline, adverse and severely adverse scenarios
 
-Most exercises use a small family of scenarios, each a full path for every variable over the horizon (usually three years for regulators, three to five for the ICAAP).
+Exercises use a small family of scenarios, each a full path for every variable over three years (regulators) or three to five (ICAAP).
 
-- **Baseline.** The expected path of the economy, usually close to the central bank's or the bank's own forecast. It is not a stress at all. It is the starting comparison, and it is the same idea as the base case in the capital plan.
-- **Adverse.** A meaningful downturn, of the sort that happens perhaps once every decade or two. A recession, rising unemployment, falling asset prices.
-- **Severely adverse.** A very deep downturn, at or beyond the worst seen in modern history, perhaps a one-in-25 or one-in-50-year event, though the probability is rarely stated precisely. This is the scenario most capital buffers are set from.
+- **Baseline.** The expected path, close to the central forecast. Not a stress at all, but the comparison point.
+- **Adverse.** A meaningful downturn of the kind seen perhaps once every decade or two.
+- **Severely adverse.** A very deep downturn, at or beyond the worst in modern history. The probability is rarely stated precisely. Most capital buffers are set from this one.
 
-Naming varies. The American programme uses "baseline" and "severely adverse"; the European exercise uses "baseline" and "adverse" where the adverse is severe; many banks add their own idiosyncratic scenarios on top. Illustrative paths for one country:
+Naming varies by regime, and banks add their own scenarios. Illustrative paths for one country:
 
 | Variable (peak to trough over 3 years) | Baseline | Adverse | Severely adverse |
 |---|---|---|---|
@@ -103,11 +101,11 @@ Naming varies. The American programme uses "baseline" and "severely adverse"; th
 | Policy interest rate (starting at 4%) | 3.5% | 5.5% or 1% (depends on the story) | 6% or 0.5% |
 | Equity market | +5% a year | -30% | -50% |
 
-Notice that rates can go either way. A stagflation story (prices rising, economy shrinking) pushes rates up, which hurts borrowers with floating-rate loans; a classic demand collapse pushes rates down, which squeezes the bank's interest margin. The story matters, not just the severity.
+Rates can go either way: a stagflation story pushes them up, hurting floating-rate borrowers; a demand collapse pushes them down, squeezing the bank's margin. The story matters, not just the severity.
 
 ## The macro variables
 
-The **macroeconomic variables**, or macro variables, are the numbers that describe the economy in the scenario. The ones that matter most for credit risk:
+The **macroeconomic variables** that matter most for credit risk:
 
 | Variable | Plain words | Why it matters for credit losses |
 |---|---|---|
@@ -118,18 +116,18 @@ The **macroeconomic variables**, or macro variables, are the numbers that descri
 | Commercial property prices | Value of offices, shops, warehouses | Big falls cause both defaults (refinancing fails) and high losses on commercial real estate loans |
 | Exchange rates, equity prices, credit spreads, commodities | Currency values, markets, oil and gas | Hurt borrowers with currency mismatches or sector exposure; drive trading and counterparty losses |
 
-Scenarios are usually specified for several countries, because an international bank's losses depend on the economy where each borrower lives, as covered in [[26 Sovereign, Bank and Country Risk]].
+International banks need paths for every country where borrowers live (see [[26 Sovereign, Bank and Country Risk]]).
 
 ## How macro variables turn into credit losses
 
-This is the mechanism at the heart of credit stress testing. A scenario is just a set of numbers about the economy; the bank needs numbers about its own loans. The translation happens in four channels.
+A scenario is numbers about the economy; the bank needs numbers about its loans. The translation runs through four channels.
 
 ![[20-scenario-to-loss.svg]]
 *How a macroeconomic scenario flows through satellite models into shifts in PD, rating migration, LGD and EAD, then into impairments, RWA and income, and finally into a capital ratio path that either clears the hurdle or does not.*
 
 ### Channel 1: probability of default rises
 
-The **probability of default** (PD), introduced in [[02 What Credit Risk Is]] and modelled in [[10 Internal Ratings, Scorecards and PD Models]], goes up when the economy weakens. But it does not go up evenly. Unsecured consumer lending reacts quickly and strongly to unemployment. Construction, hotels, retail and commercial property react strongly to GDP and property prices. Utilities and food producers barely move. A borrower in a country hit hard by the scenario suffers more than one in a country hit lightly. So the stress uses PD shifts by **sector and country**, not a single multiplier for the whole book.
+The **probability of default** (PD), introduced in [[02 What Credit Risk Is]] and modelled in [[10 Internal Ratings, Scorecards and PD Models]], goes up when the economy weakens, but unevenly. Unsecured consumer lending reacts sharply to unemployment; construction, hotels and commercial property to GDP and property prices; utilities barely move. Countries are hit differently too. So the stress uses PD shifts by **sector and country**, not one multiplier for the whole book.
 
 | Segment (illustrative) | Baseline annual PD | Adverse peak PD | Main driver |
 |---|---|---|---|
@@ -142,11 +140,11 @@ The **probability of default** (PD), introduced in [[02 What Credit Risk Is]] an
 
 ### Channel 2: rating migration
 
-Higher PDs show up as borrowers being **downgraded** on the bank's internal rating scale. A BBB-equivalent borrower becomes BB, a BB becomes B, some Bs default. Migration matters three times over. It raises expected losses. It moves loans from Stage 1 to Stage 2 under International Financial Reporting Standard 9 (IFRS 9), where the provision becomes lifetime rather than 12-month (see [[17 Provisioning and Expected Credit Loss - IFRS 9 and CECL]]), which is often the largest single source of stress impairment in the first year. And for banks on the internal ratings-based (IRB) approach, a worse rating means a higher risk weight, so RWA inflates just as capital is falling. Stress testers model this with **migration matrices** that are "stressed" (shifted towards downgrades) according to the scenario.
+Higher PDs show up as **downgrades**: BBB-equivalent borrowers become BB, some Bs default. Migration matters three times over. It raises expected losses. It moves loans from Stage 1 to Stage 2 under International Financial Reporting Standard 9 (IFRS 9), where the provision becomes lifetime (see [[17 Provisioning and Expected Credit Loss - IFRS 9 and CECL]]), often the largest stress impairment in year 1. And under the internal ratings-based (IRB) approach, a worse rating means a higher risk weight, so RWA inflates just as capital falls. It is modelled with **stressed migration matrices** shifted towards downgrades.
 
 ### Channel 3: collateral values fall, so LGD rises
 
-**Loss given default** (LGD) depends heavily on what the collateral is worth when the bank sells it (see [[11 Collateral and Security]]). If house prices fall 30%, a mortgage that had a loan-to-value of 70% now has one of 100%, and a forced sale at a further discount leaves the bank short. Commercial property is worse, because values fall further and buyers disappear. A simple illustration for one defaulted mortgage:
+**Loss given default** (LGD) depends on what the collateral fetches when sold (see [[11 Collateral and Security]]). After a 30% house price fall, a 70% loan-to-value mortgage becomes 100%, and a forced sale at a discount leaves the bank short. Commercial property is worse. One defaulted mortgage:
 
 | | Before stress | After 30% house price fall |
 |---|---|---|
@@ -159,7 +157,7 @@ Higher PDs show up as borrowers being **downgraded** on the bank's internal rati
 
 ### Channel 4: exposure at default rises because borrowers draw down
 
-**Exposure at default** (EAD) is the amount owed when the borrower defaults. Companies in trouble draw on every committed credit line they have, because cash is king in a crisis; consumers max out credit cards before they stop paying. In stress, the **credit conversion factor**, the share of an undrawn limit expected to be drawn before default, goes up. During the early weeks of the pandemic in 2020, many large companies drew their revolving credit facilities in full within days, which showed how fast this can happen.
+**Exposure at default** (EAD) is the amount owed at default. In a crisis, companies draw every committed line and consumers max out cards before they stop paying, so the **credit conversion factor** (the share of an undrawn limit drawn before default) rises. In early 2020 many large companies drew their revolving facilities in full within days.
 
 ### Putting the channels together
 
@@ -186,11 +184,11 @@ The scenario is the adverse column from the table above: unemployment to 7%, hou
 | Commercial real estate | 7,000 | 20.0% | 1,400 |
 | **Total** | **82,000** | **6.3%** | **5,150** |
 
-Look at commercial real estate: 8.5% of the book produces 27% of the losses. That is exactly the kind of finding a stress test exists to surface.
+Commercial real estate is 8.5% of the book but 27% of the losses: exactly what a stress test exists to surface.
 
 ### Step 2: spreading it over the years
 
-Losses are not even. Year 1 is dominated by stage transfers and the first wave of unsecured defaults; year 2 is the peak as corporate and property defaults come through; year 3 sees recovery begin.
+Year 1 carries stage transfers and early unsecured defaults; year 2 peaks with corporate and property defaults; year 3 recovers.
 
 | | Year 1 | Year 2 | Year 3 |
 |---|---|---|---|
@@ -202,7 +200,7 @@ Losses are not even. Year 1 is dominated by stage transfers and the first wave o
 
 ### Step 3: RWA inflation
 
-As borrowers are downgraded and defaults rise, RWA grows. The bank also assumes its balance sheet stays the same size (a **static balance sheet**, which is a common regulatory assumption). RWA goes from 80,000 to 86,000 in year 1 and 90,000 in year 2, then eases to 88,000 in year 3 as defaulted loans are written off.
+With a **static balance sheet** (a common regulatory assumption that the book does not grow or shrink), downgrades and defaults push RWA from 80,000 to 86,000 in year 1 and 90,000 in year 2, easing to 88,000 in year 3 as defaulted loans are written off.
 
 ### Step 4: the capital path, before and after management actions
 
@@ -217,9 +215,9 @@ In its plan the bank intends to pay a dividend of 400 each year. First, the resu
 | RWA | 80,000 | 86,000 | 90,000 | 88,000 |
 | **CET1 ratio** | **12.5%** | **10.5%** | **8.0%** | **7.9%** |
 
-The trough is 7.9% in year 3. That clears the 7% hurdle, but only by 0.9 percentage points, which the board will consider too thin.
+The trough is 7.9% in year 3, clearing the 7% hurdle by only 0.9 points, too thin for the board.
 
-Now the bank applies a **management action**: cancel the dividend from year 2 onwards, a decision that is within its control, quick to execute and credible.
+Now apply a credible **management action** within the bank's control: cancel the dividend from year 2.
 
 | | Start | Year 1 | Year 2 | Year 3 |
 |---|---|---|---|---|
@@ -227,26 +225,26 @@ Now the bank applies a **management action**: cancel the dividend from year 2 on
 | RWA | 80,000 | 86,000 | 90,000 | 88,000 |
 | **CET1 ratio** | **12.5%** | **10.5%** | **8.4%** | **8.8%** |
 
-The trough is now 8.4% in year 2. The **drawdown**, the fall from the starting ratio to the trough, is 12.5% minus 8.4% = 4.1 percentage points. That drawdown is the number supervisors look at most closely, because it measures how much capital the bank burns in stress, independent of where it started.
+The trough is now 8.4% in year 2. The **drawdown**, start ratio minus trough, is 12.5% minus 8.4% = 4.1 points. Supervisors watch it closely because it measures how much capital the bank burns in stress, whatever its starting point.
 
 ### Step 5: what the bank does with the answer
 
-- The 4.1 point drawdown informs the size of the **Pillar 2 buffer** the supervisor will expect (see below).
-- The concentration in commercial real estate leads the board to cut the commercial property limit in the risk appetite statement (see [[14 Risk Appetite, Limits and Concentration]]).
-- Model validation is asked to check whether the commercial property LGD model has ever been tested on a 25% fall (see [[21 Model Risk Management and Validation]]).
-- The capital plan is revised to keep at least 1.5 points of headroom over the hurdle at the stressed trough.
+- The 4.1 point drawdown informs the **Pillar 2 buffer** (see below).
+- The board cuts the commercial property limit (see [[14 Risk Appetite, Limits and Concentration]]).
+- Validation checks whether the commercial property LGD model was ever tested on a 25% fall (see [[21 Model Risk Management and Validation]]).
+- The capital plan is revised to keep 1.5 points of headroom at the trough.
 
 ## The main regulatory exercises
 
-Supervisors run their own stress tests on the banks they oversee. The details change from year to year and from country to country, so treat the descriptions below as generic.
+Details change by year and country, so treat these descriptions as generic.
 
 | Exercise (generic) | Approach | Used for |
 |---|---|---|
-| Central bank annual stress test, covering the largest domestic banks | Supervisor sets a common severe scenario; banks run it on their own models; the supervisor challenges and adjusts, sometimes with its own models | Bank-specific buffers, system-wide view, dividend decisions, published results |
-| European Banking Authority (EBA) EU-wide exercise, typically every two years with the European Central Bank and national supervisors | Common methodology and templates, mostly static balance sheet, banks' own models within strict constraints, supervisory quality assurance, results published by bank | Informing each bank's Pillar 2 guidance; market transparency. Not formally pass or fail |
+| Central bank annual stress test of the largest domestic banks | Common severe scenario run on banks' own models, challenged and adjusted by the supervisor | Bank buffers, system view, dividend decisions |
+| European Banking Authority (EBA) EU-wide exercise, typically every two years | Common methodology, static balance sheet, banks' own models within strict constraints, results published by bank | Informs Pillar 2 guidance; not formally pass or fail |
 | United States Federal Reserve programme for large bank holding companies | The Federal Reserve projects losses with its own supervisory models on detailed bank data, under baseline and severely adverse scenarios; banks also submit capital plans | Setting each bank's **stress capital buffer**, which feeds its capital requirement and limits on distributions |
 
-Common features matter more to a platform lead than the differences: a fixed starting date, a prescribed scenario, prescribed templates with thousands of cells, a short submission window (often a few months), several rounds of supervisory questions requiring re-runs, and a requirement to explain every number back to loan-level data.
+For a platform lead the common features matter most: fixed start date, prescribed scenario, templates with thousands of cells, a short submission window, rounds of questions needing re-runs, and every number explainable back to loan-level data.
 
 ## The ICAAP step by step
 
@@ -301,34 +299,31 @@ Supervisors want the ICAAP used, not filed: stress results informing risk appeti
 
 ## The ILAAP in brief
 
-The **internal liquidity adequacy assessment process**, or ILAAP, is the sister of the ICAAP, but for liquidity: does the bank have enough cash and easily sold assets to survive a period of stress in which deposits leave, markets close and committed lines are drawn? The analogy is the difference between being rich and having cash in your pocket. You can own a house worth a fortune and still be unable to buy lunch if your wallet is empty and the banks are shut.
+The **internal liquidity adequacy assessment process**, or ILAAP, is the sister of the ICAAP, but for liquidity: does the bank have enough cash and easily sold assets to survive deposits leaving, markets closing and lines being drawn? It is the difference between being rich and having cash in your pocket: you can own a valuable house and still be unable to buy lunch.
 
 The ILAAP covers the funding profile, the liquidity buffer, liquidity stress tests (from a few days to a year), the survival horizon, intraday liquidity and the contingency funding plan. It is owned by treasury, but links to credit risk through drawdowns: the committed lines that raise EAD in a credit stress also drain cash in a liquidity stress, and the credit platform often supplies the undrawn commitment data.
 
 ## Pillar 2 add-ons
 
-Pillar 1 is a formula that every bank applies the same way. It cannot capture everything about a particular bank. Pillar 2 tops it up, generally in two layers. The names differ by jurisdiction (for example, some regimes speak of Pillar 2A and Pillar 2B, others of Pillar 2 requirement and Pillar 2 guidance), but the shape is common:
+Pillar 1 is the same formula for every bank, so it cannot capture everything about a particular one. Pillar 2 tops it up in two layers. Names differ by jurisdiction (Pillar 2A and 2B in some, Pillar 2 requirement and guidance in others), but the shape is common:
 
-| Layer | What it covers | How it is set | How binding |
+| Layer | Covers | Set by | How binding |
 |---|---|---|---|
-| Pillar 2 requirement | Risks not covered, or not fully covered, by Pillar 1: credit concentration, interest rate risk in the banking book, pension risk, some operational risk gaps, model weaknesses | Supervisor's judgement informed by the bank's ICAAP quantification and its own benchmarks | Binding. Breaching it is treated like breaching a minimum requirement |
-| Pillar 2 buffer or guidance | An extra cushion so the bank can absorb a severe stress without falling below its requirements | Informed by the stress test drawdown, adjusted for things the supervisor judges the stress did not capture and for any overlap with other buffers | Not usually a hard minimum, but supervisors expect it to be held, and dipping into it triggers close engagement |
+| Pillar 2 requirement | Risks Pillar 1 misses or under-covers: concentration, interest rate risk in the banking book, pension risk, model weaknesses | Supervisory judgement informed by the ICAAP and benchmarks | Binding, like a minimum |
+| Pillar 2 buffer or guidance | A cushion to absorb severe stress without breaching requirements | The stress drawdown, adjusted for what the stress missed and overlap with other buffers | Expected to be held; dipping into it triggers close engagement |
 
-Using the worked example: if the bank's adverse drawdown is 4.1 points, but some of that is already covered by the regulatory combined buffers, the supervisor might set a Pillar 2 buffer of, say, 1 to 2 points. The exact calibration method is each supervisor's own and is not public in full. The point for the platform is that **stress results translate directly into a capital number**, so the quality of the stress test has a direct cost.
-
-In the American regime, the equivalent role is played by the stress capital buffer, which is calculated from the Federal Reserve's own supervisory stress test rather than the bank's internal one.
+In the worked example, a 4.1 point drawdown, partly covered by other buffers, might lead to a Pillar 2 buffer of, say, 1 to 2 points (illustrative; calibration methods are each supervisor's own). The point: **stress results become a capital number**, so stress test quality has a direct cost. In the American regime the stress capital buffer plays this role, calculated from the Federal Reserve's own test.
 
 ## How stress testing feeds risk appetite and limits
 
-Stress testing is one of the main ways the bank's **risk appetite** is quantified (see [[14 Risk Appetite, Limits and Concentration]]). A typical risk appetite statement contains metrics such as:
+Stress testing quantifies much of the bank's **risk appetite** (see [[14 Risk Appetite, Limits and Concentration]]), with metrics such as:
 
 - "CET1 ratio must remain above X% under the bank's internal severe stress scenario."
 - "Stressed losses on commercial real estate must not exceed Y% of CET1."
-- "Stressed impairments over three years must not exceed Z times one year of pre-provision profit."
 
-From these top-level statements the bank cascades limits down to portfolios. If commercial real estate produces 1,400 of the 5,150 stressed loss, and the board's appetite says no single sector may contribute more than 20% of stressed losses, the commercial real estate limit is cut until it does. Similarly, sector and country limits are often sized so that their stressed loss fits within an allocated share of capital.
+These cascade into portfolio limits. If commercial real estate produces 1,400 of the 5,150 stressed loss (27%) and appetite says no sector may contribute more than 20%, the limit is cut until it complies. Sector and country limits are often sized so their stressed loss fits an allocated share of capital.
 
-Stress testing also feeds day-to-day credit management. Portfolios with high stressed losses get tighter underwriting standards, borrowers that would be downgraded sharply in stress are flagged for closer monitoring (see [[15 Monitoring, Early Warning and Watchlist]]), and pricing models may charge for stressed capital consumption. In the other direction, the bank's **recovery plan** uses reverse stress testing to set **recovery indicators**, early warning thresholds that trigger escalation if capital or liquidity falls towards dangerous levels.
+Stress results also shape day-to-day credit management: tighter underwriting for high-stress portfolios, closer monitoring of borrowers that would be downgraded sharply (see [[15 Monitoring, Early Warning and Watchlist]]), and pricing that charges for stressed capital. The **recovery plan** uses reverse stress testing to set **recovery indicators** that trigger escalation as capital or liquidity weakens.
 
 ## Modelling approaches
 
@@ -338,46 +333,40 @@ The workhorse of credit stress testing is the **satellite model**, so called bec
 
 > Change in credit card default rate = 0.6 x change in unemployment rate + 0.2 x change in policy interest rate
 
-If unemployment rises 3 points and rates rise 1 point, the default rate rises by 0.6 x 3 + 0.2 x 1 = 2.0 points, say from 3.0% to 5.0%. Real satellite models use lags (unemployment this quarter hurts defaults two or three quarters later), several variables, and segments by product, sector and country. They are often built as regressions on historical default rates, or as models that shift a credit cycle index which then moves the whole PD term structure. LGD satellite models typically link collateral values to recovery rates, and EAD satellite models link drawdown behaviour to the economy.
-
-The hard part is data. Satellite models need long histories that include at least one real downturn. Many portfolios were not around in 2008, many products have changed since, and defaults in good years are so rare that the model has little to learn from.
+If unemployment rises 3 points and rates 1 point, the default rate rises 0.6 x 3 + 0.2 x 1 = 2.0 points, say from 3.0% to 5.0%. Real models add lags (unemployment hurts defaults two or three quarters later), more variables, and segments by product, sector and country; some shift a credit cycle index that moves the whole PD term structure. LGD satellites link collateral values to recoveries; EAD satellites link drawdowns to the economy. The hard part is data: long histories including a real downturn, which many portfolios and products lack.
 
 ### Top-down versus bottom-up
 
 | | Top-down | Bottom-up |
 |---|---|---|
 | How | Apply stressed loss rates to whole portfolios or segments | Recalculate each loan or borrower individually with stressed parameters |
-| Who uses it | Supervisors checking banks, banks for quick or ad hoc scenarios | Banks for regulatory exercises and the ICAAP |
-| Strengths | Fast, simple, easy to compare across banks | Captures the bank's actual mix, collateral and ratings; links to IFRS 9 and RWA engines |
+| Used by and strengths | Supervisors and quick ad hoc tests; fast, comparable across banks | Banks for regulatory exercises and the ICAAP; captures the actual mix, collateral and ratings |
 | Weaknesses | Misses the detail of the specific book | Slow, data hungry, many models to orchestrate |
 | Platform impact | A spreadsheet or small model can do it | Needs the full loan-level engine, run many times |
 
-Large corporate exposures are sometimes stressed **name by name**: credit analysts take the biggest borrowers and re-rate them under the scenario using their knowledge of each business (see [[09 Credit Analysis - Reading a Borrower]]), because a statistical model cannot know that a particular airline has hedged its fuel or that a particular property company has refinancing due in year 2.
+The largest corporates are often stressed **name by name**: analysts re-rate each one under the scenario (see [[09 Credit Analysis - Reading a Borrower]]), because a model cannot know that one airline has hedged its fuel or one property company refinances in year 2.
 
 ### Challenger models
 
-A **challenger model** is a second, independent model built to check the main ("champion") model. If the satellite model for small business PD says losses rise 2.5 times in the scenario, and a simpler challenger built on different data says 4 times, someone needs to explain the gap. Supervisors increasingly use their own challenger models on bank data, so banks build their own to see the challenge coming. The model governance around champions and challengers is covered in [[21 Model Risk Management and Validation]].
+A **challenger model** is an independent second model that checks the main ("champion") one. If the champion says small business losses rise 2.5 times and a challenger on different data says 4 times, someone must explain the gap. Supervisors use their own challengers, so banks build theirs to see the challenge coming (see [[21 Model Risk Management and Validation]]).
 
 ### Expert overlays
 
-When models cannot capture something, experts adjust the output. Examples: a sector the model treats like any other but which is unusually exposed to the scenario's story (energy-intensive industries in an energy shock); a new product with no history; a known model weakness. Overlays are the stress testing cousin of the post-model adjustments in [[17 Provisioning and Expected Credit Loss - IFRS 9 and CECL]] and need the same discipline: written rationale, quantification method, owner, approval and a record of who changed what. Supervisors are suspicious of overlays that reduce losses.
+Where models miss something (a sector unusually exposed to the scenario's story, a product with no history, a known weakness), experts adjust the output. Like the post-model adjustments in [[17 Provisioning and Expected Credit Loss - IFRS 9 and CECL]], overlays need a rationale, method, owner, approval and record. Supervisors distrust overlays that reduce losses.
 
 ## The link to IFRS 9 scenarios
 
-The bank's accounting provisions under International Financial Reporting Standard 9 (IFRS 9) or CECL already use macroeconomic scenarios and satellite models, as described in [[17 Provisioning and Expected Credit Loss - IFRS 9 and CECL]]. So stress testing and provisioning share a great deal of machinery, and most banks deliberately reuse it:
+Accounting provisions under International Financial Reporting Standard 9 (IFRS 9) or CECL already use macroeconomic scenarios and satellite models (see [[17 Provisioning and Expected Credit Loss - IFRS 9 and CECL]]), so most banks deliberately reuse that machinery:
 
 | | IFRS 9 / CECL provisioning | Stress testing |
 |---|---|---|
-| Purpose | Unbiased, probability-weighted estimate of expected loss for the accounts | Loss under a specific severe scenario for capital adequacy |
-| Scenarios | Base, upside, downside, severe, with probability weights | Baseline, adverse, severely adverse, each assessed on its own (no weighting) |
-| Horizon | Lifetime of each loan, with reversion to long-run averages | Three to five years of projection |
-| Frequency | Every quarter or month | Annually for regulators and the ICAAP, more often for internal and ad hoc tests |
-| PD basis | Point-in-time, forward-looking | Point-in-time, conditioned on the stress path |
+| Purpose | Unbiased expected loss for the accounts | Loss under one severe scenario, for capital adequacy |
+| Scenarios | Several, probability-weighted | Each assessed on its own, no weighting |
+| Horizon | Loan lifetime | Three to five years |
+| Frequency | Monthly or quarterly | Annual exercises plus ad hoc tests |
 | Output | Provision balance and charge | Impairment path, RWA path, capital ratio path |
 
-In a stress projection, the bank must work out what its IFRS 9 provisions would be at the end of each stress year, which means running the expected credit loss engine as if each year had happened, with loans moving between stages. This is one of the biggest technical challenges in stress testing: the provision at the end of year 2 depends on what the scenario looks like from year 3 onwards, which is a forecast within a forecast. Banks and supervisors handle it with simplifying rules, and the approach is often prescribed in the regulatory methodology.
-
-The practical benefit of sharing machinery is consistency: if the ECL engine and the stress engine disagree about how a 2-point rise in unemployment affects the card book, someone in the supervisory team will spot it.
+A stress projection must estimate IFRS 9 provisions at the end of each stress year, running the ECL engine as if each year had happened, with loans moving between stages. The year 2 provision depends on the scenario from year 3 onwards, a forecast within a forecast, so simplifying rules are used, often prescribed by the regulatory methodology. Sharing machinery also buys consistency: if the ECL and stress engines disagree about how unemployment affects the card book, a supervisor will spot it.
 
 ## What a stress testing platform needs
 
@@ -386,70 +375,67 @@ The practical benefit of sharing machinery is consistency: if the ECL engine and
 
 | Capability | What it means | Why it matters |
 |---|---|---|
-| Data snapshots | A frozen, reconciled copy of every loan, collateral item, rating and limit as at the stress start date, kept unchanged for the life of the exercise | Every re-run must start from the same point. If the underlying data changes halfway through, results cannot be compared or explained |
-| Scenario management | A versioned library of scenarios (regulatory, internal, reverse, ad hoc), each with a full path for every variable, country and quarter, plus who approved it | Scenarios change several times during an exercise; you must know which version produced which result |
-| Model orchestration | Running satellite, PD, LGD, EAD, migration, ECL, RWA and income models in the right order, with outputs of one feeding the next, for every scenario and year | A typical bottom-up run involves dozens of models. Manual hand-offs between spreadsheets are the most common source of error |
-| Overlays | A controlled place to apply expert adjustments, with rationale and approval, at the right level of granularity | Overlays must flow consistently into every downstream number and report |
-| Aggregation | Summing results by legal entity, portfolio, country, sector, scenario and year, with consistent hierarchies | Regulators want templates by entity and portfolio; the board wants the group view |
-| Templates and reporting | Producing regulator formats, board packs and management information from the same results | Thousands of template cells must tie back to the same numbers; see [[23 Reporting - Regulatory Returns, Pillar 3 and Management Information]] |
-| Reconciliation | Starting positions agree to the general ledger and to regulatory returns; stress year-zero numbers agree to published figures | Supervisors check this first |
-| Audit trail | Every run records the data snapshot, model versions, parameters, scenario version, overlays and approvers | Supervisors and auditors ask "how did you get this number?" months later |
-| Run times | A full run in hours, not days | Exercises always need several re-runs; slow runs mean late submissions and no time for analysis |
-| Re-runs and what-ifs | Ability to change one scenario variable, one model or one overlay and re-run quickly, and to compare results | The board will ask "what if property falls 35% instead of 25%?" the day before sign-off |
+| Data snapshots | Frozen, reconciled copy of every loan, collateral item, rating and limit at the start date | Every re-run must start from the same point |
+| Scenario management | Versioned library of scenarios (regulatory, internal, reverse, ad hoc) with approvals | Scenarios change mid-exercise; you must know which version produced which result |
+| Model orchestration | Satellite, PD, LGD, EAD, migration, ECL, RWA and income models run in order, per scenario and year | Dozens of models; manual hand-offs are the commonest source of error |
+| Overlays | Controlled expert adjustments with rationale and approval | Must flow consistently into every downstream number |
+| Aggregation | Results by legal entity, portfolio, country, sector, scenario and year | Regulators want entity templates; the board wants the group view |
+| Templates and reconciliation | Regulator formats and board packs from one result set, tied to the ledger and returns | See [[23 Reporting - Regulatory Returns, Pillar 3 and Management Information]] |
+| Audit trail | Each run records data, model, parameter, scenario and overlay versions and approvers | "How did you get this number?" comes months later |
+| Run times and re-runs | Full run in hours; quick what-ifs on one variable, model or overlay | The board asks "what if property falls 35%?" the day before sign-off |
 
-The reuse point from the previous section applies here: the best platforms share the data layer and model library with the ECL engine and the regulatory capital engine, so that stress testing is the same machinery run on a different future rather than a separate world.
+The best platforms share the data layer and model library with the ECL and regulatory capital engines, so stress testing is the same machinery run on a different future.
 
 ## Typical pain points
 
-- **The snapshot is never quite right.** Data for the start date arrives late, has gaps (missing collateral values, missing ratings for small borrowers) or changes after the cut-off because someone corrected the ledger. Every fix triggers a re-run.
-- **Models built in different places by different people.** Satellite models in one language, PD models in another, ECL in a vendor engine, RWA in a separate calculator. Joining them up is manual and fragile.
-- **Spreadsheets in the critical path.** Overlays, aggregation and template filling are often still done in spreadsheets, which are hard to version, hard to audit and easy to break.
-- **Long run times.** Loan-level projection of tens of millions of accounts over three to five years and several scenarios can take days on older infrastructure, leaving no time for the questions that matter.
-- **Late scenario changes.** Regulators publish clarifications and the board changes the internal scenario late in the cycle. Each change ripples through every model.
-- **Supervisory questions.** Rounds of questions asking for breakdowns the bank did not plan for, by product, vintage, sector and country, with tight deadlines.
-- **Inconsistency with other numbers.** The stress baseline does not match the budget; the stress ECL does not match the quarter-end ECL; the stress RWA does not match the regulatory return. Each mismatch needs explaining.
-- **Key-person risk.** A handful of people understand how the whole chain fits together. When one leaves, the bank loses months.
-- **Model weaknesses exposed by the scenario.** A scenario outside historical experience (very high rates, or a property fall larger than any in the data) pushes models where they were never tested, so the results depend on overlays.
+- **The snapshot is never quite right.** Start-date data arrives late, has gaps (missing collateral values or ratings) or changes after cut-off. Every fix means a re-run.
+- **Models scattered across tools.** Satellite models in one language, PD in another, ECL in a vendor engine, RWA in a separate calculator, joined by hand.
+- **Spreadsheets in the critical path** for overlays, aggregation and templates: hard to version, audit or trust.
+- **Long run times.** Tens of millions of accounts over several years and scenarios can take days on older infrastructure.
+- **Late scenario changes and supervisory questions** demanding unplanned breakdowns by product, vintage, sector and country.
+- **Inconsistency with other numbers.** Stress baseline versus budget, stress ECL versus quarter-end ECL, stress RWA versus the regulatory return.
+- **Key-person risk.** A handful of people understand the whole chain.
+- **Scenarios beyond history** push models where they were never tested, so results lean on overlays.
 
 ## Common mistakes and misunderstandings
 
-- **"A stress test is a forecast."** It is not. The adverse scenario is not what the bank expects; it is a deliberately bad story chosen to test resilience. Saying "the stress test predicts losses of 5,150" is wrong; it estimates losses *if* that scenario happened.
-- **"Passing the stress test means the bank is safe."** It means the bank would survive that particular scenario under those assumptions. A different crisis (a cyber attack, a pandemic, a liquidity run) might hit very differently. That is why reverse stress testing exists.
-- **Focusing on the end ratio, not the trough.** Capital often recovers by year 3. The test is the lowest point, not where the ratio ends up.
-- **Ignoring RWA inflation.** Losses reduce the top of the ratio, but rating migration increases the bottom. Many first-time readers see impairments and forget that RWA rises at the same time.
-- **Treating management actions as free.** Cutting dividends hits the share price; selling portfolios in a crisis means selling at a loss. Supervisors give little credit for actions that look convenient rather than credible.
-- **Confusing the ICAAP with the supervisory stress test.** The supervisory test uses the regulator's scenario and rules. The ICAAP is the bank's own assessment, with its own scenarios tailored to its own vulnerabilities, covering all material risks. Both matter, and they should be consistent but are not the same.
+- **"A stress test is a forecast."** It is a deliberately bad story. It does not predict losses of 5,150; it estimates them *if* that scenario happened.
+- **"Passing means the bank is safe."** It means surviving that scenario under those assumptions. A different crisis might hit very differently, which is why reverse stress testing exists.
+- **Looking at the end ratio, not the trough.** Capital often recovers by year 3. The test is the lowest point.
+- **Ignoring RWA inflation.** Losses shrink the top of the ratio while migration grows the bottom.
+- **Treating management actions as free.** Cutting dividends hits the share price; crisis sales lose money. Supervisors credit only credible actions.
+- **Confusing the ICAAP with the supervisory test.** One uses the regulator's scenario and rules; the other is the bank's own assessment of all material risks with tailored scenarios. They should be consistent, not identical.
 - **Thinking Pillar 2 is optional.** Pillar 2 requirements are binding capital requirements, not suggestions.
 - **Weighting stress scenarios like IFRS 9 scenarios.** Stress scenarios are assessed one at a time. Probability weighting is for accounting provisions.
-- **Treating stress testing as a once-a-year project.** Supervisors expect the capability to be used all year, for risk appetite, limits, new products and ad hoc questions. A platform that can only be run once a year with a team of 40 people is itself a finding.
-- **Assuming the models are right because they are models.** Satellite models are fitted on limited history. In a scenario beyond that history, expert judgement is doing much of the work, and that should be visible.
+- **Treating stress testing as a once-a-year project.** Supervisors expect the capability to be used all year. A platform that can only run once a year with a team of 40 is itself a finding.
+- **Trusting models because they are models.** Beyond the history they were fitted on, expert judgement is doing much of the work, and that should be visible.
 
 ## What a platform lead needs to know about this
 
-**Data.** The stress test needs the same loan-level data as the ECL engine and the regulatory capital engine (see [[22 Credit Risk Data, Systems and BCBS 239]]), frozen at the start date: balances, limits, schedules, ratings and PDs, collateral with valuation dates, sector and country codes, IFRS 9 stage, and legal entity. It also needs long macro histories for model fitting, historical default and loss data by segment, and the scenario paths. Snapshot management is the foundation: an immutable, reconciled, versioned copy of the starting position, retained for years. Expect the regulatory templates to ask for granularity (sector codes, country of risk, collateral type) that source systems do not hold cleanly.
+**Data.** The same loan-level data as the ECL and regulatory capital engines (see [[22 Credit Risk Data, Systems and BCBS 239]]), frozen at the start date: balances, limits, schedules, ratings, collateral with valuation dates, sector and country codes, IFRS 9 stage, legal entity. Plus long macro and default histories for model fitting, and the scenario paths. The foundation is an immutable, reconciled, versioned snapshot kept for years. Expect templates to demand granularity source systems do not hold cleanly.
 
-**Systems.** A typical estate has a scenario repository, a model execution layer (often a mix of in-house code and vendor engines), the ECL and RWA calculators reused in "projection mode", a net interest income projection tool owned by finance or treasury, an overlay tool, an aggregation layer, and a template generator. The strategic goal is a single orchestrated pipeline where one command runs a scenario end to end, and where the same models and data are shared with quarterly provisioning and capital reporting. Run time, parallel runs of several scenarios, and fast partial re-runs are the performance requirements that matter.
+**Systems.** A scenario repository, a model execution layer (in-house and vendor), the ECL and RWA calculators run in "projection mode", a net interest income tool owned by finance or treasury, an overlay tool, aggregation and template generation. The goal is one orchestrated pipeline that runs a scenario end to end on models and data shared with provisioning and capital reporting, with parallel scenarios and fast partial re-runs.
 
-**Controls.** Reconciliation of the starting position to the ledger and to the latest regulatory returns; version control of data snapshots, scenarios, models and parameters; model approval evidence from [[21 Model Risk Management and Validation]] attached to every model used; an overlay register with approvals; automated checks on outputs (losses move in the expected direction when the scenario worsens, no portfolio has negative losses, totals reconcile across templates); a full audit trail per run; access control so that whoever runs the engine cannot quietly change a model parameter; and evidence of board challenge. Supervisors and internal audit review the stress testing process itself, not just the results.
+**Controls.** Start-position reconciliation to the ledger and returns; version control of snapshots, scenarios, models and parameters; validation evidence from [[21 Model Risk Management and Validation]] for every model; an approved overlay register; automated output checks (losses rise as scenarios worsen, totals reconcile across templates); a per-run audit trail; segregation so whoever runs the engine cannot change parameters; evidence of board challenge. Supervisors and internal audit review the process, not just the results.
 
-**Who owns what.** The board owns the ICAAP and approves scenarios and results. The chief risk officer usually owns stress testing as a process, often through a dedicated stress testing team that coordinates. Economics designs the scenarios. Credit risk modelling builds the satellite and parameter models; model validation checks them. Finance owns the balance sheet and income projections and the capital plan; treasury owns liquidity and the ILAAP. Business lines and credit officers provide name-by-name assessments and management action proposals. Regulatory reporting fills the templates. The platform team owns the data snapshots, the orchestration, the run schedule, the audit trail and the ability to re-run, and as in provisioning it is often the only team that sees the whole chain.
+**Who owns what.** The board owns the ICAAP. The chief risk officer owns stress testing, usually through a coordinating team. Economics designs scenarios. Credit risk modelling builds the models; validation checks them. Finance owns balance sheet, income projections and the capital plan; treasury owns the ILAAP. Credit officers provide name-by-name views; business lines propose management actions. Regulatory reporting fills templates. The platform team owns snapshots, orchestration, schedule, audit trail and re-runs, and is often the only team that sees the whole chain.
 
-**The calendar.** Know when each exercise lands: regulatory scenario publication, data submission deadlines, supervisory question rounds, ICAAP board dates, the SREP letter. They overlap with quarter-end provisioning and capital reporting, which compete for the same people and infrastructure. The question you will be asked is "if the regulator changes the house price path on Monday, how quickly can we re-submit?". Have a measured answer.
+**The calendar.** Know when scenarios are published, submissions are due, question rounds and ICAAP board dates fall, and the SREP letter arrives. These collide with quarter-end provisioning for the same people and infrastructure. You will be asked: "if the regulator changes the house price path on Monday, how quickly can we re-submit?". Have a measured answer.
 
 ## Related notes
 
-- [[02 What Credit Risk Is]] for PD, LGD, EAD and expected versus unexpected loss.
+- [[02 What Credit Risk Is]] for PD, LGD and EAD.
 - [[09 Credit Analysis - Reading a Borrower]] for name-by-name stress assessment of large borrowers.
-- [[10 Internal Ratings, Scorecards and PD Models]] for the rating models and migration matrices that stress testing shifts.
-- [[11 Collateral and Security]] for collateral values and haircuts that drive stressed LGD.
+- [[10 Internal Ratings, Scorecards and PD Models]] for rating models and migration matrices.
+- [[11 Collateral and Security]] for collateral values behind stressed LGD.
 - [[13 Credit Governance - Committees, Authorities and the Three Lines]] for board and committee oversight.
 - [[14 Risk Appetite, Limits and Concentration]] for how stressed losses set appetite and limits.
 - [[15 Monitoring, Early Warning and Watchlist]] for using stress vulnerability in monitoring.
-- [[17 Provisioning and Expected Credit Loss - IFRS 9 and CECL]] for the shared scenario and satellite model machinery.
+- [[17 Provisioning and Expected Credit Loss - IFRS 9 and CECL]] for shared scenario machinery.
 - [[18 Regulatory Capital and Basel - the Short Version]], [[basel-credit-risk-explained-simply]] and [[basel-credit-risk-decision-tree]] for Pillar 1, RWA and the capital stack.
 - [[19 Counterparty Credit Risk and Derivatives]] for counterparty stress.
 - [[21 Model Risk Management and Validation]] for validating satellite and challenger models.
-- [[22 Credit Risk Data, Systems and BCBS 239]] for the data architecture and aggregation principles.
+- [[22 Credit Risk Data, Systems and BCBS 239]] for data architecture.
 - [[23 Reporting - Regulatory Returns, Pillar 3 and Management Information]] for templates and disclosures.
 - [[24 Pricing, RAROC and Return on Capital]] for using stressed capital in pricing.
 - [[25 Climate, ESG and Emerging Credit Risks]] for climate scenario analysis.
