@@ -1,0 +1,177 @@
+<svg width="100%"
+ viewBox="0.00 0.00 485.80 956.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 942.4)">
+<title>BaselMap</title>
+<polygon fill="white" stroke="transparent" points="-14.4,14.4 -14.4,-942.4 471.4,-942.4 471.4,14.4 -14.4,14.4"/>
+<g id="clust1" class="cluster">
+<title>cluster_cre</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M270,-569C270,-569 437,-569 437,-569 443,-569 449,-575 449,-581 449,-581 449,-908 449,-908 449,-914 443,-920 437,-920 437,-920 270,-920 270,-920 264,-920 258,-914 258,-908 258,-908 258,-581 258,-581 258,-575 264,-569 270,-569"/>
+<text text-anchor="middle" x="353.5" y="-905.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">CRE: credit risk</text>
+</g>
+<g id="clust2" class="cluster">
+<title>cluster_other</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M271,-8C271,-8 436,-8 436,-8 442,-8 448,-14 448,-20 448,-20 448,-549 448,-549 448,-555 442,-561 436,-561 436,-561 271,-561 271,-561 265,-561 259,-555 259,-549 259,-549 259,-20 259,-20 259,-14 265,-8 271,-8"/>
+<text text-anchor="middle" x="353.5" y="-546.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">Other chapters</text>
+</g>
+<g id="node1" class="node">
+<title>Root</title>
+<path fill="#1f2937" stroke="#1f2937" d="M211,-419C211,-419 12,-419 12,-419 6,-419 0,-413 0,-407 0,-407 0,-395 0,-395 0,-389 6,-383 12,-383 12,-383 211,-383 211,-383 217,-383 223,-389 223,-395 223,-395 223,-407 223,-407 223,-413 217,-419 211,-419"/>
+<text text-anchor="middle" x="111.5" y="-397.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Basel III consolidated framework</text>
+</g>
+<g id="node2" class="node">
+<title>CRE20</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M429,-889.5C429,-889.5 278,-889.5 278,-889.5 272,-889.5 266,-883.5 266,-877.5 266,-877.5 266,-848.5 266,-848.5 266,-842.5 272,-836.5 278,-836.5 278,-836.5 429,-836.5 429,-836.5 435,-836.5 441,-842.5 441,-848.5 441,-848.5 441,-877.5 441,-877.5 441,-883.5 435,-889.5 429,-889.5"/>
+<text text-anchor="middle" x="353.5" y="-872.9" font-family="Helvetica,sans-Serif" font-size="12.00">CRE20 to CRE22</text>
+<text text-anchor="middle" x="353.5" y="-859.9" font-family="Helvetica,sans-Serif" font-size="12.00">Standardised approach</text>
+<text text-anchor="middle" x="353.5" y="-846.9" font-family="Helvetica,sans-Serif" font-size="12.00">and credit risk mitigation</text>
+</g>
+<g id="edge1" class="edge">
+<title>Root&#45;&gt;CRE20</title>
+<path fill="none" stroke="#4b5563" d="M113.35,-419.23C117.32,-484.1 139.42,-706.26 258,-828 259.28,-829.32 260.62,-830.58 262,-831.8"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="260.57,-833.79 267.55,-836.28 263.64,-829.98 260.57,-833.79"/>
+</g>
+<g id="node3" class="node">
+<title>CRE30</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M420.5,-818.5C420.5,-818.5 286.5,-818.5 286.5,-818.5 280.5,-818.5 274.5,-812.5 274.5,-806.5 274.5,-806.5 274.5,-777.5 274.5,-777.5 274.5,-771.5 280.5,-765.5 286.5,-765.5 286.5,-765.5 420.5,-765.5 420.5,-765.5 426.5,-765.5 432.5,-771.5 432.5,-777.5 432.5,-777.5 432.5,-806.5 432.5,-806.5 432.5,-812.5 426.5,-818.5 420.5,-818.5"/>
+<text text-anchor="middle" x="353.5" y="-801.9" font-family="Helvetica,sans-Serif" font-size="12.00">CRE30 to CRE36</text>
+<text text-anchor="middle" x="353.5" y="-788.9" font-family="Helvetica,sans-Serif" font-size="12.00">Internal ratings&#45;based</text>
+<text text-anchor="middle" x="353.5" y="-775.9" font-family="Helvetica,sans-Serif" font-size="12.00">approach</text>
+</g>
+<g id="edge2" class="edge">
+<title>Root&#45;&gt;CRE30</title>
+<path fill="none" stroke="#4b5563" d="M114.84,-419.3C123.15,-476.96 156.43,-656.94 258,-756 261.22,-759.14 264.73,-762.01 268.46,-764.63"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="267.28,-766.78 274.48,-768.56 269.95,-762.68 267.28,-766.78"/>
+</g>
+<g id="node4" class="node">
+<title>CRE40</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M403.5,-747C403.5,-747 303.5,-747 303.5,-747 297.5,-747 291.5,-741 291.5,-735 291.5,-735 291.5,-719 291.5,-719 291.5,-713 297.5,-707 303.5,-707 303.5,-707 403.5,-707 403.5,-707 409.5,-707 415.5,-713 415.5,-719 415.5,-719 415.5,-735 415.5,-735 415.5,-741 409.5,-747 403.5,-747"/>
+<text text-anchor="middle" x="353.5" y="-730.4" font-family="Helvetica,sans-Serif" font-size="12.00">CRE40 to CRE45</text>
+<text text-anchor="middle" x="353.5" y="-717.4" font-family="Helvetica,sans-Serif" font-size="12.00">Securitisation</text>
+</g>
+<g id="edge3" class="edge">
+<title>Root&#45;&gt;CRE40</title>
+<path fill="none" stroke="#4b5563" d="M116.1,-419.11C127.32,-470.73 166.5,-619.91 258,-698 265.74,-704.61 274.97,-709.71 284.58,-713.65"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="283.86,-716 291.28,-716.2 285.61,-711.42 283.86,-716"/>
+</g>
+<g id="node5" class="node">
+<title>CRE50</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M425.5,-688.5C425.5,-688.5 281.5,-688.5 281.5,-688.5 275.5,-688.5 269.5,-682.5 269.5,-676.5 269.5,-676.5 269.5,-647.5 269.5,-647.5 269.5,-641.5 275.5,-635.5 281.5,-635.5 281.5,-635.5 425.5,-635.5 425.5,-635.5 431.5,-635.5 437.5,-641.5 437.5,-647.5 437.5,-647.5 437.5,-676.5 437.5,-676.5 437.5,-682.5 431.5,-688.5 425.5,-688.5"/>
+<text text-anchor="middle" x="353.5" y="-671.9" font-family="Helvetica,sans-Serif" font-size="12.00">CRE50 to CRE54</text>
+<text text-anchor="middle" x="353.5" y="-658.9" font-family="Helvetica,sans-Serif" font-size="12.00">Counterparty credit risk</text>
+<text text-anchor="middle" x="353.5" y="-645.9" font-family="Helvetica,sans-Serif" font-size="12.00">(SA&#45;CCR, IMM, CCPs)</text>
+</g>
+<g id="edge4" class="edge">
+<title>Root&#45;&gt;CRE50</title>
+<path fill="none" stroke="#4b5563" d="M119.57,-419.23C136.83,-461.5 185.14,-567.03 258,-626 260.38,-627.93 262.87,-629.76 265.46,-631.5"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="264.4,-633.73 271.63,-635.39 267.01,-629.58 264.4,-633.73"/>
+</g>
+<g id="node6" class="node">
+<title>CRE60</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M421.5,-617C421.5,-617 285.5,-617 285.5,-617 279.5,-617 273.5,-611 273.5,-605 273.5,-605 273.5,-589 273.5,-589 273.5,-583 279.5,-577 285.5,-577 285.5,-577 421.5,-577 421.5,-577 427.5,-577 433.5,-583 433.5,-589 433.5,-589 433.5,-605 433.5,-605 433.5,-611 427.5,-617 421.5,-617"/>
+<text text-anchor="middle" x="353.5" y="-600.4" font-family="Helvetica,sans-Serif" font-size="12.00">CRE60 Equity in funds</text>
+<text text-anchor="middle" x="353.5" y="-587.4" font-family="Helvetica,sans-Serif" font-size="12.00">CRE70 Settlement risk</text>
+</g>
+<g id="edge5" class="edge">
+<title>Root&#45;&gt;CRE60</title>
+<path fill="none" stroke="#4b5563" d="M123.82,-419.05C145.71,-452.55 197.1,-524.6 258,-565 262.88,-568.24 268.11,-571.17 273.52,-573.84"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="272.57,-576.1 279.95,-576.84 274.65,-571.66 272.57,-576.1"/>
+</g>
+<g id="node7" class="node">
+<title>RBC</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M423.5,-530.5C423.5,-530.5 283.5,-530.5 283.5,-530.5 277.5,-530.5 271.5,-524.5 271.5,-518.5 271.5,-518.5 271.5,-489.5 271.5,-489.5 271.5,-483.5 277.5,-477.5 283.5,-477.5 283.5,-477.5 423.5,-477.5 423.5,-477.5 429.5,-477.5 435.5,-483.5 435.5,-489.5 435.5,-489.5 435.5,-518.5 435.5,-518.5 435.5,-524.5 429.5,-530.5 423.5,-530.5"/>
+<text text-anchor="middle" x="353.5" y="-513.9" font-family="Helvetica,sans-Serif" font-size="12.00">RBC: risk&#45;based capital</text>
+<text text-anchor="middle" x="353.5" y="-500.9" font-family="Helvetica,sans-Serif" font-size="12.00">minimums, buffers,</text>
+<text text-anchor="middle" x="353.5" y="-487.9" font-family="Helvetica,sans-Serif" font-size="12.00">output floor</text>
+</g>
+<g id="edge6" class="edge">
+<title>Root&#45;&gt;RBC</title>
+<path fill="none" stroke="#4b5563" d="M148.9,-419.03C178.11,-433.25 220.31,-453.25 258,-469 262.66,-470.95 267.47,-472.9 272.34,-474.84"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="271.6,-477.18 279.01,-477.46 273.39,-472.62 271.6,-477.18"/>
+</g>
+<g id="node8" class="node">
+<title>CAP</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M428,-459.5C428,-459.5 279,-459.5 279,-459.5 273,-459.5 267,-453.5 267,-447.5 267,-447.5 267,-418.5 267,-418.5 267,-412.5 273,-406.5 279,-406.5 279,-406.5 428,-406.5 428,-406.5 434,-406.5 440,-412.5 440,-418.5 440,-418.5 440,-447.5 440,-447.5 440,-453.5 434,-459.5 428,-459.5"/>
+<text text-anchor="middle" x="353.5" y="-442.9" font-family="Helvetica,sans-Serif" font-size="12.00">CAP: definition of capital</text>
+<text text-anchor="middle" x="353.5" y="-429.9" font-family="Helvetica,sans-Serif" font-size="12.00">what counts as CET1,</text>
+<text text-anchor="middle" x="353.5" y="-416.9" font-family="Helvetica,sans-Serif" font-size="12.00">AT1, Tier 2</text>
+</g>
+<g id="edge7" class="edge">
+<title>Root&#45;&gt;CAP</title>
+<path fill="none" stroke="#4b5563" d="M223.02,-415.74C235.36,-417.38 247.83,-419.04 259.92,-420.66"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="259.72,-423.1 266.98,-421.6 260.37,-418.24 259.72,-423.1"/>
+</g>
+<g id="node9" class="node">
+<title>LEV</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M411.5,-388C411.5,-388 295.5,-388 295.5,-388 289.5,-388 283.5,-382 283.5,-376 283.5,-376 283.5,-364 283.5,-364 283.5,-358 289.5,-352 295.5,-352 295.5,-352 411.5,-352 411.5,-352 417.5,-352 423.5,-358 423.5,-364 423.5,-364 423.5,-376 423.5,-376 423.5,-382 417.5,-388 411.5,-388"/>
+<text text-anchor="middle" x="353.5" y="-366.9" font-family="Helvetica,sans-Serif" font-size="12.00">LEV: leverage ratio</text>
+</g>
+<g id="edge8" class="edge">
+<title>Root&#45;&gt;LEV</title>
+<path fill="none" stroke="#4b5563" d="M223.02,-386.72C240.99,-384.4 259.26,-382.04 276.18,-379.86"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="276.71,-382.26 283.34,-378.93 276.09,-377.4 276.71,-382.26"/>
+</g>
+<g id="node10" class="node">
+<title>LEX</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M417,-334C417,-334 290,-334 290,-334 284,-334 278,-328 278,-322 278,-322 278,-310 278,-310 278,-304 284,-298 290,-298 290,-298 417,-298 417,-298 423,-298 429,-304 429,-310 429,-310 429,-322 429,-322 429,-328 423,-334 417,-334"/>
+<text text-anchor="middle" x="353.5" y="-312.9" font-family="Helvetica,sans-Serif" font-size="12.00">LEX: large exposures</text>
+</g>
+<g id="edge9" class="edge">
+<title>Root&#45;&gt;LEX</title>
+<path fill="none" stroke="#4b5563" d="M154.42,-382.98C183.26,-370.91 222.61,-355.07 258,-343 264.78,-340.69 271.88,-338.4 279.01,-336.21"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="280.16,-338.42 286.15,-334.04 278.74,-333.73 280.16,-338.42"/>
+</g>
+<g id="node11" class="node">
+<title>MAR</title>
+<path fill="#6b7280" stroke="#6b7280" d="M422.5,-280C422.5,-280 284.5,-280 284.5,-280 278.5,-280 272.5,-274 272.5,-268 272.5,-268 272.5,-252 272.5,-252 272.5,-246 278.5,-240 284.5,-240 284.5,-240 422.5,-240 422.5,-240 428.5,-240 434.5,-246 434.5,-252 434.5,-252 434.5,-268 434.5,-268 434.5,-274 428.5,-280 422.5,-280"/>
+<text text-anchor="middle" x="353.5" y="-263.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">MAR: market risk</text>
+<text text-anchor="middle" x="353.5" y="-250.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">including CVA (MAR50)</text>
+</g>
+<g id="edge10" class="edge">
+<title>Root&#45;&gt;MAR</title>
+<path fill="none" stroke="#4b5563" d="M131.2,-382.98C157.51,-358.53 207.87,-314.9 258,-289 262.2,-286.83 266.59,-284.79 271.08,-282.88"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="272.17,-285.08 277.72,-280.17 270.32,-280.55 272.17,-285.08"/>
+</g>
+<g id="node12" class="node">
+<title>OPE</title>
+<path fill="#6b7280" stroke="#6b7280" d="M417.5,-222C417.5,-222 289.5,-222 289.5,-222 283.5,-222 277.5,-216 277.5,-210 277.5,-210 277.5,-198 277.5,-198 277.5,-192 283.5,-186 289.5,-186 289.5,-186 417.5,-186 417.5,-186 423.5,-186 429.5,-192 429.5,-198 429.5,-198 429.5,-210 429.5,-210 429.5,-216 423.5,-222 417.5,-222"/>
+<text text-anchor="middle" x="353.5" y="-200.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">OPE: operational risk</text>
+</g>
+<g id="edge11" class="edge">
+<title>Root&#45;&gt;OPE</title>
+<path fill="none" stroke="#4b5563" d="M122.97,-382.81C143.98,-347.95 194.74,-271.6 258,-231 262.05,-228.4 266.36,-226.04 270.82,-223.91"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="272.05,-226.04 277.44,-220.94 270.05,-221.57 272.05,-226.04"/>
+</g>
+<g id="node13" class="node">
+<title>LCR</title>
+<path fill="#6b7280" stroke="#6b7280" d="M419.5,-168C419.5,-168 287.5,-168 287.5,-168 281.5,-168 275.5,-162 275.5,-156 275.5,-156 275.5,-144 275.5,-144 275.5,-138 281.5,-132 287.5,-132 287.5,-132 419.5,-132 419.5,-132 425.5,-132 431.5,-138 431.5,-144 431.5,-144 431.5,-156 431.5,-156 431.5,-162 425.5,-168 419.5,-168"/>
+<text text-anchor="middle" x="353.5" y="-146.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">LCR and NSF: liquidity</text>
+</g>
+<g id="edge12" class="edge">
+<title>Root&#45;&gt;LCR</title>
+<path fill="none" stroke="#4b5563" d="M119.14,-382.74C135.63,-339.96 182.67,-232.68 258,-177 261.51,-174.4 265.27,-172.06 269.18,-169.94"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="270.29,-172.12 275.45,-166.78 268.09,-167.74 270.29,-172.12"/>
+</g>
+<g id="node14" class="node">
+<title>SRP</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M426,-114C426,-114 281,-114 281,-114 275,-114 269,-108 269,-102 269,-102 269,-86 269,-86 269,-80 275,-74 281,-74 281,-74 426,-74 426,-74 432,-74 438,-80 438,-86 438,-86 438,-102 438,-102 438,-108 432,-114 426,-114"/>
+<text text-anchor="middle" x="353.5" y="-97.4" font-family="Helvetica,sans-Serif" font-size="12.00">SRP: supervisory review</text>
+<text text-anchor="middle" x="353.5" y="-84.4" font-family="Helvetica,sans-Serif" font-size="12.00">(Pillar 2, ICAAP)</text>
+</g>
+<g id="edge13" class="edge">
+<title>Root&#45;&gt;SRP</title>
+<path fill="none" stroke="#4b5563" d="M116.74,-382.98C129.26,-333.67 170.84,-195.4 258,-123 260.1,-121.25 262.31,-119.61 264.6,-118.07"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="266.18,-119.97 270.85,-114.21 263.61,-115.8 266.18,-119.97"/>
+</g>
+<g id="node15" class="node">
+<title>DIS</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M398.5,-56C398.5,-56 308.5,-56 308.5,-56 302.5,-56 296.5,-50 296.5,-44 296.5,-44 296.5,-28 296.5,-28 296.5,-22 302.5,-16 308.5,-16 308.5,-16 398.5,-16 398.5,-16 404.5,-16 410.5,-22 410.5,-28 410.5,-28 410.5,-44 410.5,-44 410.5,-50 404.5,-56 398.5,-56"/>
+<text text-anchor="middle" x="353.5" y="-39.4" font-family="Helvetica,sans-Serif" font-size="12.00">DIS: disclosure</text>
+<text text-anchor="middle" x="353.5" y="-26.4" font-family="Helvetica,sans-Serif" font-size="12.00">(Pillar 3)</text>
+</g>
+<g id="edge14" class="edge">
+<title>Root&#45;&gt;DIS</title>
+<path fill="none" stroke="#4b5563" d="M114.96,-383C123.54,-327.13 157.34,-155.08 258,-65 266.98,-56.96 278.14,-51.16 289.62,-46.96"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="290.55,-49.23 296.39,-44.66 288.98,-44.59 290.55,-49.23"/>
+</g>
+</g>
+</svg>

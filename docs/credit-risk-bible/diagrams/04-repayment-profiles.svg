@@ -1,0 +1,220 @@
+<svg width="100%"
+ viewBox="0.00 0.00 762.80 318.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 304.4)">
+<title>RepaymentProfiles</title>
+<polygon fill="white" stroke="transparent" points="-14.4,14.4 -14.4,-304.4 748.4,-304.4 748.4,14.4 -14.4,14.4"/>
+<g id="clust1" class="cluster">
+<title>cluster_amort</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M20,-8C20,-8 691.5,-8 691.5,-8 697.5,-8 703.5,-14 703.5,-20 703.5,-20 703.5,-82 703.5,-82 703.5,-88 697.5,-94 691.5,-94 691.5,-94 20,-94 20,-94 14,-94 8,-88 8,-82 8,-82 8,-20 8,-20 8,-14 14,-8 20,-8"/>
+<text text-anchor="middle" x="355.75" y="-79.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">Amortising: 1,000 loan over 5 years, 200 principal each year</text>
+</g>
+<g id="clust2" class="cluster">
+<title>cluster_balloon</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M20,-102C20,-102 713,-102 713,-102 719,-102 725,-108 725,-114 725,-114 725,-176 725,-176 725,-182 719,-188 713,-188 713,-188 20,-188 20,-188 14,-188 8,-182 8,-176 8,-176 8,-114 8,-114 8,-108 14,-102 20,-102"/>
+<text text-anchor="middle" x="366.5" y="-173.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">Balloon: small instalments then a big final payment (refinancing risk at the end)</text>
+</g>
+<g id="clust3" class="cluster">
+<title>cluster_bullet</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M20,-196C20,-196 714,-196 714,-196 720,-196 726,-202 726,-208 726,-208 726,-270 726,-270 726,-276 720,-282 714,-282 714,-282 20,-282 20,-282 14,-282 8,-276 8,-270 8,-270 8,-208 8,-208 8,-202 14,-196 20,-196"/>
+<text text-anchor="middle" x="367" y="-267.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">Bullet: interest only, all principal at maturity (exposure never falls)</text>
+</g>
+<g id="node1" class="node">
+<title>A0</title>
+<path fill="#1f2937" stroke="#1f2937" d="M86,-58C86,-58 28,-58 28,-58 22,-58 16,-52 16,-46 16,-46 16,-34 16,-34 16,-28 22,-22 28,-22 28,-22 86,-22 86,-22 92,-22 98,-28 98,-34 98,-34 98,-46 98,-46 98,-52 92,-58 86,-58"/>
+<text text-anchor="middle" x="57" y="-43.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="white">Start</text>
+<text text-anchor="middle" x="57" y="-31.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="white">owes 1,000</text>
+</g>
+<g id="node2" class="node">
+<title>A1</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M197.5,-64C197.5,-64 150.5,-64 150.5,-64 144.5,-64 138.5,-58 138.5,-52 138.5,-52 138.5,-28 138.5,-28 138.5,-22 144.5,-16 150.5,-16 150.5,-16 197.5,-16 197.5,-16 203.5,-16 209.5,-22 209.5,-28 209.5,-28 209.5,-52 209.5,-52 209.5,-58 203.5,-64 197.5,-64"/>
+<text text-anchor="middle" x="174" y="-49.2" font-family="Helvetica,sans-Serif" font-size="11.00">Year 1</text>
+<text text-anchor="middle" x="174" y="-37.2" font-family="Helvetica,sans-Serif" font-size="11.00">pay 200</text>
+<text text-anchor="middle" x="174" y="-25.2" font-family="Helvetica,sans-Serif" font-size="11.00">owes 800</text>
+</g>
+<g id="edge1" class="edge">
+<title>A0&#45;&gt;A1</title>
+<path fill="none" stroke="#4b5563" d="M98.22,-40C108.85,-40 120.35,-40 131.07,-40"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="131.35,-42.45 138.35,-40 131.35,-37.55 131.35,-42.45"/>
+</g>
+<g id="node3" class="node">
+<title>A2</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M317.5,-64C317.5,-64 270.5,-64 270.5,-64 264.5,-64 258.5,-58 258.5,-52 258.5,-52 258.5,-28 258.5,-28 258.5,-22 264.5,-16 270.5,-16 270.5,-16 317.5,-16 317.5,-16 323.5,-16 329.5,-22 329.5,-28 329.5,-28 329.5,-52 329.5,-52 329.5,-58 323.5,-64 317.5,-64"/>
+<text text-anchor="middle" x="294" y="-49.2" font-family="Helvetica,sans-Serif" font-size="11.00">Year 2</text>
+<text text-anchor="middle" x="294" y="-37.2" font-family="Helvetica,sans-Serif" font-size="11.00">pay 200</text>
+<text text-anchor="middle" x="294" y="-25.2" font-family="Helvetica,sans-Serif" font-size="11.00">owes 600</text>
+</g>
+<g id="edge2" class="edge">
+<title>A1&#45;&gt;A2</title>
+<path fill="none" stroke="#4b5563" d="M209.77,-40C222.73,-40 237.58,-40 251.12,-40"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="251.48,-42.45 258.48,-40 251.48,-37.55 251.48,-42.45"/>
+</g>
+<g id="node4" class="node">
+<title>A3</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M437.5,-64C437.5,-64 390.5,-64 390.5,-64 384.5,-64 378.5,-58 378.5,-52 378.5,-52 378.5,-28 378.5,-28 378.5,-22 384.5,-16 390.5,-16 390.5,-16 437.5,-16 437.5,-16 443.5,-16 449.5,-22 449.5,-28 449.5,-28 449.5,-52 449.5,-52 449.5,-58 443.5,-64 437.5,-64"/>
+<text text-anchor="middle" x="414" y="-49.2" font-family="Helvetica,sans-Serif" font-size="11.00">Year 3</text>
+<text text-anchor="middle" x="414" y="-37.2" font-family="Helvetica,sans-Serif" font-size="11.00">pay 200</text>
+<text text-anchor="middle" x="414" y="-25.2" font-family="Helvetica,sans-Serif" font-size="11.00">owes 400</text>
+</g>
+<g id="edge3" class="edge">
+<title>A2&#45;&gt;A3</title>
+<path fill="none" stroke="#4b5563" d="M329.77,-40C342.73,-40 357.58,-40 371.12,-40"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="371.48,-42.45 378.48,-40 371.48,-37.55 371.48,-42.45"/>
+</g>
+<g id="node5" class="node">
+<title>A4</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M557.5,-64C557.5,-64 510.5,-64 510.5,-64 504.5,-64 498.5,-58 498.5,-52 498.5,-52 498.5,-28 498.5,-28 498.5,-22 504.5,-16 510.5,-16 510.5,-16 557.5,-16 557.5,-16 563.5,-16 569.5,-22 569.5,-28 569.5,-28 569.5,-52 569.5,-52 569.5,-58 563.5,-64 557.5,-64"/>
+<text text-anchor="middle" x="534" y="-49.2" font-family="Helvetica,sans-Serif" font-size="11.00">Year 4</text>
+<text text-anchor="middle" x="534" y="-37.2" font-family="Helvetica,sans-Serif" font-size="11.00">pay 200</text>
+<text text-anchor="middle" x="534" y="-25.2" font-family="Helvetica,sans-Serif" font-size="11.00">owes 200</text>
+</g>
+<g id="edge4" class="edge">
+<title>A3&#45;&gt;A4</title>
+<path fill="none" stroke="#4b5563" d="M449.77,-40C462.73,-40 477.58,-40 491.12,-40"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="491.48,-42.45 498.48,-40 491.48,-37.55 491.48,-42.45"/>
+</g>
+<g id="node6" class="node">
+<title>A5</title>
+<path fill="#065f46" stroke="#065f46" d="M683.5,-64C683.5,-64 644.5,-64 644.5,-64 638.5,-64 632.5,-58 632.5,-52 632.5,-52 632.5,-28 632.5,-28 632.5,-22 638.5,-16 644.5,-16 644.5,-16 683.5,-16 683.5,-16 689.5,-16 695.5,-22 695.5,-28 695.5,-28 695.5,-52 695.5,-52 695.5,-58 689.5,-64 683.5,-64"/>
+<text text-anchor="middle" x="664" y="-49.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="white">Year 5</text>
+<text text-anchor="middle" x="664" y="-37.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="white">pay 200</text>
+<text text-anchor="middle" x="664" y="-25.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="white">owes 0</text>
+</g>
+<g id="edge5" class="edge">
+<title>A4&#45;&gt;A5</title>
+<path fill="none" stroke="#4b5563" d="M569.64,-40C586.74,-40 607.42,-40 624.96,-40"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="625.26,-42.45 632.26,-40 625.26,-37.55 625.26,-42.45"/>
+</g>
+<g id="node7" class="node">
+<title>B0</title>
+<path fill="#1f2937" stroke="#1f2937" d="M86,-152C86,-152 28,-152 28,-152 22,-152 16,-146 16,-140 16,-140 16,-128 16,-128 16,-122 22,-116 28,-116 28,-116 86,-116 86,-116 92,-116 98,-122 98,-128 98,-128 98,-140 98,-140 98,-146 92,-152 86,-152"/>
+<text text-anchor="middle" x="57" y="-137.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="white">Start</text>
+<text text-anchor="middle" x="57" y="-125.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="white">owes 1,000</text>
+</g>
+<g id="node8" class="node">
+<title>B1</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M197.5,-158C197.5,-158 150.5,-158 150.5,-158 144.5,-158 138.5,-152 138.5,-146 138.5,-146 138.5,-122 138.5,-122 138.5,-116 144.5,-110 150.5,-110 150.5,-110 197.5,-110 197.5,-110 203.5,-110 209.5,-116 209.5,-122 209.5,-122 209.5,-146 209.5,-146 209.5,-152 203.5,-158 197.5,-158"/>
+<text text-anchor="middle" x="174" y="-143.2" font-family="Helvetica,sans-Serif" font-size="11.00">Year 1</text>
+<text text-anchor="middle" x="174" y="-131.2" font-family="Helvetica,sans-Serif" font-size="11.00">pay 50</text>
+<text text-anchor="middle" x="174" y="-119.2" font-family="Helvetica,sans-Serif" font-size="11.00">owes 950</text>
+</g>
+<g id="edge6" class="edge">
+<title>B0&#45;&gt;B1</title>
+<path fill="none" stroke="#4b5563" d="M98.22,-134C108.85,-134 120.35,-134 131.07,-134"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="131.35,-136.45 138.35,-134 131.35,-131.55 131.35,-136.45"/>
+</g>
+<g id="node9" class="node">
+<title>B2</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M317.5,-158C317.5,-158 270.5,-158 270.5,-158 264.5,-158 258.5,-152 258.5,-146 258.5,-146 258.5,-122 258.5,-122 258.5,-116 264.5,-110 270.5,-110 270.5,-110 317.5,-110 317.5,-110 323.5,-110 329.5,-116 329.5,-122 329.5,-122 329.5,-146 329.5,-146 329.5,-152 323.5,-158 317.5,-158"/>
+<text text-anchor="middle" x="294" y="-143.2" font-family="Helvetica,sans-Serif" font-size="11.00">Year 2</text>
+<text text-anchor="middle" x="294" y="-131.2" font-family="Helvetica,sans-Serif" font-size="11.00">pay 50</text>
+<text text-anchor="middle" x="294" y="-119.2" font-family="Helvetica,sans-Serif" font-size="11.00">owes 900</text>
+</g>
+<g id="edge7" class="edge">
+<title>B1&#45;&gt;B2</title>
+<path fill="none" stroke="#4b5563" d="M209.77,-134C222.73,-134 237.58,-134 251.12,-134"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="251.48,-136.45 258.48,-134 251.48,-131.55 251.48,-136.45"/>
+</g>
+<g id="node10" class="node">
+<title>B3</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M437.5,-158C437.5,-158 390.5,-158 390.5,-158 384.5,-158 378.5,-152 378.5,-146 378.5,-146 378.5,-122 378.5,-122 378.5,-116 384.5,-110 390.5,-110 390.5,-110 437.5,-110 437.5,-110 443.5,-110 449.5,-116 449.5,-122 449.5,-122 449.5,-146 449.5,-146 449.5,-152 443.5,-158 437.5,-158"/>
+<text text-anchor="middle" x="414" y="-143.2" font-family="Helvetica,sans-Serif" font-size="11.00">Year 3</text>
+<text text-anchor="middle" x="414" y="-131.2" font-family="Helvetica,sans-Serif" font-size="11.00">pay 50</text>
+<text text-anchor="middle" x="414" y="-119.2" font-family="Helvetica,sans-Serif" font-size="11.00">owes 850</text>
+</g>
+<g id="edge8" class="edge">
+<title>B2&#45;&gt;B3</title>
+<path fill="none" stroke="#4b5563" d="M329.77,-134C342.73,-134 357.58,-134 371.12,-134"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="371.48,-136.45 378.48,-134 371.48,-131.55 371.48,-136.45"/>
+</g>
+<g id="node11" class="node">
+<title>B4</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M557.5,-158C557.5,-158 510.5,-158 510.5,-158 504.5,-158 498.5,-152 498.5,-146 498.5,-146 498.5,-122 498.5,-122 498.5,-116 504.5,-110 510.5,-110 510.5,-110 557.5,-110 557.5,-110 563.5,-110 569.5,-116 569.5,-122 569.5,-122 569.5,-146 569.5,-146 569.5,-152 563.5,-158 557.5,-158"/>
+<text text-anchor="middle" x="534" y="-143.2" font-family="Helvetica,sans-Serif" font-size="11.00">Year 4</text>
+<text text-anchor="middle" x="534" y="-131.2" font-family="Helvetica,sans-Serif" font-size="11.00">pay 50</text>
+<text text-anchor="middle" x="534" y="-119.2" font-family="Helvetica,sans-Serif" font-size="11.00">owes 800</text>
+</g>
+<g id="edge9" class="edge">
+<title>B3&#45;&gt;B4</title>
+<path fill="none" stroke="#4b5563" d="M449.77,-134C462.73,-134 477.58,-134 491.12,-134"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="491.48,-136.45 498.48,-134 491.48,-131.55 491.48,-136.45"/>
+</g>
+<g id="node12" class="node">
+<title>B5</title>
+<path fill="#991b1b" stroke="#991b1b" d="M705,-158C705,-158 623,-158 623,-158 617,-158 611,-152 611,-146 611,-146 611,-122 611,-122 611,-116 617,-110 623,-110 623,-110 705,-110 705,-110 711,-110 717,-116 717,-122 717,-122 717,-146 717,-146 717,-152 711,-158 705,-158"/>
+<text text-anchor="middle" x="664" y="-143.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="white">Year 5</text>
+<text text-anchor="middle" x="664" y="-131.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="white">pay 800 balloon</text>
+<text text-anchor="middle" x="664" y="-119.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="white">owes 0</text>
+</g>
+<g id="edge10" class="edge">
+<title>B4&#45;&gt;B5</title>
+<path fill="none" stroke="#4b5563" d="M569.64,-134C580.06,-134 591.81,-134 603.37,-134"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="603.53,-136.45 610.53,-134 603.53,-131.55 603.53,-136.45"/>
+</g>
+<g id="node13" class="node">
+<title>C0</title>
+<path fill="#1f2937" stroke="#1f2937" d="M86,-246C86,-246 28,-246 28,-246 22,-246 16,-240 16,-234 16,-234 16,-222 16,-222 16,-216 22,-210 28,-210 28,-210 86,-210 86,-210 92,-210 98,-216 98,-222 98,-222 98,-234 98,-234 98,-240 92,-246 86,-246"/>
+<text text-anchor="middle" x="57" y="-231.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="white">Start</text>
+<text text-anchor="middle" x="57" y="-219.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="white">owes 1,000</text>
+</g>
+<g id="node14" class="node">
+<title>C1</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M206,-252C206,-252 142,-252 142,-252 136,-252 130,-246 130,-240 130,-240 130,-216 130,-216 130,-210 136,-204 142,-204 142,-204 206,-204 206,-204 212,-204 218,-210 218,-216 218,-216 218,-240 218,-240 218,-246 212,-252 206,-252"/>
+<text text-anchor="middle" x="174" y="-237.2" font-family="Helvetica,sans-Serif" font-size="11.00">Year 1</text>
+<text text-anchor="middle" x="174" y="-225.2" font-family="Helvetica,sans-Serif" font-size="11.00">interest only</text>
+<text text-anchor="middle" x="174" y="-213.2" font-family="Helvetica,sans-Serif" font-size="11.00">owes 1,000</text>
+</g>
+<g id="edge11" class="edge">
+<title>C0&#45;&gt;C1</title>
+<path fill="none" stroke="#4b5563" d="M98.22,-228C106.06,-228 114.36,-228 122.48,-228"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="122.87,-230.45 129.87,-228 122.87,-225.55 122.87,-230.45"/>
+</g>
+<g id="node15" class="node">
+<title>C2</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M326,-252C326,-252 262,-252 262,-252 256,-252 250,-246 250,-240 250,-240 250,-216 250,-216 250,-210 256,-204 262,-204 262,-204 326,-204 326,-204 332,-204 338,-210 338,-216 338,-216 338,-240 338,-240 338,-246 332,-252 326,-252"/>
+<text text-anchor="middle" x="294" y="-237.2" font-family="Helvetica,sans-Serif" font-size="11.00">Year 2</text>
+<text text-anchor="middle" x="294" y="-225.2" font-family="Helvetica,sans-Serif" font-size="11.00">interest only</text>
+<text text-anchor="middle" x="294" y="-213.2" font-family="Helvetica,sans-Serif" font-size="11.00">owes 1,000</text>
+</g>
+<g id="edge12" class="edge">
+<title>C1&#45;&gt;C2</title>
+<path fill="none" stroke="#4b5563" d="M218.27,-228C226.12,-228 234.38,-228 242.43,-228"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="242.74,-230.45 249.74,-228 242.74,-225.55 242.74,-230.45"/>
+</g>
+<g id="node16" class="node">
+<title>C3</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M446,-252C446,-252 382,-252 382,-252 376,-252 370,-246 370,-240 370,-240 370,-216 370,-216 370,-210 376,-204 382,-204 382,-204 446,-204 446,-204 452,-204 458,-210 458,-216 458,-216 458,-240 458,-240 458,-246 452,-252 446,-252"/>
+<text text-anchor="middle" x="414" y="-237.2" font-family="Helvetica,sans-Serif" font-size="11.00">Year 3</text>
+<text text-anchor="middle" x="414" y="-225.2" font-family="Helvetica,sans-Serif" font-size="11.00">interest only</text>
+<text text-anchor="middle" x="414" y="-213.2" font-family="Helvetica,sans-Serif" font-size="11.00">owes 1,000</text>
+</g>
+<g id="edge13" class="edge">
+<title>C2&#45;&gt;C3</title>
+<path fill="none" stroke="#4b5563" d="M338.27,-228C346.12,-228 354.38,-228 362.43,-228"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="362.74,-230.45 369.74,-228 362.74,-225.55 362.74,-230.45"/>
+</g>
+<g id="node17" class="node">
+<title>C4</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M566,-252C566,-252 502,-252 502,-252 496,-252 490,-246 490,-240 490,-240 490,-216 490,-216 490,-210 496,-204 502,-204 502,-204 566,-204 566,-204 572,-204 578,-210 578,-216 578,-216 578,-240 578,-240 578,-246 572,-252 566,-252"/>
+<text text-anchor="middle" x="534" y="-237.2" font-family="Helvetica,sans-Serif" font-size="11.00">Year 4</text>
+<text text-anchor="middle" x="534" y="-225.2" font-family="Helvetica,sans-Serif" font-size="11.00">interest only</text>
+<text text-anchor="middle" x="534" y="-213.2" font-family="Helvetica,sans-Serif" font-size="11.00">owes 1,000</text>
+</g>
+<g id="edge14" class="edge">
+<title>C3&#45;&gt;C4</title>
+<path fill="none" stroke="#4b5563" d="M458.27,-228C466.12,-228 474.38,-228 482.43,-228"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="482.74,-230.45 489.74,-228 482.74,-225.55 482.74,-230.45"/>
+</g>
+<g id="node18" class="node">
+<title>C5</title>
+<path fill="#991b1b" stroke="#991b1b" d="M706,-252C706,-252 622,-252 622,-252 616,-252 610,-246 610,-240 610,-240 610,-216 610,-216 610,-210 616,-204 622,-204 622,-204 706,-204 706,-204 712,-204 718,-210 718,-216 718,-216 718,-240 718,-240 718,-246 712,-252 706,-252"/>
+<text text-anchor="middle" x="664" y="-237.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="white">Year 5</text>
+<text text-anchor="middle" x="664" y="-225.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="white">pay 1,000 bullet</text>
+<text text-anchor="middle" x="664" y="-213.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="white">owes 0</text>
+</g>
+<g id="edge15" class="edge">
+<title>C4&#45;&gt;C5</title>
+<path fill="none" stroke="#4b5563" d="M578.33,-228C586.11,-228 594.34,-228 602.49,-228"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="602.94,-230.45 609.94,-228 602.94,-225.55 602.94,-230.45"/>
+</g>
+</g>
+</svg>

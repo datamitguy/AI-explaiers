@@ -1,0 +1,45 @@
+digraph RWAProcess {
+  graph [rankdir=TB, splines=true, nodesep=0.3, ranksep=0.45, fontname="Helvetica", fontsize=13, bgcolor="white", newrank=true, pad=0.2];
+  node  [shape=box, style="rounded,filled", fillcolor="#eef2ff", color="#6366f1", fontname="Helvetica", fontsize=12, margin="0.18,0.10"];
+  edge  [color="#4b5563", arrowsize=0.7, fontname="Helvetica", fontsize=10, fontcolor="#374151"];
+
+  Start [label="Quarter end\n(reporting date)", fillcolor="#1f2937", fontcolor="white", color="#1f2937"];
+
+  subgraph cluster_data {
+    label="Week 1: data collection"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
+    Src [label="Source systems\nloan books, trading, collateral,\ncustomer master, ratings"];
+    Stg [label="Staging and reconciliation\nbalances tied to general ledger\ncompleteness checks"];
+    Src -> Stg;
+  }
+
+  subgraph cluster_class {
+    label="Week 1 to 2: classification"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
+    Cls [label="Exposure class, approach,\nCRM eligibility, default flag,\nnetting set assignment"];
+    DQ  [label="Data quality gate\nunrated, missing collateral,\nunknown country?", shape=diamond, style=filled, fillcolor="#fef3c7", color="#d97706", margin="0.05,0.05"];
+    Fix [label="Fix at source or apply\nconservative default\n(logged and owned)", fillcolor="#991b1b", fontcolor="white", color="#991b1b"];
+    Cls -> DQ;
+    DQ -> Fix [label=" issues"];
+    Fix -> Cls [label=" rerun"];
+  }
+
+  subgraph cluster_calc {
+    label="Week 2 to 3: calculation"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
+    Eng [label="Calculation engine\nSA tables, IRB formula,\nSA-CCR, securitisation, output floor"];
+    Adj [label="Manual adjustments\n(known gaps, late trades)\neach with owner and expiry"];
+    Var [label="Variance analysis\nmovement versus last quarter\nexplained by driver"];
+    Eng -> Adj -> Var;
+  }
+
+  subgraph cluster_sign {
+    label="Week 3 to 4: sign-off and submission"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
+    Rev [label="Review by finance, risk\nand internal control"];
+    Sgn [label="Sign-off\nCFO / CRO attestation"];
+    Sub [label="Submission to regulator\nand Pillar 3 disclosure", fillcolor="#065f46", fontcolor="white", color="#065f46"];
+    Rev -> Sgn -> Sub;
+  }
+
+  Start -> Src;
+  Stg -> Cls;
+  DQ -> Eng [label=" clean"];
+  Var -> Rev;
+}

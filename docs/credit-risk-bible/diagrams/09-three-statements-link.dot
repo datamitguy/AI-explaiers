@@ -1,0 +1,43 @@
+digraph ThreeStatements {
+  graph [rankdir=TB, splines=true, nodesep=0.4, ranksep=0.5, fontname="Helvetica", fontsize=13, bgcolor="white", pad=0.2, newrank=true];
+  node  [shape=box, style="rounded,filled", fillcolor="#eef2ff", color="#6366f1", fontname="Helvetica", fontsize=12, margin="0.18,0.10"];
+  edge  [color="#4b5563", arrowsize=0.7, fontname="Helvetica", fontsize=10, fontcolor="#374151"];
+
+  subgraph cluster_is {
+    label="Income statement (a year: what was earned)"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
+    Rev  [label="Revenue 1,000"];
+    EBITDA [label="EBITDA 150\n(before interest, tax,\ndepreciation, amortisation)"];
+    Dep  [label="Depreciation 40"];
+    Int  [label="Interest 20"];
+    Tax  [label="Tax 22"];
+    NI   [label="Net income 68", fillcolor="#1f2937", fontcolor="white", color="#1f2937"];
+    Rev -> EBITDA -> Dep -> Int -> Tax -> NI;
+  }
+
+  subgraph cluster_cf {
+    label="Cash flow statement (a year: where cash went)"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
+    CFO  [label="Operating cash flow 95\n= net income + depreciation\n- increase in working capital 13"];
+    CFI  [label="Investing cash flow -60\n(capital expenditure)"];
+    CFF  [label="Financing cash flow -25\n(debt repaid 15, dividends 10)"];
+    Net  [label="Net change in cash +10", fillcolor="#1f2937", fontcolor="white", color="#1f2937"];
+    CFO -> CFI -> CFF -> Net;
+  }
+
+  subgraph cluster_bs {
+    label="Balance sheet (a snapshot at year end)"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
+    Cash [label="Cash 50 -> 60"];
+    PPE  [label="Fixed assets 400 -> 420\n(+60 capex, -40 depreciation)"];
+    WC   [label="Working capital 100 -> 113"];
+    Debt [label="Debt 400 -> 385"];
+    Eq   [label="Equity 150 -> 208\n(+68 net income, -10 dividends)", fillcolor="#1f2937", fontcolor="white", color="#1f2937"];
+  }
+
+  NI  -> CFO  [label=" starting point", color="#6366f1"];
+  NI  -> Eq   [label=" retained profit", color="#6366f1"];
+  Dep -> CFO  [label=" added back\n(not cash)", style=dashed];
+  Dep -> PPE  [label=" reduces", style=dashed];
+  Net -> Cash [label=" closing cash", color="#6366f1"];
+  CFI -> PPE  [label=" capex adds", style=dashed];
+  CFF -> Debt [label=" repayment", style=dashed];
+  Int -> Debt [label=" interest on", style=dashed, dir=back];
+}

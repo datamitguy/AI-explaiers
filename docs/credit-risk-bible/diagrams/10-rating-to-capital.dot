@@ -1,0 +1,29 @@
+digraph RatingToCapital {
+  graph [rankdir=TB, splines=true, nodesep=0.4, ranksep=0.45, fontname="Helvetica", fontsize=13, bgcolor="white", pad=0.2, newrank=true];
+  node  [shape=box, style="rounded,filled", fillcolor="#eef2ff", color="#6366f1", fontname="Helvetica", fontsize=12, margin="0.18,0.10"];
+  edge  [color="#4b5563", arrowsize=0.7, fontname="Helvetica", fontsize=10, fontcolor="#374151"];
+
+  Grade [label="Internal grade from the rating model\nor scorecard (e.g. grade 12 of 22)", fillcolor="#1f2937", fontcolor="white", color="#1f2937"];
+
+  subgraph cluster_params {
+    label="The three IRB parameters"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
+    PD  [label="PD model\nGrade mapped to calibrated\nlong-run PD (e.g. 1.2%, floor 0.05%)"];
+    LGD [label="LGD model\nCollateral type, seniority, recoveries\nfrom workout data, downturn add-on\n(e.g. 35%)"];
+    EAD [label="EAD model\nDrawn + CCF x undrawn\n(e.g. 9m + 40% x 2m = 9.8m)"];
+  }
+
+  EL  [label="Expected loss = PD x LGD x EAD\n= 1.2% x 35% x 9.8m = 41k per year\nfeeds pricing and provisions", fillcolor="#1e3a8a", fontcolor="white", color="#1e3a8a"];
+  K   [label="Basel IRB formula\nK(PD, LGD, M) = capital per unit of exposure\n(e.g. 6%)"];
+  RWA [label="RWA = EAD x K x 12.5\n= 9.8m x 6% x 12.5 = 7.35m", fillcolor="#1e3a8a", fontcolor="white", color="#1e3a8a"];
+  Cap [label="Capital = RWA x ratio\n(e.g. 7.35m x 10.5% = 772k)", fillcolor="#065f46", fontcolor="white", color="#065f46"];
+  Uses [label="Also used for: pricing (RAROC), limits,\nIFRS 9 staging, stress testing, reporting", fillcolor="#6b7280", fontcolor="white", color="#6b7280"];
+
+  Grade -> PD;
+  Grade -> LGD [style=dashed, label=" sometimes"];
+  {PD LGD EAD} -> EL;
+  {PD LGD} -> K;
+  {K EAD} -> RWA;
+  RWA -> Cap;
+  EL -> Uses [style=dashed];
+  Cap -> Uses [style=dashed];
+}

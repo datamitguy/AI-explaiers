@@ -1,0 +1,26 @@
+digraph UnderwriteSyndicate {
+  graph [rankdir=TB, splines=true, nodesep=0.35, ranksep=0.45, fontname="Helvetica", fontsize=13, bgcolor="white", pad=0.2, newrank=true];
+  node  [shape=box, style="rounded,filled", fillcolor="#eef2ff", color="#6366f1", fontname="Helvetica", fontsize=12, margin="0.18,0.10"];
+  edge  [color="#4b5563", arrowsize=0.7, fontname="Helvetica", fontsize=10, fontcolor="#374151"];
+
+  Start [label="Private equity sponsor wins the auction\nfor a target company", fillcolor="#1f2937", fontcolor="white", color="#1f2937"];
+  Mandate [label="Sponsor mandates 2 to 4 banks as\nmandated lead arrangers and underwriters\n(signed commitment letter, fee letter)"];
+  Approve [label="Each bank's credit committee approves\nthe underwriting: full hold amount,\ntarget final hold, flex terms"];
+  Sign [label="Signing and closing: banks fund the\nwhole loan (e.g. 500 between 2 banks)\nThe target is bought"];
+  Launch [label="Syndication launch: bank meeting,\ninformation memorandum, rating from\nagencies, price talk to investors"];
+  Book [label="Bookbuilding over 2 to 3 weeks:\ninvestors (banks, CLOs, funds)\nsubmit orders"];
+  Demand [label="Enough demand at the\nproposed terms?", shape=diamond, style=filled, fillcolor="#fef3c7", color="#d97706", margin="0.05,0.05"];
+  Flex [label="Use market flex: raise the margin,\nwiden the discount, tighten terms\n(cost comes out of the underwriting fee)"];
+  Sell [label="Allocate and sell down to final hold\n(e.g. each bank keeps 25 of 250)", fillcolor="#065f46", fontcolor="white", color="#065f46"];
+  Hung [label="Hung deal: banks stuck holding far more\nthan planned, mark-to-market loss,\ncapital and concentration limits breached", fillcolor="#991b1b", fontcolor="white", color="#991b1b"];
+  Hold [label="Final hold sits in the banking book,\nmonitored like any other loan"];
+  CLO  [label="CLO (collateralised loan obligation)\nbuys term loan B pieces and\nfunds them by issuing rated notes", fillcolor="#6b7280", fontcolor="white", color="#6b7280"];
+
+  Start -> Mandate -> Approve -> Sign -> Launch -> Book -> Demand;
+  Demand -> Sell [label=" yes"];
+  Demand -> Flex [label=" no, within flex"];
+  Flex -> Book;
+  Demand -> Hung [label=" no, flex exhausted"];
+  Sell -> Hold;
+  Sell -> CLO [style=dashed, label=" large buyer"];
+}

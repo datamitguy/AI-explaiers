@@ -1,0 +1,20 @@
+digraph CashFlowWaterfall {
+  graph [rankdir=TB, splines=true, nodesep=0.3, ranksep=0.35, fontname="Helvetica", fontsize=13, bgcolor="white", pad=0.2];
+  node  [shape=box, style="rounded,filled", fillcolor="#eef2ff", color="#6366f1", fontname="Helvetica", fontsize=12, margin="0.18,0.10", width=4.4];
+  edge  [color="#4b5563", arrowsize=0.7, fontname="Helvetica", fontsize=10, fontcolor="#374151"];
+
+  Rev [label="Project revenue arrives\n(illustrative: 100 per year from the offtaker)", fillcolor="#1f2937", fontcolor="white", color="#1f2937"];
+  L1  [label="1. Operating costs and taxes\n(O&M fees, fuel, insurance, land rent)\nleaves CFADS: cash flow available\nfor debt service, say 70"];
+  L2  [label="2. Senior debt interest and fees"];
+  L3  [label="3. Senior debt principal repayment\n(scheduled instalments)"];
+  L4  [label="4. Top up the debt service reserve account\n(DSRA, usually 6 months of debt service)"];
+  L5  [label="5. Top up the maintenance reserve account\n(MRA, for big future overhauls)"];
+  L6  [label="6. Subordinated and shareholder loans"];
+  Test [label="Distribution test passed?\n(DSCR above lock-up level, no default)", shape=diamond, style=filled, fillcolor="#fef3c7", color="#d97706", margin="0.05,0.05", width=1];
+  L7  [label="7. Distributions to sponsors (dividends)", fillcolor="#065f46", fontcolor="white", color="#065f46"];
+  Lock [label="Lock-up: cash trapped in the project\naccounts until the test is passed again\n(may be swept to prepay debt)", fillcolor="#991b1b", fontcolor="white", color="#991b1b"];
+
+  Rev -> L1 -> L2 -> L3 -> L4 -> L5 -> L6 -> Test;
+  Test -> L7   [label=" yes"];
+  Test -> Lock [label=" no"];
+}

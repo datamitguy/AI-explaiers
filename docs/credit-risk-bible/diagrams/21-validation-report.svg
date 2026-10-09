@@ -1,0 +1,173 @@
+<svg width="100%"
+ viewBox="0.00 0.00 1157.80 627.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 613.4)">
+<title>ValidationReport</title>
+<polygon fill="white" stroke="transparent" points="-14.4,14.4 -14.4,-613.4 1143.4,-613.4 1143.4,14.4 -14.4,14.4"/>
+<g id="clust1" class="cluster">
+<title>cluster_q</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M293,-8C293,-8 551,-8 551,-8 557,-8 563,-14 563,-20 563,-20 563,-579 563,-579 563,-585 557,-591 551,-591 551,-591 293,-591 293,-591 287,-591 281,-585 281,-579 281,-579 281,-20 281,-20 281,-14 287,-8 293,-8"/>
+<text text-anchor="middle" x="422" y="-576.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">Questions the validation report answers</text>
+</g>
+<g id="node1" class="node">
+<title>Model</title>
+<path fill="#1f2937" stroke="#1f2937" d="M232,-309C232,-309 12,-309 12,-309 6,-309 0,-303 0,-297 0,-297 0,-281 0,-281 0,-275 6,-269 12,-269 12,-269 232,-269 232,-269 238,-269 244,-275 244,-281 244,-281 244,-297 244,-297 244,-303 238,-309 232,-309"/>
+<text text-anchor="middle" x="122" y="-292.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Model under validation</text>
+<text text-anchor="middle" x="122" y="-279.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">(for example a corporate PD model)</text>
+</g>
+<g id="node2" class="node">
+<title>Con</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M491,-560.5C491,-560.5 353,-560.5 353,-560.5 347,-560.5 341,-554.5 341,-548.5 341,-548.5 341,-519.5 341,-519.5 341,-513.5 347,-507.5 353,-507.5 353,-507.5 491,-507.5 491,-507.5 497,-507.5 503,-513.5 503,-519.5 503,-519.5 503,-548.5 503,-548.5 503,-554.5 497,-560.5 491,-560.5"/>
+<text text-anchor="middle" x="422" y="-543.9" font-family="Helvetica,sans-Serif" font-size="12.00">Conceptual soundness</text>
+<text text-anchor="middle" x="422" y="-530.9" font-family="Helvetica,sans-Serif" font-size="12.00">Is the method sensible</text>
+<text text-anchor="middle" x="422" y="-517.9" font-family="Helvetica,sans-Serif" font-size="12.00">for this portfolio?</text>
+</g>
+<g id="edge1" class="edge">
+<title>Model&#45;&gt;Con</title>
+<path fill="none" stroke="#4b5563" d="M132.48,-309.13C153.21,-350.92 206.76,-447.31 281,-497 296.82,-507.58 315.52,-515.15 334.02,-520.54"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="333.42,-522.92 340.82,-522.44 334.74,-518.2 333.42,-522.92"/>
+</g>
+<g id="node3" class="node">
+<title>Dat</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M498.5,-485.5C498.5,-485.5 345.5,-485.5 345.5,-485.5 339.5,-485.5 333.5,-479.5 333.5,-473.5 333.5,-473.5 333.5,-444.5 333.5,-444.5 333.5,-438.5 339.5,-432.5 345.5,-432.5 345.5,-432.5 498.5,-432.5 498.5,-432.5 504.5,-432.5 510.5,-438.5 510.5,-444.5 510.5,-444.5 510.5,-473.5 510.5,-473.5 510.5,-479.5 504.5,-485.5 498.5,-485.5"/>
+<text text-anchor="middle" x="422" y="-468.9" font-family="Helvetica,sans-Serif" font-size="12.00">Data</text>
+<text text-anchor="middle" x="422" y="-455.9" font-family="Helvetica,sans-Serif" font-size="12.00">Is the history long, clean,</text>
+<text text-anchor="middle" x="422" y="-442.9" font-family="Helvetica,sans-Serif" font-size="12.00">and representative?</text>
+</g>
+<g id="edge2" class="edge">
+<title>Model&#45;&gt;Dat</title>
+<path fill="none" stroke="#4b5563" d="M141.42,-309.13C169.01,-338.08 223.95,-391.26 281,-421 295.17,-428.38 310.91,-434.44 326.58,-439.38"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="325.87,-441.73 333.28,-441.43 327.3,-437.04 325.87,-441.73"/>
+</g>
+<g id="node4" class="node">
+<title>Dis</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M502.5,-410C502.5,-410 341.5,-410 341.5,-410 335.5,-410 329.5,-404 329.5,-398 329.5,-398 329.5,-356 329.5,-356 329.5,-350 335.5,-344 341.5,-344 341.5,-344 502.5,-344 502.5,-344 508.5,-344 514.5,-350 514.5,-356 514.5,-356 514.5,-398 514.5,-398 514.5,-404 508.5,-410 502.5,-410"/>
+<text text-anchor="middle" x="422" y="-393.4" font-family="Helvetica,sans-Serif" font-size="12.00">Discriminatory power</text>
+<text text-anchor="middle" x="422" y="-380.4" font-family="Helvetica,sans-Serif" font-size="12.00">Does it rank good and bad</text>
+<text text-anchor="middle" x="422" y="-367.4" font-family="Helvetica,sans-Serif" font-size="12.00">borrowers correctly?</text>
+<text text-anchor="middle" x="422" y="-354.4" font-family="Helvetica,sans-Serif" font-size="12.00">(Gini, KS, AUC)</text>
+</g>
+<g id="edge3" class="edge">
+<title>Model&#45;&gt;Dis</title>
+<path fill="none" stroke="#4b5563" d="M190.99,-309.08C229.88,-320.56 279.35,-335.17 322.44,-347.89"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="321.89,-350.29 329.29,-349.92 323.28,-345.59 321.89,-350.29"/>
+</g>
+<g id="node5" class="node">
+<title>Cal</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M515,-322C515,-322 329,-322 329,-322 323,-322 317,-316 317,-310 317,-310 317,-268 317,-268 317,-262 323,-256 329,-256 329,-256 515,-256 515,-256 521,-256 527,-262 527,-268 527,-268 527,-310 527,-310 527,-316 521,-322 515,-322"/>
+<text text-anchor="middle" x="422" y="-305.4" font-family="Helvetica,sans-Serif" font-size="12.00">Calibration</text>
+<text text-anchor="middle" x="422" y="-292.4" font-family="Helvetica,sans-Serif" font-size="12.00">Are predicted PDs close</text>
+<text text-anchor="middle" x="422" y="-279.4" font-family="Helvetica,sans-Serif" font-size="12.00">to observed defaults?</text>
+<text text-anchor="middle" x="422" y="-266.4" font-family="Helvetica,sans-Serif" font-size="12.00">(binomial, Hosmer&#45;Lemeshow)</text>
+</g>
+<g id="edge4" class="edge">
+<title>Model&#45;&gt;Cal</title>
+<path fill="none" stroke="#4b5563" d="M244.21,-289C265.78,-289 288.16,-289 309.44,-289"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="309.62,-291.45 316.62,-289 309.62,-286.55 309.62,-291.45"/>
+</g>
+<g id="node6" class="node">
+<title>Sta</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M504,-233.5C504,-233.5 340,-233.5 340,-233.5 334,-233.5 328,-227.5 328,-221.5 328,-221.5 328,-192.5 328,-192.5 328,-186.5 334,-180.5 340,-180.5 340,-180.5 504,-180.5 504,-180.5 510,-180.5 516,-186.5 516,-192.5 516,-192.5 516,-221.5 516,-221.5 516,-227.5 510,-233.5 504,-233.5"/>
+<text text-anchor="middle" x="422" y="-216.9" font-family="Helvetica,sans-Serif" font-size="12.00">Stability</text>
+<text text-anchor="middle" x="422" y="-203.9" font-family="Helvetica,sans-Serif" font-size="12.00">Has the population drifted?</text>
+<text text-anchor="middle" x="422" y="-190.9" font-family="Helvetica,sans-Serif" font-size="12.00">(PSI, migration)</text>
+</g>
+<g id="edge5" class="edge">
+<title>Model&#45;&gt;Sta</title>
+<path fill="none" stroke="#4b5563" d="M194.55,-268.97C221.62,-261.42 252.72,-252.78 281,-245 293.92,-241.45 307.53,-237.73 320.96,-234.07"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="321.86,-236.36 327.97,-232.16 320.58,-231.63 321.86,-236.36"/>
+</g>
+<g id="node7" class="node">
+<title>Ben</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M494.5,-158C494.5,-158 349.5,-158 349.5,-158 343.5,-158 337.5,-152 337.5,-146 337.5,-146 337.5,-104 337.5,-104 337.5,-98 343.5,-92 349.5,-92 349.5,-92 494.5,-92 494.5,-92 500.5,-92 506.5,-98 506.5,-104 506.5,-104 506.5,-146 506.5,-146 506.5,-152 500.5,-158 494.5,-158"/>
+<text text-anchor="middle" x="422" y="-141.4" font-family="Helvetica,sans-Serif" font-size="12.00">Benchmarking</text>
+<text text-anchor="middle" x="422" y="-128.4" font-family="Helvetica,sans-Serif" font-size="12.00">How does it compare to</text>
+<text text-anchor="middle" x="422" y="-115.4" font-family="Helvetica,sans-Serif" font-size="12.00">external ratings or</text>
+<text text-anchor="middle" x="422" y="-102.4" font-family="Helvetica,sans-Serif" font-size="12.00">challenger models?</text>
+</g>
+<g id="edge6" class="edge">
+<title>Model&#45;&gt;Ben</title>
+<path fill="none" stroke="#4b5563" d="M144.92,-268.66C174.02,-242.59 227.95,-197.5 281,-170 296.51,-161.96 313.73,-155 330.63,-149.13"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="331.51,-151.42 337.34,-146.84 329.93,-146.78 331.51,-151.42"/>
+</g>
+<g id="node8" class="node">
+<title>Imp</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M509.5,-69.5C509.5,-69.5 334.5,-69.5 334.5,-69.5 328.5,-69.5 322.5,-63.5 322.5,-57.5 322.5,-57.5 322.5,-28.5 322.5,-28.5 322.5,-22.5 328.5,-16.5 334.5,-16.5 334.5,-16.5 509.5,-16.5 509.5,-16.5 515.5,-16.5 521.5,-22.5 521.5,-28.5 521.5,-28.5 521.5,-57.5 521.5,-57.5 521.5,-63.5 515.5,-69.5 509.5,-69.5"/>
+<text text-anchor="middle" x="422" y="-52.9" font-family="Helvetica,sans-Serif" font-size="12.00">Implementation testing</text>
+<text text-anchor="middle" x="422" y="-39.9" font-family="Helvetica,sans-Serif" font-size="12.00">Does production code match</text>
+<text text-anchor="middle" x="422" y="-26.9" font-family="Helvetica,sans-Serif" font-size="12.00">the documented model?</text>
+</g>
+<g id="edge7" class="edge">
+<title>Model&#45;&gt;Imp</title>
+<path fill="none" stroke="#4b5563" d="M132.5,-268.9C153.29,-227.19 206.92,-130.93 281,-81 291.48,-73.93 303.24,-68.18 315.37,-63.49"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="316.42,-65.71 322.14,-60.99 314.72,-61.11 316.42,-65.71"/>
+</g>
+<g id="node9" class="node">
+<title>Rating</title>
+<polygon fill="#fef3c7" stroke="#d97706" points="724,-323 600,-289 724,-255 848,-289 724,-323"/>
+<text text-anchor="middle" x="724" y="-292.4" font-family="Helvetica,sans-Serif" font-size="12.00">Overall rating and</text>
+<text text-anchor="middle" x="724" y="-279.4" font-family="Helvetica,sans-Serif" font-size="12.00">findings by severity</text>
+</g>
+<g id="edge8" class="edge">
+<title>Con&#45;&gt;Rating</title>
+<path fill="none" stroke="#4b5563" d="M503.13,-522.36C523.79,-516.88 545.2,-508.83 563,-497 629.31,-452.91 679.66,-372.07 704.93,-325.21"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="707.2,-326.16 708.33,-318.83 702.87,-323.86 707.2,-326.16"/>
+</g>
+<g id="edge9" class="edge">
+<title>Dat&#45;&gt;Rating</title>
+<path fill="none" stroke="#4b5563" d="M510.68,-441.35C528.52,-436.08 546.78,-429.39 563,-421 613.34,-394.96 662.26,-351.04 692.48,-321.07"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="694.32,-322.7 697.53,-316.02 690.85,-319.24 694.32,-322.7"/>
+</g>
+<g id="edge10" class="edge">
+<title>Dis&#45;&gt;Rating</title>
+<path fill="none" stroke="#4b5563" d="M514.64,-350.12C560.34,-336.71 614.61,-320.79 656.3,-308.56"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="657.12,-310.88 663.15,-306.56 655.74,-306.18 657.12,-310.88"/>
+</g>
+<g id="edge11" class="edge">
+<title>Cal&#45;&gt;Rating</title>
+<path fill="none" stroke="#4b5563" d="M527.08,-289C548.23,-289 570.73,-289 592.66,-289"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="592.76,-291.45 599.76,-289 592.76,-286.55 592.76,-291.45"/>
+</g>
+<g id="edge12" class="edge">
+<title>Sta&#45;&gt;Rating</title>
+<path fill="none" stroke="#4b5563" d="M516.02,-232.2C531.7,-236.46 547.82,-240.85 563,-245 592.97,-253.19 626.09,-262.29 654.39,-270.08"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="654.07,-272.53 661.47,-272.03 655.37,-267.81 654.07,-272.53"/>
+</g>
+<g id="edge13" class="edge">
+<title>Ben&#45;&gt;Rating</title>
+<path fill="none" stroke="#4b5563" d="M506.62,-146.92C525.63,-153.25 545.41,-160.95 563,-170 609.94,-194.16 657.74,-231.76 688.71,-258.22"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="687.39,-260.32 694.3,-263.03 690.59,-256.61 687.39,-260.32"/>
+</g>
+<g id="edge14" class="edge">
+<title>Imp&#45;&gt;Rating</title>
+<path fill="none" stroke="#4b5563" d="M521.82,-61.06C536.32,-66.15 550.55,-72.66 563,-81 629.16,-125.31 679.56,-206.07 704.88,-252.85"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="702.83,-254.2 708.29,-259.22 707.15,-251.89 702.83,-254.2"/>
+</g>
+<g id="node10" class="node">
+<title>Ok</title>
+<path fill="#065f46" stroke="#065f46" d="M1116,-350.5C1116,-350.5 969,-350.5 969,-350.5 963,-350.5 957,-344.5 957,-338.5 957,-338.5 957,-309.5 957,-309.5 957,-303.5 963,-297.5 969,-297.5 969,-297.5 1116,-297.5 1116,-297.5 1122,-297.5 1128,-303.5 1128,-309.5 1128,-309.5 1128,-338.5 1128,-338.5 1128,-344.5 1122,-350.5 1116,-350.5"/>
+<text text-anchor="middle" x="1042.5" y="-333.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Approved for use</text>
+<text text-anchor="middle" x="1042.5" y="-320.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">(possibly with conditions</text>
+<text text-anchor="middle" x="1042.5" y="-307.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">and an overlay)</text>
+</g>
+<g id="edge15" class="edge">
+<title>Rating&#45;&gt;Ok</title>
+<path fill="none" stroke="#4b5563" d="M812.74,-298.7C855.37,-303.42 906.58,-309.08 949.74,-313.85"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="949.64,-316.31 956.86,-314.64 950.18,-311.44 949.64,-316.31"/>
+<text text-anchor="middle" x="902" y="-325" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> findings</text>
+<text text-anchor="middle" x="902" y="-314" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> manageable</text>
+</g>
+<g id="node11" class="node">
+<title>Bad</title>
+<path fill="#991b1b" stroke="#991b1b" d="M1117,-275C1117,-275 968,-275 968,-275 962,-275 956,-269 956,-263 956,-263 956,-247 956,-247 956,-241 962,-235 968,-235 968,-235 1117,-235 1117,-235 1123,-235 1129,-241 1129,-247 1129,-247 1129,-263 1129,-263 1129,-269 1123,-275 1117,-275"/>
+<text text-anchor="middle" x="1042.5" y="-258.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Not approved</text>
+<text text-anchor="middle" x="1042.5" y="-245.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">redevelop or restrict use</text>
+</g>
+<g id="edge16" class="edge">
+<title>Rating&#45;&gt;Bad</title>
+<path fill="none" stroke="#4b5563" d="M813.58,-279.48C855.77,-274.95 906.2,-269.53 948.89,-264.95"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="949.24,-267.37 955.94,-264.19 948.72,-262.5 949.24,-267.37"/>
+<text text-anchor="middle" x="902" y="-287" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> critical</text>
+<text text-anchor="middle" x="902" y="-276" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> findings</text>
+</g>
+</g>
+</svg>

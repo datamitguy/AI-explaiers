@@ -1,0 +1,38 @@
+digraph RepaymentProfiles {
+  graph [rankdir=LR, splines=true, nodesep=0.2, ranksep=0.45, fontname="Helvetica", fontsize=13, bgcolor="white", newrank=true, pad=0.2];
+  node  [shape=box, style="rounded,filled", fillcolor="#eef2ff", color="#6366f1", fontname="Helvetica", fontsize=11, margin="0.12,0.08"];
+  edge  [color="#4b5563", arrowsize=0.7, fontname="Helvetica", fontsize=10, fontcolor="#374151"];
+
+  subgraph cluster_amort {
+    label="Amortising: 1,000 loan over 5 years, 200 principal each year"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
+    A0 [label="Start\nowes 1,000", fillcolor="#1f2937", fontcolor="white", color="#1f2937"];
+    A1 [label="Year 1\npay 200\nowes 800"];
+    A2 [label="Year 2\npay 200\nowes 600"];
+    A3 [label="Year 3\npay 200\nowes 400"];
+    A4 [label="Year 4\npay 200\nowes 200"];
+    A5 [label="Year 5\npay 200\nowes 0", fillcolor="#065f46", fontcolor="white", color="#065f46"];
+    A0 -> A1 -> A2 -> A3 -> A4 -> A5;
+  }
+
+  subgraph cluster_balloon {
+    label="Balloon: small instalments then a big final payment (refinancing risk at the end)"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
+    B0 [label="Start\nowes 1,000", fillcolor="#1f2937", fontcolor="white", color="#1f2937"];
+    B1 [label="Year 1\npay 50\nowes 950"];
+    B2 [label="Year 2\npay 50\nowes 900"];
+    B3 [label="Year 3\npay 50\nowes 850"];
+    B4 [label="Year 4\npay 50\nowes 800"];
+    B5 [label="Year 5\npay 800 balloon\nowes 0", fillcolor="#991b1b", fontcolor="white", color="#991b1b"];
+    B0 -> B1 -> B2 -> B3 -> B4 -> B5;
+  }
+
+  subgraph cluster_bullet {
+    label="Bullet: interest only, all principal at maturity (exposure never falls)"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
+    C0 [label="Start\nowes 1,000", fillcolor="#1f2937", fontcolor="white", color="#1f2937"];
+    C1 [label="Year 1\ninterest only\nowes 1,000"];
+    C2 [label="Year 2\ninterest only\nowes 1,000"];
+    C3 [label="Year 3\ninterest only\nowes 1,000"];
+    C4 [label="Year 4\ninterest only\nowes 1,000"];
+    C5 [label="Year 5\npay 1,000 bullet\nowes 0", fillcolor="#991b1b", fontcolor="white", color="#991b1b"];
+    C0 -> C1 -> C2 -> C3 -> C4 -> C5;
+  }
+}

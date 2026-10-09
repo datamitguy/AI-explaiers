@@ -1,0 +1,55 @@
+digraph CreditLifecycle {
+  graph [rankdir=TB, splines=true, nodesep=0.3, ranksep=0.5, fontname="Helvetica", fontsize=13, bgcolor="white", newrank=true, pad=0.2];
+  node  [shape=box, style="rounded,filled", fillcolor="#eef2ff", color="#6366f1", fontname="Helvetica", fontsize=12, margin="0.18,0.10"];
+  edge  [color="#4b5563", arrowsize=0.7, fontname="Helvetica", fontsize=10, fontcolor="#374151"];
+
+  Start [label="Customer wants to borrow", fillcolor="#1f2937", fontcolor="white", color="#1f2937"];
+
+  subgraph cluster_orig {
+    label="1. Origination and assessment"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
+    Orig  [label="Origination\nrelationship manager or channel\ncaptures the request"];
+    KYC   [label="KYC and AML checks\nwho are they, where does\nthe money come from?"];
+    App   [label="Application\nfinancials, purpose,\namount, security offered"];
+    Assess [label="Credit assessment\nanalysis, rating or score,\nproposal written"];
+    Orig -> KYC -> App -> Assess;
+  }
+
+  Decide [label="Approved within authority?", shape=diamond, style=filled, fillcolor="#fef3c7", color="#d97706", margin="0.05,0.05"];
+  Decline [label="Declined, or approved\nwith changed terms", fillcolor="#991b1b", fontcolor="white", color="#991b1b"];
+
+  subgraph cluster_fulfil {
+    label="2. Fulfilment"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
+    Docs  [label="Documentation\nfacility agreement, security,\nconditions precedent (CPs)"];
+    Draw  [label="Disbursement / drawdown\nCPs checked, money moves,\nloan booked on the system"];
+    Docs -> Draw;
+  }
+
+  subgraph cluster_life {
+    label="3. Life of the loan"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
+    Mon   [label="Ongoing monitoring\ncovenants, payments,\nearly warning signals"];
+    Rev   [label="Annual review\nre-rate, re-approve, renew\nor exit"];
+    Mon -> Rev -> Mon [label=" each year"];
+  }
+
+  Q2 [label="Paying as agreed?", shape=diamond, style=filled, fillcolor="#fef3c7", color="#d97706", margin="0.05,0.05"];
+  Repay [label="Repayment in full\nsecurity released, limit closed", fillcolor="#065f46", fontcolor="white", color="#065f46"];
+
+  subgraph cluster_problem {
+    label="4. Problem loan path"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
+    Coll  [label="Collections and arrears\nreminders, forbearance,\nrestructuring"];
+    Imp   [label="Impairment\ndefault recognised (90 days or\nunlikely to pay), provision raised"];
+    Rec   [label="Recovery\nenforce security, sell assets,\nnegotiate settlement"];
+    WO    [label="Write-off\nloss crystallised, LGD data saved", fillcolor="#991b1b", fontcolor="white", color="#991b1b"];
+    Coll -> Imp -> Rec -> WO;
+  }
+
+  Start -> Orig;
+  Assess -> Decide;
+  Decide -> Docs [label=" yes"];
+  Decide -> Decline [label=" no"];
+  Draw -> Mon;
+  Rev -> Q2;
+  Q2 -> Repay [label=" yes, at maturity"];
+  Q2 -> Coll [label=" no"];
+  Coll -> Mon [label=" cured", style=dashed, color="#065f46", fontcolor="#065f46"];
+}

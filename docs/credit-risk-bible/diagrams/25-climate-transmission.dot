@@ -1,0 +1,39 @@
+digraph ClimateTransmission {
+  graph [rankdir=TB, splines=true, nodesep=0.35, ranksep=0.5, fontname="Helvetica", fontsize=13, bgcolor="white", newrank=true, pad=0.2];
+  node  [shape=box, style="rounded,filled", fillcolor="#eef2ff", color="#6366f1", fontname="Helvetica", fontsize=12, margin="0.18,0.10"];
+  edge  [color="#4b5563", arrowsize=0.7, fontname="Helvetica", fontsize=10, fontcolor="#374151"];
+
+  Start [label="Climate change", fillcolor="#1f2937", fontcolor="white", color="#1f2937"];
+
+  subgraph cluster_drivers {
+    label="Two kinds of climate risk driver"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
+    Phys [label="Physical risk\nacute: floods, storms, wildfires\nchronic: sea level, drought, heat"];
+    Tran [label="Transition risk\ncarbon prices, regulation,\ntechnology shifts, customer demand"];
+  }
+
+  subgraph cluster_channels {
+    label="Transmission into borrowers and collateral"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
+    B1 [label="Borrower cash flow falls\ndamage, lost output,\nhigher insurance and energy cost"];
+    B2 [label="Borrower assets stranded\ncoal plant, old fleet,\nworthless reserves"];
+    C1 [label="Collateral value falls\nflood-prone house,\ninefficient office building"];
+    { rank=same; B1 -> B2 -> C1 [style=invis]; }
+  }
+
+  subgraph cluster_credit {
+    label="Credit risk parameters"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
+    PD  [label="Higher PD\nmore defaults"];
+    LGD [label="Higher LGD\nlower recoveries"];
+    EAD [label="Higher EAD\ndrawdowns in distress"];
+    { rank=same; PD -> LGD -> EAD [style=invis]; }
+  }
+
+  Out [label="Higher expected loss, provisions,\nRWA and capital; concentration\nin exposed sectors and regions", fillcolor="#991b1b", fontcolor="white", color="#991b1b"];
+
+  Start -> {Phys Tran};
+  Phys -> B1; Phys -> C1;
+  Tran -> B1; Tran -> B2; Tran -> C1;
+  B1 -> PD; B1 -> EAD;
+  B2 -> PD; B2 -> LGD;
+  C1 -> LGD;
+  {PD LGD EAD} -> Out;
+}

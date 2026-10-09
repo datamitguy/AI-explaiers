@@ -1,0 +1,33 @@
+digraph StressPlatform {
+  graph [rankdir=TB, splines=true, nodesep=0.3, ranksep=0.55, fontname="Helvetica", fontsize=13, bgcolor="white", newrank=true, pad=0.2];
+  node  [shape=box, style="rounded,filled", fillcolor="#eef2ff", color="#6366f1", fontname="Helvetica", fontsize=12, margin="0.18,0.10"];
+  edge  [color="#4b5563", arrowsize=0.7, fontname="Helvetica", fontsize=10, fontcolor="#374151"];
+
+  subgraph cluster_in {
+    label="Data layer"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
+    Pos [label="Position snapshot\nloan-level data as at\nthe stress start date"];
+    Mkt [label="Market and macro\nhistory for model fitting"];
+    Scn [label="Scenario library\nregulatory, internal,\nreverse, ad hoc"];
+  }
+
+  subgraph cluster_run {
+    label="Execution layer"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
+    Orch [label="Model orchestration\nruns satellite, PD, LGD, EAD,\nECL and RWA models in order"];
+    Ovl [label="Overlays and expert\nadjustments with approval"];
+    Agg [label="Aggregation\nby entity, portfolio,\nscenario, year"];
+    Orch -> Ovl -> Agg;
+  }
+
+  subgraph cluster_out {
+    label="Output and control layer"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
+    Rep [label="Results and templates\nregulator formats, board packs,\nreconciliation to actuals"];
+    Aud [label="Audit trail\nversions of data, models,\nscenarios, overlays, who approved"];
+    Rerun [label="Re-run capability\nhours not weeks,\nsame inputs give same outputs"];
+  }
+
+  {Pos Mkt Scn} -> Orch;
+  Agg -> Rep;
+  Agg -> Aud;
+  Orch -> Rerun [style=dashed];
+  Aud -> Rerun [style=dashed];
+}

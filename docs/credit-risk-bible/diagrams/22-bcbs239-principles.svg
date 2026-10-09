@@ -1,0 +1,178 @@
+<svg width="100%"
+ viewBox="0.00 0.00 1198.80 472.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 458.4)">
+<title>BCBS239</title>
+<polygon fill="white" stroke="transparent" points="-14.4,14.4 -14.4,-458.4 1184.4,-458.4 1184.4,14.4 -14.4,14.4"/>
+<g id="clust1" class="cluster">
+<title>cluster_gov</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M20,-305C20,-305 469,-305 469,-305 475,-305 481,-311 481,-317 481,-317 481,-384 481,-384 481,-390 475,-396 469,-396 469,-396 20,-396 20,-396 14,-396 8,-390 8,-384 8,-384 8,-317 8,-317 8,-311 14,-305 20,-305"/>
+<text text-anchor="middle" x="244.5" y="-381.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">I. Governance and infrastructure</text>
+</g>
+<g id="clust2" class="cluster">
+<title>cluster_agg</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M152,-206C152,-206 930,-206 930,-206 936,-206 942,-212 942,-218 942,-218 942,-285 942,-285 942,-291 936,-297 930,-297 930,-297 152,-297 152,-297 146,-297 140,-291 140,-285 140,-285 140,-218 140,-218 140,-212 146,-206 152,-206"/>
+<text text-anchor="middle" x="541" y="-282.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">II. Risk data aggregation</text>
+</g>
+<g id="clust4" class="cluster">
+<title>cluster_rep</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M180,-107C180,-107 1150,-107 1150,-107 1156,-107 1162,-113 1162,-119 1162,-119 1162,-186 1162,-186 1162,-192 1156,-198 1150,-198 1150,-198 180,-198 180,-198 174,-198 168,-192 168,-186 168,-186 168,-119 168,-119 168,-113 174,-107 180,-107"/>
+<text text-anchor="middle" x="665" y="-183.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">III. Risk reporting</text>
+</g>
+<g id="clust6" class="cluster">
+<title>cluster_sup</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M543,-8C543,-8 735,-8 735,-8 741,-8 747,-14 747,-20 747,-20 747,-87 747,-87 747,-93 741,-99 735,-99 735,-99 543,-99 543,-99 537,-99 531,-93 531,-87 531,-87 531,-20 531,-20 531,-14 537,-8 543,-8"/>
+<text text-anchor="middle" x="639" y="-84.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">IV. Supervisory review</text>
+</g>
+<g id="node1" class="node">
+<title>Start</title>
+<path fill="#1f2937" stroke="#1f2937" d="M367,-444C367,-444 127,-444 127,-444 121,-444 115,-438 115,-432 115,-432 115,-416 115,-416 115,-410 121,-404 127,-404 127,-404 367,-404 367,-404 373,-404 379,-410 379,-416 379,-416 379,-432 379,-432 379,-438 373,-444 367,-444"/>
+<text text-anchor="middle" x="247" y="-427.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">BCBS 239: principles for effective</text>
+<text text-anchor="middle" x="247" y="-414.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">risk data aggregation and risk reporting</text>
+</g>
+<g id="node2" class="node">
+<title>P1</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M461.5,-366C461.5,-366 272.5,-366 272.5,-366 266.5,-366 260.5,-360 260.5,-354 260.5,-354 260.5,-325 260.5,-325 260.5,-319 266.5,-313 272.5,-313 272.5,-313 461.5,-313 461.5,-313 467.5,-313 473.5,-319 473.5,-325 473.5,-325 473.5,-354 473.5,-354 473.5,-360 467.5,-366 461.5,-366"/>
+<text text-anchor="middle" x="367" y="-349.4" font-family="Helvetica,sans-Serif" font-size="12.00">1. Governance</text>
+<text text-anchor="middle" x="367" y="-336.4" font-family="Helvetica,sans-Serif" font-size="12.00">board and senior management</text>
+<text text-anchor="middle" x="367" y="-323.4" font-family="Helvetica,sans-Serif" font-size="12.00">own data quality</text>
+</g>
+<g id="edge8" class="edge">
+<title>Start&#45;&gt;P1</title>
+<path fill="none" stroke="#4b5563" d="M274.83,-403.87C289.38,-393.86 307.52,-381.39 323.85,-370.17"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="325.39,-372.08 329.77,-366.09 322.61,-368.04 325.39,-372.08"/>
+</g>
+<g id="node3" class="node">
+<title>P2</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M226.5,-366C226.5,-366 27.5,-366 27.5,-366 21.5,-366 15.5,-360 15.5,-354 15.5,-354 15.5,-325 15.5,-325 15.5,-319 21.5,-313 27.5,-313 27.5,-313 226.5,-313 226.5,-313 232.5,-313 238.5,-319 238.5,-325 238.5,-325 238.5,-354 238.5,-354 238.5,-360 232.5,-366 226.5,-366"/>
+<text text-anchor="middle" x="127" y="-349.4" font-family="Helvetica,sans-Serif" font-size="12.00">2. Data architecture</text>
+<text text-anchor="middle" x="127" y="-336.4" font-family="Helvetica,sans-Serif" font-size="12.00">and IT infrastructure</text>
+<text text-anchor="middle" x="127" y="-323.4" font-family="Helvetica,sans-Serif" font-size="12.00">works in normal and stress times</text>
+</g>
+<g id="edge9" class="edge">
+<title>Start&#45;&gt;P2</title>
+<path fill="none" stroke="#4b5563" d="M219.17,-403.87C204.62,-393.86 186.48,-381.39 170.15,-370.17"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="171.39,-368.04 164.23,-366.09 168.61,-372.08 171.39,-368.04"/>
+</g>
+<g id="node4" class="node">
+<title>P3</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M334,-267C334,-267 160,-267 160,-267 154,-267 148,-261 148,-255 148,-255 148,-226 148,-226 148,-220 154,-214 160,-214 160,-214 334,-214 334,-214 340,-214 346,-220 346,-226 346,-226 346,-255 346,-255 346,-261 340,-267 334,-267"/>
+<text text-anchor="middle" x="247" y="-250.4" font-family="Helvetica,sans-Serif" font-size="12.00">3. Accuracy and integrity</text>
+<text text-anchor="middle" x="247" y="-237.4" font-family="Helvetica,sans-Serif" font-size="12.00">mostly automated,</text>
+<text text-anchor="middle" x="247" y="-224.4" font-family="Helvetica,sans-Serif" font-size="12.00">reconciled, few manual fixes</text>
+</g>
+<g id="edge10" class="edge">
+<title>P1&#45;&gt;P3</title>
+<path fill="none" stroke="#4b5563" d="M335.16,-312.76C319.57,-300.16 300.71,-284.92 284.44,-271.77"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="285.56,-269.52 278.58,-267.02 282.48,-273.33 285.56,-269.52"/>
+</g>
+<g id="edge11" class="edge">
+<title>P2&#45;&gt;P3</title>
+<path fill="none" stroke="#4b5563" d="M158.84,-312.76C174.43,-300.16 193.29,-284.92 209.56,-271.77"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="211.52,-273.33 215.42,-267.02 208.44,-269.52 211.52,-273.33"/>
+</g>
+<g id="node5" class="node">
+<title>P4</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M503.5,-267C503.5,-267 380.5,-267 380.5,-267 374.5,-267 368.5,-261 368.5,-255 368.5,-255 368.5,-226 368.5,-226 368.5,-220 374.5,-214 380.5,-214 380.5,-214 503.5,-214 503.5,-214 509.5,-214 515.5,-220 515.5,-226 515.5,-226 515.5,-255 515.5,-255 515.5,-261 509.5,-267 503.5,-267"/>
+<text text-anchor="middle" x="442" y="-250.4" font-family="Helvetica,sans-Serif" font-size="12.00">4. Completeness</text>
+<text text-anchor="middle" x="442" y="-237.4" font-family="Helvetica,sans-Serif" font-size="12.00">all material risk,</text>
+<text text-anchor="middle" x="442" y="-224.4" font-family="Helvetica,sans-Serif" font-size="12.00">all entities, all books</text>
+</g>
+<g id="node8" class="node">
+<title>P7</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M299.5,-168C299.5,-168 188.5,-168 188.5,-168 182.5,-168 176.5,-162 176.5,-156 176.5,-156 176.5,-127 176.5,-127 176.5,-121 182.5,-115 188.5,-115 188.5,-115 299.5,-115 299.5,-115 305.5,-115 311.5,-121 311.5,-127 311.5,-127 311.5,-156 311.5,-156 311.5,-162 305.5,-168 299.5,-168"/>
+<text text-anchor="middle" x="244" y="-151.4" font-family="Helvetica,sans-Serif" font-size="12.00">7. Accuracy</text>
+<text text-anchor="middle" x="244" y="-138.4" font-family="Helvetica,sans-Serif" font-size="12.00">reports reconciled</text>
+<text text-anchor="middle" x="244" y="-125.4" font-family="Helvetica,sans-Serif" font-size="12.00">and validated</text>
+</g>
+<g id="edge12" class="edge">
+<title>P3&#45;&gt;P7</title>
+<path fill="none" stroke="#4b5563" d="M246.2,-213.76C245.84,-201.94 245.4,-187.78 245.01,-175.21"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="247.45,-174.94 244.79,-168.02 242.56,-175.1 247.45,-174.94"/>
+</g>
+<g id="node6" class="node">
+<title>P5</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M724,-267C724,-267 550,-267 550,-267 544,-267 538,-261 538,-255 538,-255 538,-226 538,-226 538,-220 544,-214 550,-214 550,-214 724,-214 724,-214 730,-214 736,-220 736,-226 736,-226 736,-255 736,-255 736,-261 730,-267 724,-267"/>
+<text text-anchor="middle" x="637" y="-250.4" font-family="Helvetica,sans-Serif" font-size="12.00">5. Timeliness</text>
+<text text-anchor="middle" x="637" y="-237.4" font-family="Helvetica,sans-Serif" font-size="12.00">fast enough for the decision,</text>
+<text text-anchor="middle" x="637" y="-224.4" font-family="Helvetica,sans-Serif" font-size="12.00">faster in a crisis</text>
+</g>
+<g id="node9" class="node">
+<title>P8</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M490,-161.5C490,-161.5 346,-161.5 346,-161.5 340,-161.5 334,-155.5 334,-149.5 334,-149.5 334,-133.5 334,-133.5 334,-127.5 340,-121.5 346,-121.5 346,-121.5 490,-121.5 490,-121.5 496,-121.5 502,-127.5 502,-133.5 502,-133.5 502,-149.5 502,-149.5 502,-155.5 496,-161.5 490,-161.5"/>
+<text text-anchor="middle" x="418" y="-144.9" font-family="Helvetica,sans-Serif" font-size="12.00">8. Comprehensiveness</text>
+<text text-anchor="middle" x="418" y="-131.9" font-family="Helvetica,sans-Serif" font-size="12.00">covers all material risks</text>
+</g>
+<g id="edge13" class="edge">
+<title>P4&#45;&gt;P8</title>
+<path fill="none" stroke="#4b5563" d="M435.63,-213.76C432.18,-199.8 427.92,-182.6 424.45,-168.59"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="426.78,-167.79 422.72,-161.59 422.03,-168.97 426.78,-167.79"/>
+</g>
+<g id="node7" class="node">
+<title>P6</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M921.5,-267C921.5,-267 770.5,-267 770.5,-267 764.5,-267 758.5,-261 758.5,-255 758.5,-255 758.5,-226 758.5,-226 758.5,-220 764.5,-214 770.5,-214 770.5,-214 921.5,-214 921.5,-214 927.5,-214 933.5,-220 933.5,-226 933.5,-226 933.5,-255 933.5,-255 933.5,-261 927.5,-267 921.5,-267"/>
+<text text-anchor="middle" x="846" y="-250.4" font-family="Helvetica,sans-Serif" font-size="12.00">6. Adaptability</text>
+<text text-anchor="middle" x="846" y="-237.4" font-family="Helvetica,sans-Serif" font-size="12.00">answer ad hoc questions</text>
+<text text-anchor="middle" x="846" y="-224.4" font-family="Helvetica,sans-Serif" font-size="12.00">and new slices quickly</text>
+</g>
+<g id="node11" class="node">
+<title>P10</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M742.5,-161.5C742.5,-161.5 535.5,-161.5 535.5,-161.5 529.5,-161.5 523.5,-155.5 523.5,-149.5 523.5,-149.5 523.5,-133.5 523.5,-133.5 523.5,-127.5 529.5,-121.5 535.5,-121.5 535.5,-121.5 742.5,-121.5 742.5,-121.5 748.5,-121.5 754.5,-127.5 754.5,-133.5 754.5,-133.5 754.5,-149.5 754.5,-149.5 754.5,-155.5 748.5,-161.5 742.5,-161.5"/>
+<text text-anchor="middle" x="639" y="-144.9" font-family="Helvetica,sans-Serif" font-size="12.00">10. Frequency</text>
+<text text-anchor="middle" x="639" y="-131.9" font-family="Helvetica,sans-Serif" font-size="12.00">matches the need, faster in stress</text>
+</g>
+<g id="edge14" class="edge">
+<title>P5&#45;&gt;P10</title>
+<path fill="none" stroke="#4b5563" d="M637.53,-213.76C637.82,-199.8 638.17,-182.6 638.46,-168.59"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="640.91,-168.64 638.61,-161.59 636.01,-168.53 640.91,-168.64"/>
+</g>
+<g id="node10" class="node">
+<title>P9</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M943.5,-161.5C943.5,-161.5 788.5,-161.5 788.5,-161.5 782.5,-161.5 776.5,-155.5 776.5,-149.5 776.5,-149.5 776.5,-133.5 776.5,-133.5 776.5,-127.5 782.5,-121.5 788.5,-121.5 788.5,-121.5 943.5,-121.5 943.5,-121.5 949.5,-121.5 955.5,-127.5 955.5,-133.5 955.5,-133.5 955.5,-149.5 955.5,-149.5 955.5,-155.5 949.5,-161.5 943.5,-161.5"/>
+<text text-anchor="middle" x="866" y="-144.9" font-family="Helvetica,sans-Serif" font-size="12.00">9. Clarity and usefulness</text>
+<text text-anchor="middle" x="866" y="-131.9" font-family="Helvetica,sans-Serif" font-size="12.00">right detail for the reader</text>
+</g>
+<g id="edge15" class="edge">
+<title>P6&#45;&gt;P9</title>
+<path fill="none" stroke="#4b5563" d="M851.31,-213.76C854.18,-199.8 857.73,-182.6 860.62,-168.59"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="863.05,-168.94 862.06,-161.59 858.25,-167.95 863.05,-168.94"/>
+</g>
+<g id="node13" class="node">
+<title>P12</title>
+<path fill="#6b7280" stroke="#6b7280" d="M727,-69C727,-69 551,-69 551,-69 545,-69 539,-63 539,-57 539,-57 539,-28 539,-28 539,-22 545,-16 551,-16 551,-16 727,-16 727,-16 733,-16 739,-22 739,-28 739,-28 739,-57 739,-57 739,-63 733,-69 727,-69"/>
+<text text-anchor="middle" x="639" y="-52.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">12 to 14. Supervisors review,</text>
+<text text-anchor="middle" x="639" y="-39.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">require remediation,</text>
+<text text-anchor="middle" x="639" y="-26.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">cooperate across borders</text>
+</g>
+<g id="edge16" class="edge">
+<title>P7&#45;&gt;P12</title>
+<path fill="none" stroke="#4b5563" d="M300.45,-114.94C307.94,-112.03 315.6,-109.29 323,-107 391.21,-85.92 469.92,-70.08 531.72,-59.49"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="532.3,-61.88 538.79,-58.29 531.48,-57.05 532.3,-61.88"/>
+</g>
+<g id="edge17" class="edge">
+<title>P8&#45;&gt;P12</title>
+<path fill="none" stroke="#4b5563" d="M461.4,-121.45C493.47,-107.38 537.67,-87.97 573.96,-72.05"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="575.21,-74.17 580.64,-69.12 573.24,-69.69 575.21,-74.17"/>
+</g>
+<g id="edge18" class="edge">
+<title>P9&#45;&gt;P12</title>
+<path fill="none" stroke="#4b5563" d="M821.42,-121.45C788.48,-107.38 743.08,-87.97 705.81,-72.05"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="706.35,-69.61 698.95,-69.12 704.42,-74.12 706.35,-69.61"/>
+</g>
+<g id="node12" class="node">
+<title>P11</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M1142,-161.5C1142,-161.5 990,-161.5 990,-161.5 984,-161.5 978,-155.5 978,-149.5 978,-149.5 978,-133.5 978,-133.5 978,-127.5 984,-121.5 990,-121.5 990,-121.5 1142,-121.5 1142,-121.5 1148,-121.5 1154,-127.5 1154,-133.5 1154,-133.5 1154,-149.5 1154,-149.5 1154,-155.5 1148,-161.5 1142,-161.5"/>
+<text text-anchor="middle" x="1066" y="-144.9" font-family="Helvetica,sans-Serif" font-size="12.00">11. Distribution</text>
+<text text-anchor="middle" x="1066" y="-131.9" font-family="Helvetica,sans-Serif" font-size="12.00">right people, confidential</text>
+</g>
+<g id="edge19" class="edge">
+<title>P10&#45;&gt;P12</title>
+<path fill="none" stroke="#4b5563" d="M639,-121.34C639,-108.52 639,-91.34 639,-76.38"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="641.45,-76.24 639,-69.24 636.55,-76.24 641.45,-76.24"/>
+</g>
+<g id="edge20" class="edge">
+<title>P11&#45;&gt;P12</title>
+<path fill="none" stroke="#4b5563" d="M1014,-121.43C998.96,-116.32 982.44,-111.09 967,-107 894.1,-87.7 810.65,-71.63 746.16,-60.48"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="746.51,-58.05 739.19,-59.28 745.68,-62.88 746.51,-58.05"/>
+</g>
+</g>
+</svg>

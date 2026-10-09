@@ -1,0 +1,190 @@
+<svg width="100%"
+ viewBox="0.00 0.00 825.00 544.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 540)">
+<title>NinetyDays</title>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-540 821,-540 821,4 -4,4"/>
+<g id="clust1" class="cluster">
+<title>cluster_30</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M20,-8C20,-8 224,-8 224,-8 230,-8 236,-14 236,-20 236,-20 236,-451.5 236,-451.5 236,-457.5 230,-463.5 224,-463.5 224,-463.5 20,-463.5 20,-463.5 14,-463.5 8,-457.5 8,-451.5 8,-451.5 8,-20 8,-20 8,-14 14,-8 20,-8"/>
+<text text-anchor="middle" x="122" y="-449.1" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">Days 1 to 30: Learn and listen</text>
+</g>
+<g id="clust2" class="cluster">
+<title>cluster_60</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M256,-104C256,-104 504,-104 504,-104 510,-104 516,-110 516,-116 516,-116 516,-451.5 516,-451.5 516,-457.5 510,-463.5 504,-463.5 504,-463.5 256,-463.5 256,-463.5 250,-463.5 244,-457.5 244,-451.5 244,-451.5 244,-116 244,-116 244,-110 250,-104 256,-104"/>
+<text text-anchor="middle" x="380" y="-449.1" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">Days 31 to 60: Diagnose and prioritise</text>
+</g>
+<g id="clust3" class="cluster">
+<title>cluster_90</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M558,-104C558,-104 797,-104 797,-104 803,-104 809,-110 809,-116 809,-116 809,-458 809,-458 809,-464 803,-470 797,-470 797,-470 558,-470 558,-470 552,-470 546,-464 546,-458 546,-458 546,-116 546,-116 546,-110 552,-104 558,-104"/>
+<text text-anchor="middle" x="677.5" y="-455.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">Days 61 to 90: Deliver one thing well</text>
+</g>
+<g id="node1" class="node">
+<title>Start</title>
+<path fill="#1f2937" stroke="#1f2937" d="M176,-536C176,-536 68,-536 68,-536 62,-536 56,-530 56,-524 56,-524 56,-495 56,-495 56,-489 62,-483 68,-483 68,-483 176,-483 176,-483 182,-483 188,-489 188,-495 188,-495 188,-524 188,-524 188,-530 182,-536 176,-536"/>
+<text text-anchor="middle" x="122" y="-519.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Day 1</text>
+<text text-anchor="middle" x="122" y="-506.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">You know nothing</text>
+<text text-anchor="middle" x="122" y="-493.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">about banking</text>
+</g>
+<g id="node2" class="node">
+<title>L1</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M201,-433.5C201,-433.5 43,-433.5 43,-433.5 37,-433.5 31,-427.5 31,-421.5 31,-421.5 31,-405.5 31,-405.5 31,-399.5 37,-393.5 43,-393.5 43,-393.5 201,-393.5 201,-393.5 207,-393.5 213,-399.5 213,-405.5 213,-405.5 213,-421.5 213,-421.5 213,-427.5 207,-433.5 201,-433.5"/>
+<text text-anchor="middle" x="122" y="-416.9" font-family="Helvetica,sans-Serif" font-size="12.00">Read this vault</text>
+<text text-anchor="middle" x="122" y="-403.9" font-family="Helvetica,sans-Serif" font-size="12.00">(notes 01, 02, 03, 18 first)</text>
+</g>
+<g id="edge1" class="edge">
+<title>Start&#45;&gt;L1</title>
+<path fill="none" stroke="#4b5563" d="M122,-482.81C122,-469.7 122,-453.77 122,-440.59"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="124.45,-440.59 122,-433.59 119.55,-440.59 124.45,-440.59"/>
+</g>
+<g id="node3" class="node">
+<title>L2</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M199.5,-344C199.5,-344 44.5,-344 44.5,-344 38.5,-344 32.5,-338 32.5,-332 32.5,-332 32.5,-303 32.5,-303 32.5,-297 38.5,-291 44.5,-291 44.5,-291 199.5,-291 199.5,-291 205.5,-291 211.5,-297 211.5,-303 211.5,-303 211.5,-332 211.5,-332 211.5,-338 205.5,-344 199.5,-344"/>
+<text text-anchor="middle" x="122" y="-327.4" font-family="Helvetica,sans-Serif" font-size="12.00">Meet every stakeholder:</text>
+<text text-anchor="middle" x="122" y="-314.4" font-family="Helvetica,sans-Serif" font-size="12.00">credit officers, modellers,</text>
+<text text-anchor="middle" x="122" y="-301.4" font-family="Helvetica,sans-Serif" font-size="12.00">finance, reporting, audit</text>
+</g>
+<g id="edge2" class="edge">
+<title>L1&#45;&gt;L2</title>
+<path fill="none" stroke="#4b5563" d="M122,-393.48C122,-381.42 122,-365.49 122,-351.42"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="124.45,-351.26 122,-344.26 119.55,-351.26 124.45,-351.26"/>
+</g>
+<g id="node4" class="node">
+<title>L3</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M206,-248C206,-248 38,-248 38,-248 32,-248 26,-242 26,-236 26,-236 26,-220 26,-220 26,-214 32,-208 38,-208 38,-208 206,-208 206,-208 212,-208 218,-214 218,-220 218,-220 218,-236 218,-236 218,-242 212,-248 206,-248"/>
+<text text-anchor="middle" x="122" y="-231.4" font-family="Helvetica,sans-Serif" font-size="12.00">Map the systems landscape</text>
+<text text-anchor="middle" x="122" y="-218.4" font-family="Helvetica,sans-Serif" font-size="12.00">and data flows (note 22)</text>
+</g>
+<g id="edge3" class="edge">
+<title>L2&#45;&gt;L3</title>
+<path fill="none" stroke="#4b5563" d="M122,-290.72C122,-279.56 122,-266.5 122,-255.28"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="124.45,-255.21 122,-248.21 119.55,-255.21 124.45,-255.21"/>
+</g>
+<g id="node5" class="node">
+<title>L4</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M206,-158.5C206,-158.5 38,-158.5 38,-158.5 32,-158.5 26,-152.5 26,-146.5 26,-146.5 26,-130.5 26,-130.5 26,-124.5 32,-118.5 38,-118.5 38,-118.5 206,-118.5 206,-118.5 212,-118.5 218,-124.5 218,-130.5 218,-130.5 218,-146.5 218,-146.5 218,-152.5 212,-158.5 206,-158.5"/>
+<text text-anchor="middle" x="122" y="-141.9" font-family="Helvetica,sans-Serif" font-size="12.00">Sit in on a credit committee</text>
+<text text-anchor="middle" x="122" y="-128.9" font-family="Helvetica,sans-Serif" font-size="12.00">and a month&#45;end RWA run</text>
+</g>
+<g id="edge4" class="edge">
+<title>L3&#45;&gt;L4</title>
+<path fill="none" stroke="#4b5563" d="M122,-207.58C122,-195.26 122,-179.17 122,-165.72"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="124.45,-165.56 122,-158.56 119.55,-165.56 124.45,-165.56"/>
+</g>
+<g id="node6" class="node">
+<title>L5</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M215.5,-69C215.5,-69 28.5,-69 28.5,-69 22.5,-69 16.5,-63 16.5,-57 16.5,-57 16.5,-28 16.5,-28 16.5,-22 22.5,-16 28.5,-16 28.5,-16 215.5,-16 215.5,-16 221.5,-16 227.5,-22 227.5,-28 227.5,-28 227.5,-57 227.5,-57 227.5,-63 221.5,-69 215.5,-69"/>
+<text text-anchor="middle" x="122" y="-52.4" font-family="Helvetica,sans-Serif" font-size="12.00">Collect the pain list:</text>
+<text text-anchor="middle" x="122" y="-39.4" font-family="Helvetica,sans-Serif" font-size="12.00">what breaks, what is manual,</text>
+<text text-anchor="middle" x="122" y="-26.4" font-family="Helvetica,sans-Serif" font-size="12.00">what the regulator has flagged</text>
+</g>
+<g id="edge5" class="edge">
+<title>L4&#45;&gt;L5</title>
+<path fill="none" stroke="#4b5563" d="M122,-118.48C122,-106.42 122,-90.49 122,-76.42"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="124.45,-76.26 122,-69.26 119.55,-76.26 124.45,-76.26"/>
+</g>
+<g id="node7" class="node">
+<title>D1</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M454,-433.5C454,-433.5 306,-433.5 306,-433.5 300,-433.5 294,-427.5 294,-421.5 294,-421.5 294,-405.5 294,-405.5 294,-399.5 300,-393.5 306,-393.5 306,-393.5 454,-393.5 454,-393.5 460,-393.5 466,-399.5 466,-405.5 466,-405.5 466,-421.5 466,-421.5 466,-427.5 460,-433.5 454,-433.5"/>
+<text text-anchor="middle" x="380" y="-416.9" font-family="Helvetica,sans-Serif" font-size="12.00">Draw the current&#45;state</text>
+<text text-anchor="middle" x="380" y="-403.9" font-family="Helvetica,sans-Serif" font-size="12.00">architecture and lineage</text>
+</g>
+<g id="edge13" class="edge">
+<title>L5&#45;&gt;D1</title>
+<path fill="none" stroke="#1e3a8a" stroke-width="1.6" d="M227.8,-45.83C326.04,-50.49 462.11,-64.18 496,-104 565.51,-185.66 528.01,-253.16 471,-344 459.3,-362.65 440.56,-378.03 423.13,-389.46"/>
+<polygon fill="#1e3a8a" stroke="#1e3a8a" stroke-width="1.6" points="421.37,-387.67 416.78,-393.49 424,-391.81 421.37,-387.67"/>
+</g>
+<g id="node8" class="node">
+<title>D2</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M448,-344C448,-344 312,-344 312,-344 306,-344 300,-338 300,-332 300,-332 300,-303 300,-303 300,-297 306,-291 312,-291 312,-291 448,-291 448,-291 454,-291 460,-297 460,-303 460,-303 460,-332 460,-332 460,-338 454,-344 448,-344"/>
+<text text-anchor="middle" x="380" y="-327.4" font-family="Helvetica,sans-Serif" font-size="12.00">Score each pain point:</text>
+<text text-anchor="middle" x="380" y="-314.4" font-family="Helvetica,sans-Serif" font-size="12.00">regulatory risk, effort,</text>
+<text text-anchor="middle" x="380" y="-301.4" font-family="Helvetica,sans-Serif" font-size="12.00">value, dependencies</text>
+</g>
+<g id="edge6" class="edge">
+<title>D1&#45;&gt;D2</title>
+<path fill="none" stroke="#4b5563" d="M380,-393.48C380,-381.42 380,-365.49 380,-351.42"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="382.45,-351.26 380,-344.26 377.55,-351.26 382.45,-351.26"/>
+</g>
+<g id="node9" class="node">
+<title>D3</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M467,-248C467,-248 293,-248 293,-248 287,-248 281,-242 281,-236 281,-236 281,-220 281,-220 281,-214 287,-208 293,-208 293,-208 467,-208 467,-208 473,-208 479,-214 479,-220 479,-220 479,-236 479,-236 479,-242 473,-248 467,-248"/>
+<text text-anchor="middle" x="380" y="-231.4" font-family="Helvetica,sans-Serif" font-size="12.00">Agree definitions of done</text>
+<text text-anchor="middle" x="380" y="-218.4" font-family="Helvetica,sans-Serif" font-size="12.00">with risk and finance owners</text>
+</g>
+<g id="edge7" class="edge">
+<title>D2&#45;&gt;D3</title>
+<path fill="none" stroke="#4b5563" d="M380,-290.72C380,-279.56 380,-266.5 380,-255.28"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="382.45,-255.21 380,-248.21 377.55,-255.21 382.45,-255.21"/>
+</g>
+<g id="node10" class="node">
+<title>D4</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M473.5,-165C473.5,-165 286.5,-165 286.5,-165 280.5,-165 274.5,-159 274.5,-153 274.5,-153 274.5,-124 274.5,-124 274.5,-118 280.5,-112 286.5,-112 286.5,-112 473.5,-112 473.5,-112 479.5,-112 485.5,-118 485.5,-124 485.5,-124 485.5,-153 485.5,-153 485.5,-159 479.5,-165 473.5,-165"/>
+<text text-anchor="middle" x="380" y="-148.4" font-family="Helvetica,sans-Serif" font-size="12.00">Check controls: reconciliations,</text>
+<text text-anchor="middle" x="380" y="-135.4" font-family="Helvetica,sans-Serif" font-size="12.00">access, change management,</text>
+<text text-anchor="middle" x="380" y="-122.4" font-family="Helvetica,sans-Serif" font-size="12.00">audit trail</text>
+</g>
+<g id="edge8" class="edge">
+<title>D3&#45;&gt;D4</title>
+<path fill="none" stroke="#4b5563" d="M380,-207.58C380,-197.24 380,-184.24 380,-172.38"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="382.45,-172.18 380,-165.18 377.55,-172.18 382.45,-172.18"/>
+</g>
+<g id="node11" class="node">
+<title>X1</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M747,-440C747,-440 573,-440 573,-440 567,-440 561,-434 561,-428 561,-428 561,-399 561,-399 561,-393 567,-387 573,-387 573,-387 747,-387 747,-387 753,-387 759,-393 759,-399 759,-399 759,-428 759,-428 759,-434 753,-440 747,-440"/>
+<text text-anchor="middle" x="660" y="-423.4" font-family="Helvetica,sans-Serif" font-size="12.00">Pick one visible fix</text>
+<text text-anchor="middle" x="660" y="-410.4" font-family="Helvetica,sans-Serif" font-size="12.00">(a reconciliation break,</text>
+<text text-anchor="middle" x="660" y="-397.4" font-family="Helvetica,sans-Serif" font-size="12.00">a manual step, a late report)</text>
+</g>
+<g id="edge14" class="edge">
+<title>D4&#45;&gt;X1</title>
+<path fill="none" stroke="#1e3a8a" stroke-width="1.6" d="M485.69,-156.38C599.59,-174.82 765.37,-202.48 770,-208 808.88,-254.3 796.85,-291.42 767,-344 757.87,-360.09 743.24,-372.99 727.69,-383.06"/>
+<polygon fill="#1e3a8a" stroke="#1e3a8a" stroke-width="1.6" points="726.12,-381.15 721.46,-386.92 728.7,-385.31 726.12,-381.15"/>
+</g>
+<g id="node12" class="node">
+<title>X2</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M744,-337.5C744,-337.5 576,-337.5 576,-337.5 570,-337.5 564,-331.5 564,-325.5 564,-325.5 564,-309.5 564,-309.5 564,-303.5 570,-297.5 576,-297.5 576,-297.5 744,-297.5 744,-297.5 750,-297.5 756,-303.5 756,-309.5 756,-309.5 756,-325.5 756,-325.5 756,-331.5 750,-337.5 744,-337.5"/>
+<text text-anchor="middle" x="660" y="-320.9" font-family="Helvetica,sans-Serif" font-size="12.00">Ship it with tests,</text>
+<text text-anchor="middle" x="660" y="-307.9" font-family="Helvetica,sans-Serif" font-size="12.00">documentation and sign&#45;off</text>
+</g>
+<g id="edge9" class="edge">
+<title>X1&#45;&gt;X2</title>
+<path fill="none" stroke="#4b5563" d="M660,-386.81C660,-373.7 660,-357.77 660,-344.59"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="662.45,-344.59 660,-337.59 657.55,-344.59 662.45,-344.59"/>
+</g>
+<g id="node13" class="node">
+<title>X3</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M747.5,-248C747.5,-248 572.5,-248 572.5,-248 566.5,-248 560.5,-242 560.5,-236 560.5,-236 560.5,-220 560.5,-220 560.5,-214 566.5,-208 572.5,-208 572.5,-208 747.5,-208 747.5,-208 753.5,-208 759.5,-214 759.5,-220 759.5,-220 759.5,-236 759.5,-236 759.5,-242 753.5,-248 747.5,-248"/>
+<text text-anchor="middle" x="660" y="-231.4" font-family="Helvetica,sans-Serif" font-size="12.00">Publish a 12&#45;month roadmap</text>
+<text text-anchor="middle" x="660" y="-218.4" font-family="Helvetica,sans-Serif" font-size="12.00">tied to regulatory dates</text>
+</g>
+<g id="edge10" class="edge">
+<title>X2&#45;&gt;X3</title>
+<path fill="none" stroke="#4b5563" d="M660,-297.08C660,-284.76 660,-268.67 660,-255.22"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="662.45,-255.06 660,-248.06 657.55,-255.06 662.45,-255.06"/>
+</g>
+<g id="node14" class="node">
+<title>X4</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M753.5,-165C753.5,-165 566.5,-165 566.5,-165 560.5,-165 554.5,-159 554.5,-153 554.5,-153 554.5,-124 554.5,-124 554.5,-118 560.5,-112 566.5,-112 566.5,-112 753.5,-112 753.5,-112 759.5,-112 765.5,-118 765.5,-124 765.5,-124 765.5,-153 765.5,-153 765.5,-159 759.5,-165 753.5,-165"/>
+<text text-anchor="middle" x="660" y="-148.4" font-family="Helvetica,sans-Serif" font-size="12.00">Set up the operating rhythm:</text>
+<text text-anchor="middle" x="660" y="-135.4" font-family="Helvetica,sans-Serif" font-size="12.00">run calendar, incident process,</text>
+<text text-anchor="middle" x="660" y="-122.4" font-family="Helvetica,sans-Serif" font-size="12.00">change board</text>
+</g>
+<g id="edge11" class="edge">
+<title>X3&#45;&gt;X4</title>
+<path fill="none" stroke="#4b5563" d="M660,-207.58C660,-197.24 660,-184.24 660,-172.38"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="662.45,-172.18 660,-165.18 657.55,-172.18 662.45,-172.18"/>
+</g>
+<g id="node15" class="node">
+<title>End</title>
+<path fill="#065f46" stroke="#065f46" d="M725,-69C725,-69 595,-69 595,-69 589,-69 583,-63 583,-57 583,-57 583,-28 583,-28 583,-22 589,-16 595,-16 595,-16 725,-16 725,-16 731,-16 737,-22 737,-28 737,-28 737,-57 737,-57 737,-63 731,-69 725,-69"/>
+<text text-anchor="middle" x="660" y="-52.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Day 90</text>
+<text text-anchor="middle" x="660" y="-39.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Trusted platform lead</text>
+<text text-anchor="middle" x="660" y="-26.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">with a plan</text>
+</g>
+<g id="edge12" class="edge">
+<title>X4&#45;&gt;End</title>
+<path fill="none" stroke="#4b5563" d="M660,-111.81C660,-100.83 660,-87.88 660,-76.22"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="662.45,-76.15 660,-69.15 657.55,-76.15 662.45,-76.15"/>
+</g>
+</g>
+</svg>

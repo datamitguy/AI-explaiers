@@ -1,0 +1,38 @@
+digraph GuaranteeTaxonomy {
+  graph [rankdir=TB, splines=true, nodesep=0.3, ranksep=0.5, fontname="Helvetica", fontsize=13, bgcolor="white", pad=0.2, newrank=true];
+  node  [shape=box, style="rounded,filled", fillcolor="#eef2ff", color="#6366f1", fontname="Helvetica", fontsize=12, margin="0.18,0.10"];
+  edge  [color="#4b5563", arrowsize=0.7, fontname="Helvetica", fontsize=10, fontcolor="#374151"];
+
+  Root [label="Bank guarantees and bonds\n(the bank promises to pay a third party\nif the customer fails to do something)", fillcolor="#1f2937", fontcolor="white", color="#1f2937"];
+
+  Q1 [label="What does the customer\nhave to do?", shape=diamond, style=filled, fillcolor="#fef3c7", color="#d97706", margin="0.05,0.05"];
+
+  subgraph cluster_fin {
+    label="Financial guarantees: pay money (CCF 100%)"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
+    Fin  [label="Financial guarantee or standby LC\nbacks a loan, a lease, a bond issue\nor a trade payable"];
+    Pay  [label="Payment guarantee\nbacks a buyer's obligation\nto pay a supplier"];
+  }
+
+  subgraph cluster_perf {
+    label="Performance-type guarantees: do a job (CCF 50%)"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
+    Bid  [label="Bid (tender) bond\n1% to 5% of contract value\nbidder must sign if it wins"];
+    Perf [label="Performance bond\n5% to 20% of contract value\ncontractor must finish the job"];
+    Adv  [label="Advance payment guarantee\nrefunds the buyer's deposit\nif the contractor fails"];
+    Ret  [label="Retention or warranty bond\nreplaces cash held back for\ndefects after completion"];
+  }
+
+  Q2 [label="How can the beneficiary\nclaim?", shape=diamond, style=filled, fillcolor="#fef3c7", color="#d97706", margin="0.05,0.05"];
+  Demand [label="On demand: pay first, argue later\n(URDG 758 rules; bank cannot refuse\na compliant written demand)", fillcolor="#991b1b", fontcolor="white", color="#991b1b"];
+  Cond   [label="Conditional (surety): bank pays only\nafter the default is proved, often\nby a court or arbitration award", fillcolor="#065f46", fontcolor="white", color="#065f46"];
+
+  Root -> Q1;
+  Q1 -> Fin  [label=" repay money"];
+  Q1 -> Pay  [label=" pay for goods"];
+  Q1 -> Bid  [label=" sign a contract"];
+  Q1 -> Perf [label=" perform a contract"];
+  Q1 -> Adv  [label=" use a deposit properly"];
+  Q1 -> Ret  [label=" fix defects"];
+  {Fin Pay Bid Perf Adv Ret} -> Q2 [style=dashed];
+  Q2 -> Demand [label=" written demand only"];
+  Q2 -> Cond   [label=" proof of default"];
+}

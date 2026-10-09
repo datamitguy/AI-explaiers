@@ -1,0 +1,205 @@
+<svg width="100%"
+ viewBox="0.00 0.00 1314.80 597.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 583.4)">
+<title>BankOrgMap</title>
+<polygon fill="white" stroke="transparent" points="-14.4,14.4 -14.4,-583.4 1300.4,-583.4 1300.4,14.4 -14.4,14.4"/>
+<g id="clust1" class="cluster">
+<title>cluster_front</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M20,-332C20,-332 818,-332 818,-332 824,-332 830,-338 830,-344 830,-344 830,-411 830,-411 830,-417 824,-423 818,-423 818,-423 20,-423 20,-423 14,-423 8,-417 8,-411 8,-411 8,-344 8,-344 8,-338 14,-332 20,-332"/>
+<text text-anchor="middle" x="419" y="-408.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">First line: the businesses that take risk</text>
+</g>
+<g id="clust2" class="cluster">
+<title>cluster_second</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M339,-130C339,-130 801,-130 801,-130 807,-130 813,-136 813,-142 813,-142 813,-299 813,-299 813,-305 807,-311 801,-311 801,-311 339,-311 339,-311 333,-311 327,-305 327,-299 327,-299 327,-142 327,-142 327,-136 333,-130 339,-130"/>
+<text text-anchor="middle" x="570" y="-296.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">Second line: independent risk and compliance</text>
+</g>
+<g id="clust4" class="cluster">
+<title>cluster_support</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M706,-8C706,-8 1266,-8 1266,-8 1272,-8 1278,-14 1278,-20 1278,-20 1278,-87 1278,-87 1278,-93 1272,-99 1266,-99 1266,-99 706,-99 706,-99 700,-99 694,-93 694,-87 694,-87 694,-20 694,-20 694,-14 700,-8 706,-8"/>
+<text text-anchor="middle" x="986" y="-84.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">Support functions</text>
+</g>
+<g id="node1" class="node">
+<title>Board</title>
+<path fill="#1f2937" stroke="#1f2937" d="M1003,-569C1003,-569 807,-569 807,-569 801,-569 795,-563 795,-557 795,-557 795,-545 795,-545 795,-539 801,-533 807,-533 807,-533 1003,-533 1003,-533 1009,-533 1015,-539 1015,-545 1015,-545 1015,-557 1015,-557 1015,-563 1009,-569 1003,-569"/>
+<text text-anchor="middle" x="905" y="-547.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Board and board risk committee</text>
+</g>
+<g id="node2" class="node">
+<title>CEO</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M890.5,-490C890.5,-490 713.5,-490 713.5,-490 707.5,-490 701.5,-484 701.5,-478 701.5,-478 701.5,-466 701.5,-466 701.5,-460 707.5,-454 713.5,-454 713.5,-454 890.5,-454 890.5,-454 896.5,-454 902.5,-460 902.5,-466 902.5,-466 902.5,-478 902.5,-478 902.5,-484 896.5,-490 890.5,-490"/>
+<text text-anchor="middle" x="802" y="-468.9" font-family="Helvetica,sans-Serif" font-size="12.00">Chief Executive Officer (CEO)</text>
+</g>
+<g id="edge1" class="edge">
+<title>Board&#45;&gt;CEO</title>
+<path fill="none" stroke="#4b5563" d="M882.14,-532.91C866.94,-521.55 846.86,-506.53 830.6,-494.38"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="831.87,-492.27 824.8,-490.04 828.93,-496.19 831.87,-492.27"/>
+</g>
+<g id="node3" class="node">
+<title>Audit</title>
+<path fill="#6b7280" stroke="#6b7280" d="M1081,-492C1081,-492 937,-492 937,-492 931,-492 925,-486 925,-480 925,-480 925,-464 925,-464 925,-458 931,-452 937,-452 937,-452 1081,-452 1081,-452 1087,-452 1093,-458 1093,-464 1093,-464 1093,-480 1093,-480 1093,-486 1087,-492 1081,-492"/>
+<text text-anchor="middle" x="1009" y="-475.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Third line: internal audit</text>
+<text text-anchor="middle" x="1009" y="-462.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">(reports to the board)</text>
+</g>
+<g id="edge2" class="edge">
+<title>Board&#45;&gt;Audit</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M928.08,-532.91C942.58,-522.18 961.47,-508.19 977.36,-496.43"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="978.89,-498.34 983.06,-492.21 975.97,-494.4 978.89,-498.34"/>
+</g>
+<g id="node4" class="node">
+<title>Retail</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M208,-393C208,-393 28,-393 28,-393 22,-393 16,-387 16,-381 16,-381 16,-352 16,-352 16,-346 22,-340 28,-340 28,-340 208,-340 208,-340 214,-340 220,-346 220,-352 220,-352 220,-381 220,-381 220,-387 214,-393 208,-393"/>
+<text text-anchor="middle" x="118" y="-376.4" font-family="Helvetica,sans-Serif" font-size="12.00">Retail banking</text>
+<text text-anchor="middle" x="118" y="-363.4" font-family="Helvetica,sans-Serif" font-size="12.00">current accounts, mortgages,</text>
+<text text-anchor="middle" x="118" y="-350.4" font-family="Helvetica,sans-Serif" font-size="12.00">cards, personal loans</text>
+</g>
+<g id="edge6" class="edge">
+<title>CEO&#45;&gt;Retail</title>
+<path fill="none" stroke="#4b5563" d="M701.39,-467.04C561.78,-460.76 316.81,-446.77 231,-423 209.05,-416.92 186.24,-406.59 166.91,-396.48"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="167.83,-394.19 160.5,-393.07 165.53,-398.52 167.83,-394.19"/>
+</g>
+<g id="node5" class="node">
+<title>Comm</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M430,-386.5C430,-386.5 254,-386.5 254,-386.5 248,-386.5 242,-380.5 242,-374.5 242,-374.5 242,-358.5 242,-358.5 242,-352.5 248,-346.5 254,-346.5 254,-346.5 430,-346.5 430,-346.5 436,-346.5 442,-352.5 442,-358.5 442,-358.5 442,-374.5 442,-374.5 442,-380.5 436,-386.5 430,-386.5"/>
+<text text-anchor="middle" x="342" y="-369.9" font-family="Helvetica,sans-Serif" font-size="12.00">Commercial banking</text>
+<text text-anchor="middle" x="342" y="-356.9" font-family="Helvetica,sans-Serif" font-size="12.00">SME and mid&#45;market lending</text>
+</g>
+<g id="edge7" class="edge">
+<title>CEO&#45;&gt;Comm</title>
+<path fill="none" stroke="#4b5563" d="M701.21,-465.87C630.47,-460.17 534.36,-448.18 453,-423 427.45,-415.09 400.57,-401.8 379.67,-390.21"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="380.68,-387.97 373.38,-386.67 378.28,-392.24 380.68,-387.97"/>
+</g>
+<g id="node6" class="node">
+<title>CIB</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M636,-393C636,-393 476,-393 476,-393 470,-393 464,-387 464,-381 464,-381 464,-352 464,-352 464,-346 470,-340 476,-340 476,-340 636,-340 636,-340 642,-340 648,-346 648,-352 648,-352 648,-381 648,-381 648,-387 642,-393 636,-393"/>
+<text text-anchor="middle" x="556" y="-376.4" font-family="Helvetica,sans-Serif" font-size="12.00">Corporate and investment</text>
+<text text-anchor="middle" x="556" y="-363.4" font-family="Helvetica,sans-Serif" font-size="12.00">banking: large corporates,</text>
+<text text-anchor="middle" x="556" y="-350.4" font-family="Helvetica,sans-Serif" font-size="12.00">markets, syndicated loans</text>
+</g>
+<g id="edge8" class="edge">
+<title>CEO&#45;&gt;CIB</title>
+<path fill="none" stroke="#4b5563" d="M744.53,-453.95C718.37,-445.58 687.23,-434.77 660,-423 642.17,-415.29 623.27,-405.67 606.54,-396.62"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="607.32,-394.25 600,-393.05 604.97,-398.55 607.32,-394.25"/>
+</g>
+<g id="node7" class="node">
+<title>Treas</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M809.5,-393C809.5,-393 682.5,-393 682.5,-393 676.5,-393 670.5,-387 670.5,-381 670.5,-381 670.5,-352 670.5,-352 670.5,-346 676.5,-340 682.5,-340 682.5,-340 809.5,-340 809.5,-340 815.5,-340 821.5,-346 821.5,-352 821.5,-352 821.5,-381 821.5,-381 821.5,-387 815.5,-393 809.5,-393"/>
+<text text-anchor="middle" x="746" y="-376.4" font-family="Helvetica,sans-Serif" font-size="12.00">Treasury</text>
+<text text-anchor="middle" x="746" y="-363.4" font-family="Helvetica,sans-Serif" font-size="12.00">funding, liquidity,</text>
+<text text-anchor="middle" x="746" y="-350.4" font-family="Helvetica,sans-Serif" font-size="12.00">capital management</text>
+</g>
+<g id="edge9" class="edge">
+<title>CEO&#45;&gt;Treas</title>
+<path fill="none" stroke="#4b5563" d="M792.75,-453.91C784.78,-439.18 773.07,-417.52 763.35,-399.58"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="765.36,-398.14 759.88,-393.15 761.06,-400.47 765.36,-398.14"/>
+</g>
+<g id="node8" class="node">
+<title>CRO</title>
+<path fill="#1e3a8a" stroke="#1e3a8a" d="M751,-281C751,-281 607,-281 607,-281 601,-281 595,-275 595,-269 595,-269 595,-257 595,-257 595,-251 601,-245 607,-245 607,-245 751,-245 751,-245 757,-245 763,-251 763,-257 763,-257 763,-269 763,-269 763,-275 757,-281 751,-281"/>
+<text text-anchor="middle" x="679" y="-259.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Chief Risk Officer (CRO)</text>
+</g>
+<g id="edge10" class="edge">
+<title>CEO&#45;&gt;CRO</title>
+<path fill="none" stroke="#4b5563" d="M817.69,-453.69C824.42,-445.11 831.52,-434.2 835,-423 847,-384.38 857.16,-365.83 835,-332 819.99,-309.09 795.39,-293.85 770.12,-283.74"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="770.75,-281.35 763.33,-281.15 769,-285.93 770.75,-281.35"/>
+</g>
+<g id="node12" class="node">
+<title>Fin</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M825.5,-69C825.5,-69 714.5,-69 714.5,-69 708.5,-69 702.5,-63 702.5,-57 702.5,-57 702.5,-28 702.5,-28 702.5,-22 708.5,-16 714.5,-16 714.5,-16 825.5,-16 825.5,-16 831.5,-16 837.5,-22 837.5,-28 837.5,-28 837.5,-57 837.5,-57 837.5,-63 831.5,-69 825.5,-69"/>
+<text text-anchor="middle" x="770" y="-52.4" font-family="Helvetica,sans-Serif" font-size="12.00">Finance</text>
+<text text-anchor="middle" x="770" y="-39.4" font-family="Helvetica,sans-Serif" font-size="12.00">ledger, provisions,</text>
+<text text-anchor="middle" x="770" y="-26.4" font-family="Helvetica,sans-Serif" font-size="12.00">regulatory returns</text>
+</g>
+<g id="edge11" class="edge">
+<title>CEO&#45;&gt;Fin</title>
+<path fill="none" stroke="#4b5563" d="M835.58,-453.97C864.63,-436.58 902,-406.6 902,-367.5 902,-367.5 902,-367.5 902,-170 902,-141.11 906.79,-127.06 886,-107 873.89,-95.32 864.41,-105.75 849,-99 834.09,-92.47 819.12,-82.91 806.28,-73.55"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="807.62,-71.49 800.54,-69.28 804.7,-75.42 807.62,-71.49"/>
+</g>
+<g id="node13" class="node">
+<title>Ops</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M1024,-69C1024,-69 872,-69 872,-69 866,-69 860,-63 860,-57 860,-57 860,-28 860,-28 860,-22 866,-16 872,-16 872,-16 1024,-16 1024,-16 1030,-16 1036,-22 1036,-28 1036,-28 1036,-57 1036,-57 1036,-63 1030,-69 1024,-69"/>
+<text text-anchor="middle" x="948" y="-52.4" font-family="Helvetica,sans-Serif" font-size="12.00">Operations</text>
+<text text-anchor="middle" x="948" y="-39.4" font-family="Helvetica,sans-Serif" font-size="12.00">loan servicing, collateral,</text>
+<text text-anchor="middle" x="948" y="-26.4" font-family="Helvetica,sans-Serif" font-size="12.00">payments, collections</text>
+</g>
+<g id="edge12" class="edge">
+<title>CEO&#45;&gt;Ops</title>
+<path fill="none" stroke="#4b5563" d="M863.07,-453.95C903.08,-438.64 948,-411.62 948,-367.5 948,-367.5 948,-367.5 948,-170 948,-138.22 948,-101.94 948,-76.41"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="950.45,-76.18 948,-69.18 945.55,-76.18 950.45,-76.18"/>
+</g>
+<g id="node14" class="node">
+<title>Tech</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M1257.5,-69C1257.5,-69 1070.5,-69 1070.5,-69 1064.5,-69 1058.5,-63 1058.5,-57 1058.5,-57 1058.5,-28 1058.5,-28 1058.5,-22 1064.5,-16 1070.5,-16 1070.5,-16 1257.5,-16 1257.5,-16 1263.5,-16 1269.5,-22 1269.5,-28 1269.5,-28 1269.5,-57 1269.5,-57 1269.5,-63 1263.5,-69 1257.5,-69"/>
+<text text-anchor="middle" x="1164" y="-52.4" font-family="Helvetica,sans-Serif" font-size="12.00">Technology and data</text>
+<text text-anchor="middle" x="1164" y="-39.4" font-family="Helvetica,sans-Serif" font-size="12.00">core banking, data warehouse,</text>
+<text text-anchor="middle" x="1164" y="-26.4" font-family="Helvetica,sans-Serif" font-size="12.00">risk engines</text>
+</g>
+<g id="edge13" class="edge">
+<title>CEO&#45;&gt;Tech</title>
+<path fill="none" stroke="#4b5563" d="M897.33,-453.96C977.45,-436.84 1079,-407.29 1079,-367.5 1079,-367.5 1079,-367.5 1079,-170 1079,-132.61 1104.9,-97.95 1128.11,-74.41"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="1130.06,-75.92 1133.31,-69.26 1126.61,-72.44 1130.06,-75.92"/>
+</g>
+<g id="node9" class="node">
+<title>Credit</title>
+<path fill="#065f46" stroke="#065f46" d="M529,-204C529,-204 347,-204 347,-204 341,-204 335,-198 335,-192 335,-192 335,-150 335,-150 335,-144 341,-138 347,-138 347,-138 529,-138 529,-138 535,-138 541,-144 541,-150 541,-150 541,-192 541,-192 541,-198 535,-204 529,-204"/>
+<text text-anchor="middle" x="438" y="-187.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Credit risk</text>
+<text text-anchor="middle" x="438" y="-174.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">sanctioning, policy, models,</text>
+<text text-anchor="middle" x="438" y="-161.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">portfolio, provisions, reporting</text>
+<text text-anchor="middle" x="438" y="-148.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">(your platform lives here)</text>
+</g>
+<g id="edge14" class="edge">
+<title>Retail&#45;&gt;Credit</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M160.49,-339.8C216.57,-305.89 315.58,-246.03 378.92,-207.72"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="380.21,-209.81 384.94,-204.09 377.68,-205.61 380.21,-209.81"/>
+</g>
+<g id="edge15" class="edge">
+<title>Comm&#45;&gt;Credit</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M351.56,-346.24C367.18,-314.75 398.47,-251.67 418.81,-210.67"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="421.06,-211.65 421.98,-204.29 416.67,-209.47 421.06,-211.65"/>
+</g>
+<g id="edge16" class="edge">
+<title>CIB&#45;&gt;Credit</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M522.55,-339.8C513.1,-331.38 503.38,-321.46 496,-311 474.3,-280.24 458.67,-240.12 449.14,-210.89"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="451.42,-210.01 446.96,-204.08 446.76,-211.5 451.42,-210.01"/>
+<text text-anchor="middle" x="540" y="-266" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> deals to approve,</text>
+<text text-anchor="middle" x="540" y="-255" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> data to monitor</text>
+</g>
+<g id="edge3" class="edge">
+<title>CRO&#45;&gt;Credit</title>
+<path fill="none" stroke="#4b5563" d="M633.39,-244.97C604.47,-234.17 566.03,-219.81 530.9,-206.69"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="531.33,-204.24 523.92,-204.09 529.62,-208.83 531.33,-204.24"/>
+</g>
+<g id="node10" class="node">
+<title>Market</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M648.5,-191C648.5,-191 575.5,-191 575.5,-191 569.5,-191 563.5,-185 563.5,-179 563.5,-179 563.5,-163 563.5,-163 563.5,-157 569.5,-151 575.5,-151 575.5,-151 648.5,-151 648.5,-151 654.5,-151 660.5,-157 660.5,-163 660.5,-163 660.5,-179 660.5,-179 660.5,-185 654.5,-191 648.5,-191"/>
+<text text-anchor="middle" x="612" y="-174.4" font-family="Helvetica,sans-Serif" font-size="12.00">Market and</text>
+<text text-anchor="middle" x="612" y="-161.4" font-family="Helvetica,sans-Serif" font-size="12.00">liquidity risk</text>
+</g>
+<g id="edge4" class="edge">
+<title>CRO&#45;&gt;Market</title>
+<path fill="none" stroke="#4b5563" d="M666.08,-244.65C656.01,-231.12 641.89,-212.15 630.6,-196.98"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="632.42,-195.32 626.27,-191.17 628.49,-198.25 632.42,-195.32"/>
+</g>
+<g id="node11" class="node">
+<title>OpRisk</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M793,-191C793,-191 695,-191 695,-191 689,-191 683,-185 683,-179 683,-179 683,-163 683,-163 683,-157 689,-151 695,-151 695,-151 793,-151 793,-151 799,-151 805,-157 805,-163 805,-163 805,-179 805,-179 805,-185 799,-191 793,-191"/>
+<text text-anchor="middle" x="744" y="-174.4" font-family="Helvetica,sans-Serif" font-size="12.00">Operational risk</text>
+<text text-anchor="middle" x="744" y="-161.4" font-family="Helvetica,sans-Serif" font-size="12.00">and compliance</text>
+</g>
+<g id="edge5" class="edge">
+<title>CRO&#45;&gt;OpRisk</title>
+<path fill="none" stroke="#4b5563" d="M691.53,-244.65C701.3,-231.12 715,-212.15 725.96,-196.98"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="728.04,-198.28 730.16,-191.17 724.07,-195.41 728.04,-198.28"/>
+</g>
+<g id="edge17" class="edge">
+<title>Credit&#45;&gt;Fin</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M522.21,-137.92C575.8,-117.5 644.56,-91.3 696.04,-71.68"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="697.2,-73.86 702.87,-69.08 695.45,-69.28 697.2,-73.86"/>
+<text text-anchor="middle" x="635" y="-110" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> provisions, RWA</text>
+</g>
+<g id="edge18" class="edge">
+<title>Credit&#45;&gt;Tech</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M521.74,-137.94C532.15,-134.83 542.74,-132.07 553,-130 579.96,-124.57 1020.38,-105.88 1047,-99 1069.88,-93.09 1093.7,-82.67 1113.83,-72.45"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="1115.13,-74.53 1120.23,-69.14 1112.88,-70.18 1115.13,-74.53"/>
+<text text-anchor="middle" x="1002.5" y="-110" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> models, data, platform</text>
+</g>
+</g>
+</svg>

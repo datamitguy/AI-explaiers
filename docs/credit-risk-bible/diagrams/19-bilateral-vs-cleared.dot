@@ -1,0 +1,31 @@
+digraph BilateralCleared {
+  graph [rankdir=TB, splines=true, nodesep=0.5, ranksep=0.6, fontname="Helvetica", fontsize=13, bgcolor="white", newrank=true, pad=0.2];
+  node  [shape=box, style="rounded,filled", fillcolor="#eef2ff", color="#6366f1", fontname="Helvetica", fontsize=12, margin="0.18,0.10"];
+  edge  [color="#4b5563", arrowsize=0.7, fontname="Helvetica", fontsize=10, fontcolor="#374151"];
+
+  subgraph cluster_bi {
+    label="Bilateral (over the counter) with ISDA and CSA"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
+    A1 [label="Bank A"];
+    B1 [label="Counterparty B\n(corporate, fund, other bank)"];
+    ISDA [label="ISDA master agreement\nall trades form one netting set\nclose-out netting on default"];
+    CSA [label="Credit support annex\nvariation margin daily,\ninitial margin, thresholds,\nminimum transfer amounts"];
+    A1 -> B1 [dir=both, label=" many trades, one net amount"];
+    ISDA -> CSA;
+    B1 -> ISDA [style=dashed];
+  }
+
+  subgraph cluster_ccp {
+    label="Centrally cleared through a CCP"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
+    A2 [label="Bank A\n(clearing member)"];
+    CCPn [label="Central counterparty (CCP)\nbecomes buyer to every seller\nand seller to every buyer", fillcolor="#1f2937", fontcolor="white", color="#1f2937"];
+    B2 [label="Bank B\n(clearing member)"];
+    DF [label="Default waterfall\ndefaulter's margin, defaulter's\ndefault fund, CCP own capital,\nother members' default fund"];
+    A2 -> CCPn [dir=both, label=" margin daily"];
+    CCPn -> B2 [dir=both, label=" margin daily"];
+    CCPn -> DF [style=dashed];
+  }
+
+  Why [label="Why regulators pushed clearing after 2008:\nnetting across the market, daily margin,\ntransparency, no tangle of bilateral chains", fillcolor="#065f46", fontcolor="white", color="#065f46"];
+  CSA -> Why [style=invis];
+  DF -> Why [style=dashed];
+}

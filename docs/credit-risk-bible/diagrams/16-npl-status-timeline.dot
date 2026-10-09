@@ -1,0 +1,31 @@
+digraph NPLStatus {
+  graph [rankdir=TB, splines=true, nodesep=0.35, ranksep=0.5, fontname="Helvetica", fontsize=13, bgcolor="white", newrank=true, pad=0.2];
+  node  [shape=box, style="rounded,filled", fillcolor="#eef2ff", color="#6366f1", fontname="Helvetica", fontsize=12, margin="0.18,0.10"];
+  edge  [color="#4b5563", arrowsize=0.7, fontname="Helvetica", fontsize=10, fontcolor="#374151"];
+
+  Perf [label="Performing\n0 days past due", fillcolor="#065f46", fontcolor="white", color="#065f46"];
+  DPD30 [label="30 days past due\nbackstop for significant\nincrease in credit risk"];
+  Q [label="90 days past due\nor unlikely to pay?", shape=diamond, style=filled, fillcolor="#fef3c7", color="#d97706", margin="0.05,0.05"];
+  NPE [label="Non-performing / defaulted\nStage 3 for provisions", fillcolor="#991b1b", fontcolor="white", color="#991b1b"];
+
+  subgraph cluster_fb {
+    label="Forbearance flags (run alongside status)"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
+    FBP [label="Performing forborne\nconcession granted while\nstill performing"];
+    FBN [label="Non-performing forborne\nconcession granted while\nnon-performing"];
+  }
+
+  Cure [label="Cure test\nno arrears, paying for\nminimum period (commonly 3 months)", shape=diamond, style=filled, fillcolor="#fef3c7", color="#d97706", margin="0.05,0.05"];
+  Prob [label="Probation\nforborne flag kept for a\nminimum period (commonly 2 years)"];
+  Back [label="Back to performing\nflag removed", fillcolor="#065f46", fontcolor="white", color="#065f46"];
+
+  Perf -> DPD30 -> Q;
+  Q -> NPE [label=" yes"];
+  Q -> Perf [label=" no, pays up"];
+  Perf -> FBP [style=dashed, label=" concession"];
+  NPE -> FBN [style=dashed, label=" concession"];
+  NPE -> Cure;
+  Cure -> Prob [label=" pass"];
+  Cure -> NPE [label=" fail"];
+  Prob -> Back [label=" clean period ends"];
+  Prob -> NPE [label=" new arrears or\n new concession"];
+}

@@ -1,0 +1,172 @@
+<svg width="100%"
+ viewBox="0.00 0.00 772.80 677.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 663.4)">
+<title>CountryRiskTypes</title>
+<polygon fill="white" stroke="transparent" points="-14.4,14.4 -14.4,-663.4 758.4,-663.4 758.4,14.4 -14.4,14.4"/>
+<g id="clust1" class="cluster">
+<title>cluster_sov</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M20,-153C20,-153 255,-153 255,-153 261,-153 267,-159 267,-165 267,-165 267,-487 267,-487 267,-493 261,-499 255,-499 255,-499 20,-499 20,-499 14,-499 8,-493 8,-487 8,-487 8,-165 8,-165 8,-159 14,-153 20,-153"/>
+<text text-anchor="middle" x="137.5" y="-484.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">Sovereign risk</text>
+</g>
+<g id="clust2" class="cluster">
+<title>cluster_priv</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M288,-159.5C288,-159.5 724,-159.5 724,-159.5 730,-159.5 736,-165.5 736,-171.5 736,-171.5 736,-390 736,-390 736,-396 730,-402 724,-402 724,-402 288,-402 288,-402 282,-402 276,-396 276,-390 276,-390 276,-171.5 276,-171.5 276,-165.5 282,-159.5 288,-159.5"/>
+<text text-anchor="middle" x="506" y="-387.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">Country risk on a private borrower</text>
+</g>
+<g id="node1" class="node">
+<title>Start</title>
+<path fill="#1f2937" stroke="#1f2937" d="M321.5,-649C321.5,-649 156.5,-649 156.5,-649 150.5,-649 144.5,-643 144.5,-637 144.5,-637 144.5,-621 144.5,-621 144.5,-615 150.5,-609 156.5,-609 156.5,-609 321.5,-609 321.5,-609 327.5,-609 333.5,-615 333.5,-621 333.5,-621 333.5,-637 333.5,-637 333.5,-643 327.5,-649 321.5,-649"/>
+<text text-anchor="middle" x="239" y="-632.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Bank lends across a border</text>
+<text text-anchor="middle" x="239" y="-619.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">(or to a government)</text>
+</g>
+<g id="node2" class="node">
+<title>Q1</title>
+<polygon fill="#fef3c7" stroke="#d97706" points="239,-572 121.45,-554 239,-536 356.55,-554 239,-572"/>
+<text text-anchor="middle" x="239" y="-550.9" font-family="Helvetica,sans-Serif" font-size="12.00">Who is the borrower?</text>
+</g>
+<g id="edge7" class="edge">
+<title>Start&#45;&gt;Q1</title>
+<path fill="none" stroke="#4b5563" d="M239,-608.82C239,-599.8 239,-588.94 239,-579.34"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="241.45,-579.31 239,-572.31 236.55,-579.31 241.45,-579.31"/>
+</g>
+<g id="node3" class="node">
+<title>Sov</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M237,-469C237,-469 103,-469 103,-469 97,-469 91,-463 91,-457 91,-457 91,-441 91,-441 91,-435 97,-429 103,-429 103,-429 237,-429 237,-429 243,-429 249,-435 249,-441 249,-441 249,-457 249,-457 249,-463 243,-469 237,-469"/>
+<text text-anchor="middle" x="170" y="-452.4" font-family="Helvetica,sans-Serif" font-size="12.00">The government itself</text>
+<text text-anchor="middle" x="170" y="-439.4" font-family="Helvetica,sans-Serif" font-size="12.00">or its central bank</text>
+</g>
+<g id="edge8" class="edge">
+<title>Q1&#45;&gt;Sov</title>
+<path fill="none" stroke="#4b5563" d="M228.52,-537.36C217.5,-520.9 199.98,-494.76 186.98,-475.35"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="188.87,-473.76 182.94,-469.31 184.8,-476.49 188.87,-473.76"/>
+<text text-anchor="middle" x="245.5" y="-510" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> government</text>
+</g>
+<g id="node7" class="node">
+<title>Priv</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M550,-372C550,-372 430,-372 430,-372 424,-372 418,-366 418,-360 418,-360 418,-344 418,-344 418,-338 424,-332 430,-332 430,-332 550,-332 550,-332 556,-332 562,-338 562,-344 562,-344 562,-360 562,-360 562,-366 556,-372 550,-372"/>
+<text text-anchor="middle" x="490" y="-355.4" font-family="Helvetica,sans-Serif" font-size="12.00">A company or bank</text>
+<text text-anchor="middle" x="490" y="-342.4" font-family="Helvetica,sans-Serif" font-size="12.00">in that country</text>
+</g>
+<g id="edge9" class="edge">
+<title>Q1&#45;&gt;Priv</title>
+<path fill="none" stroke="#4b5563" d="M256.99,-538.7C264.96,-532.36 274.45,-524.81 283,-518 346.22,-467.66 420.26,-408.62 460.43,-376.59"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="462.16,-378.34 466.1,-372.06 459.1,-374.51 462.16,-378.34"/>
+<text text-anchor="middle" x="411" y="-446.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> private</text>
+</g>
+<g id="node4" class="node">
+<title>Q2</title>
+<polygon fill="#fef3c7" stroke="#d97706" points="151,-370 57.7,-352 151,-334 244.3,-352 151,-370"/>
+<text text-anchor="middle" x="151" y="-348.9" font-family="Helvetica,sans-Serif" font-size="12.00">Which currency?</text>
+</g>
+<g id="edge1" class="edge">
+<title>Sov&#45;&gt;Q2</title>
+<path fill="none" stroke="#4b5563" d="M166.16,-428.78C163.15,-413.73 158.95,-392.73 155.73,-376.66"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="158.11,-376.04 154.33,-369.66 153.3,-377 158.11,-376.04"/>
+</g>
+<g id="node5" class="node">
+<title>LC</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M210.5,-214C210.5,-214 33.5,-214 33.5,-214 27.5,-214 21.5,-208 21.5,-202 21.5,-202 21.5,-173 21.5,-173 21.5,-167 27.5,-161 33.5,-161 33.5,-161 210.5,-161 210.5,-161 216.5,-161 222.5,-167 222.5,-173 222.5,-173 222.5,-202 222.5,-202 222.5,-208 216.5,-214 210.5,-214"/>
+<text text-anchor="middle" x="122" y="-197.4" font-family="Helvetica,sans-Serif" font-size="12.00">Local currency debt</text>
+<text text-anchor="middle" x="122" y="-184.4" font-family="Helvetica,sans-Serif" font-size="12.00">government can print money</text>
+<text text-anchor="middle" x="122" y="-171.4" font-family="Helvetica,sans-Serif" font-size="12.00">(inflation risk instead)</text>
+</g>
+<g id="edge2" class="edge">
+<title>Q2&#45;&gt;LC</title>
+<path fill="none" stroke="#4b5563" d="M112.47,-341.36C84.18,-332.05 47.71,-314.84 30,-285 17.98,-264.74 17.4,-251.9 30,-232 33.19,-226.96 37.15,-222.49 41.6,-218.53"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="43.15,-220.42 47.05,-214.11 40.07,-216.62 43.15,-220.42"/>
+<text text-anchor="middle" x="70.5" y="-306" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> local</text>
+</g>
+<g id="node6" class="node">
+<title>FC</title>
+<path fill="#991b1b" stroke="#991b1b" d="M247,-285C247,-285 55,-285 55,-285 49,-285 43,-279 43,-273 43,-273 43,-244 43,-244 43,-238 49,-232 55,-232 55,-232 247,-232 247,-232 253,-232 259,-238 259,-244 259,-244 259,-273 259,-273 259,-279 253,-285 247,-285"/>
+<text text-anchor="middle" x="151" y="-268.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Foreign currency debt</text>
+<text text-anchor="middle" x="151" y="-255.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">government must earn or</text>
+<text text-anchor="middle" x="151" y="-242.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">borrow dollars; defaults happen</text>
+</g>
+<g id="edge3" class="edge">
+<title>Q2&#45;&gt;FC</title>
+<path fill="none" stroke="#4b5563" d="M151,-333.79C151,-322.15 151,-306.41 151,-292.41"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="153.45,-292.28 151,-285.28 148.55,-292.28 153.45,-292.28"/>
+<text text-anchor="middle" x="170" y="-306" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> foreign</text>
+</g>
+<g id="node12" class="node">
+<title>Lim</title>
+<path fill="#065f46" stroke="#065f46" d="M503,-40C503,-40 309,-40 309,-40 303,-40 297,-34 297,-28 297,-28 297,-12 297,-12 297,-6 303,0 309,0 309,0 503,0 503,0 509,0 515,-6 515,-12 515,-12 515,-28 515,-28 515,-34 509,-40 503,-40"/>
+<text text-anchor="middle" x="406" y="-23.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Country limit and country rating</text>
+<text text-anchor="middle" x="406" y="-10.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">ultimate risk basis</text>
+</g>
+<g id="edge14" class="edge">
+<title>LC&#45;&gt;Lim</title>
+<path fill="none" stroke="#4b5563" d="M155.27,-160.93C186.66,-137.45 235.57,-102.54 281,-77 303.45,-64.38 329.28,-52.41 351.61,-42.81"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="352.63,-45.03 358.11,-40.03 350.71,-40.53 352.63,-45.03"/>
+</g>
+<g id="node11" class="node">
+<title>Mit</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M506.5,-143C506.5,-143 305.5,-143 305.5,-143 299.5,-143 293.5,-137 293.5,-131 293.5,-131 293.5,-89 293.5,-89 293.5,-83 299.5,-77 305.5,-77 305.5,-77 506.5,-77 506.5,-77 512.5,-77 518.5,-83 518.5,-89 518.5,-89 518.5,-131 518.5,-131 518.5,-137 512.5,-143 506.5,-143"/>
+<text text-anchor="middle" x="406" y="-126.4" font-family="Helvetica,sans-Serif" font-size="12.00">Mitigants</text>
+<text text-anchor="middle" x="406" y="-113.4" font-family="Helvetica,sans-Serif" font-size="12.00">political risk insurance,</text>
+<text text-anchor="middle" x="406" y="-100.4" font-family="Helvetica,sans-Serif" font-size="12.00">export credit agency cover,</text>
+<text text-anchor="middle" x="406" y="-87.4" font-family="Helvetica,sans-Serif" font-size="12.00">offshore accounts, MDB umbrella</text>
+</g>
+<g id="edge10" class="edge">
+<title>FC&#45;&gt;Mit</title>
+<path fill="none" stroke="#4b5563" d="M204.9,-231.89C213.44,-226.61 221.81,-220.61 229,-214 253.04,-191.88 243.78,-172.49 270,-153 275.32,-149.05 281.01,-145.46 286.94,-142.21"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="288.39,-144.22 293.47,-138.81 286.13,-139.87 288.39,-144.22"/>
+</g>
+<g id="node8" class="node">
+<title>Own</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M689,-207.5C689,-207.5 581,-207.5 581,-207.5 575,-207.5 569,-201.5 569,-195.5 569,-195.5 569,-179.5 569,-179.5 569,-173.5 575,-167.5 581,-167.5 581,-167.5 689,-167.5 689,-167.5 695,-167.5 701,-173.5 701,-179.5 701,-179.5 701,-195.5 701,-195.5 701,-201.5 695,-207.5 689,-207.5"/>
+<text text-anchor="middle" x="635" y="-190.9" font-family="Helvetica,sans-Serif" font-size="12.00">Its own credit risk</text>
+<text text-anchor="middle" x="635" y="-177.9" font-family="Helvetica,sans-Serif" font-size="12.00">(normal analysis)</text>
+</g>
+<g id="edge4" class="edge">
+<title>Priv&#45;&gt;Own</title>
+<path fill="none" stroke="#4b5563" d="M562.02,-339.33C620.29,-328.25 695.58,-309.63 714,-285 728.11,-266.14 725.98,-252.28 714,-232 709.18,-223.84 702.21,-217.1 694.39,-211.57"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="695.47,-209.35 688.27,-207.58 692.79,-213.46 695.47,-209.35"/>
+</g>
+<g id="node9" class="node">
+<title>TC</title>
+<path fill="#991b1b" stroke="#991b1b" d="M515.5,-285C515.5,-285 296.5,-285 296.5,-285 290.5,-285 284.5,-279 284.5,-273 284.5,-273 284.5,-244 284.5,-244 284.5,-238 290.5,-232 296.5,-232 296.5,-232 515.5,-232 515.5,-232 521.5,-232 527.5,-238 527.5,-244 527.5,-244 527.5,-273 527.5,-273 527.5,-279 521.5,-285 515.5,-285"/>
+<text text-anchor="middle" x="406" y="-268.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Transfer and convertibility risk</text>
+<text text-anchor="middle" x="406" y="-255.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">sound company, but capital controls</text>
+<text text-anchor="middle" x="406" y="-242.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">stop it buying or sending dollars</text>
+</g>
+<g id="edge5" class="edge">
+<title>Priv&#45;&gt;TC</title>
+<path fill="none" stroke="#4b5563" d="M472.19,-331.6C461.22,-319.65 446.91,-304.06 434.4,-290.44"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="436.07,-288.63 429.53,-285.13 432.46,-291.95 436.07,-288.63"/>
+</g>
+<g id="node10" class="node">
+<title>Pol</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M689,-285C689,-285 565,-285 565,-285 559,-285 553,-279 553,-273 553,-273 553,-244 553,-244 553,-238 559,-232 565,-232 565,-232 689,-232 689,-232 695,-232 701,-238 701,-244 701,-244 701,-273 701,-273 701,-279 695,-285 689,-285"/>
+<text text-anchor="middle" x="627" y="-268.4" font-family="Helvetica,sans-Serif" font-size="12.00">Political risk</text>
+<text text-anchor="middle" x="627" y="-255.4" font-family="Helvetica,sans-Serif" font-size="12.00">expropriation, war,</text>
+<text text-anchor="middle" x="627" y="-242.4" font-family="Helvetica,sans-Serif" font-size="12.00">contract repudiation</text>
+</g>
+<g id="edge6" class="edge">
+<title>Priv&#45;&gt;Pol</title>
+<path fill="none" stroke="#4b5563" d="M518.72,-331.82C537.3,-319.41 561.84,-303.02 582.87,-288.97"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="584.24,-291.01 588.7,-285.08 581.52,-286.93 584.24,-291.01"/>
+</g>
+<g id="edge15" class="edge">
+<title>Own&#45;&gt;Lim</title>
+<path fill="none" stroke="#4b5563" d="M620.64,-167.29C602.1,-143.53 567.8,-103.06 531,-77 511.65,-63.3 488.42,-51.78 467.26,-42.82"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="468.17,-40.54 460.77,-40.12 466.29,-45.07 468.17,-40.54"/>
+</g>
+<g id="edge11" class="edge">
+<title>TC&#45;&gt;Mit</title>
+<path fill="none" stroke="#4b5563" d="M406,-231.98C406,-209.43 406,-176.18 406,-150.24"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="408.45,-150.13 406,-143.13 403.55,-150.13 408.45,-150.13"/>
+</g>
+<g id="edge12" class="edge">
+<title>Pol&#45;&gt;Mit</title>
+<path fill="none" stroke="#4b5563" d="M584.99,-231.8C575.72,-226.02 565.99,-219.86 557,-214 523.74,-192.33 486.92,-167.25 457.97,-147.25"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="459.07,-145.03 451.92,-143.07 456.28,-149.06 459.07,-145.03"/>
+</g>
+<g id="edge13" class="edge">
+<title>Mit&#45;&gt;Lim</title>
+<path fill="none" stroke="#4b5563" d="M406,-76.73C406,-67.06 406,-56.56 406,-47.32"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="408.45,-47.21 406,-40.21 403.55,-47.21 408.45,-47.21"/>
+</g>
+</g>
+</svg>

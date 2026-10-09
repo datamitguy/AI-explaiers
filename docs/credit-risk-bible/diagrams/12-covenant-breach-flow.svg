@@ -1,0 +1,163 @@
+<svg width="100%"
+ viewBox="0.00 0.00 1111.80 766.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 752.4)">
+<title>CovenantBreachFlow</title>
+<polygon fill="white" stroke="transparent" points="-14.4,14.4 -14.4,-752.4 1097.4,-752.4 1097.4,14.4 -14.4,14.4"/>
+<g id="clust1" class="cluster">
+<title>cluster_options</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M276,-69C276,-69 1063,-69 1063,-69 1069,-69 1075,-75 1075,-81 1075,-81 1075,-148 1075,-148 1075,-154 1069,-160 1063,-160 1063,-160 276,-160 276,-160 270,-160 264,-154 264,-148 264,-148 264,-81 264,-81 264,-75 270,-69 276,-69"/>
+<text text-anchor="middle" x="669.5" y="-145.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">Options, decided by credit committee</text>
+</g>
+<g id="node1" class="node">
+<title>Start</title>
+<path fill="#1f2937" stroke="#1f2937" d="M412.5,-738C412.5,-738 275.5,-738 275.5,-738 269.5,-738 263.5,-732 263.5,-726 263.5,-726 263.5,-714 263.5,-714 263.5,-708 269.5,-702 275.5,-702 275.5,-702 412.5,-702 412.5,-702 418.5,-702 424.5,-708 424.5,-714 424.5,-714 424.5,-726 424.5,-726 424.5,-732 418.5,-738 412.5,-738"/>
+<text text-anchor="middle" x="344" y="-716.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Quarter end: test date</text>
+</g>
+<g id="node2" class="node">
+<title>Cert</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M440,-665C440,-665 248,-665 248,-665 242,-665 236,-659 236,-653 236,-653 236,-624 236,-624 236,-618 242,-612 248,-612 248,-612 440,-612 440,-612 446,-612 452,-618 452,-624 452,-624 452,-653 452,-653 452,-659 446,-665 440,-665"/>
+<text text-anchor="middle" x="344" y="-648.4" font-family="Helvetica,sans-Serif" font-size="12.00">Borrower delivers accounts and</text>
+<text text-anchor="middle" x="344" y="-635.4" font-family="Helvetica,sans-Serif" font-size="12.00">compliance certificate</text>
+<text text-anchor="middle" x="344" y="-622.4" font-family="Helvetica,sans-Serif" font-size="12.00">(usually within 45 to 90 days)</text>
+</g>
+<g id="edge3" class="edge">
+<title>Start&#45;&gt;Cert</title>
+<path fill="none" stroke="#4b5563" d="M344,-701.75C344,-693.15 344,-682.46 344,-672.37"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="346.45,-672.18 344,-665.18 341.55,-672.18 346.45,-672.18"/>
+</g>
+<g id="node3" class="node">
+<title>Calc</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M457.5,-575C457.5,-575 230.5,-575 230.5,-575 224.5,-575 218.5,-569 218.5,-563 218.5,-563 218.5,-547 218.5,-547 218.5,-541 224.5,-535 230.5,-535 230.5,-535 457.5,-535 457.5,-535 463.5,-535 469.5,-541 469.5,-547 469.5,-547 469.5,-563 469.5,-563 469.5,-569 463.5,-575 457.5,-575"/>
+<text text-anchor="middle" x="344" y="-558.4" font-family="Helvetica,sans-Serif" font-size="12.00">Bank recalculates each ratio</text>
+<text text-anchor="middle" x="344" y="-545.4" font-family="Helvetica,sans-Serif" font-size="12.00">from the definitions in the agreement</text>
+</g>
+<g id="edge4" class="edge">
+<title>Cert&#45;&gt;Calc</title>
+<path fill="none" stroke="#4b5563" d="M344,-611.71C344,-602.37 344,-591.8 344,-582.4"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="346.45,-582.16 344,-575.16 341.55,-582.16 346.45,-582.16"/>
+</g>
+<g id="node4" class="node">
+<title>Pass</title>
+<polygon fill="#fef3c7" stroke="#d97706" points="344,-498 237.58,-480 344,-462 450.42,-480 344,-498"/>
+<text text-anchor="middle" x="344" y="-476.9" font-family="Helvetica,sans-Serif" font-size="12.00">All covenants met?</text>
+</g>
+<g id="edge5" class="edge">
+<title>Calc&#45;&gt;Pass</title>
+<path fill="none" stroke="#4b5563" d="M344,-534.82C344,-525.8 344,-514.94 344,-505.34"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="346.45,-505.31 344,-498.31 341.55,-505.31 346.45,-505.31"/>
+</g>
+<g id="node6" class="node">
+<title>Tight</title>
+<polygon fill="#fef3c7" stroke="#d97706" points="234,-415 123,-381 234,-347 345,-381 234,-415"/>
+<text text-anchor="middle" x="234" y="-384.4" font-family="Helvetica,sans-Serif" font-size="12.00">Headroom below</text>
+<text text-anchor="middle" x="234" y="-371.4" font-family="Helvetica,sans-Serif" font-size="12.00">warning level?</text>
+</g>
+<g id="edge6" class="edge">
+<title>Pass&#45;&gt;Tight</title>
+<path fill="none" stroke="#4b5563" d="M327.77,-464.69C311.86,-450.66 287.14,-428.86 267.08,-411.17"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="268.69,-409.33 261.82,-406.54 265.45,-413 268.69,-409.33"/>
+<text text-anchor="middle" x="312.5" y="-436" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> yes</text>
+</g>
+<g id="node8" class="node">
+<title>Breach</title>
+<path fill="#991b1b" stroke="#991b1b" d="M581.5,-401C581.5,-401 434.5,-401 434.5,-401 428.5,-401 422.5,-395 422.5,-389 422.5,-389 422.5,-373 422.5,-373 422.5,-367 428.5,-361 434.5,-361 434.5,-361 581.5,-361 581.5,-361 587.5,-361 593.5,-367 593.5,-373 593.5,-373 593.5,-389 593.5,-389 593.5,-395 587.5,-401 581.5,-401"/>
+<text text-anchor="middle" x="508" y="-384.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Breach: event of default</text>
+<text text-anchor="middle" x="508" y="-371.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">(after any cure period)</text>
+</g>
+<g id="edge9" class="edge">
+<title>Pass&#45;&gt;Breach</title>
+<path fill="none" stroke="#4b5563" d="M366.46,-465.72C392.94,-450.05 437.4,-423.76 469.43,-404.81"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="470.88,-406.8 475.66,-401.13 468.39,-402.58 470.88,-406.8"/>
+<text text-anchor="middle" x="429" y="-436" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> no</text>
+</g>
+<g id="node5" class="node">
+<title>Ok</title>
+<path fill="#065f46" stroke="#065f46" d="M184,-300C184,-300 12,-300 12,-300 6,-300 0,-294 0,-288 0,-288 0,-272 0,-272 0,-266 6,-260 12,-260 12,-260 184,-260 184,-260 190,-260 196,-266 196,-272 196,-272 196,-288 196,-288 196,-294 190,-300 184,-300"/>
+<text text-anchor="middle" x="98" y="-283.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Record result and headroom</text>
+<text text-anchor="middle" x="98" y="-270.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">in the covenant system</text>
+</g>
+<g id="edge7" class="edge">
+<title>Tight&#45;&gt;Ok</title>
+<path fill="none" stroke="#4b5563" d="M201.77,-356.54C180.23,-340.86 152,-320.31 130.42,-304.6"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="131.62,-302.44 124.52,-300.3 128.74,-306.41 131.62,-302.44"/>
+<text text-anchor="middle" x="170" y="-321" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> no</text>
+</g>
+<g id="node7" class="node">
+<title>Watch</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M454,-40C454,-40 312,-40 312,-40 306,-40 300,-34 300,-28 300,-28 300,-12 300,-12 300,-6 306,0 312,0 312,0 454,0 454,0 460,0 466,-6 466,-12 466,-12 466,-28 466,-28 466,-34 460,-40 454,-40"/>
+<text text-anchor="middle" x="383" y="-23.4" font-family="Helvetica,sans-Serif" font-size="12.00">Flag to watchlist review</text>
+<text text-anchor="middle" x="383" y="-10.4" font-family="Helvetica,sans-Serif" font-size="12.00">(see note 15)</text>
+</g>
+<g id="edge8" class="edge">
+<title>Tight&#45;&gt;Watch</title>
+<path fill="none" stroke="#4b5563" d="M234,-347C234,-327.75 234,-303 234,-281 234,-281 234,-281 234,-102.5 234,-70.02 261.59,-50.4 293.03,-38.59"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="294.01,-40.84 299.79,-36.19 292.37,-36.22 294.01,-40.84"/>
+<text text-anchor="middle" x="244.5" y="-202.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> yes</text>
+</g>
+<g id="node9" class="node">
+<title>Reserve</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M704,-300C704,-300 526,-300 526,-300 520,-300 514,-294 514,-288 514,-288 514,-272 514,-272 514,-266 520,-260 526,-260 526,-260 704,-260 704,-260 710,-260 716,-266 716,-272 716,-272 716,-288 716,-288 716,-294 710,-300 704,-300"/>
+<text text-anchor="middle" x="615" y="-283.4" font-family="Helvetica,sans-Serif" font-size="12.00">Reservation of rights letter</text>
+<text text-anchor="middle" x="615" y="-270.4" font-family="Helvetica,sans-Serif" font-size="12.00">(bank keeps its options open)</text>
+</g>
+<g id="edge10" class="edge">
+<title>Breach&#45;&gt;Reserve</title>
+<path fill="none" stroke="#4b5563" d="M528.63,-360.91C545.8,-345.02 570.35,-322.31 588.89,-305.16"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="590.96,-306.58 594.43,-300.03 587.63,-302.99 590.96,-306.58"/>
+</g>
+<g id="node10" class="node">
+<title>Decide</title>
+<polygon fill="#fef3c7" stroke="#d97706" points="647,-223 513.6,-205 647,-187 780.4,-205 647,-223"/>
+<text text-anchor="middle" x="647" y="-201.9" font-family="Helvetica,sans-Serif" font-size="12.00">What does the bank do?</text>
+</g>
+<g id="edge11" class="edge">
+<title>Reserve&#45;&gt;Decide</title>
+<path fill="none" stroke="#4b5563" d="M623.41,-259.82C627.56,-250.35 632.6,-238.85 636.96,-228.91"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="639.27,-229.73 639.84,-222.33 634.79,-227.76 639.27,-229.73"/>
+</g>
+<g id="node11" class="node">
+<title>Waive</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M482,-123.5C482,-123.5 284,-123.5 284,-123.5 278,-123.5 272,-117.5 272,-111.5 272,-111.5 272,-95.5 272,-95.5 272,-89.5 278,-83.5 284,-83.5 284,-83.5 482,-83.5 482,-83.5 488,-83.5 494,-89.5 494,-95.5 494,-95.5 494,-111.5 494,-111.5 494,-117.5 488,-123.5 482,-123.5"/>
+<text text-anchor="middle" x="383" y="-106.9" font-family="Helvetica,sans-Serif" font-size="12.00">Waiver</text>
+<text text-anchor="middle" x="383" y="-93.9" font-family="Helvetica,sans-Serif" font-size="12.00">(forgive this test, often for a fee)</text>
+</g>
+<g id="edge12" class="edge">
+<title>Decide&#45;&gt;Waive</title>
+<path fill="none" stroke="#4b5563" d="M613.56,-191.4C570.05,-175 493.35,-146.09 440.44,-126.15"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="441.2,-123.82 433.78,-123.64 439.47,-128.4 441.2,-123.82"/>
+</g>
+<g id="node12" class="node">
+<title>Amend</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M772.5,-130C772.5,-130 555.5,-130 555.5,-130 549.5,-130 543.5,-124 543.5,-118 543.5,-118 543.5,-89 543.5,-89 543.5,-83 549.5,-77 555.5,-77 555.5,-77 772.5,-77 772.5,-77 778.5,-77 784.5,-83 784.5,-89 784.5,-89 784.5,-118 784.5,-118 784.5,-124 778.5,-130 772.5,-130"/>
+<text text-anchor="middle" x="664" y="-113.4" font-family="Helvetica,sans-Serif" font-size="12.00">Amendment and reset</text>
+<text text-anchor="middle" x="664" y="-100.4" font-family="Helvetica,sans-Serif" font-size="12.00">(new covenant levels, more margin,</text>
+<text text-anchor="middle" x="664" y="-87.4" font-family="Helvetica,sans-Serif" font-size="12.00">extra security, equity cure)</text>
+</g>
+<g id="edge13" class="edge">
+<title>Decide&#45;&gt;Amend</title>
+<path fill="none" stroke="#4b5563" d="M649.88,-187.12C652.22,-173.44 655.58,-153.76 658.44,-137.03"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="660.87,-137.39 659.63,-130.07 656.04,-136.56 660.87,-137.39"/>
+</g>
+<g id="node13" class="node">
+<title>Accel</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M1055.5,-123.5C1055.5,-123.5 846.5,-123.5 846.5,-123.5 840.5,-123.5 834.5,-117.5 834.5,-111.5 834.5,-111.5 834.5,-95.5 834.5,-95.5 834.5,-89.5 840.5,-83.5 846.5,-83.5 846.5,-83.5 1055.5,-83.5 1055.5,-83.5 1061.5,-83.5 1067.5,-89.5 1067.5,-95.5 1067.5,-95.5 1067.5,-111.5 1067.5,-111.5 1067.5,-117.5 1061.5,-123.5 1055.5,-123.5"/>
+<text text-anchor="middle" x="951" y="-106.9" font-family="Helvetica,sans-Serif" font-size="12.00">Accelerate and enforce</text>
+<text text-anchor="middle" x="951" y="-93.9" font-family="Helvetica,sans-Serif" font-size="12.00">(demand repayment, call security)</text>
+</g>
+<g id="edge14" class="edge">
+<title>Decide&#45;&gt;Accel</title>
+<path fill="none" stroke="#4b5563" d="M688.59,-192.53C718.81,-184.02 760.62,-171.88 797,-160 829.26,-149.46 864.94,-136.68 893.82,-126.04"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="894.92,-128.25 900.63,-123.52 893.22,-123.65 894.92,-128.25"/>
+</g>
+<g id="edge15" class="edge">
+<title>Waive&#45;&gt;Watch</title>
+<path fill="none" stroke="#4b5563" d="M383,-83.19C383,-72.43 383,-58.88 383,-47.18"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="385.45,-47.18 383,-40.18 380.55,-47.18 385.45,-47.18"/>
+</g>
+<g id="edge16" class="edge">
+<title>Amend&#45;&gt;Watch</title>
+<path fill="none" stroke="#4b5563" d="M575.86,-76.94C537.07,-65.69 492.07,-52.63 455.29,-41.97"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="455.93,-39.6 448.53,-40.01 454.57,-44.31 455.93,-39.6"/>
+</g>
+</g>
+</svg>

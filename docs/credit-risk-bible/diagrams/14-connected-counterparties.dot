@@ -1,0 +1,26 @@
+digraph ConnectedCounterparties {
+  graph [rankdir=TB, splines=true, nodesep=0.4, ranksep=0.55, fontname="Helvetica", fontsize=13, bgcolor="white", newrank=true, pad=0.2];
+  node  [shape=box, style="rounded,filled", fillcolor="#eef2ff", color="#6366f1", fontname="Helvetica", fontsize=12, margin="0.18,0.10"];
+  edge  [color="#4b5563", arrowsize=0.7, fontname="Helvetica", fontsize=10, fontcolor="#374151"];
+
+  subgraph cluster_group {
+    label="One group of connected counterparties: exposures are added up against one limit"; style="rounded,dashed"; color="#6366f1"; fontcolor="#374151";
+    Owner [label="Mr Patel\n(ultimate owner, 70%)", fillcolor="#1f2937", fontcolor="white", color="#1f2937"];
+    Hold  [label="Patel Holdings Ltd\n(parent, no trading)\nexposure: 0"];
+    OpA   [label="Patel Foods Ltd\n(100% subsidiary)\nexposure: 12m"];
+    OpB   [label="Patel Logistics Ltd\n(100% subsidiary)\nexposure: 8m"];
+    Prop  [label="Patel Property LLP\n(owned by Mr Patel personally)\nexposure: 15m"];
+    Supp  [label="FreshPak Ltd\n(independent, but 90% of sales\nare to Patel Foods)\nexposure: 3m", fillcolor="#fef3c7", color="#d97706"];
+
+    Owner -> Hold [label=" controls"];
+    Hold -> OpA [label=" 100%"];
+    Hold -> OpB [label=" 100%"];
+    Owner -> Prop [label=" owns"];
+    OpA -> Supp [label=" economic\n dependence", style=dashed];
+  }
+
+  Total [label="Group exposure = 12 + 8 + 15 + 3 = 38m\nchecked against the group limit\nand the 25% of Tier 1 regulatory cap", fillcolor="#1e3a8a", fontcolor="white", color="#1e3a8a"];
+  Other [label="Unrelated customer\n(separate limit)", fillcolor="#6b7280", fontcolor="white", color="#6b7280"];
+
+  {OpA OpB Prop Supp} -> Total;
+}

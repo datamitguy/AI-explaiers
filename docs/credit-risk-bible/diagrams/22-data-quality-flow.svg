@@ -1,0 +1,213 @@
+<svg width="100%"
+ viewBox="0.00 0.00 1458.80 734.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 720.4)">
+<title>DataQualityFlow</title>
+<polygon fill="white" stroke="transparent" points="-14.4,14.4 -14.4,-720.4 1444.4,-720.4 1444.4,14.4 -14.4,14.4"/>
+<g id="clust1" class="cluster">
+<title>cluster_dq</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M20,-330C20,-330 1231,-330 1231,-330 1237,-330 1243,-336 1243,-342 1243,-342 1243,-409 1243,-409 1243,-415 1237,-421 1231,-421 1231,-421 20,-421 20,-421 14,-421 8,-415 8,-409 8,-409 8,-342 8,-342 8,-336 14,-330 20,-330"/>
+<text text-anchor="middle" x="625.5" y="-406.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">Data quality rules by dimension</text>
+</g>
+<g id="node1" class="node">
+<title>Start</title>
+<path fill="#1f2937" stroke="#1f2937" d="M1083.5,-706C1083.5,-706 916.5,-706 916.5,-706 910.5,-706 904.5,-700 904.5,-694 904.5,-694 904.5,-678 904.5,-678 904.5,-672 910.5,-666 916.5,-666 916.5,-666 1083.5,-666 1083.5,-666 1089.5,-666 1095.5,-672 1095.5,-678 1095.5,-678 1095.5,-694 1095.5,-694 1095.5,-700 1089.5,-706 1083.5,-706"/>
+<text text-anchor="middle" x="1000" y="-689.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Month&#45;end: source systems</text>
+<text text-anchor="middle" x="1000" y="-676.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">close and snapshot</text>
+</g>
+<g id="node2" class="node">
+<title>Load</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M1090,-629C1090,-629 910,-629 910,-629 904,-629 898,-623 898,-617 898,-617 898,-601 898,-601 898,-595 904,-589 910,-589 910,-589 1090,-589 1090,-589 1096,-589 1102,-595 1102,-601 1102,-601 1102,-617 1102,-617 1102,-623 1096,-629 1090,-629"/>
+<text text-anchor="middle" x="1000" y="-612.4" font-family="Helvetica,sans-Serif" font-size="12.00">Load into warehouse</text>
+<text text-anchor="middle" x="1000" y="-599.4" font-family="Helvetica,sans-Serif" font-size="12.00">extract, transform, load (ETL)</text>
+</g>
+<g id="edge5" class="edge">
+<title>Start&#45;&gt;Load</title>
+<path fill="none" stroke="#4b5563" d="M1000,-665.69C1000,-656.76 1000,-646.03 1000,-636.37"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="1002.45,-636.25 1000,-629.25 997.55,-636.25 1002.45,-636.25"/>
+</g>
+<g id="node3" class="node">
+<title>Q1</title>
+<polygon fill="#fef3c7" stroke="#d97706" points="863,-552 710,-505 863,-458 1016,-505 863,-552"/>
+<text text-anchor="middle" x="863" y="-514.9" font-family="Helvetica,sans-Serif" font-size="12.00">Technical checks pass?</text>
+<text text-anchor="middle" x="863" y="-501.9" font-family="Helvetica,sans-Serif" font-size="12.00">(row counts, file arrived,</text>
+<text text-anchor="middle" x="863" y="-488.9" font-family="Helvetica,sans-Serif" font-size="12.00">schema unchanged)</text>
+</g>
+<g id="edge6" class="edge">
+<title>Load&#45;&gt;Q1</title>
+<path fill="none" stroke="#4b5563" d="M974.23,-588.81C956.94,-575.94 933.61,-558.57 912.78,-543.06"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="914.06,-540.96 906.98,-538.74 911.13,-544.89 914.06,-540.96"/>
+</g>
+<g id="node4" class="node">
+<title>Fail1</title>
+<path fill="#991b1b" stroke="#991b1b" d="M1418,-384.5C1418,-384.5 1272,-384.5 1272,-384.5 1266,-384.5 1260,-378.5 1260,-372.5 1260,-372.5 1260,-356.5 1260,-356.5 1260,-350.5 1266,-344.5 1272,-344.5 1272,-344.5 1418,-344.5 1418,-344.5 1424,-344.5 1430,-350.5 1430,-356.5 1430,-356.5 1430,-372.5 1430,-372.5 1430,-378.5 1424,-384.5 1418,-384.5"/>
+<text text-anchor="middle" x="1345" y="-367.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Rerun or escalate</text>
+<text text-anchor="middle" x="1345" y="-354.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">to source system owner</text>
+</g>
+<g id="edge7" class="edge">
+<title>Q1&#45;&gt;Fail1</title>
+<path fill="none" stroke="#4b5563" d="M926.69,-477.34C974.01,-458.03 1034.71,-434.39 1061,-429 1101.96,-420.6 1208.85,-432.69 1249,-421 1272.25,-414.23 1295.83,-400.71 1313.8,-388.72"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="1315.26,-390.68 1319.67,-384.72 1312.51,-386.63 1315.26,-390.68"/>
+<text text-anchor="middle" x="1069" y="-432" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> no</text>
+</g>
+<g id="node5" class="node">
+<title>Comp</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M182,-391C182,-391 28,-391 28,-391 22,-391 16,-385 16,-379 16,-379 16,-350 16,-350 16,-344 22,-338 28,-338 28,-338 182,-338 182,-338 188,-338 194,-344 194,-350 194,-350 194,-379 194,-379 194,-385 188,-391 182,-391"/>
+<text text-anchor="middle" x="105" y="-374.4" font-family="Helvetica,sans-Serif" font-size="12.00">Completeness</text>
+<text text-anchor="middle" x="105" y="-361.4" font-family="Helvetica,sans-Serif" font-size="12.00">every facility has a rating</text>
+<text text-anchor="middle" x="105" y="-348.4" font-family="Helvetica,sans-Serif" font-size="12.00">and a country</text>
+</g>
+<g id="edge9" class="edge">
+<title>Q1&#45;&gt;Comp</title>
+<path fill="none" stroke="#4b5563" d="M733.45,-497.76C604.17,-489.03 400.85,-468.51 231,-421 207.22,-414.35 182.11,-404.03 160.62,-394.08"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="161.45,-391.76 154.07,-391.01 159.37,-396.2 161.45,-391.76"/>
+<text text-anchor="middle" x="308.5" y="-432" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> yes</text>
+</g>
+<g id="node6" class="node">
+<title>Acc</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M406,-391C406,-391 256,-391 256,-391 250,-391 244,-385 244,-379 244,-379 244,-350 244,-350 244,-344 250,-338 256,-338 256,-338 406,-338 406,-338 412,-338 418,-344 418,-350 418,-350 418,-379 418,-379 418,-385 412,-391 406,-391"/>
+<text text-anchor="middle" x="331" y="-374.4" font-family="Helvetica,sans-Serif" font-size="12.00">Accuracy</text>
+<text text-anchor="middle" x="331" y="-361.4" font-family="Helvetica,sans-Serif" font-size="12.00">collateral value matches</text>
+<text text-anchor="middle" x="331" y="-348.4" font-family="Helvetica,sans-Serif" font-size="12.00">latest valuation report</text>
+</g>
+<g id="edge10" class="edge">
+<title>Q1&#45;&gt;Acc</title>
+<path fill="none" stroke="#4b5563" d="M760.24,-489.37C676.99,-476.02 557.31,-453.4 456,-421 433.25,-413.72 409.08,-403.6 388.11,-393.98"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="389.1,-391.74 381.72,-391.02 387.04,-396.18 389.1,-391.74"/>
+<text text-anchor="middle" x="531.5" y="-432" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> yes</text>
+</g>
+<g id="node7" class="node">
+<title>Time</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M596,-391C596,-391 480,-391 480,-391 474,-391 468,-385 468,-379 468,-379 468,-350 468,-350 468,-344 474,-338 480,-338 480,-338 596,-338 596,-338 602,-338 608,-344 608,-350 608,-350 608,-379 608,-379 608,-385 602,-391 596,-391"/>
+<text text-anchor="middle" x="538" y="-374.4" font-family="Helvetica,sans-Serif" font-size="12.00">Timeliness</text>
+<text text-anchor="middle" x="538" y="-361.4" font-family="Helvetica,sans-Serif" font-size="12.00">financials less than</text>
+<text text-anchor="middle" x="538" y="-348.4" font-family="Helvetica,sans-Serif" font-size="12.00">18 months old</text>
+</g>
+<g id="edge11" class="edge">
+<title>Q1&#45;&gt;Time</title>
+<path fill="none" stroke="#4b5563" d="M783.27,-482.35C735.05,-467.87 673.04,-446.78 621,-421 606.32,-413.73 591.16,-404.26 577.88,-395.21"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="579.08,-393.05 571.92,-391.09 576.29,-397.08 579.08,-393.05"/>
+<text text-anchor="middle" x="669.5" y="-432" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> yes</text>
+</g>
+<g id="node8" class="node">
+<title>Cons</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M787,-391C787,-391 645,-391 645,-391 639,-391 633,-385 633,-379 633,-379 633,-350 633,-350 633,-344 639,-338 645,-338 645,-338 787,-338 787,-338 793,-338 799,-344 799,-350 799,-350 799,-379 799,-379 799,-385 793,-391 787,-391"/>
+<text text-anchor="middle" x="716" y="-374.4" font-family="Helvetica,sans-Serif" font-size="12.00">Consistency</text>
+<text text-anchor="middle" x="716" y="-361.4" font-family="Helvetica,sans-Serif" font-size="12.00">balance equals general</text>
+<text text-anchor="middle" x="716" y="-348.4" font-family="Helvetica,sans-Serif" font-size="12.00">ledger within tolerance</text>
+</g>
+<g id="edge12" class="edge">
+<title>Q1&#45;&gt;Cons</title>
+<path fill="none" stroke="#4b5563" d="M825.91,-469.05C802.13,-446.65 771.54,-417.83 748.68,-396.29"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="750.11,-394.27 743.34,-391.26 746.75,-397.84 750.11,-394.27"/>
+<text text-anchor="middle" x="803.5" y="-432" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> yes</text>
+</g>
+<g id="node9" class="node">
+<title>Uniq</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M1017,-391C1017,-391 861,-391 861,-391 855,-391 849,-385 849,-379 849,-379 849,-350 849,-350 849,-344 855,-338 861,-338 861,-338 1017,-338 1017,-338 1023,-338 1029,-344 1029,-350 1029,-350 1029,-379 1029,-379 1029,-385 1023,-391 1017,-391"/>
+<text text-anchor="middle" x="939" y="-374.4" font-family="Helvetica,sans-Serif" font-size="12.00">Uniqueness</text>
+<text text-anchor="middle" x="939" y="-361.4" font-family="Helvetica,sans-Serif" font-size="12.00">one record per customer,</text>
+<text text-anchor="middle" x="939" y="-348.4" font-family="Helvetica,sans-Serif" font-size="12.00">no duplicates</text>
+</g>
+<g id="edge13" class="edge">
+<title>Q1&#45;&gt;Uniq</title>
+<path fill="none" stroke="#4b5563" d="M884.78,-464.31C896.41,-443.11 910.55,-417.35 921.47,-397.45"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="923.68,-398.52 924.89,-391.2 919.38,-396.16 923.68,-398.52"/>
+<text text-anchor="middle" x="913.5" y="-432" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> yes</text>
+</g>
+<g id="node10" class="node">
+<title>Val</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M1223,-391C1223,-391 1091,-391 1091,-391 1085,-391 1079,-385 1079,-379 1079,-379 1079,-350 1079,-350 1079,-344 1085,-338 1091,-338 1091,-338 1223,-338 1223,-338 1229,-338 1235,-344 1235,-350 1235,-350 1235,-379 1235,-379 1235,-385 1229,-391 1223,-391"/>
+<text text-anchor="middle" x="1157" y="-374.4" font-family="Helvetica,sans-Serif" font-size="12.00">Validity</text>
+<text text-anchor="middle" x="1157" y="-361.4" font-family="Helvetica,sans-Serif" font-size="12.00">product code is in the</text>
+<text text-anchor="middle" x="1157" y="-348.4" font-family="Helvetica,sans-Serif" font-size="12.00">allowed list</text>
+</g>
+<g id="edge14" class="edge">
+<title>Q1&#45;&gt;Val</title>
+<path fill="none" stroke="#4b5563" d="M910.55,-472.54C935.62,-457.28 967.45,-439.93 998,-429 1016.72,-422.31 1023.1,-427.15 1042,-421 1063.21,-414.09 1085.52,-404.04 1104.78,-394.38"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="1106.05,-396.48 1111.19,-391.13 1103.83,-392.12 1106.05,-396.48"/>
+<text text-anchor="middle" x="1008.5" y="-432" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> yes</text>
+</g>
+<g id="edge8" class="edge">
+<title>Fail1&#45;&gt;Load</title>
+<path fill="none" stroke="#4b5563" d="M1317.58,-384.78C1254.79,-428.91 1100.78,-537.16 1032.97,-584.82"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="1031.39,-582.94 1027.07,-588.97 1034.21,-586.95 1031.39,-582.94"/>
+</g>
+<g id="node11" class="node">
+<title>Q2</title>
+<polygon fill="#fef3c7" stroke="#d97706" points="627,-301 479.01,-283 627,-265 774.99,-283 627,-301"/>
+<text text-anchor="middle" x="627" y="-279.9" font-family="Helvetica,sans-Serif" font-size="12.00">Breaches within tolerance?</text>
+</g>
+<g id="edge15" class="edge">
+<title>Comp&#45;&gt;Q2</title>
+<path fill="none" stroke="#4b5563" d="M194.12,-338.1C206.44,-335.09 218.99,-332.28 231,-330 333.31,-310.56 452.14,-298.08 532.74,-291.1"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="533.17,-293.52 539.93,-290.48 532.75,-288.64 533.17,-293.52"/>
+</g>
+<g id="edge16" class="edge">
+<title>Acc&#45;&gt;Q2</title>
+<path fill="none" stroke="#4b5563" d="M418.21,-340.08C469.68,-326.25 533.04,-309.24 576.37,-297.6"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="577.02,-299.96 583.14,-295.78 575.75,-295.23 577.02,-299.96"/>
+</g>
+<g id="edge17" class="edge">
+<title>Time&#45;&gt;Q2</title>
+<path fill="none" stroke="#4b5563" d="M566.65,-337.91C578.96,-326.91 593.14,-314.24 604.66,-303.95"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="606.49,-305.6 610.08,-299.11 603.23,-301.95 606.49,-305.6"/>
+</g>
+<g id="edge18" class="edge">
+<title>Cons&#45;&gt;Q2</title>
+<path fill="none" stroke="#4b5563" d="M687.35,-337.91C675.04,-326.91 660.86,-314.24 649.34,-303.95"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="650.77,-301.95 643.92,-299.11 647.51,-305.6 650.77,-301.95"/>
+</g>
+<g id="edge19" class="edge">
+<title>Uniq&#45;&gt;Q2</title>
+<path fill="none" stroke="#4b5563" d="M848.85,-339.55C836.48,-336.31 823.93,-333.06 812,-330 767.97,-318.72 717.93,-306.3 681.01,-297.22"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="681.19,-294.74 673.81,-295.44 680.02,-299.49 681.19,-294.74"/>
+</g>
+<g id="edge20" class="edge">
+<title>Val&#45;&gt;Q2</title>
+<path fill="none" stroke="#4b5563" d="M1078.88,-338.78C1066.63,-335.47 1054.03,-332.4 1042,-330 935.69,-308.79 811.97,-296.66 727.45,-290.24"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="727.58,-287.8 720.42,-289.72 727.22,-292.68 727.58,-287.8"/>
+</g>
+<g id="node12" class="node">
+<title>Adj</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M644,-207C644,-207 452,-207 452,-207 446,-207 440,-201 440,-195 440,-195 440,-166 440,-166 440,-160 446,-154 452,-154 452,-154 644,-154 644,-154 650,-154 656,-160 656,-166 656,-166 656,-195 656,-195 656,-201 650,-207 644,-207"/>
+<text text-anchor="middle" x="548" y="-190.4" font-family="Helvetica,sans-Serif" font-size="12.00">Logged adjustment with owner,</text>
+<text text-anchor="middle" x="548" y="-177.4" font-family="Helvetica,sans-Serif" font-size="12.00">reason, approver and expiry</text>
+<text text-anchor="middle" x="548" y="-164.4" font-family="Helvetica,sans-Serif" font-size="12.00">(not a silent spreadsheet fix)</text>
+</g>
+<g id="edge21" class="edge">
+<title>Q2&#45;&gt;Adj</title>
+<path fill="none" stroke="#4b5563" d="M614.66,-266.3C603.51,-252.11 586.76,-230.81 572.84,-213.1"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="574.49,-211.24 568.24,-207.25 570.64,-214.27 574.49,-211.24"/>
+<text text-anchor="middle" x="630.5" y="-239" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> no, material</text>
+<text text-anchor="middle" x="630.5" y="-228" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> breaches</text>
+</g>
+<g id="node13" class="node">
+<title>Recon</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M710.5,-117C710.5,-117 543.5,-117 543.5,-117 537.5,-117 531.5,-111 531.5,-105 531.5,-105 531.5,-89 531.5,-89 531.5,-83 537.5,-77 543.5,-77 543.5,-77 710.5,-77 710.5,-77 716.5,-77 722.5,-83 722.5,-89 722.5,-89 722.5,-105 722.5,-105 722.5,-111 716.5,-117 710.5,-117"/>
+<text text-anchor="middle" x="627" y="-100.4" font-family="Helvetica,sans-Serif" font-size="12.00">Reconcile to general ledger</text>
+<text text-anchor="middle" x="627" y="-87.4" font-family="Helvetica,sans-Serif" font-size="12.00">explain every difference</text>
+</g>
+<g id="edge23" class="edge">
+<title>Q2&#45;&gt;Recon</title>
+<path fill="none" stroke="#4b5563" d="M650.5,-267.58C657.4,-262.06 664.14,-255.11 668,-247 671.11,-240.47 670.58,-158.73 669,-154 665.21,-142.64 658.12,-131.73 650.82,-122.6"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="652.65,-120.96 646.28,-117.16 648.89,-124.1 652.65,-120.96"/>
+<text text-anchor="middle" x="680.5" y="-178" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> yes</text>
+</g>
+<g id="edge22" class="edge">
+<title>Adj&#45;&gt;Recon</title>
+<path fill="none" stroke="#4b5563" d="M573,-153.71C582.77,-143.63 593.93,-132.12 603.55,-122.19"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="605.32,-123.89 608.43,-117.16 601.8,-120.48 605.32,-123.89"/>
+</g>
+<g id="node14" class="node">
+<title>Sign</title>
+<path fill="#065f46" stroke="#065f46" d="M695.5,-40C695.5,-40 558.5,-40 558.5,-40 552.5,-40 546.5,-34 546.5,-28 546.5,-28 546.5,-12 546.5,-12 546.5,-6 552.5,0 558.5,0 558.5,0 695.5,0 695.5,0 701.5,0 707.5,-6 707.5,-12 707.5,-12 707.5,-28 707.5,-28 707.5,-34 701.5,-40 695.5,-40"/>
+<text text-anchor="middle" x="627" y="-23.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Data owner sign&#45;off</text>
+<text text-anchor="middle" x="627" y="-10.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">release to risk engines</text>
+</g>
+<g id="edge24" class="edge">
+<title>Recon&#45;&gt;Sign</title>
+<path fill="none" stroke="#4b5563" d="M627,-76.69C627,-67.76 627,-57.03 627,-47.37"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="629.45,-47.25 627,-40.25 624.55,-47.25 629.45,-47.25"/>
+</g>
+</g>
+</svg>

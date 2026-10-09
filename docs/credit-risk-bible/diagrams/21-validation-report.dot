@@ -1,0 +1,27 @@
+digraph ValidationReport {
+  graph [rankdir=LR, splines=true, nodesep=0.3, ranksep=0.6, fontname="Helvetica", fontsize=13, bgcolor="white", newrank=true, pad=0.2];
+  node  [shape=box, style="rounded,filled", fillcolor="#eef2ff", color="#6366f1", fontname="Helvetica", fontsize=12, margin="0.18,0.10"];
+  edge  [color="#4b5563", arrowsize=0.7, fontname="Helvetica", fontsize=10, fontcolor="#374151"];
+
+  Model [label="Model under validation\n(for example a corporate PD model)", fillcolor="#1f2937", fontcolor="white", color="#1f2937"];
+
+  subgraph cluster_q {
+    label="Questions the validation report answers"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
+    Con [label="Conceptual soundness\nIs the method sensible\nfor this portfolio?"];
+    Dat [label="Data\nIs the history long, clean,\nand representative?"];
+    Dis [label="Discriminatory power\nDoes it rank good and bad\nborrowers correctly?\n(Gini, KS, AUC)"];
+    Cal [label="Calibration\nAre predicted PDs close\nto observed defaults?\n(binomial, Hosmer-Lemeshow)"];
+    Sta [label="Stability\nHas the population drifted?\n(PSI, migration)"];
+    Ben [label="Benchmarking\nHow does it compare to\nexternal ratings or\nchallenger models?"];
+    Imp [label="Implementation testing\nDoes production code match\nthe documented model?"];
+  }
+
+  Rating [label="Overall rating and\nfindings by severity", shape=diamond, style=filled, fillcolor="#fef3c7", color="#d97706", margin="0.05,0.05"];
+  Ok  [label="Approved for use\n(possibly with conditions\nand an overlay)", fillcolor="#065f46", fontcolor="white", color="#065f46"];
+  Bad [label="Not approved\nredevelop or restrict use", fillcolor="#991b1b", fontcolor="white", color="#991b1b"];
+
+  Model -> {Con Dat Dis Cal Sta Ben Imp};
+  {Con Dat Dis Cal Sta Ben Imp} -> Rating;
+  Rating -> Ok  [label=" findings\n manageable"];
+  Rating -> Bad [label=" critical\n findings"];
+}

@@ -1,0 +1,34 @@
+digraph ProblemLoanHandover {
+  graph [rankdir=TB, splines=true, nodesep=0.35, ranksep=0.5, fontname="Helvetica", fontsize=13, bgcolor="white", newrank=true, pad=0.2];
+  node  [shape=box, style="rounded,filled", fillcolor="#eef2ff", color="#6366f1", fontname="Helvetica", fontsize=12, margin="0.18,0.10"];
+  edge  [color="#4b5563", arrowsize=0.7, fontname="Helvetica", fontsize=10, fontcolor="#374151"];
+
+  Start [label="Performing loan\nmanaged by relationship manager", fillcolor="#1f2937", fontcolor="white", color="#1f2937"];
+  EWS   [label="Early warning signal\n(missed payment, covenant breach,\nrating downgrade, sector shock)"];
+  Watch [label="Watchlist review\nmonthly with credit risk"];
+  Q1    [label="Can the relationship manager\nfix it with normal tools?", shape=diamond, style=filled, fillcolor="#fef3c7", color="#d97706", margin="0.05,0.05"];
+  Cure1 [label="Waiver, small amendment,\nback to performing", fillcolor="#065f46", fontcolor="white", color="#065f46"];
+  Handover [label="Handover to workout team\n(special situations, intensive care)\nnew owner, new strategy memo"];
+
+  subgraph cluster_strat {
+    label="Workout strategy options"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
+    Hold  [label="Hold and monitor\nwait for recovery of trading"];
+    Restr [label="Restructure\nextend, holiday, capitalise,\ncovenant reset, debt for equity"];
+    Refi  [label="Refinance out\nanother lender takes us out"];
+    Enf   [label="Enforce security\nreceivership, repossession, sale"];
+    Sell  [label="Sell the loan\nsecondary market or NPL portfolio sale"];
+    { rank=same; Hold -> Restr -> Refi -> Enf -> Sell [style=invis]; }
+  }
+
+  Q2 [label="Outcome?", shape=diamond, style=filled, fillcolor="#fef3c7", color="#d97706", margin="0.05,0.05"];
+  Good [label="Cured, returns to performing\nafter probation period", fillcolor="#065f46", fontcolor="white", color="#065f46"];
+  Bad  [label="Loss crystallised, write-off,\nLGD data recorded", fillcolor="#991b1b", fontcolor="white", color="#991b1b"];
+
+  Start -> EWS -> Watch -> Q1;
+  Q1 -> Cure1 [label=" yes"];
+  Q1 -> Handover [label=" no"];
+  Handover -> {Hold Restr Refi Enf Sell};
+  {Hold Restr Refi Enf Sell} -> Q2;
+  Q2 -> Good [label=" recovers"];
+  Q2 -> Bad [label=" fails"];
+}

@@ -1,0 +1,35 @@
+digraph Stakeholders {
+  graph [rankdir=LR, splines=true, nodesep=0.4, ranksep=0.7, fontname="Helvetica", fontsize=13, bgcolor="white"];
+  node  [shape=box, style="rounded,filled", fillcolor="#eef2ff", color="#6366f1", fontname="Helvetica", fontsize=12, margin="0.18,0.10"];
+  edge  [color="#4b5563", arrowsize=0.7, fontname="Helvetica", fontsize=10, fontcolor="#374151"];
+
+  You [label="You: credit risk\nplatform lead", fillcolor="#1f2937", fontcolor="white", color="#1f2937"];
+
+  subgraph cluster_up {
+    label="Upstream: they give you data"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
+    Front [label="Front office and\nrelationship managers\n(deals, customer data)"];
+    Ops   [label="Loan operations\n(core banking, loan servicing,\ncollateral records)"];
+    Ref   [label="Reference data team\n(customer master, hierarchies,\nproduct codes, ratings feeds)"];
+    Treas [label="Treasury and markets\n(derivatives, repos,\nmarket data)"];
+  }
+
+  subgraph cluster_peer {
+    label="Peers: they own the rules and models"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
+    CRO   [label="Credit risk officers\n(policy, approvals,\nwatchlist)"];
+    Model [label="Risk modelling\n(PD, LGD, EAD, ECL,\nstress models)"];
+    Val   [label="Model validation\n(independent review)"];
+    DataG [label="Data governance\n(owners, stewards,\nBCBS 239)"];
+  }
+
+  subgraph cluster_down {
+    label="Downstream: they consume your outputs"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
+    Fin   [label="Finance\n(provisions, capital,\ngeneral ledger)"];
+    Reg   [label="Regulatory reporting\n(returns, Pillar 3)"];
+    Board [label="Committees and board\n(management information)"];
+    Audit [label="Internal audit\nand the regulator"];
+  }
+
+  Front -> You; Ops -> You; Ref -> You; Treas -> You;
+  CRO -> You [dir=both]; Model -> You [dir=both]; Val -> You [dir=both]; DataG -> You [dir=both];
+  You -> Fin; You -> Reg; You -> Board; You -> Audit;
+}

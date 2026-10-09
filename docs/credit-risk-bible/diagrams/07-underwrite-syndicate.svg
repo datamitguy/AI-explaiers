@@ -1,0 +1,151 @@
+<svg width="100%"
+ viewBox="0.00 0.00 984.80 791.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 777.4)">
+<title>UnderwriteSyndicate</title>
+<polygon fill="white" stroke="transparent" points="-14.4,14.4 -14.4,-777.4 970.4,-777.4 970.4,14.4 -14.4,14.4"/>
+<g id="node1" class="node">
+<title>Start</title>
+<path fill="#1f2937" stroke="#1f2937" d="M827,-763C827,-763 590,-763 590,-763 584,-763 578,-757 578,-751 578,-751 578,-735 578,-735 578,-729 584,-723 590,-723 590,-723 827,-723 827,-723 833,-723 839,-729 839,-735 839,-735 839,-751 839,-751 839,-757 833,-763 827,-763"/>
+<text text-anchor="middle" x="708.5" y="-746.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Private equity sponsor wins the auction</text>
+<text text-anchor="middle" x="708.5" y="-733.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">for a target company</text>
+</g>
+<g id="node2" class="node">
+<title>Mandate</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M839.5,-690C839.5,-690 577.5,-690 577.5,-690 571.5,-690 565.5,-684 565.5,-678 565.5,-678 565.5,-649 565.5,-649 565.5,-643 571.5,-637 577.5,-637 577.5,-637 839.5,-637 839.5,-637 845.5,-637 851.5,-643 851.5,-649 851.5,-649 851.5,-678 851.5,-678 851.5,-684 845.5,-690 839.5,-690"/>
+<text text-anchor="middle" x="708.5" y="-673.4" font-family="Helvetica,sans-Serif" font-size="12.00">Sponsor mandates 2 to 4 banks as</text>
+<text text-anchor="middle" x="708.5" y="-660.4" font-family="Helvetica,sans-Serif" font-size="12.00">mandated lead arrangers and underwriters</text>
+<text text-anchor="middle" x="708.5" y="-647.4" font-family="Helvetica,sans-Serif" font-size="12.00">(signed commitment letter, fee letter)</text>
+</g>
+<g id="edge1" class="edge">
+<title>Start&#45;&gt;Mandate</title>
+<path fill="none" stroke="#4b5563" d="M708.5,-722.84C708.5,-715.14 708.5,-706.03 708.5,-697.33"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="710.95,-697.16 708.5,-690.16 706.05,-697.16 710.95,-697.16"/>
+</g>
+<g id="node3" class="node">
+<title>Approve</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M828,-604C828,-604 589,-604 589,-604 583,-604 577,-598 577,-592 577,-592 577,-563 577,-563 577,-557 583,-551 589,-551 589,-551 828,-551 828,-551 834,-551 840,-557 840,-563 840,-563 840,-592 840,-592 840,-598 834,-604 828,-604"/>
+<text text-anchor="middle" x="708.5" y="-587.4" font-family="Helvetica,sans-Serif" font-size="12.00">Each bank&#39;s credit committee approves</text>
+<text text-anchor="middle" x="708.5" y="-574.4" font-family="Helvetica,sans-Serif" font-size="12.00">the underwriting: full hold amount,</text>
+<text text-anchor="middle" x="708.5" y="-561.4" font-family="Helvetica,sans-Serif" font-size="12.00">target final hold, flex terms</text>
+</g>
+<g id="edge2" class="edge">
+<title>Mandate&#45;&gt;Approve</title>
+<path fill="none" stroke="#4b5563" d="M708.5,-636.84C708.5,-628.7 708.5,-619.59 708.5,-611.03"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="710.95,-611 708.5,-604 706.05,-611 710.95,-611"/>
+</g>
+<g id="node4" class="node">
+<title>Sign</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M825.5,-518C825.5,-518 591.5,-518 591.5,-518 585.5,-518 579.5,-512 579.5,-506 579.5,-506 579.5,-477 579.5,-477 579.5,-471 585.5,-465 591.5,-465 591.5,-465 825.5,-465 825.5,-465 831.5,-465 837.5,-471 837.5,-477 837.5,-477 837.5,-506 837.5,-506 837.5,-512 831.5,-518 825.5,-518"/>
+<text text-anchor="middle" x="708.5" y="-501.4" font-family="Helvetica,sans-Serif" font-size="12.00">Signing and closing: banks fund the</text>
+<text text-anchor="middle" x="708.5" y="-488.4" font-family="Helvetica,sans-Serif" font-size="12.00">whole loan (e.g. 500 between 2 banks)</text>
+<text text-anchor="middle" x="708.5" y="-475.4" font-family="Helvetica,sans-Serif" font-size="12.00">The target is bought</text>
+</g>
+<g id="edge3" class="edge">
+<title>Approve&#45;&gt;Sign</title>
+<path fill="none" stroke="#4b5563" d="M708.5,-550.84C708.5,-542.7 708.5,-533.59 708.5,-525.03"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="710.95,-525 708.5,-518 706.05,-525 710.95,-525"/>
+</g>
+<g id="node5" class="node">
+<title>Launch</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M827,-432C827,-432 590,-432 590,-432 584,-432 578,-426 578,-420 578,-420 578,-391 578,-391 578,-385 584,-379 590,-379 590,-379 827,-379 827,-379 833,-379 839,-385 839,-391 839,-391 839,-420 839,-420 839,-426 833,-432 827,-432"/>
+<text text-anchor="middle" x="708.5" y="-415.4" font-family="Helvetica,sans-Serif" font-size="12.00">Syndication launch: bank meeting,</text>
+<text text-anchor="middle" x="708.5" y="-402.4" font-family="Helvetica,sans-Serif" font-size="12.00">information memorandum, rating from</text>
+<text text-anchor="middle" x="708.5" y="-389.4" font-family="Helvetica,sans-Serif" font-size="12.00">agencies, price talk to investors</text>
+</g>
+<g id="edge4" class="edge">
+<title>Sign&#45;&gt;Launch</title>
+<path fill="none" stroke="#4b5563" d="M708.5,-464.84C708.5,-456.7 708.5,-447.59 708.5,-439.03"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="710.95,-439 708.5,-432 706.05,-439 710.95,-439"/>
+</g>
+<g id="node6" class="node">
+<title>Book</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M805,-346C805,-346 612,-346 612,-346 606,-346 600,-340 600,-334 600,-334 600,-305 600,-305 600,-299 606,-293 612,-293 612,-293 805,-293 805,-293 811,-293 817,-299 817,-305 817,-305 817,-334 817,-334 817,-340 811,-346 805,-346"/>
+<text text-anchor="middle" x="708.5" y="-329.4" font-family="Helvetica,sans-Serif" font-size="12.00">Bookbuilding over 2 to 3 weeks:</text>
+<text text-anchor="middle" x="708.5" y="-316.4" font-family="Helvetica,sans-Serif" font-size="12.00">investors (banks, CLOs, funds)</text>
+<text text-anchor="middle" x="708.5" y="-303.4" font-family="Helvetica,sans-Serif" font-size="12.00">submit orders</text>
+</g>
+<g id="edge5" class="edge">
+<title>Launch&#45;&gt;Book</title>
+<path fill="none" stroke="#4b5563" d="M708.5,-378.84C708.5,-370.7 708.5,-361.59 708.5,-353.03"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="710.95,-353 708.5,-346 706.05,-353 710.95,-353"/>
+</g>
+<g id="node7" class="node">
+<title>Demand</title>
+<polygon fill="#fef3c7" stroke="#d97706" points="601.5,-260 455.5,-226 601.5,-192 747.5,-226 601.5,-260"/>
+<text text-anchor="middle" x="601.5" y="-229.4" font-family="Helvetica,sans-Serif" font-size="12.00">Enough demand at the</text>
+<text text-anchor="middle" x="601.5" y="-216.4" font-family="Helvetica,sans-Serif" font-size="12.00">proposed terms?</text>
+</g>
+<g id="edge6" class="edge">
+<title>Book&#45;&gt;Demand</title>
+<path fill="none" stroke="#4b5563" d="M678.41,-292.77C665.75,-281.95 650.92,-269.26 637.68,-257.93"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="639.02,-255.86 632.11,-253.17 635.83,-259.58 639.02,-255.86"/>
+</g>
+<g id="node8" class="node">
+<title>Flex</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M944,-149C944,-149 699,-149 699,-149 693,-149 687,-143 687,-137 687,-137 687,-108 687,-108 687,-102 693,-96 699,-96 699,-96 944,-96 944,-96 950,-96 956,-102 956,-108 956,-108 956,-137 956,-137 956,-143 950,-149 944,-149"/>
+<text text-anchor="middle" x="821.5" y="-132.4" font-family="Helvetica,sans-Serif" font-size="12.00">Use market flex: raise the margin,</text>
+<text text-anchor="middle" x="821.5" y="-119.4" font-family="Helvetica,sans-Serif" font-size="12.00">widen the discount, tighten terms</text>
+<text text-anchor="middle" x="821.5" y="-106.4" font-family="Helvetica,sans-Serif" font-size="12.00">(cost comes out of the underwriting fee)</text>
+</g>
+<g id="edge8" class="edge">
+<title>Demand&#45;&gt;Flex</title>
+<path fill="none" stroke="#4b5563" d="M640.6,-201.1C660.53,-189.43 685.38,-175.64 708.5,-165 718.56,-160.37 729.3,-155.87 740,-151.66"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="741.02,-153.89 746.66,-149.08 739.25,-149.33 741.02,-153.89"/>
+<text text-anchor="middle" x="745" y="-168" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> no, within flex</text>
+</g>
+<g id="node9" class="node">
+<title>Sell</title>
+<path fill="#065f46" stroke="#065f46" d="M349.5,-142.5C349.5,-142.5 139.5,-142.5 139.5,-142.5 133.5,-142.5 127.5,-136.5 127.5,-130.5 127.5,-130.5 127.5,-114.5 127.5,-114.5 127.5,-108.5 133.5,-102.5 139.5,-102.5 139.5,-102.5 349.5,-102.5 349.5,-102.5 355.5,-102.5 361.5,-108.5 361.5,-114.5 361.5,-114.5 361.5,-130.5 361.5,-130.5 361.5,-136.5 355.5,-142.5 349.5,-142.5"/>
+<text text-anchor="middle" x="244.5" y="-125.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Allocate and sell down to final hold</text>
+<text text-anchor="middle" x="244.5" y="-112.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">(e.g. each bank keeps 25 of 250)</text>
+</g>
+<g id="edge7" class="edge">
+<title>Demand&#45;&gt;Sell</title>
+<path fill="none" stroke="#4b5563" d="M537.68,-206.85C476.14,-189.36 383.07,-162.9 318.36,-144.5"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="318.81,-142.08 311.41,-142.52 317.47,-146.79 318.81,-142.08"/>
+<text text-anchor="middle" x="434" y="-168" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> yes</text>
+</g>
+<g id="node10" class="node">
+<title>Hung</title>
+<path fill="#991b1b" stroke="#991b1b" d="M650,-149C650,-149 399,-149 399,-149 393,-149 387,-143 387,-137 387,-137 387,-108 387,-108 387,-102 393,-96 399,-96 399,-96 650,-96 650,-96 656,-96 662,-102 662,-108 662,-108 662,-137 662,-137 662,-143 656,-149 650,-149"/>
+<text text-anchor="middle" x="524.5" y="-132.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Hung deal: banks stuck holding far more</text>
+<text text-anchor="middle" x="524.5" y="-119.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">than planned, mark&#45;to&#45;market loss,</text>
+<text text-anchor="middle" x="524.5" y="-106.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">capital and concentration limits breached</text>
+</g>
+<g id="edge10" class="edge">
+<title>Demand&#45;&gt;Hung</title>
+<path fill="none" stroke="#4b5563" d="M580.05,-196.73C570.16,-183.69 558.39,-168.17 548.23,-154.79"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="550.17,-153.29 543.99,-149.19 546.27,-156.25 550.17,-153.29"/>
+<text text-anchor="middle" x="609.5" y="-168" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> no, flex exhausted</text>
+</g>
+<g id="edge9" class="edge">
+<title>Flex&#45;&gt;Book</title>
+<path fill="none" stroke="#4b5563" d="M812.76,-149.09C802.47,-177.44 783.81,-223.91 760.5,-260 754.45,-269.37 746.94,-278.74 739.52,-287.15"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="737.28,-285.97 734.42,-292.81 740.92,-289.25 737.28,-285.97"/>
+</g>
+<g id="node11" class="node">
+<title>Hold</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M219,-46.5C219,-46.5 12,-46.5 12,-46.5 6,-46.5 0,-40.5 0,-34.5 0,-34.5 0,-18.5 0,-18.5 0,-12.5 6,-6.5 12,-6.5 12,-6.5 219,-6.5 219,-6.5 225,-6.5 231,-12.5 231,-18.5 231,-18.5 231,-34.5 231,-34.5 231,-40.5 225,-46.5 219,-46.5"/>
+<text text-anchor="middle" x="115.5" y="-29.9" font-family="Helvetica,sans-Serif" font-size="12.00">Final hold sits in the banking book,</text>
+<text text-anchor="middle" x="115.5" y="-16.9" font-family="Helvetica,sans-Serif" font-size="12.00">monitored like any other loan</text>
+</g>
+<g id="edge11" class="edge">
+<title>Sell&#45;&gt;Hold</title>
+<path fill="none" stroke="#4b5563" d="M218.39,-102.48C197.99,-87.61 169.51,-66.86 147.69,-50.96"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="149.11,-48.96 142.01,-46.82 146.22,-52.92 149.11,-48.96"/>
+</g>
+<g id="node12" class="node">
+<title>CLO</title>
+<path fill="#6b7280" stroke="#6b7280" d="M478.5,-53C478.5,-53 268.5,-53 268.5,-53 262.5,-53 256.5,-47 256.5,-41 256.5,-41 256.5,-12 256.5,-12 256.5,-6 262.5,0 268.5,0 268.5,0 478.5,0 478.5,0 484.5,0 490.5,-6 490.5,-12 490.5,-12 490.5,-41 490.5,-41 490.5,-47 484.5,-53 478.5,-53"/>
+<text text-anchor="middle" x="373.5" y="-36.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">CLO (collateralised loan obligation)</text>
+<text text-anchor="middle" x="373.5" y="-23.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">buys term loan B pieces and</text>
+<text text-anchor="middle" x="373.5" y="-10.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">funds them by issuing rated notes</text>
+</g>
+<g id="edge12" class="edge">
+<title>Sell&#45;&gt;CLO</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M270.61,-102.48C288.29,-89.59 312.04,-72.28 332.27,-57.55"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="333.93,-59.37 338.14,-53.26 331.04,-55.41 333.93,-59.37"/>
+<text text-anchor="middle" x="343" y="-72" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> large buyer</text>
+</g>
+</g>
+</svg>

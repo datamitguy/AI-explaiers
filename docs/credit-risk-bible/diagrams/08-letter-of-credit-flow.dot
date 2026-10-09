@@ -1,0 +1,32 @@
+digraph LetterOfCreditFlow {
+  graph [rankdir=TB, splines=true, nodesep=0.6, ranksep=0.7, fontname="Helvetica", fontsize=13, bgcolor="white", pad=0.2, newrank=true];
+  node  [shape=box, style="rounded,filled", fillcolor="#eef2ff", color="#6366f1", fontname="Helvetica", fontsize=12, margin="0.18,0.10"];
+  edge  [color="#4b5563", arrowsize=0.7, fontname="Helvetica", fontsize=10, fontcolor="#374151"];
+
+  subgraph cluster_buyer {
+    label="Buyer's country"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
+    Applicant [label="Applicant (buyer, importer)\nasks its bank to open the LC", fillcolor="#1f2937", fontcolor="white", color="#1f2937"];
+    Issuing   [label="Issuing bank\n(buyer's bank, makes the promise to pay)"];
+  }
+
+  subgraph cluster_seller {
+    label="Seller's country"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
+    Beneficiary [label="Beneficiary (seller, exporter)\nships goods, presents documents", fillcolor="#1f2937", fontcolor="white", color="#1f2937"];
+    Advising    [label="Advising or confirming bank\n(seller's bank; if confirming, adds its own\npromise so the seller need not trust the issuer)"];
+  }
+
+  Carrier [label="Carrier (shipping line)\nissues the bill of lading", fillcolor="#6b7280", fontcolor="white", color="#6b7280"];
+
+  Applicant   -> Beneficiary [label=" 1. Sales contract: goods for cash,\n payment by letter of credit"];
+  Applicant   -> Issuing     [label=" 2. Application to open the LC"];
+  Issuing     -> Advising    [label=" 3. LC sent (SWIFT MT700);\n confirmation requested"];
+  Advising    -> Beneficiary [label=" 4. LC advised and confirmed"];
+  Beneficiary -> Carrier     [label=" 5. Ships the goods"];
+  Carrier     -> Beneficiary [label=" 6. Bill of lading"];
+  Beneficiary -> Advising    [label=" 7. Presents documents:\n invoice, bill of lading,\n insurance, certificates"];
+  Advising    -> Beneficiary [label=" 8. Documents checked and compliant:\n confirming bank pays the seller", color="#065f46", fontcolor="#065f46"];
+  Advising    -> Issuing     [label=" 9. Documents forwarded,\n reimbursement claimed"];
+  Issuing     -> Advising    [label=" 10. Reimburses", color="#065f46", fontcolor="#065f46"];
+  Issuing     -> Applicant   [label=" 11. Releases documents\n against payment"];
+  Applicant   -> Carrier     [label=" 12. Collects goods with\n the bill of lading", style=dashed];
+}

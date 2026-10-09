@@ -1,0 +1,33 @@
+digraph UltimateRiskReallocation {
+  graph [rankdir=LR, splines=true, nodesep=0.35, ranksep=0.6, fontname="Helvetica", fontsize=13, bgcolor="white", newrank=true, pad=0.2];
+  node  [shape=box, style="rounded,filled", fillcolor="#eef2ff", color="#6366f1", fontname="Helvetica", fontsize=12, margin="0.18,0.10"];
+  edge  [color="#4b5563", arrowsize=0.7, fontname="Helvetica", fontsize=10, fontcolor="#374151"];
+
+  Start [label="Immediate borrower basis\nall 120m booked to borrowers\nlocated in Zandia", fillcolor="#1f2937", fontcolor="white", color="#1f2937"];
+
+  subgraph cluster_items {
+    label="Facilities (immediate borrower in Zandia)"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
+    L1 [label="Loan to Zandia Cement\nunsecured, 40m"];
+    L2 [label="Loan to Zandia Motors\nguaranteed by its parent\nin Nordland, 35m"];
+    L3 [label="Loan to Zandia Foods\nsecured on cash deposit\nheld in Westland, 25m"];
+    L4 [label="Placement with Zandia\nbranch of a Nordland bank, 20m"];
+  }
+
+  Q [label="Is the risk transferred\nby an eligible guarantee,\ncollateral or head office?", shape=diamond, style=filled, fillcolor="#fef3c7", color="#d97706", margin="0.05,0.05"];
+
+  subgraph cluster_result {
+    label="Ultimate risk basis (country of risk)"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
+    Z [label="Zandia\n40m", fillcolor="#991b1b", fontcolor="white", color="#991b1b"];
+    N [label="Nordland\n35m + 20m = 55m"];
+    W [label="Westland\n25m"];
+  }
+
+  Note [label="Zandia transfer risk still\nwatched on the branch\nplacement (local controls)", fillcolor="#f3f4f6", color="#9ca3af", fontcolor="#374151"];
+
+  Start -> {L1 L2 L3 L4};
+  {L1 L2 L3 L4} -> Q;
+  Q -> Z  [label=" no (L1)"];
+  Q -> N  [label=" guarantee (L2),\n head office (L4)"];
+  Q -> W  [label=" collateral (L3)"];
+  N -> Note [style=dashed];
+}

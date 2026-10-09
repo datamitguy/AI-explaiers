@@ -1,0 +1,17 @@
+digraph LBOCapitalStack {
+  graph [rankdir=TB, splines=true, nodesep=0.25, ranksep=0.3, fontname="Helvetica", fontsize=13, bgcolor="white", pad=0.2];
+  node  [shape=box, style="rounded,filled", fillcolor="#eef2ff", color="#6366f1", fontname="Helvetica", fontsize=12, margin="0.18,0.10", width=5.2];
+  edge  [color="#4b5563", arrowsize=0.7, fontname="Helvetica", fontsize=10, fontcolor="#374151"];
+
+  Top [label="Purchase price 1,000 (illustrative buyout at 10x EBITDA of 100)\nPaid first in a liquidation, lowest return, at the top", fillcolor="#1f2937", fontcolor="white", color="#1f2937"];
+  RCF [label="Super senior revolving credit facility: 50\nWorking capital line, often paid first from security\nMargin around 3% to 4% over base rate"];
+  TLA [label="Senior term loan A: 100 (amortising, banks)\nFirst-ranking security, repaid in instalments\nMargin around 3% to 4%"];
+  TLB [label="Senior term loan B: 350 (bullet, institutional investors and CLOs)\nSame security as TLA, repaid at the end\nMargin around 4% to 5%, often covenant-lite"];
+  SL  [label="Second lien: 50\nSecured, but paid after the first lien from the same assets\nMargin around 7% to 9%"];
+  Mezz [label="Mezzanine / PIK notes: 100\nUnsecured or junior secured, interest often paid in kind (rolled up)\nTotal return around 10% to 14%, sometimes with equity warrants"];
+  Eq  [label="Equity: 350 (private equity fund plus management)\nPaid last, absorbs the first loss, targets 20%+ annual return", fillcolor="#991b1b", fontcolor="white", color="#991b1b"];
+  Note [label="Total debt 650 = 6.5x EBITDA\nSenior debt 500 = 5.0x EBITDA\nUnitranche alternative: one 550 tranche\nreplacing TLA, TLB and second lien", fillcolor="#6b7280", fontcolor="white", color="#6b7280", width=3.2];
+
+  Top -> RCF -> TLA -> TLB -> SL -> Mezz -> Eq;
+  TLB -> Note [style=dashed];
+}

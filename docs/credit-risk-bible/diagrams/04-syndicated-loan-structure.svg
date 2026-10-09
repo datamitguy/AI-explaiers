@@ -1,0 +1,169 @@
+<svg width="100%"
+ viewBox="0.00 0.00 1133.30 367.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 353.4)">
+<title>SyndicatedLoan</title>
+<polygon fill="white" stroke="transparent" points="-14.4,14.4 -14.4,-353.4 1118.9,-353.4 1118.9,14.4 -14.4,14.4"/>
+<g id="clust1" class="cluster">
+<title>cluster_lead</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M90,-130C90,-130 801,-130 801,-130 807,-130 813,-136 813,-142 813,-142 813,-222 813,-222 813,-228 807,-234 801,-234 801,-234 90,-234 90,-234 84,-234 78,-228 78,-222 78,-222 78,-142 78,-142 78,-136 84,-130 90,-130"/>
+<text text-anchor="middle" x="445.5" y="-219.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">Lead roles (usually one or two banks)</text>
+</g>
+<g id="clust3" class="cluster">
+<title>cluster_parts</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M20,-8C20,-8 791,-8 791,-8 797,-8 803,-14 803,-20 803,-20 803,-74 803,-74 803,-80 797,-86 791,-86 791,-86 20,-86 20,-86 14,-86 8,-80 8,-74 8,-74 8,-20 8,-20 8,-14 14,-8 20,-8"/>
+<text text-anchor="middle" x="405.5" y="-71.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">Participants (the syndicate), each holds a share</text>
+</g>
+<g id="node1" class="node">
+<title>Borrower</title>
+<path fill="#1f2937" stroke="#1f2937" d="M564.5,-339C564.5,-339 403.5,-339 403.5,-339 397.5,-339 391.5,-333 391.5,-327 391.5,-327 391.5,-298 391.5,-298 391.5,-292 397.5,-286 403.5,-286 403.5,-286 564.5,-286 564.5,-286 570.5,-286 576.5,-292 576.5,-298 576.5,-298 576.5,-327 576.5,-327 576.5,-333 570.5,-339 564.5,-339"/>
+<text text-anchor="middle" x="484" y="-322.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Borrower</text>
+<text text-anchor="middle" x="484" y="-309.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">(e.g. a large manufacturer</text>
+<text text-anchor="middle" x="484" y="-296.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">needing 500 million)</text>
+</g>
+<g id="node2" class="node">
+<title>MLA</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M284,-204C284,-204 98,-204 98,-204 92,-204 86,-198 86,-192 86,-192 86,-150 86,-150 86,-144 92,-138 98,-138 98,-138 284,-138 284,-138 290,-138 296,-144 296,-150 296,-150 296,-192 296,-192 296,-198 290,-204 284,-204"/>
+<text text-anchor="middle" x="191" y="-187.4" font-family="Helvetica,sans-Serif" font-size="12.00">Mandated lead arranger (MLA)</text>
+<text text-anchor="middle" x="191" y="-174.4" font-family="Helvetica,sans-Serif" font-size="12.00">wins the mandate, structures</text>
+<text text-anchor="middle" x="191" y="-161.4" font-family="Helvetica,sans-Serif" font-size="12.00">the deal, underwrites or</text>
+<text text-anchor="middle" x="191" y="-148.4" font-family="Helvetica,sans-Serif" font-size="12.00">&#39;best efforts&#39;, sells it down</text>
+</g>
+<g id="edge7" class="edge">
+<title>Borrower&#45;&gt;MLA</title>
+<path fill="none" stroke="#4b5563" d="M419.78,-285.93C403.14,-279.04 385.31,-271.44 369,-264 331.02,-246.69 289.53,-225.39 256.17,-207.65"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="256.94,-205.28 249.61,-204.15 254.64,-209.61 256.94,-205.28"/>
+<text text-anchor="middle" x="408.5" y="-256" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> mandate letter,</text>
+<text text-anchor="middle" x="408.5" y="-245" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> term sheet</text>
+</g>
+<g id="node3" class="node">
+<title>Agent</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M793.5,-204C793.5,-204 584.5,-204 584.5,-204 578.5,-204 572.5,-198 572.5,-192 572.5,-192 572.5,-150 572.5,-150 572.5,-144 578.5,-138 584.5,-138 584.5,-138 793.5,-138 793.5,-138 799.5,-138 805.5,-144 805.5,-150 805.5,-150 805.5,-192 805.5,-192 805.5,-198 799.5,-204 793.5,-204"/>
+<text text-anchor="middle" x="689" y="-187.4" font-family="Helvetica,sans-Serif" font-size="12.00">Facility agent</text>
+<text text-anchor="middle" x="689" y="-174.4" font-family="Helvetica,sans-Serif" font-size="12.00">administers the loan after signing:</text>
+<text text-anchor="middle" x="689" y="-161.4" font-family="Helvetica,sans-Serif" font-size="12.00">collects payments, passes notices,</text>
+<text text-anchor="middle" x="689" y="-148.4" font-family="Helvetica,sans-Serif" font-size="12.00">runs lender votes</text>
+</g>
+<g id="edge19" class="edge">
+<title>Borrower&#45;&gt;Agent</title>
+<path fill="none" stroke="#4b5563" d="M515.42,-285.65C535.6,-269.19 560.03,-249.58 571,-242 588.02,-230.24 607.06,-218.4 624.81,-207.9"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="626.49,-209.75 631.28,-204.09 624.01,-205.53 626.49,-209.75"/>
+<text text-anchor="middle" x="602" y="-256" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> interest and</text>
+<text text-anchor="middle" x="602" y="-245" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> repayments</text>
+</g>
+<g id="node4" class="node">
+<title>SecAg</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M510.5,-197.5C510.5,-197.5 333.5,-197.5 333.5,-197.5 327.5,-197.5 321.5,-191.5 321.5,-185.5 321.5,-185.5 321.5,-156.5 321.5,-156.5 321.5,-150.5 327.5,-144.5 333.5,-144.5 333.5,-144.5 510.5,-144.5 510.5,-144.5 516.5,-144.5 522.5,-150.5 522.5,-156.5 522.5,-156.5 522.5,-185.5 522.5,-185.5 522.5,-191.5 516.5,-197.5 510.5,-197.5"/>
+<text text-anchor="middle" x="422" y="-180.9" font-family="Helvetica,sans-Serif" font-size="12.00">Security agent / trustee</text>
+<text text-anchor="middle" x="422" y="-167.9" font-family="Helvetica,sans-Serif" font-size="12.00">holds the collateral on behalf</text>
+<text text-anchor="middle" x="422" y="-154.9" font-family="Helvetica,sans-Serif" font-size="12.00">of all lenders</text>
+</g>
+<g id="edge20" class="edge">
+<title>Borrower&#45;&gt;SecAg</title>
+<path fill="none" stroke="#4b5563" d="M472.63,-285.91C462.42,-262.95 447.4,-229.14 436.37,-204.32"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="438.59,-203.3 433.51,-197.9 434.11,-205.29 438.59,-203.3"/>
+<text text-anchor="middle" x="500" y="-250.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> pledges assets</text>
+</g>
+<g id="node5" class="node">
+<title>P1</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M413,-56C413,-56 279,-56 279,-56 273,-56 267,-50 267,-44 267,-44 267,-28 267,-28 267,-22 273,-16 279,-16 279,-16 413,-16 413,-16 419,-16 425,-22 425,-28 425,-28 425,-44 425,-44 425,-50 419,-56 413,-56"/>
+<text text-anchor="middle" x="346" y="-39.4" font-family="Helvetica,sans-Serif" font-size="12.00">Bank A</text>
+<text text-anchor="middle" x="346" y="-26.4" font-family="Helvetica,sans-Serif" font-size="12.00">100 million (also MLA)</text>
+</g>
+<g id="edge8" class="edge">
+<title>MLA&#45;&gt;P1</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M291.72,-137.92C308.7,-130.82 322.83,-123.25 329,-116 341.3,-101.54 345.35,-80.31 346.43,-63.49"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="348.89,-63.21 346.74,-56.11 344,-63.01 348.89,-63.21"/>
+</g>
+<g id="node6" class="node">
+<title>P2</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M96,-56C96,-56 28,-56 28,-56 22,-56 16,-50 16,-44 16,-44 16,-28 16,-28 16,-22 22,-16 28,-16 28,-16 96,-16 96,-16 102,-16 108,-22 108,-28 108,-28 108,-44 108,-44 108,-50 102,-56 96,-56"/>
+<text text-anchor="middle" x="62" y="-39.4" font-family="Helvetica,sans-Serif" font-size="12.00">Bank B</text>
+<text text-anchor="middle" x="62" y="-26.4" font-family="Helvetica,sans-Serif" font-size="12.00">100 million</text>
+</g>
+<g id="edge9" class="edge">
+<title>MLA&#45;&gt;P2</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M159.77,-137.8C136.95,-114.27 106.48,-82.85 85.65,-61.39"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="87.21,-59.47 80.58,-56.15 83.69,-62.88 87.21,-59.47"/>
+</g>
+<g id="node7" class="node">
+<title>P3</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M230,-56C230,-56 170,-56 170,-56 164,-56 158,-50 158,-44 158,-44 158,-28 158,-28 158,-22 164,-16 170,-16 170,-16 230,-16 230,-16 236,-16 242,-22 242,-28 242,-28 242,-44 242,-44 242,-50 236,-56 230,-56"/>
+<text text-anchor="middle" x="200" y="-39.4" font-family="Helvetica,sans-Serif" font-size="12.00">Bank C</text>
+<text text-anchor="middle" x="200" y="-26.4" font-family="Helvetica,sans-Serif" font-size="12.00">75 million</text>
+</g>
+<g id="edge10" class="edge">
+<title>MLA&#45;&gt;P3</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M189.89,-137.78C189.71,-124.24 189.88,-108.34 191,-94 191.79,-83.89 193.37,-72.87 194.98,-63.23"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="197.42,-63.49 196.21,-56.17 192.59,-62.65 197.42,-63.49"/>
+<text text-anchor="middle" x="259" y="-108" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> information memorandum,</text>
+<text text-anchor="middle" x="259" y="-97" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> invitation to join</text>
+</g>
+<g id="node8" class="node">
+<title>P4</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M522,-56C522,-56 462,-56 462,-56 456,-56 450,-50 450,-44 450,-44 450,-28 450,-28 450,-22 456,-16 462,-16 462,-16 522,-16 522,-16 528,-16 534,-22 534,-28 534,-28 534,-44 534,-44 534,-50 528,-56 522,-56"/>
+<text text-anchor="middle" x="492" y="-39.4" font-family="Helvetica,sans-Serif" font-size="12.00">Bank D</text>
+<text text-anchor="middle" x="492" y="-26.4" font-family="Helvetica,sans-Serif" font-size="12.00">75 million</text>
+</g>
+<g id="edge11" class="edge">
+<title>MLA&#45;&gt;P4</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M284.97,-137.91C293.09,-135.21 301.18,-132.54 309,-130 328.92,-123.53 334.61,-123.91 354,-116 373.88,-107.89 376.73,-101.06 397,-94 414.12,-88.04 420.78,-94.09 437,-86 449.36,-79.84 461.08,-70.15 470.5,-61.02"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="472.27,-62.71 475.49,-56.02 468.81,-59.24 472.27,-62.71"/>
+</g>
+<g id="node9" class="node">
+<title>P5</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M782.5,-56C782.5,-56 595.5,-56 595.5,-56 589.5,-56 583.5,-50 583.5,-44 583.5,-44 583.5,-28 583.5,-28 583.5,-22 589.5,-16 595.5,-16 595.5,-16 782.5,-16 782.5,-16 788.5,-16 794.5,-22 794.5,-28 794.5,-28 794.5,-44 794.5,-44 794.5,-50 788.5,-56 782.5,-56"/>
+<text text-anchor="middle" x="689" y="-39.4" font-family="Helvetica,sans-Serif" font-size="12.00">Funds and insurers</text>
+<text text-anchor="middle" x="689" y="-26.4" font-family="Helvetica,sans-Serif" font-size="12.00">150 million (secondary buyers)</text>
+</g>
+<g id="edge12" class="edge">
+<title>MLA&#45;&gt;P5</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M280.42,-137.97C290,-135.05 299.66,-132.33 309,-130 346.58,-120.64 357.42,-125.35 395,-116 424.6,-108.64 430.17,-100.33 460,-94 497.98,-85.94 509.04,-94.17 547,-86 577.2,-79.5 609.86,-68.52 636.23,-58.6"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="637.12,-60.89 642.8,-56.11 635.38,-56.31 637.12,-60.89"/>
+</g>
+<g id="edge18" class="edge">
+<title>Agent&#45;&gt;Borrower</title>
+<path fill="none" stroke="#4b5563" d="M678.61,-204.27C670.68,-224.1 657.86,-248.59 639,-264 622.94,-277.12 603.29,-286.62 583.45,-293.5"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="582.58,-291.21 576.71,-295.74 584.13,-295.86 582.58,-291.21"/>
+<text text-anchor="middle" x="714" y="-256" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> single drawdown,</text>
+<text text-anchor="middle" x="714" y="-245" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> single point of contact</text>
+</g>
+<g id="node10" class="node">
+<title>Docs</title>
+<path fill="#6b7280" stroke="#6b7280" d="M1092.5,-62.5C1092.5,-62.5 831.5,-62.5 831.5,-62.5 825.5,-62.5 819.5,-56.5 819.5,-50.5 819.5,-50.5 819.5,-21.5 819.5,-21.5 819.5,-15.5 825.5,-9.5 831.5,-9.5 831.5,-9.5 1092.5,-9.5 1092.5,-9.5 1098.5,-9.5 1104.5,-15.5 1104.5,-21.5 1104.5,-21.5 1104.5,-50.5 1104.5,-50.5 1104.5,-56.5 1098.5,-62.5 1092.5,-62.5"/>
+<text text-anchor="middle" x="962" y="-45.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">One facility agreement (often LMA or</text>
+<text text-anchor="middle" x="962" y="-32.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">LSTA standard form), one set of covenants,</text>
+<text text-anchor="middle" x="962" y="-19.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">majority&#45;lender voting (e.g. 66.7%)</text>
+</g>
+<g id="edge21" class="edge">
+<title>Agent&#45;&gt;Docs</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M754.74,-137.97C802.23,-114.84 865.51,-84.01 909.61,-62.52"/>
+</g>
+<g id="edge13" class="edge">
+<title>P1&#45;&gt;Agent</title>
+<path fill="none" stroke="#4b5563" d="M374.03,-56.15C391.58,-67.04 415.14,-79.72 438,-86 474.9,-96.13 574.85,-78.88 610,-94 629.31,-102.31 646.66,-117.59 660.15,-132.28"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="658.45,-134.06 664.94,-137.66 662.11,-130.8 658.45,-134.06"/>
+</g>
+<g id="edge14" class="edge">
+<title>P2&#45;&gt;Agent</title>
+<path fill="none" stroke="#4b5563" d="M87.01,-56.19C102.74,-67.09 123.98,-79.78 145,-86 185.09,-97.87 291.43,-89.43 333,-94 378.32,-98.98 490.46,-120.26 535,-130 544.87,-132.16 555.06,-134.51 565.28,-136.97"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="564.97,-139.42 572.35,-138.68 566.13,-134.65 564.97,-139.42"/>
+</g>
+<g id="edge15" class="edge">
+<title>P3&#45;&gt;Agent</title>
+<path fill="none" stroke="#4b5563" d="M215.29,-56.41C225.07,-67.25 238.76,-79.78 254,-86 297.65,-103.81 422.21,-76.53 466,-94 479.75,-99.49 477.97,-108.98 491,-116 495.02,-118.17 527.63,-127.27 565.27,-137.41"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="564.95,-139.86 572.35,-139.31 566.22,-135.13 564.95,-139.86"/>
+<text text-anchor="middle" x="547.5" y="-108" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> each lender funds</text>
+<text text-anchor="middle" x="547.5" y="-97" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> its share via the agent</text>
+</g>
+<g id="edge16" class="edge">
+<title>P4&#45;&gt;Agent</title>
+<path fill="none" stroke="#4b5563" d="M516.52,-56.17C531.43,-66.78 551.33,-79.17 571,-86 600.58,-96.28 614.48,-77.35 641,-94 654.98,-102.78 665.61,-117.28 673.26,-131.28"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="671.17,-132.57 676.57,-137.65 675.52,-130.31 671.17,-132.57"/>
+</g>
+<g id="edge17" class="edge">
+<title>P5&#45;&gt;Agent</title>
+<path fill="none" stroke="#4b5563" d="M689,-56.15C689,-75.56 689,-106.14 689,-130.72"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="686.55,-130.8 689,-137.8 691.45,-130.8 686.55,-130.8"/>
+</g>
+</g>
+</svg>

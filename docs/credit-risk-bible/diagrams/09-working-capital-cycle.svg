@@ -1,0 +1,97 @@
+<svg width="100%"
+ viewBox="0.00 0.00 675.30 535.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 521.4)">
+<title>WorkingCapitalCycle</title>
+<polygon fill="white" stroke="transparent" points="-14.4,14.4 -14.4,-521.4 660.9,-521.4 660.9,14.4 -14.4,14.4"/>
+<g id="node1" class="node">
+<title>Cash</title>
+<path fill="#1f2937" stroke="#1f2937" d="M325,-507C325,-507 223,-507 223,-507 217,-507 211,-501 211,-495 211,-495 211,-483 211,-483 211,-477 217,-471 223,-471 223,-471 325,-471 325,-471 331,-471 337,-477 337,-483 337,-483 337,-495 337,-495 337,-501 331,-507 325,-507"/>
+<text text-anchor="middle" x="274" y="-485.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Cash in the bank</text>
+</g>
+<g id="node2" class="node">
+<title>Buy</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M358,-412C358,-412 190,-412 190,-412 184,-412 178,-406 178,-400 178,-400 178,-384 178,-384 178,-378 184,-372 190,-372 190,-372 358,-372 358,-372 364,-372 370,-378 370,-384 370,-384 370,-400 370,-400 370,-406 364,-412 358,-412"/>
+<text text-anchor="middle" x="274" y="-395.4" font-family="Helvetica,sans-Serif" font-size="12.00">Buy raw materials on credit</text>
+<text text-anchor="middle" x="274" y="-382.4" font-family="Helvetica,sans-Serif" font-size="12.00">from suppliers</text>
+</g>
+<g id="edge1" class="edge">
+<title>Cash&#45;&gt;Buy</title>
+<path fill="none" stroke="#4b5563" d="M274,-470.58C274,-456.27 274,-435.78 274,-419.45"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="276.45,-419.27 274,-412.27 271.55,-419.27 276.45,-419.27"/>
+</g>
+<g id="node3" class="node">
+<title>Stock</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M330,-281C330,-281 204,-281 204,-281 198,-281 192,-275 192,-269 192,-269 192,-253 192,-253 192,-247 198,-241 204,-241 204,-241 330,-241 330,-241 336,-241 342,-247 342,-253 342,-253 342,-269 342,-269 342,-275 336,-281 330,-281"/>
+<text text-anchor="middle" x="267" y="-264.4" font-family="Helvetica,sans-Serif" font-size="12.00">Make and hold stock</text>
+<text text-anchor="middle" x="267" y="-251.4" font-family="Helvetica,sans-Serif" font-size="12.00">(inventory)</text>
+</g>
+<g id="edge2" class="edge">
+<title>Buy&#45;&gt;Stock</title>
+<path fill="none" stroke="#4b5563" d="M218.48,-371.76C205.98,-364.71 194.28,-355.33 187,-343 179.54,-330.37 179.77,-322.76 187,-310 192.75,-299.85 201.6,-291.6 211.35,-285"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="212.91,-286.92 217.52,-281.1 210.29,-282.78 212.91,-286.92"/>
+<text text-anchor="middle" x="238.5" y="-329.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> stock days: 60</text>
+<text text-anchor="middle" x="238.5" y="-318.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> (how long goods sit)</text>
+</g>
+<g id="node6" class="node">
+<title>PaySup</title>
+<path fill="#991b1b" stroke="#991b1b" d="M510,-279C510,-279 412,-279 412,-279 406,-279 400,-273 400,-267 400,-267 400,-255 400,-255 400,-249 406,-243 412,-243 412,-243 510,-243 510,-243 516,-243 522,-249 522,-255 522,-255 522,-267 522,-267 522,-273 516,-279 510,-279"/>
+<text text-anchor="middle" x="461" y="-257.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Pay the supplier</text>
+</g>
+<g id="edge6" class="edge">
+<title>Buy&#45;&gt;PaySup</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M283.2,-371.76C292.8,-353.54 309.46,-326.56 331,-310 349.15,-296.04 371.78,-285.82 393.05,-278.5"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="394.03,-280.75 399.9,-276.22 392.48,-276.1 394.03,-280.75"/>
+<text text-anchor="middle" x="404.5" y="-335" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> creditor days: 32</text>
+<text text-anchor="middle" x="404.5" y="-324" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> (how long before the supplier</text>
+<text text-anchor="middle" x="404.5" y="-313" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> must be paid)</text>
+</g>
+<g id="node4" class="node">
+<title>Sell</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M634.5,-169C634.5,-169 463.5,-169 463.5,-169 457.5,-169 451.5,-163 451.5,-157 451.5,-157 451.5,-141 451.5,-141 451.5,-135 457.5,-129 463.5,-129 463.5,-129 634.5,-129 634.5,-129 640.5,-129 646.5,-135 646.5,-141 646.5,-141 646.5,-157 646.5,-157 646.5,-163 640.5,-169 634.5,-169"/>
+<text text-anchor="middle" x="549" y="-152.4" font-family="Helvetica,sans-Serif" font-size="12.00">Sell to customers on credit</text>
+<text text-anchor="middle" x="549" y="-139.4" font-family="Helvetica,sans-Serif" font-size="12.00">(invoice raised, no cash yet)</text>
+</g>
+<g id="edge3" class="edge">
+<title>Stock&#45;&gt;Sell</title>
+<path fill="none" stroke="#4b5563" d="M315.8,-240.97C365.13,-221.72 441.28,-192.02 493.03,-171.83"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="494.22,-174 499.85,-169.17 492.44,-169.43 494.22,-174"/>
+</g>
+<g id="node7" class="node">
+<title>Gap</title>
+<path fill="#6b7280" stroke="#6b7280" d="M404,-182C404,-182 130,-182 130,-182 124,-182 118,-176 118,-170 118,-170 118,-128 118,-128 118,-122 124,-116 130,-116 130,-116 404,-116 404,-116 410,-116 416,-122 416,-128 416,-128 416,-170 416,-170 416,-176 410,-182 404,-182"/>
+<text text-anchor="middle" x="267" y="-165.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Cash conversion cycle</text>
+<text text-anchor="middle" x="267" y="-152.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">= stock days + debtor days &#45; creditor days</text>
+<text text-anchor="middle" x="267" y="-139.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">= 60 + 45 &#45; 32 = 73 days</text>
+<text text-anchor="middle" x="267" y="-126.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">that must be funded by the bank or by equity</text>
+</g>
+<g id="edge8" class="edge">
+<title>Stock&#45;&gt;Gap</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M267,-240.84C267,-226.73 267,-207.04 267,-189.6"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="269.45,-189.29 267,-182.29 264.55,-189.29 269.45,-189.29"/>
+</g>
+<g id="node5" class="node">
+<title>Collect</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M174,-36C174,-36 12,-36 12,-36 6,-36 0,-30 0,-24 0,-24 0,-12 0,-12 0,-6 6,0 12,0 12,0 174,0 174,0 180,0 186,-6 186,-12 186,-12 186,-24 186,-24 186,-30 180,-36 174,-36"/>
+<text text-anchor="middle" x="93" y="-14.9" font-family="Helvetica,sans-Serif" font-size="12.00">Customer pays the invoice</text>
+</g>
+<g id="edge4" class="edge">
+<title>Sell&#45;&gt;Collect</title>
+<path fill="none" stroke="#4b5563" d="M481.72,-128.97C395.36,-104.54 246.43,-62.4 160.14,-37.99"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="160.68,-35.6 153.27,-36.05 159.34,-40.31 160.68,-35.6"/>
+<text text-anchor="middle" x="404.5" y="-79" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> debtor days: 45</text>
+<text text-anchor="middle" x="404.5" y="-68" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> (how long customers take to pay)</text>
+</g>
+<g id="edge5" class="edge">
+<title>Collect&#45;&gt;Cash</title>
+<path fill="none" stroke="#065f46" d="M86.34,-36.23C77.5,-60.69 63,-107.07 63,-148 63,-393 63,-393 63,-393 63,-456.15 142.55,-477.57 203.97,-484.69"/>
+<polygon fill="#065f46" stroke="#065f46" points="203.76,-487.13 210.98,-485.45 204.28,-482.26 203.76,-487.13"/>
+<text text-anchor="middle" x="95" y="-258.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#065f46"> cash returns</text>
+</g>
+<g id="edge7" class="edge">
+<title>PaySup&#45;&gt;Cash</title>
+<path fill="none" stroke="#991b1b" stroke-dasharray="5,2" d="M472.61,-279.18C482.49,-296.11 493.52,-322.36 483,-343 451.24,-405.32 378.78,-446.03 328.13,-468.02"/>
+<polygon fill="#991b1b" stroke="#991b1b" points="326.93,-465.87 321.45,-470.86 328.85,-470.37 326.93,-465.87"/>
+<text text-anchor="middle" x="493.5" y="-389.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#991b1b"> cash leaves</text>
+</g>
+</g>
+</svg>

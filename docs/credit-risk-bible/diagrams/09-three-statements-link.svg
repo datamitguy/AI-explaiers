@@ -1,0 +1,194 @@
+<svg width="100%"
+ viewBox="0.00 0.00 749.80 950.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 936.4)">
+<title>ThreeStatements</title>
+<polygon fill="white" stroke="transparent" points="-14.4,14.4 -14.4,-936.4 735.4,-936.4 735.4,14.4 -14.4,14.4"/>
+<g id="clust1" class="cluster">
+<title>cluster_is</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M308,-458C308,-458 601,-458 601,-458 607,-458 613,-464 613,-470 613,-470 613,-902 613,-902 613,-908 607,-914 601,-914 601,-914 308,-914 308,-914 302,-914 296,-908 296,-902 296,-902 296,-470 296,-470 296,-464 302,-458 308,-458"/>
+<text text-anchor="middle" x="454.5" y="-899.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">Income statement (a year: what was earned)</text>
+</g>
+<g id="clust2" class="cluster">
+<title>cluster_cf</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M308,-91C308,-91 616,-91 616,-91 622,-91 628,-97 628,-103 628,-103 628,-417 628,-417 628,-423 622,-429 616,-429 616,-429 308,-429 308,-429 302,-429 296,-423 296,-417 296,-417 296,-103 296,-103 296,-97 302,-91 308,-91"/>
+<text text-anchor="middle" x="462" y="-414.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">Cash flow statement (a year: where cash went)</text>
+</g>
+<g id="clust3" class="cluster">
+<title>cluster_bs</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M20,-8C20,-8 276,-8 276,-8 282,-8 288,-14 288,-20 288,-20 288,-902 288,-902 288,-908 282,-914 276,-914 276,-914 20,-914 20,-914 14,-914 8,-908 8,-902 8,-902 8,-20 8,-20 8,-14 14,-8 20,-8"/>
+<text text-anchor="middle" x="148" y="-899.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">Balance sheet (a snapshot at year end)</text>
+</g>
+<g id="node1" class="node">
+<title>Rev</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M445,-884C445,-884 353,-884 353,-884 347,-884 341,-878 341,-872 341,-872 341,-860 341,-860 341,-854 347,-848 353,-848 353,-848 445,-848 445,-848 451,-848 457,-854 457,-860 457,-860 457,-872 457,-872 457,-878 451,-884 445,-884"/>
+<text text-anchor="middle" x="399" y="-862.9" font-family="Helvetica,sans-Serif" font-size="12.00">Revenue 1,000</text>
+</g>
+<g id="node2" class="node">
+<title>EBITDA</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M481.5,-811C481.5,-811 316.5,-811 316.5,-811 310.5,-811 304.5,-805 304.5,-799 304.5,-799 304.5,-770 304.5,-770 304.5,-764 310.5,-758 316.5,-758 316.5,-758 481.5,-758 481.5,-758 487.5,-758 493.5,-764 493.5,-770 493.5,-770 493.5,-799 493.5,-799 493.5,-805 487.5,-811 481.5,-811"/>
+<text text-anchor="middle" x="399" y="-794.4" font-family="Helvetica,sans-Serif" font-size="12.00">EBITDA 150</text>
+<text text-anchor="middle" x="399" y="-781.4" font-family="Helvetica,sans-Serif" font-size="12.00">(before interest, tax,</text>
+<text text-anchor="middle" x="399" y="-768.4" font-family="Helvetica,sans-Serif" font-size="12.00">depreciation, amortisation)</text>
+</g>
+<g id="edge1" class="edge">
+<title>Rev&#45;&gt;EBITDA</title>
+<path fill="none" stroke="#4b5563" d="M399,-847.75C399,-839.15 399,-828.46 399,-818.37"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="401.45,-818.18 399,-811.18 396.55,-818.18 401.45,-818.18"/>
+</g>
+<g id="node3" class="node">
+<title>Dep</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M430.5,-721C430.5,-721 333.5,-721 333.5,-721 327.5,-721 321.5,-715 321.5,-709 321.5,-709 321.5,-697 321.5,-697 321.5,-691 327.5,-685 333.5,-685 333.5,-685 430.5,-685 430.5,-685 436.5,-685 442.5,-691 442.5,-697 442.5,-697 442.5,-709 442.5,-709 442.5,-715 436.5,-721 430.5,-721"/>
+<text text-anchor="middle" x="382" y="-699.9" font-family="Helvetica,sans-Serif" font-size="12.00">Depreciation 40</text>
+</g>
+<g id="edge2" class="edge">
+<title>EBITDA&#45;&gt;Dep</title>
+<path fill="none" stroke="#4b5563" d="M393.53,-757.91C391.49,-748.36 389.18,-737.56 387.16,-728.14"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="389.55,-727.59 385.69,-721.26 384.76,-728.61 389.55,-727.59"/>
+</g>
+<g id="node4" class="node">
+<title>Int</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M539.5,-648C539.5,-648 472.5,-648 472.5,-648 466.5,-648 460.5,-642 460.5,-636 460.5,-636 460.5,-624 460.5,-624 460.5,-618 466.5,-612 472.5,-612 472.5,-612 539.5,-612 539.5,-612 545.5,-612 551.5,-618 551.5,-624 551.5,-624 551.5,-636 551.5,-636 551.5,-642 545.5,-648 539.5,-648"/>
+<text text-anchor="middle" x="506" y="-626.9" font-family="Helvetica,sans-Serif" font-size="12.00">Interest 20</text>
+</g>
+<g id="edge3" class="edge">
+<title>Dep&#45;&gt;Int</title>
+<path fill="none" stroke="#4b5563" d="M411.7,-684.99C429.21,-674.97 451.49,-662.21 469.99,-651.62"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="471.25,-653.72 476.11,-648.11 468.82,-649.47 471.25,-653.72"/>
+</g>
+<g id="node7" class="node">
+<title>CFO</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M509.5,-399C509.5,-399 320.5,-399 320.5,-399 314.5,-399 308.5,-393 308.5,-387 308.5,-387 308.5,-358 308.5,-358 308.5,-352 314.5,-346 320.5,-346 320.5,-346 509.5,-346 509.5,-346 515.5,-346 521.5,-352 521.5,-358 521.5,-358 521.5,-387 521.5,-387 521.5,-393 515.5,-399 509.5,-399"/>
+<text text-anchor="middle" x="415" y="-382.4" font-family="Helvetica,sans-Serif" font-size="12.00">Operating cash flow 95</text>
+<text text-anchor="middle" x="415" y="-369.4" font-family="Helvetica,sans-Serif" font-size="12.00">= net income + depreciation</text>
+<text text-anchor="middle" x="415" y="-356.4" font-family="Helvetica,sans-Serif" font-size="12.00">&#45; increase in working capital 13</text>
+</g>
+<g id="edge11" class="edge">
+<title>Dep&#45;&gt;CFO</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M376.33,-685C372.08,-670.74 367,-649.77 367,-631 367,-631 367,-631 367,-483 367,-455.04 380.29,-426.19 392.88,-405.12"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="395,-406.37 396.58,-399.12 390.82,-403.8 395,-406.37"/>
+<text text-anchor="middle" x="397" y="-560" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> added back</text>
+<text text-anchor="middle" x="397" y="-549" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151">(not cash)</text>
+</g>
+<g id="node12" class="node">
+<title>PPE</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M235.5,-222C235.5,-222 54.5,-222 54.5,-222 48.5,-222 42.5,-216 42.5,-210 42.5,-210 42.5,-194 42.5,-194 42.5,-188 48.5,-182 54.5,-182 54.5,-182 235.5,-182 235.5,-182 241.5,-182 247.5,-188 247.5,-194 247.5,-194 247.5,-210 247.5,-210 247.5,-216 241.5,-222 235.5,-222"/>
+<text text-anchor="middle" x="145" y="-205.4" font-family="Helvetica,sans-Serif" font-size="12.00">Fixed assets 400 &#45;&gt; 420</text>
+<text text-anchor="middle" x="145" y="-192.4" font-family="Helvetica,sans-Serif" font-size="12.00">(+60 capex, &#45;40 depreciation)</text>
+</g>
+<g id="edge12" class="edge">
+<title>Dep&#45;&gt;PPE</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M343.45,-684.89C269.31,-649.55 108.67,-560.66 46,-429 11.49,-356.49 80.62,-268.97 120.1,-227.32"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="121.91,-228.98 125,-222.23 118.38,-225.58 121.91,-228.98"/>
+<text text-anchor="middle" x="114" y="-481.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> reduces</text>
+</g>
+<g id="node5" class="node">
+<title>Tax</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M526.5,-575C526.5,-575 485.5,-575 485.5,-575 479.5,-575 473.5,-569 473.5,-563 473.5,-563 473.5,-551 473.5,-551 473.5,-545 479.5,-539 485.5,-539 485.5,-539 526.5,-539 526.5,-539 532.5,-539 538.5,-545 538.5,-551 538.5,-551 538.5,-563 538.5,-563 538.5,-569 532.5,-575 526.5,-575"/>
+<text text-anchor="middle" x="506" y="-553.9" font-family="Helvetica,sans-Serif" font-size="12.00">Tax 22</text>
+</g>
+<g id="edge4" class="edge">
+<title>Int&#45;&gt;Tax</title>
+<path fill="none" stroke="#4b5563" d="M506,-611.81C506,-602.92 506,-591.91 506,-582.17"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="508.45,-582.03 506,-575.03 503.55,-582.03 508.45,-582.03"/>
+</g>
+<g id="node14" class="node">
+<title>Debt</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M268,-135C268,-135 166,-135 166,-135 160,-135 154,-129 154,-123 154,-123 154,-111 154,-111 154,-105 160,-99 166,-99 166,-99 268,-99 268,-99 274,-99 280,-105 280,-111 280,-111 280,-123 280,-123 280,-129 274,-135 268,-135"/>
+<text text-anchor="middle" x="217" y="-113.9" font-family="Helvetica,sans-Serif" font-size="12.00">Debt 400 &#45;&gt; 385</text>
+</g>
+<g id="edge16" class="edge">
+<title>Int&#45;&gt;Debt</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M558.57,-626.69C604.88,-621.5 665,-605.59 665,-558 665,-558 665,-558 665,-201 665,-178.06 664.65,-166.37 646,-153 613.72,-129.85 328.32,-140.59 289,-135 286.08,-134.58 283.09,-134.11 280.09,-133.58"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="558.28,-624.26 551.56,-627.41 558.78,-629.14 558.28,-624.26"/>
+<text text-anchor="middle" x="693" y="-370" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> interest on</text>
+</g>
+<g id="node6" class="node">
+<title>NI</title>
+<path fill="#1f2937" stroke="#1f2937" d="M551,-502C551,-502 461,-502 461,-502 455,-502 449,-496 449,-490 449,-490 449,-478 449,-478 449,-472 455,-466 461,-466 461,-466 551,-466 551,-466 557,-466 563,-472 563,-478 563,-478 563,-490 563,-490 563,-496 557,-502 551,-502"/>
+<text text-anchor="middle" x="506" y="-480.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Net income 68</text>
+</g>
+<g id="edge5" class="edge">
+<title>Tax&#45;&gt;NI</title>
+<path fill="none" stroke="#4b5563" d="M506,-538.81C506,-529.92 506,-518.91 506,-509.17"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="508.45,-509.03 506,-502.03 503.55,-509.03 508.45,-509.03"/>
+</g>
+<g id="edge9" class="edge">
+<title>NI&#45;&gt;CFO</title>
+<path fill="none" stroke="#6366f1" d="M502.36,-465.82C499.87,-456.71 495.93,-445.64 490,-437 481.54,-424.67 470.08,-413.34 458.66,-403.77"/>
+<polygon fill="#6366f1" stroke="#6366f1" points="460.05,-401.74 453.08,-399.21 456.96,-405.54 460.05,-401.74"/>
+<text text-anchor="middle" x="529.5" y="-440" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> starting point</text>
+</g>
+<g id="node15" class="node">
+<title>Eq</title>
+<path fill="#1f2937" stroke="#1f2937" d="M267.5,-392.5C267.5,-392.5 72.5,-392.5 72.5,-392.5 66.5,-392.5 60.5,-386.5 60.5,-380.5 60.5,-380.5 60.5,-364.5 60.5,-364.5 60.5,-358.5 66.5,-352.5 72.5,-352.5 72.5,-352.5 267.5,-352.5 267.5,-352.5 273.5,-352.5 279.5,-358.5 279.5,-364.5 279.5,-364.5 279.5,-380.5 279.5,-380.5 279.5,-386.5 273.5,-392.5 267.5,-392.5"/>
+<text text-anchor="middle" x="170" y="-375.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Equity 150 &#45;&gt; 208</text>
+<text text-anchor="middle" x="170" y="-362.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">(+68 net income, &#45;10 dividends)</text>
+</g>
+<g id="edge10" class="edge">
+<title>NI&#45;&gt;Eq</title>
+<path fill="none" stroke="#6366f1" d="M465.45,-465.97C458.65,-463.23 451.65,-460.48 445,-458 417.75,-447.81 411.48,-442.94 383,-437 341.96,-428.43 329.51,-439.81 289,-429 261.01,-421.54 231.5,-407.81 208.86,-395.88"/>
+<polygon fill="#6366f1" stroke="#6366f1" points="209.99,-393.7 202.66,-392.56 207.68,-398.03 209.99,-393.7"/>
+<text text-anchor="middle" x="455.5" y="-440" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> retained profit</text>
+</g>
+<g id="node8" class="node">
+<title>CFI</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M476,-309C476,-309 336,-309 336,-309 330,-309 324,-303 324,-297 324,-297 324,-281 324,-281 324,-275 330,-269 336,-269 336,-269 476,-269 476,-269 482,-269 488,-275 488,-281 488,-281 488,-297 488,-297 488,-303 482,-309 476,-309"/>
+<text text-anchor="middle" x="406" y="-292.4" font-family="Helvetica,sans-Serif" font-size="12.00">Investing cash flow &#45;60</text>
+<text text-anchor="middle" x="406" y="-279.4" font-family="Helvetica,sans-Serif" font-size="12.00">(capital expenditure)</text>
+</g>
+<g id="edge6" class="edge">
+<title>CFO&#45;&gt;CFI</title>
+<path fill="none" stroke="#4b5563" d="M412.15,-345.71C411.11,-336.27 409.93,-325.59 408.88,-316.12"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="411.32,-315.85 408.12,-309.16 406.45,-316.39 411.32,-315.85"/>
+</g>
+<g id="node9" class="node">
+<title>CFF</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M496.5,-222C496.5,-222 315.5,-222 315.5,-222 309.5,-222 303.5,-216 303.5,-210 303.5,-210 303.5,-194 303.5,-194 303.5,-188 309.5,-182 315.5,-182 315.5,-182 496.5,-182 496.5,-182 502.5,-182 508.5,-188 508.5,-194 508.5,-194 508.5,-210 508.5,-210 508.5,-216 502.5,-222 496.5,-222"/>
+<text text-anchor="middle" x="406" y="-205.4" font-family="Helvetica,sans-Serif" font-size="12.00">Financing cash flow &#45;25</text>
+<text text-anchor="middle" x="406" y="-192.4" font-family="Helvetica,sans-Serif" font-size="12.00">(debt repaid 15, dividends 10)</text>
+</g>
+<g id="edge7" class="edge">
+<title>CFI&#45;&gt;CFF</title>
+<path fill="none" stroke="#4b5563" d="M406,-268.71C406,-257.08 406,-242.11 406,-229.4"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="408.45,-229.21 406,-222.21 403.55,-229.21 408.45,-229.21"/>
+</g>
+<g id="edge14" class="edge">
+<title>CFI&#45;&gt;PPE</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M347.43,-268.92C306.71,-255.66 252.4,-237.98 210.29,-224.26"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="210.79,-221.85 203.38,-222.01 209.28,-226.51 210.79,-221.85"/>
+<text text-anchor="middle" x="321.5" y="-243" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> capex adds</text>
+</g>
+<g id="node10" class="node">
+<title>Net</title>
+<path fill="#1f2937" stroke="#1f2937" d="M473,-135C473,-135 327,-135 327,-135 321,-135 315,-129 315,-123 315,-123 315,-111 315,-111 315,-105 321,-99 327,-99 327,-99 473,-99 473,-99 479,-99 485,-105 485,-111 485,-111 485,-123 485,-123 485,-129 479,-135 473,-135"/>
+<text text-anchor="middle" x="400" y="-113.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Net change in cash +10</text>
+</g>
+<g id="edge8" class="edge">
+<title>CFF&#45;&gt;Net</title>
+<path fill="none" stroke="#4b5563" d="M404.61,-181.75C403.76,-169.98 402.66,-154.82 401.75,-142.24"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="404.19,-141.98 401.24,-135.17 399.3,-142.33 404.19,-141.98"/>
+</g>
+<g id="edge15" class="edge">
+<title>CFF&#45;&gt;Debt</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M362.64,-181.96C332.75,-168.83 293.09,-151.42 262.71,-138.07"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="263.38,-135.69 255.98,-135.12 261.41,-140.18 263.38,-135.69"/>
+<text text-anchor="middle" x="345.5" y="-156" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> repayment</text>
+</g>
+<g id="node11" class="node">
+<title>Cash</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M268.5,-52C268.5,-52 181.5,-52 181.5,-52 175.5,-52 169.5,-46 169.5,-40 169.5,-40 169.5,-28 169.5,-28 169.5,-22 175.5,-16 181.5,-16 181.5,-16 268.5,-16 268.5,-16 274.5,-16 280.5,-22 280.5,-28 280.5,-28 280.5,-40 280.5,-40 280.5,-46 274.5,-52 268.5,-52"/>
+<text text-anchor="middle" x="225" y="-30.9" font-family="Helvetica,sans-Serif" font-size="12.00">Cash 50 &#45;&gt; 60</text>
+</g>
+<g id="edge13" class="edge">
+<title>Net&#45;&gt;Cash</title>
+<path fill="none" stroke="#6366f1" d="M362.89,-98.82C335.18,-86 297.26,-68.45 268.19,-54.99"/>
+<polygon fill="#6366f1" stroke="#6366f1" points="269.14,-52.73 261.76,-52.01 267.08,-57.18 269.14,-52.73"/>
+<text text-anchor="middle" x="354" y="-73" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> closing cash</text>
+</g>
+<g id="node13" class="node">
+<title>WC</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M230.5,-884C230.5,-884 65.5,-884 65.5,-884 59.5,-884 53.5,-878 53.5,-872 53.5,-872 53.5,-860 53.5,-860 53.5,-854 59.5,-848 65.5,-848 65.5,-848 230.5,-848 230.5,-848 236.5,-848 242.5,-854 242.5,-860 242.5,-860 242.5,-872 242.5,-872 242.5,-878 236.5,-884 230.5,-884"/>
+<text text-anchor="middle" x="148" y="-862.9" font-family="Helvetica,sans-Serif" font-size="12.00">Working capital 100 &#45;&gt; 113</text>
+</g>
+</g>
+</svg>

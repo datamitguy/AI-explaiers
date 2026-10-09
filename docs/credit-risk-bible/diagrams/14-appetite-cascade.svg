@@ -1,0 +1,160 @@
+<svg width="100%"
+ viewBox="0.00 0.00 942.80 560.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 546.4)">
+<title>AppetiteCascade</title>
+<polygon fill="white" stroke="transparent" points="-14.4,14.4 -14.4,-546.4 928.4,-546.4 928.4,14.4 -14.4,14.4"/>
+<g id="clust1" class="cluster">
+<title>cluster_group</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M20,-350C20,-350 800,-350 800,-350 806,-350 812,-356 812,-362 812,-362 812,-416 812,-416 812,-422 806,-428 800,-428 800,-428 20,-428 20,-428 14,-428 8,-422 8,-416 8,-416 8,-362 8,-362 8,-356 14,-350 20,-350"/>
+<text text-anchor="middle" x="410" y="-413.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">Group level metrics and limits</text>
+</g>
+<g id="clust3" class="cluster">
+<title>cluster_div</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M135,-253C135,-253 800,-253 800,-253 806,-253 812,-259 812,-265 812,-265 812,-319 812,-319 812,-325 806,-331 800,-331 800,-331 135,-331 135,-331 129,-331 123,-325 123,-319 123,-319 123,-265 123,-265 123,-259 129,-253 135,-253"/>
+<text text-anchor="middle" x="467.5" y="-316.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">Business division allocation</text>
+</g>
+<g id="clust5" class="cluster">
+<title>cluster_desk</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M464,-69C464,-69 646,-69 646,-69 652,-69 658,-75 658,-81 658,-81 658,-212 658,-212 658,-218 652,-224 646,-224 646,-224 464,-224 464,-224 458,-224 452,-218 452,-212 452,-212 452,-81 452,-81 452,-75 458,-69 464,-69"/>
+<text text-anchor="middle" x="555" y="-209.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">Desk and customer level</text>
+</g>
+<g id="node1" class="node">
+<title>Board</title>
+<path fill="#1f2937" stroke="#1f2937" d="M736.5,-532C736.5,-532 447.5,-532 447.5,-532 441.5,-532 435.5,-526 435.5,-520 435.5,-520 435.5,-488 435.5,-488 435.5,-482 441.5,-476 447.5,-476 447.5,-476 736.5,-476 736.5,-476 742.5,-476 748.5,-482 748.5,-488 748.5,-488 748.5,-520 748.5,-520 748.5,-526 742.5,-532 736.5,-532"/>
+<text text-anchor="middle" x="592" y="-514.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="white">Board risk appetite statement</text>
+<text text-anchor="middle" x="592" y="-500.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="white">&#39;Keep CET1 above 12%, expected loss</text>
+<text text-anchor="middle" x="592" y="-486.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="white">below 0.6% of loans, no sector above 15%&#39;</text>
+</g>
+<g id="node2" class="node">
+<title>G1</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M238,-398C238,-398 28,-398 28,-398 22,-398 16,-392 16,-386 16,-386 16,-370 16,-370 16,-364 22,-358 28,-358 28,-358 238,-358 238,-358 244,-358 250,-364 250,-370 250,-370 250,-386 250,-386 250,-392 244,-398 238,-398"/>
+<text text-anchor="middle" x="133" y="-381.4" font-family="Helvetica,sans-Serif" font-size="12.00">Portfolio limits</text>
+<text text-anchor="middle" x="133" y="-368.4" font-family="Helvetica,sans-Serif" font-size="12.00">expected loss, RWA, concentration</text>
+</g>
+<g id="edge6" class="edge">
+<title>Board&#45;&gt;G1</title>
+<path fill="none" stroke="#4b5563" d="M474.2,-475.98C417.39,-462.45 348.41,-445.3 287,-428 257.12,-419.58 224.31,-409.29 196.68,-400.32"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="197.19,-397.9 189.77,-398.06 195.67,-402.56 197.19,-397.9"/>
+<text text-anchor="middle" x="436.5" y="-450" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> cascaded by</text>
+<text text-anchor="middle" x="436.5" y="-439" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> the risk function</text>
+</g>
+<g id="node3" class="node">
+<title>G2</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M526,-398C526,-398 312,-398 312,-398 306,-398 300,-392 300,-386 300,-386 300,-370 300,-370 300,-364 306,-358 312,-358 312,-358 526,-358 526,-358 532,-358 538,-364 538,-370 538,-370 538,-386 538,-386 538,-392 532,-398 526,-398"/>
+<text text-anchor="middle" x="419" y="-381.4" font-family="Helvetica,sans-Serif" font-size="12.00">Sector and country limits</text>
+<text text-anchor="middle" x="419" y="-368.4" font-family="Helvetica,sans-Serif" font-size="12.00">e.g. commercial property max 15%</text>
+</g>
+<g id="edge7" class="edge">
+<title>Board&#45;&gt;G2</title>
+<path fill="none" stroke="#4b5563" d="M554.03,-475.79C523.39,-453.82 480.73,-423.25 451.61,-402.38"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="452.73,-400.16 445.62,-398.08 449.88,-404.15 452.73,-400.16"/>
+<text text-anchor="middle" x="567.5" y="-450" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> cascaded by</text>
+<text text-anchor="middle" x="567.5" y="-439" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> the risk function</text>
+</g>
+<g id="node4" class="node">
+<title>G3</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M792,-398C792,-398 600,-398 600,-398 594,-398 588,-392 588,-386 588,-386 588,-370 588,-370 588,-364 594,-358 600,-358 600,-358 792,-358 792,-358 798,-358 804,-364 804,-370 804,-370 804,-386 804,-386 804,-392 798,-398 792,-398"/>
+<text text-anchor="middle" x="696" y="-381.4" font-family="Helvetica,sans-Serif" font-size="12.00">Single&#45;name and group limits</text>
+<text text-anchor="middle" x="696" y="-368.4" font-family="Helvetica,sans-Serif" font-size="12.00">tighter than the regulatory 25%</text>
+</g>
+<g id="edge8" class="edge">
+<title>Board&#45;&gt;G3</title>
+<path fill="none" stroke="#4b5563" d="M614.82,-475.79C632.86,-454.28 657.82,-424.52 675.28,-403.7"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="677.38,-405.01 680,-398.08 673.62,-401.87 677.38,-405.01"/>
+<text text-anchor="middle" x="688.5" y="-450" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> cascaded by</text>
+<text text-anchor="middle" x="688.5" y="-439" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> the risk function</text>
+</g>
+<g id="node6" class="node">
+<title>D2</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M331.5,-301C331.5,-301 142.5,-301 142.5,-301 136.5,-301 130.5,-295 130.5,-289 130.5,-289 130.5,-273 130.5,-273 130.5,-267 136.5,-261 142.5,-261 142.5,-261 331.5,-261 331.5,-261 337.5,-261 343.5,-267 343.5,-273 343.5,-273 343.5,-289 343.5,-289 343.5,-295 337.5,-301 331.5,-301"/>
+<text text-anchor="middle" x="237" y="-284.4" font-family="Helvetica,sans-Serif" font-size="12.00">Retail bank</text>
+<text text-anchor="middle" x="237" y="-271.4" font-family="Helvetica,sans-Serif" font-size="12.00">product and rating&#45;grade limits</text>
+</g>
+<g id="edge13" class="edge">
+<title>G1&#45;&gt;D2</title>
+<path fill="none" stroke="#4b5563" d="M154.05,-357.78C170.4,-342.84 193.17,-322.04 210.72,-306.01"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="212.47,-307.73 215.99,-301.2 209.16,-304.11 212.47,-307.73"/>
+</g>
+<g id="node5" class="node">
+<title>D1</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M533,-301C533,-301 405,-301 405,-301 399,-301 393,-295 393,-289 393,-289 393,-273 393,-273 393,-267 399,-261 405,-261 405,-261 533,-261 533,-261 539,-261 545,-267 545,-273 545,-273 545,-289 545,-289 545,-295 539,-301 533,-301"/>
+<text text-anchor="middle" x="469" y="-284.4" font-family="Helvetica,sans-Serif" font-size="12.00">Corporate bank</text>
+<text text-anchor="middle" x="469" y="-271.4" font-family="Helvetica,sans-Serif" font-size="12.00">share of sector limits</text>
+</g>
+<g id="edge9" class="edge">
+<title>G2&#45;&gt;D1</title>
+<path fill="none" stroke="#4b5563" d="M429.12,-357.78C436.71,-343.35 447.18,-323.46 455.48,-307.68"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="457.8,-308.53 458.9,-301.2 453.47,-306.25 457.8,-308.53"/>
+</g>
+<g id="edge10" class="edge">
+<title>G2&#45;&gt;D2</title>
+<path fill="none" stroke="#4b5563" d="M382.17,-357.78C352.59,-342.34 311.01,-320.63 279.93,-304.41"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="280.8,-302.1 273.46,-301.03 278.54,-306.44 280.8,-302.1"/>
+</g>
+<g id="edge11" class="edge">
+<title>G3&#45;&gt;D1</title>
+<path fill="none" stroke="#4b5563" d="M630.84,-357.96C607.52,-350.45 581.25,-341.18 558,-331 540.75,-323.45 522.41,-313.68 506.89,-304.85"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="507.71,-302.49 500.42,-301.13 505.27,-306.74 507.71,-302.49"/>
+</g>
+<g id="node7" class="node">
+<title>D3</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M792,-301C792,-301 582,-301 582,-301 576,-301 570,-295 570,-289 570,-289 570,-273 570,-273 570,-267 576,-261 582,-261 582,-261 792,-261 792,-261 798,-261 804,-267 804,-273 804,-273 804,-289 804,-289 804,-295 798,-301 792,-301"/>
+<text text-anchor="middle" x="687" y="-284.4" font-family="Helvetica,sans-Serif" font-size="12.00">Markets</text>
+<text text-anchor="middle" x="687" y="-271.4" font-family="Helvetica,sans-Serif" font-size="12.00">counterparty and settlement limits</text>
+</g>
+<g id="edge12" class="edge">
+<title>G3&#45;&gt;D3</title>
+<path fill="none" stroke="#4b5563" d="M694.18,-357.78C692.84,-343.61 691,-324.17 689.51,-308.53"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="691.92,-307.93 688.82,-301.2 687.04,-308.4 691.92,-307.93"/>
+</g>
+<g id="node8" class="node">
+<title>K1</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M637.5,-194C637.5,-194 472.5,-194 472.5,-194 466.5,-194 460.5,-188 460.5,-182 460.5,-182 460.5,-166 460.5,-166 460.5,-160 466.5,-154 472.5,-154 472.5,-154 637.5,-154 637.5,-154 643.5,-154 649.5,-160 649.5,-166 649.5,-166 649.5,-182 649.5,-182 649.5,-188 643.5,-194 637.5,-194"/>
+<text text-anchor="middle" x="555" y="-177.4" font-family="Helvetica,sans-Serif" font-size="12.00">Customer facility limits</text>
+<text text-anchor="middle" x="555" y="-164.4" font-family="Helvetica,sans-Serif" font-size="12.00">(loaded in the limit system)</text>
+</g>
+<g id="edge14" class="edge">
+<title>D1&#45;&gt;K1</title>
+<path fill="none" stroke="#4b5563" d="M484.77,-260.74C498.84,-243.57 519.5,-218.35 534.77,-199.7"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="536.79,-201.1 539.33,-194.14 533,-198 536.79,-201.1"/>
+</g>
+<g id="edge15" class="edge">
+<title>D2&#45;&gt;K1</title>
+<path fill="none" stroke="#4b5563" d="M294.59,-260.99C349.8,-242.76 433,-215.28 490.43,-196.32"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="491.43,-198.57 497.3,-194.05 489.89,-193.92 491.43,-198.57"/>
+</g>
+<g id="edge16" class="edge">
+<title>D3&#45;&gt;K1</title>
+<path fill="none" stroke="#4b5563" d="M663.1,-260.99C641.09,-243.48 608.36,-217.44 584.68,-198.61"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="586.18,-196.67 579.17,-194.23 583.13,-200.5 586.18,-196.67"/>
+</g>
+<g id="node9" class="node">
+<title>K2</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M633.5,-117C633.5,-117 486.5,-117 486.5,-117 480.5,-117 474.5,-111 474.5,-105 474.5,-105 474.5,-89 474.5,-89 474.5,-83 480.5,-77 486.5,-77 486.5,-77 633.5,-77 633.5,-77 639.5,-77 645.5,-83 645.5,-89 645.5,-89 645.5,-105 645.5,-105 645.5,-111 639.5,-117 633.5,-117"/>
+<text text-anchor="middle" x="560" y="-100.4" font-family="Helvetica,sans-Serif" font-size="12.00">Pre&#45;deal check</text>
+<text text-anchor="middle" x="560" y="-87.4" font-family="Helvetica,sans-Serif" font-size="12.00">before any new drawing</text>
+</g>
+<g id="edge5" class="edge">
+<title>K1&#45;&gt;K2</title>
+<path fill="none" stroke="#4b5563" d="M556.29,-153.69C556.88,-144.76 557.6,-134.03 558.24,-124.37"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="560.7,-124.4 558.72,-117.25 555.81,-124.07 560.7,-124.4"/>
+</g>
+<g id="node10" class="node">
+<title>Up</title>
+<path fill="#065f46" stroke="#065f46" d="M753.5,-40C753.5,-40 562.5,-40 562.5,-40 556.5,-40 550.5,-34 550.5,-28 550.5,-28 550.5,-12 550.5,-12 550.5,-6 556.5,0 562.5,0 562.5,0 753.5,0 753.5,0 759.5,0 765.5,-6 765.5,-12 765.5,-12 765.5,-28 765.5,-28 765.5,-34 759.5,-40 753.5,-40"/>
+<text text-anchor="middle" x="658" y="-23.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Utilisation reported upward</text>
+<text text-anchor="middle" x="658" y="-10.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">monthly, with breaches flagged</text>
+</g>
+<g id="edge17" class="edge">
+<title>K2&#45;&gt;Up</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M584.98,-76.88C597.88,-67.01 613.74,-54.87 627.37,-44.44"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="628.99,-46.28 633.06,-40.08 626.01,-42.39 628.99,-46.28"/>
+</g>
+<g id="edge18" class="edge">
+<title>Up&#45;&gt;Board</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M765.57,-28.45C805.83,-37.67 842,-56.85 842,-96 842,-379 842,-379 842,-379 842,-428.16 802.72,-457.84 755.3,-475.74"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="754.3,-473.5 748.55,-478.19 755.97,-478.1 754.3,-473.5"/>
+<text text-anchor="middle" x="878" y="-235" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> reporting loop</text>
+</g>
+</g>
+</svg>

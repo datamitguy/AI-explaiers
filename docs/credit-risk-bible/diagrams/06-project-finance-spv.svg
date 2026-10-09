@@ -1,0 +1,171 @@
+<svg width="100%"
+ viewBox="0.00 0.00 978.50 725.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 711.4)">
+<title>ProjectFinanceSPV</title>
+<polygon fill="white" stroke="transparent" points="-14.4,14.4 -14.4,-711.4 964.1,-711.4 964.1,14.4 -14.4,14.4"/>
+<g id="clust1" class="cluster">
+<title>cluster_equity</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M171.7,-476C171.7,-476 419.7,-476 419.7,-476 425.7,-476 431.7,-482 431.7,-488 431.7,-488 431.7,-555 431.7,-555 431.7,-561 425.7,-567 419.7,-567 419.7,-567 171.7,-567 171.7,-567 165.7,-567 159.7,-561 159.7,-555 159.7,-555 159.7,-488 159.7,-488 159.7,-482 165.7,-476 171.7,-476"/>
+<text text-anchor="middle" x="295.7" y="-552.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">Equity side (own the project)</text>
+</g>
+<g id="clust2" class="cluster">
+<title>cluster_debt</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M518.7,-482.5C518.7,-482.5 800.7,-482.5 800.7,-482.5 806.7,-482.5 812.7,-488.5 812.7,-494.5 812.7,-494.5 812.7,-677 812.7,-677 812.7,-683 806.7,-689 800.7,-689 800.7,-689 518.7,-689 518.7,-689 512.7,-689 506.7,-683 506.7,-677 506.7,-677 506.7,-494.5 506.7,-494.5 506.7,-488.5 512.7,-482.5 518.7,-482.5"/>
+<text text-anchor="middle" x="659.7" y="-674.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">Debt side (lend to the project)</text>
+</g>
+<g id="clust3" class="cluster">
+<title>cluster_contracts</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M332.7,-107C332.7,-107 851.7,-107 851.7,-107 857.7,-107 863.7,-113 863.7,-119 863.7,-119 863.7,-290 863.7,-290 863.7,-296 857.7,-302 851.7,-302 851.7,-302 332.7,-302 332.7,-302 326.7,-302 320.7,-296 320.7,-290 320.7,-290 320.7,-119 320.7,-119 320.7,-113 326.7,-107 332.7,-107"/>
+<text text-anchor="middle" x="592.2" y="-287.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">Contract parties (do the work and buy the output)</text>
+</g>
+<g id="clust6" class="cluster">
+<title>cluster_public</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M278.7,-8C278.7,-8 889.7,-8 889.7,-8 895.7,-8 901.7,-14 901.7,-20 901.7,-20 901.7,-74 901.7,-74 901.7,-80 895.7,-86 889.7,-86 889.7,-86 278.7,-86 278.7,-86 272.7,-86 266.7,-80 266.7,-74 266.7,-74 266.7,-20 266.7,-20 266.7,-14 272.7,-8 278.7,-8"/>
+<text text-anchor="middle" x="584.2" y="-71.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">Public and insurance</text>
+</g>
+<g id="node1" class="node">
+<title>Sponsors</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M411.2,-537C411.2,-537 180.2,-537 180.2,-537 174.2,-537 168.2,-531 168.2,-525 168.2,-525 168.2,-496 168.2,-496 168.2,-490 174.2,-484 180.2,-484 180.2,-484 411.2,-484 411.2,-484 417.2,-484 423.2,-490 423.2,-496 423.2,-496 423.2,-525 423.2,-525 423.2,-531 417.2,-537 411.2,-537"/>
+<text text-anchor="middle" x="295.7" y="-520.4" font-family="Helvetica,sans-Serif" font-size="12.00">Sponsors</text>
+<text text-anchor="middle" x="295.7" y="-507.4" font-family="Helvetica,sans-Serif" font-size="12.00">(developer, utility, infrastructure fund)</text>
+<text text-anchor="middle" x="295.7" y="-494.4" font-family="Helvetica,sans-Serif" font-size="12.00">put in equity, typically 20% to 40%</text>
+</g>
+<g id="node4" class="node">
+<title>SPV</title>
+<path fill="#1f2937" stroke="#1f2937" d="M546.2,-422C546.2,-422 295.2,-422 295.2,-422 289.2,-422 283.2,-416 283.2,-410 283.2,-410 283.2,-364 283.2,-364 283.2,-358 289.2,-352 295.2,-352 295.2,-352 546.2,-352 546.2,-352 552.2,-352 558.2,-358 558.2,-364 558.2,-364 558.2,-410 558.2,-410 558.2,-416 552.2,-422 546.2,-422"/>
+<text text-anchor="middle" x="420.7" y="-404.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="white">Project company (SPV)</text>
+<text text-anchor="middle" x="420.7" y="-390.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="white">Special purpose vehicle</text>
+<text text-anchor="middle" x="420.7" y="-376.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="white">owns the asset, signs every contract,</text>
+<text text-anchor="middle" x="420.7" y="-362.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="white">has no other business</text>
+</g>
+<g id="edge6" class="edge">
+<title>Sponsors&#45;&gt;SPV</title>
+<path fill="none" stroke="#4b5563" d="M288.26,-483.84C285.9,-470.34 285.68,-454.13 293.7,-442 297.44,-436.35 301.9,-431.29 306.88,-426.76"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="308.7,-428.43 312.47,-422.04 305.54,-424.68 308.7,-428.43"/>
+<text text-anchor="middle" x="339.2" y="-456" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> equity and</text>
+<text text-anchor="middle" x="339.2" y="-445" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> shareholder loans</text>
+</g>
+<g id="node2" class="node">
+<title>Lenders</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M792.7,-659C792.7,-659 526.7,-659 526.7,-659 520.7,-659 514.7,-653 514.7,-647 514.7,-647 514.7,-618 514.7,-618 514.7,-612 520.7,-606 526.7,-606 526.7,-606 792.7,-606 792.7,-606 798.7,-606 804.7,-612 804.7,-618 804.7,-618 804.7,-647 804.7,-647 804.7,-653 798.7,-659 792.7,-659"/>
+<text text-anchor="middle" x="659.7" y="-642.4" font-family="Helvetica,sans-Serif" font-size="12.00">Lenders</text>
+<text text-anchor="middle" x="659.7" y="-629.4" font-family="Helvetica,sans-Serif" font-size="12.00">(bank syndicate, bond investors,</text>
+<text text-anchor="middle" x="659.7" y="-616.4" font-family="Helvetica,sans-Serif" font-size="12.00">export credit agencies, development banks)</text>
+</g>
+<g id="node3" class="node">
+<title>Agent</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M750.7,-530.5C750.7,-530.5 568.7,-530.5 568.7,-530.5 562.7,-530.5 556.7,-524.5 556.7,-518.5 556.7,-518.5 556.7,-502.5 556.7,-502.5 556.7,-496.5 562.7,-490.5 568.7,-490.5 568.7,-490.5 750.7,-490.5 750.7,-490.5 756.7,-490.5 762.7,-496.5 762.7,-502.5 762.7,-502.5 762.7,-518.5 762.7,-518.5 762.7,-524.5 756.7,-530.5 750.7,-530.5"/>
+<text text-anchor="middle" x="659.7" y="-513.9" font-family="Helvetica,sans-Serif" font-size="12.00">Facility and security agent</text>
+<text text-anchor="middle" x="659.7" y="-500.9" font-family="Helvetica,sans-Serif" font-size="12.00">(one bank acts for all lenders)</text>
+</g>
+<g id="edge1" class="edge">
+<title>Lenders&#45;&gt;Agent</title>
+<path fill="none" stroke="#4b5563" d="M659.7,-605.76C659.7,-585.64 659.7,-557.79 659.7,-537.59"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="662.15,-537.52 659.7,-530.52 657.25,-537.52 662.15,-537.52"/>
+<text text-anchor="middle" x="679.7" y="-578" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> appoint</text>
+</g>
+<g id="edge7" class="edge">
+<title>Agent&#45;&gt;SPV</title>
+<path fill="none" stroke="#4b5563" d="M633.2,-490.35C606.05,-470.73 567.53,-442.97 565.7,-442 554.19,-435.87 541.84,-430.12 529.37,-424.83"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="530.24,-422.54 522.84,-422.11 528.36,-427.06 530.24,-422.54"/>
+<text text-anchor="middle" x="648.7" y="-456" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> senior debt,</text>
+<text text-anchor="middle" x="648.7" y="-445" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> typically 60% to 80%</text>
+</g>
+<g id="node5" class="node">
+<title>EPC</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M834.2,-272C834.2,-272 585.2,-272 585.2,-272 579.2,-272 573.2,-266 573.2,-260 573.2,-260 573.2,-231 573.2,-231 573.2,-225 579.2,-219 585.2,-219 585.2,-219 834.2,-219 834.2,-219 840.2,-219 846.2,-225 846.2,-231 846.2,-231 846.2,-260 846.2,-260 846.2,-266 840.2,-272 834.2,-272"/>
+<text text-anchor="middle" x="709.7" y="-255.4" font-family="Helvetica,sans-Serif" font-size="12.00">EPC contractor</text>
+<text text-anchor="middle" x="709.7" y="-242.4" font-family="Helvetica,sans-Serif" font-size="12.00">(engineering, procurement, construction)</text>
+<text text-anchor="middle" x="709.7" y="-229.4" font-family="Helvetica,sans-Serif" font-size="12.00">builds it for a fixed price and date</text>
+</g>
+<g id="edge15" class="edge">
+<title>Agent&#45;&gt;EPC</title>
+<path fill="none" stroke="#991b1b" stroke-dasharray="5,2" d="M687.1,-490.46C695.29,-483.22 703.25,-474.21 707.7,-464 734.19,-403.16 725.26,-323.37 717.05,-279.31"/>
+<polygon fill="#991b1b" stroke="#991b1b" points="719.43,-278.7 715.69,-272.29 714.62,-279.63 719.43,-278.7"/>
+<text text-anchor="middle" x="770.2" y="-390" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#991b1b"> direct agreement:</text>
+<text text-anchor="middle" x="770.2" y="-379" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#991b1b"> step&#45;in rights</text>
+</g>
+<g id="node7" class="node">
+<title>Off</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M843.7,-168C843.7,-168 575.7,-168 575.7,-168 569.7,-168 563.7,-162 563.7,-156 563.7,-156 563.7,-127 563.7,-127 563.7,-121 569.7,-115 575.7,-115 575.7,-115 843.7,-115 843.7,-115 849.7,-115 855.7,-121 855.7,-127 855.7,-127 855.7,-156 855.7,-156 855.7,-162 849.7,-168 843.7,-168"/>
+<text text-anchor="middle" x="709.7" y="-151.4" font-family="Helvetica,sans-Serif" font-size="12.00">Offtaker</text>
+<text text-anchor="middle" x="709.7" y="-138.4" font-family="Helvetica,sans-Serif" font-size="12.00">(buys the output under a long</text>
+<text text-anchor="middle" x="709.7" y="-125.4" font-family="Helvetica,sans-Serif" font-size="12.00">contract, e.g. a power purchase agreement)</text>
+</g>
+<g id="edge16" class="edge">
+<title>Agent&#45;&gt;Off</title>
+<path fill="none" stroke="#991b1b" stroke-dasharray="5,2" d="M719.12,-490.45C753.79,-476.54 795.84,-454.39 822.7,-422 858.41,-378.94 852.16,-357.29 860.7,-302 866.33,-265.54 880.01,-250.43 860.7,-219 847.82,-198.03 827.21,-182.6 805.3,-171.32"/>
+<polygon fill="#991b1b" stroke="#991b1b" points="806.15,-169 798.79,-168.1 803.98,-173.4 806.15,-169"/>
+<text text-anchor="middle" x="904.2" y="-324" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#991b1b"> direct agreement:</text>
+<text text-anchor="middle" x="904.2" y="-313" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#991b1b"> step&#45;in rights</text>
+</g>
+<g id="edge8" class="edge">
+<title>SPV&#45;&gt;Agent</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M408.14,-422.27C405.19,-436.63 405.22,-452.6 414.7,-464 423.84,-474.99 488.83,-486.76 549.58,-495.57"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="549.3,-498.01 556.58,-496.58 550,-493.16 549.3,-498.01"/>
+<text text-anchor="middle" x="486.7" y="-456" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> debt service, security</text>
+<text text-anchor="middle" x="486.7" y="-445" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> over all assets and contracts</text>
+</g>
+<g id="edge9" class="edge">
+<title>SPV&#45;&gt;EPC</title>
+<path fill="none" stroke="#4b5563" d="M524.22,-351.93C539.09,-345.9 553.99,-339.22 567.7,-332 582.65,-324.13 584.46,-319.09 598.7,-310 617.19,-298.19 637.95,-286.03 656.47,-275.56"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="657.76,-277.65 662.65,-272.08 655.35,-273.38 657.76,-277.65"/>
+<text text-anchor="middle" x="651.7" y="-318.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> construction contract</text>
+</g>
+<g id="node6" class="node">
+<title>OM</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M531.7,-272C531.7,-272 347.7,-272 347.7,-272 341.7,-272 335.7,-266 335.7,-260 335.7,-260 335.7,-231 335.7,-231 335.7,-225 341.7,-219 347.7,-219 347.7,-219 531.7,-219 531.7,-219 537.7,-219 543.7,-225 543.7,-231 543.7,-231 543.7,-260 543.7,-260 543.7,-266 537.7,-272 531.7,-272"/>
+<text text-anchor="middle" x="439.7" y="-255.4" font-family="Helvetica,sans-Serif" font-size="12.00">O&amp;M contractor</text>
+<text text-anchor="middle" x="439.7" y="-242.4" font-family="Helvetica,sans-Serif" font-size="12.00">(operations and maintenance)</text>
+<text text-anchor="middle" x="439.7" y="-229.4" font-family="Helvetica,sans-Serif" font-size="12.00">runs it once built</text>
+</g>
+<g id="edge10" class="edge">
+<title>SPV&#45;&gt;OM</title>
+<path fill="none" stroke="#4b5563" d="M425.35,-351.87C428.35,-329.84 432.23,-301.33 435.2,-279.52"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="437.65,-279.67 436.17,-272.4 432.8,-279.01 437.65,-279.67"/>
+<text text-anchor="middle" x="465.7" y="-318.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> O&amp;M contract</text>
+</g>
+<g id="edge11" class="edge">
+<title>SPV&#45;&gt;Off</title>
+<path fill="none" stroke="#4b5563" d="M276.05,-364.25C128.7,-336.47 -66.41,-280.56 22.7,-188 43.02,-166.89 520.54,-170.87 549.7,-168 554.18,-167.56 558.72,-167.07 563.31,-166.55"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="275.7,-366.68 283.03,-365.55 276.6,-361.86 275.7,-366.68"/>
+<text text-anchor="middle" x="106.7" y="-243" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> revenue for output</text>
+</g>
+<g id="node8" class="node">
+<title>Supply</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M522.7,-161.5C522.7,-161.5 340.7,-161.5 340.7,-161.5 334.7,-161.5 328.7,-155.5 328.7,-149.5 328.7,-149.5 328.7,-133.5 328.7,-133.5 328.7,-127.5 334.7,-121.5 340.7,-121.5 340.7,-121.5 522.7,-121.5 522.7,-121.5 528.7,-121.5 534.7,-127.5 534.7,-133.5 534.7,-133.5 534.7,-149.5 534.7,-149.5 534.7,-155.5 528.7,-161.5 522.7,-161.5"/>
+<text text-anchor="middle" x="431.7" y="-144.9" font-family="Helvetica,sans-Serif" font-size="12.00">Fuel or input supplier</text>
+<text text-anchor="middle" x="431.7" y="-131.9" font-family="Helvetica,sans-Serif" font-size="12.00">(long&#45;term supply agreement)</text>
+</g>
+<g id="edge12" class="edge">
+<title>SPV&#45;&gt;Supply</title>
+<path fill="none" stroke="#4b5563" d="M332.55,-347.98C314.6,-335.98 298.06,-320.8 287.7,-302 269.89,-269.69 268.69,-250.62 287.7,-219 304.25,-191.46 334.43,-173.3 362.9,-161.62"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="331.47,-350.2 338.68,-351.93 334.12,-346.08 331.47,-350.2"/>
+<text text-anchor="middle" x="304.7" y="-243" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> inputs</text>
+</g>
+<g id="node9" class="node">
+<title>Host</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M881.7,-56C881.7,-56 605.7,-56 605.7,-56 599.7,-56 593.7,-50 593.7,-44 593.7,-44 593.7,-28 593.7,-28 593.7,-22 599.7,-16 605.7,-16 605.7,-16 881.7,-16 881.7,-16 887.7,-16 893.7,-22 893.7,-28 893.7,-28 893.7,-44 893.7,-44 893.7,-50 887.7,-56 881.7,-56"/>
+<text text-anchor="middle" x="743.7" y="-39.4" font-family="Helvetica,sans-Serif" font-size="12.00">Host government</text>
+<text text-anchor="middle" x="743.7" y="-26.4" font-family="Helvetica,sans-Serif" font-size="12.00">(permits, concession, sometimes guarantees)</text>
+</g>
+<g id="edge13" class="edge">
+<title>SPV&#45;&gt;Host</title>
+<path fill="none" stroke="#4b5563" d="M488.68,-347.04C501.37,-335.19 507.44,-322.1 495.7,-310 485.44,-299.43 244.13,-308.04 230.7,-302 170.03,-274.7 97.58,-243.87 133.7,-188 244.11,-17.24 379.81,-123.32 579.7,-86 617.38,-78.97 658.73,-66.58 690.48,-56.02"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="486.99,-345.26 483.29,-351.69 490.19,-348.97 486.99,-345.26"/>
+<text text-anchor="middle" x="187.7" y="-191" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> licence or concession</text>
+</g>
+<g id="node10" class="node">
+<title>Ins</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M553.2,-56C553.2,-56 286.2,-56 286.2,-56 280.2,-56 274.2,-50 274.2,-44 274.2,-44 274.2,-28 274.2,-28 274.2,-22 280.2,-16 286.2,-16 286.2,-16 553.2,-16 553.2,-16 559.2,-16 565.2,-22 565.2,-28 565.2,-28 565.2,-44 565.2,-44 565.2,-50 559.2,-56 553.2,-56"/>
+<text text-anchor="middle" x="419.7" y="-39.4" font-family="Helvetica,sans-Serif" font-size="12.00">Insurers</text>
+<text text-anchor="middle" x="419.7" y="-26.4" font-family="Helvetica,sans-Serif" font-size="12.00">(construction all&#45;risks, business interruption)</text>
+</g>
+<g id="edge14" class="edge">
+<title>SPV&#45;&gt;Ins</title>
+<path fill="none" stroke="#4b5563" d="M522.6,-347.96C538.23,-336.88 545.24,-323.96 531.7,-310 511.19,-288.86 287.21,-323.14 266.7,-302 204.62,-238.02 256.8,-175.63 313.7,-107 331.51,-85.52 357.6,-68.18 379.44,-56.13"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="521,-346.08 516.48,-351.95 523.68,-350.18 521,-346.08"/>
+<text text-anchor="middle" x="269.2" y="-191" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> cover</text>
+</g>
+</g>
+</svg>

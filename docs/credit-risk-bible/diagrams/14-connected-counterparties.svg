@@ -1,0 +1,118 @@
+<svg width="100%"
+ viewBox="0.00 0.00 754.80 609.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 595.4)">
+<title>ConnectedCounterparties</title>
+<polygon fill="white" stroke="transparent" points="-14.4,14.4 -14.4,-595.4 740.4,-595.4 740.4,14.4 -14.4,14.4"/>
+<g id="clust1" class="cluster">
+<title>cluster_group</title>
+<path fill="white" stroke="#6366f1" stroke-dasharray="5,2" d="M20,-86C20,-86 560,-86 560,-86 566,-86 572,-92 572,-98 572,-98 572,-561 572,-561 572,-567 566,-573 560,-573 560,-573 20,-573 20,-573 14,-573 8,-567 8,-561 8,-561 8,-98 8,-98 8,-92 14,-86 20,-86"/>
+<text text-anchor="middle" x="290" y="-558.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">One group of connected counterparties: exposures are added up against one limit</text>
+</g>
+<g id="node1" class="node">
+<title>Owner</title>
+<path fill="#1f2937" stroke="#1f2937" d="M431,-543C431,-543 295,-543 295,-543 289,-543 283,-537 283,-531 283,-531 283,-515 283,-515 283,-509 289,-503 295,-503 295,-503 431,-503 431,-503 437,-503 443,-509 443,-515 443,-515 443,-531 443,-531 443,-537 437,-543 431,-543"/>
+<text text-anchor="middle" x="363" y="-526.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Mr Patel</text>
+<text text-anchor="middle" x="363" y="-513.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">(ultimate owner, 70%)</text>
+</g>
+<g id="node2" class="node">
+<title>Hold</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M349,-452C349,-452 229,-452 229,-452 223,-452 217,-446 217,-440 217,-440 217,-411 217,-411 217,-405 223,-399 229,-399 229,-399 349,-399 349,-399 355,-399 361,-405 361,-411 361,-411 361,-440 361,-440 361,-446 355,-452 349,-452"/>
+<text text-anchor="middle" x="289" y="-435.4" font-family="Helvetica,sans-Serif" font-size="12.00">Patel Holdings Ltd</text>
+<text text-anchor="middle" x="289" y="-422.4" font-family="Helvetica,sans-Serif" font-size="12.00">(parent, no trading)</text>
+<text text-anchor="middle" x="289" y="-409.4" font-family="Helvetica,sans-Serif" font-size="12.00">exposure: 0</text>
+</g>
+<g id="edge1" class="edge">
+<title>Owner&#45;&gt;Hold</title>
+<path fill="none" stroke="#4b5563" d="M348.02,-502.67C338.11,-489.88 324.87,-472.79 313.45,-458.05"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="315.23,-456.35 309,-452.32 311.36,-459.35 315.23,-456.35"/>
+<text text-anchor="middle" x="353.5" y="-475" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> controls</text>
+</g>
+<g id="node5" class="node">
+<title>Prop</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M525.5,-379C525.5,-379 338.5,-379 338.5,-379 332.5,-379 326.5,-373 326.5,-367 326.5,-367 326.5,-338 326.5,-338 326.5,-332 332.5,-326 338.5,-326 338.5,-326 525.5,-326 525.5,-326 531.5,-326 537.5,-332 537.5,-338 537.5,-338 537.5,-367 537.5,-367 537.5,-373 531.5,-379 525.5,-379"/>
+<text text-anchor="middle" x="432" y="-362.4" font-family="Helvetica,sans-Serif" font-size="12.00">Patel Property LLP</text>
+<text text-anchor="middle" x="432" y="-349.4" font-family="Helvetica,sans-Serif" font-size="12.00">(owned by Mr Patel personally)</text>
+<text text-anchor="middle" x="432" y="-336.4" font-family="Helvetica,sans-Serif" font-size="12.00">exposure: 15m</text>
+</g>
+<g id="edge4" class="edge">
+<title>Owner&#45;&gt;Prop</title>
+<path fill="none" stroke="#4b5563" d="M371.59,-502.61C374.31,-496.36 377.32,-489.4 380,-483 393.74,-450.18 408.83,-412.39 419.2,-386.14"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="421.57,-386.8 421.86,-379.39 417.01,-385 421.57,-386.8"/>
+<text text-anchor="middle" x="398.5" y="-475" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> owns</text>
+</g>
+<g id="node3" class="node">
+<title>OpA</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M246.5,-306C246.5,-306 137.5,-306 137.5,-306 131.5,-306 125.5,-300 125.5,-294 125.5,-294 125.5,-265 125.5,-265 125.5,-259 131.5,-253 137.5,-253 137.5,-253 246.5,-253 246.5,-253 252.5,-253 258.5,-259 258.5,-265 258.5,-265 258.5,-294 258.5,-294 258.5,-300 252.5,-306 246.5,-306"/>
+<text text-anchor="middle" x="192" y="-289.4" font-family="Helvetica,sans-Serif" font-size="12.00">Patel Foods Ltd</text>
+<text text-anchor="middle" x="192" y="-276.4" font-family="Helvetica,sans-Serif" font-size="12.00">(100% subsidiary)</text>
+<text text-anchor="middle" x="192" y="-263.4" font-family="Helvetica,sans-Serif" font-size="12.00">exposure: 12m</text>
+</g>
+<g id="edge2" class="edge">
+<title>Hold&#45;&gt;OpA</title>
+<path fill="none" stroke="#4b5563" d="M242.16,-398.86C234.62,-393.11 227.5,-386.47 222,-379 207.77,-359.69 200.22,-333.56 196.25,-313.07"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="198.64,-312.53 194.99,-306.07 193.82,-313.4 198.64,-312.53"/>
+<text text-anchor="middle" x="237.5" y="-350" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> 100%</text>
+</g>
+<g id="node4" class="node">
+<title>OpB</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M341.5,-233C341.5,-233 232.5,-233 232.5,-233 226.5,-233 220.5,-227 220.5,-221 220.5,-221 220.5,-192 220.5,-192 220.5,-186 226.5,-180 232.5,-180 232.5,-180 341.5,-180 341.5,-180 347.5,-180 353.5,-186 353.5,-192 353.5,-192 353.5,-221 353.5,-221 353.5,-227 347.5,-233 341.5,-233"/>
+<text text-anchor="middle" x="287" y="-216.4" font-family="Helvetica,sans-Serif" font-size="12.00">Patel Logistics Ltd</text>
+<text text-anchor="middle" x="287" y="-203.4" font-family="Helvetica,sans-Serif" font-size="12.00">(100% subsidiary)</text>
+<text text-anchor="middle" x="287" y="-190.4" font-family="Helvetica,sans-Serif" font-size="12.00">exposure: 8m</text>
+</g>
+<g id="edge3" class="edge">
+<title>Hold&#45;&gt;OpB</title>
+<path fill="none" stroke="#4b5563" d="M283.65,-398.62C282.55,-392.23 281.56,-385.39 281,-379 276.79,-330.79 280.34,-274.71 283.5,-240.16"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="285.94,-240.32 284.16,-233.12 281.06,-239.86 285.94,-240.32"/>
+<text text-anchor="middle" x="296.5" y="-350" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> 100%</text>
+</g>
+<g id="node6" class="node">
+<title>Supp</title>
+<path fill="#fef3c7" stroke="#d97706" d="M249.5,-160C249.5,-160 60.5,-160 60.5,-160 54.5,-160 48.5,-154 48.5,-148 48.5,-148 48.5,-106 48.5,-106 48.5,-100 54.5,-94 60.5,-94 60.5,-94 249.5,-94 249.5,-94 255.5,-94 261.5,-100 261.5,-106 261.5,-106 261.5,-148 261.5,-148 261.5,-154 255.5,-160 249.5,-160"/>
+<text text-anchor="middle" x="155" y="-143.4" font-family="Helvetica,sans-Serif" font-size="12.00">FreshPak Ltd</text>
+<text text-anchor="middle" x="155" y="-130.4" font-family="Helvetica,sans-Serif" font-size="12.00">(independent, but 90% of sales</text>
+<text text-anchor="middle" x="155" y="-117.4" font-family="Helvetica,sans-Serif" font-size="12.00">are to Patel Foods)</text>
+<text text-anchor="middle" x="155" y="-104.4" font-family="Helvetica,sans-Serif" font-size="12.00">exposure: 3m</text>
+</g>
+<g id="edge5" class="edge">
+<title>OpA&#45;&gt;Supp</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M156.89,-252.89C151.24,-247.03 146.2,-240.34 143,-233 134.01,-212.39 136.38,-187.45 141.29,-167.05"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="143.72,-167.43 143.12,-160.04 138.98,-166.19 143.72,-167.43"/>
+<text text-anchor="middle" x="174.5" y="-209.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> economic</text>
+<text text-anchor="middle" x="174.5" y="-198.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> dependence</text>
+</g>
+<g id="node7" class="node">
+<title>Total</title>
+<path fill="#1e3a8a" stroke="#1e3a8a" d="M470.5,-53C470.5,-53 215.5,-53 215.5,-53 209.5,-53 203.5,-47 203.5,-41 203.5,-41 203.5,-12 203.5,-12 203.5,-6 209.5,0 215.5,0 215.5,0 470.5,0 470.5,0 476.5,0 482.5,-6 482.5,-12 482.5,-12 482.5,-41 482.5,-41 482.5,-47 476.5,-53 470.5,-53"/>
+<text text-anchor="middle" x="343" y="-36.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Group exposure = 12 + 8 + 15 + 3 = 38m</text>
+<text text-anchor="middle" x="343" y="-23.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">checked against the group limit</text>
+<text text-anchor="middle" x="343" y="-10.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">and the 25% of Tier 1 regulatory cap</text>
+</g>
+<g id="edge6" class="edge">
+<title>OpA&#45;&gt;Total</title>
+<path fill="none" stroke="#4b5563" d="M258.78,-268.2C298.34,-260.59 343.01,-248.8 355,-233 393.15,-182.74 372.97,-104.06 356.77,-60.07"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="358.99,-59 354.22,-53.32 354.4,-60.73 358.99,-59"/>
+</g>
+<g id="edge7" class="edge">
+<title>OpB&#45;&gt;Total</title>
+<path fill="none" stroke="#4b5563" d="M295.02,-180C304.93,-148.5 321.81,-94.85 332.68,-60.31"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="335.14,-60.66 334.9,-53.24 330.46,-59.19 335.14,-60.66"/>
+</g>
+<g id="edge8" class="edge">
+<title>Prop&#45;&gt;Total</title>
+<path fill="none" stroke="#4b5563" d="M432.45,-325.84C432.41,-277.09 427.99,-168.58 393,-86 388.85,-76.2 382.44,-66.84 375.59,-58.59"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="377.23,-56.75 370.79,-53.07 373.53,-59.96 377.23,-56.75"/>
+</g>
+<g id="edge9" class="edge">
+<title>Supp&#45;&gt;Total</title>
+<path fill="none" stroke="#4b5563" d="M216.3,-93.88C239.41,-81.77 265.54,-68.08 288.04,-56.29"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="289.22,-58.44 294.29,-53.02 286.95,-54.1 289.22,-58.44"/>
+</g>
+<g id="node8" class="node">
+<title>Other</title>
+<path fill="#6b7280" stroke="#6b7280" d="M714,-543C714,-543 592,-543 592,-543 586,-543 580,-537 580,-531 580,-531 580,-515 580,-515 580,-509 586,-503 592,-503 592,-503 714,-503 714,-503 720,-503 726,-509 726,-515 726,-515 726,-531 726,-531 726,-537 720,-543 714,-543"/>
+<text text-anchor="middle" x="653" y="-526.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Unrelated customer</text>
+<text text-anchor="middle" x="653" y="-513.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">(separate limit)</text>
+</g>
+</g>
+</svg>

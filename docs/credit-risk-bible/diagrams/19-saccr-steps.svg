@@ -1,0 +1,119 @@
+<svg width="100%"
+ viewBox="0.00 0.00 622.80 486.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 472.4)">
+<title>SACCR</title>
+<polygon fill="white" stroke="transparent" points="-14.4,14.4 -14.4,-472.4 608.4,-472.4 608.4,14.4 -14.4,14.4"/>
+<g id="clust1" class="cluster">
+<title>cluster_rc</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M20,-64C20,-64 288,-64 288,-64 294,-64 300,-70 300,-76 300,-76 300,-391.5 300,-391.5 300,-397.5 294,-403.5 288,-403.5 288,-403.5 20,-403.5 20,-403.5 14,-403.5 8,-397.5 8,-391.5 8,-391.5 8,-76 8,-76 8,-70 14,-64 20,-64"/>
+<text text-anchor="middle" x="154" y="-389.1" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">Replacement cost (RC)</text>
+</g>
+<g id="clust2" class="cluster">
+<title>cluster_pfe</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M320,-66C320,-66 574,-66 574,-66 580,-66 586,-72 586,-78 586,-78 586,-398 586,-398 586,-404 580,-410 574,-410 574,-410 320,-410 320,-410 314,-410 308,-404 308,-398 308,-398 308,-78 308,-78 308,-72 314,-66 320,-66"/>
+<text text-anchor="middle" x="447" y="-395.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">Potential future exposure (PFE)</text>
+</g>
+<g id="node1" class="node">
+<title>Start</title>
+<path fill="#1f2937" stroke="#1f2937" d="M404.5,-458C404.5,-458 209.5,-458 209.5,-458 203.5,-458 197.5,-452 197.5,-446 197.5,-446 197.5,-430 197.5,-430 197.5,-424 203.5,-418 209.5,-418 209.5,-418 404.5,-418 404.5,-418 410.5,-418 416.5,-424 416.5,-430 416.5,-430 416.5,-446 416.5,-446 416.5,-452 410.5,-458 404.5,-458"/>
+<text text-anchor="middle" x="307" y="-441.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">All trades with one counterparty</text>
+<text text-anchor="middle" x="307" y="-428.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">under one netting agreement</text>
+</g>
+<g id="node2" class="node">
+<title>MTM</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M261.5,-373.5C261.5,-373.5 82.5,-373.5 82.5,-373.5 76.5,-373.5 70.5,-367.5 70.5,-361.5 70.5,-361.5 70.5,-345.5 70.5,-345.5 70.5,-339.5 76.5,-333.5 82.5,-333.5 82.5,-333.5 261.5,-333.5 261.5,-333.5 267.5,-333.5 273.5,-339.5 273.5,-345.5 273.5,-345.5 273.5,-361.5 273.5,-361.5 273.5,-367.5 267.5,-373.5 261.5,-373.5"/>
+<text text-anchor="middle" x="172" y="-356.9" font-family="Helvetica,sans-Serif" font-size="12.00">Sum the mark&#45;to&#45;market</text>
+<text text-anchor="middle" x="172" y="-343.9" font-family="Helvetica,sans-Serif" font-size="12.00">of all trades in the netting set</text>
+</g>
+<g id="edge6" class="edge">
+<title>Start&#45;&gt;MTM</title>
+<path fill="none" stroke="#4b5563" d="M275.69,-417.87C255.84,-405.73 230.06,-389.98 209.17,-377.22"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="210.39,-375.09 203.14,-373.53 207.84,-379.27 210.39,-375.09"/>
+</g>
+<g id="node5" class="node">
+<title>Cls</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M513.5,-380C513.5,-380 336.5,-380 336.5,-380 330.5,-380 324.5,-374 324.5,-368 324.5,-368 324.5,-339 324.5,-339 324.5,-333 330.5,-327 336.5,-327 336.5,-327 513.5,-327 513.5,-327 519.5,-327 525.5,-333 525.5,-339 525.5,-339 525.5,-368 525.5,-368 525.5,-374 519.5,-380 513.5,-380"/>
+<text text-anchor="middle" x="425" y="-363.4" font-family="Helvetica,sans-Serif" font-size="12.00">Sort trades into asset classes</text>
+<text text-anchor="middle" x="425" y="-350.4" font-family="Helvetica,sans-Serif" font-size="12.00">interest rate, FX, credit,</text>
+<text text-anchor="middle" x="425" y="-337.4" font-family="Helvetica,sans-Serif" font-size="12.00">equity, commodity</text>
+</g>
+<g id="edge7" class="edge">
+<title>Start&#45;&gt;Cls</title>
+<path fill="none" stroke="#4b5563" d="M334.37,-417.87C348.68,-407.86 366.51,-395.39 382.57,-384.17"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="384.06,-386.11 388.39,-380.09 381.25,-382.1 384.06,-386.11"/>
+</g>
+<g id="node3" class="node">
+<title>Coll</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M278.5,-282C278.5,-282 29.5,-282 29.5,-282 23.5,-282 17.5,-276 17.5,-270 17.5,-270 17.5,-254 17.5,-254 17.5,-248 23.5,-242 29.5,-242 29.5,-242 278.5,-242 278.5,-242 284.5,-242 290.5,-248 290.5,-254 290.5,-254 290.5,-270 290.5,-270 290.5,-276 284.5,-282 278.5,-282"/>
+<text text-anchor="middle" x="154" y="-265.4" font-family="Helvetica,sans-Serif" font-size="12.00">Subtract collateral held</text>
+<text text-anchor="middle" x="154" y="-252.4" font-family="Helvetica,sans-Serif" font-size="12.00">(variation margin, independent amounts)</text>
+</g>
+<g id="edge1" class="edge">
+<title>MTM&#45;&gt;Coll</title>
+<path fill="none" stroke="#4b5563" d="M168.09,-333.08C165.51,-320.21 162.08,-303.17 159.25,-289.11"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="161.62,-288.45 157.84,-282.07 156.81,-289.42 161.62,-288.45"/>
+</g>
+<g id="node4" class="node">
+<title>RC</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M280,-112C280,-112 28,-112 28,-112 22,-112 16,-106 16,-100 16,-100 16,-84 16,-84 16,-78 22,-72 28,-72 28,-72 280,-72 280,-72 286,-72 292,-78 292,-84 292,-84 292,-100 292,-100 292,-106 286,-112 280,-112"/>
+<text text-anchor="middle" x="154" y="-95.4" font-family="Helvetica,sans-Serif" font-size="12.00">RC = max(net MTM minus collateral, 0)</text>
+<text text-anchor="middle" x="154" y="-82.4" font-family="Helvetica,sans-Serif" font-size="12.00">plus threshold and MTA terms if margined</text>
+</g>
+<g id="edge2" class="edge">
+<title>Coll&#45;&gt;RC</title>
+<path fill="none" stroke="#4b5563" d="M154,-241.73C154,-211.6 154,-153.28 154,-119.31"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="156.45,-119.05 154,-112.05 151.55,-119.05 156.45,-119.05"/>
+</g>
+<g id="node9" class="node">
+<title>EAD</title>
+<path fill="#1e3a8a" stroke="#1e3a8a" d="M411.5,-40C411.5,-40 180.5,-40 180.5,-40 174.5,-40 168.5,-34 168.5,-28 168.5,-28 168.5,-12 168.5,-12 168.5,-6 174.5,0 180.5,0 180.5,0 411.5,0 411.5,0 417.5,0 423.5,-6 423.5,-12 423.5,-12 423.5,-28 423.5,-28 423.5,-34 417.5,-40 411.5,-40"/>
+<text text-anchor="middle" x="296" y="-23.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">EAD = 1.4 x (RC + PFE)</text>
+<text text-anchor="middle" x="296" y="-10.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">then risk&#45;weight by counterparty class</text>
+</g>
+<g id="edge8" class="edge">
+<title>RC&#45;&gt;EAD</title>
+<path fill="none" stroke="#4b5563" d="M192.8,-71.87C210.65,-63.08 231.93,-52.58 250.53,-43.42"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="252.05,-45.4 257.24,-40.1 249.88,-41 252.05,-45.4"/>
+</g>
+<g id="node6" class="node">
+<title>AddOn</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M528.5,-295C528.5,-295 339.5,-295 339.5,-295 333.5,-295 327.5,-289 327.5,-283 327.5,-283 327.5,-241 327.5,-241 327.5,-235 333.5,-229 339.5,-229 339.5,-229 528.5,-229 528.5,-229 534.5,-229 540.5,-235 540.5,-241 540.5,-241 540.5,-283 540.5,-283 540.5,-289 534.5,-295 528.5,-295"/>
+<text text-anchor="middle" x="434" y="-278.4" font-family="Helvetica,sans-Serif" font-size="12.00">Add&#45;on per class</text>
+<text text-anchor="middle" x="434" y="-265.4" font-family="Helvetica,sans-Serif" font-size="12.00">notional x supervisory factor</text>
+<text text-anchor="middle" x="434" y="-252.4" font-family="Helvetica,sans-Serif" font-size="12.00">x maturity factor, netted within</text>
+<text text-anchor="middle" x="434" y="-239.4" font-family="Helvetica,sans-Serif" font-size="12.00">hedging sets</text>
+</g>
+<g id="edge3" class="edge">
+<title>Cls&#45;&gt;AddOn</title>
+<path fill="none" stroke="#4b5563" d="M427.6,-326.61C428.36,-319.1 429.2,-310.73 430.02,-302.58"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="432.5,-302.41 430.76,-295.19 427.62,-301.91 432.5,-302.41"/>
+</g>
+<g id="node7" class="node">
+<title>Mult</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M565.5,-197C565.5,-197 328.5,-197 328.5,-197 322.5,-197 316.5,-191 316.5,-185 316.5,-185 316.5,-156 316.5,-156 316.5,-150 322.5,-144 328.5,-144 328.5,-144 565.5,-144 565.5,-144 571.5,-144 577.5,-150 577.5,-156 577.5,-156 577.5,-185 577.5,-185 577.5,-191 571.5,-197 565.5,-197"/>
+<text text-anchor="middle" x="447" y="-180.4" font-family="Helvetica,sans-Serif" font-size="12.00">Multiplier</text>
+<text text-anchor="middle" x="447" y="-167.4" font-family="Helvetica,sans-Serif" font-size="12.00">reduces PFE when the set is</text>
+<text text-anchor="middle" x="447" y="-154.4" font-family="Helvetica,sans-Serif" font-size="12.00">over&#45;collateralised or out of the money</text>
+</g>
+<g id="edge4" class="edge">
+<title>AddOn&#45;&gt;Mult</title>
+<path fill="none" stroke="#4b5563" d="M438.66,-228.94C439.82,-220.95 441.06,-212.38 442.23,-204.35"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="444.69,-204.45 443.27,-197.17 439.84,-203.74 444.69,-204.45"/>
+</g>
+<g id="node8" class="node">
+<title>PFE</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M541.5,-110C541.5,-110 336.5,-110 336.5,-110 330.5,-110 324.5,-104 324.5,-98 324.5,-98 324.5,-86 324.5,-86 324.5,-80 330.5,-74 336.5,-74 336.5,-74 541.5,-74 541.5,-74 547.5,-74 553.5,-80 553.5,-86 553.5,-86 553.5,-98 553.5,-98 553.5,-104 547.5,-110 541.5,-110"/>
+<text text-anchor="middle" x="439" y="-88.9" font-family="Helvetica,sans-Serif" font-size="12.00">PFE = multiplier x sum of add&#45;ons</text>
+</g>
+<g id="edge5" class="edge">
+<title>Mult&#45;&gt;PFE</title>
+<path fill="none" stroke="#4b5563" d="M444.29,-143.6C443.41,-135.15 442.43,-125.8 441.56,-117.46"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="443.99,-117.15 440.82,-110.44 439.12,-117.66 443.99,-117.15"/>
+</g>
+<g id="edge9" class="edge">
+<title>PFE&#45;&gt;EAD</title>
+<path fill="none" stroke="#4b5563" d="M404.02,-73.88C385.14,-64.64 361.62,-53.12 341.36,-43.2"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="342.26,-40.92 334.9,-40.04 340.11,-45.32 342.26,-40.92"/>
+</g>
+</g>
+</svg>

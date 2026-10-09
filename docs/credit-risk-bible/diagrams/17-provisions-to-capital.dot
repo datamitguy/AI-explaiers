@@ -1,0 +1,23 @@
+digraph ProvisionsCapital {
+  graph [rankdir=TB, splines=true, nodesep=0.4, ranksep=0.5, fontname="Helvetica", fontsize=13, bgcolor="white", newrank=true, pad=0.2];
+  node  [shape=box, style="rounded,filled", fillcolor="#eef2ff", color="#6366f1", fontname="Helvetica", fontsize=12, margin="0.18,0.10"];
+  edge  [color="#4b5563", arrowsize=0.7, fontname="Helvetica", fontsize=10, fontcolor="#374151"];
+
+  ECL [label="Accounting provision (ECL)\ntotal stock on balance sheet", fillcolor="#1f2937", fontcolor="white", color="#1f2937"];
+  PL  [label="Income statement\nchange in stock = impairment charge\nreduces profit, so reduces CET1"];
+  Q   [label="Which capital approach\ndoes the portfolio use?", shape=diamond, style=filled, fillcolor="#fef3c7", color="#d97706", margin="0.05,0.05"];
+
+  SA  [label="Standardised approach\nspecific provisions reduce the\nexposure that gets risk-weighted\ngeneral provisions may count\nin Tier 2 (capped)"];
+  IRB [label="IRB approach\ncompare total provisions with\nregulatory expected loss (EL)"];
+  Q2  [label="Provisions versus EL?", shape=diamond, style=filled, fillcolor="#fef3c7", color="#d97706", margin="0.05,0.05"];
+  Short [label="Shortfall\nprovisions below EL\ndeduct the gap from CET1", fillcolor="#991b1b", fontcolor="white", color="#991b1b"];
+  Exc   [label="Excess\nprovisions above EL\nadd to Tier 2, capped at\n0.6% of IRB RWA", fillcolor="#065f46", fontcolor="white", color="#065f46"];
+
+  ECL -> PL;
+  ECL -> Q;
+  Q -> SA [label=" SA"];
+  Q -> IRB [label=" IRB"];
+  IRB -> Q2;
+  Q2 -> Short [label=" below"];
+  Q2 -> Exc [label=" above"];
+}

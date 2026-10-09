@@ -1,0 +1,187 @@
+<svg width="100%"
+ viewBox="0.00 0.00 863.80 680.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 666.4)">
+<title>RatioFamilies</title>
+<polygon fill="white" stroke="transparent" points="-14.4,14.4 -14.4,-666.4 849.4,-666.4 849.4,14.4 -14.4,14.4"/>
+<g id="node1" class="node">
+<title>Root</title>
+<path fill="#1f2937" stroke="#1f2937" d="M253,-270.5C253,-270.5 12,-270.5 12,-270.5 6,-270.5 0,-264.5 0,-258.5 0,-258.5 0,-242.5 0,-242.5 0,-236.5 6,-230.5 12,-230.5 12,-230.5 253,-230.5 253,-230.5 259,-230.5 265,-236.5 265,-242.5 265,-242.5 265,-258.5 265,-258.5 265,-264.5 259,-270.5 253,-270.5"/>
+<text text-anchor="middle" x="132.5" y="-253.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Can the borrower repay?</text>
+<text text-anchor="middle" x="132.5" y="-240.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Five ratio families answer five questions</text>
+</g>
+<g id="node2" class="node">
+<title>Lev</title>
+<path fill="#fef3c7" stroke="#d97706" d="M529,-577C529,-577 313,-577 313,-577 307,-577 301,-571 301,-565 301,-565 301,-536 301,-536 301,-530 307,-524 313,-524 313,-524 529,-524 529,-524 535,-524 541,-530 541,-536 541,-536 541,-565 541,-565 541,-571 535,-577 529,-577"/>
+<text text-anchor="middle" x="421" y="-560.4" font-family="Helvetica,sans-Serif" font-size="12.00">Leverage</text>
+<text text-anchor="middle" x="421" y="-547.4" font-family="Helvetica,sans-Serif" font-size="12.00">How much debt relative to earnings</text>
+<text text-anchor="middle" x="421" y="-534.4" font-family="Helvetica,sans-Serif" font-size="12.00">or to the owners&#39; money?</text>
+</g>
+<g id="edge1" class="edge">
+<title>Root&#45;&gt;Lev</title>
+<path fill="none" stroke="#4b5563" d="M152.74,-270.65C201.46,-321.66 329.99,-456.25 389.26,-518.31"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="387.83,-520.36 394.43,-523.73 391.37,-516.97 387.83,-520.36"/>
+</g>
+<g id="node3" class="node">
+<title>Cov</title>
+<path fill="#fef3c7" stroke="#d97706" d="M512.5,-404C512.5,-404 329.5,-404 329.5,-404 323.5,-404 317.5,-398 317.5,-392 317.5,-392 317.5,-363 317.5,-363 317.5,-357 323.5,-351 329.5,-351 329.5,-351 512.5,-351 512.5,-351 518.5,-351 524.5,-357 524.5,-363 524.5,-363 524.5,-392 524.5,-392 524.5,-398 518.5,-404 512.5,-404"/>
+<text text-anchor="middle" x="421" y="-387.4" font-family="Helvetica,sans-Serif" font-size="12.00">Coverage</text>
+<text text-anchor="middle" x="421" y="-374.4" font-family="Helvetica,sans-Serif" font-size="12.00">Do earnings or cash cover the</text>
+<text text-anchor="middle" x="421" y="-361.4" font-family="Helvetica,sans-Serif" font-size="12.00">interest and repayments?</text>
+</g>
+<g id="edge2" class="edge">
+<title>Root&#45;&gt;Cov</title>
+<path fill="none" stroke="#4b5563" d="M178.9,-270.62C225.97,-291.49 300.06,-324.33 353.69,-348.11"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="352.74,-350.36 360.13,-350.96 354.72,-345.88 352.74,-350.36"/>
+</g>
+<g id="node4" class="node">
+<title>Liq</title>
+<path fill="#fef3c7" stroke="#d97706" d="M497.5,-277C497.5,-277 344.5,-277 344.5,-277 338.5,-277 332.5,-271 332.5,-265 332.5,-265 332.5,-236 332.5,-236 332.5,-230 338.5,-224 344.5,-224 344.5,-224 497.5,-224 497.5,-224 503.5,-224 509.5,-230 509.5,-236 509.5,-236 509.5,-265 509.5,-265 509.5,-271 503.5,-277 497.5,-277"/>
+<text text-anchor="middle" x="421" y="-260.4" font-family="Helvetica,sans-Serif" font-size="12.00">Liquidity</text>
+<text text-anchor="middle" x="421" y="-247.4" font-family="Helvetica,sans-Serif" font-size="12.00">Can it pay bills due in the</text>
+<text text-anchor="middle" x="421" y="-234.4" font-family="Helvetica,sans-Serif" font-size="12.00">next twelve months?</text>
+</g>
+<g id="edge3" class="edge">
+<title>Root&#45;&gt;Liq</title>
+<path fill="none" stroke="#4b5563" d="M265.01,-250.5C285.32,-250.5 305.94,-250.5 325.23,-250.5"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="325.28,-252.95 332.28,-250.5 325.28,-248.05 325.28,-252.95"/>
+</g>
+<g id="node5" class="node">
+<title>Prof</title>
+<path fill="#fef3c7" stroke="#d97706" d="M501.5,-184C501.5,-184 340.5,-184 340.5,-184 334.5,-184 328.5,-178 328.5,-172 328.5,-172 328.5,-143 328.5,-143 328.5,-137 334.5,-131 340.5,-131 340.5,-131 501.5,-131 501.5,-131 507.5,-131 513.5,-137 513.5,-143 513.5,-143 513.5,-172 513.5,-172 513.5,-178 507.5,-184 501.5,-184"/>
+<text text-anchor="middle" x="421" y="-167.4" font-family="Helvetica,sans-Serif" font-size="12.00">Profitability</text>
+<text text-anchor="middle" x="421" y="-154.4" font-family="Helvetica,sans-Serif" font-size="12.00">Does the business actually</text>
+<text text-anchor="middle" x="421" y="-141.4" font-family="Helvetica,sans-Serif" font-size="12.00">make money?</text>
+</g>
+<g id="edge4" class="edge">
+<title>Root&#45;&gt;Prof</title>
+<path fill="none" stroke="#4b5563" d="M195.31,-230.43C235.06,-217.53 287.32,-200.57 331.44,-186.25"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="332.27,-188.55 338.17,-184.06 330.75,-183.89 332.27,-188.55"/>
+</g>
+<g id="node6" class="node">
+<title>WC</title>
+<path fill="#fef3c7" stroke="#d97706" d="M502,-81C502,-81 340,-81 340,-81 334,-81 328,-75 328,-69 328,-69 328,-40 328,-40 328,-34 334,-28 340,-28 340,-28 502,-28 502,-28 508,-28 514,-34 514,-40 514,-40 514,-69 514,-69 514,-75 508,-81 502,-81"/>
+<text text-anchor="middle" x="421" y="-64.4" font-family="Helvetica,sans-Serif" font-size="12.00">Working capital efficiency</text>
+<text text-anchor="middle" x="421" y="-51.4" font-family="Helvetica,sans-Serif" font-size="12.00">How long is cash tied up in</text>
+<text text-anchor="middle" x="421" y="-38.4" font-family="Helvetica,sans-Serif" font-size="12.00">stock and unpaid invoices?</text>
+</g>
+<g id="edge5" class="edge">
+<title>Root&#45;&gt;WC</title>
+<path fill="none" stroke="#4b5563" d="M157.05,-230.35C188.7,-203.7 247.23,-155.97 301,-120.5 320.22,-107.82 342.05,-95.23 361.72,-84.5"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="363.04,-86.57 368.02,-81.08 360.7,-82.26 363.04,-86.57"/>
+</g>
+<g id="node7" class="node">
+<title>Lev1</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M800,-652C800,-652 612,-652 612,-652 606,-652 600,-646 600,-640 600,-640 600,-611 600,-611 600,-605 606,-599 612,-599 612,-599 800,-599 800,-599 806,-599 812,-605 812,-611 812,-611 812,-640 812,-640 812,-646 806,-652 800,-652"/>
+<text text-anchor="middle" x="706" y="-635.4" font-family="Helvetica,sans-Serif" font-size="12.00">Net debt / EBITDA</text>
+<text text-anchor="middle" x="706" y="-622.4" font-family="Helvetica,sans-Serif" font-size="12.00">(example 2.3x; worry above 4x</text>
+<text text-anchor="middle" x="706" y="-609.4" font-family="Helvetica,sans-Serif" font-size="12.00">for an ordinary company)</text>
+</g>
+<g id="edge6" class="edge">
+<title>Lev&#45;&gt;Lev1</title>
+<path fill="none" stroke="#4b5563" d="M522.17,-577.05C546.74,-583.56 573.12,-590.55 597.99,-597.14"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="597.57,-599.56 604.96,-598.99 598.82,-594.83 597.57,-599.56"/>
+</g>
+<g id="node8" class="node">
+<title>Lev2</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M777,-577C777,-577 635,-577 635,-577 629,-577 623,-571 623,-565 623,-565 623,-536 623,-536 623,-530 629,-524 635,-524 635,-524 777,-524 777,-524 783,-524 789,-530 789,-536 789,-536 789,-565 789,-565 789,-571 783,-577 777,-577"/>
+<text text-anchor="middle" x="706" y="-560.4" font-family="Helvetica,sans-Serif" font-size="12.00">Gearing = debt / equity</text>
+<text text-anchor="middle" x="706" y="-547.4" font-family="Helvetica,sans-Serif" font-size="12.00">(example 1.6x) or</text>
+<text text-anchor="middle" x="706" y="-534.4" font-family="Helvetica,sans-Serif" font-size="12.00">debt / (debt + equity)</text>
+</g>
+<g id="edge7" class="edge">
+<title>Lev&#45;&gt;Lev2</title>
+<path fill="none" stroke="#4b5563" d="M541.2,-550.5C566.11,-550.5 591.97,-550.5 615.59,-550.5"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="615.84,-552.95 622.84,-550.5 615.84,-548.05 615.84,-552.95"/>
+</g>
+<g id="node9" class="node">
+<title>Cov1</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M801.5,-501.5C801.5,-501.5 610.5,-501.5 610.5,-501.5 604.5,-501.5 598.5,-495.5 598.5,-489.5 598.5,-489.5 598.5,-473.5 598.5,-473.5 598.5,-467.5 604.5,-461.5 610.5,-461.5 610.5,-461.5 801.5,-461.5 801.5,-461.5 807.5,-461.5 813.5,-467.5 813.5,-473.5 813.5,-473.5 813.5,-489.5 813.5,-489.5 813.5,-495.5 807.5,-501.5 801.5,-501.5"/>
+<text text-anchor="middle" x="706" y="-484.9" font-family="Helvetica,sans-Serif" font-size="12.00">Interest cover = EBIT / interest</text>
+<text text-anchor="middle" x="706" y="-471.9" font-family="Helvetica,sans-Serif" font-size="12.00">(example 5.5x; worry below 2x)</text>
+</g>
+<g id="edge8" class="edge">
+<title>Cov&#45;&gt;Cov1</title>
+<path fill="none" stroke="#4b5563" d="M471.87,-404.15C501.74,-419.31 540.81,-437.74 577,-450.5 586.2,-453.74 595.89,-456.76 605.64,-459.55"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="605,-461.92 612.4,-461.44 606.32,-457.2 605,-461.92"/>
+</g>
+<g id="node10" class="node">
+<title>Cov2</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M823,-439C823,-439 589,-439 589,-439 583,-439 577,-433 577,-427 577,-427 577,-398 577,-398 577,-392 583,-386 589,-386 589,-386 823,-386 823,-386 829,-386 835,-392 835,-398 835,-398 835,-427 835,-427 835,-433 829,-439 823,-439"/>
+<text text-anchor="middle" x="706" y="-422.4" font-family="Helvetica,sans-Serif" font-size="12.00">Debt service coverage ratio</text>
+<text text-anchor="middle" x="706" y="-409.4" font-family="Helvetica,sans-Serif" font-size="12.00">= cash available / (interest + principal)</text>
+<text text-anchor="middle" x="706" y="-396.4" font-family="Helvetica,sans-Serif" font-size="12.00">(example 2.7x; worry below 1.2x)</text>
+</g>
+<g id="edge9" class="edge">
+<title>Cov&#45;&gt;Cov2</title>
+<path fill="none" stroke="#4b5563" d="M524.57,-390.19C539.25,-392 554.53,-393.89 569.72,-395.77"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="569.44,-398.2 576.69,-396.63 570.04,-393.34 569.44,-398.2"/>
+</g>
+<g id="node11" class="node">
+<title>Cov3</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M806,-363.5C806,-363.5 606,-363.5 606,-363.5 600,-363.5 594,-357.5 594,-351.5 594,-351.5 594,-335.5 594,-335.5 594,-329.5 600,-323.5 606,-323.5 606,-323.5 806,-323.5 806,-323.5 812,-323.5 818,-329.5 818,-335.5 818,-335.5 818,-351.5 818,-351.5 818,-357.5 812,-363.5 806,-363.5"/>
+<text text-anchor="middle" x="706" y="-346.9" font-family="Helvetica,sans-Serif" font-size="12.00">Fixed charge cover</text>
+<text text-anchor="middle" x="706" y="-333.9" font-family="Helvetica,sans-Serif" font-size="12.00">= (EBIT + rent) / (interest + rent)</text>
+</g>
+<g id="edge10" class="edge">
+<title>Cov&#45;&gt;Cov3</title>
+<path fill="none" stroke="#4b5563" d="M524.57,-365.18C544.75,-362.75 566.08,-360.19 586.72,-357.71"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="587.04,-360.14 593.7,-356.87 586.46,-355.27 587.04,-360.14"/>
+</g>
+<g id="node12" class="node">
+<title>Liq1</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M806.5,-301.5C806.5,-301.5 605.5,-301.5 605.5,-301.5 599.5,-301.5 593.5,-295.5 593.5,-289.5 593.5,-289.5 593.5,-273.5 593.5,-273.5 593.5,-267.5 599.5,-261.5 605.5,-261.5 605.5,-261.5 806.5,-261.5 806.5,-261.5 812.5,-261.5 818.5,-267.5 818.5,-273.5 818.5,-273.5 818.5,-289.5 818.5,-289.5 818.5,-295.5 812.5,-301.5 806.5,-301.5"/>
+<text text-anchor="middle" x="706" y="-284.9" font-family="Helvetica,sans-Serif" font-size="12.00">Current ratio = current assets</text>
+<text text-anchor="middle" x="706" y="-271.9" font-family="Helvetica,sans-Serif" font-size="12.00">/ current liabilities (example 1.7x)</text>
+</g>
+<g id="edge11" class="edge">
+<title>Liq&#45;&gt;Liq1</title>
+<path fill="none" stroke="#4b5563" d="M509.6,-260.1C533.79,-262.75 560.45,-265.67 586.09,-268.47"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="586.06,-270.94 593.29,-269.26 586.6,-266.07 586.06,-270.94"/>
+</g>
+<g id="node13" class="node">
+<title>Liq2</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M794,-239.5C794,-239.5 618,-239.5 618,-239.5 612,-239.5 606,-233.5 606,-227.5 606,-227.5 606,-211.5 606,-211.5 606,-205.5 612,-199.5 618,-199.5 618,-199.5 794,-199.5 794,-199.5 800,-199.5 806,-205.5 806,-211.5 806,-211.5 806,-227.5 806,-227.5 806,-233.5 800,-239.5 794,-239.5"/>
+<text text-anchor="middle" x="706" y="-222.9" font-family="Helvetica,sans-Serif" font-size="12.00">Quick ratio: the same but</text>
+<text text-anchor="middle" x="706" y="-209.9" font-family="Helvetica,sans-Serif" font-size="12.00">without stock (example 1.1x)</text>
+</g>
+<g id="edge12" class="edge">
+<title>Liq&#45;&gt;Liq2</title>
+<path fill="none" stroke="#4b5563" d="M509.6,-240.9C537.86,-237.81 569.48,-234.34 598.92,-231.12"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="599.26,-233.55 605.96,-230.35 598.73,-228.68 599.26,-233.55"/>
+</g>
+<g id="node14" class="node">
+<title>Prof1</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M799.5,-177.5C799.5,-177.5 612.5,-177.5 612.5,-177.5 606.5,-177.5 600.5,-171.5 600.5,-165.5 600.5,-165.5 600.5,-149.5 600.5,-149.5 600.5,-143.5 606.5,-137.5 612.5,-137.5 612.5,-137.5 799.5,-137.5 799.5,-137.5 805.5,-137.5 811.5,-143.5 811.5,-149.5 811.5,-149.5 811.5,-165.5 811.5,-165.5 811.5,-171.5 805.5,-177.5 799.5,-177.5"/>
+<text text-anchor="middle" x="706" y="-160.9" font-family="Helvetica,sans-Serif" font-size="12.00">Margins: gross, EBITDA, net</text>
+<text text-anchor="middle" x="706" y="-147.9" font-family="Helvetica,sans-Serif" font-size="12.00">(example EBITDA margin 15%)</text>
+</g>
+<g id="edge13" class="edge">
+<title>Prof&#45;&gt;Prof1</title>
+<path fill="none" stroke="#4b5563" d="M513.88,-157.5C539.22,-157.5 566.98,-157.5 593.3,-157.5"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="593.32,-159.95 600.32,-157.5 593.32,-155.05 593.32,-159.95"/>
+</g>
+<g id="node15" class="node">
+<title>Prof2</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M817,-115.5C817,-115.5 595,-115.5 595,-115.5 589,-115.5 583,-109.5 583,-103.5 583,-103.5 583,-87.5 583,-87.5 583,-81.5 589,-75.5 595,-75.5 595,-75.5 817,-75.5 817,-75.5 823,-75.5 829,-81.5 829,-87.5 829,-87.5 829,-103.5 829,-103.5 829,-109.5 823,-115.5 817,-115.5"/>
+<text text-anchor="middle" x="706" y="-98.9" font-family="Helvetica,sans-Serif" font-size="12.00">Return on assets, return on</text>
+<text text-anchor="middle" x="706" y="-85.9" font-family="Helvetica,sans-Serif" font-size="12.00">capital employed (example ROA 9%)</text>
+</g>
+<g id="edge14" class="edge">
+<title>Prof&#45;&gt;Prof2</title>
+<path fill="none" stroke="#4b5563" d="M513.88,-137.37C543.47,-130.89 576.36,-123.68 606.41,-117.1"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="607.27,-119.42 613.58,-115.53 606.22,-114.63 607.27,-119.42"/>
+</g>
+<g id="node16" class="node">
+<title>WC1</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M815.5,-53C815.5,-53 596.5,-53 596.5,-53 590.5,-53 584.5,-47 584.5,-41 584.5,-41 584.5,-12 584.5,-12 584.5,-6 590.5,0 596.5,0 596.5,0 815.5,0 815.5,0 821.5,0 827.5,-6 827.5,-12 827.5,-12 827.5,-41 827.5,-41 827.5,-47 821.5,-53 815.5,-53"/>
+<text text-anchor="middle" x="706" y="-36.4" font-family="Helvetica,sans-Serif" font-size="12.00">Debtor days, stock days,</text>
+<text text-anchor="middle" x="706" y="-23.4" font-family="Helvetica,sans-Serif" font-size="12.00">creditor days, cash conversion cycle</text>
+<text text-anchor="middle" x="706" y="-10.4" font-family="Helvetica,sans-Serif" font-size="12.00">(example 73 days)</text>
+</g>
+<g id="edge15" class="edge">
+<title>WC&#45;&gt;WC1</title>
+<path fill="none" stroke="#4b5563" d="M514.27,-45.37C534.34,-43.38 555.92,-41.25 577.1,-39.15"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="577.53,-41.57 584.26,-38.45 577.05,-36.7 577.53,-41.57"/>
+</g>
+</g>
+</svg>

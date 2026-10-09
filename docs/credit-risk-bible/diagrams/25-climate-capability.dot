@@ -1,0 +1,43 @@
+digraph ClimateCapability {
+  graph [rankdir=TB, splines=true, nodesep=0.35, ranksep=0.5, fontname="Helvetica", fontsize=13, bgcolor="white", newrank=true, pad=0.2];
+  node  [shape=box, style="rounded,filled", fillcolor="#eef2ff", color="#6366f1", fontname="Helvetica", fontsize=12, margin="0.18,0.10"];
+  edge  [color="#4b5563", arrowsize=0.7, fontname="Helvetica", fontsize=10, fontcolor="#374151"];
+
+  Start [label="Credit team starts from zero\non climate and ESG", fillcolor="#1f2937", fontcolor="white", color="#1f2937"];
+
+  subgraph cluster_s1 {
+    label="Stage 1: see the exposure (months 0 to 6)"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
+    Tag [label="Tag every borrower with\nsector and sub-sector codes"];
+    Heat [label="Sector heatmap\nhigh, medium, low\nphysical and transition"];
+    Geo [label="Geolocate collateral\npostcode, flood and\nhazard overlays"];
+    Tag -> Heat; Geo -> Heat;
+  }
+
+  subgraph cluster_s2 {
+    label="Stage 2: measure (months 6 to 18)"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
+    Qn [label="Counterparty questionnaires\nemissions, targets, plans"];
+    Data [label="Buy or build emissions and\nhazard data, record quality flags"];
+    Scen [label="Scenario analysis\norderly, disorderly, hot house"];
+    Qn -> Scen; Data -> Scen;
+  }
+
+  subgraph cluster_s3 {
+    label="Stage 3: manage (18 months onwards)"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
+    App [label="Risk appetite statements\nand sector limits"];
+    Rat [label="Rating overlays or\nclimate-adjusted PD and LGD"];
+    Disc [label="Disclosure and\nregulatory stress tests"];
+    { rank=same; App -> Rat -> Disc [style=invis]; }
+  }
+
+  Q [label="Data good enough\nto quantify?", shape=diamond, style=filled, fillcolor="#fef3c7", color="#d97706", margin="0.05,0.05"];
+  Qual [label="Stay qualitative:\nflags, overlays,\nexpert judgement", fillcolor="#6b7280", fontcolor="white", color="#6b7280"];
+  End [label="Climate embedded in\nnormal credit process", fillcolor="#065f46", fontcolor="white", color="#065f46"];
+
+  Start -> Tag; Start -> Geo;
+  Heat -> Qn; Heat -> Data;
+  Scen -> Q;
+  Q -> Qual [label=" no"];
+  Qual -> Data [label=" improve\n data"];
+  Q -> {App Rat Disc} [label=" yes"];
+  {App Rat Disc} -> End;
+}

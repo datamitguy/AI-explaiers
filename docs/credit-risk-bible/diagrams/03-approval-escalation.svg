@@ -1,0 +1,148 @@
+<svg width="100%"
+ viewBox="0.00 0.00 1010.30 763.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 749.4)">
+<title>ApprovalEscalation</title>
+<polygon fill="white" stroke="transparent" points="-14.4,14.4 -14.4,-749.4 995.9,-749.4 995.9,14.4 -14.4,14.4"/>
+<g id="node1" class="node">
+<title>Start</title>
+<path fill="#1f2937" stroke="#1f2937" d="M221.5,-735C221.5,-735 12.5,-735 12.5,-735 6.5,-735 0.5,-729 0.5,-723 0.5,-723 0.5,-707 0.5,-707 0.5,-701 6.5,-695 12.5,-695 12.5,-695 221.5,-695 221.5,-695 227.5,-695 233.5,-701 233.5,-707 233.5,-707 233.5,-723 233.5,-723 233.5,-729 227.5,-735 221.5,-735"/>
+<text text-anchor="middle" x="117" y="-718.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Credit proposal submitted</text>
+<text text-anchor="middle" x="117" y="-705.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">(amount, rating, product, security)</text>
+</g>
+<g id="node2" class="node">
+<title>Q1</title>
+<polygon fill="#fef3c7" stroke="#d97706" points="117,-658 0,-624 117,-590 234,-624 117,-658"/>
+<text text-anchor="middle" x="117" y="-627.4" font-family="Helvetica,sans-Serif" font-size="12.00">Fits an automated</text>
+<text text-anchor="middle" x="117" y="-614.4" font-family="Helvetica,sans-Serif" font-size="12.00">decision strategy?</text>
+</g>
+<g id="edge1" class="edge">
+<title>Start&#45;&gt;Q1</title>
+<path fill="none" stroke="#4b5563" d="M117,-694.69C117,-686.05 117,-675.52 117,-665.29"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="119.45,-665.28 117,-658.28 114.55,-665.28 119.45,-665.28"/>
+</g>
+<g id="node3" class="node">
+<title>Auto</title>
+<path fill="#065f46" stroke="#065f46" d="M172,-535.5C172,-535.5 12,-535.5 12,-535.5 6,-535.5 0,-529.5 0,-523.5 0,-523.5 0,-494.5 0,-494.5 0,-488.5 6,-482.5 12,-482.5 12,-482.5 172,-482.5 172,-482.5 178,-482.5 184,-488.5 184,-494.5 184,-494.5 184,-523.5 184,-523.5 184,-529.5 178,-535.5 172,-535.5"/>
+<text text-anchor="middle" x="92" y="-518.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Decision engine</text>
+<text text-anchor="middle" x="92" y="-505.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">scorecard plus policy rules</text>
+<text text-anchor="middle" x="92" y="-492.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">(retail and small SME)</text>
+</g>
+<g id="edge2" class="edge">
+<title>Q1&#45;&gt;Auto</title>
+<path fill="none" stroke="#4b5563" d="M110.1,-591.82C106.72,-576.53 102.64,-558.11 99.22,-542.62"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="101.6,-542.04 97.69,-535.74 96.81,-543.1 101.6,-542.04"/>
+<text text-anchor="middle" x="116.5" y="-564" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> yes</text>
+</g>
+<g id="node4" class="node">
+<title>Q2</title>
+<polygon fill="#fef3c7" stroke="#d97706" points="374,-543 209,-509 374,-475 539,-509 374,-543"/>
+<text text-anchor="middle" x="374" y="-512.4" font-family="Helvetica,sans-Serif" font-size="12.00">Within the relationship</text>
+<text text-anchor="middle" x="374" y="-499.4" font-family="Helvetica,sans-Serif" font-size="12.00">manager&#39;s own authority?</text>
+</g>
+<g id="edge3" class="edge">
+<title>Q1&#45;&gt;Q2</title>
+<path fill="none" stroke="#4b5563" d="M162.35,-603.06C205.16,-584.24 269.53,-555.94 316.04,-535.49"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="317.05,-537.71 322.48,-532.65 315.08,-533.23 317.05,-537.71"/>
+<text text-anchor="middle" x="262" y="-564" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> no</text>
+</g>
+<g id="node5" class="node">
+<title>RM</title>
+<path fill="#065f46" stroke="#065f46" d="M390.5,-420.5C390.5,-420.5 189.5,-420.5 189.5,-420.5 183.5,-420.5 177.5,-414.5 177.5,-408.5 177.5,-408.5 177.5,-379.5 177.5,-379.5 177.5,-373.5 183.5,-367.5 189.5,-367.5 189.5,-367.5 390.5,-367.5 390.5,-367.5 396.5,-367.5 402.5,-373.5 402.5,-379.5 402.5,-379.5 402.5,-408.5 402.5,-408.5 402.5,-414.5 396.5,-420.5 390.5,-420.5"/>
+<text text-anchor="middle" x="290" y="-403.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Approved by first line</text>
+<text text-anchor="middle" x="290" y="-390.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">(small, low&#45;risk, standard terms)</text>
+<text text-anchor="middle" x="290" y="-377.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">sampled by credit risk afterwards</text>
+</g>
+<g id="edge4" class="edge">
+<title>Q2&#45;&gt;RM</title>
+<path fill="none" stroke="#4b5563" d="M352.59,-479.19C340.64,-463.12 325.74,-443.07 313.47,-426.57"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="315.22,-424.83 309.08,-420.67 311.29,-427.75 315.22,-424.83"/>
+<text text-anchor="middle" x="345.5" y="-449" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> yes</text>
+</g>
+<g id="node6" class="node">
+<title>Q3</title>
+<polygon fill="#fef3c7" stroke="#d97706" points="573,-428 428,-394 573,-360 718,-394 573,-428"/>
+<text text-anchor="middle" x="573" y="-397.4" font-family="Helvetica,sans-Serif" font-size="12.00">Within a credit officer&#39;s</text>
+<text text-anchor="middle" x="573" y="-384.4" font-family="Helvetica,sans-Serif" font-size="12.00">delegated authority?</text>
+</g>
+<g id="edge5" class="edge">
+<title>Q2&#45;&gt;Q3</title>
+<path fill="none" stroke="#4b5563" d="M416.69,-483.76C448.6,-465.64 492.22,-440.87 525.28,-422.1"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="526.87,-424.01 531.74,-418.43 524.45,-419.75 526.87,-424.01"/>
+<text text-anchor="middle" x="511.5" y="-449" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> no, escalate</text>
+</g>
+<g id="node7" class="node">
+<title>CO</title>
+<path fill="#065f46" stroke="#065f46" d="M599.5,-227C599.5,-227 404.5,-227 404.5,-227 398.5,-227 392.5,-221 392.5,-215 392.5,-215 392.5,-186 392.5,-186 392.5,-180 398.5,-174 404.5,-174 404.5,-174 599.5,-174 599.5,-174 605.5,-174 611.5,-180 611.5,-186 611.5,-186 611.5,-215 611.5,-215 611.5,-221 605.5,-227 599.5,-227"/>
+<text text-anchor="middle" x="502" y="-210.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Credit officer sanctions</text>
+<text text-anchor="middle" x="502" y="-197.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">(second line, independent)</text>
+<text text-anchor="middle" x="502" y="-184.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">limit set by amount x rating grid</text>
+</g>
+<g id="edge6" class="edge">
+<title>Q3&#45;&gt;CO</title>
+<path fill="none" stroke="#4b5563" d="M554.26,-364.35C545.25,-349.52 534.93,-330.82 528,-313 518.06,-287.42 511.28,-257 507.14,-234.41"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="509.52,-233.82 505.89,-227.36 504.7,-234.68 509.52,-233.82"/>
+<text text-anchor="middle" x="551.5" y="-334" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> yes</text>
+</g>
+<g id="node8" class="node">
+<title>Q4</title>
+<polygon fill="#fef3c7" stroke="#d97706" points="736,-313 540,-279 736,-245 932,-279 736,-313"/>
+<text text-anchor="middle" x="736" y="-282.4" font-family="Helvetica,sans-Serif" font-size="12.00">Within regional or</text>
+<text text-anchor="middle" x="736" y="-269.4" font-family="Helvetica,sans-Serif" font-size="12.00">divisional committee authority?</text>
+</g>
+<g id="edge7" class="edge">
+<title>Q3&#45;&gt;Q4</title>
+<path fill="none" stroke="#4b5563" d="M608.77,-368.2C633.25,-351.23 665.88,-328.61 691.96,-310.53"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="693.4,-312.51 697.76,-306.51 690.61,-308.49 693.4,-312.51"/>
+<text text-anchor="middle" x="690.5" y="-334" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> no, escalate</text>
+</g>
+<g id="node11" class="node">
+<title>Cond</title>
+<path fill="#991b1b" stroke="#991b1b" d="M725,-66C725,-66 545,-66 545,-66 539,-66 533,-60 533,-54 533,-54 533,-12 533,-12 533,-6 539,0 545,0 545,0 725,0 725,0 731,0 737,-6 737,-12 737,-12 737,-54 737,-54 737,-60 731,-66 725,-66"/>
+<text text-anchor="middle" x="635" y="-49.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Any approver may decline</text>
+<text text-anchor="middle" x="635" y="-36.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">or approve with conditions:</text>
+<text text-anchor="middle" x="635" y="-23.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">more security, lower amount,</text>
+<text text-anchor="middle" x="635" y="-10.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">shorter tenor, higher price</text>
+</g>
+<g id="edge10" class="edge">
+<title>CO&#45;&gt;Cond</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M503.84,-173.96C506.45,-153.15 512.76,-123.88 528,-103 537.27,-90.31 549.64,-79.34 562.68,-70.12"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="564.31,-71.98 568.71,-66.01 561.55,-67.93 564.31,-71.98"/>
+</g>
+<g id="node9" class="node">
+<title>RCC</title>
+<path fill="#065f46" stroke="#065f46" d="M717.5,-156C717.5,-156 552.5,-156 552.5,-156 546.5,-156 540.5,-150 540.5,-144 540.5,-144 540.5,-115 540.5,-115 540.5,-109 546.5,-103 552.5,-103 552.5,-103 717.5,-103 717.5,-103 723.5,-103 729.5,-109 729.5,-115 729.5,-115 729.5,-144 729.5,-144 729.5,-150 723.5,-156 717.5,-156"/>
+<text text-anchor="middle" x="635" y="-139.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Divisional credit committee</text>
+<text text-anchor="middle" x="635" y="-126.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">several senior sanctioners,</text>
+<text text-anchor="middle" x="635" y="-113.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">minuted decision</text>
+</g>
+<g id="edge8" class="edge">
+<title>Q4&#45;&gt;RCC</title>
+<path fill="none" stroke="#4b5563" d="M715.56,-248.15C698.48,-223.21 674.2,-187.75 656.76,-162.28"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="658.68,-160.75 652.71,-156.36 654.64,-163.52 658.68,-160.75"/>
+<text text-anchor="middle" x="710.5" y="-198" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> yes</text>
+</g>
+<g id="node10" class="node">
+<title>GCC</title>
+<path fill="#065f46" stroke="#065f46" d="M969.5,-156C969.5,-156 766.5,-156 766.5,-156 760.5,-156 754.5,-150 754.5,-144 754.5,-144 754.5,-115 754.5,-115 754.5,-109 760.5,-103 766.5,-103 766.5,-103 969.5,-103 969.5,-103 975.5,-103 981.5,-109 981.5,-115 981.5,-115 981.5,-144 981.5,-144 981.5,-150 975.5,-156 969.5,-156"/>
+<text text-anchor="middle" x="868" y="-139.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Group credit committee</text>
+<text text-anchor="middle" x="868" y="-126.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">or board risk committee</text>
+<text text-anchor="middle" x="868" y="-113.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">largest, riskiest, policy exceptions</text>
+</g>
+<g id="edge9" class="edge">
+<title>Q4&#45;&gt;GCC</title>
+<path fill="none" stroke="#4b5563" d="M761.76,-249.21C784.32,-224.01 817.01,-187.48 840.16,-161.61"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="842.11,-163.11 844.95,-156.26 838.46,-159.84 842.11,-163.11"/>
+<text text-anchor="middle" x="859.5" y="-198" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> no, escalate</text>
+</g>
+<g id="edge11" class="edge">
+<title>RCC&#45;&gt;Cond</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M635,-102.68C635,-93.62 635,-83.23 635,-73.31"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="637.45,-73.21 635,-66.21 632.55,-73.21 637.45,-73.21"/>
+</g>
+<g id="edge12" class="edge">
+<title>GCC&#45;&gt;Cond</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M804.95,-102.93C778.99,-92.4 748.52,-80.04 720.61,-68.72"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="721.35,-66.38 713.94,-66.02 719.51,-70.92 721.35,-66.38"/>
+</g>
+</g>
+</svg>

@@ -1,0 +1,27 @@
+digraph DerivSystems {
+  graph [rankdir=LR, splines=true, nodesep=0.35, ranksep=0.55, fontname="Helvetica", fontsize=13, bgcolor="white", newrank=true, pad=0.2];
+  node  [shape=box, style="rounded,filled", fillcolor="#eef2ff", color="#6366f1", fontname="Helvetica", fontsize=12, margin="0.18,0.10"];
+  edge  [color="#4b5563", arrowsize=0.7, fontname="Helvetica", fontsize=10, fontcolor="#374151"];
+
+  Trader [label="Trade agreed\n(voice, platform, exchange)", fillcolor="#1f2937", fontcolor="white", color="#1f2937"];
+  Cap [label="Trade capture\nfront office system\nbooks economic terms"];
+  Conf [label="Confirmation and\nlegal data\nISDA, CSA, netting set"];
+  Val [label="Valuation engine\ndaily mark-to-market\nfrom market data"];
+  Coll [label="Collateral management\nmargin calls, disputes,\ncollateral balances"];
+  ExpE [label="Exposure engine\nPFE, EPE simulation\nor SA-CCR"];
+  Lim [label="Limit system\nPFE and settlement limits\npre-deal check, breaches"];
+  xVA [label="xVA desk\nCVA, DVA, FVA pricing\nand hedging"];
+  RWA [label="Regulatory capital\nSA-CCR EAD, CCP charges,\nCVA capital"];
+  Ref [label="Reference data\ncounterparty hierarchy,\nlegal entity identifiers, ratings", fillcolor="#6b7280", fontcolor="white", color="#6b7280"];
+
+  Trader -> Cap -> Conf;
+  Cap -> Val;
+  Conf -> ExpE;
+  Val -> Coll;
+  Val -> ExpE;
+  Coll -> ExpE;
+  ExpE -> Lim;
+  ExpE -> xVA;
+  ExpE -> RWA;
+  Ref -> {Conf ExpE Lim} [style=dashed];
+}

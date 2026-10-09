@@ -1,0 +1,37 @@
+digraph DataQualityFlow {
+  graph [rankdir=TB, splines=true, nodesep=0.35, ranksep=0.5, fontname="Helvetica", fontsize=13, bgcolor="white", newrank=true, pad=0.2];
+  node  [shape=box, style="rounded,filled", fillcolor="#eef2ff", color="#6366f1", fontname="Helvetica", fontsize=12, margin="0.18,0.10"];
+  edge  [color="#4b5563", arrowsize=0.7, fontname="Helvetica", fontsize=10, fontcolor="#374151"];
+
+  Start [label="Month-end: source systems\nclose and snapshot", fillcolor="#1f2937", fontcolor="white", color="#1f2937"];
+  Load  [label="Load into warehouse\nextract, transform, load (ETL)"];
+  Q1    [label="Technical checks pass?\n(row counts, file arrived,\nschema unchanged)", shape=diamond, style=filled, fillcolor="#fef3c7", color="#d97706", margin="0.05,0.05"];
+  Fail1 [label="Rerun or escalate\nto source system owner", fillcolor="#991b1b", fontcolor="white", color="#991b1b"];
+
+  subgraph cluster_dq {
+    label="Data quality rules by dimension"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
+    Comp [label="Completeness\nevery facility has a rating\nand a country"];
+    Acc  [label="Accuracy\ncollateral value matches\nlatest valuation report"];
+    Time [label="Timeliness\nfinancials less than\n18 months old"];
+    Cons [label="Consistency\nbalance equals general\nledger within tolerance"];
+    Uniq [label="Uniqueness\none record per customer,\nno duplicates"];
+    Val  [label="Validity\nproduct code is in the\nallowed list"];
+    { rank=same; Comp -> Acc -> Time [style=invis]; }
+    { rank=same; Cons -> Uniq -> Val [style=invis]; }
+  }
+
+  Q2    [label="Breaches within tolerance?", shape=diamond, style=filled, fillcolor="#fef3c7", color="#d97706", margin="0.05,0.05"];
+  Adj   [label="Logged adjustment with owner,\nreason, approver and expiry\n(not a silent spreadsheet fix)"];
+  Recon [label="Reconcile to general ledger\nexplain every difference"];
+  Sign  [label="Data owner sign-off\nrelease to risk engines", fillcolor="#065f46", fontcolor="white", color="#065f46"];
+
+  Start -> Load -> Q1;
+  Q1 -> Fail1 [label=" no"];
+  Fail1 -> Load;
+  Q1 -> {Comp Acc Time Cons Uniq Val} [label=" yes"];
+  {Comp Acc Time Cons Uniq Val} -> Q2;
+  Q2 -> Adj [label=" no, material\n breaches"];
+  Adj -> Recon;
+  Q2 -> Recon [label=" yes"];
+  Recon -> Sign;
+}

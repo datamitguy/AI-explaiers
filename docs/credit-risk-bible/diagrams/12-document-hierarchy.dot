@@ -1,0 +1,44 @@
+digraph DocumentHierarchy {
+  graph [rankdir=TB, splines=true, nodesep=0.35, ranksep=0.55, fontname="Helvetica", fontsize=13, bgcolor="white", newrank=true, pad=0.2];
+  node  [shape=box, style="rounded,filled", fillcolor="#eef2ff", color="#6366f1", fontname="Helvetica", fontsize=12, margin="0.18,0.10"];
+  edge  [color="#4b5563", arrowsize=0.7, fontname="Helvetica", fontsize=10, fontcolor="#374151"];
+
+  Start [label="Customer asks to borrow", fillcolor="#1f2937", fontcolor="white", color="#1f2937"];
+
+  subgraph cluster_pre {
+    label="Before approval: not yet binding"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
+    Term [label="Term sheet\n2 to 10 pages, the headline terms,\nusually 'subject to credit approval'"];
+    Commit [label="Commitment letter or mandate letter\nbank is now committed, subject to\ndocumentation and conditions"];
+    Term -> Commit;
+  }
+
+  Approval [label="Credit committee approval", shape=diamond, style=filled, fillcolor="#fef3c7", color="#d97706", margin="0.05,0.05"];
+
+  subgraph cluster_main {
+    label="The binding contract"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
+    FA [label="Facility agreement\n100 to 300 pages: definitions, facility,\nconditions precedent, representations,\ncovenants, events of default, agency", fillcolor="#1e3a8a", fontcolor="white", color="#1e3a8a"];
+  }
+
+  subgraph cluster_sec {
+    label="Security and ranking documents"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
+    Deb [label="Debenture or security agreement\n(fixed and floating charges)"];
+    Mort [label="Mortgage or charge\nover specific property"];
+    Guar [label="Guarantee\n(parent, personal, cross-guarantee)"];
+    Inter [label="Intercreditor agreement\n(who ranks where, who can enforce)"];
+    Deb -> Mort -> Guar -> Inter [style=invis];
+  }
+
+  subgraph cluster_ops {
+    label="Living documents during the loan"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
+    CP [label="Conditions precedent checklist\nand legal opinions"];
+    Cert [label="Compliance certificates\n(each test date)"];
+    Amend [label="Waivers and amendment letters"];
+    CP -> Cert -> Amend [style=invis];
+  }
+
+  Start -> Term;
+  Commit -> Approval;
+  Approval -> FA [label=" approved"];
+  FA -> Deb;
+  FA -> CP [style=dashed];
+}

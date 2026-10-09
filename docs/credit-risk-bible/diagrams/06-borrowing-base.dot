@@ -1,0 +1,33 @@
+digraph BorrowingBase {
+  graph [rankdir=TB, splines=true, nodesep=0.35, ranksep=0.45, fontname="Helvetica", fontsize=13, bgcolor="white", pad=0.2, newrank=true];
+  node  [shape=box, style="rounded,filled", fillcolor="#eef2ff", color="#6366f1", fontname="Helvetica", fontsize=12, margin="0.18,0.10"];
+  edge  [color="#4b5563", arrowsize=0.7, fontname="Helvetica", fontsize=10, fontcolor="#374151"];
+
+  Start [label="Borrower reports its collateral\n(weekly or monthly borrowing base certificate)", fillcolor="#1f2937", fontcolor="white", color="#1f2937"];
+
+  subgraph cluster_assets {
+    label="Eligible collateral and advance rates (illustrative)"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
+    Cash [label="Cash in pledged accounts: 100\nadvance rate 100% = 100"];
+    Rec  [label="Eligible receivables: 300\n(invoices under 90 days, approved buyers)\nadvance rate 85% = 255"];
+    Inv  [label="Inventory in approved warehouses: 400\n(warehouse receipts, marked to market)\nadvance rate 70% = 280"];
+    Trans [label="Goods in transit with bills of lading: 100\nadvance rate 60% = 60"];
+    Inel [label="Ineligible: old invoices, disputed\ngoods, unapproved locations: 150\nadvance rate 0% = 0", fillcolor="#6b7280", fontcolor="white", color="#6b7280"];
+  }
+
+  BB [label="Borrowing base = 695\n(sum of advance values)", fillcolor="#1e3a8a", fontcolor="white", color="#1e3a8a"];
+  Facility [label="Facility limit = 600\n(the ceiling in the loan agreement)"];
+  Avail [label="Availability = lower of the two = 600", fillcolor="#1e3a8a", fontcolor="white", color="#1e3a8a"];
+  Test [label="Drawn amount above availability?", shape=diamond, style=filled, fillcolor="#fef3c7", color="#d97706", margin="0.05,0.05"];
+  OK   [label="In compliance: borrower may draw\nup to the headroom", fillcolor="#065f46", fontcolor="white", color="#065f46"];
+  Short [label="Borrowing base shortfall: borrower must\nrepay the excess, usually within days,\nor add collateral", fillcolor="#991b1b", fontcolor="white", color="#991b1b"];
+  Audit [label="Field examination: the bank's own\ninspector checks the stock and the invoices", fillcolor="#6b7280", fontcolor="white", color="#6b7280"];
+
+  Start -> {Cash Rec Inv Trans Inel};
+  {Cash Rec Inv Trans Inel} -> BB;
+  BB -> Avail;
+  Facility -> Avail;
+  Avail -> Test;
+  Test -> OK    [label=" no"];
+  Test -> Short [label=" yes"];
+  Audit -> Start [style=dashed, label=" verifies"];
+}

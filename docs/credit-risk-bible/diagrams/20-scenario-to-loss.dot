@@ -1,0 +1,38 @@
+digraph ScenarioToLoss {
+  graph [rankdir=TB, splines=true, nodesep=0.3, ranksep=0.45, fontname="Helvetica", fontsize=13, bgcolor="white", newrank=true, pad=0.2];
+  node  [shape=box, style="rounded,filled", fillcolor="#eef2ff", color="#6366f1", fontname="Helvetica", fontsize=12, margin="0.18,0.10"];
+  edge  [color="#4b5563", arrowsize=0.7, fontname="Helvetica", fontsize=10, fontcolor="#374151"];
+
+  Scn [label="Macro scenario (3 to 5 year path)\nGDP, unemployment, house prices,\ninterest rates, FX, equity, oil", fillcolor="#1f2937", fontcolor="white", color="#1f2937"];
+
+  subgraph cluster_sat {
+    label="Satellite models: macro variables to risk parameters"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
+    PDm [label="PD shift by sector and country\nunemployment up means\nretail PD up"];
+    Mig [label="Rating migration\nmore downgrades, more Stage 2,\nmore defaults"];
+    LGDm [label="LGD shift\nhouse and property prices down\nmeans lower recoveries"];
+    EADm [label="EAD shift\nhigher drawings on\nundrawn lines in stress"];
+    { rank=same; PDm -> Mig -> LGDm -> EADm [style=invis]; }
+  }
+
+  subgraph cluster_out {
+    label="Portfolio outputs per year of the scenario"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
+    ECL [label="Impairment charge\n(ECL under IFRS 9 or CECL)"];
+    RWAo [label="RWA inflation\nhigher PDs and defaults\nmean higher risk weights"];
+    NII [label="Net interest income hit\nlost interest on defaults,\nmargin pressure"];
+    { rank=same; ECL -> RWAo -> NII [style=invis]; }
+  }
+
+  Cap [label="Capital ratio path\nCET1 before and after\nmanagement actions", fillcolor="#1e3a8a", fontcolor="white", color="#1e3a8a"];
+  Q [label="Stays above hurdle\nin every year?", shape=diamond, style=filled, fillcolor="#fef3c7", color="#d97706", margin="0.05,0.05"];
+  Pass [label="Pass: result feeds\nPillar 2B buffer and risk appetite", fillcolor="#065f46", fontcolor="white", color="#065f46"];
+  Fail [label="Fail: raise capital, cut risk,\nrevise plan, more management actions", fillcolor="#991b1b", fontcolor="white", color="#991b1b"];
+
+  Scn -> {PDm Mig LGDm EADm};
+  {PDm Mig LGDm} -> ECL;
+  {PDm Mig EADm} -> RWAo;
+  PDm -> NII;
+  {ECL RWAo NII} -> Cap;
+  Cap -> Q;
+  Q -> Pass [label=" yes"];
+  Q -> Fail [label=" no"];
+}

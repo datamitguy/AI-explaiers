@@ -1,0 +1,86 @@
+<svg width="100%"
+ viewBox="0.00 0.00 1257.80 258.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 244.4)">
+<title>BankBalanceSheet</title>
+<polygon fill="white" stroke="transparent" points="-14.4,14.4 -14.4,-244.4 1243.4,-244.4 1243.4,14.4 -14.4,14.4"/>
+<g id="clust1" class="cluster">
+<title>cluster_assets</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M20,-130C20,-130 1209,-130 1209,-130 1215,-130 1221,-136 1221,-142 1221,-142 1221,-210 1221,-210 1221,-216 1215,-222 1209,-222 1209,-222 20,-222 20,-222 14,-222 8,-216 8,-210 8,-210 8,-142 8,-142 8,-136 14,-130 20,-130"/>
+<text text-anchor="middle" x="614.5" y="-207.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">ASSETS: what the bank owns (100)</text>
+</g>
+<g id="clust2" class="cluster">
+<title>cluster_liab</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M20,-8C20,-8 1209,-8 1209,-8 1215,-8 1221,-14 1221,-20 1221,-20 1221,-100 1221,-100 1221,-106 1215,-112 1209,-112 1209,-112 20,-112 20,-112 14,-112 8,-106 8,-100 8,-100 8,-20 8,-20 8,-14 14,-8 20,-8"/>
+<text text-anchor="middle" x="614.5" y="-97.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">LIABILITIES AND EQUITY: where the money came from (100)</text>
+</g>
+<g id="node1" class="node">
+<title>Cash</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M234,-185C234,-185 28,-185 28,-185 22,-185 16,-179 16,-173 16,-173 16,-157 16,-157 16,-151 22,-145 28,-145 28,-145 234,-145 234,-145 240,-145 246,-151 246,-157 246,-157 246,-173 246,-173 246,-179 240,-185 234,-185"/>
+<text text-anchor="middle" x="131" y="-168.4" font-family="Helvetica,sans-Serif" font-size="12.00">Cash and central bank reserves</text>
+<text text-anchor="middle" x="131" y="-155.4" font-family="Helvetica,sans-Serif" font-size="12.00">10</text>
+</g>
+<g id="node2" class="node">
+<title>Bonds</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M531,-191.5C531,-191.5 325,-191.5 325,-191.5 319,-191.5 313,-185.5 313,-179.5 313,-179.5 313,-150.5 313,-150.5 313,-144.5 319,-138.5 325,-138.5 325,-138.5 531,-138.5 531,-138.5 537,-138.5 543,-144.5 543,-150.5 543,-150.5 543,-179.5 543,-179.5 543,-185.5 537,-191.5 531,-191.5"/>
+<text text-anchor="middle" x="428" y="-174.9" font-family="Helvetica,sans-Serif" font-size="12.00">Government and other bonds</text>
+<text text-anchor="middle" x="428" y="-161.9" font-family="Helvetica,sans-Serif" font-size="12.00">(liquid, can be sold fast)</text>
+<text text-anchor="middle" x="428" y="-148.9" font-family="Helvetica,sans-Serif" font-size="12.00">15</text>
+</g>
+<g id="node3" class="node">
+<title>Loans</title>
+<path fill="#1e3a8a" stroke="#1e3a8a" d="M828,-191.5C828,-191.5 622,-191.5 622,-191.5 616,-191.5 610,-185.5 610,-179.5 610,-179.5 610,-150.5 610,-150.5 610,-144.5 616,-138.5 622,-138.5 622,-138.5 828,-138.5 828,-138.5 834,-138.5 840,-144.5 840,-150.5 840,-150.5 840,-179.5 840,-179.5 840,-185.5 834,-191.5 828,-191.5"/>
+<text text-anchor="middle" x="725" y="-174.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Loans to customers</text>
+<text text-anchor="middle" x="725" y="-161.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">mortgages, business loans, cards</text>
+<text text-anchor="middle" x="725" y="-148.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">65</text>
+</g>
+<g id="node4" class="node">
+<title>Other</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M1201,-191.5C1201,-191.5 995,-191.5 995,-191.5 989,-191.5 983,-185.5 983,-179.5 983,-179.5 983,-150.5 983,-150.5 983,-144.5 989,-138.5 995,-138.5 995,-138.5 1201,-138.5 1201,-138.5 1207,-138.5 1213,-144.5 1213,-150.5 1213,-150.5 1213,-179.5 1213,-179.5 1213,-185.5 1207,-191.5 1201,-191.5"/>
+<text text-anchor="middle" x="1098" y="-174.9" font-family="Helvetica,sans-Serif" font-size="12.00">Other: buildings, systems,</text>
+<text text-anchor="middle" x="1098" y="-161.9" font-family="Helvetica,sans-Serif" font-size="12.00">derivatives, goodwill</text>
+<text text-anchor="middle" x="1098" y="-148.9" font-family="Helvetica,sans-Serif" font-size="12.00">10</text>
+</g>
+<g id="node8" class="node">
+<title>Equity</title>
+<path fill="#065f46" stroke="#065f46" d="M1201,-82C1201,-82 995,-82 995,-82 989,-82 983,-76 983,-70 983,-70 983,-28 983,-28 983,-22 989,-16 995,-16 995,-16 1201,-16 1201,-16 1207,-16 1213,-22 1213,-28 1213,-28 1213,-70 1213,-70 1213,-76 1207,-82 1201,-82"/>
+<text text-anchor="middle" x="1098" y="-65.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Equity / capital</text>
+<text text-anchor="middle" x="1098" y="-52.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">(shareholders&#39; money plus</text>
+<text text-anchor="middle" x="1098" y="-39.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">retained profits)</text>
+<text text-anchor="middle" x="1098" y="-26.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">10</text>
+</g>
+<g id="edge7" class="edge">
+<title>Loans&#45;&gt;Equity</title>
+<path fill="none" stroke="#991b1b" stroke-dasharray="5,2" d="M811.11,-138.39C862.61,-122.29 928.88,-101.57 984.64,-84.13"/>
+<polygon fill="#991b1b" stroke="#991b1b" points="985.44,-86.45 991.39,-82.02 983.98,-81.77 985.44,-86.45"/>
+<text text-anchor="middle" x="911.5" y="-131" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#991b1b"> loan losses eat</text>
+<text text-anchor="middle" x="911.5" y="-120" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#991b1b"> equity first</text>
+</g>
+<g id="node5" class="node">
+<title>Dep</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M234,-77.5C234,-77.5 28,-77.5 28,-77.5 22,-77.5 16,-71.5 16,-65.5 16,-65.5 16,-36.5 16,-36.5 16,-30.5 22,-24.5 28,-24.5 28,-24.5 234,-24.5 234,-24.5 240,-24.5 246,-30.5 246,-36.5 246,-36.5 246,-65.5 246,-65.5 246,-71.5 240,-77.5 234,-77.5"/>
+<text text-anchor="middle" x="131" y="-60.9" font-family="Helvetica,sans-Serif" font-size="12.00">Customer deposits</text>
+<text text-anchor="middle" x="131" y="-47.9" font-family="Helvetica,sans-Serif" font-size="12.00">(owed back on demand)</text>
+<text text-anchor="middle" x="131" y="-34.9" font-family="Helvetica,sans-Serif" font-size="12.00">70</text>
+</g>
+<g id="edge8" class="edge">
+<title>Dep&#45;&gt;Loans</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M246.39,-70.77C268.48,-74.54 291.46,-78.42 313,-82 415.14,-98.96 441.61,-98.01 543,-119 567.81,-124.14 594.34,-130.43 619.23,-136.68"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="618.82,-139.11 626.21,-138.45 620.02,-134.36 618.82,-139.11"/>
+<text text-anchor="middle" x="428" y="-122" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> deposits fund loans</text>
+</g>
+<g id="node6" class="node">
+<title>Whole</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M531,-72.5C531,-72.5 325,-72.5 325,-72.5 319,-72.5 313,-66.5 313,-60.5 313,-60.5 313,-31.5 313,-31.5 313,-25.5 319,-19.5 325,-19.5 325,-19.5 531,-19.5 531,-19.5 537,-19.5 543,-25.5 543,-31.5 543,-31.5 543,-60.5 543,-60.5 543,-66.5 537,-72.5 531,-72.5"/>
+<text text-anchor="middle" x="428" y="-55.9" font-family="Helvetica,sans-Serif" font-size="12.00">Wholesale funding and bonds</text>
+<text text-anchor="middle" x="428" y="-42.9" font-family="Helvetica,sans-Serif" font-size="12.00">(borrowed from markets)</text>
+<text text-anchor="middle" x="428" y="-29.9" font-family="Helvetica,sans-Serif" font-size="12.00">15</text>
+</g>
+<g id="node7" class="node">
+<title>Sub</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M828,-73.5C828,-73.5 622,-73.5 622,-73.5 616,-73.5 610,-67.5 610,-61.5 610,-61.5 610,-32.5 610,-32.5 610,-26.5 616,-20.5 622,-20.5 622,-20.5 828,-20.5 828,-20.5 834,-20.5 840,-26.5 840,-32.5 840,-32.5 840,-61.5 840,-61.5 840,-67.5 834,-73.5 828,-73.5"/>
+<text text-anchor="middle" x="725" y="-56.9" font-family="Helvetica,sans-Serif" font-size="12.00">Subordinated debt</text>
+<text text-anchor="middle" x="725" y="-43.9" font-family="Helvetica,sans-Serif" font-size="12.00">(Tier 2 style)</text>
+<text text-anchor="middle" x="725" y="-30.9" font-family="Helvetica,sans-Serif" font-size="12.00">5</text>
+</g>
+</g>
+</svg>

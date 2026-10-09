@@ -1,0 +1,39 @@
+digraph SystemsLandscape {
+  graph [rankdir=TB, splines=true, nodesep=0.3, ranksep=0.55, fontname="Helvetica", fontsize=13, bgcolor="white", newrank=true, pad=0.2];
+  node  [shape=box, style="rounded,filled", fillcolor="#eef2ff", color="#6366f1", fontname="Helvetica", fontsize=12, margin="0.18,0.10"];
+  edge  [color="#4b5563", arrowsize=0.7, fontname="Helvetica", fontsize=10, fontcolor="#374151"];
+
+  subgraph cluster_front {
+    label="Front office and operations (systems of record)"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
+    LOS  [label="Loan origination system\napplications, approvals,\nconditions"];
+    Core [label="Core banking and\nloan servicing\nbalances, payments, arrears"];
+    Coll [label="Collateral management\nvaluations, charges,\nhaircuts"];
+    Lim  [label="Limits management\napproved limits,\nutilisation, excesses"];
+    Rate [label="Rating and scoring engines\nPD, LGD, EAD,\ngrades, overrides"];
+    Cust [label="Customer and counterparty master\nidentifiers, group hierarchy,\nsector, country"];
+    { rank=same; LOS -> Core -> Coll -> Lim -> Rate -> Cust [style=invis]; }
+  }
+
+  DWH [label="Data warehouse or data lake\nmonth-end snapshots, golden sources,\nreference data, data quality checks", fillcolor="#1e3a8a", fontcolor="white", color="#1e3a8a"];
+
+  subgraph cluster_engines {
+    label="Risk engines (calculation)"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
+    RWA [label="Capital engine\nRWA, SA and IRB,\noutput floor"];
+    ECL [label="Provisioning engine\nIFRS 9 and CECL\nexpected credit loss"];
+    ST  [label="Stress testing engine\nscenario projections"];
+    { rank=same; RWA -> ECL -> ST [style=invis]; }
+  }
+
+  GL  [label="General ledger\n(finance)", fillcolor="#6b7280", fontcolor="white", color="#6b7280"];
+  Rep [label="Reporting layer\ndashboards, management information,\nreconciliations, adjustments"];
+  Reg [label="Regulatory submission tools\nCOREP, FINREP, large exposures,\ntaxonomy validation, sign-off"];
+  Out [label="Regulators, board,\nPillar 3 public disclosure", fillcolor="#1f2937", fontcolor="white", color="#1f2937"];
+
+  {LOS Core Coll Lim Rate Cust} -> DWH;
+  DWH -> {RWA ECL ST};
+  {RWA ECL ST} -> Rep;
+  GL -> Rep [label=" reconcile", style=dashed];
+  Core -> GL [style=dashed];
+  Rep -> Reg -> Out;
+  Rep -> Out;
+}

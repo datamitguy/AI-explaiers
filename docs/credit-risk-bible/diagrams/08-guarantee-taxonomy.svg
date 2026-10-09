@@ -1,0 +1,175 @@
+<svg width="100%"
+ viewBox="0.00 0.00 1375.80 511.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 497.4)">
+<title>GuaranteeTaxonomy</title>
+<polygon fill="white" stroke="transparent" points="-14.4,14.4 -14.4,-497.4 1361.4,-497.4 1361.4,14.4 -14.4,14.4"/>
+<g id="clust1" class="cluster">
+<title>cluster_fin</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M20,-197C20,-197 450,-197 450,-197 456,-197 462,-203 462,-209 462,-209 462,-276 462,-276 462,-282 456,-288 450,-288 450,-288 20,-288 20,-288 14,-288 8,-282 8,-276 8,-276 8,-209 8,-209 8,-203 14,-197 20,-197"/>
+<text text-anchor="middle" x="235" y="-273.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">Financial guarantees: pay money (CCF 100%)</text>
+</g>
+<g id="clust2" class="cluster">
+<title>cluster_perf</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M482,-197C482,-197 1327,-197 1327,-197 1333,-197 1339,-203 1339,-209 1339,-209 1339,-276 1339,-276 1339,-282 1333,-288 1327,-288 1327,-288 482,-288 482,-288 476,-288 470,-282 470,-276 470,-276 470,-209 470,-209 470,-203 476,-197 482,-197"/>
+<text text-anchor="middle" x="904.5" y="-273.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">Performance&#45;type guarantees: do a job (CCF 50%)</text>
+</g>
+<g id="node1" class="node">
+<title>Root</title>
+<path fill="#1f2937" stroke="#1f2937" d="M771,-483C771,-483 535,-483 535,-483 529,-483 523,-477 523,-471 523,-471 523,-442 523,-442 523,-436 529,-430 535,-430 535,-430 771,-430 771,-430 777,-430 783,-436 783,-442 783,-442 783,-471 783,-471 783,-477 777,-483 771,-483"/>
+<text text-anchor="middle" x="653" y="-466.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Bank guarantees and bonds</text>
+<text text-anchor="middle" x="653" y="-453.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">(the bank promises to pay a third party</text>
+<text text-anchor="middle" x="653" y="-440.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">if the customer fails to do something)</text>
+</g>
+<g id="node2" class="node">
+<title>Q1</title>
+<polygon fill="#fef3c7" stroke="#d97706" points="653,-393 497,-359 653,-325 809,-359 653,-393"/>
+<text text-anchor="middle" x="653" y="-362.4" font-family="Helvetica,sans-Serif" font-size="12.00">What does the customer</text>
+<text text-anchor="middle" x="653" y="-349.4" font-family="Helvetica,sans-Serif" font-size="12.00">have to do?</text>
+</g>
+<g id="edge1" class="edge">
+<title>Root&#45;&gt;Q1</title>
+<path fill="none" stroke="#4b5563" d="M653,-429.91C653,-420.84 653,-410.4 653,-400.4"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="655.45,-400.22 653,-393.22 650.55,-400.22 655.45,-400.22"/>
+</g>
+<g id="node3" class="node">
+<title>Fin</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M238,-258C238,-258 28,-258 28,-258 22,-258 16,-252 16,-246 16,-246 16,-217 16,-217 16,-211 22,-205 28,-205 28,-205 238,-205 238,-205 244,-205 250,-211 250,-217 250,-217 250,-246 250,-246 250,-252 244,-258 238,-258"/>
+<text text-anchor="middle" x="133" y="-241.4" font-family="Helvetica,sans-Serif" font-size="12.00">Financial guarantee or standby LC</text>
+<text text-anchor="middle" x="133" y="-228.4" font-family="Helvetica,sans-Serif" font-size="12.00">backs a loan, a lease, a bond issue</text>
+<text text-anchor="middle" x="133" y="-215.4" font-family="Helvetica,sans-Serif" font-size="12.00">or a trade payable</text>
+</g>
+<g id="edge2" class="edge">
+<title>Q1&#45;&gt;Fin</title>
+<path fill="none" stroke="#4b5563" d="M553.24,-346.69C473.11,-336.07 358.3,-317.34 261,-288 237.57,-280.93 212.69,-270.8 191.16,-261.12"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="191.98,-258.8 184.59,-258.13 189.95,-263.26 191.98,-258.8"/>
+<text text-anchor="middle" x="357" y="-299" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> repay money</text>
+</g>
+<g id="node4" class="node">
+<title>Pay</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M442,-258C442,-258 284,-258 284,-258 278,-258 272,-252 272,-246 272,-246 272,-217 272,-217 272,-211 278,-205 284,-205 284,-205 442,-205 442,-205 448,-205 454,-211 454,-217 454,-217 454,-246 454,-246 454,-252 448,-258 442,-258"/>
+<text text-anchor="middle" x="363" y="-241.4" font-family="Helvetica,sans-Serif" font-size="12.00">Payment guarantee</text>
+<text text-anchor="middle" x="363" y="-228.4" font-family="Helvetica,sans-Serif" font-size="12.00">backs a buyer&#39;s obligation</text>
+<text text-anchor="middle" x="363" y="-215.4" font-family="Helvetica,sans-Serif" font-size="12.00">to pay a supplier</text>
+</g>
+<g id="edge3" class="edge">
+<title>Q1&#45;&gt;Pay</title>
+<path fill="none" stroke="#4b5563" d="M592.85,-338.05C555.51,-325.07 506.84,-307.06 465,-288 447.75,-280.14 429.41,-270.57 413.11,-261.6"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="414.05,-259.32 406.74,-258.07 411.67,-263.61 414.05,-259.32"/>
+<text text-anchor="middle" x="540" y="-299" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> pay for goods</text>
+</g>
+<g id="node5" class="node">
+<title>Bid</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M655.5,-258C655.5,-258 490.5,-258 490.5,-258 484.5,-258 478.5,-252 478.5,-246 478.5,-246 478.5,-217 478.5,-217 478.5,-211 484.5,-205 490.5,-205 490.5,-205 655.5,-205 655.5,-205 661.5,-205 667.5,-211 667.5,-217 667.5,-217 667.5,-246 667.5,-246 667.5,-252 661.5,-258 655.5,-258"/>
+<text text-anchor="middle" x="573" y="-241.4" font-family="Helvetica,sans-Serif" font-size="12.00">Bid (tender) bond</text>
+<text text-anchor="middle" x="573" y="-228.4" font-family="Helvetica,sans-Serif" font-size="12.00">1% to 5% of contract value</text>
+<text text-anchor="middle" x="573" y="-215.4" font-family="Helvetica,sans-Serif" font-size="12.00">bidder must sign if it wins</text>
+</g>
+<g id="edge4" class="edge">
+<title>Q1&#45;&gt;Bid</title>
+<path fill="none" stroke="#4b5563" d="M634.45,-328.89C622.06,-309.47 605.79,-283.94 593.1,-264.03"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="595.11,-262.63 589.29,-258.05 590.98,-265.27 595.11,-262.63"/>
+<text text-anchor="middle" x="658" y="-299" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> sign a contract</text>
+</g>
+<g id="node6" class="node">
+<title>Perf</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M882,-258C882,-258 702,-258 702,-258 696,-258 690,-252 690,-246 690,-246 690,-217 690,-217 690,-211 696,-205 702,-205 702,-205 882,-205 882,-205 888,-205 894,-211 894,-217 894,-217 894,-246 894,-246 894,-252 888,-258 882,-258"/>
+<text text-anchor="middle" x="792" y="-241.4" font-family="Helvetica,sans-Serif" font-size="12.00">Performance bond</text>
+<text text-anchor="middle" x="792" y="-228.4" font-family="Helvetica,sans-Serif" font-size="12.00">5% to 20% of contract value</text>
+<text text-anchor="middle" x="792" y="-215.4" font-family="Helvetica,sans-Serif" font-size="12.00">contractor must finish the job</text>
+</g>
+<g id="edge5" class="edge">
+<title>Q1&#45;&gt;Perf</title>
+<path fill="none" stroke="#4b5563" d="M682.48,-331.38C704.61,-311.4 734.96,-284 758.1,-263.11"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="759.96,-264.73 763.51,-258.22 756.68,-261.09 759.96,-264.73"/>
+<text text-anchor="middle" x="765" y="-299" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> perform a contract</text>
+</g>
+<g id="node7" class="node">
+<title>Adv</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M1105.5,-258C1105.5,-258 928.5,-258 928.5,-258 922.5,-258 916.5,-252 916.5,-246 916.5,-246 916.5,-217 916.5,-217 916.5,-211 922.5,-205 928.5,-205 928.5,-205 1105.5,-205 1105.5,-205 1111.5,-205 1117.5,-211 1117.5,-217 1117.5,-217 1117.5,-246 1117.5,-246 1117.5,-252 1111.5,-258 1105.5,-258"/>
+<text text-anchor="middle" x="1017" y="-241.4" font-family="Helvetica,sans-Serif" font-size="12.00">Advance payment guarantee</text>
+<text text-anchor="middle" x="1017" y="-228.4" font-family="Helvetica,sans-Serif" font-size="12.00">refunds the buyer&#39;s deposit</text>
+<text text-anchor="middle" x="1017" y="-215.4" font-family="Helvetica,sans-Serif" font-size="12.00">if the contractor fails</text>
+</g>
+<g id="edge6" class="edge">
+<title>Q1&#45;&gt;Adv</title>
+<path fill="none" stroke="#4b5563" d="M727.52,-341.23C778.32,-328.85 846.69,-310.32 905,-288 924.68,-280.47 945.53,-270.67 963.85,-261.4"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="965.36,-263.39 970.48,-258.02 963.13,-259.02 965.36,-263.39"/>
+<text text-anchor="middle" x="934" y="-299" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> use a deposit properly</text>
+</g>
+<g id="node8" class="node">
+<title>Ret</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M1318.5,-258C1318.5,-258 1151.5,-258 1151.5,-258 1145.5,-258 1139.5,-252 1139.5,-246 1139.5,-246 1139.5,-217 1139.5,-217 1139.5,-211 1145.5,-205 1151.5,-205 1151.5,-205 1318.5,-205 1318.5,-205 1324.5,-205 1330.5,-211 1330.5,-217 1330.5,-217 1330.5,-246 1330.5,-246 1330.5,-252 1324.5,-258 1318.5,-258"/>
+<text text-anchor="middle" x="1235" y="-241.4" font-family="Helvetica,sans-Serif" font-size="12.00">Retention or warranty bond</text>
+<text text-anchor="middle" x="1235" y="-228.4" font-family="Helvetica,sans-Serif" font-size="12.00">replaces cash held back for</text>
+<text text-anchor="middle" x="1235" y="-215.4" font-family="Helvetica,sans-Serif" font-size="12.00">defects after completion</text>
+</g>
+<g id="edge7" class="edge">
+<title>Q1&#45;&gt;Ret</title>
+<path fill="none" stroke="#4b5563" d="M774.39,-351.41C872.13,-343.45 1012.03,-326.01 1129,-288 1149.06,-281.48 1169.88,-271.4 1187.7,-261.62"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="1189.21,-263.58 1194.13,-258.03 1186.82,-259.3 1189.21,-263.58"/>
+<text text-anchor="middle" x="1118.5" y="-299" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> fix defects</text>
+</g>
+<g id="node9" class="node">
+<title>Q2</title>
+<polygon fill="#fef3c7" stroke="#d97706" points="682,-168 528,-134 682,-100 836,-134 682,-168"/>
+<text text-anchor="middle" x="682" y="-137.4" font-family="Helvetica,sans-Serif" font-size="12.00">How can the beneficiary</text>
+<text text-anchor="middle" x="682" y="-124.4" font-family="Helvetica,sans-Serif" font-size="12.00">claim?</text>
+</g>
+<g id="edge8" class="edge">
+<title>Fin&#45;&gt;Q2</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M225.7,-204.96C237.54,-202.08 249.52,-199.34 261,-197 367.67,-175.25 491.03,-158 576.52,-147.27"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="577,-149.68 583.64,-146.38 576.39,-144.82 577,-149.68"/>
+</g>
+<g id="edge9" class="edge">
+<title>Pay&#45;&gt;Q2</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M439.76,-204.94C448.26,-202.21 456.8,-199.52 465,-197 512.54,-182.41 566.29,-167.04 608.4,-155.26"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="609.24,-157.57 615.32,-153.33 607.92,-152.85 609.24,-157.57"/>
+</g>
+<g id="edge10" class="edge">
+<title>Bid&#45;&gt;Q2</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M602.21,-204.91C615.68,-193.1 631.8,-178.98 646.02,-166.53"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="647.92,-168.12 651.57,-161.66 644.69,-164.43 647.92,-168.12"/>
+</g>
+<g id="edge11" class="edge">
+<title>Perf&#45;&gt;Q2</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M762.52,-204.91C748.81,-193.01 732.39,-178.75 717.96,-166.22"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="719.22,-164.07 712.33,-161.33 716.01,-167.77 719.22,-164.07"/>
+</g>
+<g id="edge12" class="edge">
+<title>Adv&#45;&gt;Q2</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M932.35,-204.99C923.13,-202.27 913.87,-199.56 905,-197 855.34,-182.67 799.29,-167.09 755.81,-155.13"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="756.34,-152.74 748.94,-153.25 755.04,-157.46 756.34,-152.74"/>
+</g>
+<g id="edge13" class="edge">
+<title>Ret&#45;&gt;Q2</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M1159.57,-204.96C1149.37,-202.01 1138.98,-199.25 1129,-197 1016.71,-171.66 886.08,-154.98 795.15,-145.37"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="795.34,-142.93 788.12,-144.64 794.83,-147.8 795.34,-142.93"/>
+</g>
+<g id="node10" class="node">
+<title>Demand</title>
+<path fill="#991b1b" stroke="#991b1b" d="M661.5,-53C661.5,-53 436.5,-53 436.5,-53 430.5,-53 424.5,-47 424.5,-41 424.5,-41 424.5,-12 424.5,-12 424.5,-6 430.5,0 436.5,0 436.5,0 661.5,0 661.5,0 667.5,0 673.5,-6 673.5,-12 673.5,-12 673.5,-41 673.5,-41 673.5,-47 667.5,-53 661.5,-53"/>
+<text text-anchor="middle" x="549" y="-36.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">On demand: pay first, argue later</text>
+<text text-anchor="middle" x="549" y="-23.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">(URDG 758 rules; bank cannot refuse</text>
+<text text-anchor="middle" x="549" y="-10.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">a compliant written demand)</text>
+</g>
+<g id="edge14" class="edge">
+<title>Q2&#45;&gt;Demand</title>
+<path fill="none" stroke="#4b5563" d="M649.12,-106.92C630.36,-92.04 606.75,-73.31 587.17,-57.78"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="588.5,-55.71 581.5,-53.28 585.46,-59.55 588.5,-55.71"/>
+<text text-anchor="middle" x="667.5" y="-74" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> written demand only</text>
+</g>
+<g id="node11" class="node">
+<title>Cond</title>
+<path fill="#065f46" stroke="#065f46" d="M924,-53C924,-53 708,-53 708,-53 702,-53 696,-47 696,-41 696,-41 696,-12 696,-12 696,-6 702,0 708,0 708,0 924,0 924,0 930,0 936,-6 936,-12 936,-12 936,-41 936,-41 936,-47 930,-53 924,-53"/>
+<text text-anchor="middle" x="816" y="-36.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Conditional (surety): bank pays only</text>
+<text text-anchor="middle" x="816" y="-23.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">after the default is proved, often</text>
+<text text-anchor="middle" x="816" y="-10.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">by a court or arbitration award</text>
+</g>
+<g id="edge15" class="edge">
+<title>Q2&#45;&gt;Cond</title>
+<path fill="none" stroke="#4b5563" d="M714.78,-107.19C733.9,-92.14 758.11,-73.08 778.05,-57.38"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="779.57,-59.3 783.56,-53.04 776.54,-55.45 779.57,-59.3"/>
+<text text-anchor="middle" x="796.5" y="-74" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> proof of default</text>
+</g>
+</g>
+</svg>

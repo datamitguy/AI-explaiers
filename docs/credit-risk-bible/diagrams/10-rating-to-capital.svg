@@ -1,0 +1,133 @@
+<svg width="100%"
+ viewBox="0.00 0.00 818.80 504.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 490.4)">
+<title>RatingToCapital</title>
+<polygon fill="white" stroke="transparent" points="-14.4,14.4 -14.4,-490.4 804.4,-490.4 804.4,14.4 -14.4,14.4"/>
+<g id="clust1" class="cluster">
+<title>cluster_params</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M20,-297C20,-297 770,-297 770,-297 776,-297 782,-303 782,-309 782,-309 782,-389 782,-389 782,-395 776,-401 770,-401 770,-401 20,-401 20,-401 14,-401 8,-395 8,-389 8,-389 8,-309 8,-309 8,-303 14,-297 20,-297"/>
+<text text-anchor="middle" x="395" y="-386.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">The three IRB parameters</text>
+</g>
+<g id="node1" class="node">
+<title>Grade</title>
+<path fill="#1f2937" stroke="#1f2937" d="M386.5,-476C386.5,-476 163.5,-476 163.5,-476 157.5,-476 151.5,-470 151.5,-464 151.5,-464 151.5,-448 151.5,-448 151.5,-442 157.5,-436 163.5,-436 163.5,-436 386.5,-436 386.5,-436 392.5,-436 398.5,-442 398.5,-448 398.5,-448 398.5,-464 398.5,-464 398.5,-470 392.5,-476 386.5,-476"/>
+<text text-anchor="middle" x="275" y="-459.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Internal grade from the rating model</text>
+<text text-anchor="middle" x="275" y="-446.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">or scorecard (e.g. grade 12 of 22)</text>
+</g>
+<g id="node2" class="node">
+<title>PD</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M247.5,-364.5C247.5,-364.5 28.5,-364.5 28.5,-364.5 22.5,-364.5 16.5,-358.5 16.5,-352.5 16.5,-352.5 16.5,-323.5 16.5,-323.5 16.5,-317.5 22.5,-311.5 28.5,-311.5 28.5,-311.5 247.5,-311.5 247.5,-311.5 253.5,-311.5 259.5,-317.5 259.5,-323.5 259.5,-323.5 259.5,-352.5 259.5,-352.5 259.5,-358.5 253.5,-364.5 247.5,-364.5"/>
+<text text-anchor="middle" x="138" y="-347.9" font-family="Helvetica,sans-Serif" font-size="12.00">PD model</text>
+<text text-anchor="middle" x="138" y="-334.9" font-family="Helvetica,sans-Serif" font-size="12.00">Grade mapped to calibrated</text>
+<text text-anchor="middle" x="138" y="-321.9" font-family="Helvetica,sans-Serif" font-size="12.00">long&#45;run PD (e.g. 1.2%, floor 0.05%)</text>
+</g>
+<g id="edge1" class="edge">
+<title>Grade&#45;&gt;PD</title>
+<path fill="none" stroke="#4b5563" d="M252.38,-435.84C231.04,-417.78 198.71,-390.4 173.86,-369.36"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="175.28,-367.36 168.36,-364.7 172.12,-371.1 175.28,-367.36"/>
+</g>
+<g id="node3" class="node">
+<title>LGD</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M525,-371C525,-371 301,-371 301,-371 295,-371 289,-365 289,-359 289,-359 289,-317 289,-317 289,-311 295,-305 301,-305 301,-305 525,-305 525,-305 531,-305 537,-311 537,-317 537,-317 537,-359 537,-359 537,-365 531,-371 525,-371"/>
+<text text-anchor="middle" x="413" y="-354.4" font-family="Helvetica,sans-Serif" font-size="12.00">LGD model</text>
+<text text-anchor="middle" x="413" y="-341.4" font-family="Helvetica,sans-Serif" font-size="12.00">Collateral type, seniority, recoveries</text>
+<text text-anchor="middle" x="413" y="-328.4" font-family="Helvetica,sans-Serif" font-size="12.00">from workout data, downturn add&#45;on</text>
+<text text-anchor="middle" x="413" y="-315.4" font-family="Helvetica,sans-Serif" font-size="12.00">(e.g. 35%)</text>
+</g>
+<g id="edge2" class="edge">
+<title>Grade&#45;&gt;LGD</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M297.79,-435.84C317.14,-419.58 345.46,-395.78 369.18,-375.84"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="371,-377.5 374.79,-371.12 367.85,-373.75 371,-377.5"/>
+<text text-anchor="middle" x="356" y="-412" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> sometimes</text>
+</g>
+<g id="node5" class="node">
+<title>EL</title>
+<path fill="#1e3a8a" stroke="#1e3a8a" d="M597.5,-272C597.5,-272 372.5,-272 372.5,-272 366.5,-272 360.5,-266 360.5,-260 360.5,-260 360.5,-231 360.5,-231 360.5,-225 366.5,-219 372.5,-219 372.5,-219 597.5,-219 597.5,-219 603.5,-219 609.5,-225 609.5,-231 609.5,-231 609.5,-260 609.5,-260 609.5,-266 603.5,-272 597.5,-272"/>
+<text text-anchor="middle" x="485" y="-255.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Expected loss = PD x LGD x EAD</text>
+<text text-anchor="middle" x="485" y="-242.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">= 1.2% x 35% x 9.8m = 41k per year</text>
+<text text-anchor="middle" x="485" y="-229.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">feeds pricing and provisions</text>
+</g>
+<g id="edge3" class="edge">
+<title>PD&#45;&gt;EL</title>
+<path fill="none" stroke="#4b5563" d="M223.33,-311.4C240.4,-306.47 258.24,-301.46 275,-297 304.9,-289.05 337.34,-280.97 367.58,-273.68"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="368.17,-276.06 374.4,-272.04 367.02,-271.3 368.17,-276.06"/>
+</g>
+<g id="node6" class="node">
+<title>K</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M319.5,-272C319.5,-272 52.5,-272 52.5,-272 46.5,-272 40.5,-266 40.5,-260 40.5,-260 40.5,-231 40.5,-231 40.5,-225 46.5,-219 52.5,-219 52.5,-219 319.5,-219 319.5,-219 325.5,-219 331.5,-225 331.5,-231 331.5,-231 331.5,-260 331.5,-260 331.5,-266 325.5,-272 319.5,-272"/>
+<text text-anchor="middle" x="186" y="-255.4" font-family="Helvetica,sans-Serif" font-size="12.00">Basel IRB formula</text>
+<text text-anchor="middle" x="186" y="-242.4" font-family="Helvetica,sans-Serif" font-size="12.00">K(PD, LGD, M) = capital per unit of exposure</text>
+<text text-anchor="middle" x="186" y="-229.4" font-family="Helvetica,sans-Serif" font-size="12.00">(e.g. 6%)</text>
+</g>
+<g id="edge6" class="edge">
+<title>PD&#45;&gt;K</title>
+<path fill="none" stroke="#4b5563" d="M151.63,-311.31C157.05,-301.09 163.34,-289.22 169.06,-278.45"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="171.22,-279.59 172.34,-272.26 166.9,-277.29 171.22,-279.59"/>
+</g>
+<g id="edge4" class="edge">
+<title>LGD&#45;&gt;EL</title>
+<path fill="none" stroke="#4b5563" d="M438.59,-304.84C445.55,-296.09 453.08,-286.62 460.01,-277.91"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="462.25,-279.02 464.7,-272.02 458.42,-275.97 462.25,-279.02"/>
+</g>
+<g id="edge7" class="edge">
+<title>LGD&#45;&gt;K</title>
+<path fill="none" stroke="#4b5563" d="M332.65,-304.97C307.93,-295.11 280.92,-284.34 256.89,-274.76"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="257.6,-272.41 250.19,-272.09 255.79,-276.96 257.6,-272.41"/>
+</g>
+<g id="node4" class="node">
+<title>EAD</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M761.5,-364.5C761.5,-364.5 578.5,-364.5 578.5,-364.5 572.5,-364.5 566.5,-358.5 566.5,-352.5 566.5,-352.5 566.5,-323.5 566.5,-323.5 566.5,-317.5 572.5,-311.5 578.5,-311.5 578.5,-311.5 761.5,-311.5 761.5,-311.5 767.5,-311.5 773.5,-317.5 773.5,-323.5 773.5,-323.5 773.5,-352.5 773.5,-352.5 773.5,-358.5 767.5,-364.5 761.5,-364.5"/>
+<text text-anchor="middle" x="670" y="-347.9" font-family="Helvetica,sans-Serif" font-size="12.00">EAD model</text>
+<text text-anchor="middle" x="670" y="-334.9" font-family="Helvetica,sans-Serif" font-size="12.00">Drawn + CCF x undrawn</text>
+<text text-anchor="middle" x="670" y="-321.9" font-family="Helvetica,sans-Serif" font-size="12.00">(e.g. 9m + 40% x 2m = 9.8m)</text>
+</g>
+<g id="edge5" class="edge">
+<title>EAD&#45;&gt;EL</title>
+<path fill="none" stroke="#4b5563" d="M617.48,-311.31C594.53,-300.08 567.52,-286.87 543.9,-275.31"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="544.69,-272.97 537.33,-272.1 542.54,-277.38 544.69,-272.97"/>
+</g>
+<g id="node7" class="node">
+<title>RWA</title>
+<path fill="#1e3a8a" stroke="#1e3a8a" d="M717,-186C717,-186 541,-186 541,-186 535,-186 529,-180 529,-174 529,-174 529,-158 529,-158 529,-152 535,-146 541,-146 541,-146 717,-146 717,-146 723,-146 729,-152 729,-158 729,-158 729,-174 729,-174 729,-180 723,-186 717,-186"/>
+<text text-anchor="middle" x="629" y="-169.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">RWA = EAD x K x 12.5</text>
+<text text-anchor="middle" x="629" y="-156.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">= 9.8m x 6% x 12.5 = 7.35m</text>
+</g>
+<g id="edge8" class="edge">
+<title>EAD&#45;&gt;RWA</title>
+<path fill="none" stroke="#4b5563" d="M663.77,-311.18C656.07,-279.23 643.02,-225.13 635.29,-193.07"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="637.65,-192.42 633.63,-186.19 632.89,-193.57 637.65,-192.42"/>
+</g>
+<g id="node9" class="node">
+<title>Uses</title>
+<path fill="#6b7280" stroke="#6b7280" d="M620,-40C620,-40 384,-40 384,-40 378,-40 372,-34 372,-28 372,-28 372,-12 372,-12 372,-6 378,0 384,0 384,0 620,0 620,0 626,0 632,-6 632,-12 632,-12 632,-28 632,-28 632,-34 626,-40 620,-40"/>
+<text text-anchor="middle" x="502" y="-23.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Also used for: pricing (RAROC), limits,</text>
+<text text-anchor="middle" x="502" y="-10.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">IFRS 9 staging, stress testing, reporting</text>
+</g>
+<g id="edge11" class="edge">
+<title>EL&#45;&gt;Uses</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M486.95,-218.86C490.21,-176.05 496.72,-90.45 500,-47.24"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="502.45,-47.34 500.54,-40.18 497.57,-46.97 502.45,-47.34"/>
+</g>
+<g id="edge9" class="edge">
+<title>K&#45;&gt;RWA</title>
+<path fill="none" stroke="#4b5563" d="M331.67,-219.02C393.58,-208.19 464.48,-195.78 521.51,-185.8"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="522.28,-188.16 528.75,-184.54 521.44,-183.33 522.28,-188.16"/>
+</g>
+<g id="node8" class="node">
+<title>Cap</title>
+<path fill="#065f46" stroke="#065f46" d="M715,-113C715,-113 541,-113 541,-113 535,-113 529,-107 529,-101 529,-101 529,-85 529,-85 529,-79 535,-73 541,-73 541,-73 715,-73 715,-73 721,-73 727,-79 727,-85 727,-85 727,-101 727,-101 727,-107 721,-113 715,-113"/>
+<text text-anchor="middle" x="628" y="-96.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Capital = RWA x ratio</text>
+<text text-anchor="middle" x="628" y="-83.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">(e.g. 7.35m x 10.5% = 772k)</text>
+</g>
+<g id="edge10" class="edge">
+<title>RWA&#45;&gt;Cap</title>
+<path fill="none" stroke="#4b5563" d="M628.73,-145.97C628.62,-138.09 628.49,-128.82 628.37,-120.31"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="630.82,-120.04 628.27,-113.08 625.92,-120.11 630.82,-120.04"/>
+</g>
+<g id="edge12" class="edge">
+<title>Cap&#45;&gt;Uses</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M594.23,-72.97C578.27,-63.98 559.1,-53.17 542.38,-43.75"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="543.16,-41.38 535.86,-40.08 540.75,-45.65 543.16,-41.38"/>
+</g>
+</g>
+</svg>

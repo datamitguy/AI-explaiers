@@ -1,0 +1,156 @@
+<svg width="100%"
+ viewBox="0.00 0.00 1020.80 312.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 298.4)">
+<title>ScorecardsLifecycle</title>
+<polygon fill="white" stroke="transparent" points="-14.4,14.4 -14.4,-298.4 1006.4,-298.4 1006.4,14.4 -14.4,14.4"/>
+<g id="clust1" class="cluster">
+<title>cluster_scores</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M20,-82C20,-82 972,-82 972,-82 978,-82 984,-88 984,-94 984,-94 984,-174 984,-174 984,-180 978,-186 972,-186 972,-186 20,-186 20,-186 14,-186 8,-180 8,-174 8,-174 8,-94 8,-94 8,-88 14,-82 20,-82"/>
+<text text-anchor="middle" x="496" y="-171.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">Which score is used at each stage</text>
+</g>
+<g id="clust2" class="cluster">
+<title>cluster_uses</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M46,-198C46,-198 954.5,-198 954.5,-198 960.5,-198 966.5,-204 966.5,-210 966.5,-210 966.5,-264 966.5,-264 966.5,-270 960.5,-276 954.5,-276 954.5,-276 46,-276 46,-276 40,-276 34,-270 34,-264 34,-264 34,-210 34,-210 34,-204 40,-198 46,-198"/>
+<text text-anchor="middle" x="500.25" y="-261.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">What the score drives</text>
+</g>
+<g id="node1" class="node">
+<title>Apply</title>
+<path fill="#1f2937" stroke="#1f2937" d="M194,-40C194,-40 29,-40 29,-40 23,-40 17,-34 17,-28 17,-28 17,-12 17,-12 17,-6 23,0 29,0 29,0 194,0 194,0 200,0 206,-6 206,-12 206,-12 206,-28 206,-28 206,-34 200,-40 194,-40"/>
+<text text-anchor="middle" x="111.5" y="-23.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Application</text>
+<text text-anchor="middle" x="111.5" y="-10.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">(a stranger asks to borrow)</text>
+</g>
+<g id="node2" class="node">
+<title>Live</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M458,-40C458,-40 260,-40 260,-40 254,-40 248,-34 248,-28 248,-28 248,-12 248,-12 248,-6 254,0 260,0 260,0 458,0 458,0 464,0 470,-6 470,-12 470,-12 470,-28 470,-28 470,-34 464,-40 458,-40"/>
+<text text-anchor="middle" x="359" y="-23.4" font-family="Helvetica,sans-Serif" font-size="12.00">Live account</text>
+<text text-anchor="middle" x="359" y="-10.4" font-family="Helvetica,sans-Serif" font-size="12.00">(months and years of payments)</text>
+</g>
+<g id="edge1" class="edge">
+<title>Apply&#45;&gt;Live</title>
+<path fill="none" stroke="#4b5563" d="M206.01,-20C217.35,-20 229.03,-20 240.66,-20"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="240.88,-22.45 247.88,-20 240.88,-17.55 240.88,-22.45"/>
+</g>
+<g id="node5" class="node">
+<title>AppS</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M195,-156C195,-156 28,-156 28,-156 22,-156 16,-150 16,-144 16,-144 16,-102 16,-102 16,-96 22,-90 28,-90 28,-90 195,-90 195,-90 201,-90 207,-96 207,-102 207,-102 207,-144 207,-144 207,-150 201,-156 195,-156"/>
+<text text-anchor="middle" x="111.5" y="-139.4" font-family="Helvetica,sans-Serif" font-size="12.00">Application score</text>
+<text text-anchor="middle" x="111.5" y="-126.4" font-family="Helvetica,sans-Serif" font-size="12.00">bureau + form data</text>
+<text text-anchor="middle" x="111.5" y="-113.4" font-family="Helvetica,sans-Serif" font-size="12.00">question: will this person</text>
+<text text-anchor="middle" x="111.5" y="-100.4" font-family="Helvetica,sans-Serif" font-size="12.00">default in 12 to 24 months?</text>
+</g>
+<g id="edge5" class="edge">
+<title>Apply&#45;&gt;AppS</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="1,5" d="M111.5,-40.12C111.5,-54.4 111.5,-68.68 111.5,-82.96"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="109.05,-82.98 111.5,-89.98 113.95,-82.98 109.05,-82.98"/>
+</g>
+<g id="node3" class="node">
+<title>Late</title>
+<path fill="#991b1b" stroke="#991b1b" d="M708.5,-53C708.5,-53 560.5,-53 560.5,-53 554.5,-53 548.5,-47 548.5,-41 548.5,-41 548.5,-25 548.5,-25 548.5,-19 554.5,-13 560.5,-13 560.5,-13 708.5,-13 708.5,-13 714.5,-13 720.5,-19 720.5,-25 720.5,-25 720.5,-41 720.5,-41 720.5,-47 714.5,-53 708.5,-53"/>
+<text text-anchor="middle" x="634.5" y="-36.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Missed payment</text>
+<text text-anchor="middle" x="634.5" y="-23.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">(account enters arrears)</text>
+</g>
+<g id="edge2" class="edge">
+<title>Live&#45;&gt;Late</title>
+<path fill="none" stroke="#4b5563" d="M470.06,-25.23C493.74,-26.36 518.52,-27.53 541.43,-28.62"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="541.37,-31.07 548.47,-28.96 541.6,-26.18 541.37,-31.07"/>
+</g>
+<g id="node6" class="node">
+<title>BehS</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M439.5,-156C439.5,-156 278.5,-156 278.5,-156 272.5,-156 266.5,-150 266.5,-144 266.5,-144 266.5,-102 266.5,-102 266.5,-96 272.5,-90 278.5,-90 278.5,-90 439.5,-90 439.5,-90 445.5,-90 451.5,-96 451.5,-102 451.5,-102 451.5,-144 451.5,-144 451.5,-150 445.5,-156 439.5,-156"/>
+<text text-anchor="middle" x="359" y="-139.4" font-family="Helvetica,sans-Serif" font-size="12.00">Behavioural score</text>
+<text text-anchor="middle" x="359" y="-126.4" font-family="Helvetica,sans-Serif" font-size="12.00">recalculated monthly from</text>
+<text text-anchor="middle" x="359" y="-113.4" font-family="Helvetica,sans-Serif" font-size="12.00">how the account is used</text>
+<text text-anchor="middle" x="359" y="-100.4" font-family="Helvetica,sans-Serif" font-size="12.00">question: is risk rising?</text>
+</g>
+<g id="edge6" class="edge">
+<title>Live&#45;&gt;BehS</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="1,5" d="M359,-40.12C359,-54.4 359,-68.68 359,-82.96"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="356.55,-82.98 359,-89.98 361.45,-82.98 356.55,-82.98"/>
+</g>
+<g id="edge4" class="edge">
+<title>Late&#45;&gt;Live</title>
+<path fill="none" stroke="#065f46" stroke-dasharray="5,2" d="M548.23,-14.66C538.74,-13.16 529.19,-11.88 520,-11 506.2,-9.67 491.7,-9.21 477.31,-9.31"/>
+<polygon fill="#065f46" stroke="#065f46" points="477.22,-6.86 470.26,-9.41 477.29,-11.76 477.22,-6.86"/>
+<text text-anchor="middle" x="505" y="-14" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#065f46"> cures</text>
+</g>
+<g id="node4" class="node">
+<title>Rec</title>
+<path fill="#1f2937" stroke="#1f2937" d="M942,-53C942,-53 804,-53 804,-53 798,-53 792,-47 792,-41 792,-41 792,-25 792,-25 792,-19 798,-13 804,-13 804,-13 942,-13 942,-13 948,-13 954,-19 954,-25 954,-25 954,-41 954,-41 954,-47 948,-53 942,-53"/>
+<text text-anchor="middle" x="873" y="-36.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Charged off</text>
+<text text-anchor="middle" x="873" y="-23.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">(handed to recoveries)</text>
+</g>
+<g id="edge3" class="edge">
+<title>Late&#45;&gt;Rec</title>
+<path fill="none" stroke="#4b5563" d="M720.55,-33C741.37,-33 763.68,-33 784.61,-33"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="784.65,-35.45 791.65,-33 784.65,-30.55 784.65,-35.45"/>
+</g>
+<g id="node7" class="node">
+<title>ColS</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M717,-155.5C717,-155.5 552,-155.5 552,-155.5 546,-155.5 540,-149.5 540,-143.5 540,-143.5 540,-114.5 540,-114.5 540,-108.5 546,-102.5 552,-102.5 552,-102.5 717,-102.5 717,-102.5 723,-102.5 729,-108.5 729,-114.5 729,-114.5 729,-143.5 729,-143.5 729,-149.5 723,-155.5 717,-155.5"/>
+<text text-anchor="middle" x="634.5" y="-138.9" font-family="Helvetica,sans-Serif" font-size="12.00">Collections score</text>
+<text text-anchor="middle" x="634.5" y="-125.9" font-family="Helvetica,sans-Serif" font-size="12.00">question: will this customer</text>
+<text text-anchor="middle" x="634.5" y="-112.9" font-family="Helvetica,sans-Serif" font-size="12.00">pay without us chasing?</text>
+</g>
+<g id="edge7" class="edge">
+<title>Late&#45;&gt;ColS</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="1,5" d="M634.5,-53.25C634.5,-67.19 634.5,-81.14 634.5,-95.08"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="632.05,-95.37 634.5,-102.37 636.95,-95.37 632.05,-95.37"/>
+</g>
+<g id="node8" class="node">
+<title>RecS</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M964,-155.5C964,-155.5 782,-155.5 782,-155.5 776,-155.5 770,-149.5 770,-143.5 770,-143.5 770,-114.5 770,-114.5 770,-108.5 776,-102.5 782,-102.5 782,-102.5 964,-102.5 964,-102.5 970,-102.5 976,-108.5 976,-114.5 976,-114.5 976,-143.5 976,-143.5 976,-149.5 970,-155.5 964,-155.5"/>
+<text text-anchor="middle" x="873" y="-138.9" font-family="Helvetica,sans-Serif" font-size="12.00">Recovery score</text>
+<text text-anchor="middle" x="873" y="-125.9" font-family="Helvetica,sans-Serif" font-size="12.00">question: how much will we</text>
+<text text-anchor="middle" x="873" y="-112.9" font-family="Helvetica,sans-Serif" font-size="12.00">get back, and by which route?</text>
+</g>
+<g id="edge8" class="edge">
+<title>Rec&#45;&gt;RecS</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="1,5" d="M873,-53.25C873,-67.19 873,-81.14 873,-95.08"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="870.55,-95.37 873,-102.37 875.45,-95.37 870.55,-95.37"/>
+</g>
+<g id="node9" class="node">
+<title>U1</title>
+<path fill="#6b7280" stroke="#6b7280" d="M169,-246C169,-246 54,-246 54,-246 48,-246 42,-240 42,-234 42,-234 42,-218 42,-218 42,-212 48,-206 54,-206 54,-206 169,-206 169,-206 175,-206 181,-212 181,-218 181,-218 181,-234 181,-234 181,-240 175,-246 169,-246"/>
+<text text-anchor="middle" x="111.5" y="-229.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Accept or decline,</text>
+<text text-anchor="middle" x="111.5" y="-216.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">starting limit, price</text>
+</g>
+<g id="edge9" class="edge">
+<title>AppS&#45;&gt;U1</title>
+<path fill="none" stroke="#4b5563" d="M111.5,-156.39C111.5,-170.44 111.5,-184.49 111.5,-198.53"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="109.05,-198.88 111.5,-205.88 113.95,-198.88 109.05,-198.88"/>
+</g>
+<g id="node10" class="node">
+<title>U2</title>
+<path fill="#6b7280" stroke="#6b7280" d="M434,-246C434,-246 284,-246 284,-246 278,-246 272,-240 272,-234 272,-234 272,-218 272,-218 272,-212 278,-206 284,-206 284,-206 434,-206 434,-206 440,-206 446,-212 446,-218 446,-218 446,-234 446,-234 446,-240 440,-246 434,-246"/>
+<text text-anchor="middle" x="359" y="-229.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Limit increases and cuts,</text>
+<text text-anchor="middle" x="359" y="-216.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">cross&#45;sell, IRB PD pools</text>
+</g>
+<g id="edge10" class="edge">
+<title>BehS&#45;&gt;U2</title>
+<path fill="none" stroke="#4b5563" d="M359,-156.39C359,-170.44 359,-184.49 359,-198.53"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="356.55,-198.88 359,-205.88 361.45,-198.88 356.55,-198.88"/>
+</g>
+<g id="node11" class="node">
+<title>U3</title>
+<path fill="#6b7280" stroke="#6b7280" d="M702,-246C702,-246 567,-246 567,-246 561,-246 555,-240 555,-234 555,-234 555,-218 555,-218 555,-212 561,-206 567,-206 567,-206 702,-206 702,-206 708,-206 714,-212 714,-218 714,-218 714,-234 714,-234 714,-240 708,-246 702,-246"/>
+<text text-anchor="middle" x="634.5" y="-229.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Who to call first,</text>
+<text text-anchor="middle" x="634.5" y="-216.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">soft or hard treatment</text>
+</g>
+<g id="edge11" class="edge">
+<title>ColS&#45;&gt;U3</title>
+<path fill="none" stroke="#4b5563" d="M634.5,-155.52C634.5,-169.96 634.5,-184.39 634.5,-198.82"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="632.05,-198.9 634.5,-205.9 636.95,-198.9 632.05,-198.9"/>
+</g>
+<g id="node12" class="node">
+<title>U4</title>
+<path fill="#6b7280" stroke="#6b7280" d="M946.5,-246C946.5,-246 799.5,-246 799.5,-246 793.5,-246 787.5,-240 787.5,-234 787.5,-234 787.5,-218 787.5,-218 787.5,-212 793.5,-206 799.5,-206 799.5,-206 946.5,-206 946.5,-206 952.5,-206 958.5,-212 958.5,-218 958.5,-218 958.5,-234 958.5,-234 958.5,-240 952.5,-246 946.5,-246"/>
+<text text-anchor="middle" x="873" y="-229.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Keep in house, agency,</text>
+<text text-anchor="middle" x="873" y="-216.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">legal action or debt sale</text>
+</g>
+<g id="edge12" class="edge">
+<title>RecS&#45;&gt;U4</title>
+<path fill="none" stroke="#4b5563" d="M873,-155.52C873,-169.96 873,-184.39 873,-198.82"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="870.55,-198.9 873,-205.9 875.45,-198.9 870.55,-198.9"/>
+</g>
+</g>
+</svg>

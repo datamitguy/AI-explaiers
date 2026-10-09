@@ -1,0 +1,124 @@
+<svg width="100%"
+ viewBox="0.00 0.00 822.80 531.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 517.4)">
+<title>ThreeLines</title>
+<polygon fill="white" stroke="transparent" points="-14.4,14.4 -14.4,-517.4 808.4,-517.4 808.4,14.4 -14.4,14.4"/>
+<g id="clust1" class="cluster">
+<title>cluster_l1</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M335,-8C335,-8 523,-8 523,-8 529,-8 535,-14 535,-20 535,-20 535,-193.5 535,-193.5 535,-199.5 529,-205.5 523,-205.5 523,-205.5 335,-205.5 335,-205.5 329,-205.5 323,-199.5 323,-193.5 323,-193.5 323,-20 323,-20 323,-14 329,-8 335,-8"/>
+<text text-anchor="middle" x="429" y="-191.1" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">First line: owns the risk</text>
+</g>
+<g id="clust2" class="cluster">
+<title>cluster_l2</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M20,-8C20,-8 268,-8 268,-8 274,-8 280,-14 280,-20 280,-20 280,-200 280,-200 280,-206 274,-212 268,-212 268,-212 20,-212 20,-212 14,-212 8,-206 8,-200 8,-200 8,-20 8,-20 8,-14 14,-8 20,-8"/>
+<text text-anchor="middle" x="144" y="-197.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">Second line: challenges and sets rules</text>
+</g>
+<g id="clust3" class="cluster">
+<title>cluster_l3</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M555,-99C555,-99 774,-99 774,-99 780,-99 786,-105 786,-111 786,-111 786,-200 786,-200 786,-206 780,-212 774,-212 774,-212 555,-212 555,-212 549,-212 543,-206 543,-200 543,-200 543,-111 543,-111 543,-105 549,-99 555,-99"/>
+<text text-anchor="middle" x="664.5" y="-197.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">Third line: independent assurance</text>
+</g>
+<g id="node1" class="node">
+<title>Board</title>
+<path fill="#1f2937" stroke="#1f2937" d="M660.5,-401C660.5,-401 417.5,-401 417.5,-401 411.5,-401 405.5,-395 405.5,-389 405.5,-389 405.5,-357 405.5,-357 405.5,-351 411.5,-345 417.5,-345 417.5,-345 660.5,-345 660.5,-345 666.5,-345 672.5,-351 672.5,-357 672.5,-357 672.5,-389 672.5,-389 672.5,-395 666.5,-401 660.5,-401"/>
+<text text-anchor="middle" x="539" y="-383.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="white">Board of directors</text>
+<text text-anchor="middle" x="539" y="-369.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="white">and board risk committee</text>
+<text text-anchor="middle" x="539" y="-355.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="white">(sets appetite, oversees everything)</text>
+</g>
+<g id="node2" class="node">
+<title>Exec</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M542.5,-304C542.5,-304 337.5,-304 337.5,-304 331.5,-304 325.5,-298 325.5,-292 325.5,-292 325.5,-263 325.5,-263 325.5,-257 331.5,-251 337.5,-251 337.5,-251 542.5,-251 542.5,-251 548.5,-251 554.5,-257 554.5,-263 554.5,-263 554.5,-292 554.5,-292 554.5,-298 548.5,-304 542.5,-304"/>
+<text text-anchor="middle" x="440" y="-287.4" font-family="Helvetica,sans-Serif" font-size="12.00">Executive management</text>
+<text text-anchor="middle" x="440" y="-274.4" font-family="Helvetica,sans-Serif" font-size="12.00">(chief executive, chief risk officer,</text>
+<text text-anchor="middle" x="440" y="-261.4" font-family="Helvetica,sans-Serif" font-size="12.00">chief financial officer)</text>
+</g>
+<g id="edge3" class="edge">
+<title>Board&#45;&gt;Exec</title>
+<path fill="none" stroke="#4b5563" d="M510.37,-344.96C498.47,-333.72 484.61,-320.64 472.36,-309.06"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="473.98,-307.22 467.21,-304.2 470.62,-310.79 473.98,-307.22"/>
+</g>
+<g id="node7" class="node">
+<title>L3</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M763,-160C763,-160 563,-160 563,-160 557,-160 551,-154 551,-148 551,-148 551,-119 551,-119 551,-113 557,-107 563,-107 563,-107 763,-107 763,-107 769,-107 775,-113 775,-119 775,-119 775,-148 775,-148 775,-154 769,-160 763,-160"/>
+<text text-anchor="middle" x="663" y="-143.4" font-family="Helvetica,sans-Serif" font-size="12.00">Internal audit</text>
+<text text-anchor="middle" x="663" y="-130.4" font-family="Helvetica,sans-Serif" font-size="12.00">(reports to the board audit</text>
+<text text-anchor="middle" x="663" y="-117.4" font-family="Helvetica,sans-Serif" font-size="12.00">committee, not to management)</text>
+</g>
+<g id="edge6" class="edge">
+<title>Board&#45;&gt;L3</title>
+<path fill="none" stroke="#4b5563" d="M553.22,-344.76C576.25,-300.65 621.59,-213.82 646.18,-166.72"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="648.44,-167.68 649.51,-160.34 644.1,-165.42 648.44,-167.68"/>
+<text text-anchor="middle" x="650.5" y="-280.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> audit committee</text>
+<text text-anchor="middle" x="650.5" y="-269.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> appoints and hears</text>
+</g>
+<g id="node3" class="node">
+<title>L1a</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M509.5,-153.5C509.5,-153.5 370.5,-153.5 370.5,-153.5 364.5,-153.5 358.5,-147.5 358.5,-141.5 358.5,-141.5 358.5,-125.5 358.5,-125.5 358.5,-119.5 364.5,-113.5 370.5,-113.5 370.5,-113.5 509.5,-113.5 509.5,-113.5 515.5,-113.5 521.5,-119.5 521.5,-125.5 521.5,-125.5 521.5,-141.5 521.5,-141.5 521.5,-147.5 515.5,-153.5 509.5,-153.5"/>
+<text text-anchor="middle" x="440" y="-136.9" font-family="Helvetica,sans-Serif" font-size="12.00">Relationship managers</text>
+<text text-anchor="middle" x="440" y="-123.9" font-family="Helvetica,sans-Serif" font-size="12.00">and front&#45;office teams</text>
+</g>
+<g id="edge4" class="edge">
+<title>Exec&#45;&gt;L1a</title>
+<path fill="none" stroke="#4b5563" d="M440,-250.78C440,-225.33 440,-186.53 440,-160.85"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="442.45,-160.66 440,-153.66 437.55,-160.66 442.45,-160.66"/>
+<text text-anchor="middle" x="464.5" y="-223" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> manages</text>
+</g>
+<g id="node5" class="node">
+<title>L2a</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M235.5,-160C235.5,-160 52.5,-160 52.5,-160 46.5,-160 40.5,-154 40.5,-148 40.5,-148 40.5,-119 40.5,-119 40.5,-113 46.5,-107 52.5,-107 52.5,-107 235.5,-107 235.5,-107 241.5,-107 247.5,-113 247.5,-119 247.5,-119 247.5,-148 247.5,-148 247.5,-154 241.5,-160 235.5,-160"/>
+<text text-anchor="middle" x="144" y="-143.4" font-family="Helvetica,sans-Serif" font-size="12.00">Credit risk function</text>
+<text text-anchor="middle" x="144" y="-130.4" font-family="Helvetica,sans-Serif" font-size="12.00">(independent approval, policy,</text>
+<text text-anchor="middle" x="144" y="-117.4" font-family="Helvetica,sans-Serif" font-size="12.00">portfolio monitoring)</text>
+</g>
+<g id="edge5" class="edge">
+<title>Exec&#45;&gt;L2a</title>
+<path fill="none" stroke="#4b5563" d="M325.22,-253.06C305.63,-247.12 285.85,-239.84 268,-231 233.46,-213.89 199.27,-186.26 175.56,-164.95"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="177.2,-163.12 170.37,-160.23 173.9,-166.75 177.2,-163.12"/>
+<text text-anchor="middle" x="292.5" y="-223" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> manages</text>
+</g>
+<g id="node4" class="node">
+<title>L1b</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M515,-56C515,-56 343,-56 343,-56 337,-56 331,-50 331,-44 331,-44 331,-28 331,-28 331,-22 337,-16 343,-16 343,-16 515,-16 515,-16 521,-16 527,-22 527,-28 527,-28 527,-44 527,-44 527,-50 521,-56 515,-56"/>
+<text text-anchor="middle" x="429" y="-39.4" font-family="Helvetica,sans-Serif" font-size="12.00">Business line controls</text>
+<text text-anchor="middle" x="429" y="-26.4" font-family="Helvetica,sans-Serif" font-size="12.00">(checklists, four&#45;eyes, limits)</text>
+</g>
+<g id="edge7" class="edge">
+<title>L2a&#45;&gt;L1a</title>
+<path fill="none" stroke="#4b5563" d="M254.82,-133.5C289.19,-133.5 326.44,-133.5 358.44,-133.5"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="254.53,-131.05 247.53,-133.5 254.53,-135.95 254.53,-131.05"/>
+<text text-anchor="middle" x="303" y="-150.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> challenges,</text>
+<text text-anchor="middle" x="303" y="-139.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> approves, limits</text>
+</g>
+<g id="node6" class="node">
+<title>L2b</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M217.5,-56C217.5,-56 70.5,-56 70.5,-56 64.5,-56 58.5,-50 58.5,-44 58.5,-44 58.5,-28 58.5,-28 58.5,-22 64.5,-16 70.5,-16 70.5,-16 217.5,-16 217.5,-16 223.5,-16 229.5,-22 229.5,-28 229.5,-28 229.5,-44 229.5,-44 229.5,-50 223.5,-56 217.5,-56"/>
+<text text-anchor="middle" x="144" y="-39.4" font-family="Helvetica,sans-Serif" font-size="12.00">Compliance, model risk,</text>
+<text text-anchor="middle" x="144" y="-26.4" font-family="Helvetica,sans-Serif" font-size="12.00">operational risk</text>
+</g>
+<g id="edge8" class="edge">
+<title>L3&#45;&gt;L1b</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M600.29,-106.91C563.61,-91.94 517.79,-73.24 482.77,-58.94"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="483.32,-56.52 475.91,-56.15 481.47,-61.06 483.32,-56.52"/>
+<text text-anchor="middle" x="563" y="-79" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> audits</text>
+</g>
+<g id="edge9" class="edge">
+<title>L3&#45;&gt;L2a</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M631.51,-160.08C608.39,-177.77 575.33,-199.46 542,-209 445.44,-236.65 414.3,-229.63 316,-209 274.11,-200.21 229.96,-180.59 196.88,-163.55"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="197.76,-161.24 190.42,-160.18 195.49,-165.59 197.76,-161.24"/>
+<text text-anchor="middle" x="341" y="-223" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> audits</text>
+</g>
+<g id="node8" class="node">
+<title>Ext</title>
+<path fill="#6b7280" stroke="#6b7280" d="M619,-503C619,-503 459,-503 459,-503 453,-503 447,-497 447,-491 447,-491 447,-475 447,-475 447,-469 453,-463 459,-463 459,-463 619,-463 619,-463 625,-463 631,-469 631,-475 631,-475 631,-491 631,-491 631,-497 625,-503 619,-503"/>
+<text text-anchor="middle" x="539" y="-486.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">External parties:</text>
+<text text-anchor="middle" x="539" y="-473.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">regulator, external auditor</text>
+</g>
+<g id="edge10" class="edge">
+<title>Ext&#45;&gt;Board</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M539,-462.94C539,-448 539,-426.8 539,-408.85"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="541.45,-408.38 539,-401.38 536.55,-408.38 541.45,-408.38"/>
+<text text-anchor="middle" x="571.5" y="-435" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> inspects and</text>
+<text text-anchor="middle" x="571.5" y="-424" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> reports to</text>
+</g>
+</g>
+</svg>

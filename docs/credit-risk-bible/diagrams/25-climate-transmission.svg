@@ -1,0 +1,162 @@
+<svg width="100%"
+ viewBox="0.00 0.00 714.80 429.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 415.4)">
+<title>ClimateTransmission</title>
+<polygon fill="white" stroke="transparent" points="-14.4,14.4 -14.4,-415.4 700.4,-415.4 700.4,14.4 -14.4,14.4"/>
+<g id="clust1" class="cluster">
+<title>cluster_drivers</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M20,-266C20,-266 502,-266 502,-266 508,-266 514,-272 514,-278 514,-278 514,-345 514,-345 514,-351 508,-357 502,-357 502,-357 20,-357 20,-357 14,-357 8,-351 8,-345 8,-345 8,-278 8,-278 8,-272 14,-266 20,-266"/>
+<text text-anchor="middle" x="261" y="-342.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">Two kinds of climate risk driver</text>
+</g>
+<g id="clust2" class="cluster">
+<title>cluster_channels</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M44,-167C44,-167 666,-167 666,-167 672,-167 678,-173 678,-179 678,-179 678,-246 678,-246 678,-252 672,-258 666,-258 666,-258 44,-258 44,-258 38,-258 32,-252 32,-246 32,-246 32,-179 32,-179 32,-173 38,-167 44,-167"/>
+<text text-anchor="middle" x="355" y="-243.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">Transmission into borrowers and collateral</text>
+</g>
+<g id="clust4" class="cluster">
+<title>cluster_credit</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M195,-81C195,-81 631,-81 631,-81 637,-81 643,-87 643,-93 643,-93 643,-147 643,-147 643,-153 637,-159 631,-159 631,-159 195,-159 195,-159 189,-159 183,-153 183,-147 183,-147 183,-93 183,-93 183,-87 189,-81 195,-81"/>
+<text text-anchor="middle" x="413" y="-144.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">Credit risk parameters</text>
+</g>
+<g id="node1" class="node">
+<title>Start</title>
+<path fill="#1f2937" stroke="#1f2937" d="M302,-401C302,-401 206,-401 206,-401 200,-401 194,-395 194,-389 194,-389 194,-377 194,-377 194,-371 200,-365 206,-365 206,-365 302,-365 302,-365 308,-365 314,-371 314,-377 314,-377 314,-389 314,-389 314,-395 308,-401 302,-401"/>
+<text text-anchor="middle" x="254" y="-379.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Climate change</text>
+</g>
+<g id="node2" class="node">
+<title>Phys</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M223.5,-327C223.5,-327 28.5,-327 28.5,-327 22.5,-327 16.5,-321 16.5,-315 16.5,-315 16.5,-286 16.5,-286 16.5,-280 22.5,-274 28.5,-274 28.5,-274 223.5,-274 223.5,-274 229.5,-274 235.5,-280 235.5,-286 235.5,-286 235.5,-315 235.5,-315 235.5,-321 229.5,-327 223.5,-327"/>
+<text text-anchor="middle" x="126" y="-310.4" font-family="Helvetica,sans-Serif" font-size="12.00">Physical risk</text>
+<text text-anchor="middle" x="126" y="-297.4" font-family="Helvetica,sans-Serif" font-size="12.00">acute: floods, storms, wildfires</text>
+<text text-anchor="middle" x="126" y="-284.4" font-family="Helvetica,sans-Serif" font-size="12.00">chronic: sea level, drought, heat</text>
+</g>
+<g id="edge5" class="edge">
+<title>Start&#45;&gt;Phys</title>
+<path fill="none" stroke="#4b5563" d="M226.85,-364.93C211.16,-355.06 190.99,-342.37 172.81,-330.94"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="173.96,-328.77 166.73,-327.12 171.35,-332.92 173.96,-328.77"/>
+</g>
+<g id="node3" class="node">
+<title>Tran</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M493.5,-327C493.5,-327 272.5,-327 272.5,-327 266.5,-327 260.5,-321 260.5,-315 260.5,-315 260.5,-286 260.5,-286 260.5,-280 266.5,-274 272.5,-274 272.5,-274 493.5,-274 493.5,-274 499.5,-274 505.5,-280 505.5,-286 505.5,-286 505.5,-315 505.5,-315 505.5,-321 499.5,-327 493.5,-327"/>
+<text text-anchor="middle" x="383" y="-310.4" font-family="Helvetica,sans-Serif" font-size="12.00">Transition risk</text>
+<text text-anchor="middle" x="383" y="-297.4" font-family="Helvetica,sans-Serif" font-size="12.00">carbon prices, regulation,</text>
+<text text-anchor="middle" x="383" y="-284.4" font-family="Helvetica,sans-Serif" font-size="12.00">technology shifts, customer demand</text>
+</g>
+<g id="edge6" class="edge">
+<title>Start&#45;&gt;Tran</title>
+<path fill="none" stroke="#4b5563" d="M281.36,-364.93C297.17,-355.06 317.51,-342.37 335.82,-330.94"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="337.31,-332.9 341.95,-327.12 334.72,-328.74 337.31,-332.9"/>
+</g>
+<g id="node4" class="node">
+<title>B1</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M657.5,-228C657.5,-228 454.5,-228 454.5,-228 448.5,-228 442.5,-222 442.5,-216 442.5,-216 442.5,-187 442.5,-187 442.5,-181 448.5,-175 454.5,-175 454.5,-175 657.5,-175 657.5,-175 663.5,-175 669.5,-181 669.5,-187 669.5,-187 669.5,-216 669.5,-216 669.5,-222 663.5,-228 657.5,-228"/>
+<text text-anchor="middle" x="556" y="-211.4" font-family="Helvetica,sans-Serif" font-size="12.00">Borrower cash flow falls</text>
+<text text-anchor="middle" x="556" y="-198.4" font-family="Helvetica,sans-Serif" font-size="12.00">damage, lost output,</text>
+<text text-anchor="middle" x="556" y="-185.4" font-family="Helvetica,sans-Serif" font-size="12.00">higher insurance and energy cost</text>
+</g>
+<g id="edge7" class="edge">
+<title>Phys&#45;&gt;B1</title>
+<path fill="none" stroke="#4b5563" d="M209.47,-273.93C222.27,-270.78 235.42,-267.98 248,-266 327.98,-253.42 351.15,-276.41 430,-258 454.89,-252.19 480.98,-241.55 502.91,-231.12"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="504.04,-233.3 509.28,-228.05 501.91,-228.89 504.04,-233.3"/>
+</g>
+<g id="node6" class="node">
+<title>C1</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M200,-228C200,-228 52,-228 52,-228 46,-228 40,-222 40,-216 40,-216 40,-187 40,-187 40,-181 46,-175 52,-175 52,-175 200,-175 200,-175 206,-175 212,-181 212,-187 212,-187 212,-216 212,-216 212,-222 206,-228 200,-228"/>
+<text text-anchor="middle" x="126" y="-211.4" font-family="Helvetica,sans-Serif" font-size="12.00">Collateral value falls</text>
+<text text-anchor="middle" x="126" y="-198.4" font-family="Helvetica,sans-Serif" font-size="12.00">flood&#45;prone house,</text>
+<text text-anchor="middle" x="126" y="-185.4" font-family="Helvetica,sans-Serif" font-size="12.00">inefficient office building</text>
+</g>
+<g id="edge8" class="edge">
+<title>Phys&#45;&gt;C1</title>
+<path fill="none" stroke="#4b5563" d="M126,-273.76C126,-261.94 126,-247.78 126,-235.21"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="128.45,-235.02 126,-228.02 123.55,-235.02 128.45,-235.02"/>
+</g>
+<g id="edge9" class="edge">
+<title>Tran&#45;&gt;B1</title>
+<path fill="none" stroke="#4b5563" d="M428.91,-273.76C452.06,-260.78 480.24,-244.98 504.17,-231.56"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="505.57,-233.58 510.48,-228.02 503.18,-229.31 505.57,-233.58"/>
+</g>
+<g id="node5" class="node">
+<title>B2</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M405,-228C405,-228 249,-228 249,-228 243,-228 237,-222 237,-216 237,-216 237,-187 237,-187 237,-181 243,-175 249,-175 249,-175 405,-175 405,-175 411,-175 417,-181 417,-187 417,-187 417,-216 417,-216 417,-222 411,-228 405,-228"/>
+<text text-anchor="middle" x="327" y="-211.4" font-family="Helvetica,sans-Serif" font-size="12.00">Borrower assets stranded</text>
+<text text-anchor="middle" x="327" y="-198.4" font-family="Helvetica,sans-Serif" font-size="12.00">coal plant, old fleet,</text>
+<text text-anchor="middle" x="327" y="-185.4" font-family="Helvetica,sans-Serif" font-size="12.00">worthless reserves</text>
+</g>
+<g id="edge10" class="edge">
+<title>Tran&#45;&gt;B2</title>
+<path fill="none" stroke="#4b5563" d="M368.14,-273.76C361.12,-261.61 352.68,-246.98 345.28,-234.16"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="347.36,-232.86 341.74,-228.02 343.11,-235.31 347.36,-232.86"/>
+</g>
+<g id="edge11" class="edge">
+<title>Tran&#45;&gt;C1</title>
+<path fill="none" stroke="#4b5563" d="M277.78,-273.97C255.62,-268.11 235.72,-262.33 225,-258 207.26,-250.83 188.73,-241.12 172.57,-231.82"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="173.54,-229.55 166.26,-228.14 171.08,-233.79 173.54,-229.55"/>
+</g>
+<g id="node7" class="node">
+<title>PD</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M440,-129C440,-129 354,-129 354,-129 348,-129 342,-123 342,-117 342,-117 342,-101 342,-101 342,-95 348,-89 354,-89 354,-89 440,-89 440,-89 446,-89 452,-95 452,-101 452,-101 452,-117 452,-117 452,-123 446,-129 440,-129"/>
+<text text-anchor="middle" x="397" y="-112.4" font-family="Helvetica,sans-Serif" font-size="12.00">Higher PD</text>
+<text text-anchor="middle" x="397" y="-99.4" font-family="Helvetica,sans-Serif" font-size="12.00">more defaults</text>
+</g>
+<g id="edge12" class="edge">
+<title>B1&#45;&gt;PD</title>
+<path fill="none" stroke="#4b5563" d="M495.44,-174.9C485.1,-169.97 474.61,-164.58 465,-159 452.03,-151.47 438.49,-142.06 426.93,-133.51"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="428.16,-131.37 421.08,-129.13 425.22,-135.29 428.16,-131.37"/>
+</g>
+<g id="node9" class="node">
+<title>EAD</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M623,-129C623,-129 489,-129 489,-129 483,-129 477,-123 477,-117 477,-117 477,-101 477,-101 477,-95 483,-89 489,-89 489,-89 623,-89 623,-89 629,-89 635,-95 635,-101 635,-101 635,-117 635,-117 635,-123 629,-129 623,-129"/>
+<text text-anchor="middle" x="556" y="-112.4" font-family="Helvetica,sans-Serif" font-size="12.00">Higher EAD</text>
+<text text-anchor="middle" x="556" y="-99.4" font-family="Helvetica,sans-Serif" font-size="12.00">drawdowns in distress</text>
+</g>
+<g id="edge13" class="edge">
+<title>B1&#45;&gt;EAD</title>
+<path fill="none" stroke="#4b5563" d="M556,-174.81C556,-162.78 556,-148.46 556,-136.35"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="558.45,-136.13 556,-129.13 553.55,-136.13 558.45,-136.13"/>
+</g>
+<g id="edge14" class="edge">
+<title>B2&#45;&gt;PD</title>
+<path fill="none" stroke="#4b5563" d="M346.87,-174.81C356.53,-162.32 368.09,-147.38 377.67,-134.99"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="379.86,-136.17 382.2,-129.13 375.98,-133.17 379.86,-136.17"/>
+</g>
+<g id="node8" class="node">
+<title>LGD</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M305,-129C305,-129 203,-129 203,-129 197,-129 191,-123 191,-117 191,-117 191,-101 191,-101 191,-95 197,-89 203,-89 203,-89 305,-89 305,-89 311,-89 317,-95 317,-101 317,-101 317,-117 317,-117 317,-123 311,-129 305,-129"/>
+<text text-anchor="middle" x="254" y="-112.4" font-family="Helvetica,sans-Serif" font-size="12.00">Higher LGD</text>
+<text text-anchor="middle" x="254" y="-99.4" font-family="Helvetica,sans-Serif" font-size="12.00">lower recoveries</text>
+</g>
+<g id="edge15" class="edge">
+<title>B2&#45;&gt;LGD</title>
+<path fill="none" stroke="#4b5563" d="M306.28,-174.81C296.11,-162.21 283.93,-147.11 273.89,-134.65"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="275.74,-133.04 269.43,-129.13 271.92,-136.12 275.74,-133.04"/>
+</g>
+<g id="edge16" class="edge">
+<title>C1&#45;&gt;LGD</title>
+<path fill="none" stroke="#4b5563" d="M162.34,-174.81C180.8,-161.76 203.06,-146.02 221.02,-133.32"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="222.64,-135.18 226.94,-129.13 219.81,-131.17 222.64,-135.18"/>
+</g>
+<g id="node10" class="node">
+<title>Out</title>
+<path fill="#991b1b" stroke="#991b1b" d="M496,-53C496,-53 298,-53 298,-53 292,-53 286,-47 286,-41 286,-41 286,-12 286,-12 286,-6 292,0 298,0 298,0 496,0 496,0 502,0 508,-6 508,-12 508,-12 508,-41 508,-41 508,-47 502,-53 496,-53"/>
+<text text-anchor="middle" x="397" y="-36.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Higher expected loss, provisions,</text>
+<text text-anchor="middle" x="397" y="-23.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">RWA and capital; concentration</text>
+<text text-anchor="middle" x="397" y="-10.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">in exposed sectors and regions</text>
+</g>
+<g id="edge17" class="edge">
+<title>PD&#45;&gt;Out</title>
+<path fill="none" stroke="#4b5563" d="M397,-88.92C397,-80.4 397,-70.11 397,-60.41"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="399.45,-60.14 397,-53.14 394.55,-60.14 399.45,-60.14"/>
+</g>
+<g id="edge18" class="edge">
+<title>LGD&#45;&gt;Out</title>
+<path fill="none" stroke="#4b5563" d="M287.89,-88.92C304.96,-79.32 326.02,-67.46 345.07,-56.73"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="346.55,-58.71 351.45,-53.14 344.15,-54.44 346.55,-58.71"/>
+</g>
+<g id="edge19" class="edge">
+<title>EAD&#45;&gt;Out</title>
+<path fill="none" stroke="#4b5563" d="M518.32,-88.92C499.1,-79.19 475.31,-67.15 453.91,-56.31"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="455,-54.12 447.65,-53.14 452.79,-58.49 455,-54.12"/>
+</g>
+</g>
+</svg>

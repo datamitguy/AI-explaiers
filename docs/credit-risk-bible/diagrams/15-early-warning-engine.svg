@@ -1,0 +1,155 @@
+<svg width="100%"
+ viewBox="0.00 0.00 758.80 779.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 765.4)">
+<title>EarlyWarningEngine</title>
+<polygon fill="white" stroke="transparent" points="-14.4,14.4 -14.4,-765.4 744.4,-765.4 744.4,14.4 -14.4,14.4"/>
+<g id="clust1" class="cluster">
+<title>cluster_fin</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M20,-497C20,-497 206,-497 206,-497 212,-497 218,-503 218,-509 218,-509 218,-731 218,-731 218,-737 212,-743 206,-743 206,-743 20,-743 20,-743 14,-743 8,-737 8,-731 8,-731 8,-509 8,-509 8,-503 14,-497 20,-497"/>
+<text text-anchor="middle" x="113" y="-728.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">Financial signals</text>
+</g>
+<g id="clust2" class="cluster">
+<title>cluster_beh</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M238,-497C238,-497 510,-497 510,-497 516,-497 522,-503 522,-509 522,-509 522,-731 522,-731 522,-737 516,-743 510,-743 510,-743 238,-743 238,-743 232,-743 226,-737 226,-731 226,-731 226,-509 226,-509 226,-503 232,-497 238,-497"/>
+<text text-anchor="middle" x="374" y="-728.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">Behavioural signals (the bank&#39;s own data)</text>
+</g>
+<g id="clust3" class="cluster">
+<title>cluster_ext</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M542,-495C542,-495 710,-495 710,-495 716,-495 722,-501 722,-507 722,-507 722,-731 722,-731 722,-737 716,-743 710,-743 710,-743 542,-743 542,-743 536,-743 530,-737 530,-731 530,-731 530,-507 530,-507 530,-501 536,-495 542,-495"/>
+<text text-anchor="middle" x="626" y="-728.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">External signals</text>
+</g>
+<g id="node1" class="node">
+<title>F1</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M198,-713C198,-713 28,-713 28,-713 22,-713 16,-707 16,-701 16,-701 16,-685 16,-685 16,-679 22,-673 28,-673 28,-673 198,-673 198,-673 204,-673 210,-679 210,-685 210,-685 210,-701 210,-701 210,-707 204,-713 198,-713"/>
+<text text-anchor="middle" x="113" y="-696.4" font-family="Helvetica,sans-Serif" font-size="12.00">Spread financial statements</text>
+<text text-anchor="middle" x="113" y="-683.4" font-family="Helvetica,sans-Serif" font-size="12.00">(margins, leverage, cover)</text>
+</g>
+<g id="node2" class="node">
+<title>F2</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M195,-626C195,-626 37,-626 37,-626 31,-626 25,-620 25,-614 25,-614 25,-602 25,-602 25,-596 31,-590 37,-590 37,-590 195,-590 195,-590 201,-590 207,-596 207,-602 207,-602 207,-614 207,-614 207,-620 201,-626 195,-626"/>
+<text text-anchor="middle" x="116" y="-604.9" font-family="Helvetica,sans-Serif" font-size="12.00">Late or qualified accounts</text>
+</g>
+<g id="node3" class="node">
+<title>F3</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M188.5,-541C188.5,-541 63.5,-541 63.5,-541 57.5,-541 51.5,-535 51.5,-529 51.5,-529 51.5,-517 51.5,-517 51.5,-511 57.5,-505 63.5,-505 63.5,-505 188.5,-505 188.5,-505 194.5,-505 200.5,-511 200.5,-517 200.5,-517 200.5,-529 200.5,-529 200.5,-535 194.5,-541 188.5,-541"/>
+<text text-anchor="middle" x="126" y="-519.9" font-family="Helvetica,sans-Serif" font-size="12.00">Covenant headroom</text>
+</g>
+<g id="node10" class="node">
+<title>Engine</title>
+<path fill="#1e3a8a" stroke="#1e3a8a" d="M472,-458C472,-458 276,-458 276,-458 270,-458 264,-452 264,-446 264,-446 264,-414 264,-414 264,-408 270,-402 276,-402 276,-402 472,-402 472,-402 478,-402 484,-408 484,-414 484,-414 484,-446 484,-446 484,-452 478,-458 472,-458"/>
+<text text-anchor="middle" x="374" y="-440.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="white">Trigger engine</text>
+<text text-anchor="middle" x="374" y="-426.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="white">rules and scores: each signal</text>
+<text text-anchor="middle" x="374" y="-412.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="white">has a threshold and a weight</text>
+</g>
+<g id="edge7" class="edge">
+<title>F3&#45;&gt;Engine</title>
+<path fill="none" stroke="#4b5563" d="M172.36,-504.99C206.28,-492.54 253.19,-475.33 293.22,-460.64"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="294.37,-462.83 300.1,-458.12 292.68,-458.23 294.37,-462.83"/>
+</g>
+<g id="node4" class="node">
+<title>B1</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M434.5,-713C434.5,-713 313.5,-713 313.5,-713 307.5,-713 301.5,-707 301.5,-701 301.5,-701 301.5,-685 301.5,-685 301.5,-679 307.5,-673 313.5,-673 313.5,-673 434.5,-673 434.5,-673 440.5,-673 446.5,-679 446.5,-685 446.5,-685 446.5,-701 446.5,-701 446.5,-707 440.5,-713 434.5,-713"/>
+<text text-anchor="middle" x="374" y="-696.4" font-family="Helvetica,sans-Serif" font-size="12.00">Overdraft excesses,</text>
+<text text-anchor="middle" x="374" y="-683.4" font-family="Helvetica,sans-Serif" font-size="12.00">limit hugging</text>
+</g>
+<g id="node5" class="node">
+<title>B2</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M477.5,-628C477.5,-628 270.5,-628 270.5,-628 264.5,-628 258.5,-622 258.5,-616 258.5,-616 258.5,-600 258.5,-600 258.5,-594 264.5,-588 270.5,-588 270.5,-588 477.5,-588 477.5,-588 483.5,-588 489.5,-594 489.5,-600 489.5,-600 489.5,-616 489.5,-616 489.5,-622 483.5,-628 477.5,-628"/>
+<text text-anchor="middle" x="374" y="-611.4" font-family="Helvetica,sans-Serif" font-size="12.00">Missed or late payments,</text>
+<text text-anchor="middle" x="374" y="-598.4" font-family="Helvetica,sans-Serif" font-size="12.00">bounced cheques, returned debits</text>
+</g>
+<g id="node6" class="node">
+<title>B3</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M458.5,-541C458.5,-541 289.5,-541 289.5,-541 283.5,-541 277.5,-535 277.5,-529 277.5,-529 277.5,-517 277.5,-517 277.5,-511 283.5,-505 289.5,-505 289.5,-505 458.5,-505 458.5,-505 464.5,-505 470.5,-511 470.5,-517 470.5,-517 470.5,-529 470.5,-529 470.5,-535 464.5,-541 458.5,-541"/>
+<text text-anchor="middle" x="374" y="-519.9" font-family="Helvetica,sans-Serif" font-size="12.00">Change in account turnover</text>
+</g>
+<g id="edge8" class="edge">
+<title>B3&#45;&gt;Engine</title>
+<path fill="none" stroke="#4b5563" d="M374,-504.88C374,-493.76 374,-478.88 374,-465.38"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="376.45,-465.06 374,-458.06 371.55,-465.06 376.45,-465.06"/>
+</g>
+<g id="node7" class="node">
+<title>E1</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M687,-713C687,-713 565,-713 565,-713 559,-713 553,-707 553,-701 553,-701 553,-685 553,-685 553,-679 559,-673 565,-673 565,-673 687,-673 687,-673 693,-673 699,-679 699,-685 699,-685 699,-701 699,-701 699,-707 693,-713 687,-713"/>
+<text text-anchor="middle" x="626" y="-696.4" font-family="Helvetica,sans-Serif" font-size="12.00">Rating downgrades,</text>
+<text text-anchor="middle" x="626" y="-683.4" font-family="Helvetica,sans-Serif" font-size="12.00">credit bureau alerts</text>
+</g>
+<g id="node8" class="node">
+<title>E2</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M684,-628C684,-628 568,-628 568,-628 562,-628 556,-622 556,-616 556,-616 556,-600 556,-600 556,-594 562,-588 568,-588 568,-588 684,-588 684,-588 690,-588 696,-594 696,-600 696,-600 696,-616 696,-616 696,-622 690,-628 684,-628"/>
+<text text-anchor="middle" x="626" y="-611.4" font-family="Helvetica,sans-Serif" font-size="12.00">News, court filings,</text>
+<text text-anchor="middle" x="626" y="-598.4" font-family="Helvetica,sans-Serif" font-size="12.00">director changes</text>
+</g>
+<g id="node9" class="node">
+<title>E3</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M701.5,-543C701.5,-543 550.5,-543 550.5,-543 544.5,-543 538.5,-537 538.5,-531 538.5,-531 538.5,-515 538.5,-515 538.5,-509 544.5,-503 550.5,-503 550.5,-503 701.5,-503 701.5,-503 707.5,-503 713.5,-509 713.5,-515 713.5,-515 713.5,-531 713.5,-531 713.5,-537 707.5,-543 701.5,-543"/>
+<text text-anchor="middle" x="626" y="-526.4" font-family="Helvetica,sans-Serif" font-size="12.00">Share price, CDS spread,</text>
+<text text-anchor="middle" x="626" y="-513.4" font-family="Helvetica,sans-Serif" font-size="12.00">sector stress indices</text>
+</g>
+<g id="edge9" class="edge">
+<title>E3&#45;&gt;Engine</title>
+<path fill="none" stroke="#4b5563" d="M573.17,-502.92C539.2,-490.66 494.37,-474.47 455.84,-460.55"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="456.64,-458.24 449.22,-458.16 454.97,-462.85 456.64,-458.24"/>
+</g>
+<g id="node11" class="node">
+<title>Case</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M457.5,-357C457.5,-357 290.5,-357 290.5,-357 284.5,-357 278.5,-351 278.5,-345 278.5,-345 278.5,-316 278.5,-316 278.5,-310 284.5,-304 290.5,-304 290.5,-304 457.5,-304 457.5,-304 463.5,-304 469.5,-310 469.5,-316 469.5,-316 469.5,-345 469.5,-345 469.5,-351 463.5,-357 457.5,-357"/>
+<text text-anchor="middle" x="374" y="-340.4" font-family="Helvetica,sans-Serif" font-size="12.00">Case created</text>
+<text text-anchor="middle" x="374" y="-327.4" font-family="Helvetica,sans-Serif" font-size="12.00">assigned to the relationship</text>
+<text text-anchor="middle" x="374" y="-314.4" font-family="Helvetica,sans-Serif" font-size="12.00">manager and credit officer</text>
+</g>
+<g id="edge10" class="edge">
+<title>Engine&#45;&gt;Case</title>
+<path fill="none" stroke="#4b5563" d="M374,-401.84C374,-390.27 374,-376.66 374,-364.52"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="376.45,-364.17 374,-357.17 371.55,-364.17 376.45,-364.17"/>
+</g>
+<g id="node12" class="node">
+<title>Q</title>
+<polygon fill="#fef3c7" stroke="#d97706" points="374,-259 255,-225 374,-191 493,-225 374,-259"/>
+<text text-anchor="middle" x="374" y="-228.4" font-family="Helvetica,sans-Serif" font-size="12.00">Assessment within</text>
+<text text-anchor="middle" x="374" y="-215.4" font-family="Helvetica,sans-Serif" font-size="12.00">the agreed days</text>
+</g>
+<g id="edge11" class="edge">
+<title>Case&#45;&gt;Q</title>
+<path fill="none" stroke="#4b5563" d="M374,-303.92C374,-292.61 374,-279.03 374,-266.41"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="376.45,-266.11 374,-259.11 371.55,-266.11 376.45,-266.11"/>
+</g>
+<g id="node13" class="node">
+<title>False</title>
+<path fill="#065f46" stroke="#065f46" d="M385.5,-125C385.5,-125 268.5,-125 268.5,-125 262.5,-125 256.5,-119 256.5,-113 256.5,-113 256.5,-97 256.5,-97 256.5,-91 262.5,-85 268.5,-85 268.5,-85 385.5,-85 385.5,-85 391.5,-85 397.5,-91 397.5,-97 397.5,-97 397.5,-113 397.5,-113 397.5,-119 391.5,-125 385.5,-125"/>
+<text text-anchor="middle" x="327" y="-108.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">False alarm: closed</text>
+<text text-anchor="middle" x="327" y="-95.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">with a reason code</text>
+</g>
+<g id="edge12" class="edge">
+<title>Q&#45;&gt;False</title>
+<path fill="none" stroke="#4b5563" d="M362.14,-194.22C354.51,-175.06 344.68,-150.38 337.36,-132.01"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="339.45,-130.65 334.59,-125.05 334.9,-132.46 339.45,-130.65"/>
+<text text-anchor="middle" x="384.5" y="-161" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> no real</text>
+<text text-anchor="middle" x="384.5" y="-150" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> deterioration</text>
+</g>
+<g id="node14" class="node">
+<title>Watch</title>
+<path fill="#991b1b" stroke="#991b1b" d="M624,-125C624,-125 432,-125 432,-125 426,-125 420,-119 420,-113 420,-113 420,-97 420,-97 420,-91 426,-85 432,-85 432,-85 624,-85 624,-85 630,-85 636,-91 636,-97 636,-97 636,-113 636,-113 636,-119 630,-125 624,-125"/>
+<text text-anchor="middle" x="528" y="-108.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Added to the watchlist</text>
+<text text-anchor="middle" x="528" y="-95.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">with a category and action plan</text>
+</g>
+<g id="edge13" class="edge">
+<title>Q&#45;&gt;Watch</title>
+<path fill="none" stroke="#4b5563" d="M405.54,-199.84C432.37,-179.28 470.68,-149.92 497.28,-129.54"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="499.04,-131.28 503.1,-125.08 496.06,-127.39 499.04,-131.28"/>
+<text text-anchor="middle" x="506.5" y="-161" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> real</text>
+<text text-anchor="middle" x="506.5" y="-150" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> deterioration</text>
+</g>
+<g id="node15" class="node">
+<title>IFRS</title>
+<path fill="#6b7280" stroke="#6b7280" d="M588.5,-40C588.5,-40 467.5,-40 467.5,-40 461.5,-40 455.5,-34 455.5,-28 455.5,-28 455.5,-12 455.5,-12 455.5,-6 461.5,0 467.5,0 467.5,0 588.5,0 588.5,0 594.5,0 600.5,-6 600.5,-12 600.5,-12 600.5,-28 600.5,-28 600.5,-34 594.5,-40 588.5,-40"/>
+<text text-anchor="middle" x="528" y="-23.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Feeds the IFRS 9</text>
+<text text-anchor="middle" x="528" y="-10.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">stage 2 assessment</text>
+</g>
+<g id="edge14" class="edge">
+<title>Watch&#45;&gt;IFRS</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M528,-84.75C528,-73.65 528,-59.52 528,-47.4"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="530.45,-47.15 528,-40.15 525.55,-47.15 530.45,-47.15"/>
+</g>
+</g>
+</svg>

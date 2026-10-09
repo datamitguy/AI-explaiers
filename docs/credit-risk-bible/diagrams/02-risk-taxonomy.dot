@@ -1,0 +1,28 @@
+digraph RiskTaxonomy {
+  graph [rankdir=LR, splines=true, ordering=out, nodesep=0.2, ranksep=0.7, fontname="Helvetica", fontsize=13, bgcolor="white", newrank=true, pad=0.2];
+  node  [shape=box, style="rounded,filled", fillcolor="#eef2ff", color="#6366f1", fontname="Helvetica", fontsize=12, margin="0.18,0.10"];
+  edge  [color="#4b5563", arrowsize=0.7, fontname="Helvetica", fontsize=10, fontcolor="#374151"];
+
+  Root [label="Risks a bank faces", fillcolor="#1f2937", fontcolor="white", color="#1f2937"];
+
+  Credit [label="Credit risk\nsomeone we lent to or dealt with\ndoes not pay", fillcolor="#1e3a8a", fontcolor="white", color="#1e3a8a"];
+  Market [label="Market risk\nprices and rates move against us", fillcolor="#6b7280", fontcolor="white", color="#6b7280"];
+  Op     [label="Operational risk\npeople, process, systems, fraud, cyber", fillcolor="#6b7280", fontcolor="white", color="#6b7280"];
+  Liq    [label="Liquidity risk\ncannot find cash on the day it is needed", fillcolor="#6b7280", fontcolor="white", color="#6b7280"];
+  Other  [label="Other: strategic, reputational,\nclimate, conduct, model", fillcolor="#6b7280", fontcolor="white", color="#6b7280"];
+
+  Root -> Credit; Root -> Market; Root -> Op; Root -> Liq; Root -> Other;
+
+  subgraph cluster_credit {
+    label="Flavours of credit risk"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
+    Borrower [label="Borrower risk\na loan customer defaults"];
+    Issuer   [label="Issuer risk\na bond we hold is not repaid"];
+    Cpty     [label="Counterparty risk\nthe other side of a derivative\nor repo fails mid-contract"];
+    Settle   [label="Settlement risk\nwe pay our half, they never deliver theirs"];
+    Conc     [label="Concentration risk\ntoo many eggs in one basket:\nname, sector, country"];
+    Country  [label="Country and sovereign risk\na government or whole economy fails"];
+  }
+
+  Credit -> Borrower; Credit -> Issuer; Credit -> Cpty;
+  Credit -> Settle; Credit -> Conc; Credit -> Country;
+}

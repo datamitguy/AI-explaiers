@@ -1,0 +1,182 @@
+<svg width="100%"
+ viewBox="0.00 0.00 1281.80 656.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 642.4)">
+<title>BaselEligibility</title>
+<polygon fill="white" stroke="transparent" points="-14.4,14.4 -14.4,-642.4 1267.4,-642.4 1267.4,14.4 -14.4,14.4"/>
+<g id="clust1" class="cluster">
+<title>cluster_fin</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M20,-146C20,-146 484,-146 484,-146 490,-146 496,-152 496,-158 496,-158 496,-340 496,-340 496,-346 490,-352 484,-352 484,-352 20,-352 20,-352 14,-352 8,-346 8,-340 8,-340 8,-158 8,-158 8,-152 14,-146 20,-146"/>
+<text text-anchor="middle" x="252" y="-337.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">Financial collateral (cash, gold, eligible bonds, listed shares)</text>
+</g>
+<g id="clust2" class="cluster">
+<title>cluster_phys</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M517,-146C517,-146 1233,-146 1233,-146 1239,-146 1245,-152 1245,-158 1245,-158 1245,-324 1245,-324 1245,-330 1239,-336 1233,-336 1233,-336 517,-336 517,-336 511,-336 505,-330 505,-324 505,-324 505,-158 505,-158 505,-152 511,-146 517,-146"/>
+<text text-anchor="middle" x="875" y="-321.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">Physical collateral and receivables</text>
+</g>
+<g id="node1" class="node">
+<title>Start</title>
+<path fill="#1f2937" stroke="#1f2937" d="M462.5,-628C462.5,-628 285.5,-628 285.5,-628 279.5,-628 273.5,-622 273.5,-616 273.5,-616 273.5,-604 273.5,-604 273.5,-598 279.5,-592 285.5,-592 285.5,-592 462.5,-592 462.5,-592 468.5,-592 474.5,-598 474.5,-604 474.5,-604 474.5,-616 474.5,-616 474.5,-622 468.5,-628 462.5,-628"/>
+<text text-anchor="middle" x="374" y="-606.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Collateral held against a loan</text>
+</g>
+<g id="node2" class="node">
+<title>Legal</title>
+<polygon fill="#fef3c7" stroke="#d97706" points="374,-555 169,-521 374,-487 579,-521 374,-555"/>
+<text text-anchor="middle" x="374" y="-524.4" font-family="Helvetica,sans-Serif" font-size="12.00">Legally enforceable in every</text>
+<text text-anchor="middle" x="374" y="-511.4" font-family="Helvetica,sans-Serif" font-size="12.00">relevant country, and perfected?</text>
+</g>
+<g id="edge1" class="edge">
+<title>Start&#45;&gt;Legal</title>
+<path fill="none" stroke="#4b5563" d="M374,-591.81C374,-583.28 374,-572.59 374,-562.16"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="376.45,-562 374,-555 371.55,-562 376.45,-562"/>
+</g>
+<g id="node3" class="node">
+<title>NoCredit</title>
+<path fill="#991b1b" stroke="#991b1b" d="M439,-440C439,-440 263,-440 263,-440 257,-440 251,-434 251,-428 251,-428 251,-412 251,-412 251,-406 257,-400 263,-400 263,-400 439,-400 439,-400 445,-400 451,-406 451,-412 451,-412 451,-428 451,-428 451,-434 445,-440 439,-440"/>
+<text text-anchor="middle" x="351" y="-423.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">No regulatory credit at all</text>
+<text text-anchor="middle" x="351" y="-410.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">(treat the loan as unsecured)</text>
+</g>
+<g id="edge2" class="edge">
+<title>Legal&#45;&gt;NoCredit</title>
+<path fill="none" stroke="#4b5563" d="M366.6,-488.13C363.52,-474.9 360,-459.74 357.08,-447.17"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="359.41,-446.37 355.44,-440.11 354.64,-447.48 359.41,-446.37"/>
+<text text-anchor="middle" x="369" y="-461" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> no</text>
+</g>
+<g id="node4" class="node">
+<title>Type</title>
+<polygon fill="#fef3c7" stroke="#d97706" points="607,-438 476.33,-420 607,-402 737.67,-420 607,-438"/>
+<text text-anchor="middle" x="607" y="-416.9" font-family="Helvetica,sans-Serif" font-size="12.00">What kind of collateral?</text>
+</g>
+<g id="edge3" class="edge">
+<title>Legal&#45;&gt;Type</title>
+<path fill="none" stroke="#4b5563" d="M430.11,-496.16C473.46,-477.74 532.24,-452.77 569.9,-436.76"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="571.19,-438.88 576.68,-433.88 569.28,-434.37 571.19,-438.88"/>
+<text text-anchor="middle" x="528.5" y="-461" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> yes</text>
+</g>
+<g id="node5" class="node">
+<title>Approach</title>
+<polygon fill="#fef3c7" stroke="#d97706" points="350,-322 212,-288 350,-254 488,-288 350,-322"/>
+<text text-anchor="middle" x="350" y="-291.4" font-family="Helvetica,sans-Serif" font-size="12.00">Which approach does</text>
+<text text-anchor="middle" x="350" y="-278.4" font-family="Helvetica,sans-Serif" font-size="12.00">the bank use?</text>
+</g>
+<g id="edge9" class="edge">
+<title>Type&#45;&gt;Approach</title>
+<path fill="none" stroke="#4b5563" d="M580.46,-405.58C538.07,-384.13 454.35,-341.78 400.34,-314.46"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="401.26,-312.18 393.91,-311.21 399.05,-316.56 401.26,-312.18"/>
+<text text-anchor="middle" x="553.5" y="-368.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> financial</text>
+</g>
+<g id="node8" class="node">
+<title>SAQ</title>
+<polygon fill="#fef3c7" stroke="#d97706" points="760,-306 615.47,-288 760,-270 904.53,-288 760,-306"/>
+<text text-anchor="middle" x="760" y="-284.9" font-family="Helvetica,sans-Serif" font-size="12.00">Standardised or IRB bank?</text>
+</g>
+<g id="edge10" class="edge">
+<title>Type&#45;&gt;SAQ</title>
+<path fill="none" stroke="#4b5563" d="M624.25,-404.34C651.77,-380.96 705.63,-335.19 736.6,-308.88"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="738.35,-310.61 742.1,-304.21 735.18,-306.87 738.35,-310.61"/>
+<text text-anchor="middle" x="704" y="-374" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> physical or</text>
+<text text-anchor="middle" x="704" y="-363" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> receivables</text>
+</g>
+<g id="node6" class="node">
+<title>Simple</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M234.5,-207C234.5,-207 27.5,-207 27.5,-207 21.5,-207 15.5,-201 15.5,-195 15.5,-195 15.5,-166 15.5,-166 15.5,-160 21.5,-154 27.5,-154 27.5,-154 234.5,-154 234.5,-154 240.5,-154 246.5,-160 246.5,-166 246.5,-166 246.5,-195 246.5,-195 246.5,-201 240.5,-207 234.5,-207"/>
+<text text-anchor="middle" x="131" y="-190.4" font-family="Helvetica,sans-Serif" font-size="12.00">Simple approach (SA only)</text>
+<text text-anchor="middle" x="131" y="-177.4" font-family="Helvetica,sans-Serif" font-size="12.00">covered part takes the collateral&#39;s</text>
+<text text-anchor="middle" x="131" y="-164.4" font-family="Helvetica,sans-Serif" font-size="12.00">risk weight, 20% floor</text>
+</g>
+<g id="edge4" class="edge">
+<title>Approach&#45;&gt;Simple</title>
+<path fill="none" stroke="#4b5563" d="M304.62,-265.14C271.6,-249.23 226.56,-227.53 190.63,-210.23"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="191.4,-207.88 184.03,-207.05 189.27,-212.29 191.4,-207.88"/>
+<text text-anchor="middle" x="258.5" y="-228" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> simple</text>
+</g>
+<g id="node7" class="node">
+<title>Compr</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M476,-207C476,-207 284,-207 284,-207 278,-207 272,-201 272,-195 272,-195 272,-166 272,-166 272,-160 278,-154 284,-154 284,-154 476,-154 476,-154 482,-154 488,-160 488,-166 488,-166 488,-195 488,-195 488,-201 482,-207 476,-207"/>
+<text text-anchor="middle" x="380" y="-190.4" font-family="Helvetica,sans-Serif" font-size="12.00">Comprehensive approach</text>
+<text text-anchor="middle" x="380" y="-177.4" font-family="Helvetica,sans-Serif" font-size="12.00">subtract haircut&#45;adjusted value,</text>
+<text text-anchor="middle" x="380" y="-164.4" font-family="Helvetica,sans-Serif" font-size="12.00">risk&#45;weight the remainder</text>
+</g>
+<g id="edge5" class="edge">
+<title>Approach&#45;&gt;Compr</title>
+<path fill="none" stroke="#4b5563" d="M358.84,-255.92C362.61,-242.67 367,-227.21 370.81,-213.83"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="373.18,-214.44 372.74,-207.04 368.47,-213.1 373.18,-214.44"/>
+<text text-anchor="middle" x="405.5" y="-228" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> comprehensive</text>
+</g>
+<g id="node12" class="node">
+<title>Mismatch</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M715.5,-117C715.5,-117 536.5,-117 536.5,-117 530.5,-117 524.5,-111 524.5,-105 524.5,-105 524.5,-89 524.5,-89 524.5,-83 530.5,-77 536.5,-77 536.5,-77 715.5,-77 715.5,-77 721.5,-77 727.5,-83 727.5,-89 727.5,-89 727.5,-105 727.5,-105 727.5,-111 721.5,-117 715.5,-117"/>
+<text text-anchor="middle" x="626" y="-100.4" font-family="Helvetica,sans-Serif" font-size="12.00">Adjust for currency mismatch</text>
+<text text-anchor="middle" x="626" y="-87.4" font-family="Helvetica,sans-Serif" font-size="12.00">and maturity mismatch</text>
+</g>
+<g id="edge11" class="edge">
+<title>Simple&#45;&gt;Mismatch</title>
+<path fill="none" stroke="#4b5563" d="M223.7,-153.96C235.85,-151.05 248.19,-148.3 260,-146 345.92,-129.28 444.35,-116.73 517.48,-108.67"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="517.79,-111.1 524.48,-107.9 517.25,-106.23 517.79,-111.1"/>
+</g>
+<g id="edge12" class="edge">
+<title>Compr&#45;&gt;Mismatch</title>
+<path fill="none" stroke="#4b5563" d="M457.16,-153.94C490.84,-142.78 529.86,-129.85 561.91,-119.23"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="562.76,-121.53 568.63,-117.01 561.22,-116.88 562.76,-121.53"/>
+</g>
+<g id="node9" class="node">
+<title>SAno</title>
+<path fill="#6b7280" stroke="#6b7280" d="M729,-207C729,-207 525,-207 525,-207 519,-207 513,-201 513,-195 513,-195 513,-166 513,-166 513,-160 519,-154 525,-154 525,-154 729,-154 729,-154 735,-154 741,-160 741,-166 741,-166 741,-195 741,-195 741,-201 735,-207 729,-207"/>
+<text text-anchor="middle" x="627" y="-190.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Standardised approach:</text>
+<text text-anchor="middle" x="627" y="-177.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">no credit, except property</text>
+<text text-anchor="middle" x="627" y="-164.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">through the loan&#45;to&#45;value buckets</text>
+</g>
+<g id="edge6" class="edge">
+<title>SAQ&#45;&gt;SAno</title>
+<path fill="none" stroke="#4b5563" d="M741.23,-272.11C721.46,-256.42 689.79,-231.31 664.81,-211.49"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="666.27,-209.52 659.26,-207.09 663.22,-213.36 666.27,-209.52"/>
+<text text-anchor="middle" x="701.5" y="-228" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> SA</text>
+</g>
+<g id="node10" class="node">
+<title>FIRB</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M988,-207C988,-207 778,-207 778,-207 772,-207 766,-201 766,-195 766,-195 766,-166 766,-166 766,-160 772,-154 778,-154 778,-154 988,-154 988,-154 994,-154 1000,-160 1000,-166 1000,-166 1000,-195 1000,-195 1000,-201 994,-207 988,-207"/>
+<text text-anchor="middle" x="883" y="-190.4" font-family="Helvetica,sans-Serif" font-size="12.00">Foundation IRB:</text>
+<text text-anchor="middle" x="883" y="-177.4" font-family="Helvetica,sans-Serif" font-size="12.00">lower supervisory LGD if the</text>
+<text text-anchor="middle" x="883" y="-164.4" font-family="Helvetica,sans-Serif" font-size="12.00">collateral meets the eligibility tests</text>
+</g>
+<g id="edge7" class="edge">
+<title>SAQ&#45;&gt;FIRB</title>
+<path fill="none" stroke="#4b5563" d="M777.36,-272.11C795.51,-256.54 824.49,-231.68 847.51,-211.94"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="849.21,-213.71 852.93,-207.3 846.02,-209.99 849.21,-213.71"/>
+<text text-anchor="middle" x="843" y="-228" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> F&#45;IRB</text>
+</g>
+<g id="node11" class="node">
+<title>AIRB</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M1224.5,-207C1224.5,-207 1037.5,-207 1037.5,-207 1031.5,-207 1025.5,-201 1025.5,-195 1025.5,-195 1025.5,-166 1025.5,-166 1025.5,-160 1031.5,-154 1037.5,-154 1037.5,-154 1224.5,-154 1224.5,-154 1230.5,-154 1236.5,-160 1236.5,-166 1236.5,-166 1236.5,-195 1236.5,-195 1236.5,-201 1230.5,-207 1224.5,-207"/>
+<text text-anchor="middle" x="1131" y="-190.4" font-family="Helvetica,sans-Serif" font-size="12.00">Advanced IRB:</text>
+<text text-anchor="middle" x="1131" y="-177.4" font-family="Helvetica,sans-Serif" font-size="12.00">bank&#39;s own LGD model reflects</text>
+<text text-anchor="middle" x="1131" y="-164.4" font-family="Helvetica,sans-Serif" font-size="12.00">the collateral, within floors</text>
+</g>
+<g id="edge8" class="edge">
+<title>SAQ&#45;&gt;AIRB</title>
+<path fill="none" stroke="#4b5563" d="M801.84,-275.1C857.85,-259.17 958.89,-230.44 1034.31,-209"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="1035,-211.35 1041.06,-207.08 1033.66,-206.63 1035,-211.35"/>
+<text text-anchor="middle" x="982.5" y="-228" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> A&#45;IRB</text>
+</g>
+<g id="edge13" class="edge">
+<title>FIRB&#45;&gt;Mismatch</title>
+<path fill="none" stroke="#4b5563" d="M802.39,-153.94C767.21,-142.78 726.44,-129.85 692.96,-119.23"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="693.34,-116.79 685.93,-117.01 691.86,-121.46 693.34,-116.79"/>
+</g>
+<g id="edge14" class="edge">
+<title>AIRB&#45;&gt;Mismatch</title>
+<path fill="none" stroke="#4b5563" d="M1046.95,-153.94C1035.6,-150.99 1024.06,-148.24 1013,-146 919.93,-127.13 812.67,-114.53 734.7,-106.99"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="734.93,-104.55 727.73,-106.32 734.46,-109.43 734.93,-104.55"/>
+</g>
+<g id="node13" class="node">
+<title>End</title>
+<path fill="#065f46" stroke="#065f46" d="M705,-40C705,-40 547,-40 547,-40 541,-40 535,-34 535,-28 535,-28 535,-12 535,-12 535,-6 541,0 547,0 547,0 705,0 705,0 711,0 717,-6 717,-12 717,-12 717,-28 717,-28 717,-34 711,-40 705,-40"/>
+<text text-anchor="middle" x="626" y="-23.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Reduced exposure or LGD</text>
+<text text-anchor="middle" x="626" y="-10.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">flows into RWA</text>
+</g>
+<g id="edge15" class="edge">
+<title>Mismatch&#45;&gt;End</title>
+<path fill="none" stroke="#4b5563" d="M626,-76.69C626,-67.76 626,-57.03 626,-47.37"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="628.45,-47.25 626,-40.25 623.55,-47.25 628.45,-47.25"/>
+</g>
+</g>
+</svg>

@@ -1,0 +1,37 @@
+digraph ThreeAudiences {
+  graph [rankdir=LR, splines=true, nodesep=0.3, ranksep=0.7, fontname="Helvetica", fontsize=13, bgcolor="white", newrank=true, pad=0.2];
+  node  [shape=box, style="rounded,filled", fillcolor="#eef2ff", color="#6366f1", fontname="Helvetica", fontsize=12, margin="0.18,0.10"];
+  edge  [color="#4b5563", arrowsize=0.7, fontname="Helvetica", fontsize=10, fontcolor="#374151"];
+
+  Data [label="One set of reconciled\ncredit risk data\n(single version of the truth)", fillcolor="#1e3a8a", fontcolor="white", color="#1e3a8a"];
+
+  subgraph cluster_reg {
+    label="Audience 1: regulators"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
+    R1 [label="Capital returns\n(COREP-style)\nRWA, capital ratios, IRB detail"];
+    R2 [label="Financial returns\n(FINREP-style)\nbalance sheet, NPL, forbearance"];
+    R3 [label="Large exposures\nand stress test\nand US call report, FR Y-14 style"];
+  }
+
+  subgraph cluster_pub {
+    label="Audience 2: the public (Pillar 3)"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
+    P1 [label="Credit quality of assets,\nRWA flow statements,\nCRM effects, IRB by PD band"];
+    P2 [label="Read by investors, analysts,\nrating agencies, journalists"];
+  }
+
+  subgraph cluster_mgmt {
+    label="Audience 3: management and board"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
+    M1 [label="Credit risk dashboard\ncomposition, concentrations,\nmigration, arrears, limits"];
+    M2 [label="Board risk report\nappetite versus actual,\ntop risks, actions"];
+  }
+
+  Reg [label="Supervisor\n(checks, challenges, fines)", fillcolor="#1f2937", fontcolor="white", color="#1f2937"];
+  Mkt [label="Market discipline\n(share price, funding cost)", fillcolor="#1f2937", fontcolor="white", color="#1f2937"];
+  Dec [label="Decisions\n(limits, pricing, appetite)", fillcolor="#065f46", fontcolor="white", color="#065f46"];
+
+  Data -> {R1 R2 R3};
+  Data -> P1;
+  Data -> M1;
+  {R1 R2 R3} -> Reg;
+  P1 -> P2 -> Mkt;
+  M1 -> M2 -> Dec;
+}

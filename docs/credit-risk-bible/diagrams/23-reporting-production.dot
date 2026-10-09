@@ -1,0 +1,46 @@
+digraph ReportingProduction {
+  graph [rankdir=TB, splines=true, nodesep=0.35, ranksep=0.5, fontname="Helvetica", fontsize=13, bgcolor="white", newrank=true, pad=0.2];
+  node  [shape=box, style="rounded,filled", fillcolor="#eef2ff", color="#6366f1", fontname="Helvetica", fontsize=12, margin="0.18,0.10"];
+  edge  [color="#4b5563", arrowsize=0.7, fontname="Helvetica", fontsize=10, fontcolor="#374151"];
+
+  Start [label="Reporting date (quarter-end)\nbooks close", fillcolor="#1f2937", fontcolor="white", color="#1f2937"];
+
+  subgraph cluster_data {
+    label="Days 1 to 5: data"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
+    Snap [label="Source snapshots loaded\nto warehouse"];
+    DQ   [label="Data quality checks\nand logged adjustments"];
+    Snap -> DQ;
+  }
+
+  subgraph cluster_calc {
+    label="Days 5 to 12: calculation"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
+    Calc [label="Risk engines run\nRWA, ECL, large exposures"];
+    Recon [label="Reconcile to general ledger\nand to prior period"];
+    Calc -> Recon;
+  }
+
+  subgraph cluster_val {
+    label="Days 12 to 20: validation"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
+    Tax  [label="Template population and\ntaxonomy validation rules"];
+    Var  [label="Variance analysis\nexplain movements\nversus last quarter"];
+    Q1   [label="Movements explained and\nchecks passed?", shape=diamond, style=filled, fillcolor="#fef3c7", color="#d97706", margin="0.05,0.05"];
+    Tax -> Var -> Q1;
+  }
+
+  Invest [label="Investigate, correct,\nrerun affected parts", fillcolor="#991b1b", fontcolor="white", color="#991b1b"];
+  Att  [label="Attestation and sign-off\nhead of regulatory reporting,\nchief financial or risk officer"];
+  Sub  [label="Submission to regulator\nvia portal, before deadline", fillcolor="#065f46", fontcolor="white", color="#065f46"];
+  Q2   [label="Error found after\nsubmission?", shape=diamond, style=filled, fillcolor="#fef3c7", color="#d97706", margin="0.05,0.05"];
+  Resub [label="Resubmission with explanation\nroot cause, control fix,\nmay attract supervisory attention", fillcolor="#991b1b", fontcolor="white", color="#991b1b"];
+  Done [label="Period closed\nlessons logged", fillcolor="#065f46", fontcolor="white", color="#065f46"];
+
+  Start -> Snap;
+  DQ -> Calc;
+  Recon -> Tax;
+  Q1 -> Invest [label=" no"];
+  Invest -> Calc;
+  Q1 -> Att [label=" yes"];
+  Att -> Sub -> Q2;
+  Q2 -> Resub [label=" yes"];
+  Q2 -> Done [label=" no"];
+}

@@ -1,0 +1,101 @@
+<svg width="100%"
+ viewBox="0.00 0.00 814.80 485.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 471.4)">
+<title>ProvisionsCapital</title>
+<polygon fill="white" stroke="transparent" points="-14.4,14.4 -14.4,-471.4 800.4,-471.4 800.4,14.4 -14.4,14.4"/>
+<g id="node1" class="node">
+<title>ECL</title>
+<path fill="#1f2937" stroke="#1f2937" d="M295.5,-457C295.5,-457 124.5,-457 124.5,-457 118.5,-457 112.5,-451 112.5,-445 112.5,-445 112.5,-429 112.5,-429 112.5,-423 118.5,-417 124.5,-417 124.5,-417 295.5,-417 295.5,-417 301.5,-417 307.5,-423 307.5,-429 307.5,-429 307.5,-445 307.5,-445 307.5,-451 301.5,-457 295.5,-457"/>
+<text text-anchor="middle" x="210" y="-440.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Accounting provision (ECL)</text>
+<text text-anchor="middle" x="210" y="-427.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">total stock on balance sheet</text>
+</g>
+<g id="node2" class="node">
+<title>PL</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M240,-372.5C240,-372.5 12,-372.5 12,-372.5 6,-372.5 0,-366.5 0,-360.5 0,-360.5 0,-331.5 0,-331.5 0,-325.5 6,-319.5 12,-319.5 12,-319.5 240,-319.5 240,-319.5 246,-319.5 252,-325.5 252,-331.5 252,-331.5 252,-360.5 252,-360.5 252,-366.5 246,-372.5 240,-372.5"/>
+<text text-anchor="middle" x="126" y="-355.9" font-family="Helvetica,sans-Serif" font-size="12.00">Income statement</text>
+<text text-anchor="middle" x="126" y="-342.9" font-family="Helvetica,sans-Serif" font-size="12.00">change in stock = impairment charge</text>
+<text text-anchor="middle" x="126" y="-329.9" font-family="Helvetica,sans-Serif" font-size="12.00">reduces profit, so reduces CET1</text>
+</g>
+<g id="edge1" class="edge">
+<title>ECL&#45;&gt;PL</title>
+<path fill="none" stroke="#4b5563" d="M191.77,-416.69C181.13,-405.42 167.46,-390.93 155.34,-378.08"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="156.84,-376.1 150.25,-372.69 153.27,-379.47 156.84,-376.1"/>
+</g>
+<g id="node3" class="node">
+<title>Q</title>
+<polygon fill="#fef3c7" stroke="#d97706" points="430,-380 281,-346 430,-312 579,-346 430,-380"/>
+<text text-anchor="middle" x="430" y="-349.4" font-family="Helvetica,sans-Serif" font-size="12.00">Which capital approach</text>
+<text text-anchor="middle" x="430" y="-336.4" font-family="Helvetica,sans-Serif" font-size="12.00">does the portfolio use?</text>
+</g>
+<g id="edge2" class="edge">
+<title>ECL&#45;&gt;Q</title>
+<path fill="none" stroke="#4b5563" d="M257.2,-416.91C290.48,-403.44 335.29,-385.31 370.94,-370.89"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="371.92,-373.14 377.49,-368.24 370.08,-368.6 371.92,-373.14"/>
+</g>
+<g id="node4" class="node">
+<title>SA</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M456,-265C456,-265 258,-265 258,-265 252,-265 246,-259 246,-253 246,-253 246,-198 246,-198 246,-192 252,-186 258,-186 258,-186 456,-186 456,-186 462,-186 468,-192 468,-198 468,-198 468,-253 468,-253 468,-259 462,-265 456,-265"/>
+<text text-anchor="middle" x="357" y="-248.4" font-family="Helvetica,sans-Serif" font-size="12.00">Standardised approach</text>
+<text text-anchor="middle" x="357" y="-235.4" font-family="Helvetica,sans-Serif" font-size="12.00">specific provisions reduce the</text>
+<text text-anchor="middle" x="357" y="-222.4" font-family="Helvetica,sans-Serif" font-size="12.00">exposure that gets risk&#45;weighted</text>
+<text text-anchor="middle" x="357" y="-209.4" font-family="Helvetica,sans-Serif" font-size="12.00">general provisions may count</text>
+<text text-anchor="middle" x="357" y="-196.4" font-family="Helvetica,sans-Serif" font-size="12.00">in Tier 2 (capped)</text>
+</g>
+<g id="edge3" class="edge">
+<title>Q&#45;&gt;SA</title>
+<path fill="none" stroke="#4b5563" d="M412.14,-316.01C403.87,-302.58 393.85,-286.32 384.63,-271.36"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="386.5,-269.71 380.74,-265.03 382.32,-272.28 386.5,-269.71"/>
+<text text-anchor="middle" x="405.5" y="-286" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> SA</text>
+</g>
+<g id="node5" class="node">
+<title>IRB</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M687,-252C687,-252 509,-252 509,-252 503,-252 497,-246 497,-240 497,-240 497,-211 497,-211 497,-205 503,-199 509,-199 509,-199 687,-199 687,-199 693,-199 699,-205 699,-211 699,-211 699,-240 699,-240 699,-246 693,-252 687,-252"/>
+<text text-anchor="middle" x="598" y="-235.4" font-family="Helvetica,sans-Serif" font-size="12.00">IRB approach</text>
+<text text-anchor="middle" x="598" y="-222.4" font-family="Helvetica,sans-Serif" font-size="12.00">compare total provisions with</text>
+<text text-anchor="middle" x="598" y="-209.4" font-family="Helvetica,sans-Serif" font-size="12.00">regulatory expected loss (EL)</text>
+</g>
+<g id="edge4" class="edge">
+<title>Q&#45;&gt;IRB</title>
+<path fill="none" stroke="#4b5563" d="M465.63,-319.87C492.07,-301.22 528.2,-275.73 556.04,-256.1"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="557.54,-258.04 561.84,-252 554.71,-254.04 557.54,-258.04"/>
+<text text-anchor="middle" x="524" y="-286" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> IRB</text>
+</g>
+<g id="node6" class="node">
+<title>Q2</title>
+<polygon fill="#fef3c7" stroke="#d97706" points="598,-149 481.19,-131 598,-113 714.81,-131 598,-149"/>
+<text text-anchor="middle" x="598" y="-127.9" font-family="Helvetica,sans-Serif" font-size="12.00">Provisions versus EL?</text>
+</g>
+<g id="edge5" class="edge">
+<title>IRB&#45;&gt;Q2</title>
+<path fill="none" stroke="#4b5563" d="M598,-198.73C598,-185.51 598,-169.48 598,-156.45"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="600.45,-156.16 598,-149.16 595.55,-156.16 600.45,-156.16"/>
+</g>
+<g id="node7" class="node">
+<title>Short</title>
+<path fill="#991b1b" stroke="#991b1b" d="M575,-59.5C575,-59.5 415,-59.5 415,-59.5 409,-59.5 403,-53.5 403,-47.5 403,-47.5 403,-18.5 403,-18.5 403,-12.5 409,-6.5 415,-6.5 415,-6.5 575,-6.5 575,-6.5 581,-6.5 587,-12.5 587,-18.5 587,-18.5 587,-47.5 587,-47.5 587,-53.5 581,-59.5 575,-59.5"/>
+<text text-anchor="middle" x="495" y="-42.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Shortfall</text>
+<text text-anchor="middle" x="495" y="-29.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">provisions below EL</text>
+<text text-anchor="middle" x="495" y="-16.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">deduct the gap from CET1</text>
+</g>
+<g id="edge6" class="edge">
+<title>Q2&#45;&gt;Short</title>
+<path fill="none" stroke="#4b5563" d="M581.91,-115C567.55,-101.62 546.08,-81.61 528.07,-64.82"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="529.39,-62.71 522.6,-59.73 526.05,-66.29 529.39,-62.71"/>
+<text text-anchor="middle" x="574.5" y="-87" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> below</text>
+</g>
+<g id="node8" class="node">
+<title>Exc</title>
+<path fill="#065f46" stroke="#065f46" d="M774,-66C774,-66 628,-66 628,-66 622,-66 616,-60 616,-54 616,-54 616,-12 616,-12 616,-6 622,0 628,0 628,0 774,0 774,0 780,0 786,-6 786,-12 786,-12 786,-54 786,-54 786,-60 780,-66 774,-66"/>
+<text text-anchor="middle" x="701" y="-49.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Excess</text>
+<text text-anchor="middle" x="701" y="-36.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">provisions above EL</text>
+<text text-anchor="middle" x="701" y="-23.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">add to Tier 2, capped at</text>
+<text text-anchor="middle" x="701" y="-10.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">0.6% of IRB RWA</text>
+</g>
+<g id="edge7" class="edge">
+<title>Q2&#45;&gt;Exc</title>
+<path fill="none" stroke="#4b5563" d="M614.09,-115C626.6,-103.34 644.5,-86.66 660.81,-71.46"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="662.82,-72.93 666.27,-66.37 659.48,-69.35 662.82,-72.93"/>
+<text text-anchor="middle" x="663" y="-87" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> above</text>
+</g>
+</g>
+</svg>

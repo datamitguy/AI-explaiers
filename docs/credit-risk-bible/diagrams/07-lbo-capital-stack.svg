@@ -1,0 +1,97 @@
+<svg width="100%"
+ viewBox="0.00 0.00 710.80 518.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 504.4)">
+<title>LBOCapitalStack</title>
+<polygon fill="white" stroke="transparent" points="-14.4,14.4 -14.4,-504.4 696.4,-504.4 696.4,14.4 -14.4,14.4"/>
+<g id="node1" class="node">
+<title>Top</title>
+<path fill="#1f2937" stroke="#1f2937" d="M567.5,-490C567.5,-490 189.5,-490 189.5,-490 183.5,-490 177.5,-484 177.5,-478 177.5,-478 177.5,-462 177.5,-462 177.5,-456 183.5,-450 189.5,-450 189.5,-450 567.5,-450 567.5,-450 573.5,-450 579.5,-456 579.5,-462 579.5,-462 579.5,-478 579.5,-478 579.5,-484 573.5,-490 567.5,-490"/>
+<text text-anchor="middle" x="378.5" y="-473.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Purchase price 1,000 (illustrative buyout at 10x EBITDA of 100)</text>
+<text text-anchor="middle" x="378.5" y="-460.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Paid first in a liquidation, lowest return, at the top</text>
+</g>
+<g id="node2" class="node">
+<title>RCF</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M553.5,-428C553.5,-428 203.5,-428 203.5,-428 197.5,-428 191.5,-422 191.5,-416 191.5,-416 191.5,-387 191.5,-387 191.5,-381 197.5,-375 203.5,-375 203.5,-375 553.5,-375 553.5,-375 559.5,-375 565.5,-381 565.5,-387 565.5,-387 565.5,-416 565.5,-416 565.5,-422 559.5,-428 553.5,-428"/>
+<text text-anchor="middle" x="378.5" y="-411.4" font-family="Helvetica,sans-Serif" font-size="12.00">Super senior revolving credit facility: 50</text>
+<text text-anchor="middle" x="378.5" y="-398.4" font-family="Helvetica,sans-Serif" font-size="12.00">Working capital line, often paid first from security</text>
+<text text-anchor="middle" x="378.5" y="-385.4" font-family="Helvetica,sans-Serif" font-size="12.00">Margin around 3% to 4% over base rate</text>
+</g>
+<g id="edge1" class="edge">
+<title>Top&#45;&gt;RCF</title>
+<path fill="none" stroke="#4b5563" d="M378.5,-449.77C378.5,-445.23 378.5,-440.27 378.5,-435.32"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="380.95,-435.13 378.5,-428.13 376.05,-435.13 380.95,-435.13"/>
+</g>
+<g id="node3" class="node">
+<title>TLA</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M553.5,-353C553.5,-353 203.5,-353 203.5,-353 197.5,-353 191.5,-347 191.5,-341 191.5,-341 191.5,-312 191.5,-312 191.5,-306 197.5,-300 203.5,-300 203.5,-300 553.5,-300 553.5,-300 559.5,-300 565.5,-306 565.5,-312 565.5,-312 565.5,-341 565.5,-341 565.5,-347 559.5,-353 553.5,-353"/>
+<text text-anchor="middle" x="378.5" y="-336.4" font-family="Helvetica,sans-Serif" font-size="12.00">Senior term loan A: 100 (amortising, banks)</text>
+<text text-anchor="middle" x="378.5" y="-323.4" font-family="Helvetica,sans-Serif" font-size="12.00">First&#45;ranking security, repaid in instalments</text>
+<text text-anchor="middle" x="378.5" y="-310.4" font-family="Helvetica,sans-Serif" font-size="12.00">Margin around 3% to 4%</text>
+</g>
+<g id="edge2" class="edge">
+<title>RCF&#45;&gt;TLA</title>
+<path fill="none" stroke="#4b5563" d="M378.5,-374.97C378.5,-370.22 378.5,-365.19 378.5,-360.26"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="380.95,-360.14 378.5,-353.14 376.05,-360.14 380.95,-360.14"/>
+</g>
+<g id="node4" class="node">
+<title>TLB</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M570.5,-278C570.5,-278 186.5,-278 186.5,-278 180.5,-278 174.5,-272 174.5,-266 174.5,-266 174.5,-237 174.5,-237 174.5,-231 180.5,-225 186.5,-225 186.5,-225 570.5,-225 570.5,-225 576.5,-225 582.5,-231 582.5,-237 582.5,-237 582.5,-266 582.5,-266 582.5,-272 576.5,-278 570.5,-278"/>
+<text text-anchor="middle" x="378.5" y="-261.4" font-family="Helvetica,sans-Serif" font-size="12.00">Senior term loan B: 350 (bullet, institutional investors and CLOs)</text>
+<text text-anchor="middle" x="378.5" y="-248.4" font-family="Helvetica,sans-Serif" font-size="12.00">Same security as TLA, repaid at the end</text>
+<text text-anchor="middle" x="378.5" y="-235.4" font-family="Helvetica,sans-Serif" font-size="12.00">Margin around 4% to 5%, often covenant&#45;lite</text>
+</g>
+<g id="edge3" class="edge">
+<title>TLA&#45;&gt;TLB</title>
+<path fill="none" stroke="#4b5563" d="M378.5,-299.97C378.5,-295.22 378.5,-290.19 378.5,-285.26"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="380.95,-285.14 378.5,-278.14 376.05,-285.14 380.95,-285.14"/>
+</g>
+<g id="node5" class="node">
+<title>SL</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M384.5,-196.5C384.5,-196.5 34.5,-196.5 34.5,-196.5 28.5,-196.5 22.5,-190.5 22.5,-184.5 22.5,-184.5 22.5,-155.5 22.5,-155.5 22.5,-149.5 28.5,-143.5 34.5,-143.5 34.5,-143.5 384.5,-143.5 384.5,-143.5 390.5,-143.5 396.5,-149.5 396.5,-155.5 396.5,-155.5 396.5,-184.5 396.5,-184.5 396.5,-190.5 390.5,-196.5 384.5,-196.5"/>
+<text text-anchor="middle" x="209.5" y="-179.9" font-family="Helvetica,sans-Serif" font-size="12.00">Second lien: 50</text>
+<text text-anchor="middle" x="209.5" y="-166.9" font-family="Helvetica,sans-Serif" font-size="12.00">Secured, but paid after the first lien from the same assets</text>
+<text text-anchor="middle" x="209.5" y="-153.9" font-family="Helvetica,sans-Serif" font-size="12.00">Margin around 7% to 9%</text>
+</g>
+<g id="edge4" class="edge">
+<title>TLB&#45;&gt;SL</title>
+<path fill="none" stroke="#4b5563" d="M324.1,-224.91C306.91,-216.82 287.81,-207.84 270.21,-199.56"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="271.18,-197.31 263.8,-196.54 269.09,-201.74 271.18,-197.31"/>
+</g>
+<g id="node8" class="node">
+<title>Note</title>
+<path fill="#6b7280" stroke="#6b7280" d="M670,-203C670,-203 427,-203 427,-203 421,-203 415,-197 415,-191 415,-191 415,-149 415,-149 415,-143 421,-137 427,-137 427,-137 670,-137 670,-137 676,-137 682,-143 682,-149 682,-149 682,-191 682,-191 682,-197 676,-203 670,-203"/>
+<text text-anchor="middle" x="548.5" y="-186.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Total debt 650 = 6.5x EBITDA</text>
+<text text-anchor="middle" x="548.5" y="-173.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Senior debt 500 = 5.0x EBITDA</text>
+<text text-anchor="middle" x="548.5" y="-160.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Unitranche alternative: one 550 tranche</text>
+<text text-anchor="middle" x="548.5" y="-147.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">replacing TLA, TLB and second lien</text>
+</g>
+<g id="edge7" class="edge">
+<title>TLB&#45;&gt;Note</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M433.22,-224.91C445.99,-218.94 459.8,-212.48 473.27,-206.18"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="474.55,-208.28 479.86,-203.1 472.48,-203.85 474.55,-208.28"/>
+</g>
+<g id="node6" class="node">
+<title>Mezz</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M407,-115C407,-115 12,-115 12,-115 6,-115 0,-109 0,-103 0,-103 0,-74 0,-74 0,-68 6,-62 12,-62 12,-62 407,-62 407,-62 413,-62 419,-68 419,-74 419,-74 419,-103 419,-103 419,-109 413,-115 407,-115"/>
+<text text-anchor="middle" x="209.5" y="-98.4" font-family="Helvetica,sans-Serif" font-size="12.00">Mezzanine / PIK notes: 100</text>
+<text text-anchor="middle" x="209.5" y="-85.4" font-family="Helvetica,sans-Serif" font-size="12.00">Unsecured or junior secured, interest often paid in kind (rolled up)</text>
+<text text-anchor="middle" x="209.5" y="-72.4" font-family="Helvetica,sans-Serif" font-size="12.00">Total return around 10% to 14%, sometimes with equity warrants</text>
+</g>
+<g id="edge5" class="edge">
+<title>SL&#45;&gt;Mezz</title>
+<path fill="none" stroke="#4b5563" d="M209.5,-143.41C209.5,-136.74 209.5,-129.46 209.5,-122.47"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="211.95,-122.04 209.5,-115.04 207.05,-122.04 211.95,-122.04"/>
+</g>
+<g id="node7" class="node">
+<title>Eq</title>
+<path fill="#991b1b" stroke="#991b1b" d="M388,-40C388,-40 31,-40 31,-40 25,-40 19,-34 19,-28 19,-28 19,-12 19,-12 19,-6 25,0 31,0 31,0 388,0 388,0 394,0 400,-6 400,-12 400,-12 400,-28 400,-28 400,-34 394,-40 388,-40"/>
+<text text-anchor="middle" x="209.5" y="-23.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Equity: 350 (private equity fund plus management)</text>
+<text text-anchor="middle" x="209.5" y="-10.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Paid last, absorbs the first loss, targets 20%+ annual return</text>
+</g>
+<g id="edge6" class="edge">
+<title>Mezz&#45;&gt;Eq</title>
+<path fill="none" stroke="#4b5563" d="M209.5,-61.98C209.5,-57.27 209.5,-52.34 209.5,-47.6"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="211.95,-47.36 209.5,-40.36 207.05,-47.36 211.95,-47.36"/>
+</g>
+</g>
+</svg>

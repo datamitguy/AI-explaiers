@@ -1,0 +1,33 @@
+digraph ProductTaxonomy {
+  graph [rankdir=LR, splines=true, ordering=out, nodesep=0.2, ranksep=0.6, fontname="Helvetica", fontsize=13, bgcolor="white", newrank=true, pad=0.2];
+  node  [shape=box, style="rounded,filled", fillcolor="#eef2ff", color="#6366f1", fontname="Helvetica", fontsize=12, margin="0.18,0.10"];
+  edge  [color="#4b5563", arrowsize=0.7, fontname="Helvetica", fontsize=10, fontcolor="#374151"];
+
+  Root [label="Commercial and corporate\nlending products", fillcolor="#1f2937", fontcolor="white", color="#1f2937"];
+
+  WC   [label="Working capital\n(short term, day-to-day cash)", fillcolor="#1e3a8a", fontcolor="white", color="#1e3a8a"];
+  Term [label="Term debt\n(long term, buy or build something)", fillcolor="#1e3a8a", fontcolor="white", color="#1e3a8a"];
+  Asset [label="Asset-backed\n(repaid from a specific asset)", fillcolor="#1e3a8a", fontcolor="white", color="#1e3a8a"];
+  Multi [label="Multi-lender\n(too big for one bank)", fillcolor="#1e3a8a", fontcolor="white", color="#1e3a8a"];
+
+  Root -> WC; Root -> Term; Root -> Asset; Root -> Multi;
+
+  OD   [label="Overdraft\nuncommitted, repayable on demand"];
+  RCF  [label="Revolving credit facility (RCF)\ncommitted, draw and repay up to a limit"];
+  WC -> OD; WC -> RCF;
+
+  Amort [label="Amortising term loan\nequal instalments"];
+  Bullet [label="Bullet term loan\ninterest only, principal at end"];
+  Balloon [label="Balloon term loan\nsmall instalments, big final payment"];
+  Term -> Amort; Term -> Bullet; Term -> Balloon;
+
+  ABL  [label="Asset-based lending (ABL)\nborrowing base on receivables and inventory"];
+  Inv  [label="Invoice discounting and factoring"];
+  Equip [label="Equipment finance and leasing\nhire purchase, finance lease, operating lease"];
+  Asset -> ABL; Asset -> Inv; Asset -> Equip;
+
+  Bilat [label="Bilateral\none bank, one borrower"];
+  Club  [label="Club deal\na few banks, equal terms, no formal syndication"];
+  Synd  [label="Syndicated loan\narranger, agent, many participants"];
+  Multi -> Bilat; Multi -> Club; Multi -> Synd;
+}

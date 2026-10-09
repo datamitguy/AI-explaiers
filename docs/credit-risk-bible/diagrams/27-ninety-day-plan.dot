@@ -1,0 +1,41 @@
+digraph NinetyDays {
+  graph [rankdir=TB, splines=true, nodesep=0.3, ranksep=0.6, fontname="Helvetica", fontsize=13, bgcolor="white", newrank=true];
+  node  [shape=box, style="rounded,filled", fillcolor="#eef2ff", color="#6366f1", fontname="Helvetica", fontsize=12, margin="0.18,0.10"];
+  edge  [color="#4b5563", arrowsize=0.7, fontname="Helvetica", fontsize=10];
+
+  Start [label="Day 1\nYou know nothing\nabout banking", fillcolor="#1f2937", fontcolor="white", color="#1f2937"];
+
+  subgraph cluster_30 {
+    label="Days 1 to 30: Learn and listen"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
+    L1 [label="Read this vault\n(notes 01, 02, 03, 18 first)"];
+    L2 [label="Meet every stakeholder:\ncredit officers, modellers,\nfinance, reporting, audit"];
+    L3 [label="Map the systems landscape\nand data flows (note 22)"];
+    L4 [label="Sit in on a credit committee\nand a month-end RWA run"];
+    L5 [label="Collect the pain list:\nwhat breaks, what is manual,\nwhat the regulator has flagged"];
+  }
+
+  subgraph cluster_60 {
+    label="Days 31 to 60: Diagnose and prioritise"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
+    D1 [label="Draw the current-state\narchitecture and lineage"];
+    D2 [label="Score each pain point:\nregulatory risk, effort,\nvalue, dependencies"];
+    D3 [label="Agree definitions of done\nwith risk and finance owners"];
+    D4 [label="Check controls: reconciliations,\naccess, change management,\naudit trail"];
+  }
+
+  subgraph cluster_90 {
+    label="Days 61 to 90: Deliver one thing well"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
+    X1 [label="Pick one visible fix\n(a reconciliation break,\na manual step, a late report)"];
+    X2 [label="Ship it with tests,\ndocumentation and sign-off"];
+    X3 [label="Publish a 12-month roadmap\ntied to regulatory dates"];
+    X4 [label="Set up the operating rhythm:\nrun calendar, incident process,\nchange board"];
+  }
+
+  End [label="Day 90\nTrusted platform lead\nwith a plan", fillcolor="#065f46", fontcolor="white", color="#065f46"];
+
+  Start -> L1 -> L2 -> L3 -> L4 -> L5;
+  D1 -> D2 -> D3 -> D4;
+  X1 -> X2 -> X3 -> X4 -> End;
+  { rank=same; L1; D1; X1; }
+  L5 -> D1 [constraint=false, color="#1e3a8a", penwidth=1.6];
+  D4 -> X1 [constraint=false, color="#1e3a8a", penwidth=1.6];
+}

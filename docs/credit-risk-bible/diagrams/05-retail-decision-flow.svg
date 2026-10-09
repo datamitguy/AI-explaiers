@@ -1,0 +1,185 @@
+<svg width="100%"
+ viewBox="0.00 0.00 989.80 804.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 790.4)">
+<title>RetailDecisionFlow</title>
+<polygon fill="white" stroke="transparent" points="-14.4,14.4 -14.4,-790.4 975.4,-790.4 975.4,14.4 -14.4,14.4"/>
+<g id="clust1" class="cluster">
+<title>cluster_data</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M20,-618C20,-618 941,-618 941,-618 947,-618 953,-624 953,-630 953,-630 953,-697 953,-697 953,-703 947,-709 941,-709 941,-709 20,-709 20,-709 14,-709 8,-703 8,-697 8,-697 8,-630 8,-630 8,-624 14,-618 20,-618"/>
+<text text-anchor="middle" x="480.5" y="-694.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">Data gathered in seconds</text>
+</g>
+<g id="node1" class="node">
+<title>Start</title>
+<path fill="#1f2937" stroke="#1f2937" d="M584.5,-776C584.5,-776 341.5,-776 341.5,-776 335.5,-776 329.5,-770 329.5,-764 329.5,-764 329.5,-748 329.5,-748 329.5,-742 335.5,-736 341.5,-736 341.5,-736 584.5,-736 584.5,-736 590.5,-736 596.5,-742 596.5,-748 596.5,-748 596.5,-764 596.5,-764 596.5,-770 590.5,-776 584.5,-776"/>
+<text text-anchor="middle" x="463" y="-759.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Customer applies</text>
+<text text-anchor="middle" x="463" y="-746.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">(app, web, branch, broker, point of sale)</text>
+</g>
+<g id="node2" class="node">
+<title>Form</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M216,-679C216,-679 28,-679 28,-679 22,-679 16,-673 16,-667 16,-667 16,-638 16,-638 16,-632 22,-626 28,-626 28,-626 216,-626 216,-626 222,-626 228,-632 228,-638 228,-638 228,-667 228,-667 228,-673 222,-679 216,-679"/>
+<text text-anchor="middle" x="122" y="-662.4" font-family="Helvetica,sans-Serif" font-size="12.00">Application data</text>
+<text text-anchor="middle" x="122" y="-649.4" font-family="Helvetica,sans-Serif" font-size="12.00">income, employment, address,</text>
+<text text-anchor="middle" x="122" y="-636.4" font-family="Helvetica,sans-Serif" font-size="12.00">requested amount</text>
+</g>
+<g id="edge4" class="edge">
+<title>Start&#45;&gt;Form</title>
+<path fill="none" stroke="#4b5563" d="M368.85,-735.99C335.75,-728.56 298.47,-719.33 265,-709 239.76,-701.21 212.62,-691.13 188.83,-681.7"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="189.62,-679.38 182.21,-679.06 187.81,-683.93 189.62,-679.38"/>
+</g>
+<g id="node3" class="node">
+<title>Bureau</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M490.5,-679C490.5,-679 289.5,-679 289.5,-679 283.5,-679 277.5,-673 277.5,-667 277.5,-667 277.5,-638 277.5,-638 277.5,-632 283.5,-626 289.5,-626 289.5,-626 490.5,-626 490.5,-626 496.5,-626 502.5,-632 502.5,-638 502.5,-638 502.5,-667 502.5,-667 502.5,-673 496.5,-679 490.5,-679"/>
+<text text-anchor="middle" x="390" y="-662.4" font-family="Helvetica,sans-Serif" font-size="12.00">Credit bureau pull</text>
+<text text-anchor="middle" x="390" y="-649.4" font-family="Helvetica,sans-Serif" font-size="12.00">existing debts, missed payments,</text>
+<text text-anchor="middle" x="390" y="-636.4" font-family="Helvetica,sans-Serif" font-size="12.00">searches, bureau score</text>
+</g>
+<g id="edge5" class="edge">
+<title>Start&#45;&gt;Bureau</title>
+<path fill="none" stroke="#4b5563" d="M449.27,-735.91C438.97,-721.59 424.64,-701.67 412.66,-685"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="414.43,-683.27 408.36,-679.02 410.45,-686.14 414.43,-683.27"/>
+</g>
+<g id="node4" class="node">
+<title>Intern</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M745.5,-679C745.5,-679 564.5,-679 564.5,-679 558.5,-679 552.5,-673 552.5,-667 552.5,-667 552.5,-638 552.5,-638 552.5,-632 558.5,-626 564.5,-626 564.5,-626 745.5,-626 745.5,-626 751.5,-626 757.5,-632 757.5,-638 757.5,-638 757.5,-667 757.5,-667 757.5,-673 751.5,-679 745.5,-679"/>
+<text text-anchor="middle" x="655" y="-662.4" font-family="Helvetica,sans-Serif" font-size="12.00">Internal data</text>
+<text text-anchor="middle" x="655" y="-649.4" font-family="Helvetica,sans-Serif" font-size="12.00">existing accounts, transaction</text>
+<text text-anchor="middle" x="655" y="-636.4" font-family="Helvetica,sans-Serif" font-size="12.00">history, behavioural score</text>
+</g>
+<g id="edge6" class="edge">
+<title>Start&#45;&gt;Intern</title>
+<path fill="none" stroke="#4b5563" d="M499.11,-735.91C527.63,-720.83 567.88,-699.56 600.34,-682.4"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="601.68,-684.46 606.72,-679.02 599.39,-680.13 601.68,-684.46"/>
+</g>
+<g id="node5" class="node">
+<title>IDV</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M933,-672.5C933,-672.5 819,-672.5 819,-672.5 813,-672.5 807,-666.5 807,-660.5 807,-660.5 807,-644.5 807,-644.5 807,-638.5 813,-632.5 819,-632.5 819,-632.5 933,-632.5 933,-632.5 939,-632.5 945,-638.5 945,-644.5 945,-644.5 945,-660.5 945,-660.5 945,-666.5 939,-672.5 933,-672.5"/>
+<text text-anchor="middle" x="876" y="-655.9" font-family="Helvetica,sans-Serif" font-size="12.00">Identity, fraud and</text>
+<text text-anchor="middle" x="876" y="-642.9" font-family="Helvetica,sans-Serif" font-size="12.00">KYC / AML checks</text>
+</g>
+<g id="edge7" class="edge">
+<title>Start&#45;&gt;IDV</title>
+<path fill="none" stroke="#4b5563" d="M596.7,-744.76C651.38,-738.07 714.67,-727.06 770,-709 794.41,-701.03 819.96,-687.82 839.86,-676.28"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="841.33,-678.26 846.12,-672.6 838.84,-674.04 841.33,-678.26"/>
+</g>
+<g id="node6" class="node">
+<title>Engine</title>
+<path fill="#1e3a8a" stroke="#1e3a8a" d="M644.5,-589C644.5,-589 399.5,-589 399.5,-589 393.5,-589 387.5,-583 387.5,-577 387.5,-577 387.5,-548 387.5,-548 387.5,-542 393.5,-536 399.5,-536 399.5,-536 644.5,-536 644.5,-536 650.5,-536 656.5,-542 656.5,-548 656.5,-548 656.5,-577 656.5,-577 656.5,-583 650.5,-589 644.5,-589"/>
+<text text-anchor="middle" x="522" y="-572.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Decision engine</text>
+<text text-anchor="middle" x="522" y="-559.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">(strategy: policy rules, then scorecard,</text>
+<text text-anchor="middle" x="522" y="-546.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">then affordability, then limit assignment)</text>
+</g>
+<g id="edge8" class="edge">
+<title>Form&#45;&gt;Engine</title>
+<path fill="none" stroke="#4b5563" d="M228.15,-626.37C240.56,-623.51 253.05,-620.67 265,-618 306.24,-608.8 351.29,-599.12 391.99,-590.51"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="392.66,-592.87 399,-589.03 391.65,-588.08 392.66,-592.87"/>
+</g>
+<g id="edge9" class="edge">
+<title>Bureau&#45;&gt;Engine</title>
+<path fill="none" stroke="#4b5563" d="M428.53,-625.81C443.85,-615.6 461.57,-603.79 477.44,-593.21"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="479.18,-594.99 483.65,-589.07 476.46,-590.91 479.18,-594.99"/>
+</g>
+<g id="edge10" class="edge">
+<title>Intern&#45;&gt;Engine</title>
+<path fill="none" stroke="#4b5563" d="M616.17,-625.81C600.74,-615.6 582.89,-603.79 566.9,-593.21"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="567.83,-590.89 560.64,-589.07 565.13,-594.98 567.83,-590.89"/>
+</g>
+<g id="edge11" class="edge">
+<title>IDV&#45;&gt;Engine</title>
+<path fill="none" stroke="#4b5563" d="M819.06,-632.47C803.26,-627.47 786.03,-622.29 770,-618 733.12,-608.14 692.8,-598.71 655.6,-590.56"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="656.06,-588.15 648.69,-589.05 655.01,-592.93 656.06,-588.15"/>
+</g>
+<g id="node7" class="node">
+<title>Q1</title>
+<polygon fill="#fef3c7" stroke="#d97706" points="522,-499 342,-452 522,-405 702,-452 522,-499"/>
+<text text-anchor="middle" x="522" y="-461.9" font-family="Helvetica,sans-Serif" font-size="12.00">Policy rule knock&#45;out?</text>
+<text text-anchor="middle" x="522" y="-448.9" font-family="Helvetica,sans-Serif" font-size="12.00">(age, bankruptcy, fraud flag,</text>
+<text text-anchor="middle" x="522" y="-435.9" font-family="Helvetica,sans-Serif" font-size="12.00">sanctions hit)</text>
+</g>
+<g id="edge12" class="edge">
+<title>Engine&#45;&gt;Q1</title>
+<path fill="none" stroke="#4b5563" d="M522,-535.79C522,-526.93 522,-516.65 522,-506.41"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="524.45,-506.35 522,-499.35 519.55,-506.35 524.45,-506.35"/>
+</g>
+<g id="node8" class="node">
+<title>Q2</title>
+<polygon fill="#fef3c7" stroke="#d97706" points="425,-358 299,-324 425,-290 551,-324 425,-358"/>
+<text text-anchor="middle" x="425" y="-327.4" font-family="Helvetica,sans-Serif" font-size="12.00">Score above cut&#45;off</text>
+<text text-anchor="middle" x="425" y="-314.4" font-family="Helvetica,sans-Serif" font-size="12.00">and affordable?</text>
+</g>
+<g id="edge14" class="edge">
+<title>Q1&#45;&gt;Q2</title>
+<path fill="none" stroke="#4b5563" d="M492.37,-412.51C479.07,-395.24 463.53,-375.05 450.73,-358.42"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="452.36,-356.52 446.14,-352.47 448.47,-359.51 452.36,-356.52"/>
+<text text-anchor="middle" x="478" y="-379" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> no</text>
+</g>
+<g id="node9" class="node">
+<title>Decline</title>
+<path fill="#991b1b" stroke="#991b1b" d="M624,-143C624,-143 450,-143 450,-143 444,-143 438,-137 438,-131 438,-131 438,-102 438,-102 438,-96 444,-90 450,-90 450,-90 624,-90 624,-90 630,-90 636,-96 636,-102 636,-102 636,-131 636,-131 636,-137 630,-143 624,-143"/>
+<text text-anchor="middle" x="537" y="-126.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Automatic decline</text>
+<text text-anchor="middle" x="537" y="-113.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">reason code stored, adverse</text>
+<text text-anchor="middle" x="537" y="-100.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">action notice where required</text>
+</g>
+<g id="edge13" class="edge">
+<title>Q1&#45;&gt;Decline</title>
+<path fill="none" stroke="#4b5563" d="M544.32,-410.53C552,-394.63 559.73,-375.92 564,-358 581.31,-285.33 584.41,-263.09 569,-190 566.1,-176.26 560.43,-161.94 554.65,-149.7"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="556.71,-148.35 551.45,-143.13 552.31,-150.5 556.71,-148.35"/>
+<text text-anchor="middle" x="588.5" y="-264" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> yes</text>
+</g>
+<g id="edge17" class="edge">
+<title>Q2&#45;&gt;Decline</title>
+<path fill="none" stroke="#4b5563" d="M454.07,-297.71C469.33,-283.08 487.24,-263.52 499,-243 515.65,-213.93 525.72,-176.81 531.27,-150.5"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="533.72,-150.73 532.71,-143.38 528.92,-149.75 533.72,-150.73"/>
+<text text-anchor="middle" x="541.5" y="-214" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> clear no</text>
+</g>
+<g id="node10" class="node">
+<title>Refer</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M474.5,-243C474.5,-243 315.5,-243 315.5,-243 309.5,-243 303.5,-237 303.5,-231 303.5,-231 303.5,-202 303.5,-202 303.5,-196 309.5,-190 315.5,-190 315.5,-190 474.5,-190 474.5,-190 480.5,-190 486.5,-196 486.5,-202 486.5,-202 486.5,-231 486.5,-231 486.5,-237 480.5,-243 474.5,-243"/>
+<text text-anchor="middle" x="395" y="-226.4" font-family="Helvetica,sans-Serif" font-size="12.00">Refer to an underwriter</text>
+<text text-anchor="middle" x="395" y="-213.4" font-family="Helvetica,sans-Serif" font-size="12.00">grey zone, missing data,</text>
+<text text-anchor="middle" x="395" y="-200.4" font-family="Helvetica,sans-Serif" font-size="12.00">high value, manual review</text>
+</g>
+<g id="edge16" class="edge">
+<title>Q2&#45;&gt;Refer</title>
+<path fill="none" stroke="#4b5563" d="M416.24,-292.2C412.47,-278.94 408.06,-263.43 404.24,-249.99"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="406.57,-249.24 402.3,-243.17 401.86,-250.58 406.57,-249.24"/>
+<text text-anchor="middle" x="436.5" y="-264" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> borderline</text>
+</g>
+<g id="node11" class="node">
+<title>Accept</title>
+<path fill="#065f46" stroke="#065f46" d="M377,-143C377,-143 191,-143 191,-143 185,-143 179,-137 179,-131 179,-131 179,-102 179,-102 179,-96 185,-90 191,-90 191,-90 377,-90 377,-90 383,-90 389,-96 389,-102 389,-102 389,-131 389,-131 389,-137 383,-143 377,-143"/>
+<text text-anchor="middle" x="284" y="-126.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Automatic accept</text>
+<text text-anchor="middle" x="284" y="-113.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">limit, price and terms assigned</text>
+<text text-anchor="middle" x="284" y="-100.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">by the strategy</text>
+</g>
+<g id="edge15" class="edge">
+<title>Q2&#45;&gt;Accept</title>
+<path fill="none" stroke="#4b5563" d="M349.79,-310.11C310.88,-299.21 266.68,-279.27 243,-243 224.13,-214.09 241.65,-175.76 259.28,-149.1"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="261.34,-150.42 263.27,-143.26 257.3,-147.66 261.34,-150.42"/>
+<text text-anchor="middle" x="267" y="-214" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> clear yes</text>
+</g>
+<g id="edge19" class="edge">
+<title>Refer&#45;&gt;Decline</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M414.86,-189.89C423.39,-180.01 433.94,-169.15 445,-161 452.14,-155.74 460.02,-150.87 468.07,-146.44"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="469.23,-148.59 474.25,-143.13 466.92,-144.27 469.23,-148.59"/>
+<text text-anchor="middle" x="481.5" y="-164" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> override down</text>
+</g>
+<g id="edge18" class="edge">
+<title>Refer&#45;&gt;Accept</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M352.08,-189.9C344.09,-184.4 336.05,-178.33 329,-172 321.21,-165.01 313.62,-156.62 306.95,-148.55"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="308.8,-146.94 302.49,-143.03 304.99,-150.02 308.8,-146.94"/>
+<text text-anchor="middle" x="358.5" y="-164" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> override up</text>
+</g>
+<g id="node12" class="node">
+<title>Book</title>
+<path fill="#1f2937" stroke="#1f2937" d="M393.5,-53C393.5,-53 174.5,-53 174.5,-53 168.5,-53 162.5,-47 162.5,-41 162.5,-41 162.5,-12 162.5,-12 162.5,-6 168.5,0 174.5,0 174.5,0 393.5,0 393.5,0 399.5,0 405.5,-6 405.5,-12 405.5,-12 405.5,-41 405.5,-41 405.5,-47 399.5,-53 393.5,-53"/>
+<text text-anchor="middle" x="284" y="-36.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Account opened on the core system</text>
+<text text-anchor="middle" x="284" y="-23.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">score, decision, reason codes and</text>
+<text text-anchor="middle" x="284" y="-10.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">strategy version stored for audit</text>
+</g>
+<g id="edge20" class="edge">
+<title>Accept&#45;&gt;Book</title>
+<path fill="none" stroke="#4b5563" d="M284,-89.57C284,-80.44 284,-70.06 284,-60.43"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="286.45,-60.24 284,-53.24 281.55,-60.24 286.45,-60.24"/>
+</g>
+</g>
+</svg>

@@ -1,0 +1,163 @@
+<svg width="100%"
+ viewBox="0.00 0.00 698.49 810.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 796.4)">
+<title>RatingModelPipeline</title>
+<polygon fill="white" stroke="transparent" points="-14.4,14.4 -14.4,-796.4 684.09,-796.4 684.09,14.4 -14.4,14.4"/>
+<g id="clust1" class="cluster">
+<title>cluster_inputs</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M147.5,-557C147.5,-557 636.5,-557 636.5,-557 642.5,-557 648.5,-563 648.5,-569 648.5,-569 648.5,-705 648.5,-705 648.5,-711 642.5,-717 636.5,-717 636.5,-717 147.5,-717 147.5,-717 141.5,-717 135.5,-711 135.5,-705 135.5,-705 135.5,-569 135.5,-569 135.5,-563 141.5,-557 147.5,-557"/>
+<text text-anchor="middle" x="392" y="-702.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">Inputs</text>
+</g>
+<g id="node1" class="node">
+<title>Start</title>
+<path fill="#1f2937" stroke="#1f2937" d="M613.5,-782C613.5,-782 421.5,-782 421.5,-782 415.5,-782 409.5,-776 409.5,-770 409.5,-770 409.5,-754 409.5,-754 409.5,-748 415.5,-742 421.5,-742 421.5,-742 613.5,-742 613.5,-742 619.5,-742 625.5,-748 625.5,-754 625.5,-754 625.5,-770 625.5,-770 625.5,-776 619.5,-782 613.5,-782"/>
+<text text-anchor="middle" x="517.5" y="-765.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Corporate borrower to be rated</text>
+<text text-anchor="middle" x="517.5" y="-752.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">(annual review or new deal)</text>
+</g>
+<g id="node2" class="node">
+<title>Fin</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M357,-687C357,-687 156,-687 156,-687 150,-687 144,-681 144,-675 144,-675 144,-646 144,-646 144,-640 150,-634 156,-634 156,-634 357,-634 357,-634 363,-634 369,-640 369,-646 369,-646 369,-675 369,-675 369,-681 363,-687 357,-687"/>
+<text text-anchor="middle" x="256.5" y="-670.4" font-family="Helvetica,sans-Serif" font-size="12.00">Financial statements</text>
+<text text-anchor="middle" x="256.5" y="-657.4" font-family="Helvetica,sans-Serif" font-size="12.00">(spread into the bank&#39;s template:</text>
+<text text-anchor="middle" x="256.5" y="-644.4" font-family="Helvetica,sans-Serif" font-size="12.00">audited accounts, last 3 years)</text>
+</g>
+<g id="edge1" class="edge">
+<title>Start&#45;&gt;Fin</title>
+<path fill="none" stroke="#4b5563" d="M454.54,-741.92C431.68,-734.61 405.76,-725.89 382.5,-717 361.14,-708.84 338.16,-699.03 317.74,-689.94"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="318.6,-687.64 311.2,-687.02 316.59,-692.11 318.6,-687.64"/>
+</g>
+<g id="node3" class="node">
+<title>Qual</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M628.5,-687C628.5,-687 406.5,-687 406.5,-687 400.5,-687 394.5,-681 394.5,-675 394.5,-675 394.5,-646 394.5,-646 394.5,-640 400.5,-634 406.5,-634 406.5,-634 628.5,-634 628.5,-634 634.5,-634 640.5,-640 640.5,-646 640.5,-646 640.5,-675 640.5,-675 640.5,-681 634.5,-687 628.5,-687"/>
+<text text-anchor="middle" x="517.5" y="-670.4" font-family="Helvetica,sans-Serif" font-size="12.00">Qualitative questionnaire</text>
+<text text-anchor="middle" x="517.5" y="-657.4" font-family="Helvetica,sans-Serif" font-size="12.00">(management, industry, competitive</text>
+<text text-anchor="middle" x="517.5" y="-644.4" font-family="Helvetica,sans-Serif" font-size="12.00">position, answered by the analyst)</text>
+</g>
+<g id="edge2" class="edge">
+<title>Start&#45;&gt;Qual</title>
+<path fill="none" stroke="#4b5563" d="M517.5,-741.82C517.5,-728.3 517.5,-709.87 517.5,-694.07"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="519.95,-694.03 517.5,-687.03 515.05,-694.03 519.95,-694.03"/>
+</g>
+<g id="node4" class="node">
+<title>Ext</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M628.5,-618C628.5,-618 436.5,-618 436.5,-618 430.5,-618 424.5,-612 424.5,-606 424.5,-606 424.5,-577 424.5,-577 424.5,-571 430.5,-565 436.5,-565 436.5,-565 628.5,-565 628.5,-565 634.5,-565 640.5,-571 640.5,-577 640.5,-577 640.5,-606 640.5,-606 640.5,-612 634.5,-618 628.5,-618"/>
+<text text-anchor="middle" x="532.5" y="-601.4" font-family="Helvetica,sans-Serif" font-size="12.00">External data</text>
+<text text-anchor="middle" x="532.5" y="-588.4" font-family="Helvetica,sans-Serif" font-size="12.00">(agency rating, country, sector,</text>
+<text text-anchor="middle" x="532.5" y="-575.4" font-family="Helvetica,sans-Serif" font-size="12.00">payment behaviour, news)</text>
+</g>
+<g id="edge3" class="edge">
+<title>Start&#45;&gt;Ext</title>
+<path fill="none" stroke="#4b5563" d="M623.83,-741.94C635.4,-735.75 645.76,-727.64 653.5,-717 675.2,-687.17 674.94,-664.02 653.5,-634 650.55,-629.87 647.17,-626.15 643.44,-622.79"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="644.73,-620.68 637.76,-618.14 641.62,-624.47 644.73,-620.68"/>
+</g>
+<g id="node5" class="node">
+<title>FinScore</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M259,-549C259,-549 12,-549 12,-549 6,-549 0,-543 0,-537 0,-537 0,-495 0,-495 0,-489 6,-483 12,-483 12,-483 259,-483 259,-483 265,-483 271,-489 271,-495 271,-495 271,-537 271,-537 271,-543 265,-549 259,-549"/>
+<text text-anchor="middle" x="135.5" y="-532.4" font-family="Helvetica,sans-Serif" font-size="12.00">Financial score</text>
+<text text-anchor="middle" x="135.5" y="-519.4" font-family="Helvetica,sans-Serif" font-size="12.00">(ratios weighted by the model,</text>
+<text text-anchor="middle" x="135.5" y="-506.4" font-family="Helvetica,sans-Serif" font-size="12.00">e.g. leverage 30%, coverage 25%,</text>
+<text text-anchor="middle" x="135.5" y="-493.4" font-family="Helvetica,sans-Serif" font-size="12.00">profitability 20%, liquidity 15%, size 10%)</text>
+</g>
+<g id="edge4" class="edge">
+<title>Fin&#45;&gt;FinScore</title>
+<path fill="none" stroke="#4b5563" d="M234.59,-633.69C215.85,-611.62 188.63,-579.57 167.46,-554.63"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="169.16,-552.86 162.76,-549.11 165.43,-556.03 169.16,-552.86"/>
+</g>
+<g id="node6" class="node">
+<title>QualScore</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M505,-536C505,-536 308,-536 308,-536 302,-536 296,-530 296,-524 296,-524 296,-508 296,-508 296,-502 302,-496 308,-496 308,-496 505,-496 505,-496 511,-496 517,-502 517,-508 517,-508 517,-524 517,-524 517,-530 511,-536 505,-536"/>
+<text text-anchor="middle" x="406.5" y="-519.4" font-family="Helvetica,sans-Serif" font-size="12.00">Qualitative score</text>
+<text text-anchor="middle" x="406.5" y="-506.4" font-family="Helvetica,sans-Serif" font-size="12.00">(each answer mapped to points)</text>
+</g>
+<g id="edge5" class="edge">
+<title>Qual&#45;&gt;QualScore</title>
+<path fill="none" stroke="#4b5563" d="M440.34,-633.7C433.99,-629.25 428.21,-624.06 423.5,-618 407.03,-596.81 404.07,-565.5 404.42,-543.37"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="406.87,-543.31 404.65,-536.24 401.97,-543.16 406.87,-543.31"/>
+</g>
+<g id="node8" class="node">
+<title>Adj</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M580.5,-364C580.5,-364 342.5,-364 342.5,-364 336.5,-364 330.5,-358 330.5,-352 330.5,-352 330.5,-323 330.5,-323 330.5,-317 336.5,-311 342.5,-311 342.5,-311 580.5,-311 580.5,-311 586.5,-311 592.5,-317 592.5,-323 592.5,-323 592.5,-352 592.5,-352 592.5,-358 586.5,-364 580.5,-364"/>
+<text text-anchor="middle" x="461.5" y="-347.4" font-family="Helvetica,sans-Serif" font-size="12.00">Mandatory adjustments</text>
+<text text-anchor="middle" x="461.5" y="-334.4" font-family="Helvetica,sans-Serif" font-size="12.00">(parent support or lift, country ceiling,</text>
+<text text-anchor="middle" x="461.5" y="-321.4" font-family="Helvetica,sans-Serif" font-size="12.00">warning signals, early&#45;warning triggers)</text>
+</g>
+<g id="edge6" class="edge">
+<title>Ext&#45;&gt;Adj</title>
+<path fill="none" stroke="#4b5563" d="M538.46,-564.91C546.06,-526.41 555.36,-452.23 529.5,-397 524.52,-386.37 516.58,-376.93 507.86,-368.9"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="509.23,-366.84 502.34,-364.08 506,-370.53 509.23,-366.84"/>
+</g>
+<g id="node7" class="node">
+<title>Combine</title>
+<path fill="#1e3a8a" stroke="#1e3a8a" d="M505.5,-450C505.5,-450 229.5,-450 229.5,-450 223.5,-450 217.5,-444 217.5,-438 217.5,-438 217.5,-409 217.5,-409 217.5,-403 223.5,-397 229.5,-397 229.5,-397 505.5,-397 505.5,-397 511.5,-397 517.5,-403 517.5,-409 517.5,-409 517.5,-438 517.5,-438 517.5,-444 511.5,-450 505.5,-450"/>
+<text text-anchor="middle" x="367.5" y="-433.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Model grade</text>
+<text text-anchor="middle" x="367.5" y="-420.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">(weighted combination, e.g. 60% financial,</text>
+<text text-anchor="middle" x="367.5" y="-407.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">40% qualitative, mapped to the master scale)</text>
+</g>
+<g id="edge7" class="edge">
+<title>FinScore&#45;&gt;Combine</title>
+<path fill="none" stroke="#4b5563" d="M217.62,-482.97C242.99,-473.07 270.73,-462.25 295.37,-452.64"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="296.26,-454.92 301.89,-450.09 294.48,-450.35 296.26,-454.92"/>
+</g>
+<g id="edge8" class="edge">
+<title>QualScore&#45;&gt;Combine</title>
+<path fill="none" stroke="#4b5563" d="M398.23,-495.81C393.35,-484.5 387.06,-469.89 381.44,-456.85"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="383.59,-455.65 378.57,-450.19 379.09,-457.59 383.59,-455.65"/>
+</g>
+<g id="edge9" class="edge">
+<title>Combine&#45;&gt;Adj</title>
+<path fill="none" stroke="#4b5563" d="M396.21,-396.84C406.14,-387.97 417.37,-377.94 427.67,-368.73"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="429.37,-370.49 432.96,-364 426.11,-366.84 429.37,-370.49"/>
+</g>
+<g id="node9" class="node">
+<title>Ovr</title>
+<polygon fill="#fef3c7" stroke="#d97706" points="461.5,-278 297.66,-260 461.5,-242 625.34,-260 461.5,-278"/>
+<text text-anchor="middle" x="461.5" y="-256.9" font-family="Helvetica,sans-Serif" font-size="12.00">Analyst proposes an override?</text>
+</g>
+<g id="edge10" class="edge">
+<title>Adj&#45;&gt;Ovr</title>
+<path fill="none" stroke="#4b5563" d="M461.5,-310.94C461.5,-302.69 461.5,-293.56 461.5,-285.39"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="463.95,-285.21 461.5,-278.21 459.05,-285.21 463.95,-285.21"/>
+</g>
+<g id="node10" class="node">
+<title>OvrApp</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M493,-199C493,-199 244,-199 244,-199 238,-199 232,-193 232,-187 232,-187 232,-158 232,-158 232,-152 238,-146 244,-146 244,-146 493,-146 493,-146 499,-146 505,-152 505,-158 505,-158 505,-187 505,-187 505,-193 499,-199 493,-199"/>
+<text text-anchor="middle" x="368.5" y="-182.4" font-family="Helvetica,sans-Serif" font-size="12.00">Override with written reason,</text>
+<text text-anchor="middle" x="368.5" y="-169.4" font-family="Helvetica,sans-Serif" font-size="12.00">approved by a higher authority</text>
+<text text-anchor="middle" x="368.5" y="-156.4" font-family="Helvetica,sans-Serif" font-size="12.00">if beyond one notch, logged for reporting</text>
+</g>
+<g id="edge11" class="edge">
+<title>Ovr&#45;&gt;OvrApp</title>
+<path fill="none" stroke="#4b5563" d="M444.87,-243.71C432.87,-232.68 416.26,-217.4 401.59,-203.92"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="403.1,-201.98 396.29,-199.05 399.78,-205.59 403.1,-201.98"/>
+<text text-anchor="middle" x="433" y="-218" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> yes</text>
+</g>
+<g id="node11" class="node">
+<title>Final</title>
+<path fill="#065f46" stroke="#065f46" d="M581.5,-113C581.5,-113 341.5,-113 341.5,-113 335.5,-113 329.5,-107 329.5,-101 329.5,-101 329.5,-85 329.5,-85 329.5,-79 335.5,-73 341.5,-73 341.5,-73 581.5,-73 581.5,-73 587.5,-73 593.5,-79 593.5,-85 593.5,-85 593.5,-101 593.5,-101 593.5,-107 587.5,-113 581.5,-113"/>
+<text text-anchor="middle" x="461.5" y="-96.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Final internal grade (e.g. BB+ on</text>
+<text text-anchor="middle" x="461.5" y="-83.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">the master scale) and its PD (e.g. 1.2%)</text>
+</g>
+<g id="edge12" class="edge">
+<title>Ovr&#45;&gt;Final</title>
+<path fill="none" stroke="#4b5563" d="M481.63,-244.17C494.58,-233.3 510.29,-217.29 517.5,-199 526.14,-177.09 526.92,-167.59 517.5,-146 512.8,-135.22 504.65,-125.68 495.99,-117.8"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="497.46,-115.84 490.56,-113.12 494.26,-119.54 497.46,-115.84"/>
+<text text-anchor="middle" x="531.5" y="-170" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> no</text>
+</g>
+<g id="edge13" class="edge">
+<title>OvrApp&#45;&gt;Final</title>
+<path fill="none" stroke="#4b5563" d="M399.21,-145.91C410.11,-136.82 422.33,-126.64 433.04,-117.72"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="434.68,-119.54 438.48,-113.18 431.54,-115.78 434.68,-119.54"/>
+</g>
+<g id="node12" class="node">
+<title>Mon</title>
+<path fill="#6b7280" stroke="#6b7280" d="M572,-40C572,-40 351,-40 351,-40 345,-40 339,-34 339,-28 339,-28 339,-12 339,-12 339,-6 345,0 351,0 351,0 572,0 572,0 578,0 584,-6 584,-12 584,-12 584,-28 584,-28 584,-34 578,-40 572,-40"/>
+<text text-anchor="middle" x="461.5" y="-23.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Monitoring: override rate, migration,</text>
+<text text-anchor="middle" x="461.5" y="-10.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">backtesting against actual defaults</text>
+</g>
+<g id="edge14" class="edge">
+<title>Final&#45;&gt;Mon</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M461.5,-72.97C461.5,-65.09 461.5,-55.82 461.5,-47.31"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="463.95,-47.08 461.5,-40.08 459.05,-47.08 463.95,-47.08"/>
+</g>
+</g>
+</svg>

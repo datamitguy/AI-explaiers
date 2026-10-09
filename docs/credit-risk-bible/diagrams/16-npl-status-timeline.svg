@@ -1,0 +1,135 @@
+<svg width="100%"
+ viewBox="0.00 0.00 970.80 708.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 694.4)">
+<title>NPLStatus</title>
+<polygon fill="white" stroke="transparent" points="-14.4,14.4 -14.4,-694.4 956.4,-694.4 956.4,14.4 -14.4,14.4"/>
+<g id="clust1" class="cluster">
+<title>cluster_fb</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M20,-199.5C20,-199.5 281,-199.5 281,-199.5 287,-199.5 293,-205.5 293,-211.5 293,-211.5 293,-591 293,-591 293,-597 287,-603 281,-603 281,-603 20,-603 20,-603 14,-603 8,-597 8,-591 8,-591 8,-211.5 8,-211.5 8,-205.5 14,-199.5 20,-199.5"/>
+<text text-anchor="middle" x="150.5" y="-588.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">Forbearance flags (run alongside status)</text>
+</g>
+<g id="node1" class="node">
+<title>Perf</title>
+<path fill="#065f46" stroke="#065f46" d="M436.5,-680C436.5,-680 339.5,-680 339.5,-680 333.5,-680 327.5,-674 327.5,-668 327.5,-668 327.5,-652 327.5,-652 327.5,-646 333.5,-640 339.5,-640 339.5,-640 436.5,-640 436.5,-640 442.5,-640 448.5,-646 448.5,-652 448.5,-652 448.5,-668 448.5,-668 448.5,-674 442.5,-680 436.5,-680"/>
+<text text-anchor="middle" x="388" y="-663.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Performing</text>
+<text text-anchor="middle" x="388" y="-650.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">0 days past due</text>
+</g>
+<g id="node2" class="node">
+<title>DPD30</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M459,-573C459,-573 317,-573 317,-573 311,-573 305,-567 305,-561 305,-561 305,-532 305,-532 305,-526 311,-520 317,-520 317,-520 459,-520 459,-520 465,-520 471,-526 471,-532 471,-532 471,-561 471,-561 471,-567 465,-573 459,-573"/>
+<text text-anchor="middle" x="388" y="-556.4" font-family="Helvetica,sans-Serif" font-size="12.00">30 days past due</text>
+<text text-anchor="middle" x="388" y="-543.4" font-family="Helvetica,sans-Serif" font-size="12.00">backstop for significant</text>
+<text text-anchor="middle" x="388" y="-530.4" font-family="Helvetica,sans-Serif" font-size="12.00">increase in credit risk</text>
+</g>
+<g id="edge1" class="edge">
+<title>Perf&#45;&gt;DPD30</title>
+<path fill="none" stroke="#4b5563" d="M388,-639.83C388,-623.49 388,-599.64 388,-580.27"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="390.45,-580.09 388,-573.09 385.55,-580.09 390.45,-580.09"/>
+</g>
+<g id="node5" class="node">
+<title>FBP</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M268,-573C268,-573 114,-573 114,-573 108,-573 102,-567 102,-561 102,-561 102,-532 102,-532 102,-526 108,-520 114,-520 114,-520 268,-520 268,-520 274,-520 280,-526 280,-532 280,-532 280,-561 280,-561 280,-567 274,-573 268,-573"/>
+<text text-anchor="middle" x="191" y="-556.4" font-family="Helvetica,sans-Serif" font-size="12.00">Performing forborne</text>
+<text text-anchor="middle" x="191" y="-543.4" font-family="Helvetica,sans-Serif" font-size="12.00">concession granted while</text>
+<text text-anchor="middle" x="191" y="-530.4" font-family="Helvetica,sans-Serif" font-size="12.00">still performing</text>
+</g>
+<g id="edge5" class="edge">
+<title>Perf&#45;&gt;FBP</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M354.13,-639.83C323.48,-622.48 277.87,-596.67 242.67,-576.74"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="243.52,-574.41 236.22,-573.09 241.1,-578.67 243.52,-574.41"/>
+<text text-anchor="middle" x="347" y="-614" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> concession</text>
+</g>
+<g id="node3" class="node">
+<title>Q</title>
+<polygon fill="#fef3c7" stroke="#d97706" points="517,-483 400,-449 517,-415 634,-449 517,-483"/>
+<text text-anchor="middle" x="517" y="-452.4" font-family="Helvetica,sans-Serif" font-size="12.00">90 days past due</text>
+<text text-anchor="middle" x="517" y="-439.4" font-family="Helvetica,sans-Serif" font-size="12.00">or unlikely to pay?</text>
+</g>
+<g id="edge2" class="edge">
+<title>DPD30&#45;&gt;Q</title>
+<path fill="none" stroke="#4b5563" d="M422.57,-519.91C439.87,-507.1 460.86,-491.56 478.65,-478.39"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="480.39,-480.15 484.55,-474.02 477.47,-476.22 480.39,-480.15"/>
+</g>
+<g id="edge4" class="edge">
+<title>Q&#45;&gt;Perf</title>
+<path fill="none" stroke="#4b5563" d="M517.35,-482.94C516.12,-516.2 509.69,-567.59 484,-603 473.89,-616.94 459.16,-627.97 444.26,-636.42"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="442.86,-634.39 437.88,-639.88 445.2,-638.69 442.86,-634.39"/>
+<text text-anchor="middle" x="543" y="-544" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> no, pays up</text>
+</g>
+<g id="node4" class="node">
+<title>NPE</title>
+<path fill="#991b1b" stroke="#991b1b" d="M600,-368C600,-368 434,-368 434,-368 428,-368 422,-362 422,-356 422,-356 422,-340 422,-340 422,-334 428,-328 434,-328 434,-328 600,-328 600,-328 606,-328 612,-334 612,-340 612,-340 612,-356 612,-356 612,-362 606,-368 600,-368"/>
+<text text-anchor="middle" x="517" y="-351.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Non&#45;performing / defaulted</text>
+<text text-anchor="middle" x="517" y="-338.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Stage 3 for provisions</text>
+</g>
+<g id="edge3" class="edge">
+<title>Q&#45;&gt;NPE</title>
+<path fill="none" stroke="#4b5563" d="M517,-414.76C517,-401.92 517,-387.44 517,-375.34"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="519.45,-375.15 517,-368.15 514.55,-375.15 519.45,-375.15"/>
+<text text-anchor="middle" x="527.5" y="-389" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> yes</text>
+</g>
+<g id="node6" class="node">
+<title>FBN</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M268,-260.5C268,-260.5 114,-260.5 114,-260.5 108,-260.5 102,-254.5 102,-248.5 102,-248.5 102,-219.5 102,-219.5 102,-213.5 108,-207.5 114,-207.5 114,-207.5 268,-207.5 268,-207.5 274,-207.5 280,-213.5 280,-219.5 280,-219.5 280,-248.5 280,-248.5 280,-254.5 274,-260.5 268,-260.5"/>
+<text text-anchor="middle" x="191" y="-243.9" font-family="Helvetica,sans-Serif" font-size="12.00">Non&#45;performing forborne</text>
+<text text-anchor="middle" x="191" y="-230.9" font-family="Helvetica,sans-Serif" font-size="12.00">concession granted while</text>
+<text text-anchor="middle" x="191" y="-217.9" font-family="Helvetica,sans-Serif" font-size="12.00">non&#45;performing</text>
+</g>
+<g id="edge6" class="edge">
+<title>NPE&#45;&gt;FBN</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M443.03,-327.95C398.97,-315.93 342.23,-299.25 293,-281 279.07,-275.83 264.36,-269.65 250.58,-263.51"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="251.28,-261.15 243.89,-260.51 249.27,-265.62 251.28,-261.15"/>
+<text text-anchor="middle" x="407" y="-302" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> concession</text>
+</g>
+<g id="node7" class="node">
+<title>Cure</title>
+<polygon fill="#fef3c7" stroke="#d97706" points="548,-281 305,-234 548,-187 791,-234 548,-281"/>
+<text text-anchor="middle" x="548" y="-243.9" font-family="Helvetica,sans-Serif" font-size="12.00">Cure test</text>
+<text text-anchor="middle" x="548" y="-230.9" font-family="Helvetica,sans-Serif" font-size="12.00">no arrears, paying for</text>
+<text text-anchor="middle" x="548" y="-217.9" font-family="Helvetica,sans-Serif" font-size="12.00">minimum period (commonly 3 months)</text>
+</g>
+<g id="edge7" class="edge">
+<title>NPE&#45;&gt;Cure</title>
+<path fill="none" stroke="#4b5563" d="M522.33,-327.75C525.54,-316.14 529.8,-300.76 533.92,-285.87"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="536.29,-286.48 535.8,-279.08 531.57,-285.17 536.29,-286.48"/>
+</g>
+<g id="edge9" class="edge">
+<title>Cure&#45;&gt;NPE</title>
+<path fill="none" stroke="#4b5563" d="M535.8,-279.08C531.89,-293.19 527.69,-308.37 524.26,-320.78"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="521.84,-320.35 522.33,-327.75 526.56,-321.65 521.84,-320.35"/>
+<text text-anchor="middle" x="538.5" y="-302" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> fail</text>
+</g>
+<g id="node8" class="node">
+<title>Prob</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M807.5,-140C807.5,-140 582.5,-140 582.5,-140 576.5,-140 570.5,-134 570.5,-128 570.5,-128 570.5,-99 570.5,-99 570.5,-93 576.5,-87 582.5,-87 582.5,-87 807.5,-87 807.5,-87 813.5,-87 819.5,-93 819.5,-99 819.5,-99 819.5,-128 819.5,-128 819.5,-134 813.5,-140 807.5,-140"/>
+<text text-anchor="middle" x="695" y="-123.4" font-family="Helvetica,sans-Serif" font-size="12.00">Probation</text>
+<text text-anchor="middle" x="695" y="-110.4" font-family="Helvetica,sans-Serif" font-size="12.00">forborne flag kept for a</text>
+<text text-anchor="middle" x="695" y="-97.4" font-family="Helvetica,sans-Serif" font-size="12.00">minimum period (commonly 2 years)</text>
+</g>
+<g id="edge8" class="edge">
+<title>Cure&#45;&gt;Prob</title>
+<path fill="none" stroke="#4b5563" d="M594.11,-195.83C614.41,-179.47 637.96,-160.48 657.2,-144.98"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="659.11,-146.58 663.02,-140.28 656.03,-142.77 659.11,-146.58"/>
+<text text-anchor="middle" x="651" y="-161" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> pass</text>
+</g>
+<g id="edge11" class="edge">
+<title>Prob&#45;&gt;NPE</title>
+<path fill="none" stroke="#4b5563" d="M751.23,-140.09C770.82,-151.71 791.1,-167.33 804,-187 988.5,-468.43 844.5,-286.88 824,-310 810.36,-325.38 703.11,-335.61 619.17,-341.33"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="618.97,-338.89 612.15,-341.81 619.29,-343.78 618.97,-338.89"/>
+<text text-anchor="middle" x="901.5" y="-237" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> new arrears or</text>
+<text text-anchor="middle" x="901.5" y="-226" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> new concession</text>
+</g>
+<g id="node9" class="node">
+<title>Back</title>
+<path fill="#065f46" stroke="#065f46" d="M754,-40C754,-40 636,-40 636,-40 630,-40 624,-34 624,-28 624,-28 624,-12 624,-12 624,-6 630,0 636,0 636,0 754,0 754,0 760,0 766,-6 766,-12 766,-12 766,-28 766,-28 766,-34 760,-40 754,-40"/>
+<text text-anchor="middle" x="695" y="-23.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Back to performing</text>
+<text text-anchor="middle" x="695" y="-10.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">flag removed</text>
+</g>
+<g id="edge10" class="edge">
+<title>Prob&#45;&gt;Back</title>
+<path fill="none" stroke="#4b5563" d="M695,-86.52C695,-74.27 695,-59.68 695,-47.38"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="697.45,-47.06 695,-40.06 692.55,-47.06 697.45,-47.06"/>
+<text text-anchor="middle" x="740" y="-61" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> clean period ends</text>
+</g>
+</g>
+</svg>

@@ -1,0 +1,106 @@
+<svg width="100%"
+ viewBox="0.00 0.00 452.30 641.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 627.4)">
+<title>PolicyHierarchy</title>
+<polygon fill="white" stroke="transparent" points="-14.4,14.4 -14.4,-627.4 437.9,-627.4 437.9,14.4 -14.4,14.4"/>
+<g id="node1" class="node">
+<title>Reg</title>
+<path fill="#6b7280" stroke="#6b7280" d="M383.5,-613C383.5,-613 195.5,-613 195.5,-613 189.5,-613 183.5,-607 183.5,-601 183.5,-601 183.5,-572 183.5,-572 183.5,-566 189.5,-560 195.5,-560 195.5,-560 383.5,-560 383.5,-560 389.5,-560 395.5,-566 395.5,-572 395.5,-572 395.5,-601 395.5,-601 395.5,-607 389.5,-613 383.5,-613"/>
+<text text-anchor="middle" x="289.5" y="-596.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Laws and regulation</text>
+<text text-anchor="middle" x="289.5" y="-583.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">(Basel rules as adopted locally,</text>
+<text text-anchor="middle" x="289.5" y="-570.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">supervisor&#39;s expectations)</text>
+</g>
+<g id="node2" class="node">
+<title>RAS</title>
+<path fill="#1f2937" stroke="#1f2937" d="M397.5,-513C397.5,-513 181.5,-513 181.5,-513 175.5,-513 169.5,-507 169.5,-501 169.5,-501 169.5,-485 169.5,-485 169.5,-479 175.5,-473 181.5,-473 181.5,-473 397.5,-473 397.5,-473 403.5,-473 409.5,-479 409.5,-485 409.5,-485 409.5,-501 409.5,-501 409.5,-507 403.5,-513 397.5,-513"/>
+<text text-anchor="middle" x="289.5" y="-496.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Risk appetite statement</text>
+<text text-anchor="middle" x="289.5" y="-483.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">(board: how much risk, in numbers)</text>
+</g>
+<g id="edge1" class="edge">
+<title>Reg&#45;&gt;RAS</title>
+<path fill="none" stroke="#4b5563" d="M289.5,-559.52C289.5,-547.27 289.5,-532.68 289.5,-520.38"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="291.95,-520.06 289.5,-513.06 287.05,-520.06 291.95,-520.06"/>
+<text text-anchor="middle" x="316.5" y="-534" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> constrains</text>
+</g>
+<g id="node3" class="node">
+<title>Frame</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M398,-436C398,-436 181,-436 181,-436 175,-436 169,-430 169,-424 169,-424 169,-395 169,-395 169,-389 175,-383 181,-383 181,-383 398,-383 398,-383 404,-383 410,-389 410,-395 410,-395 410,-424 410,-424 410,-430 404,-436 398,-436"/>
+<text text-anchor="middle" x="289.5" y="-419.4" font-family="Helvetica,sans-Serif" font-size="12.00">Credit risk management framework</text>
+<text text-anchor="middle" x="289.5" y="-406.4" font-family="Helvetica,sans-Serif" font-size="12.00">(board&#45;approved: roles, principles,</text>
+<text text-anchor="middle" x="289.5" y="-393.4" font-family="Helvetica,sans-Serif" font-size="12.00">three lines, governance bodies)</text>
+</g>
+<g id="edge2" class="edge">
+<title>RAS&#45;&gt;Frame</title>
+<path fill="none" stroke="#4b5563" d="M289.5,-472.69C289.5,-463.9 289.5,-453.25 289.5,-443.27"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="291.95,-443.15 289.5,-436.15 287.05,-443.15 291.95,-443.15"/>
+</g>
+<g id="node4" class="node">
+<title>Policy</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M411.5,-346C411.5,-346 167.5,-346 167.5,-346 161.5,-346 155.5,-340 155.5,-334 155.5,-334 155.5,-305 155.5,-305 155.5,-299 161.5,-293 167.5,-293 167.5,-293 411.5,-293 411.5,-293 417.5,-293 423.5,-299 423.5,-305 423.5,-305 423.5,-334 423.5,-334 423.5,-340 417.5,-346 411.5,-346"/>
+<text text-anchor="middle" x="289.5" y="-329.4" font-family="Helvetica,sans-Serif" font-size="12.00">Credit policies</text>
+<text text-anchor="middle" x="289.5" y="-316.4" font-family="Helvetica,sans-Serif" font-size="12.00">(group credit committee: what we lend,</text>
+<text text-anchor="middle" x="289.5" y="-303.4" font-family="Helvetica,sans-Serif" font-size="12.00">to whom, on what terms, who approves)</text>
+</g>
+<g id="edge3" class="edge">
+<title>Frame&#45;&gt;Policy</title>
+<path fill="none" stroke="#4b5563" d="M289.5,-382.57C289.5,-373.44 289.5,-363.06 289.5,-353.43"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="291.95,-353.24 289.5,-346.24 287.05,-353.24 291.95,-353.24"/>
+</g>
+<g id="node5" class="node">
+<title>Std</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M266.5,-256C266.5,-256 32.5,-256 32.5,-256 26.5,-256 20.5,-250 20.5,-244 20.5,-244 20.5,-202 20.5,-202 20.5,-196 26.5,-190 32.5,-190 32.5,-190 266.5,-190 266.5,-190 272.5,-190 278.5,-196 278.5,-202 278.5,-202 278.5,-244 278.5,-244 278.5,-250 272.5,-256 266.5,-256"/>
+<text text-anchor="middle" x="149.5" y="-239.4" font-family="Helvetica,sans-Serif" font-size="12.00">Credit standards and</text>
+<text text-anchor="middle" x="149.5" y="-226.4" font-family="Helvetica,sans-Serif" font-size="12.00">lending guidelines</text>
+<text text-anchor="middle" x="149.5" y="-213.4" font-family="Helvetica,sans-Serif" font-size="12.00">(by product, sector, country:</text>
+<text text-anchor="middle" x="149.5" y="-200.4" font-family="Helvetica,sans-Serif" font-size="12.00">maximum LTV, minimum cover, tenor)</text>
+</g>
+<g id="edge4" class="edge">
+<title>Policy&#45;&gt;Std</title>
+<path fill="none" stroke="#4b5563" d="M251.61,-292.93C236.61,-282.8 219.1,-270.98 202.85,-260.01"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="204.11,-257.9 196.93,-256.02 201.37,-261.97 204.11,-257.9"/>
+</g>
+<g id="node8" class="node">
+<title>Exc</title>
+<path fill="#fef3c7" stroke="#d97706" d="M408.5,-153C408.5,-153 264.5,-153 264.5,-153 258.5,-153 252.5,-147 252.5,-141 252.5,-141 252.5,-112 252.5,-112 252.5,-106 258.5,-100 264.5,-100 264.5,-100 408.5,-100 408.5,-100 414.5,-100 420.5,-106 420.5,-112 420.5,-112 420.5,-141 420.5,-141 420.5,-147 414.5,-153 408.5,-153"/>
+<text text-anchor="middle" x="336.5" y="-136.4" font-family="Helvetica,sans-Serif" font-size="12.00">Policy exception</text>
+<text text-anchor="middle" x="336.5" y="-123.4" font-family="Helvetica,sans-Serif" font-size="12.00">(approved and tracked,</text>
+<text text-anchor="middle" x="336.5" y="-110.4" font-family="Helvetica,sans-Serif" font-size="12.00">reported to committee)</text>
+</g>
+<g id="edge7" class="edge">
+<title>Policy&#45;&gt;Exc</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M295.84,-292.74C304.27,-258.47 319.19,-197.85 328.42,-160.34"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="330.89,-160.54 330.19,-153.16 326.14,-159.37 330.89,-160.54"/>
+<text text-anchor="middle" x="358.5" y="-220.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> deviation from</text>
+</g>
+<g id="node6" class="node">
+<title>Proc</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M211.5,-153C211.5,-153 31.5,-153 31.5,-153 25.5,-153 19.5,-147 19.5,-141 19.5,-141 19.5,-112 19.5,-112 19.5,-106 25.5,-100 31.5,-100 31.5,-100 211.5,-100 211.5,-100 217.5,-100 223.5,-106 223.5,-112 223.5,-112 223.5,-141 223.5,-141 223.5,-147 217.5,-153 211.5,-153"/>
+<text text-anchor="middle" x="121.5" y="-136.4" font-family="Helvetica,sans-Serif" font-size="12.00">Procedures and manuals</text>
+<text text-anchor="middle" x="121.5" y="-123.4" font-family="Helvetica,sans-Serif" font-size="12.00">(how to do it: forms, systems,</text>
+<text text-anchor="middle" x="121.5" y="-110.4" font-family="Helvetica,sans-Serif" font-size="12.00">checklists, step by step)</text>
+</g>
+<g id="edge5" class="edge">
+<title>Std&#45;&gt;Proc</title>
+<path fill="none" stroke="#4b5563" d="M139.94,-189.74C137.09,-180.11 133.96,-169.54 131.1,-159.89"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="133.41,-159.07 129.07,-153.06 128.71,-160.47 133.41,-159.07"/>
+</g>
+<g id="edge8" class="edge">
+<title>Std&#45;&gt;Exc</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M213.07,-189.87C234.56,-179.01 258.42,-166.96 279.38,-156.37"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="280.64,-158.47 285.79,-153.13 278.43,-154.1 280.64,-158.47"/>
+</g>
+<g id="node7" class="node">
+<title>Sys</title>
+<path fill="#065f46" stroke="#065f46" d="M231,-53C231,-53 12,-53 12,-53 6,-53 0,-47 0,-41 0,-41 0,-12 0,-12 0,-6 6,0 12,0 12,0 231,0 231,0 237,0 243,-6 243,-12 243,-12 243,-41 243,-41 243,-47 237,-53 231,-53"/>
+<text text-anchor="middle" x="121.5" y="-36.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">System rules and controls</text>
+<text text-anchor="middle" x="121.5" y="-23.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">(limits, workflows, mandatory fields,</text>
+<text text-anchor="middle" x="121.5" y="-10.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">automated checks)</text>
+</g>
+<g id="edge6" class="edge">
+<title>Proc&#45;&gt;Sys</title>
+<path fill="none" stroke="#4b5563" d="M121.5,-99.75C121.5,-87.71 121.5,-73.23 121.5,-60.41"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="123.95,-60.08 121.5,-53.08 119.05,-60.08 123.95,-60.08"/>
+<text text-anchor="middle" x="150" y="-74" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> encoded in</text>
+</g>
+</g>
+</svg>

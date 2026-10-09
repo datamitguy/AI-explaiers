@@ -1,0 +1,18 @@
+digraph CreditorWaterfall {
+  graph [rankdir=TB, splines=true, nodesep=0.3, ranksep=0.35, fontname="Helvetica", fontsize=13, bgcolor="white", pad=0.2];
+  node  [shape=box, style="rounded,filled", fillcolor="#eef2ff", color="#6366f1", fontname="Helvetica", fontsize=12, margin="0.18,0.10", width=4.2];
+  edge  [color="#4b5563", arrowsize=0.7, fontname="Helvetica", fontsize=10, fontcolor="#374151"];
+
+  Pot  [label="Cash from selling the borrower's assets\n(illustrative: 60 of 100 owed in total)", fillcolor="#1f2937", fontcolor="white", color="#1f2937"];
+  L1   [label="1. Costs of the process\n(insolvency practitioner, lawyers, agents)"];
+  L2   [label="2. Super senior lenders\n(rescue finance, hedging close-outs)"];
+  L3   [label="3. Secured creditors\nup to the value of their collateral"];
+  L4   [label="4. Preferential creditors\n(often employees, some taxes;\nvaries by country)"];
+  L5   [label="5. Unsecured creditors\n(suppliers, bondholders, uncovered loans)\nshare what is left pro rata"];
+  L6   [label="6. Subordinated and mezzanine debt"];
+  L7   [label="7. Shareholders\n(equity, paid last and usually nothing)", fillcolor="#991b1b", fontcolor="white", color="#991b1b"];
+  Note [label="Secured lender recovers from its own\ncollateral first, then joins the unsecured\npool for any shortfall", fillcolor="#6b7280", fontcolor="white", color="#6b7280"];
+
+  Pot -> L1 -> L2 -> L3 -> L4 -> L5 -> L6 -> L7;
+  L3 -> Note [style=dashed];
+}

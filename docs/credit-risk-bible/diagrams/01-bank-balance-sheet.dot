@@ -1,0 +1,26 @@
+digraph BankBalanceSheet {
+  graph [rankdir=LR, splines=true, nodesep=0.25, ranksep=0.9, fontname="Helvetica", fontsize=13, bgcolor="white", newrank=true, pad=0.2];
+  node  [shape=box, style="rounded,filled", fillcolor="#eef2ff", color="#6366f1", fontname="Helvetica", fontsize=12, margin="0.18,0.10", width=3.2];
+  edge  [color="#4b5563", arrowsize=0.7, fontname="Helvetica", fontsize=10, fontcolor="#374151"];
+
+  subgraph cluster_assets {
+    label="ASSETS: what the bank owns (100)"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
+    Cash   [label="Cash and central bank reserves\n10"];
+    Bonds  [label="Government and other bonds\n(liquid, can be sold fast)\n15"];
+    Loans  [label="Loans to customers\nmortgages, business loans, cards\n65", fillcolor="#1e3a8a", fontcolor="white", color="#1e3a8a"];
+    Other  [label="Other: buildings, systems,\nderivatives, goodwill\n10"];
+    Cash -> Bonds -> Loans -> Other [style=invis];
+  }
+
+  subgraph cluster_liab {
+    label="LIABILITIES AND EQUITY: where the money came from (100)"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
+    Dep    [label="Customer deposits\n(owed back on demand)\n70"];
+    Whole  [label="Wholesale funding and bonds\n(borrowed from markets)\n15"];
+    Sub    [label="Subordinated debt\n(Tier 2 style)\n5"];
+    Equity [label="Equity / capital\n(shareholders' money plus\nretained profits)\n10", fillcolor="#065f46", fontcolor="white", color="#065f46"];
+    Dep -> Whole -> Sub -> Equity [style=invis];
+  }
+
+  Loans -> Equity [label=" loan losses eat\n equity first", style=dashed, color="#991b1b", fontcolor="#991b1b"];
+  Dep -> Loans [label=" deposits fund loans", style=dashed];
+}

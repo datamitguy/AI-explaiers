@@ -1,0 +1,183 @@
+<svg width="100%"
+ viewBox="0.00 0.00 516.30 1090.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 1076.4)">
+<title>ReportingProduction</title>
+<polygon fill="white" stroke="transparent" points="-14.4,14.4 -14.4,-1076.4 501.9,-1076.4 501.9,14.4 -14.4,14.4"/>
+<g id="clust1" class="cluster">
+<title>cluster_data</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M198,-840C198,-840 366,-840 366,-840 372,-840 378,-846 378,-852 378,-852 378,-983 378,-983 378,-989 372,-995 366,-995 366,-995 198,-995 198,-995 192,-995 186,-989 186,-983 186,-983 186,-852 186,-852 186,-846 192,-840 198,-840"/>
+<text text-anchor="middle" x="282" y="-980.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">Days 1 to 5: data</text>
+</g>
+<g id="clust2" class="cluster">
+<title>cluster_calc</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M188,-666C188,-666 372,-666 372,-666 378,-666 384,-672 384,-678 384,-678 384,-809 384,-809 384,-815 378,-821 372,-821 372,-821 188,-821 188,-821 182,-821 176,-815 176,-809 176,-809 176,-678 176,-678 176,-672 182,-666 188,-666"/>
+<text text-anchor="middle" x="280" y="-806.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">Days 5 to 12: calculation</text>
+</g>
+<g id="clust3" class="cluster">
+<title>cluster_val</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M50,-374C50,-374 374,-374 374,-374 380,-374 386,-380 386,-386 386,-386 386,-635 386,-635 386,-641 380,-647 374,-647 374,-647 50,-647 50,-647 44,-647 38,-641 38,-635 38,-635 38,-386 38,-386 38,-380 44,-374 50,-374"/>
+<text text-anchor="middle" x="212" y="-632.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">Days 12 to 20: validation</text>
+</g>
+<g id="node1" class="node">
+<title>Start</title>
+<path fill="#1f2937" stroke="#1f2937" d="M369.5,-1062C369.5,-1062 194.5,-1062 194.5,-1062 188.5,-1062 182.5,-1056 182.5,-1050 182.5,-1050 182.5,-1034 182.5,-1034 182.5,-1028 188.5,-1022 194.5,-1022 194.5,-1022 369.5,-1022 369.5,-1022 375.5,-1022 381.5,-1028 381.5,-1034 381.5,-1034 381.5,-1050 381.5,-1050 381.5,-1056 375.5,-1062 369.5,-1062"/>
+<text text-anchor="middle" x="282" y="-1045.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Reporting date (quarter&#45;end)</text>
+<text text-anchor="middle" x="282" y="-1032.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">books close</text>
+</g>
+<g id="node2" class="node">
+<title>Snap</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M358,-965C358,-965 206,-965 206,-965 200,-965 194,-959 194,-953 194,-953 194,-937 194,-937 194,-931 200,-925 206,-925 206,-925 358,-925 358,-925 364,-925 370,-931 370,-937 370,-937 370,-953 370,-953 370,-959 364,-965 358,-965"/>
+<text text-anchor="middle" x="282" y="-948.4" font-family="Helvetica,sans-Serif" font-size="12.00">Source snapshots loaded</text>
+<text text-anchor="middle" x="282" y="-935.4" font-family="Helvetica,sans-Serif" font-size="12.00">to warehouse</text>
+</g>
+<g id="edge5" class="edge">
+<title>Start&#45;&gt;Snap</title>
+<path fill="none" stroke="#4b5563" d="M282,-1021.78C282,-1007.61 282,-988.17 282,-972.53"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="284.45,-972.2 282,-965.2 279.55,-972.2 284.45,-972.2"/>
+</g>
+<g id="node3" class="node">
+<title>DQ</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M355.5,-888C355.5,-888 208.5,-888 208.5,-888 202.5,-888 196.5,-882 196.5,-876 196.5,-876 196.5,-860 196.5,-860 196.5,-854 202.5,-848 208.5,-848 208.5,-848 355.5,-848 355.5,-848 361.5,-848 367.5,-854 367.5,-860 367.5,-860 367.5,-876 367.5,-876 367.5,-882 361.5,-888 355.5,-888"/>
+<text text-anchor="middle" x="282" y="-871.4" font-family="Helvetica,sans-Serif" font-size="12.00">Data quality checks</text>
+<text text-anchor="middle" x="282" y="-858.4" font-family="Helvetica,sans-Serif" font-size="12.00">and logged adjustments</text>
+</g>
+<g id="edge1" class="edge">
+<title>Snap&#45;&gt;DQ</title>
+<path fill="none" stroke="#4b5563" d="M282,-924.69C282,-915.76 282,-905.03 282,-895.37"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="284.45,-895.25 282,-888.25 279.55,-895.25 284.45,-895.25"/>
+</g>
+<g id="node4" class="node">
+<title>Calc</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M363,-791C363,-791 201,-791 201,-791 195,-791 189,-785 189,-779 189,-779 189,-763 189,-763 189,-757 195,-751 201,-751 201,-751 363,-751 363,-751 369,-751 375,-757 375,-763 375,-763 375,-779 375,-779 375,-785 369,-791 363,-791"/>
+<text text-anchor="middle" x="282" y="-774.4" font-family="Helvetica,sans-Serif" font-size="12.00">Risk engines run</text>
+<text text-anchor="middle" x="282" y="-761.4" font-family="Helvetica,sans-Serif" font-size="12.00">RWA, ECL, large exposures</text>
+</g>
+<g id="edge6" class="edge">
+<title>DQ&#45;&gt;Calc</title>
+<path fill="none" stroke="#4b5563" d="M282,-847.78C282,-833.61 282,-814.17 282,-798.53"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="284.45,-798.2 282,-791.2 279.55,-798.2 284.45,-798.2"/>
+</g>
+<g id="node5" class="node">
+<title>Recon</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M363.5,-714C363.5,-714 196.5,-714 196.5,-714 190.5,-714 184.5,-708 184.5,-702 184.5,-702 184.5,-686 184.5,-686 184.5,-680 190.5,-674 196.5,-674 196.5,-674 363.5,-674 363.5,-674 369.5,-674 375.5,-680 375.5,-686 375.5,-686 375.5,-702 375.5,-702 375.5,-708 369.5,-714 363.5,-714"/>
+<text text-anchor="middle" x="280" y="-697.4" font-family="Helvetica,sans-Serif" font-size="12.00">Reconcile to general ledger</text>
+<text text-anchor="middle" x="280" y="-684.4" font-family="Helvetica,sans-Serif" font-size="12.00">and to prior period</text>
+</g>
+<g id="edge2" class="edge">
+<title>Calc&#45;&gt;Recon</title>
+<path fill="none" stroke="#4b5563" d="M281.48,-750.69C281.25,-741.76 280.96,-731.03 280.7,-721.37"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="283.15,-721.18 280.51,-714.25 278.25,-721.31 283.15,-721.18"/>
+</g>
+<g id="node6" class="node">
+<title>Tax</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M319.5,-617C319.5,-617 162.5,-617 162.5,-617 156.5,-617 150.5,-611 150.5,-605 150.5,-605 150.5,-589 150.5,-589 150.5,-583 156.5,-577 162.5,-577 162.5,-577 319.5,-577 319.5,-577 325.5,-577 331.5,-583 331.5,-589 331.5,-589 331.5,-605 331.5,-605 331.5,-611 325.5,-617 319.5,-617"/>
+<text text-anchor="middle" x="241" y="-600.4" font-family="Helvetica,sans-Serif" font-size="12.00">Template population and</text>
+<text text-anchor="middle" x="241" y="-587.4" font-family="Helvetica,sans-Serif" font-size="12.00">taxonomy validation rules</text>
+</g>
+<g id="edge7" class="edge">
+<title>Recon&#45;&gt;Tax</title>
+<path fill="none" stroke="#4b5563" d="M272.11,-673.78C266.19,-659.35 258.02,-639.46 251.54,-623.68"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="253.81,-622.74 248.88,-617.2 249.27,-624.6 253.81,-622.74"/>
+</g>
+<g id="node7" class="node">
+<title>Var</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M282,-540C282,-540 162,-540 162,-540 156,-540 150,-534 150,-528 150,-528 150,-499 150,-499 150,-493 156,-487 162,-487 162,-487 282,-487 282,-487 288,-487 294,-493 294,-499 294,-499 294,-528 294,-528 294,-534 288,-540 282,-540"/>
+<text text-anchor="middle" x="222" y="-523.4" font-family="Helvetica,sans-Serif" font-size="12.00">Variance analysis</text>
+<text text-anchor="middle" x="222" y="-510.4" font-family="Helvetica,sans-Serif" font-size="12.00">explain movements</text>
+<text text-anchor="middle" x="222" y="-497.4" font-family="Helvetica,sans-Serif" font-size="12.00">versus last quarter</text>
+</g>
+<g id="edge3" class="edge">
+<title>Tax&#45;&gt;Var</title>
+<path fill="none" stroke="#4b5563" d="M236.5,-576.69C234.43,-567.81 231.92,-557.04 229.57,-546.98"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="231.96,-546.42 227.98,-540.15 227.18,-547.53 231.96,-546.42"/>
+</g>
+<g id="node8" class="node">
+<title>Q1</title>
+<polygon fill="#fef3c7" stroke="#d97706" points="212,-450 46,-416 212,-382 378,-416 212,-450"/>
+<text text-anchor="middle" x="212" y="-419.4" font-family="Helvetica,sans-Serif" font-size="12.00">Movements explained and</text>
+<text text-anchor="middle" x="212" y="-406.4" font-family="Helvetica,sans-Serif" font-size="12.00">checks passed?</text>
+</g>
+<g id="edge4" class="edge">
+<title>Var&#45;&gt;Q1</title>
+<path fill="none" stroke="#4b5563" d="M219.32,-486.91C218.34,-477.57 217.21,-466.78 216.14,-456.51"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="218.57,-456.22 215.4,-449.52 213.7,-456.73 218.57,-456.22"/>
+</g>
+<g id="node9" class="node">
+<title>Invest</title>
+<path fill="#991b1b" stroke="#991b1b" d="M475.5,-328.5C475.5,-328.5 352.5,-328.5 352.5,-328.5 346.5,-328.5 340.5,-322.5 340.5,-316.5 340.5,-316.5 340.5,-300.5 340.5,-300.5 340.5,-294.5 346.5,-288.5 352.5,-288.5 352.5,-288.5 475.5,-288.5 475.5,-288.5 481.5,-288.5 487.5,-294.5 487.5,-300.5 487.5,-300.5 487.5,-316.5 487.5,-316.5 487.5,-322.5 481.5,-328.5 475.5,-328.5"/>
+<text text-anchor="middle" x="414" y="-311.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Investigate, correct,</text>
+<text text-anchor="middle" x="414" y="-298.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">rerun affected parts</text>
+</g>
+<g id="edge8" class="edge">
+<title>Q1&#45;&gt;Invest</title>
+<path fill="none" stroke="#4b5563" d="M257.58,-391.19C291.51,-373.47 337.52,-349.44 370.85,-332.04"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="372.27,-334.06 377.34,-328.65 370,-329.72 372.27,-334.06"/>
+<text text-anchor="middle" x="333" y="-356" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> no</text>
+</g>
+<g id="node10" class="node">
+<title>Att</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M300,-335C300,-335 124,-335 124,-335 118,-335 112,-329 112,-323 112,-323 112,-294 112,-294 112,-288 118,-282 124,-282 124,-282 300,-282 300,-282 306,-282 312,-288 312,-294 312,-294 312,-323 312,-323 312,-329 306,-335 300,-335"/>
+<text text-anchor="middle" x="212" y="-318.4" font-family="Helvetica,sans-Serif" font-size="12.00">Attestation and sign&#45;off</text>
+<text text-anchor="middle" x="212" y="-305.4" font-family="Helvetica,sans-Serif" font-size="12.00">head of regulatory reporting,</text>
+<text text-anchor="middle" x="212" y="-292.4" font-family="Helvetica,sans-Serif" font-size="12.00">chief financial or risk officer</text>
+</g>
+<g id="edge10" class="edge">
+<title>Q1&#45;&gt;Att</title>
+<path fill="none" stroke="#4b5563" d="M212,-381.91C212,-369.28 212,-354.9 212,-342.3"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="214.45,-342.11 212,-335.11 209.55,-342.11 214.45,-342.11"/>
+<text text-anchor="middle" x="222.5" y="-356" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> yes</text>
+</g>
+<g id="edge9" class="edge">
+<title>Invest&#45;&gt;Calc</title>
+<path fill="none" stroke="#4b5563" d="M414.58,-328.56C415.17,-349.68 416,-384.77 416,-415 416,-695 416,-695 416,-695 416,-719.98 398.05,-736.72 375.29,-747.91"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="374.09,-745.76 368.76,-750.92 376.14,-750.21 374.09,-745.76"/>
+</g>
+<g id="node11" class="node">
+<title>Sub</title>
+<path fill="#065f46" stroke="#065f46" d="M292,-245C292,-245 132,-245 132,-245 126,-245 120,-239 120,-233 120,-233 120,-217 120,-217 120,-211 126,-205 132,-205 132,-205 292,-205 292,-205 298,-205 304,-211 304,-217 304,-217 304,-233 304,-233 304,-239 298,-245 292,-245"/>
+<text text-anchor="middle" x="212" y="-228.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Submission to regulator</text>
+<text text-anchor="middle" x="212" y="-215.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">via portal, before deadline</text>
+</g>
+<g id="edge11" class="edge">
+<title>Att&#45;&gt;Sub</title>
+<path fill="none" stroke="#4b5563" d="M212,-281.71C212,-272.37 212,-261.8 212,-252.4"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="214.45,-252.16 212,-245.16 209.55,-252.16 214.45,-252.16"/>
+</g>
+<g id="node12" class="node">
+<title>Q2</title>
+<polygon fill="#fef3c7" stroke="#d97706" points="212,-168 104,-134 212,-100 320,-134 212,-168"/>
+<text text-anchor="middle" x="212" y="-137.4" font-family="Helvetica,sans-Serif" font-size="12.00">Error found after</text>
+<text text-anchor="middle" x="212" y="-124.4" font-family="Helvetica,sans-Serif" font-size="12.00">submission?</text>
+</g>
+<g id="edge12" class="edge">
+<title>Sub&#45;&gt;Q2</title>
+<path fill="none" stroke="#4b5563" d="M212,-204.69C212,-196.05 212,-185.52 212,-175.29"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="214.45,-175.28 212,-168.28 209.55,-175.28 214.45,-175.28"/>
+</g>
+<g id="node13" class="node">
+<title>Resub</title>
+<path fill="#991b1b" stroke="#991b1b" d="M216,-53C216,-53 12,-53 12,-53 6,-53 0,-47 0,-41 0,-41 0,-12 0,-12 0,-6 6,0 12,0 12,0 216,0 216,0 222,0 228,-6 228,-12 228,-12 228,-41 228,-41 228,-47 222,-53 216,-53"/>
+<text text-anchor="middle" x="114" y="-36.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Resubmission with explanation</text>
+<text text-anchor="middle" x="114" y="-23.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">root cause, control fix,</text>
+<text text-anchor="middle" x="114" y="-10.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">may attract supervisory attention</text>
+</g>
+<g id="edge13" class="edge">
+<title>Q2&#45;&gt;Resub</title>
+<path fill="none" stroke="#4b5563" d="M188.28,-107.46C174.54,-92.67 157.14,-73.94 142.64,-58.33"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="144.4,-56.63 137.84,-53.17 140.81,-59.97 144.4,-56.63"/>
+<text text-anchor="middle" x="173.5" y="-74" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> yes</text>
+</g>
+<g id="node14" class="node">
+<title>Done</title>
+<path fill="#065f46" stroke="#065f46" d="M355,-46.5C355,-46.5 265,-46.5 265,-46.5 259,-46.5 253,-40.5 253,-34.5 253,-34.5 253,-18.5 253,-18.5 253,-12.5 259,-6.5 265,-6.5 265,-6.5 355,-6.5 355,-6.5 361,-6.5 367,-12.5 367,-18.5 367,-18.5 367,-34.5 367,-34.5 367,-40.5 361,-46.5 355,-46.5"/>
+<text text-anchor="middle" x="310" y="-29.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Period closed</text>
+<text text-anchor="middle" x="310" y="-16.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">lessons logged</text>
+</g>
+<g id="edge14" class="edge">
+<title>Q2&#45;&gt;Done</title>
+<path fill="none" stroke="#4b5563" d="M235.72,-107.46C251.4,-90.59 271.83,-68.6 287.29,-51.95"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="289.36,-53.32 292.33,-46.52 285.77,-49.98 289.36,-53.32"/>
+<text text-anchor="middle" x="274" y="-74" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> no</text>
+</g>
+</g>
+</svg>

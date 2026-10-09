@@ -1,0 +1,45 @@
+digraph BCBS239 {
+  graph [rankdir=TB, splines=true, nodesep=0.3, ranksep=0.5, fontname="Helvetica", fontsize=13, bgcolor="white", newrank=true, pad=0.2];
+  node  [shape=box, style="rounded,filled", fillcolor="#eef2ff", color="#6366f1", fontname="Helvetica", fontsize=12, margin="0.18,0.10"];
+  edge  [color="#4b5563", arrowsize=0.7, fontname="Helvetica", fontsize=10, fontcolor="#374151"];
+
+  Start [label="BCBS 239: principles for effective\nrisk data aggregation and risk reporting", fillcolor="#1f2937", fontcolor="white", color="#1f2937"];
+
+  subgraph cluster_gov {
+    label="I. Governance and infrastructure"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
+    P1 [label="1. Governance\nboard and senior management\nown data quality"];
+    P2 [label="2. Data architecture\nand IT infrastructure\nworks in normal and stress times"];
+  }
+
+  subgraph cluster_agg {
+    label="II. Risk data aggregation"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
+    P3 [label="3. Accuracy and integrity\nmostly automated,\nreconciled, few manual fixes"];
+    P4 [label="4. Completeness\nall material risk,\nall entities, all books"];
+    P5 [label="5. Timeliness\nfast enough for the decision,\nfaster in a crisis"];
+    P6 [label="6. Adaptability\nanswer ad hoc questions\nand new slices quickly"];
+    { rank=same; P3 -> P4 -> P5 -> P6 [style=invis]; }
+  }
+
+  subgraph cluster_rep {
+    label="III. Risk reporting"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
+    P7  [label="7. Accuracy\nreports reconciled\nand validated"];
+    P8  [label="8. Comprehensiveness\ncovers all material risks"];
+    P9  [label="9. Clarity and usefulness\nright detail for the reader"];
+    P10 [label="10. Frequency\nmatches the need, faster in stress"];
+    P11 [label="11. Distribution\nright people, confidential"];
+    { rank=same; P7 -> P8 -> P9 -> P10 -> P11 [style=invis]; }
+  }
+
+  subgraph cluster_sup {
+    label="IV. Supervisory review"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
+    P12 [label="12 to 14. Supervisors review,\nrequire remediation,\ncooperate across borders", fillcolor="#6b7280", fontcolor="white", color="#6b7280"];
+  }
+
+  Start -> {P1 P2};
+  P1 -> P3; P2 -> P3;
+  P3 -> P7;
+  P4 -> P8;
+  P5 -> P10;
+  P6 -> P9;
+  {P7 P8 P9 P10 P11} -> P12;
+}

@@ -1,0 +1,46 @@
+digraph ECLEngine {
+  graph [rankdir=TB, splines=true, nodesep=0.3, ranksep=0.45, fontname="Helvetica", fontsize=13, bgcolor="white", newrank=true, pad=0.2];
+  node  [shape=box, style="rounded,filled", fillcolor="#eef2ff", color="#6366f1", fontname="Helvetica", fontsize=12, margin="0.18,0.10"];
+  edge  [color="#4b5563", arrowsize=0.7, fontname="Helvetica", fontsize=10, fontcolor="#374151"];
+
+  subgraph cluster_in {
+    label="1. Inputs"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
+    Exp  [label="Exposure data\nbalances, limits, schedules,\ndays past due, collateral"];
+    Rate [label="Ratings and scores\nPD at origination and today"];
+    Mac  [label="Macro scenarios\nbase, upside, downside, severe\nwith probability weights"];
+    Par  [label="Model parameters\nPD term structures, LGD, EAD,\neffective interest rates"];
+    { rank=same; Exp -> Rate -> Mac -> Par [style=invis]; }
+  }
+
+  subgraph cluster_run {
+    label="2. Model execution"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
+    Stage [label="Staging engine\nSICR tests, 30 dpd backstop,\ndefault flag, cure rules"];
+    Calc  [label="ECL calculation per loan per scenario\nsum of PD x LGD x EAD discounted\nover 12 months or lifetime"];
+    Wgt   [label="Scenario weighting\nprobability-weighted average"];
+    Stage -> Calc -> Wgt;
+  }
+
+  subgraph cluster_post {
+    label="3. Adjustments and controls"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
+    PMA  [label="Post-model adjustments\nand management overlays\n(documented, approved, tracked)"];
+    Ind  [label="Individually assessed Stage 3\ncash-flow workouts replace\nmodel output"];
+    Ctl  [label="Controls\nreconciliation to ledger,\ncompleteness, movement analysis"];
+  }
+
+  subgraph cluster_out {
+    label="4. Outputs"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
+    GL   [label="General ledger\nprovision balance and\nimpairment charge"];
+    Reg  [label="Regulatory feeds\nEL shortfall, SA net exposure,\nreturns and Pillar 3"];
+    MI   [label="Management information\nstage migration, coverage ratios,\nsensitivities"];
+    { rank=same; GL -> Reg -> MI [style=invis]; }
+  }
+
+  Com [label="Impairment committee sign-off", fillcolor="#1f2937", fontcolor="white", color="#1f2937"];
+
+  {Exp Rate Mac Par} -> Stage;
+  Wgt -> PMA;
+  Wgt -> Ind;
+  {PMA Ind} -> Ctl;
+  Ctl -> Com;
+  Com -> {GL Reg MI};
+}

@@ -1,0 +1,24 @@
+digraph ScorecardBuild {
+  graph [rankdir=TB, splines=true, nodesep=0.3, ranksep=0.4, fontname="Helvetica", fontsize=13, bgcolor="white", pad=0.2, newrank=true];
+  node  [shape=box, style="rounded,filled", fillcolor="#eef2ff", color="#6366f1", fontname="Helvetica", fontsize=12, margin="0.18,0.10", width=4.6];
+  edge  [color="#4b5563", arrowsize=0.7, fontname="Helvetica", fontsize=10, fontcolor="#374151"];
+
+  S1 [label="1. Define the target\n(e.g. 90 days past due within 12 months = bad)\nand the observation and performance windows", fillcolor="#1f2937", fontcolor="white", color="#1f2937"];
+  S2 [label="2. Assemble the sample\n(e.g. 200,000 loans booked 2019 to 2022,\n6,000 bads; exclusions and reject inference)"];
+  S3 [label="3. Candidate variables\n(income, age of account, bureau score,\nutilisation, missed payments, employment)"];
+  S4 [label="4. Binning and weight of evidence\n(group each variable into bands,\ncompute log of good/bad odds per band)"];
+  S5 [label="5. Variable selection\n(information value, correlation,\nbusiness sense, stability over time)"];
+  S6 [label="6. Logistic regression\n(fit coefficients that predict\nthe log-odds of being bad)"];
+  S7 [label="7. Scale to points\n(e.g. 600 points = 50:1 odds,\n20 points doubles the odds)"];
+  S8 [label="8. Measure discrimination\n(Gini, KS statistic, on build and\nout-of-time samples)"];
+  Q  [label="Gini acceptable and stable?\n(illustrative: above 0.5 for applications)", shape=diamond, style=filled, fillcolor="#fef3c7", color="#d97706", margin="0.05,0.05", width=1];
+  S9 [label="9. Calibrate score bands to PD\n(observed default rate per band,\nlong-run average, margin of conservatism)"];
+  S10 [label="10. Independent validation,\napproval, implementation in the\ndecision engine, monitoring", fillcolor="#065f46", fontcolor="white", color="#065f46"];
+  Back [label="Back to variables or sample", fillcolor="#991b1b", fontcolor="white", color="#991b1b", width=2.5];
+
+  S1 -> S2 -> S3 -> S4 -> S5 -> S6 -> S7 -> S8 -> Q;
+  Q -> S9 [label=" yes"];
+  Q -> Back [label=" no"];
+  Back -> S3 [style=dashed];
+  S9 -> S10;
+}

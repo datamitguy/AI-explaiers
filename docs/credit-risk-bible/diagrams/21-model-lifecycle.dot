@@ -1,0 +1,40 @@
+digraph ModelLifecycle {
+  graph [rankdir=TB, splines=true, nodesep=0.35, ranksep=0.5, fontname="Helvetica", fontsize=13, bgcolor="white", newrank=true, pad=0.2];
+  node  [shape=box, style="rounded,filled", fillcolor="#eef2ff", color="#6366f1", fontname="Helvetica", fontsize=12, margin="0.18,0.10"];
+  edge  [color="#4b5563", arrowsize=0.7, fontname="Helvetica", fontsize=10, fontcolor="#374151"];
+
+  Start [label="Business need identified\n(new portfolio, regulatory change,\nold model failing)", fillcolor="#1f2937", fontcolor="white", color="#1f2937"];
+
+  subgraph cluster_build {
+    label="First line: model owner and developers"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
+    Dev   [label="Development\ndata gathering, design,\nestimation, developer testing"];
+    Doc   [label="Model documentation\nmethodology, data, assumptions,\nlimitations, user guide"];
+    Dev -> Doc;
+  }
+
+  subgraph cluster_val {
+    label="Second line: independent validation"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
+    Val   [label="Independent validation\nconceptual soundness, data,\nperformance, implementation"];
+    Q1    [label="Fit for purpose?", shape=diamond, style=filled, fillcolor="#fef3c7", color="#d97706", margin="0.05,0.05"];
+    Val -> Q1;
+  }
+
+  Fix   [label="Findings raised\ndeveloper remediates", fillcolor="#991b1b", fontcolor="white", color="#991b1b"];
+  Appr  [label="Model risk committee approval\n(and regulator approval for IRB)"];
+  Impl  [label="Implementation in production\nparallel run, user acceptance\ntesting, go-live"];
+  Mon   [label="Ongoing monitoring\nquarterly performance,\nstability, overrides, triggers"];
+  Q2    [label="Trigger breached or\nperiodic review due?", shape=diamond, style=filled, fillcolor="#fef3c7", color="#d97706", margin="0.05,0.05"];
+  Rev   [label="Periodic review or\nmodel change"];
+  Ret   [label="Retirement\ndecommission, archive,\nupdate inventory", fillcolor="#065f46", fontcolor="white", color="#065f46"];
+
+  Start -> Dev;
+  Doc -> Val;
+  Q1 -> Fix [label=" no"];
+  Fix -> Dev;
+  Q1 -> Appr [label=" yes, with\n conditions"];
+  Appr -> Impl -> Mon -> Q2;
+  Q2 -> Mon [label=" no, keep\n monitoring"];
+  Q2 -> Rev [label=" yes"];
+  Rev -> Dev [label=" redevelop or\n recalibrate"];
+  Rev -> Ret [label=" no longer\n needed"];
+}

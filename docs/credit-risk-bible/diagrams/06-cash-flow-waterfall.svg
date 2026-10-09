@@ -1,0 +1,114 @@
+<svg width="100%"
+ viewBox="0.00 0.00 684.80 673.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 659.4)">
+<title>CashFlowWaterfall</title>
+<polygon fill="white" stroke="transparent" points="-14.4,14.4 -14.4,-659.4 670.4,-659.4 670.4,14.4 -14.4,14.4"/>
+<g id="node1" class="node">
+<title>Rev</title>
+<path fill="#1f2937" stroke="#1f2937" d="M474,-645C474,-645 181,-645 181,-645 175,-645 169,-639 169,-633 169,-633 169,-617 169,-617 169,-611 175,-605 181,-605 181,-605 474,-605 474,-605 480,-605 486,-611 486,-617 486,-617 486,-633 486,-633 486,-639 480,-645 474,-645"/>
+<text text-anchor="middle" x="327.5" y="-628.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Project revenue arrives</text>
+<text text-anchor="middle" x="327.5" y="-615.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">(illustrative: 100 per year from the offtaker)</text>
+</g>
+<g id="node2" class="node">
+<title>L1</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M474,-578C474,-578 181,-578 181,-578 175,-578 169,-572 169,-566 169,-566 169,-524 169,-524 169,-518 175,-512 181,-512 181,-512 474,-512 474,-512 480,-512 486,-518 486,-524 486,-524 486,-566 486,-566 486,-572 480,-578 474,-578"/>
+<text text-anchor="middle" x="327.5" y="-561.4" font-family="Helvetica,sans-Serif" font-size="12.00">1. Operating costs and taxes</text>
+<text text-anchor="middle" x="327.5" y="-548.4" font-family="Helvetica,sans-Serif" font-size="12.00">(O&amp;M fees, fuel, insurance, land rent)</text>
+<text text-anchor="middle" x="327.5" y="-535.4" font-family="Helvetica,sans-Serif" font-size="12.00">leaves CFADS: cash flow available</text>
+<text text-anchor="middle" x="327.5" y="-522.4" font-family="Helvetica,sans-Serif" font-size="12.00">for debt service, say 70</text>
+</g>
+<g id="edge1" class="edge">
+<title>Rev&#45;&gt;L1</title>
+<path fill="none" stroke="#4b5563" d="M327.5,-604.72C327.5,-598.82 327.5,-592.11 327.5,-585.38"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="329.95,-585.11 327.5,-578.11 325.05,-585.11 329.95,-585.11"/>
+</g>
+<g id="node3" class="node">
+<title>L2</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M474,-485C474,-485 181,-485 181,-485 175,-485 169,-479 169,-473 169,-473 169,-461 169,-461 169,-455 175,-449 181,-449 181,-449 474,-449 474,-449 480,-449 486,-455 486,-461 486,-461 486,-473 486,-473 486,-479 480,-485 474,-485"/>
+<text text-anchor="middle" x="327.5" y="-463.9" font-family="Helvetica,sans-Serif" font-size="12.00">2. Senior debt interest and fees</text>
+</g>
+<g id="edge2" class="edge">
+<title>L1&#45;&gt;L2</title>
+<path fill="none" stroke="#4b5563" d="M327.5,-511.77C327.5,-505.4 327.5,-498.8 327.5,-492.73"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="329.95,-492.36 327.5,-485.36 325.05,-492.36 329.95,-492.36"/>
+</g>
+<g id="node4" class="node">
+<title>L3</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M474,-422C474,-422 181,-422 181,-422 175,-422 169,-416 169,-410 169,-410 169,-394 169,-394 169,-388 175,-382 181,-382 181,-382 474,-382 474,-382 480,-382 486,-388 486,-394 486,-394 486,-410 486,-410 486,-416 480,-422 474,-422"/>
+<text text-anchor="middle" x="327.5" y="-405.4" font-family="Helvetica,sans-Serif" font-size="12.00">3. Senior debt principal repayment</text>
+<text text-anchor="middle" x="327.5" y="-392.4" font-family="Helvetica,sans-Serif" font-size="12.00">(scheduled instalments)</text>
+</g>
+<g id="edge3" class="edge">
+<title>L2&#45;&gt;L3</title>
+<path fill="none" stroke="#4b5563" d="M327.5,-448.78C327.5,-442.92 327.5,-436.22 327.5,-429.78"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="329.95,-429.42 327.5,-422.42 325.05,-429.42 329.95,-429.42"/>
+</g>
+<g id="node5" class="node">
+<title>L4</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M474,-355C474,-355 181,-355 181,-355 175,-355 169,-349 169,-343 169,-343 169,-327 169,-327 169,-321 175,-315 181,-315 181,-315 474,-315 474,-315 480,-315 486,-321 486,-327 486,-327 486,-343 486,-343 486,-349 480,-355 474,-355"/>
+<text text-anchor="middle" x="327.5" y="-338.4" font-family="Helvetica,sans-Serif" font-size="12.00">4. Top up the debt service reserve account</text>
+<text text-anchor="middle" x="327.5" y="-325.4" font-family="Helvetica,sans-Serif" font-size="12.00">(DSRA, usually 6 months of debt service)</text>
+</g>
+<g id="edge4" class="edge">
+<title>L3&#45;&gt;L4</title>
+<path fill="none" stroke="#4b5563" d="M327.5,-381.85C327.5,-375.82 327.5,-369.05 327.5,-362.6"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="329.95,-362.24 327.5,-355.24 325.05,-362.24 329.95,-362.24"/>
+</g>
+<g id="node6" class="node">
+<title>L5</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M474,-288C474,-288 181,-288 181,-288 175,-288 169,-282 169,-276 169,-276 169,-260 169,-260 169,-254 175,-248 181,-248 181,-248 474,-248 474,-248 480,-248 486,-254 486,-260 486,-260 486,-276 486,-276 486,-282 480,-288 474,-288"/>
+<text text-anchor="middle" x="327.5" y="-271.4" font-family="Helvetica,sans-Serif" font-size="12.00">5. Top up the maintenance reserve account</text>
+<text text-anchor="middle" x="327.5" y="-258.4" font-family="Helvetica,sans-Serif" font-size="12.00">(MRA, for big future overhauls)</text>
+</g>
+<g id="edge5" class="edge">
+<title>L4&#45;&gt;L5</title>
+<path fill="none" stroke="#4b5563" d="M327.5,-314.85C327.5,-308.82 327.5,-302.05 327.5,-295.6"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="329.95,-295.24 327.5,-288.24 325.05,-295.24 329.95,-295.24"/>
+</g>
+<g id="node7" class="node">
+<title>L6</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M474,-221C474,-221 181,-221 181,-221 175,-221 169,-215 169,-209 169,-209 169,-197 169,-197 169,-191 175,-185 181,-185 181,-185 474,-185 474,-185 480,-185 486,-191 486,-197 486,-197 486,-209 486,-209 486,-215 480,-221 474,-221"/>
+<text text-anchor="middle" x="327.5" y="-199.9" font-family="Helvetica,sans-Serif" font-size="12.00">6. Subordinated and shareholder loans</text>
+</g>
+<g id="edge6" class="edge">
+<title>L5&#45;&gt;L6</title>
+<path fill="none" stroke="#4b5563" d="M327.5,-247.76C327.5,-241.72 327.5,-234.98 327.5,-228.62"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="329.95,-228.41 327.5,-221.41 325.05,-228.41 329.95,-228.41"/>
+</g>
+<g id="node8" class="node">
+<title>Test</title>
+<polygon fill="#fef3c7" stroke="#d97706" points="327.5,-158 89.5,-124 327.5,-90 565.5,-124 327.5,-158"/>
+<text text-anchor="middle" x="327.5" y="-127.4" font-family="Helvetica,sans-Serif" font-size="12.00">Distribution test passed?</text>
+<text text-anchor="middle" x="327.5" y="-114.4" font-family="Helvetica,sans-Serif" font-size="12.00">(DSCR above lock&#45;up level, no default)</text>
+</g>
+<g id="edge7" class="edge">
+<title>L6&#45;&gt;Test</title>
+<path fill="none" stroke="#4b5563" d="M327.5,-184.91C327.5,-179.12 327.5,-172.38 327.5,-165.55"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="329.95,-165.15 327.5,-158.15 325.05,-165.15 329.95,-165.15"/>
+</g>
+<g id="node9" class="node">
+<title>L7</title>
+<path fill="#065f46" stroke="#065f46" d="M305,-44.5C305,-44.5 12,-44.5 12,-44.5 6,-44.5 0,-38.5 0,-32.5 0,-32.5 0,-20.5 0,-20.5 0,-14.5 6,-8.5 12,-8.5 12,-8.5 305,-8.5 305,-8.5 311,-8.5 317,-14.5 317,-20.5 317,-20.5 317,-32.5 317,-32.5 317,-38.5 311,-44.5 305,-44.5"/>
+<text text-anchor="middle" x="158.5" y="-23.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">7. Distributions to sponsors (dividends)</text>
+</g>
+<g id="edge8" class="edge">
+<title>Test&#45;&gt;L7</title>
+<path fill="none" stroke="#4b5563" d="M280.87,-96.65C253.76,-81.33 220.09,-62.31 194.94,-48.09"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="196.04,-45.9 188.74,-44.59 193.62,-50.16 196.04,-45.9"/>
+<text text-anchor="middle" x="254" y="-69" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> yes</text>
+</g>
+<g id="node10" class="node">
+<title>Lock</title>
+<path fill="#991b1b" stroke="#991b1b" d="M644,-53C644,-53 351,-53 351,-53 345,-53 339,-47 339,-41 339,-41 339,-12 339,-12 339,-6 345,0 351,0 351,0 644,0 644,0 650,0 656,-6 656,-12 656,-12 656,-41 656,-41 656,-47 650,-53 644,-53"/>
+<text text-anchor="middle" x="497.5" y="-36.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Lock&#45;up: cash trapped in the project</text>
+<text text-anchor="middle" x="497.5" y="-23.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">accounts until the test is passed again</text>
+<text text-anchor="middle" x="497.5" y="-10.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">(may be swept to prepay debt)</text>
+</g>
+<g id="edge9" class="edge">
+<title>Test&#45;&gt;Lock</title>
+<path fill="none" stroke="#4b5563" d="M374.4,-96.65C396.5,-84.24 422.93,-69.39 445.63,-56.64"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="447.02,-58.67 451.92,-53.1 444.62,-54.4 447.02,-58.67"/>
+<text text-anchor="middle" x="436.5" y="-69" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> no</text>
+</g>
+</g>
+</svg>

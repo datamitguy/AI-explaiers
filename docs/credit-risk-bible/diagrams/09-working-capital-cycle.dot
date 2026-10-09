@@ -1,0 +1,22 @@
+digraph WorkingCapitalCycle {
+  graph [rankdir=TB, splines=true, nodesep=0.5, ranksep=0.8, fontname="Helvetica", fontsize=13, bgcolor="white", pad=0.2, newrank=true];
+  node  [shape=box, style="rounded,filled", fillcolor="#eef2ff", color="#6366f1", fontname="Helvetica", fontsize=12, margin="0.18,0.10"];
+  edge  [color="#4b5563", arrowsize=0.7, fontname="Helvetica", fontsize=10, fontcolor="#374151"];
+
+  Cash  [label="Cash in the bank", fillcolor="#1f2937", fontcolor="white", color="#1f2937"];
+  Buy   [label="Buy raw materials on credit\nfrom suppliers"];
+  Stock [label="Make and hold stock\n(inventory)"];
+  Sell  [label="Sell to customers on credit\n(invoice raised, no cash yet)"];
+  Collect [label="Customer pays the invoice"];
+  PaySup  [label="Pay the supplier", fillcolor="#991b1b", fontcolor="white", color="#991b1b"];
+  Gap   [label="Cash conversion cycle\n= stock days + debtor days - creditor days\n= 60 + 45 - 32 = 73 days\nthat must be funded by the bank or by equity", fillcolor="#6b7280", fontcolor="white", color="#6b7280"];
+
+  Cash -> Buy;
+  Buy -> Stock [label=" stock days: 60\n (how long goods sit)"];
+  Stock -> Sell;
+  Sell -> Collect [label=" debtor days: 45\n (how long customers take to pay)"];
+  Collect -> Cash [label=" cash returns", color="#065f46", fontcolor="#065f46"];
+  Buy -> PaySup [label=" creditor days: 32\n (how long before the supplier\n must be paid)", style=dashed];
+  PaySup -> Cash [style=dashed, label=" cash leaves", color="#991b1b", fontcolor="#991b1b"];
+  Stock -> Gap [style=dashed];
+}

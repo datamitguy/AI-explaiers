@@ -1,0 +1,35 @@
+digraph RatingModelPipeline {
+  graph [rankdir=TB, splines=true, nodesep=0.35, ranksep=0.45, fontname="Helvetica", fontsize=13, bgcolor="white", pad=0.2, newrank=true];
+  node  [shape=box, style="rounded,filled", fillcolor="#eef2ff", color="#6366f1", fontname="Helvetica", fontsize=12, margin="0.18,0.10"];
+  edge  [color="#4b5563", arrowsize=0.7, fontname="Helvetica", fontsize=10, fontcolor="#374151"];
+
+  Start [label="Corporate borrower to be rated\n(annual review or new deal)", fillcolor="#1f2937", fontcolor="white", color="#1f2937"];
+
+  subgraph cluster_inputs {
+    label="Inputs"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
+    Fin  [label="Financial statements\n(spread into the bank's template:\naudited accounts, last 3 years)"];
+    Qual [label="Qualitative questionnaire\n(management, industry, competitive\nposition, answered by the analyst)"];
+    Ext  [label="External data\n(agency rating, country, sector,\npayment behaviour, news)"];
+  }
+
+  FinScore  [label="Financial score\n(ratios weighted by the model,\ne.g. leverage 30%, coverage 25%,\nprofitability 20%, liquidity 15%, size 10%)"];
+  QualScore [label="Qualitative score\n(each answer mapped to points)"];
+  Combine   [label="Model grade\n(weighted combination, e.g. 60% financial,\n40% qualitative, mapped to the master scale)", fillcolor="#1e3a8a", fontcolor="white", color="#1e3a8a"];
+
+  Adj [label="Mandatory adjustments\n(parent support or lift, country ceiling,\nwarning signals, early-warning triggers)"];
+  Ovr [label="Analyst proposes an override?", shape=diamond, style=filled, fillcolor="#fef3c7", color="#d97706", margin="0.05,0.05"];
+  OvrApp [label="Override with written reason,\napproved by a higher authority\nif beyond one notch, logged for reporting"];
+  Final [label="Final internal grade (e.g. BB+ on\nthe master scale) and its PD (e.g. 1.2%)", fillcolor="#065f46", fontcolor="white", color="#065f46"];
+  Mon [label="Monitoring: override rate, migration,\nbacktesting against actual defaults", fillcolor="#6b7280", fontcolor="white", color="#6b7280"];
+
+  Start -> {Fin Qual Ext};
+  Fin -> FinScore;
+  Qual -> QualScore;
+  Ext -> Adj;
+  {FinScore QualScore} -> Combine;
+  Combine -> Adj -> Ovr;
+  Ovr -> OvrApp [label=" yes"];
+  Ovr -> Final  [label=" no"];
+  OvrApp -> Final;
+  Final -> Mon [style=dashed];
+}

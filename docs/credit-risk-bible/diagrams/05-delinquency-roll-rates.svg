@@ -1,0 +1,147 @@
+<svg width="100%"
+ viewBox="0.00 0.00 501.80 651.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 637.4)">
+<title>DelinquencyRollRates</title>
+<polygon fill="white" stroke="transparent" points="-14.4,14.4 -14.4,-637.4 487.4,-637.4 487.4,14.4 -14.4,14.4"/>
+<g id="clust1" class="cluster">
+<title>cluster_actions</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M20,-8C20,-8 232,-8 232,-8 238,-8 244,-14 244,-20 244,-20 244,-409 244,-409 244,-415 238,-421 232,-421 232,-421 20,-421 20,-421 14,-421 8,-415 8,-409 8,-409 8,-20 8,-20 8,-14 14,-8 20,-8"/>
+<text text-anchor="middle" x="126" y="-406.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">Collections action by bucket</text>
+</g>
+<g id="node1" class="node">
+<title>Cur</title>
+<path fill="#065f46" stroke="#065f46" d="M371.5,-623C371.5,-623 262.5,-623 262.5,-623 256.5,-623 250.5,-617 250.5,-611 250.5,-611 250.5,-582 250.5,-582 250.5,-576 256.5,-570 262.5,-570 262.5,-570 371.5,-570 371.5,-570 377.5,-570 383.5,-576 383.5,-582 383.5,-582 383.5,-611 383.5,-611 383.5,-617 377.5,-623 371.5,-623"/>
+<text text-anchor="middle" x="317" y="-606.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Current</text>
+<text text-anchor="middle" x="317" y="-593.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">0 days past due</text>
+<text text-anchor="middle" x="317" y="-580.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">100,000 accounts</text>
+</g>
+<g id="node2" class="node">
+<title>B1</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M269,-515C269,-515 137,-515 137,-515 131,-515 125,-509 125,-503 125,-503 125,-474 125,-474 125,-468 131,-462 137,-462 137,-462 269,-462 269,-462 275,-462 281,-468 281,-474 281,-474 281,-503 281,-503 281,-509 275,-515 269,-515"/>
+<text text-anchor="middle" x="203" y="-498.4" font-family="Helvetica,sans-Serif" font-size="12.00">Bucket 1</text>
+<text text-anchor="middle" x="203" y="-485.4" font-family="Helvetica,sans-Serif" font-size="12.00">1 to 30 days past due</text>
+<text text-anchor="middle" x="203" y="-472.4" font-family="Helvetica,sans-Serif" font-size="12.00">(illustrative: 3,000)</text>
+</g>
+<g id="edge1" class="edge">
+<title>Cur&#45;&gt;B1</title>
+<path fill="none" stroke="#4b5563" d="M250.31,-589.37C223.3,-583.23 194.61,-571.23 178,-548 172.31,-540.05 173.55,-530.6 177.6,-521.64"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="179.88,-522.57 180.99,-515.24 175.55,-520.28 179.88,-522.57"/>
+<text text-anchor="middle" x="217.5" y="-540" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> roll forward 3%</text>
+</g>
+<g id="edge6" class="edge">
+<title>B1&#45;&gt;Cur</title>
+<path fill="none" stroke="#065f46" stroke-dasharray="5,2" d="M233.3,-515.02C241.42,-522.03 250.13,-529.72 258,-537 267.56,-545.85 277.71,-555.73 286.85,-564.82"/>
+<polygon fill="#065f46" stroke="#065f46" points="285.13,-566.56 291.82,-569.77 288.59,-563.09 285.13,-566.56"/>
+<text text-anchor="middle" x="293.5" y="-540" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#065f46"> cure 70%</text>
+</g>
+<g id="node3" class="node">
+<title>B2</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M403.5,-397.5C403.5,-397.5 264.5,-397.5 264.5,-397.5 258.5,-397.5 252.5,-391.5 252.5,-385.5 252.5,-385.5 252.5,-356.5 252.5,-356.5 252.5,-350.5 258.5,-344.5 264.5,-344.5 264.5,-344.5 403.5,-344.5 403.5,-344.5 409.5,-344.5 415.5,-350.5 415.5,-356.5 415.5,-356.5 415.5,-385.5 415.5,-385.5 415.5,-391.5 409.5,-397.5 403.5,-397.5"/>
+<text text-anchor="middle" x="334" y="-380.9" font-family="Helvetica,sans-Serif" font-size="12.00">Bucket 2</text>
+<text text-anchor="middle" x="334" y="-367.9" font-family="Helvetica,sans-Serif" font-size="12.00">31 to 60 days past due</text>
+<text text-anchor="middle" x="334" y="-354.9" font-family="Helvetica,sans-Serif" font-size="12.00">(illustrative: 900)</text>
+</g>
+<g id="edge2" class="edge">
+<title>B1&#45;&gt;B2</title>
+<path fill="none" stroke="#4b5563" d="M219.94,-461.79C227.75,-450.98 237.6,-438.7 248,-429 258.7,-419.03 271.32,-409.62 283.55,-401.43"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="285.01,-403.4 289.51,-397.51 282.32,-399.31 285.01,-403.4"/>
+<text text-anchor="middle" x="290.5" y="-432" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> roll forward 30%</text>
+</g>
+<g id="node7" class="node">
+<title>Act1</title>
+<path fill="#6b7280" stroke="#6b7280" d="M218.5,-391C218.5,-391 57.5,-391 57.5,-391 51.5,-391 45.5,-385 45.5,-379 45.5,-379 45.5,-363 45.5,-363 45.5,-357 51.5,-351 57.5,-351 57.5,-351 218.5,-351 218.5,-351 224.5,-351 230.5,-357 230.5,-363 230.5,-363 230.5,-379 230.5,-379 230.5,-385 224.5,-391 218.5,-391"/>
+<text text-anchor="middle" x="138" y="-374.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Soft: SMS, email,</text>
+<text text-anchor="middle" x="138" y="-361.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">app nudge, self&#45;serve plan</text>
+</g>
+<g id="edge9" class="edge">
+<title>B1&#45;&gt;Act1</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="1,5" d="M188.57,-461.87C177.75,-442.64 163.02,-416.45 152.24,-397.3"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="154.32,-396 148.75,-391.1 150.05,-398.4 154.32,-396"/>
+</g>
+<g id="edge7" class="edge">
+<title>B2&#45;&gt;Cur</title>
+<path fill="none" stroke="#065f46" stroke-dasharray="5,2" d="M334.61,-397.53C334.76,-410.29 334.71,-425.97 334,-440 331.55,-488.19 328.47,-500.06 323,-548 322.46,-552.77 321.85,-557.81 321.24,-562.75"/>
+<polygon fill="#065f46" stroke="#065f46" points="318.79,-562.63 320.35,-569.88 323.65,-563.23 318.79,-562.63"/>
+<text text-anchor="middle" x="356.5" y="-486" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#065f46"> cure 40%</text>
+</g>
+<g id="node4" class="node">
+<title>B3</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M405.5,-289.5C405.5,-289.5 266.5,-289.5 266.5,-289.5 260.5,-289.5 254.5,-283.5 254.5,-277.5 254.5,-277.5 254.5,-248.5 254.5,-248.5 254.5,-242.5 260.5,-236.5 266.5,-236.5 266.5,-236.5 405.5,-236.5 405.5,-236.5 411.5,-236.5 417.5,-242.5 417.5,-248.5 417.5,-248.5 417.5,-277.5 417.5,-277.5 417.5,-283.5 411.5,-289.5 405.5,-289.5"/>
+<text text-anchor="middle" x="336" y="-272.9" font-family="Helvetica,sans-Serif" font-size="12.00">Bucket 3</text>
+<text text-anchor="middle" x="336" y="-259.9" font-family="Helvetica,sans-Serif" font-size="12.00">61 to 90 days past due</text>
+<text text-anchor="middle" x="336" y="-246.9" font-family="Helvetica,sans-Serif" font-size="12.00">(illustrative: 540)</text>
+</g>
+<g id="edge3" class="edge">
+<title>B2&#45;&gt;B3</title>
+<path fill="none" stroke="#4b5563" d="M334.48,-344.34C334.75,-330.12 335.09,-312.29 335.38,-297.04"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="337.83,-296.84 335.51,-289.79 332.93,-296.74 337.83,-296.84"/>
+<text text-anchor="middle" x="377.5" y="-314.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> roll forward 60%</text>
+</g>
+<g id="node8" class="node">
+<title>Act2</title>
+<path fill="#6b7280" stroke="#6b7280" d="M220,-283C220,-283 36,-283 36,-283 30,-283 24,-277 24,-271 24,-271 24,-255 24,-255 24,-249 30,-243 36,-243 36,-243 220,-243 220,-243 226,-243 232,-249 232,-255 232,-255 232,-271 232,-271 232,-277 226,-283 220,-283"/>
+<text text-anchor="middle" x="128" y="-266.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Medium: phone calls,</text>
+<text text-anchor="middle" x="128" y="-253.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">letters, payment arrangement</text>
+</g>
+<g id="edge10" class="edge">
+<title>B2&#45;&gt;Act2</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="1,5" d="M284.4,-344.48C250.02,-326.79 204.67,-303.45 171.67,-286.47"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="172.58,-284.18 165.24,-283.16 170.34,-288.54 172.58,-284.18"/>
+</g>
+<g id="edge8" class="edge">
+<title>B3&#45;&gt;Cur</title>
+<path fill="none" stroke="#065f46" stroke-dasharray="5,2" d="M412.16,-289.57C420.81,-295.47 428.48,-302.69 434,-311.5 459.89,-352.82 438.64,-373.64 427,-421 416.12,-465.26 410.21,-476.38 386,-515 375.04,-532.49 360.44,-550.1 347.5,-564.37"/>
+<polygon fill="#065f46" stroke="#065f46" points="345.38,-563.05 342.45,-569.87 348.99,-566.37 345.38,-563.05"/>
+<text text-anchor="middle" x="448.5" y="-432" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#065f46"> cure 20%</text>
+</g>
+<g id="node5" class="node">
+<title>Def</title>
+<path fill="#991b1b" stroke="#991b1b" d="M393,-181.5C393,-181.5 279,-181.5 279,-181.5 273,-181.5 267,-175.5 267,-169.5 267,-169.5 267,-140.5 267,-140.5 267,-134.5 273,-128.5 279,-128.5 279,-128.5 393,-128.5 393,-128.5 399,-128.5 405,-134.5 405,-140.5 405,-140.5 405,-169.5 405,-169.5 405,-175.5 399,-181.5 393,-181.5"/>
+<text text-anchor="middle" x="336" y="-164.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Default</text>
+<text text-anchor="middle" x="336" y="-151.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">90+ days past due</text>
+<text text-anchor="middle" x="336" y="-138.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">(illustrative: 432)</text>
+</g>
+<g id="edge4" class="edge">
+<title>B3&#45;&gt;Def</title>
+<path fill="none" stroke="#4b5563" d="M336,-236.34C336,-222.12 336,-204.29 336,-189.04"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="338.45,-188.79 336,-181.79 333.55,-188.79 338.45,-188.79"/>
+<text text-anchor="middle" x="378.5" y="-206.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> roll forward 80%</text>
+</g>
+<g id="node9" class="node">
+<title>Act3</title>
+<path fill="#6b7280" stroke="#6b7280" d="M224,-175C224,-175 28,-175 28,-175 22,-175 16,-169 16,-163 16,-163 16,-147 16,-147 16,-141 22,-135 28,-135 28,-135 224,-135 224,-135 230,-135 236,-141 236,-147 236,-147 236,-163 236,-163 236,-169 230,-175 224,-175"/>
+<text text-anchor="middle" x="126" y="-158.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Hard: formal notices,</text>
+<text text-anchor="middle" x="126" y="-145.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">forbearance, vulnerability check</text>
+</g>
+<g id="edge11" class="edge">
+<title>B3&#45;&gt;Act3</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="1,5" d="M285.43,-236.48C250.39,-218.79 204.16,-195.45 170.51,-178.47"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="171.31,-176.13 163.96,-175.16 169.1,-180.5 171.31,-176.13"/>
+</g>
+<g id="node6" class="node">
+<title>WO</title>
+<path fill="#1f2937" stroke="#1f2937" d="M406,-62.5C406,-62.5 268,-62.5 268,-62.5 262,-62.5 256,-56.5 256,-50.5 256,-50.5 256,-21.5 256,-21.5 256,-15.5 262,-9.5 268,-9.5 268,-9.5 406,-9.5 406,-9.5 412,-9.5 418,-15.5 418,-21.5 418,-21.5 418,-50.5 418,-50.5 418,-56.5 412,-62.5 406,-62.5"/>
+<text text-anchor="middle" x="337" y="-45.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Charge&#45;off / write&#45;off</text>
+<text text-anchor="middle" x="337" y="-32.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">after 180 days (varies)</text>
+<text text-anchor="middle" x="337" y="-19.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">sold or recovered</text>
+</g>
+<g id="edge5" class="edge">
+<title>Def&#45;&gt;WO</title>
+<path fill="none" stroke="#4b5563" d="M336.22,-128.32C336.37,-111.1 336.56,-88.27 336.72,-69.74"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="339.17,-69.64 336.78,-62.62 334.27,-69.6 339.17,-69.64"/>
+<text text-anchor="middle" x="372" y="-98.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> after recovery</text>
+<text text-anchor="middle" x="372" y="-87.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> attempts</text>
+</g>
+<g id="node10" class="node">
+<title>Act4</title>
+<path fill="#6b7280" stroke="#6b7280" d="M222,-56C222,-56 42,-56 42,-56 36,-56 30,-50 30,-44 30,-44 30,-28 30,-28 30,-22 36,-16 42,-16 42,-16 222,-16 222,-16 228,-16 234,-22 234,-28 234,-28 234,-44 234,-44 234,-50 228,-56 222,-56"/>
+<text text-anchor="middle" x="132" y="-39.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Recovery: agency placement,</text>
+<text text-anchor="middle" x="132" y="-26.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">litigation, debt sale</text>
+</g>
+<g id="edge12" class="edge">
+<title>Def&#45;&gt;Act4</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="1,5" d="M291.48,-128.47C255.72,-107.96 205.97,-79.42 171.59,-59.7"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="172.64,-57.49 165.35,-56.13 170.21,-61.74 172.64,-57.49"/>
+</g>
+</g>
+</svg>

@@ -1,0 +1,167 @@
+<svg width="100%"
+ viewBox="0.00 0.00 929.80 838.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 824.4)">
+<title>CollateralLifecycle</title>
+<polygon fill="white" stroke="transparent" points="-14.4,14.4 -14.4,-824.4 915.4,-824.4 915.4,14.4 -14.4,14.4"/>
+<g id="clust1" class="cluster">
+<title>cluster_take</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M20,-588C20,-588 280,-588 280,-588 286,-588 292,-594 292,-600 292,-600 292,-731 292,-731 292,-737 286,-743 280,-743 280,-743 20,-743 20,-743 14,-743 8,-737 8,-731 8,-731 8,-600 8,-600 8,-594 14,-588 20,-588"/>
+<text text-anchor="middle" x="150" y="-728.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">1. Take</text>
+</g>
+<g id="clust2" class="cluster">
+<title>cluster_perfect</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M51,-414C51,-414 249,-414 249,-414 255,-414 261,-420 261,-426 261,-426 261,-557 261,-557 261,-563 255,-569 249,-569 249,-569 51,-569 51,-569 45,-569 39,-563 39,-557 39,-557 39,-426 39,-426 39,-420 45,-414 51,-414"/>
+<text text-anchor="middle" x="150" y="-554.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">2. Perfect</text>
+</g>
+<g id="clust3" class="cluster">
+<title>cluster_value</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M35,-240C35,-240 265,-240 265,-240 271,-240 277,-246 277,-252 277,-252 277,-383 277,-383 277,-389 271,-395 265,-395 265,-395 35,-395 35,-395 29,-395 23,-389 23,-383 23,-383 23,-252 23,-252 23,-246 29,-240 35,-240"/>
+<text text-anchor="middle" x="150" y="-380.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">3. Value</text>
+</g>
+<g id="clust4" class="cluster">
+<title>cluster_monitor</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M76,-8C76,-8 490,-8 490,-8 496,-8 502,-14 502,-20 502,-20 502,-209 502,-209 502,-215 496,-221 490,-221 490,-221 76,-221 76,-221 70,-221 64,-215 64,-209 64,-209 64,-20 64,-20 64,-14 70,-8 76,-8"/>
+<text text-anchor="middle" x="283" y="-206.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">4. Monitor</text>
+</g>
+<g id="clust6" class="cluster">
+<title>cluster_end</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M522,-8C522,-8 881,-8 881,-8 887,-8 893,-14 893,-20 893,-20 893,-74 893,-74 893,-80 887,-86 881,-86 881,-86 522,-86 522,-86 516,-86 510,-80 510,-74 510,-74 510,-20 510,-20 510,-14 516,-8 522,-8"/>
+<text text-anchor="middle" x="701.5" y="-71.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">5. Release or enforce</text>
+</g>
+<g id="node1" class="node">
+<title>Start</title>
+<path fill="#1f2937" stroke="#1f2937" d="M206,-810C206,-810 94,-810 94,-810 88,-810 82,-804 82,-798 82,-798 82,-782 82,-782 82,-776 88,-770 94,-770 94,-770 206,-770 206,-770 212,-770 218,-776 218,-782 218,-782 218,-798 218,-798 218,-804 212,-810 206,-810"/>
+<text text-anchor="middle" x="150" y="-793.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Loan approved</text>
+<text text-anchor="middle" x="150" y="-780.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">subject to security</text>
+</g>
+<g id="node2" class="node">
+<title>Take1</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M237.5,-713C237.5,-713 62.5,-713 62.5,-713 56.5,-713 50.5,-707 50.5,-701 50.5,-701 50.5,-685 50.5,-685 50.5,-679 56.5,-673 62.5,-673 62.5,-673 237.5,-673 237.5,-673 243.5,-673 249.5,-679 249.5,-685 249.5,-685 249.5,-701 249.5,-701 249.5,-707 243.5,-713 237.5,-713"/>
+<text text-anchor="middle" x="150" y="-696.4" font-family="Helvetica,sans-Serif" font-size="12.00">Identify the asset and</text>
+<text text-anchor="middle" x="150" y="-683.4" font-family="Helvetica,sans-Serif" font-size="12.00">confirm the borrower owns it</text>
+</g>
+<g id="edge7" class="edge">
+<title>Start&#45;&gt;Take1</title>
+<path fill="none" stroke="#4b5563" d="M150,-769.78C150,-755.61 150,-736.17 150,-720.53"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="152.45,-720.2 150,-713.2 147.55,-720.2 152.45,-720.2"/>
+</g>
+<g id="node3" class="node">
+<title>Take2</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M272,-636C272,-636 28,-636 28,-636 22,-636 16,-630 16,-624 16,-624 16,-608 16,-608 16,-602 22,-596 28,-596 28,-596 272,-596 272,-596 278,-596 284,-602 284,-608 284,-608 284,-624 284,-624 284,-630 278,-636 272,-636"/>
+<text text-anchor="middle" x="150" y="-619.4" font-family="Helvetica,sans-Serif" font-size="12.00">Sign the security document</text>
+<text text-anchor="middle" x="150" y="-606.4" font-family="Helvetica,sans-Serif" font-size="12.00">(mortgage, charge, pledge, assignment)</text>
+</g>
+<g id="edge1" class="edge">
+<title>Take1&#45;&gt;Take2</title>
+<path fill="none" stroke="#4b5563" d="M150,-672.69C150,-663.76 150,-653.03 150,-643.37"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="152.45,-643.25 150,-636.25 147.55,-643.25 152.45,-643.25"/>
+</g>
+<g id="node4" class="node">
+<title>Perf1</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M241,-539C241,-539 59,-539 59,-539 53,-539 47,-533 47,-527 47,-527 47,-511 47,-511 47,-505 53,-499 59,-499 59,-499 241,-499 241,-499 247,-499 253,-505 253,-511 253,-511 253,-527 253,-527 253,-533 247,-539 241,-539"/>
+<text text-anchor="middle" x="150" y="-522.4" font-family="Helvetica,sans-Serif" font-size="12.00">Register at the right registry</text>
+<text text-anchor="middle" x="150" y="-509.4" font-family="Helvetica,sans-Serif" font-size="12.00">(land, company, ship, aircraft)</text>
+</g>
+<g id="edge8" class="edge">
+<title>Take2&#45;&gt;Perf1</title>
+<path fill="none" stroke="#4b5563" d="M150,-595.78C150,-581.61 150,-562.17 150,-546.53"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="152.45,-546.2 150,-539.2 147.55,-546.2 152.45,-546.2"/>
+</g>
+<g id="node5" class="node">
+<title>Perf2</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M235.5,-462C235.5,-462 64.5,-462 64.5,-462 58.5,-462 52.5,-456 52.5,-450 52.5,-450 52.5,-434 52.5,-434 52.5,-428 58.5,-422 64.5,-422 64.5,-422 235.5,-422 235.5,-422 241.5,-422 247.5,-428 247.5,-434 247.5,-434 247.5,-450 247.5,-450 247.5,-456 241.5,-462 235.5,-462"/>
+<text text-anchor="middle" x="150" y="-445.4" font-family="Helvetica,sans-Serif" font-size="12.00">Confirm priority and ranking</text>
+<text text-anchor="middle" x="150" y="-432.4" font-family="Helvetica,sans-Serif" font-size="12.00">against other creditors</text>
+</g>
+<g id="edge2" class="edge">
+<title>Perf1&#45;&gt;Perf2</title>
+<path fill="none" stroke="#4b5563" d="M150,-498.69C150,-489.76 150,-479.03 150,-469.37"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="152.45,-469.25 150,-462.25 147.55,-469.25 152.45,-469.25"/>
+</g>
+<g id="node6" class="node">
+<title>Val1</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M257.5,-365C257.5,-365 42.5,-365 42.5,-365 36.5,-365 30.5,-359 30.5,-353 30.5,-353 30.5,-337 30.5,-337 30.5,-331 36.5,-325 42.5,-325 42.5,-325 257.5,-325 257.5,-325 263.5,-325 269.5,-331 269.5,-337 269.5,-337 269.5,-353 269.5,-353 269.5,-359 263.5,-365 257.5,-365"/>
+<text text-anchor="middle" x="150" y="-348.4" font-family="Helvetica,sans-Serif" font-size="12.00">Independent valuation:</text>
+<text text-anchor="middle" x="150" y="-335.4" font-family="Helvetica,sans-Serif" font-size="12.00">market value and forced&#45;sale value</text>
+</g>
+<g id="edge9" class="edge">
+<title>Perf2&#45;&gt;Val1</title>
+<path fill="none" stroke="#4b5563" d="M150,-421.78C150,-407.61 150,-388.17 150,-372.53"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="152.45,-372.2 150,-365.2 147.55,-372.2 152.45,-372.2"/>
+</g>
+<g id="node7" class="node">
+<title>Val2</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M227,-288C227,-288 73,-288 73,-288 67,-288 61,-282 61,-276 61,-276 61,-260 61,-260 61,-254 67,-248 73,-248 73,-248 227,-248 227,-248 233,-248 239,-254 239,-260 239,-260 239,-276 239,-276 239,-282 233,-288 227,-288"/>
+<text text-anchor="middle" x="150" y="-271.4" font-family="Helvetica,sans-Serif" font-size="12.00">Apply haircut and</text>
+<text text-anchor="middle" x="150" y="-258.4" font-family="Helvetica,sans-Serif" font-size="12.00">allocate value to facilities</text>
+</g>
+<g id="edge3" class="edge">
+<title>Val1&#45;&gt;Val2</title>
+<path fill="none" stroke="#4b5563" d="M150,-324.69C150,-315.76 150,-305.03 150,-295.37"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="152.45,-295.25 150,-288.25 147.55,-295.25 152.45,-295.25"/>
+</g>
+<g id="node8" class="node">
+<title>Mon1</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M216,-177C216,-177 84,-177 84,-177 78,-177 72,-171 72,-165 72,-165 72,-149 72,-149 72,-143 78,-137 84,-137 84,-137 216,-137 216,-137 222,-137 228,-143 228,-149 228,-149 228,-165 228,-165 228,-171 222,-177 216,-177"/>
+<text text-anchor="middle" x="150" y="-160.4" font-family="Helvetica,sans-Serif" font-size="12.00">Revalue on schedule</text>
+<text text-anchor="middle" x="150" y="-147.4" font-family="Helvetica,sans-Serif" font-size="12.00">and on trigger events</text>
+</g>
+<g id="edge10" class="edge">
+<title>Val2&#45;&gt;Mon1</title>
+<path fill="none" stroke="#4b5563" d="M150,-247.76C150,-230.1 150,-203.77 150,-184.19"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="152.45,-184.04 150,-177.04 147.55,-184.04 152.45,-184.04"/>
+</g>
+<g id="node9" class="node">
+<title>Q</title>
+<polygon fill="#fef3c7" stroke="#d97706" points="386,-191 278,-157 386,-123 494,-157 386,-191"/>
+<text text-anchor="middle" x="386" y="-160.4" font-family="Helvetica,sans-Serif" font-size="12.00">Cover still above</text>
+<text text-anchor="middle" x="386" y="-147.4" font-family="Helvetica,sans-Serif" font-size="12.00">the minimum?</text>
+</g>
+<g id="edge4" class="edge">
+<title>Mon1&#45;&gt;Q</title>
+<path fill="none" stroke="#4b5563" d="M228.36,-157C242.43,-157 256.5,-157 270.57,-157"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="270.93,-159.45 277.93,-157 270.93,-154.55 270.93,-159.45"/>
+</g>
+<g id="node10" class="node">
+<title>Margin</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M474.5,-56C474.5,-56 297.5,-56 297.5,-56 291.5,-56 285.5,-50 285.5,-44 285.5,-44 285.5,-28 285.5,-28 285.5,-22 291.5,-16 297.5,-16 297.5,-16 474.5,-16 474.5,-16 480.5,-16 486.5,-22 486.5,-28 486.5,-28 486.5,-44 486.5,-44 486.5,-50 480.5,-56 474.5,-56"/>
+<text text-anchor="middle" x="386" y="-39.4" font-family="Helvetica,sans-Serif" font-size="12.00">Margin call: borrower tops up</text>
+<text text-anchor="middle" x="386" y="-26.4" font-family="Helvetica,sans-Serif" font-size="12.00">or bank reduces the loan</text>
+</g>
+<g id="edge5" class="edge">
+<title>Q&#45;&gt;Margin</title>
+<path fill="none" stroke="#4b5563" d="M386,-122.85C386,-104.08 386,-80.92 386,-63.38"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="388.45,-63.24 386,-56.24 383.55,-63.24 388.45,-63.24"/>
+<text text-anchor="middle" x="394" y="-97" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> no</text>
+</g>
+<g id="node11" class="node">
+<title>Release</title>
+<path fill="#065f46" stroke="#065f46" d="M650,-56C650,-56 530,-56 530,-56 524,-56 518,-50 518,-44 518,-44 518,-28 518,-28 518,-22 524,-16 530,-16 530,-16 650,-16 650,-16 656,-16 662,-22 662,-28 662,-28 662,-44 662,-44 662,-50 656,-56 650,-56"/>
+<text text-anchor="middle" x="590" y="-39.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Loan repaid:</text>
+<text text-anchor="middle" x="590" y="-26.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">release the security</text>
+</g>
+<g id="edge11" class="edge">
+<title>Q&#45;&gt;Release</title>
+<path fill="none" stroke="#4b5563" d="M423.48,-134.73C447.66,-120.94 479.76,-102.54 508,-86 522.4,-77.57 538.14,-68.2 551.95,-59.93"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="553.4,-61.91 558.15,-56.21 550.88,-57.71 553.4,-61.91"/>
+<text text-anchor="middle" x="542.5" y="-97" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> yes, and loan repaid</text>
+</g>
+<g id="node12" class="node">
+<title>Enforce</title>
+<path fill="#991b1b" stroke="#991b1b" d="M873,-56C873,-56 699,-56 699,-56 693,-56 687,-50 687,-44 687,-44 687,-28 687,-28 687,-22 693,-16 699,-16 699,-16 873,-16 873,-16 879,-16 885,-22 885,-28 885,-28 885,-44 885,-44 885,-50 879,-56 873,-56"/>
+<text text-anchor="middle" x="786" y="-39.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Borrower defaults:</text>
+<text text-anchor="middle" x="786" y="-26.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">enforce, sell, apply proceeds</text>
+</g>
+<g id="edge12" class="edge">
+<title>Q&#45;&gt;Enforce</title>
+<path fill="none" stroke="#4b5563" d="M452.15,-143.68C511.39,-131.78 600.2,-111.78 675,-86 697.01,-78.41 720.7,-68.25 740.52,-59.14"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="741.76,-61.26 747.08,-56.1 739.7,-56.82 741.76,-61.26"/>
+<text text-anchor="middle" x="710" y="-97" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> yes, but borrower defaults</text>
+</g>
+<g id="edge6" class="edge">
+<title>Margin&#45;&gt;Mon1</title>
+<path fill="none" stroke="#4b5563" d="M401.13,-56.05C411.02,-70.93 420.07,-91.32 408,-105 386.81,-129.02 296.38,-116.56 265,-123 249.3,-126.22 232.61,-130.5 216.96,-134.91"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="215.91,-132.66 209.85,-136.93 217.25,-137.37 215.91,-132.66"/>
+</g>
+</g>
+</svg>

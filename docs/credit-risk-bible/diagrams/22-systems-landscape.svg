@@ -1,0 +1,198 @@
+<svg width="100%"
+ viewBox="0.00 0.00 1325.80 643.99" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 629.59)">
+<title>SystemsLandscape</title>
+<polygon fill="white" stroke="transparent" points="-14.4,14.4 -14.4,-629.59 1311.4,-629.59 1311.4,14.4 -14.4,14.4"/>
+<g id="clust1" class="cluster">
+<title>cluster_front</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M20,-506C20,-506 1277,-506 1277,-506 1283,-506 1289,-512 1289,-518 1289,-518 1289,-585 1289,-585 1289,-591 1283,-597 1277,-597 1277,-597 20,-597 20,-597 14,-597 8,-591 8,-585 8,-585 8,-518 8,-518 8,-512 14,-506 20,-506"/>
+<text text-anchor="middle" x="648.5" y="-582.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">Front office and operations (systems of record)</text>
+</g>
+<g id="clust3" class="cluster">
+<title>cluster_engines</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M170,-261C170,-261 678,-261 678,-261 684,-261 690,-267 690,-273 690,-273 690,-340 690,-340 690,-346 684,-352 678,-352 678,-352 170,-352 170,-352 164,-352 158,-346 158,-340 158,-340 158,-273 158,-273 158,-267 164,-261 170,-261"/>
+<text text-anchor="middle" x="424" y="-337.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">Risk engines (calculation)</text>
+</g>
+<g id="node1" class="node">
+<title>LOS</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M344,-567C344,-567 198,-567 198,-567 192,-567 186,-561 186,-555 186,-555 186,-526 186,-526 186,-520 192,-514 198,-514 198,-514 344,-514 344,-514 350,-514 356,-520 356,-526 356,-526 356,-555 356,-555 356,-561 350,-567 344,-567"/>
+<text text-anchor="middle" x="271" y="-550.4" font-family="Helvetica,sans-Serif" font-size="12.00">Loan origination system</text>
+<text text-anchor="middle" x="271" y="-537.4" font-family="Helvetica,sans-Serif" font-size="12.00">applications, approvals,</text>
+<text text-anchor="middle" x="271" y="-524.4" font-family="Helvetica,sans-Serif" font-size="12.00">conditions</text>
+</g>
+<g id="node2" class="node">
+<title>Core</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M774.5,-567C774.5,-567 601.5,-567 601.5,-567 595.5,-567 589.5,-561 589.5,-555 589.5,-555 589.5,-526 589.5,-526 589.5,-520 595.5,-514 601.5,-514 601.5,-514 774.5,-514 774.5,-514 780.5,-514 786.5,-520 786.5,-526 786.5,-526 786.5,-555 786.5,-555 786.5,-561 780.5,-567 774.5,-567"/>
+<text text-anchor="middle" x="688" y="-550.4" font-family="Helvetica,sans-Serif" font-size="12.00">Core banking and</text>
+<text text-anchor="middle" x="688" y="-537.4" font-family="Helvetica,sans-Serif" font-size="12.00">loan servicing</text>
+<text text-anchor="middle" x="688" y="-524.4" font-family="Helvetica,sans-Serif" font-size="12.00">balances, payments, arrears</text>
+</g>
+<g id="node7" class="node">
+<title>DWH</title>
+<path fill="#1e3a8a" stroke="#1e3a8a" d="M579,-473C579,-473 345,-473 345,-473 339,-473 333,-467 333,-461 333,-461 333,-432 333,-432 333,-426 339,-420 345,-420 345,-420 579,-420 579,-420 585,-420 591,-426 591,-432 591,-432 591,-461 591,-461 591,-467 585,-473 579,-473"/>
+<text text-anchor="middle" x="462" y="-456.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Data warehouse or data lake</text>
+<text text-anchor="middle" x="462" y="-443.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">month&#45;end snapshots, golden sources,</text>
+<text text-anchor="middle" x="462" y="-430.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">reference data, data quality checks</text>
+</g>
+<g id="edge8" class="edge">
+<title>LOS&#45;&gt;DWH</title>
+<path fill="none" stroke="#4b5563" d="M323.95,-514C348.38,-502.23 377.47,-488.22 402.64,-476.09"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="403.7,-478.3 408.95,-473.05 401.58,-473.89 403.7,-478.3"/>
+</g>
+<g id="node3" class="node">
+<title>Coll</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M534,-567C534,-567 390,-567 390,-567 384,-567 378,-561 378,-555 378,-555 378,-526 378,-526 378,-520 384,-514 390,-514 390,-514 534,-514 534,-514 540,-514 546,-520 546,-526 546,-526 546,-555 546,-555 546,-561 540,-567 534,-567"/>
+<text text-anchor="middle" x="462" y="-550.4" font-family="Helvetica,sans-Serif" font-size="12.00">Collateral management</text>
+<text text-anchor="middle" x="462" y="-537.4" font-family="Helvetica,sans-Serif" font-size="12.00">valuations, charges,</text>
+<text text-anchor="middle" x="462" y="-524.4" font-family="Helvetica,sans-Serif" font-size="12.00">haircuts</text>
+</g>
+<g id="edge9" class="edge">
+<title>Core&#45;&gt;DWH</title>
+<path fill="none" stroke="#4b5563" d="M625.35,-514C596.2,-502.13 561.43,-487.98 531.48,-475.79"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="532.18,-473.42 524.78,-473.05 530.33,-477.96 532.18,-473.42"/>
+</g>
+<g id="node11" class="node">
+<title>GL</title>
+<path fill="#6b7280" stroke="#6b7280" d="M766,-400C766,-400 674,-400 674,-400 668,-400 662,-394 662,-388 662,-388 662,-372 662,-372 662,-366 668,-360 674,-360 674,-360 766,-360 766,-360 772,-360 778,-366 778,-372 778,-372 778,-388 778,-388 778,-394 772,-400 766,-400"/>
+<text text-anchor="middle" x="720" y="-383.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">General ledger</text>
+<text text-anchor="middle" x="720" y="-370.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">(finance)</text>
+</g>
+<g id="edge21" class="edge">
+<title>Core&#45;&gt;GL</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M693.21,-513.68C699.12,-484.41 708.71,-436.93 714.67,-407.41"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="717.12,-407.66 716.1,-400.32 712.31,-406.69 717.12,-407.66"/>
+</g>
+<g id="node4" class="node">
+<title>Lim</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M151.5,-567C151.5,-567 28.5,-567 28.5,-567 22.5,-567 16.5,-561 16.5,-555 16.5,-555 16.5,-526 16.5,-526 16.5,-520 22.5,-514 28.5,-514 28.5,-514 151.5,-514 151.5,-514 157.5,-514 163.5,-520 163.5,-526 163.5,-526 163.5,-555 163.5,-555 163.5,-561 157.5,-567 151.5,-567"/>
+<text text-anchor="middle" x="90" y="-550.4" font-family="Helvetica,sans-Serif" font-size="12.00">Limits management</text>
+<text text-anchor="middle" x="90" y="-537.4" font-family="Helvetica,sans-Serif" font-size="12.00">approved limits,</text>
+<text text-anchor="middle" x="90" y="-524.4" font-family="Helvetica,sans-Serif" font-size="12.00">utilisation, excesses</text>
+</g>
+<g id="edge10" class="edge">
+<title>Coll&#45;&gt;DWH</title>
+<path fill="none" stroke="#4b5563" d="M462,-513.87C462,-503.49 462,-491.38 462,-480.36"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="464.45,-480.31 462,-473.31 459.55,-480.31 464.45,-480.31"/>
+</g>
+<g id="node5" class="node">
+<title>Rate</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M985.5,-567C985.5,-567 820.5,-567 820.5,-567 814.5,-567 808.5,-561 808.5,-555 808.5,-555 808.5,-526 808.5,-526 808.5,-520 814.5,-514 820.5,-514 820.5,-514 985.5,-514 985.5,-514 991.5,-514 997.5,-520 997.5,-526 997.5,-526 997.5,-555 997.5,-555 997.5,-561 991.5,-567 985.5,-567"/>
+<text text-anchor="middle" x="903" y="-550.4" font-family="Helvetica,sans-Serif" font-size="12.00">Rating and scoring engines</text>
+<text text-anchor="middle" x="903" y="-537.4" font-family="Helvetica,sans-Serif" font-size="12.00">PD, LGD, EAD,</text>
+<text text-anchor="middle" x="903" y="-524.4" font-family="Helvetica,sans-Serif" font-size="12.00">grades, overrides</text>
+</g>
+<g id="edge11" class="edge">
+<title>Lim&#45;&gt;DWH</title>
+<path fill="none" stroke="#4b5563" d="M151.3,-513.88C159.21,-511.01 167.24,-508.3 175,-506 223.56,-491.6 277.78,-479.55 325.9,-470.2"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="326.54,-472.57 332.95,-468.84 325.62,-467.76 326.54,-472.57"/>
+</g>
+<g id="node6" class="node">
+<title>Cust</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M1269,-567C1269,-567 1053,-567 1053,-567 1047,-567 1041,-561 1041,-555 1041,-555 1041,-526 1041,-526 1041,-520 1047,-514 1053,-514 1053,-514 1269,-514 1269,-514 1275,-514 1281,-520 1281,-526 1281,-526 1281,-555 1281,-555 1281,-561 1275,-567 1269,-567"/>
+<text text-anchor="middle" x="1161" y="-550.4" font-family="Helvetica,sans-Serif" font-size="12.00">Customer and counterparty master</text>
+<text text-anchor="middle" x="1161" y="-537.4" font-family="Helvetica,sans-Serif" font-size="12.00">identifiers, group hierarchy,</text>
+<text text-anchor="middle" x="1161" y="-524.4" font-family="Helvetica,sans-Serif" font-size="12.00">sector, country</text>
+</g>
+<g id="edge12" class="edge">
+<title>Rate&#45;&gt;DWH</title>
+<path fill="none" stroke="#4b5563" d="M830.41,-513.98C819.65,-510.89 808.61,-508.09 798,-506 732.82,-493.15 714.57,-504.72 649,-494 619.5,-489.18 587.82,-482.06 559.07,-474.83"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="559.6,-472.44 552.21,-473.09 558.4,-477.19 559.6,-472.44"/>
+</g>
+<g id="edge13" class="edge">
+<title>Cust&#45;&gt;DWH</title>
+<path fill="none" stroke="#4b5563" d="M1052.1,-513.98C1037.65,-511.04 1023,-508.28 1009,-506 869.84,-483.29 709.27,-467.32 598.26,-457.87"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="598.2,-455.4 591.02,-457.25 597.79,-460.29 598.2,-455.4"/>
+</g>
+<g id="node8" class="node">
+<title>RWA</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M285.5,-322C285.5,-322 178.5,-322 178.5,-322 172.5,-322 166.5,-316 166.5,-310 166.5,-310 166.5,-281 166.5,-281 166.5,-275 172.5,-269 178.5,-269 178.5,-269 285.5,-269 285.5,-269 291.5,-269 297.5,-275 297.5,-281 297.5,-281 297.5,-310 297.5,-310 297.5,-316 291.5,-322 285.5,-322"/>
+<text text-anchor="middle" x="232" y="-305.4" font-family="Helvetica,sans-Serif" font-size="12.00">Capital engine</text>
+<text text-anchor="middle" x="232" y="-292.4" font-family="Helvetica,sans-Serif" font-size="12.00">RWA, SA and IRB,</text>
+<text text-anchor="middle" x="232" y="-279.4" font-family="Helvetica,sans-Serif" font-size="12.00">output floor</text>
+</g>
+<g id="edge14" class="edge">
+<title>DWH&#45;&gt;RWA</title>
+<path fill="none" stroke="#4b5563" d="M422.46,-419.89C382.19,-393.79 319.8,-353.38 277.5,-325.97"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="278.61,-323.78 271.41,-322.03 275.95,-327.89 278.61,-323.78"/>
+</g>
+<g id="node9" class="node">
+<title>ECL</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M475,-322C475,-322 353,-322 353,-322 347,-322 341,-316 341,-310 341,-310 341,-281 341,-281 341,-275 347,-269 353,-269 353,-269 475,-269 475,-269 481,-269 487,-275 487,-281 487,-281 487,-310 487,-310 487,-316 481,-322 475,-322"/>
+<text text-anchor="middle" x="414" y="-305.4" font-family="Helvetica,sans-Serif" font-size="12.00">Provisioning engine</text>
+<text text-anchor="middle" x="414" y="-292.4" font-family="Helvetica,sans-Serif" font-size="12.00">IFRS 9 and CECL</text>
+<text text-anchor="middle" x="414" y="-279.4" font-family="Helvetica,sans-Serif" font-size="12.00">expected credit loss</text>
+</g>
+<g id="edge15" class="edge">
+<title>DWH&#45;&gt;ECL</title>
+<path fill="none" stroke="#4b5563" d="M453.75,-419.89C445.64,-394.73 433.25,-356.25 424.46,-328.96"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="426.78,-328.19 422.3,-322.28 422.12,-329.69 426.78,-328.19"/>
+</g>
+<g id="node10" class="node">
+<title>ST</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M669.5,-315.5C669.5,-315.5 542.5,-315.5 542.5,-315.5 536.5,-315.5 530.5,-309.5 530.5,-303.5 530.5,-303.5 530.5,-287.5 530.5,-287.5 530.5,-281.5 536.5,-275.5 542.5,-275.5 542.5,-275.5 669.5,-275.5 669.5,-275.5 675.5,-275.5 681.5,-281.5 681.5,-287.5 681.5,-287.5 681.5,-303.5 681.5,-303.5 681.5,-309.5 675.5,-315.5 669.5,-315.5"/>
+<text text-anchor="middle" x="606" y="-298.9" font-family="Helvetica,sans-Serif" font-size="12.00">Stress testing engine</text>
+<text text-anchor="middle" x="606" y="-285.9" font-family="Helvetica,sans-Serif" font-size="12.00">scenario projections</text>
+</g>
+<g id="edge16" class="edge">
+<title>DWH&#45;&gt;ST</title>
+<path fill="none" stroke="#4b5563" d="M486.75,-419.89C513.59,-392.12 556.11,-348.12 582.46,-320.85"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="584.41,-322.37 587.51,-315.63 580.88,-318.96 584.41,-322.37"/>
+</g>
+<g id="node12" class="node">
+<title>Rep</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M615.5,-228C615.5,-228 378.5,-228 378.5,-228 372.5,-228 366.5,-222 366.5,-216 366.5,-216 366.5,-187 366.5,-187 366.5,-181 372.5,-175 378.5,-175 378.5,-175 615.5,-175 615.5,-175 621.5,-175 627.5,-181 627.5,-187 627.5,-187 627.5,-216 627.5,-216 627.5,-222 621.5,-228 615.5,-228"/>
+<text text-anchor="middle" x="497" y="-211.4" font-family="Helvetica,sans-Serif" font-size="12.00">Reporting layer</text>
+<text text-anchor="middle" x="497" y="-198.4" font-family="Helvetica,sans-Serif" font-size="12.00">dashboards, management information,</text>
+<text text-anchor="middle" x="497" y="-185.4" font-family="Helvetica,sans-Serif" font-size="12.00">reconciliations, adjustments</text>
+</g>
+<g id="edge17" class="edge">
+<title>RWA&#45;&gt;Rep</title>
+<path fill="none" stroke="#4b5563" d="M297.51,-271.76C333.43,-259.29 378.28,-243.72 416.35,-230.5"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="417.56,-232.67 423.37,-228.06 415.96,-228.04 417.56,-232.67"/>
+</g>
+<g id="edge18" class="edge">
+<title>ECL&#45;&gt;Rep</title>
+<path fill="none" stroke="#4b5563" d="M437.12,-268.87C446.93,-258 458.46,-245.22 468.77,-233.79"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="470.85,-235.15 473.72,-228.31 467.21,-231.87 470.85,-235.15"/>
+</g>
+<g id="edge19" class="edge">
+<title>ST&#45;&gt;Rep</title>
+<path fill="none" stroke="#4b5563" d="M583.42,-275.44C568.85,-263.14 549.59,-246.88 532.94,-232.84"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="534.34,-230.81 527.41,-228.17 531.18,-234.56 534.34,-230.81"/>
+</g>
+<g id="edge20" class="edge">
+<title>GL&#45;&gt;Rep</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M721.52,-360C722.48,-334.21 720.16,-288.22 695,-261 678.61,-243.27 657.14,-230.82 634.4,-222.1"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="635.05,-219.73 627.63,-219.63 633.36,-224.33 635.05,-219.73"/>
+<text text-anchor="middle" x="745" y="-293" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> reconcile</text>
+</g>
+<g id="node13" class="node">
+<title>Reg</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M524,-134C524,-134 324,-134 324,-134 318,-134 312,-128 312,-122 312,-122 312,-93 312,-93 312,-87 318,-81 324,-81 324,-81 524,-81 524,-81 530,-81 536,-87 536,-93 536,-93 536,-122 536,-122 536,-128 530,-134 524,-134"/>
+<text text-anchor="middle" x="424" y="-117.4" font-family="Helvetica,sans-Serif" font-size="12.00">Regulatory submission tools</text>
+<text text-anchor="middle" x="424" y="-104.4" font-family="Helvetica,sans-Serif" font-size="12.00">COREP, FINREP, large exposures,</text>
+<text text-anchor="middle" x="424" y="-91.4" font-family="Helvetica,sans-Serif" font-size="12.00">taxonomy validation, sign&#45;off</text>
+</g>
+<g id="edge22" class="edge">
+<title>Rep&#45;&gt;Reg</title>
+<path fill="none" stroke="#4b5563" d="M476.67,-174.87C468.04,-164 457.9,-151.22 448.83,-139.79"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="450.75,-138.27 444.48,-134.31 446.91,-141.32 450.75,-138.27"/>
+</g>
+<g id="node14" class="node">
+<title>Out</title>
+<path fill="#1f2937" stroke="#1f2937" d="M569,-40C569,-40 425,-40 425,-40 419,-40 413,-34 413,-28 413,-28 413,-12 413,-12 413,-6 419,0 425,0 425,0 569,0 569,0 575,0 581,-6 581,-12 581,-12 581,-28 581,-28 581,-34 575,-40 569,-40"/>
+<text text-anchor="middle" x="497" y="-23.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Regulators, board,</text>
+<text text-anchor="middle" x="497" y="-10.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Pillar 3 public disclosure</text>
+</g>
+<g id="edge24" class="edge">
+<title>Rep&#45;&gt;Out</title>
+<path fill="none" stroke="#4b5563" d="M522.33,-174.99C532.03,-163.47 541.97,-149.07 547,-134 554.46,-111.66 555.02,-103.15 547,-81 542.21,-67.77 533.09,-55.4 523.93,-45.38"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="525.47,-43.44 518.87,-40.06 521.92,-46.82 525.47,-43.44"/>
+</g>
+<g id="edge23" class="edge">
+<title>Reg&#45;&gt;Out</title>
+<path fill="none" stroke="#4b5563" d="M445.9,-80.85C455.42,-69.71 466.51,-56.71 475.93,-45.68"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="478,-47.02 480.68,-40.11 474.28,-43.84 478,-47.02"/>
+</g>
+</g>
+</svg>

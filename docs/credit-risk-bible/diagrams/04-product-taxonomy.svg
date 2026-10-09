@@ -1,0 +1,177 @@
+<svg width="100%"
+ viewBox="0.00 0.00 854.80 604.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 590.4)">
+<title>ProductTaxonomy</title>
+<polygon fill="white" stroke="transparent" points="-14.4,14.4 -14.4,-590.4 840.4,-590.4 840.4,14.4 -14.4,14.4"/>
+<g id="node1" class="node">
+<title>Root</title>
+<path fill="#1f2937" stroke="#1f2937" d="M176,-360C176,-360 12,-360 12,-360 6,-360 0,-354 0,-348 0,-348 0,-332 0,-332 0,-326 6,-320 12,-320 12,-320 176,-320 176,-320 182,-320 188,-326 188,-332 188,-332 188,-348 188,-348 188,-354 182,-360 176,-360"/>
+<text text-anchor="middle" x="94" y="-343.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Commercial and corporate</text>
+<text text-anchor="middle" x="94" y="-330.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">lending products</text>
+</g>
+<g id="node2" class="node">
+<title>WC</title>
+<path fill="#1e3a8a" stroke="#1e3a8a" d="M439,-522C439,-522 261,-522 261,-522 255,-522 249,-516 249,-510 249,-510 249,-494 249,-494 249,-488 255,-482 261,-482 261,-482 439,-482 439,-482 445,-482 451,-488 451,-494 451,-494 451,-510 451,-510 451,-516 445,-522 439,-522"/>
+<text text-anchor="middle" x="350" y="-505.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Working capital</text>
+<text text-anchor="middle" x="350" y="-492.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">(short term, day&#45;to&#45;day cash)</text>
+</g>
+<g id="edge1" class="edge">
+<title>Root&#45;&gt;WC</title>
+<path fill="none" stroke="#4b5563" d="M126.4,-360.03C173.21,-389.88 261.15,-445.97 311.34,-477.98"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="310.05,-480.07 317.27,-481.76 312.69,-475.93 310.05,-480.07"/>
+</g>
+<g id="node3" class="node">
+<title>Term</title>
+<path fill="#1e3a8a" stroke="#1e3a8a" d="M457,-387C457,-387 243,-387 243,-387 237,-387 231,-381 231,-375 231,-375 231,-359 231,-359 231,-353 237,-347 243,-347 243,-347 457,-347 457,-347 463,-347 469,-353 469,-359 469,-359 469,-375 469,-375 469,-381 463,-387 457,-387"/>
+<text text-anchor="middle" x="350" y="-370.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Term debt</text>
+<text text-anchor="middle" x="350" y="-357.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">(long term, buy or build something)</text>
+</g>
+<g id="edge2" class="edge">
+<title>Root&#45;&gt;Term</title>
+<path fill="none" stroke="#4b5563" d="M188.14,-349.9C199.74,-351.13 211.74,-352.41 223.73,-353.68"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="223.56,-356.13 230.78,-354.43 224.08,-351.26 223.56,-356.13"/>
+</g>
+<g id="node4" class="node">
+<title>Asset</title>
+<path fill="#1e3a8a" stroke="#1e3a8a" d="M438.5,-280C438.5,-280 261.5,-280 261.5,-280 255.5,-280 249.5,-274 249.5,-268 249.5,-268 249.5,-252 249.5,-252 249.5,-246 255.5,-240 261.5,-240 261.5,-240 438.5,-240 438.5,-240 444.5,-240 450.5,-246 450.5,-252 450.5,-252 450.5,-268 450.5,-268 450.5,-274 444.5,-280 438.5,-280"/>
+<text text-anchor="middle" x="350" y="-263.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Asset&#45;backed</text>
+<text text-anchor="middle" x="350" y="-250.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">(repaid from a specific asset)</text>
+</g>
+<g id="edge3" class="edge">
+<title>Root&#45;&gt;Asset</title>
+<path fill="none" stroke="#4b5563" d="M158.77,-319.92C195.15,-308.46 240.83,-294.07 278.31,-282.27"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="279.27,-284.53 285.21,-280.09 277.79,-279.86 279.27,-284.53"/>
+</g>
+<g id="node5" class="node">
+<title>Multi</title>
+<path fill="#1e3a8a" stroke="#1e3a8a" d="M416.5,-121C416.5,-121 283.5,-121 283.5,-121 277.5,-121 271.5,-115 271.5,-109 271.5,-109 271.5,-93 271.5,-93 271.5,-87 277.5,-81 283.5,-81 283.5,-81 416.5,-81 416.5,-81 422.5,-81 428.5,-87 428.5,-93 428.5,-93 428.5,-109 428.5,-109 428.5,-115 422.5,-121 416.5,-121"/>
+<text text-anchor="middle" x="350" y="-104.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Multi&#45;lender</text>
+<text text-anchor="middle" x="350" y="-91.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">(too big for one bank)</text>
+</g>
+<g id="edge4" class="edge">
+<title>Root&#45;&gt;Multi</title>
+<path fill="none" stroke="#4b5563" d="M116.66,-319.62C162.96,-276.06 271.47,-173.95 322.1,-126.31"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="323.98,-127.91 327.4,-121.33 320.62,-124.34 323.98,-127.91"/>
+</g>
+<g id="node6" class="node">
+<title>OD</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M780,-576C780,-576 558,-576 558,-576 552,-576 546,-570 546,-564 546,-564 546,-548 546,-548 546,-542 552,-536 558,-536 558,-536 780,-536 780,-536 786,-536 792,-542 792,-548 792,-548 792,-564 792,-564 792,-570 786,-576 780,-576"/>
+<text text-anchor="middle" x="669" y="-559.4" font-family="Helvetica,sans-Serif" font-size="12.00">Overdraft</text>
+<text text-anchor="middle" x="669" y="-546.4" font-family="Helvetica,sans-Serif" font-size="12.00">uncommitted, repayable on demand</text>
+</g>
+<g id="edge5" class="edge">
+<title>WC&#45;&gt;OD</title>
+<path fill="none" stroke="#4b5563" d="M451.3,-519.09C480.56,-524.07 512.89,-529.58 543.45,-534.78"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="543.04,-537.2 550.36,-535.96 543.87,-532.37 543.04,-537.2"/>
+</g>
+<g id="node7" class="node">
+<title>RCF</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M791,-522C791,-522 547,-522 547,-522 541,-522 535,-516 535,-510 535,-510 535,-494 535,-494 535,-488 541,-482 547,-482 547,-482 791,-482 791,-482 797,-482 803,-488 803,-494 803,-494 803,-510 803,-510 803,-516 797,-522 791,-522"/>
+<text text-anchor="middle" x="669" y="-505.4" font-family="Helvetica,sans-Serif" font-size="12.00">Revolving credit facility (RCF)</text>
+<text text-anchor="middle" x="669" y="-492.4" font-family="Helvetica,sans-Serif" font-size="12.00">committed, draw and repay up to a limit</text>
+</g>
+<g id="edge6" class="edge">
+<title>WC&#45;&gt;RCF</title>
+<path fill="none" stroke="#4b5563" d="M451.3,-502C475.59,-502 502,-502 527.75,-502"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="528,-504.45 535,-502 528,-499.55 528,-504.45"/>
+</g>
+<g id="node8" class="node">
+<title>Amort</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M733.5,-468C733.5,-468 604.5,-468 604.5,-468 598.5,-468 592.5,-462 592.5,-456 592.5,-456 592.5,-440 592.5,-440 592.5,-434 598.5,-428 604.5,-428 604.5,-428 733.5,-428 733.5,-428 739.5,-428 745.5,-434 745.5,-440 745.5,-440 745.5,-456 745.5,-456 745.5,-462 739.5,-468 733.5,-468"/>
+<text text-anchor="middle" x="669" y="-451.4" font-family="Helvetica,sans-Serif" font-size="12.00">Amortising term loan</text>
+<text text-anchor="middle" x="669" y="-438.4" font-family="Helvetica,sans-Serif" font-size="12.00">equal instalments</text>
+</g>
+<g id="edge7" class="edge">
+<title>Term&#45;&gt;Amort</title>
+<path fill="none" stroke="#4b5563" d="M404.06,-387.07C435.16,-398.26 475.41,-411.76 512,-421 535.53,-426.94 561.38,-432 585.16,-436.07"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="584.82,-438.5 592.13,-437.25 585.64,-433.67 584.82,-438.5"/>
+</g>
+<g id="node9" class="node">
+<title>Bullet</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M757.5,-414C757.5,-414 580.5,-414 580.5,-414 574.5,-414 568.5,-408 568.5,-402 568.5,-402 568.5,-386 568.5,-386 568.5,-380 574.5,-374 580.5,-374 580.5,-374 757.5,-374 757.5,-374 763.5,-374 769.5,-380 769.5,-386 769.5,-386 769.5,-402 769.5,-402 769.5,-408 763.5,-414 757.5,-414"/>
+<text text-anchor="middle" x="669" y="-397.4" font-family="Helvetica,sans-Serif" font-size="12.00">Bullet term loan</text>
+<text text-anchor="middle" x="669" y="-384.4" font-family="Helvetica,sans-Serif" font-size="12.00">interest only, principal at end</text>
+</g>
+<g id="edge8" class="edge">
+<title>Term&#45;&gt;Bullet</title>
+<path fill="none" stroke="#4b5563" d="M469.04,-377.05C499.27,-379.63 531.6,-382.38 561.23,-384.91"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="561.12,-387.36 568.3,-385.51 561.53,-382.47 561.12,-387.36"/>
+</g>
+<g id="node10" class="node">
+<title>Balloon</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M778.5,-360C778.5,-360 559.5,-360 559.5,-360 553.5,-360 547.5,-354 547.5,-348 547.5,-348 547.5,-332 547.5,-332 547.5,-326 553.5,-320 559.5,-320 559.5,-320 778.5,-320 778.5,-320 784.5,-320 790.5,-326 790.5,-332 790.5,-332 790.5,-348 790.5,-348 790.5,-354 784.5,-360 778.5,-360"/>
+<text text-anchor="middle" x="669" y="-343.4" font-family="Helvetica,sans-Serif" font-size="12.00">Balloon term loan</text>
+<text text-anchor="middle" x="669" y="-330.4" font-family="Helvetica,sans-Serif" font-size="12.00">small instalments, big final payment</text>
+</g>
+<g id="edge9" class="edge">
+<title>Term&#45;&gt;Balloon</title>
+<path fill="none" stroke="#4b5563" d="M469.04,-356.95C492.25,-354.97 516.7,-352.89 540.22,-350.88"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="540.71,-353.3 547.48,-350.26 540.3,-348.42 540.71,-353.3"/>
+</g>
+<g id="node11" class="node">
+<title>ABL</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M804,-306C804,-306 534,-306 534,-306 528,-306 522,-300 522,-294 522,-294 522,-278 522,-278 522,-272 528,-266 534,-266 534,-266 804,-266 804,-266 810,-266 816,-272 816,-278 816,-278 816,-294 816,-294 816,-300 810,-306 804,-306"/>
+<text text-anchor="middle" x="669" y="-289.4" font-family="Helvetica,sans-Serif" font-size="12.00">Asset&#45;based lending (ABL)</text>
+<text text-anchor="middle" x="669" y="-276.4" font-family="Helvetica,sans-Serif" font-size="12.00">borrowing base on receivables and inventory</text>
+</g>
+<g id="edge10" class="edge">
+<title>Asset&#45;&gt;ABL</title>
+<path fill="none" stroke="#4b5563" d="M450.87,-268.19C471.25,-269.86 493.15,-271.66 514.91,-273.44"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="514.79,-275.89 521.96,-274.02 515.19,-271.01 514.79,-275.89"/>
+</g>
+<g id="node12" class="node">
+<title>Inv</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M769.5,-252C769.5,-252 568.5,-252 568.5,-252 562.5,-252 556.5,-246 556.5,-240 556.5,-240 556.5,-228 556.5,-228 556.5,-222 562.5,-216 568.5,-216 568.5,-216 769.5,-216 769.5,-216 775.5,-216 781.5,-222 781.5,-228 781.5,-228 781.5,-240 781.5,-240 781.5,-246 775.5,-252 769.5,-252"/>
+<text text-anchor="middle" x="669" y="-230.9" font-family="Helvetica,sans-Serif" font-size="12.00">Invoice discounting and factoring</text>
+</g>
+<g id="edge11" class="edge">
+<title>Asset&#45;&gt;Inv</title>
+<path fill="none" stroke="#4b5563" d="M450.87,-251.81C481.99,-249.26 516.64,-246.41 548.94,-243.76"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="549.45,-246.18 556.23,-243.17 549.05,-241.3 549.45,-246.18"/>
+</g>
+<g id="node13" class="node">
+<title>Equip</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M804.5,-202C804.5,-202 533.5,-202 533.5,-202 527.5,-202 521.5,-196 521.5,-190 521.5,-190 521.5,-174 521.5,-174 521.5,-168 527.5,-162 533.5,-162 533.5,-162 804.5,-162 804.5,-162 810.5,-162 816.5,-168 816.5,-174 816.5,-174 816.5,-190 816.5,-190 816.5,-196 810.5,-202 804.5,-202"/>
+<text text-anchor="middle" x="669" y="-185.4" font-family="Helvetica,sans-Serif" font-size="12.00">Equipment finance and leasing</text>
+<text text-anchor="middle" x="669" y="-172.4" font-family="Helvetica,sans-Serif" font-size="12.00">hire purchase, finance lease, operating lease</text>
+</g>
+<g id="edge12" class="edge">
+<title>Asset&#45;&gt;Equip</title>
+<path fill="none" stroke="#4b5563" d="M407.84,-239.92C438.43,-229.65 476.96,-217.54 512,-209 519.93,-207.07 528.11,-205.22 536.39,-203.46"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="537.01,-205.84 543.37,-202.01 536.01,-201.04 537.01,-205.84"/>
+</g>
+<g id="node14" class="node">
+<title>Bilat</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M742,-148C742,-148 596,-148 596,-148 590,-148 584,-142 584,-136 584,-136 584,-120 584,-120 584,-114 590,-108 596,-108 596,-108 742,-108 742,-108 748,-108 754,-114 754,-120 754,-120 754,-136 754,-136 754,-142 748,-148 742,-148"/>
+<text text-anchor="middle" x="669" y="-131.4" font-family="Helvetica,sans-Serif" font-size="12.00">Bilateral</text>
+<text text-anchor="middle" x="669" y="-118.4" font-family="Helvetica,sans-Serif" font-size="12.00">one bank, one borrower</text>
+</g>
+<g id="edge13" class="edge">
+<title>Multi&#45;&gt;Bilat</title>
+<path fill="none" stroke="#4b5563" d="M428.55,-107.6C473.27,-111.41 529.74,-116.22 576.61,-120.22"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="576.57,-122.67 583.75,-120.82 576.98,-117.79 576.57,-122.67"/>
+</g>
+<g id="node15" class="node">
+<title>Club</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M814,-94C814,-94 524,-94 524,-94 518,-94 512,-88 512,-82 512,-82 512,-66 512,-66 512,-60 518,-54 524,-54 524,-54 814,-54 814,-54 820,-54 826,-60 826,-66 826,-66 826,-82 826,-82 826,-88 820,-94 814,-94"/>
+<text text-anchor="middle" x="669" y="-77.4" font-family="Helvetica,sans-Serif" font-size="12.00">Club deal</text>
+<text text-anchor="middle" x="669" y="-64.4" font-family="Helvetica,sans-Serif" font-size="12.00">a few banks, equal terms, no formal syndication</text>
+</g>
+<g id="edge14" class="edge">
+<title>Multi&#45;&gt;Club</title>
+<path fill="none" stroke="#4b5563" d="M428.55,-94.4C451.77,-92.42 478.16,-90.17 504.72,-87.91"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="505.08,-90.34 511.85,-87.3 504.66,-85.45 505.08,-90.34"/>
+</g>
+<g id="node16" class="node">
+<title>Synd</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M775.5,-40C775.5,-40 562.5,-40 562.5,-40 556.5,-40 550.5,-34 550.5,-28 550.5,-28 550.5,-12 550.5,-12 550.5,-6 556.5,0 562.5,0 562.5,0 775.5,0 775.5,0 781.5,0 787.5,-6 787.5,-12 787.5,-12 787.5,-28 787.5,-28 787.5,-34 781.5,-40 775.5,-40"/>
+<text text-anchor="middle" x="669" y="-23.4" font-family="Helvetica,sans-Serif" font-size="12.00">Syndicated loan</text>
+<text text-anchor="middle" x="669" y="-10.4" font-family="Helvetica,sans-Serif" font-size="12.00">arranger, agent, many participants</text>
+</g>
+<g id="edge15" class="edge">
+<title>Multi&#45;&gt;Synd</title>
+<path fill="none" stroke="#4b5563" d="M404.06,-80.93C435.16,-69.74 475.41,-56.24 512,-47 522.16,-44.43 532.76,-42.03 543.44,-39.8"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="544.1,-42.17 550.47,-38.36 543.12,-37.37 544.1,-42.17"/>
+</g>
+</g>
+</svg>

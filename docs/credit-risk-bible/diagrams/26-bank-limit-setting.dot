@@ -1,0 +1,45 @@
+digraph BankLimitSetting {
+  graph [rankdir=TB, splines=true, nodesep=0.35, ranksep=0.5, fontname="Helvetica", fontsize=13, bgcolor="white", newrank=true, pad=0.2];
+  node  [shape=box, style="rounded,filled", fillcolor="#eef2ff", color="#6366f1", fontname="Helvetica", fontsize=12, margin="0.18,0.10"];
+  edge  [color="#4b5563", arrowsize=0.7, fontname="Helvetica", fontsize=10, fontcolor="#374151"];
+
+  Start [label="Request for a limit on\nanother bank (counterparty bank)", fillcolor="#1f2937", fontcolor="white", color="#1f2937"];
+
+  subgraph cluster_analysis {
+    label="Financial institution analysis (CAMELS lens)"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
+    C [label="Capital\nCET1 ratio, leverage,\nbuffers above minimum"];
+    A [label="Asset quality\nNPL ratio, coverage,\nconcentrations"];
+    M [label="Management\nstrategy, governance,\nregulatory history"];
+    E [label="Earnings\nreturn on equity,\ncost to income, stability"];
+    L [label="Liquidity\nLCR, NSFR, deposit base,\nwholesale reliance"];
+    S [label="Sensitivity\nto market risk and\nto its home sovereign"];
+    { rank=same; C -> A -> M [style=invis]; }
+    { rank=same; E -> L -> S [style=invis]; }
+  }
+
+  Rating [label="Internal bank rating\n(and SCRA grade A, B or C\nfor capital purposes)"];
+  Sov    [label="Sovereign ceiling check\nbank rating normally capped\nby its country rating"];
+  Q1 [label="Rating and sovereign\nceiling acceptable?", shape=diamond, style=filled, fillcolor="#fef3c7", color="#d97706", margin="0.05,0.05"];
+  Decline [label="Decline or\ncollateralised business only", fillcolor="#991b1b", fontcolor="white", color="#991b1b"];
+
+  subgraph cluster_limit {
+    label="Limit structure"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
+    Size [label="Size from rating grid\nscaled by our capital and\nthe counterparty's size"];
+    Sub  [label="Sub-limits by product and tenor\nmoney market, FX settlement,\nderivatives (PFE), trade, nostro"];
+    Size -> Sub;
+  }
+
+  Q2 [label="Within country limit\nand large exposure rule?", shape=diamond, style=filled, fillcolor="#fef3c7", color="#d97706", margin="0.05,0.05"];
+  Appr [label="Approve, load into limits system,\nreview at least annually", fillcolor="#065f46", fontcolor="white", color="#065f46"];
+  Trim [label="Reduce limit to fit\ncountry and concentration headroom", fillcolor="#991b1b", fontcolor="white", color="#991b1b"];
+
+  Start -> {C A M E L S};
+  {C A M E L S} -> Rating;
+  Rating -> Sov -> Q1;
+  Q1 -> Decline [label=" no"];
+  Q1 -> Size [label=" yes"];
+  Sub -> Q2;
+  Q2 -> Appr [label=" yes"];
+  Q2 -> Trim [label=" no"];
+  Trim -> Appr;
+}

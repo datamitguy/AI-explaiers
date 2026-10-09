@@ -1,0 +1,30 @@
+digraph ExpectedUnexpectedLoss {
+  graph [rankdir=TB, splines=true, nodesep=0.35, ranksep=0.55, fontname="Helvetica", fontsize=13, bgcolor="white", newrank=true, pad=0.2];
+  node  [shape=box, style="rounded,filled", fillcolor="#eef2ff", color="#6366f1", fontname="Helvetica", fontsize=12, margin="0.18,0.10"];
+  edge  [color="#4b5563", arrowsize=0.7, fontname="Helvetica", fontsize=10, fontcolor="#374151"];
+
+  subgraph cluster_inputs {
+    label="The three ingredients"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
+    PD  [label="PD: probability of default\nhow likely? (e.g. 2% a year)"];
+    LGD [label="LGD: loss given default\nhow bad if it happens? (e.g. 40%)"];
+    EAD [label="EAD: exposure at default\nhow much is owed? (e.g. 1,000)"];
+    { rank=same; PD -> LGD -> EAD [style=invis]; }
+  }
+
+  EL [label="Expected loss (EL) = PD x LGD x EAD\n= 0.02 x 0.40 x 1,000 = 8 a year\nthe normal, budgeted cost of lending", fillcolor="#1e3a8a", fontcolor="white", color="#1e3a8a"];
+  {PD LGD EAD} -> EL;
+
+  Q [label="Is the loss the average year\nor a very bad year?", shape=diamond, style=filled, fillcolor="#fef3c7", color="#d97706", margin="0.05,0.05"];
+  EL -> Q;
+
+  UL [label="Unexpected loss (UL)\nthe bad year, well above average\n(e.g. 8% default instead of 2%)", fillcolor="#991b1b", fontcolor="white", color="#991b1b"];
+  Q -> UL [label=" bad year"];
+
+  Prov [label="Covered by provisions\n(expected credit loss on the\nincome statement, IFRS 9 / CECL)\nand by the margin in the price", fillcolor="#065f46", fontcolor="white", color="#065f46"];
+  Cap  [label="Covered by capital\n(shareholders' cushion, sized by\nBasel risk-weighted assets)", fillcolor="#065f46", fontcolor="white", color="#065f46"];
+  Tail [label="Beyond capital: bank fails,\nresolution or bail-out", fillcolor="#6b7280", fontcolor="white", color="#6b7280"];
+
+  Q  -> Prov [label=" average year"];
+  UL -> Cap;
+  Cap -> Tail [label=" if losses exceed\n the cushion", style=dashed];
+}

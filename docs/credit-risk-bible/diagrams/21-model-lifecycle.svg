@@ -1,0 +1,175 @@
+<svg width="100%"
+ viewBox="0.00 0.00 544.30 1066.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 1052.4)">
+<title>ModelLifecycle</title>
+<polygon fill="white" stroke="transparent" points="-14.4,14.4 -14.4,-1052.4 529.9,-1052.4 529.9,14.4 -14.4,14.4"/>
+<g id="clust1" class="cluster">
+<title>cluster_build</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M93.5,-777C93.5,-777 344.5,-777 344.5,-777 350.5,-777 356.5,-783 356.5,-789 356.5,-789 356.5,-946 356.5,-946 356.5,-952 350.5,-958 344.5,-958 344.5,-958 93.5,-958 93.5,-958 87.5,-958 81.5,-952 81.5,-946 81.5,-946 81.5,-789 81.5,-789 81.5,-783 87.5,-777 93.5,-777"/>
+<text text-anchor="middle" x="219" y="-943.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">First line: model owner and developers</text>
+</g>
+<g id="clust2" class="cluster">
+<title>cluster_val</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M79.5,-594C79.5,-594 311.5,-594 311.5,-594 317.5,-594 323.5,-600 323.5,-606 323.5,-606 323.5,-746 323.5,-746 323.5,-752 317.5,-758 311.5,-758 311.5,-758 79.5,-758 79.5,-758 73.5,-758 67.5,-752 67.5,-746 67.5,-746 67.5,-606 67.5,-606 67.5,-600 73.5,-594 79.5,-594"/>
+<text text-anchor="middle" x="195.5" y="-743.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">Second line: independent validation</text>
+</g>
+<g id="node1" class="node">
+<title>Start</title>
+<path fill="#1f2937" stroke="#1f2937" d="M351,-1038C351,-1038 144,-1038 144,-1038 138,-1038 132,-1032 132,-1026 132,-1026 132,-997 132,-997 132,-991 138,-985 144,-985 144,-985 351,-985 351,-985 357,-985 363,-991 363,-997 363,-997 363,-1026 363,-1026 363,-1032 357,-1038 351,-1038"/>
+<text text-anchor="middle" x="247.5" y="-1021.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Business need identified</text>
+<text text-anchor="middle" x="247.5" y="-1008.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">(new portfolio, regulatory change,</text>
+<text text-anchor="middle" x="247.5" y="-995.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">old model failing)</text>
+</g>
+<g id="node2" class="node">
+<title>Dev</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M336,-928C336,-928 159,-928 159,-928 153,-928 147,-922 147,-916 147,-916 147,-887 147,-887 147,-881 153,-875 159,-875 159,-875 336,-875 336,-875 342,-875 348,-881 348,-887 348,-887 348,-916 348,-916 348,-922 342,-928 336,-928"/>
+<text text-anchor="middle" x="247.5" y="-911.4" font-family="Helvetica,sans-Serif" font-size="12.00">Development</text>
+<text text-anchor="middle" x="247.5" y="-898.4" font-family="Helvetica,sans-Serif" font-size="12.00">data gathering, design,</text>
+<text text-anchor="middle" x="247.5" y="-885.4" font-family="Helvetica,sans-Serif" font-size="12.00">estimation, developer testing</text>
+</g>
+<g id="edge3" class="edge">
+<title>Start&#45;&gt;Dev</title>
+<path fill="none" stroke="#4b5563" d="M247.5,-984.91C247.5,-970.08 247.5,-951.27 247.5,-935.36"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="249.95,-935.29 247.5,-928.29 245.05,-935.29 249.95,-935.29"/>
+</g>
+<g id="node3" class="node">
+<title>Doc</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M303.5,-838C303.5,-838 101.5,-838 101.5,-838 95.5,-838 89.5,-832 89.5,-826 89.5,-826 89.5,-797 89.5,-797 89.5,-791 95.5,-785 101.5,-785 101.5,-785 303.5,-785 303.5,-785 309.5,-785 315.5,-791 315.5,-797 315.5,-797 315.5,-826 315.5,-826 315.5,-832 309.5,-838 303.5,-838"/>
+<text text-anchor="middle" x="202.5" y="-821.4" font-family="Helvetica,sans-Serif" font-size="12.00">Model documentation</text>
+<text text-anchor="middle" x="202.5" y="-808.4" font-family="Helvetica,sans-Serif" font-size="12.00">methodology, data, assumptions,</text>
+<text text-anchor="middle" x="202.5" y="-795.4" font-family="Helvetica,sans-Serif" font-size="12.00">limitations, user guide</text>
+</g>
+<g id="edge1" class="edge">
+<title>Dev&#45;&gt;Doc</title>
+<path fill="none" stroke="#4b5563" d="M234.24,-874.57C229.44,-865.17 223.95,-854.44 218.9,-844.58"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="221.03,-843.36 215.66,-838.24 216.67,-845.59 221.03,-843.36"/>
+</g>
+<g id="node4" class="node">
+<title>Val</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M294,-728C294,-728 111,-728 111,-728 105,-728 99,-722 99,-716 99,-716 99,-687 99,-687 99,-681 105,-675 111,-675 111,-675 294,-675 294,-675 300,-675 306,-681 306,-687 306,-687 306,-716 306,-716 306,-722 300,-728 294,-728"/>
+<text text-anchor="middle" x="202.5" y="-711.4" font-family="Helvetica,sans-Serif" font-size="12.00">Independent validation</text>
+<text text-anchor="middle" x="202.5" y="-698.4" font-family="Helvetica,sans-Serif" font-size="12.00">conceptual soundness, data,</text>
+<text text-anchor="middle" x="202.5" y="-685.4" font-family="Helvetica,sans-Serif" font-size="12.00">performance, implementation</text>
+</g>
+<g id="edge4" class="edge">
+<title>Doc&#45;&gt;Val</title>
+<path fill="none" stroke="#4b5563" d="M202.5,-784.91C202.5,-770.08 202.5,-751.27 202.5,-735.36"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="204.95,-735.29 202.5,-728.29 200.05,-735.29 204.95,-735.29"/>
+</g>
+<g id="node5" class="node">
+<title>Q1</title>
+<polygon fill="#fef3c7" stroke="#d97706" points="202.5,-638 113.9,-620 202.5,-602 291.1,-620 202.5,-638"/>
+<text text-anchor="middle" x="202.5" y="-616.9" font-family="Helvetica,sans-Serif" font-size="12.00">Fit for purpose?</text>
+</g>
+<g id="edge2" class="edge">
+<title>Val&#45;&gt;Q1</title>
+<path fill="none" stroke="#4b5563" d="M202.5,-674.91C202.5,-665.45 202.5,-654.77 202.5,-645.42"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="204.95,-645.26 202.5,-638.26 200.05,-645.26 204.95,-645.26"/>
+</g>
+<g id="node6" class="node">
+<title>Fix</title>
+<path fill="#991b1b" stroke="#991b1b" d="M388.5,-544C388.5,-544 254.5,-544 254.5,-544 248.5,-544 242.5,-538 242.5,-532 242.5,-532 242.5,-516 242.5,-516 242.5,-510 248.5,-504 254.5,-504 254.5,-504 388.5,-504 388.5,-504 394.5,-504 400.5,-510 400.5,-516 400.5,-516 400.5,-532 400.5,-532 400.5,-538 394.5,-544 388.5,-544"/>
+<text text-anchor="middle" x="321.5" y="-527.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Findings raised</text>
+<text text-anchor="middle" x="321.5" y="-514.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">developer remediates</text>
+</g>
+<g id="edge5" class="edge">
+<title>Q1&#45;&gt;Fix</title>
+<path fill="none" stroke="#4b5563" d="M219.8,-605.33C238.58,-590.5 268.91,-566.54 291.57,-548.64"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="293.18,-550.49 297.16,-544.23 290.14,-546.65 293.18,-550.49"/>
+<text text-anchor="middle" x="280.5" y="-570.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> no</text>
+</g>
+<g id="node7" class="node">
+<title>Appr</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M205,-544C205,-544 12,-544 12,-544 6,-544 0,-538 0,-532 0,-532 0,-516 0,-516 0,-510 6,-504 12,-504 12,-504 205,-504 205,-504 211,-504 217,-510 217,-516 217,-516 217,-532 217,-532 217,-538 211,-544 205,-544"/>
+<text text-anchor="middle" x="108.5" y="-527.4" font-family="Helvetica,sans-Serif" font-size="12.00">Model risk committee approval</text>
+<text text-anchor="middle" x="108.5" y="-514.4" font-family="Helvetica,sans-Serif" font-size="12.00">(and regulator approval for IRB)</text>
+</g>
+<g id="edge7" class="edge">
+<title>Q1&#45;&gt;Appr</title>
+<path fill="none" stroke="#4b5563" d="M179.71,-606.59C169.79,-600.55 158.41,-592.71 149.5,-584 139.34,-574.07 130.1,-561.3 122.98,-550.18"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="125.03,-548.84 119.25,-544.2 120.87,-551.43 125.03,-548.84"/>
+<text text-anchor="middle" x="176.5" y="-576" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> yes, with</text>
+<text text-anchor="middle" x="176.5" y="-565" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> conditions</text>
+</g>
+<g id="edge6" class="edge">
+<title>Fix&#45;&gt;Dev</title>
+<path fill="none" stroke="#4b5563" d="M332.16,-544.16C341.46,-562.71 353.5,-591.93 353.5,-619 353.5,-812.5 353.5,-812.5 353.5,-812.5 353.5,-837.64 335.63,-856.97 314.56,-871.03"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="313.14,-869.03 308.55,-874.85 315.77,-873.16 313.14,-869.03"/>
+</g>
+<g id="node8" class="node">
+<title>Impl</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M234.5,-467C234.5,-467 54.5,-467 54.5,-467 48.5,-467 42.5,-461 42.5,-455 42.5,-455 42.5,-426 42.5,-426 42.5,-420 48.5,-414 54.5,-414 54.5,-414 234.5,-414 234.5,-414 240.5,-414 246.5,-420 246.5,-426 246.5,-426 246.5,-455 246.5,-455 246.5,-461 240.5,-467 234.5,-467"/>
+<text text-anchor="middle" x="144.5" y="-450.4" font-family="Helvetica,sans-Serif" font-size="12.00">Implementation in production</text>
+<text text-anchor="middle" x="144.5" y="-437.4" font-family="Helvetica,sans-Serif" font-size="12.00">parallel run, user acceptance</text>
+<text text-anchor="middle" x="144.5" y="-424.4" font-family="Helvetica,sans-Serif" font-size="12.00">testing, go&#45;live</text>
+</g>
+<g id="edge8" class="edge">
+<title>Appr&#45;&gt;Impl</title>
+<path fill="none" stroke="#4b5563" d="M117.03,-503.69C120.99,-494.73 125.8,-483.84 130.28,-473.69"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="132.58,-474.55 133.17,-467.15 128.1,-472.57 132.58,-474.55"/>
+</g>
+<g id="node9" class="node">
+<title>Mon</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M282,-377C282,-377 117,-377 117,-377 111,-377 105,-371 105,-365 105,-365 105,-336 105,-336 105,-330 111,-324 117,-324 117,-324 282,-324 282,-324 288,-324 294,-330 294,-336 294,-336 294,-365 294,-365 294,-371 288,-377 282,-377"/>
+<text text-anchor="middle" x="199.5" y="-360.4" font-family="Helvetica,sans-Serif" font-size="12.00">Ongoing monitoring</text>
+<text text-anchor="middle" x="199.5" y="-347.4" font-family="Helvetica,sans-Serif" font-size="12.00">quarterly performance,</text>
+<text text-anchor="middle" x="199.5" y="-334.4" font-family="Helvetica,sans-Serif" font-size="12.00">stability, overrides, triggers</text>
+</g>
+<g id="edge9" class="edge">
+<title>Impl&#45;&gt;Mon</title>
+<path fill="none" stroke="#4b5563" d="M160.7,-413.57C166.63,-404.08 173.41,-393.24 179.63,-383.3"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="181.78,-384.48 183.41,-377.24 177.62,-381.88 181.78,-384.48"/>
+</g>
+<g id="node10" class="node">
+<title>Q2</title>
+<polygon fill="#fef3c7" stroke="#d97706" points="274.5,-266 142.5,-232 274.5,-198 406.5,-232 274.5,-266"/>
+<text text-anchor="middle" x="274.5" y="-235.4" font-family="Helvetica,sans-Serif" font-size="12.00">Trigger breached or</text>
+<text text-anchor="middle" x="274.5" y="-222.4" font-family="Helvetica,sans-Serif" font-size="12.00">periodic review due?</text>
+</g>
+<g id="edge10" class="edge">
+<title>Mon&#45;&gt;Q2</title>
+<path fill="none" stroke="#4b5563" d="M241.3,-323.93C247.45,-318.65 253.17,-312.64 257.5,-306 263.98,-296.07 268,-283.97 270.49,-272.49"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="272.93,-272.79 271.85,-265.45 268.12,-271.86 272.93,-272.79"/>
+</g>
+<g id="edge11" class="edge">
+<title>Q2&#45;&gt;Mon</title>
+<path fill="none" stroke="#4b5563" d="M225.37,-253.64C213.1,-261.29 201.47,-271.29 194.5,-284 189.1,-293.84 188.59,-305.8 190.01,-316.79"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="187.62,-317.34 191.19,-323.84 192.46,-316.54 187.62,-317.34"/>
+<text text-anchor="middle" x="223" y="-298" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> no, keep</text>
+<text text-anchor="middle" x="223" y="-287" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> monitoring</text>
+</g>
+<g id="node11" class="node">
+<title>Rev</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M420,-151C420,-151 311,-151 311,-151 305,-151 299,-145 299,-139 299,-139 299,-123 299,-123 299,-117 305,-111 311,-111 311,-111 420,-111 420,-111 426,-111 432,-117 432,-123 432,-123 432,-139 432,-139 432,-145 426,-151 420,-151"/>
+<text text-anchor="middle" x="365.5" y="-134.4" font-family="Helvetica,sans-Serif" font-size="12.00">Periodic review or</text>
+<text text-anchor="middle" x="365.5" y="-121.4" font-family="Helvetica,sans-Serif" font-size="12.00">model change</text>
+</g>
+<g id="edge12" class="edge">
+<title>Q2&#45;&gt;Rev</title>
+<path fill="none" stroke="#4b5563" d="M299.13,-204.21C312.69,-189.45 329.43,-171.25 342.69,-156.81"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="344.85,-158.09 347.78,-151.28 341.24,-154.77 344.85,-158.09"/>
+<text text-anchor="middle" x="341" y="-172" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> yes</text>
+</g>
+<g id="edge13" class="edge">
+<title>Rev&#45;&gt;Dev</title>
+<path fill="none" stroke="#4b5563" d="M396.67,-151.04C420.93,-168.5 450.5,-196.79 450.5,-231 450.5,-812.5 450.5,-812.5 450.5,-812.5 450.5,-859.73 403.66,-881.9 354.98,-892.17"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="354.49,-889.77 348.11,-893.54 355.45,-894.58 354.49,-889.77"/>
+<text text-anchor="middle" x="483" y="-527" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> redevelop or</text>
+<text text-anchor="middle" x="483" y="-516" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> recalibrate</text>
+</g>
+<g id="node12" class="node">
+<title>Ret</title>
+<path fill="#065f46" stroke="#065f46" d="M437.5,-53C437.5,-53 293.5,-53 293.5,-53 287.5,-53 281.5,-47 281.5,-41 281.5,-41 281.5,-12 281.5,-12 281.5,-6 287.5,0 293.5,0 293.5,0 437.5,0 437.5,0 443.5,0 449.5,-6 449.5,-12 449.5,-12 449.5,-41 449.5,-41 449.5,-47 443.5,-53 437.5,-53"/>
+<text text-anchor="middle" x="365.5" y="-36.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Retirement</text>
+<text text-anchor="middle" x="365.5" y="-23.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">decommission, archive,</text>
+<text text-anchor="middle" x="365.5" y="-10.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">update inventory</text>
+</g>
+<g id="edge14" class="edge">
+<title>Rev&#45;&gt;Ret</title>
+<path fill="none" stroke="#4b5563" d="M365.5,-110.72C365.5,-96.64 365.5,-77.2 365.5,-60.65"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="367.95,-60.27 365.5,-53.27 363.05,-60.27 367.95,-60.27"/>
+<text text-anchor="middle" x="390" y="-85" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> no longer</text>
+<text text-anchor="middle" x="390" y="-74" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> needed</text>
+</g>
+</g>
+</svg>

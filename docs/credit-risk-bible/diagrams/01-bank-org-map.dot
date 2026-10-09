@@ -1,0 +1,47 @@
+digraph BankOrgMap {
+  graph [rankdir=TB, splines=true, ordering=out, nodesep=0.3, ranksep=0.55, fontname="Helvetica", fontsize=13, bgcolor="white", newrank=true, pad=0.2];
+  node  [shape=box, style="rounded,filled", fillcolor="#eef2ff", color="#6366f1", fontname="Helvetica", fontsize=12, margin="0.18,0.10"];
+  edge  [color="#4b5563", arrowsize=0.7, fontname="Helvetica", fontsize=10, fontcolor="#374151"];
+
+  Board [label="Board and board risk committee", fillcolor="#1f2937", fontcolor="white", color="#1f2937"];
+  CEO   [label="Chief Executive Officer (CEO)"];
+  Audit [label="Third line: internal audit\n(reports to the board)", fillcolor="#6b7280", fontcolor="white", color="#6b7280"];
+  Board -> CEO;
+  Board -> Audit [style=dashed];
+
+  subgraph cluster_front {
+    label="First line: the businesses that take risk"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
+    Retail [label="Retail banking\ncurrent accounts, mortgages,\ncards, personal loans"];
+    Comm   [label="Commercial banking\nSME and mid-market lending"];
+    CIB    [label="Corporate and investment\nbanking: large corporates,\nmarkets, syndicated loans"];
+    Treas  [label="Treasury\nfunding, liquidity,\ncapital management"];
+  }
+
+  subgraph cluster_second {
+    label="Second line: independent risk and compliance"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
+    CRO    [label="Chief Risk Officer (CRO)", fillcolor="#1e3a8a", fontcolor="white", color="#1e3a8a"];
+    Credit [label="Credit risk\nsanctioning, policy, models,\nportfolio, provisions, reporting\n(your platform lives here)", fillcolor="#065f46", fontcolor="white", color="#065f46"];
+    Market [label="Market and\nliquidity risk"];
+    OpRisk [label="Operational risk\nand compliance"];
+    CRO -> {Credit Market OpRisk};
+  }
+
+  subgraph cluster_support {
+    label="Support functions"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
+    Fin  [label="Finance\nledger, provisions,\nregulatory returns"];
+    Ops  [label="Operations\nloan servicing, collateral,\npayments, collections"];
+    Tech [label="Technology and data\ncore banking, data warehouse,\nrisk engines"];
+  }
+
+  CEO -> Retail; CEO -> Comm; CEO -> CIB; CEO -> Treas;
+  CEO -> CRO [minlen=2];
+  CEO -> Fin [minlen=4]; CEO -> Ops [minlen=4]; CEO -> Tech [minlen=4];
+  { rank=same; Retail; Comm; CIB; Treas; }
+  { rank=same; Fin; Ops; Tech; }
+
+  Retail -> Credit [style=dashed];
+  Comm   -> Credit [style=dashed];
+  CIB    -> Credit [label=" deals to approve,\n data to monitor", style=dashed];
+  Credit -> Fin  [label=" provisions, RWA", style=dashed, constraint=false];
+  Credit -> Tech [label=" models, data, platform", style=dashed, constraint=false];
+}

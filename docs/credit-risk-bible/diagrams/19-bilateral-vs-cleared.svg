@@ -1,0 +1,118 @@
+<svg width="100%"
+ viewBox="0.00 0.00 777.80 540.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 526.4)">
+<title>BilateralCleared</title>
+<polygon fill="white" stroke="transparent" points="-14.4,14.4 -14.4,-526.4 763.4,-526.4 763.4,14.4 -14.4,14.4"/>
+<g id="clust1" class="cluster">
+<title>cluster_bi</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M20,-90C20,-90 322,-90 322,-90 328,-90 334,-96 334,-102 334,-102 334,-492 334,-492 334,-498 328,-504 322,-504 322,-504 20,-504 20,-504 14,-504 8,-498 8,-492 8,-492 8,-102 8,-102 8,-96 14,-90 20,-90"/>
+<text text-anchor="middle" x="171" y="-489.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">Bilateral (over the counter) with ISDA and CSA</text>
+</g>
+<g id="clust2" class="cluster">
+<title>cluster_ccp</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M354,-90C354,-90 729,-90 729,-90 735,-90 741,-96 741,-102 741,-102 741,-385 741,-385 741,-391 735,-397 729,-397 729,-397 354,-397 354,-397 348,-397 342,-391 342,-385 342,-385 342,-102 342,-102 342,-96 348,-90 354,-90"/>
+<text text-anchor="middle" x="541.5" y="-382.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">Centrally cleared through a CCP</text>
+</g>
+<g id="node1" class="node">
+<title>A1</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M200.5,-474C200.5,-474 155.5,-474 155.5,-474 149.5,-474 143.5,-468 143.5,-462 143.5,-462 143.5,-450 143.5,-450 143.5,-444 149.5,-438 155.5,-438 155.5,-438 200.5,-438 200.5,-438 206.5,-438 212.5,-444 212.5,-450 212.5,-450 212.5,-462 212.5,-462 212.5,-468 206.5,-474 200.5,-474"/>
+<text text-anchor="middle" x="178" y="-452.9" font-family="Helvetica,sans-Serif" font-size="12.00">Bank A</text>
+</g>
+<g id="node2" class="node">
+<title>B1</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M283,-367C283,-367 105,-367 105,-367 99,-367 93,-361 93,-355 93,-355 93,-339 93,-339 93,-333 99,-327 105,-327 105,-327 283,-327 283,-327 289,-327 295,-333 295,-339 295,-339 295,-355 295,-355 295,-361 289,-367 283,-367"/>
+<text text-anchor="middle" x="194" y="-350.4" font-family="Helvetica,sans-Serif" font-size="12.00">Counterparty B</text>
+<text text-anchor="middle" x="194" y="-337.4" font-family="Helvetica,sans-Serif" font-size="12.00">(corporate, fund, other bank)</text>
+</g>
+<g id="edge1" class="edge">
+<title>A1&#45;&gt;B1</title>
+<path fill="none" stroke="#4b5563" d="M181.61,-430.84C184.13,-414.04 187.47,-391.64 190.06,-374.38"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="179.18,-430.52 180.57,-437.81 184.03,-431.25 179.18,-430.52"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="192.5,-374.61 191.11,-367.32 187.65,-373.88 192.5,-374.61"/>
+<text text-anchor="middle" x="259" y="-408" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> many trades, one net amount</text>
+</g>
+<g id="node3" class="node">
+<title>ISDA</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M296,-272C296,-272 112,-272 112,-272 106,-272 100,-266 100,-260 100,-260 100,-231 100,-231 100,-225 106,-219 112,-219 112,-219 296,-219 296,-219 302,-219 308,-225 308,-231 308,-231 308,-260 308,-260 308,-266 302,-272 296,-272"/>
+<text text-anchor="middle" x="204" y="-255.4" font-family="Helvetica,sans-Serif" font-size="12.00">ISDA master agreement</text>
+<text text-anchor="middle" x="204" y="-242.4" font-family="Helvetica,sans-Serif" font-size="12.00">all trades form one netting set</text>
+<text text-anchor="middle" x="204" y="-229.4" font-family="Helvetica,sans-Serif" font-size="12.00">close&#45;out netting on default</text>
+</g>
+<g id="edge3" class="edge">
+<title>B1&#45;&gt;ISDA</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M195.93,-326.82C197.29,-313.3 199.14,-294.87 200.73,-279.07"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="203.17,-279.24 201.43,-272.03 198.3,-278.75 203.17,-279.24"/>
+</g>
+<g id="node4" class="node">
+<title>CSA</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M300,-164C300,-164 132,-164 132,-164 126,-164 120,-158 120,-152 120,-152 120,-110 120,-110 120,-104 126,-98 132,-98 132,-98 300,-98 300,-98 306,-98 312,-104 312,-110 312,-110 312,-152 312,-152 312,-158 306,-164 300,-164"/>
+<text text-anchor="middle" x="216" y="-147.4" font-family="Helvetica,sans-Serif" font-size="12.00">Credit support annex</text>
+<text text-anchor="middle" x="216" y="-134.4" font-family="Helvetica,sans-Serif" font-size="12.00">variation margin daily,</text>
+<text text-anchor="middle" x="216" y="-121.4" font-family="Helvetica,sans-Serif" font-size="12.00">initial margin, thresholds,</text>
+<text text-anchor="middle" x="216" y="-108.4" font-family="Helvetica,sans-Serif" font-size="12.00">minimum transfer amounts</text>
+</g>
+<g id="edge2" class="edge">
+<title>ISDA&#45;&gt;CSA</title>
+<path fill="none" stroke="#4b5563" d="M206.72,-218.97C208.22,-204.92 210.12,-187.17 211.8,-171.38"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="214.25,-171.5 212.56,-164.28 209.38,-170.98 214.25,-171.5"/>
+</g>
+<g id="node9" class="node">
+<title>Why</title>
+<path fill="#065f46" stroke="#065f46" d="M556,-53C556,-53 294,-53 294,-53 288,-53 282,-47 282,-41 282,-41 282,-12 282,-12 282,-6 288,0 294,0 294,0 556,0 556,0 562,0 568,-6 568,-12 568,-12 568,-41 568,-41 568,-47 562,-53 556,-53"/>
+<text text-anchor="middle" x="425" y="-36.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Why regulators pushed clearing after 2008:</text>
+<text text-anchor="middle" x="425" y="-23.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">netting across the market, daily margin,</text>
+<text text-anchor="middle" x="425" y="-10.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">transparency, no tangle of bilateral chains</text>
+</g>
+<g id="node5" class="node">
+<title>A2</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M530.5,-367C530.5,-367 415.5,-367 415.5,-367 409.5,-367 403.5,-361 403.5,-355 403.5,-355 403.5,-339 403.5,-339 403.5,-333 409.5,-327 415.5,-327 415.5,-327 530.5,-327 530.5,-327 536.5,-327 542.5,-333 542.5,-339 542.5,-339 542.5,-355 542.5,-355 542.5,-361 536.5,-367 530.5,-367"/>
+<text text-anchor="middle" x="473" y="-350.4" font-family="Helvetica,sans-Serif" font-size="12.00">Bank A</text>
+<text text-anchor="middle" x="473" y="-337.4" font-family="Helvetica,sans-Serif" font-size="12.00">(clearing member)</text>
+</g>
+<g id="node6" class="node">
+<title>CCPn</title>
+<path fill="#1f2937" stroke="#1f2937" d="M565.5,-272C565.5,-272 380.5,-272 380.5,-272 374.5,-272 368.5,-266 368.5,-260 368.5,-260 368.5,-231 368.5,-231 368.5,-225 374.5,-219 380.5,-219 380.5,-219 565.5,-219 565.5,-219 571.5,-219 577.5,-225 577.5,-231 577.5,-231 577.5,-260 577.5,-260 577.5,-266 571.5,-272 565.5,-272"/>
+<text text-anchor="middle" x="473" y="-255.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Central counterparty (CCP)</text>
+<text text-anchor="middle" x="473" y="-242.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">becomes buyer to every seller</text>
+<text text-anchor="middle" x="473" y="-229.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">and seller to every buyer</text>
+</g>
+<g id="edge4" class="edge">
+<title>A2&#45;&gt;CCPn</title>
+<path fill="none" stroke="#4b5563" d="M473,-319.48C473,-307.07 473,-292.17 473,-279.09"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="470.55,-319.82 473,-326.82 475.45,-319.82 470.55,-319.82"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="475.45,-279.03 473,-272.03 470.55,-279.03 475.45,-279.03"/>
+<text text-anchor="middle" x="505.5" y="-297" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> margin daily</text>
+</g>
+<g id="node7" class="node">
+<title>B2</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M477.5,-151C477.5,-151 362.5,-151 362.5,-151 356.5,-151 350.5,-145 350.5,-139 350.5,-139 350.5,-123 350.5,-123 350.5,-117 356.5,-111 362.5,-111 362.5,-111 477.5,-111 477.5,-111 483.5,-111 489.5,-117 489.5,-123 489.5,-123 489.5,-139 489.5,-139 489.5,-145 483.5,-151 477.5,-151"/>
+<text text-anchor="middle" x="420" y="-134.4" font-family="Helvetica,sans-Serif" font-size="12.00">Bank B</text>
+<text text-anchor="middle" x="420" y="-121.4" font-family="Helvetica,sans-Serif" font-size="12.00">(clearing member)</text>
+</g>
+<g id="edge5" class="edge">
+<title>CCPn&#45;&gt;B2</title>
+<path fill="none" stroke="#4b5563" d="M457.91,-212.46C449.74,-195.13 439.79,-174.01 432.14,-157.76"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="455.77,-213.68 460.97,-218.97 460.21,-211.6 455.77,-213.68"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="434.21,-156.41 429.01,-151.12 429.77,-158.49 434.21,-156.41"/>
+<text text-anchor="middle" x="481.5" y="-189" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> margin daily</text>
+</g>
+<g id="node8" class="node">
+<title>DF</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M720.5,-164C720.5,-164 537.5,-164 537.5,-164 531.5,-164 525.5,-158 525.5,-152 525.5,-152 525.5,-110 525.5,-110 525.5,-104 531.5,-98 537.5,-98 537.5,-98 720.5,-98 720.5,-98 726.5,-98 732.5,-104 732.5,-110 732.5,-110 732.5,-152 732.5,-152 732.5,-158 726.5,-164 720.5,-164"/>
+<text text-anchor="middle" x="629" y="-147.4" font-family="Helvetica,sans-Serif" font-size="12.00">Default waterfall</text>
+<text text-anchor="middle" x="629" y="-134.4" font-family="Helvetica,sans-Serif" font-size="12.00">defaulter&#39;s margin, defaulter&#39;s</text>
+<text text-anchor="middle" x="629" y="-121.4" font-family="Helvetica,sans-Serif" font-size="12.00">default fund, CCP own capital,</text>
+<text text-anchor="middle" x="629" y="-108.4" font-family="Helvetica,sans-Serif" font-size="12.00">other members&#39; default fund</text>
+</g>
+<g id="edge6" class="edge">
+<title>CCPn&#45;&gt;DF</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M508.4,-218.97C529.2,-203.97 555.83,-184.77 578.78,-168.22"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="580.28,-170.16 584.52,-164.07 577.41,-166.18 580.28,-170.16"/>
+</g>
+<g id="edge8" class="edge">
+<title>DF&#45;&gt;Why</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M565.29,-97.99C538.78,-84.67 508.23,-69.32 482.42,-56.35"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="483.32,-54.06 475.97,-53.11 481.12,-58.44 483.32,-54.06"/>
+</g>
+</g>
+</svg>

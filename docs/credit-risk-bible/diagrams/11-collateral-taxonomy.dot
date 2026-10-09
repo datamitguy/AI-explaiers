@@ -1,0 +1,50 @@
+digraph CollateralTaxonomy {
+  graph [rankdir=LR, splines=true, nodesep=0.25, ranksep=0.6, fontname="Helvetica", fontsize=13, bgcolor="white", newrank=true, pad=0.2];
+  node  [shape=box, style="rounded,filled", fillcolor="#eef2ff", color="#6366f1", fontname="Helvetica", fontsize=12, margin="0.18,0.10"];
+  edge  [color="#4b5563", arrowsize=0.7, fontname="Helvetica", fontsize=10, fontcolor="#374151"];
+
+  Root [label="Credit protection\n(things that make\na loan safer)", fillcolor="#1f2937", fontcolor="white", color="#1f2937", fontsize=14];
+
+  Coll [label="Collateral\n(an asset the bank\ncan sell)"];
+  Guar [label="Guarantees and support\n(a third party's promise)"];
+
+  Root -> Coll;
+  Root -> Guar;
+
+  subgraph cluster_fin {
+    label="Financial collateral"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
+    Cash   [label="Cash and deposits\n(the best: no haircut)"];
+    Secs   [label="Financial securities\ngovernment bonds, corporate bonds,\nlisted shares, gold, fund units"];
+    SubSh  [label="Shares in subsidiaries\n(unlisted, hard to value)"];
+  }
+
+  subgraph cluster_phys {
+    label="Physical collateral"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
+    Res    [label="Residential property\n(homes, flats)"];
+    Com    [label="Commercial property\n(offices, shops, warehouses)"];
+    Land   [label="Land\n(with or without planning consent)"];
+    Plant  [label="Plant and machinery\n(factory equipment)"];
+    Veh    [label="Vehicles, ships, aircraft\n(registered movable objects)"];
+    Inv    [label="Inventory and stock\n(goods waiting to be sold)"];
+  }
+
+  subgraph cluster_intang {
+    label="Rights and intangibles"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
+    Rec    [label="Receivables\n(invoices owed to the borrower)"];
+    IP     [label="Intellectual property\n(patents, brands, software)"];
+  }
+
+  Coll -> {Cash Secs SubSh};
+  Coll -> {Res Com Land Plant Veh Inv};
+  Coll -> {Rec IP};
+
+  subgraph cluster_guar {
+    label="Third-party support"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
+    Parent [label="Parent company guarantee"];
+    Pers   [label="Personal guarantee\n(owner or director)"];
+    Cross  [label="Cross-guarantees\nbetween group companies"];
+    Comfort [label="Letter of comfort\n(not legally binding: weak)", fillcolor="#6b7280", fontcolor="white", color="#6b7280"];
+  }
+
+  Guar -> {Parent Pers Cross Comfort};
+}

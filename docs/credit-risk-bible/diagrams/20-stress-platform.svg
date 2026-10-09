@@ -1,0 +1,128 @@
+<svg width="100%"
+ viewBox="0.00 0.00 691.80 599.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 585.4)">
+<title>StressPlatform</title>
+<polygon fill="white" stroke="transparent" points="-14.4,14.4 -14.4,-585.4 677.4,-585.4 677.4,14.4 -14.4,14.4"/>
+<g id="clust1" class="cluster">
+<title>cluster_in</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M147,-472C147,-472 643,-472 643,-472 649,-472 655,-478 655,-484 655,-484 655,-551 655,-551 655,-557 649,-563 643,-563 643,-563 147,-563 147,-563 141,-563 135,-557 135,-551 135,-551 135,-484 135,-484 135,-478 141,-472 147,-472"/>
+<text text-anchor="middle" x="395" y="-548.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">Data layer</text>
+</g>
+<g id="clust2" class="cluster">
+<title>cluster_run</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M295,-200C295,-200 491,-200 491,-200 497,-200 503,-206 503,-212 503,-212 503,-452 503,-452 503,-458 497,-464 491,-464 491,-464 295,-464 295,-464 289,-464 283,-458 283,-452 283,-452 283,-212 283,-212 283,-206 289,-200 295,-200"/>
+<text text-anchor="middle" x="393" y="-449.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">Execution layer</text>
+</g>
+<g id="clust3" class="cluster">
+<title>cluster_out</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M20,-8C20,-8 484,-8 484,-8 490,-8 496,-14 496,-20 496,-20 496,-180 496,-180 496,-186 490,-192 484,-192 484,-192 20,-192 20,-192 14,-192 8,-186 8,-180 8,-180 8,-20 8,-20 8,-14 14,-8 20,-8"/>
+<text text-anchor="middle" x="252" y="-177.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">Output and control layer</text>
+</g>
+<g id="node1" class="node">
+<title>Pos</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M635,-533C635,-533 511,-533 511,-533 505,-533 499,-527 499,-521 499,-521 499,-492 499,-492 499,-486 505,-480 511,-480 511,-480 635,-480 635,-480 641,-480 647,-486 647,-492 647,-492 647,-521 647,-521 647,-527 641,-533 635,-533"/>
+<text text-anchor="middle" x="573" y="-516.4" font-family="Helvetica,sans-Serif" font-size="12.00">Position snapshot</text>
+<text text-anchor="middle" x="573" y="-503.4" font-family="Helvetica,sans-Serif" font-size="12.00">loan&#45;level data as at</text>
+<text text-anchor="middle" x="573" y="-490.4" font-family="Helvetica,sans-Serif" font-size="12.00">the stress start date</text>
+</g>
+<g id="node4" class="node">
+<title>Orch</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M483,-434C483,-434 303,-434 303,-434 297,-434 291,-428 291,-422 291,-422 291,-393 291,-393 291,-387 297,-381 303,-381 303,-381 483,-381 483,-381 489,-381 495,-387 495,-393 495,-393 495,-422 495,-422 495,-428 489,-434 483,-434"/>
+<text text-anchor="middle" x="393" y="-417.4" font-family="Helvetica,sans-Serif" font-size="12.00">Model orchestration</text>
+<text text-anchor="middle" x="393" y="-404.4" font-family="Helvetica,sans-Serif" font-size="12.00">runs satellite, PD, LGD, EAD,</text>
+<text text-anchor="middle" x="393" y="-391.4" font-family="Helvetica,sans-Serif" font-size="12.00">ECL and RWA models in order</text>
+</g>
+<g id="edge3" class="edge">
+<title>Pos&#45;&gt;Orch</title>
+<path fill="none" stroke="#4b5563" d="M525.24,-479.76C501.04,-466.72 471.58,-450.84 446.61,-437.39"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="447.69,-435.19 440.36,-434.02 445.36,-439.5 447.69,-435.19"/>
+</g>
+<g id="node2" class="node">
+<title>Mkt</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M465,-526.5C465,-526.5 321,-526.5 321,-526.5 315,-526.5 309,-520.5 309,-514.5 309,-514.5 309,-498.5 309,-498.5 309,-492.5 315,-486.5 321,-486.5 321,-486.5 465,-486.5 465,-486.5 471,-486.5 477,-492.5 477,-498.5 477,-498.5 477,-514.5 477,-514.5 477,-520.5 471,-526.5 465,-526.5"/>
+<text text-anchor="middle" x="393" y="-509.9" font-family="Helvetica,sans-Serif" font-size="12.00">Market and macro</text>
+<text text-anchor="middle" x="393" y="-496.9" font-family="Helvetica,sans-Serif" font-size="12.00">history for model fitting</text>
+</g>
+<g id="edge4" class="edge">
+<title>Mkt&#45;&gt;Orch</title>
+<path fill="none" stroke="#4b5563" d="M393,-486.34C393,-473.52 393,-456.34 393,-441.38"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="395.45,-441.24 393,-434.24 390.55,-441.24 395.45,-441.24"/>
+</g>
+<g id="node3" class="node">
+<title>Scn</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M275,-533C275,-533 155,-533 155,-533 149,-533 143,-527 143,-521 143,-521 143,-492 143,-492 143,-486 149,-480 155,-480 155,-480 275,-480 275,-480 281,-480 287,-486 287,-492 287,-492 287,-521 287,-521 287,-527 281,-533 275,-533"/>
+<text text-anchor="middle" x="215" y="-516.4" font-family="Helvetica,sans-Serif" font-size="12.00">Scenario library</text>
+<text text-anchor="middle" x="215" y="-503.4" font-family="Helvetica,sans-Serif" font-size="12.00">regulatory, internal,</text>
+<text text-anchor="middle" x="215" y="-490.4" font-family="Helvetica,sans-Serif" font-size="12.00">reverse, ad hoc</text>
+</g>
+<g id="edge5" class="edge">
+<title>Scn&#45;&gt;Orch</title>
+<path fill="none" stroke="#4b5563" d="M262.23,-479.76C286.16,-466.72 315.3,-450.84 339.99,-437.39"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="341.19,-439.52 346.16,-434.02 338.84,-435.22 341.19,-439.52"/>
+</g>
+<g id="node5" class="node">
+<title>Ovl</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M468,-341C468,-341 308,-341 308,-341 302,-341 296,-335 296,-329 296,-329 296,-313 296,-313 296,-307 302,-301 308,-301 308,-301 468,-301 468,-301 474,-301 480,-307 480,-313 480,-313 480,-329 480,-329 480,-335 474,-341 468,-341"/>
+<text text-anchor="middle" x="388" y="-324.4" font-family="Helvetica,sans-Serif" font-size="12.00">Overlays and expert</text>
+<text text-anchor="middle" x="388" y="-311.4" font-family="Helvetica,sans-Serif" font-size="12.00">adjustments with approval</text>
+</g>
+<g id="edge1" class="edge">
+<title>Orch&#45;&gt;Ovl</title>
+<path fill="none" stroke="#4b5563" d="M391.47,-380.69C390.87,-370.46 390.17,-358.7 389.56,-348.41"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="392,-348.06 389.14,-341.22 387.1,-348.35 392,-348.06"/>
+</g>
+<g id="node9" class="node">
+<title>Rerun</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M351.5,-69C351.5,-69 162.5,-69 162.5,-69 156.5,-69 150.5,-63 150.5,-57 150.5,-57 150.5,-28 150.5,-28 150.5,-22 156.5,-16 162.5,-16 162.5,-16 351.5,-16 351.5,-16 357.5,-16 363.5,-22 363.5,-28 363.5,-28 363.5,-57 363.5,-57 363.5,-63 357.5,-69 351.5,-69"/>
+<text text-anchor="middle" x="257" y="-52.4" font-family="Helvetica,sans-Serif" font-size="12.00">Re&#45;run capability</text>
+<text text-anchor="middle" x="257" y="-39.4" font-family="Helvetica,sans-Serif" font-size="12.00">hours not weeks,</text>
+<text text-anchor="middle" x="257" y="-26.4" font-family="Helvetica,sans-Serif" font-size="12.00">same inputs give same outputs</text>
+</g>
+<g id="edge8" class="edge">
+<title>Orch&#45;&gt;Rerun</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M449.89,-380.93C465.91,-370.85 481.53,-357.63 491,-341 542.05,-251.34 561.7,-190.93 499,-109 482.61,-87.58 425.36,-71.55 370.66,-60.71"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="370.99,-58.28 363.66,-59.34 370.06,-63.08 370.99,-58.28"/>
+</g>
+<g id="node6" class="node">
+<title>Agg</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M438,-261C438,-261 322,-261 322,-261 316,-261 310,-255 310,-249 310,-249 310,-220 310,-220 310,-214 316,-208 322,-208 322,-208 438,-208 438,-208 444,-208 450,-214 450,-220 450,-220 450,-249 450,-249 450,-255 444,-261 438,-261"/>
+<text text-anchor="middle" x="380" y="-244.4" font-family="Helvetica,sans-Serif" font-size="12.00">Aggregation</text>
+<text text-anchor="middle" x="380" y="-231.4" font-family="Helvetica,sans-Serif" font-size="12.00">by entity, portfolio,</text>
+<text text-anchor="middle" x="380" y="-218.4" font-family="Helvetica,sans-Serif" font-size="12.00">scenario, year</text>
+</g>
+<g id="edge2" class="edge">
+<title>Ovl&#45;&gt;Agg</title>
+<path fill="none" stroke="#4b5563" d="M386.18,-300.83C385.27,-291.16 384.13,-279.17 383.09,-268.11"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="385.51,-267.75 382.42,-261.01 380.64,-268.21 385.51,-267.75"/>
+</g>
+<g id="node7" class="node">
+<title>Rep</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M476,-162C476,-162 284,-162 284,-162 278,-162 272,-156 272,-150 272,-150 272,-121 272,-121 272,-115 278,-109 284,-109 284,-109 476,-109 476,-109 482,-109 488,-115 488,-121 488,-121 488,-150 488,-150 488,-156 482,-162 476,-162"/>
+<text text-anchor="middle" x="380" y="-145.4" font-family="Helvetica,sans-Serif" font-size="12.00">Results and templates</text>
+<text text-anchor="middle" x="380" y="-132.4" font-family="Helvetica,sans-Serif" font-size="12.00">regulator formats, board packs,</text>
+<text text-anchor="middle" x="380" y="-119.4" font-family="Helvetica,sans-Serif" font-size="12.00">reconciliation to actuals</text>
+</g>
+<g id="edge6" class="edge">
+<title>Agg&#45;&gt;Rep</title>
+<path fill="none" stroke="#4b5563" d="M380,-207.76C380,-195.94 380,-181.78 380,-169.21"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="382.45,-169.02 380,-162.02 377.55,-169.02 382.45,-169.02"/>
+</g>
+<g id="node8" class="node">
+<title>Aud</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M238,-162C238,-162 28,-162 28,-162 22,-162 16,-156 16,-150 16,-150 16,-121 16,-121 16,-115 22,-109 28,-109 28,-109 238,-109 238,-109 244,-109 250,-115 250,-121 250,-121 250,-150 250,-150 250,-156 244,-162 238,-162"/>
+<text text-anchor="middle" x="133" y="-145.4" font-family="Helvetica,sans-Serif" font-size="12.00">Audit trail</text>
+<text text-anchor="middle" x="133" y="-132.4" font-family="Helvetica,sans-Serif" font-size="12.00">versions of data, models,</text>
+<text text-anchor="middle" x="133" y="-119.4" font-family="Helvetica,sans-Serif" font-size="12.00">scenarios, overlays, who approved</text>
+</g>
+<g id="edge7" class="edge">
+<title>Agg&#45;&gt;Aud</title>
+<path fill="none" stroke="#4b5563" d="M309.84,-209.99C293.71,-204.33 276.69,-198.13 261,-192 239.73,-183.69 216.76,-173.97 196.23,-165.01"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="197.05,-162.7 189.66,-162.13 195.08,-167.18 197.05,-162.7"/>
+</g>
+<g id="edge9" class="edge">
+<title>Aud&#45;&gt;Rerun</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M167.87,-108.91C182.93,-97.86 200.64,-84.86 216.3,-73.37"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="217.77,-75.33 221.96,-69.21 214.87,-71.38 217.77,-75.33"/>
+</g>
+</g>
+</svg>

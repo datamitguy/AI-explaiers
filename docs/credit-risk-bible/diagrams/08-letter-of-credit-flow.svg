@@ -1,0 +1,128 @@
+<svg width="100%"
+ viewBox="0.00 0.00 1432.02 383.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 369.4)">
+<title>LetterOfCreditFlow</title>
+<polygon fill="white" stroke="transparent" points="-14.4,14.4 -14.4,-369.4 1417.62,-369.4 1417.62,14.4 -14.4,14.4"/>
+<g id="clust1" class="cluster">
+<title>cluster_buyer</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M75.22,-144C75.22,-144 425.22,-144 425.22,-144 431.22,-144 437.22,-150 437.22,-156 437.22,-156 437.22,-335 437.22,-335 437.22,-341 431.22,-347 425.22,-347 425.22,-347 75.22,-347 75.22,-347 69.22,-347 63.22,-341 63.22,-335 63.22,-335 63.22,-156 63.22,-156 63.22,-150 69.22,-144 75.22,-144"/>
+<text text-anchor="middle" x="250.22" y="-332.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">Buyer&#39;s country</text>
+</g>
+<g id="clust2" class="cluster">
+<title>cluster_seller</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M457.22,-8C457.22,-8 1038.22,-8 1038.22,-8 1044.22,-8 1050.22,-14 1050.22,-20 1050.22,-20 1050.22,-210 1050.22,-210 1050.22,-216 1044.22,-222 1038.22,-222 1038.22,-222 457.22,-222 457.22,-222 451.22,-222 445.22,-216 445.22,-210 445.22,-210 445.22,-20 445.22,-20 445.22,-14 451.22,-8 457.22,-8"/>
+<text text-anchor="middle" x="747.72" y="-207.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">Seller&#39;s country</text>
+</g>
+<g id="node1" class="node">
+<title>Applicant</title>
+<path fill="#1f2937" stroke="#1f2937" d="M404.72,-317C404.72,-317 233.72,-317 233.72,-317 227.72,-317 221.72,-311 221.72,-305 221.72,-305 221.72,-289 221.72,-289 221.72,-283 227.72,-277 233.72,-277 233.72,-277 404.72,-277 404.72,-277 410.72,-277 416.72,-283 416.72,-289 416.72,-289 416.72,-305 416.72,-305 416.72,-311 410.72,-317 404.72,-317"/>
+<text text-anchor="middle" x="319.22" y="-300.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Applicant (buyer, importer)</text>
+<text text-anchor="middle" x="319.22" y="-287.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">asks its bank to open the LC</text>
+</g>
+<g id="node2" class="node">
+<title>Issuing</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M335.22,-192C335.22,-192 83.22,-192 83.22,-192 77.22,-192 71.22,-186 71.22,-180 71.22,-180 71.22,-164 71.22,-164 71.22,-158 77.22,-152 83.22,-152 83.22,-152 335.22,-152 335.22,-152 341.22,-152 347.22,-158 347.22,-164 347.22,-164 347.22,-180 347.22,-180 347.22,-186 341.22,-192 335.22,-192"/>
+<text text-anchor="middle" x="209.22" y="-175.4" font-family="Helvetica,sans-Serif" font-size="12.00">Issuing bank</text>
+<text text-anchor="middle" x="209.22" y="-162.4" font-family="Helvetica,sans-Serif" font-size="12.00">(buyer&#39;s bank, makes the promise to pay)</text>
+</g>
+<g id="edge2" class="edge">
+<title>Applicant&#45;&gt;Issuing</title>
+<path fill="none" stroke="#4b5563" d="M221.49,-287.35C173.91,-280.9 123.84,-270 109.22,-252 90.99,-229.55 117.44,-209.43 147.7,-195.12"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="148.85,-197.29 154.2,-192.15 146.82,-192.83 148.85,-197.29"/>
+<text text-anchor="middle" x="181.22" y="-238.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> 2. Application to open the LC</text>
+</g>
+<g id="node3" class="node">
+<title>Beneficiary</title>
+<path fill="#1f2937" stroke="#1f2937" d="M857.72,-192C857.72,-192 656.72,-192 656.72,-192 650.72,-192 644.72,-186 644.72,-180 644.72,-180 644.72,-164 644.72,-164 644.72,-158 650.72,-152 656.72,-152 656.72,-152 857.72,-152 857.72,-152 863.72,-152 869.72,-158 869.72,-164 869.72,-164 869.72,-180 869.72,-180 869.72,-186 863.72,-192 857.72,-192"/>
+<text text-anchor="middle" x="757.22" y="-175.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Beneficiary (seller, exporter)</text>
+<text text-anchor="middle" x="757.22" y="-162.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">ships goods, presents documents</text>
+</g>
+<g id="edge1" class="edge">
+<title>Applicant&#45;&gt;Beneficiary</title>
+<path fill="none" stroke="#4b5563" d="M387.18,-276.92C467.23,-254.44 599.77,-217.22 682.6,-193.96"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="683.39,-196.28 689.47,-192.03 682.06,-191.56 683.39,-196.28"/>
+<text text-anchor="middle" x="633.72" y="-244" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> 1. Sales contract: goods for cash,</text>
+<text text-anchor="middle" x="633.72" y="-233" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> payment by letter of credit</text>
+</g>
+<g id="node5" class="node">
+<title>Carrier</title>
+<path fill="#6b7280" stroke="#6b7280" d="M1300.22,-62.5C1300.22,-62.5 1162.22,-62.5 1162.22,-62.5 1156.22,-62.5 1150.22,-56.5 1150.22,-50.5 1150.22,-50.5 1150.22,-34.5 1150.22,-34.5 1150.22,-28.5 1156.22,-22.5 1162.22,-22.5 1162.22,-22.5 1300.22,-22.5 1300.22,-22.5 1306.22,-22.5 1312.22,-28.5 1312.22,-34.5 1312.22,-34.5 1312.22,-50.5 1312.22,-50.5 1312.22,-56.5 1306.22,-62.5 1300.22,-62.5"/>
+<text text-anchor="middle" x="1231.22" y="-45.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Carrier (shipping line)</text>
+<text text-anchor="middle" x="1231.22" y="-32.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">issues the bill of lading</text>
+</g>
+<g id="edge12" class="edge">
+<title>Applicant&#45;&gt;Carrier</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M416.88,-294.86C560.02,-291.27 834.28,-277.04 1060.22,-222 1171.28,-194.95 1235.04,-221.58 1299.22,-127 1307.46,-114.86 1305.81,-107.1 1299.22,-94 1293.75,-83.13 1284.72,-74.01 1274.99,-66.64"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="1276.32,-64.58 1269.2,-62.51 1273.47,-68.57 1276.32,-64.58"/>
+<text text-anchor="middle" x="1344.72" y="-175" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> 12. Collects goods with</text>
+<text text-anchor="middle" x="1344.72" y="-164" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> the bill of lading</text>
+</g>
+<g id="edge11" class="edge">
+<title>Issuing&#45;&gt;Applicant</title>
+<path fill="none" stroke="#4b5563" d="M226.29,-192.08C245.37,-213.42 276.33,-248.04 297.22,-271.39"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="295.54,-273.2 302.03,-276.78 299.19,-269.93 295.54,-273.2"/>
+<text text-anchor="middle" x="338.72" y="-244" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> 11. Releases documents</text>
+<text text-anchor="middle" x="338.72" y="-233" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> against payment</text>
+</g>
+<g id="node4" class="node">
+<title>Advising</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M747.22,-69C747.22,-69 465.22,-69 465.22,-69 459.22,-69 453.22,-63 453.22,-57 453.22,-57 453.22,-28 453.22,-28 453.22,-22 459.22,-16 465.22,-16 465.22,-16 747.22,-16 747.22,-16 753.22,-16 759.22,-22 759.22,-28 759.22,-28 759.22,-57 759.22,-57 759.22,-63 753.22,-69 747.22,-69"/>
+<text text-anchor="middle" x="606.22" y="-52.4" font-family="Helvetica,sans-Serif" font-size="12.00">Advising or confirming bank</text>
+<text text-anchor="middle" x="606.22" y="-39.4" font-family="Helvetica,sans-Serif" font-size="12.00">(seller&#39;s bank; if confirming, adds its own</text>
+<text text-anchor="middle" x="606.22" y="-26.4" font-family="Helvetica,sans-Serif" font-size="12.00">promise so the seller need not trust the issuer)</text>
+</g>
+<g id="edge3" class="edge">
+<title>Issuing&#45;&gt;Advising</title>
+<path fill="none" stroke="#4b5563" d="M70.99,-155.78C19.94,-144.74 -19.1,-125.92 10.22,-94 39.26,-62.4 279.27,-50.55 445.71,-46.13"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="446.15,-48.57 453.08,-45.93 446.02,-43.67 446.15,-48.57"/>
+<text text-anchor="middle" x="75.72" y="-113.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> 3. LC sent (SWIFT MT700);</text>
+<text text-anchor="middle" x="75.72" y="-102.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> confirmation requested</text>
+</g>
+<g id="edge10" class="edge">
+<title>Issuing&#45;&gt;Advising</title>
+<path fill="none" stroke="#065f46" d="M198.61,-151.84C190.66,-134.62 183.33,-109.71 197.22,-94 214.09,-74.92 338.7,-61.44 445.99,-53.24"/>
+<polygon fill="#065f46" stroke="#065f46" points="446.24,-55.68 453.03,-52.71 445.87,-50.79 446.24,-55.68"/>
+<text text-anchor="middle" x="236.72" y="-108" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#065f46"> 10. Reimburses</text>
+</g>
+<g id="edge7" class="edge">
+<title>Beneficiary&#45;&gt;Advising</title>
+<path fill="none" stroke="#4b5563" d="M644.65,-165.59C585.24,-160.12 520.85,-149.12 502.22,-127 492.77,-115.78 494.44,-106.43 502.22,-94 507.31,-85.87 514.13,-79.01 521.85,-73.24"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="523.57,-75.03 527.92,-69.03 520.77,-71 523.57,-75.03"/>
+<text text-anchor="middle" x="561.22" y="-119" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> 7. Presents documents:</text>
+<text text-anchor="middle" x="561.22" y="-108" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> invoice, bill of lading,</text>
+<text text-anchor="middle" x="561.22" y="-97" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> insurance, certificates</text>
+</g>
+<g id="edge5" class="edge">
+<title>Beneficiary&#45;&gt;Carrier</title>
+<path fill="none" stroke="#4b5563" d="M869.73,-157.41C914.07,-150.51 965.09,-140.63 1010.22,-127 1045.08,-116.47 1051.32,-107.3 1085.22,-94 1111.35,-83.75 1140.52,-73.44 1165.87,-64.84"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="1166.72,-67.13 1172.57,-62.57 1165.15,-62.49 1166.72,-67.13"/>
+<text text-anchor="middle" x="1131.72" y="-108" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> 5. Ships the goods</text>
+</g>
+<g id="edge9" class="edge">
+<title>Advising&#45;&gt;Issuing</title>
+<path fill="none" stroke="#4b5563" d="M452.94,-67.82C421.18,-74.77 388.27,-83.41 358.22,-94 318.23,-108.1 275.51,-131.08 246.12,-148.27"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="244.84,-146.18 240.06,-151.84 247.33,-150.4 244.84,-146.18"/>
+<text text-anchor="middle" x="421.72" y="-113.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> 9. Documents forwarded,</text>
+<text text-anchor="middle" x="421.72" y="-102.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> reimbursement claimed</text>
+</g>
+<g id="edge4" class="edge">
+<title>Advising&#45;&gt;Beneficiary</title>
+<path fill="none" stroke="#4b5563" d="M616.94,-69.37C625.55,-87.5 639.19,-111.23 657.22,-127 667.25,-135.77 679.31,-143.04 691.53,-148.98"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="690.54,-151.22 697.92,-151.96 692.61,-146.78 690.54,-151.22"/>
+<text text-anchor="middle" x="728.22" y="-108" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> 4. LC advised and confirmed</text>
+</g>
+<g id="edge8" class="edge">
+<title>Advising&#45;&gt;Beneficiary</title>
+<path fill="none" stroke="#065f46" d="M756.59,-69.14C779.21,-75.92 797.56,-84.15 805.22,-94 814.23,-105.58 811.13,-113.57 805.22,-127 801.98,-134.37 796.83,-141.04 791.08,-146.84"/>
+<polygon fill="#065f46" stroke="#065f46" points="789.1,-145.33 785.67,-151.91 792.45,-148.91 789.1,-145.33"/>
+<text text-anchor="middle" x="905.22" y="-113.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#065f46"> 8. Documents checked and compliant:</text>
+<text text-anchor="middle" x="905.22" y="-102.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#065f46"> confirming bank pays the seller</text>
+</g>
+<g id="edge6" class="edge">
+<title>Carrier&#45;&gt;Beneficiary</title>
+<path fill="none" stroke="#4b5563" d="M1226.1,-62.67C1219.75,-82.34 1206.9,-112.13 1184.22,-127 1135.21,-159.14 985.22,-168.4 876.85,-170.75"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="876.72,-168.31 869.77,-170.9 876.82,-173.21 876.72,-168.31"/>
+<text text-anchor="middle" x="1250.72" y="-108" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> 6. Bill of lading</text>
+</g>
+</g>
+</svg>

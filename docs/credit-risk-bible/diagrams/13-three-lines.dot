@@ -1,0 +1,39 @@
+digraph ThreeLines {
+  graph [rankdir=TB, splines=true, nodesep=0.4, ranksep=0.55, fontname="Helvetica", fontsize=13, bgcolor="white", newrank=true, pad=0.2];
+  node  [shape=box, style="rounded,filled", fillcolor="#eef2ff", color="#6366f1", fontname="Helvetica", fontsize=12, margin="0.18,0.10"];
+  edge  [color="#4b5563", arrowsize=0.7, fontname="Helvetica", fontsize=10, fontcolor="#374151"];
+
+  Board [label="Board of directors\nand board risk committee\n(sets appetite, oversees everything)", fillcolor="#1f2937", fontcolor="white", color="#1f2937", fontsize=13];
+  Exec  [label="Executive management\n(chief executive, chief risk officer,\nchief financial officer)"];
+
+  subgraph cluster_l1 {
+    label="First line: owns the risk"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
+    L1a [label="Relationship managers\nand front-office teams"];
+    L1b [label="Business line controls\n(checklists, four-eyes, limits)"];
+    L1a -> L1b [style=invis];
+  }
+
+  subgraph cluster_l2 {
+    label="Second line: challenges and sets rules"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
+    L2a [label="Credit risk function\n(independent approval, policy,\nportfolio monitoring)"];
+    L2b [label="Compliance, model risk,\noperational risk"];
+    L2a -> L2b [style=invis];
+  }
+
+  subgraph cluster_l3 {
+    label="Third line: independent assurance"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
+    L3 [label="Internal audit\n(reports to the board audit\ncommittee, not to management)"];
+  }
+
+  Ext [label="External parties:\nregulator, external auditor", fillcolor="#6b7280", fontcolor="white", color="#6b7280"];
+
+  Board -> Exec;
+  Exec -> L1a [label=" manages"];
+  Exec -> L2a [label=" manages"];
+  Board -> L3 [label=" audit committee\n appoints and hears"];
+  L2a -> L1a [label=" challenges,\n approves, limits", dir=back];
+  L3 -> L1b [label=" audits", style=dashed];
+  L3 -> L2a [label=" audits", style=dashed];
+  Ext -> Board [label=" inspects and\n reports to", style=dashed];
+  { rank=same; L1a; L2a; L3; }
+}

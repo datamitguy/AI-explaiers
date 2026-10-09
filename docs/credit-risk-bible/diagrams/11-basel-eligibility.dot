@@ -1,0 +1,42 @@
+digraph BaselEligibility {
+  graph [rankdir=TB, splines=true, nodesep=0.35, ranksep=0.5, fontname="Helvetica", fontsize=13, bgcolor="white", newrank=true, pad=0.2];
+  node  [shape=box, style="rounded,filled", fillcolor="#eef2ff", color="#6366f1", fontname="Helvetica", fontsize=12, margin="0.18,0.10"];
+  edge  [color="#4b5563", arrowsize=0.7, fontname="Helvetica", fontsize=10, fontcolor="#374151"];
+
+  Start [label="Collateral held against a loan", fillcolor="#1f2937", fontcolor="white", color="#1f2937"];
+  Legal [label="Legally enforceable in every\nrelevant country, and perfected?", shape=diamond, style=filled, fillcolor="#fef3c7", color="#d97706", margin="0.05,0.05"];
+  NoCredit [label="No regulatory credit at all\n(treat the loan as unsecured)", fillcolor="#991b1b", fontcolor="white", color="#991b1b"];
+  Type [label="What kind of collateral?", shape=diamond, style=filled, fillcolor="#fef3c7", color="#d97706", margin="0.05,0.05"];
+
+  Start -> Legal;
+  Legal -> NoCredit [label=" no"];
+  Legal -> Type [label=" yes"];
+
+  subgraph cluster_fin {
+    label="Financial collateral (cash, gold, eligible bonds, listed shares)"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
+    Approach [label="Which approach does\nthe bank use?", shape=diamond, style=filled, fillcolor="#fef3c7", color="#d97706", margin="0.05,0.05"];
+    Simple [label="Simple approach (SA only)\ncovered part takes the collateral's\nrisk weight, 20% floor"];
+    Compr  [label="Comprehensive approach\nsubtract haircut-adjusted value,\nrisk-weight the remainder"];
+    Approach -> Simple [label=" simple"];
+    Approach -> Compr [label=" comprehensive"];
+  }
+
+  subgraph cluster_phys {
+    label="Physical collateral and receivables"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
+    SAQ [label="Standardised or IRB bank?", shape=diamond, style=filled, fillcolor="#fef3c7", color="#d97706", margin="0.05,0.05"];
+    SAno [label="Standardised approach:\nno credit, except property\nthrough the loan-to-value buckets", fillcolor="#6b7280", fontcolor="white", color="#6b7280"];
+    FIRB [label="Foundation IRB:\nlower supervisory LGD if the\ncollateral meets the eligibility tests"];
+    AIRB [label="Advanced IRB:\nbank's own LGD model reflects\nthe collateral, within floors"];
+    SAQ -> SAno [label=" SA"];
+    SAQ -> FIRB [label=" F-IRB"];
+    SAQ -> AIRB [label=" A-IRB"];
+  }
+
+  Type -> Approach [label=" financial"];
+  Type -> SAQ [label=" physical or\n receivables"];
+
+  Mismatch [label="Adjust for currency mismatch\nand maturity mismatch"];
+  {Simple Compr FIRB AIRB} -> Mismatch;
+  End [label="Reduced exposure or LGD\nflows into RWA", fillcolor="#065f46", fontcolor="white", color="#065f46"];
+  Mismatch -> End;
+}

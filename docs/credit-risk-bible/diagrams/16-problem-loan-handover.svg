@@ -1,0 +1,187 @@
+<svg width="100%"
+ viewBox="0.00 0.00 1331.80 710.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 696.4)">
+<title>ProblemLoanHandover</title>
+<polygon fill="white" stroke="transparent" points="-14.4,14.4 -14.4,-696.4 1317.4,-696.4 1317.4,14.4 -14.4,14.4"/>
+<g id="clust1" class="cluster">
+<title>cluster_strat</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M20,-152C20,-152 1283,-152 1283,-152 1289,-152 1295,-158 1295,-164 1295,-164 1295,-231 1295,-231 1295,-237 1289,-243 1283,-243 1283,-243 20,-243 20,-243 14,-243 8,-237 8,-231 8,-231 8,-164 8,-164 8,-158 14,-152 20,-152"/>
+<text text-anchor="middle" x="651.5" y="-228.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">Workout strategy options</text>
+</g>
+<g id="node1" class="node">
+<title>Start</title>
+<path fill="#1f2937" stroke="#1f2937" d="M511.5,-682C511.5,-682 302.5,-682 302.5,-682 296.5,-682 290.5,-676 290.5,-670 290.5,-670 290.5,-654 290.5,-654 290.5,-648 296.5,-642 302.5,-642 302.5,-642 511.5,-642 511.5,-642 517.5,-642 523.5,-648 523.5,-654 523.5,-654 523.5,-670 523.5,-670 523.5,-676 517.5,-682 511.5,-682"/>
+<text text-anchor="middle" x="407" y="-665.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Performing loan</text>
+<text text-anchor="middle" x="407" y="-652.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">managed by relationship manager</text>
+</g>
+<g id="node2" class="node">
+<title>EWS</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M516,-605C516,-605 298,-605 298,-605 292,-605 286,-599 286,-593 286,-593 286,-564 286,-564 286,-558 292,-552 298,-552 298,-552 516,-552 516,-552 522,-552 528,-558 528,-564 528,-564 528,-593 528,-593 528,-599 522,-605 516,-605"/>
+<text text-anchor="middle" x="407" y="-588.4" font-family="Helvetica,sans-Serif" font-size="12.00">Early warning signal</text>
+<text text-anchor="middle" x="407" y="-575.4" font-family="Helvetica,sans-Serif" font-size="12.00">(missed payment, covenant breach,</text>
+<text text-anchor="middle" x="407" y="-562.4" font-family="Helvetica,sans-Serif" font-size="12.00">rating downgrade, sector shock)</text>
+</g>
+<g id="edge5" class="edge">
+<title>Start&#45;&gt;EWS</title>
+<path fill="none" stroke="#4b5563" d="M407,-641.69C407,-632.9 407,-622.25 407,-612.27"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="409.45,-612.15 407,-605.15 404.55,-612.15 409.45,-612.15"/>
+</g>
+<g id="node3" class="node">
+<title>Watch</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M478,-515C478,-515 336,-515 336,-515 330,-515 324,-509 324,-503 324,-503 324,-487 324,-487 324,-481 330,-475 336,-475 336,-475 478,-475 478,-475 484,-475 490,-481 490,-487 490,-487 490,-503 490,-503 490,-509 484,-515 478,-515"/>
+<text text-anchor="middle" x="407" y="-498.4" font-family="Helvetica,sans-Serif" font-size="12.00">Watchlist review</text>
+<text text-anchor="middle" x="407" y="-485.4" font-family="Helvetica,sans-Serif" font-size="12.00">monthly with credit risk</text>
+</g>
+<g id="edge6" class="edge">
+<title>EWS&#45;&gt;Watch</title>
+<path fill="none" stroke="#4b5563" d="M407,-551.71C407,-542.37 407,-531.8 407,-522.4"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="409.45,-522.16 407,-515.16 404.55,-522.16 409.45,-522.16"/>
+</g>
+<g id="node4" class="node">
+<title>Q1</title>
+<polygon fill="#fef3c7" stroke="#d97706" points="407,-438 221,-404 407,-370 593,-404 407,-438"/>
+<text text-anchor="middle" x="407" y="-407.4" font-family="Helvetica,sans-Serif" font-size="12.00">Can the relationship manager</text>
+<text text-anchor="middle" x="407" y="-394.4" font-family="Helvetica,sans-Serif" font-size="12.00">fix it with normal tools?</text>
+</g>
+<g id="edge7" class="edge">
+<title>Watch&#45;&gt;Q1</title>
+<path fill="none" stroke="#4b5563" d="M407,-474.69C407,-466.05 407,-455.52 407,-445.29"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="409.45,-445.28 407,-438.28 404.55,-445.28 409.45,-445.28"/>
+</g>
+<g id="node5" class="node">
+<title>Cure1</title>
+<path fill="#065f46" stroke="#065f46" d="M464,-316.5C464,-316.5 300,-316.5 300,-316.5 294,-316.5 288,-310.5 288,-304.5 288,-304.5 288,-288.5 288,-288.5 288,-282.5 294,-276.5 300,-276.5 300,-276.5 464,-276.5 464,-276.5 470,-276.5 476,-282.5 476,-288.5 476,-288.5 476,-304.5 476,-304.5 476,-310.5 470,-316.5 464,-316.5"/>
+<text text-anchor="middle" x="382" y="-299.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Waiver, small amendment,</text>
+<text text-anchor="middle" x="382" y="-286.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">back to performing</text>
+</g>
+<g id="edge8" class="edge">
+<title>Q1&#45;&gt;Cure1</title>
+<path fill="none" stroke="#4b5563" d="M399.5,-371.35C395.9,-356.15 391.63,-338.16 388.22,-323.74"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="390.51,-322.8 386.52,-316.56 385.75,-323.93 390.51,-322.8"/>
+<text text-anchor="middle" x="404.5" y="-344" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> yes</text>
+</g>
+<g id="node6" class="node">
+<title>Handover</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M717,-323C717,-323 513,-323 513,-323 507,-323 501,-317 501,-311 501,-311 501,-282 501,-282 501,-276 507,-270 513,-270 513,-270 717,-270 717,-270 723,-270 729,-276 729,-282 729,-282 729,-311 729,-311 729,-317 723,-323 717,-323"/>
+<text text-anchor="middle" x="615" y="-306.4" font-family="Helvetica,sans-Serif" font-size="12.00">Handover to workout team</text>
+<text text-anchor="middle" x="615" y="-293.4" font-family="Helvetica,sans-Serif" font-size="12.00">(special situations, intensive care)</text>
+<text text-anchor="middle" x="615" y="-280.4" font-family="Helvetica,sans-Serif" font-size="12.00">new owner, new strategy memo</text>
+</g>
+<g id="edge9" class="edge">
+<title>Q1&#45;&gt;Handover</title>
+<path fill="none" stroke="#4b5563" d="M454.98,-378.66C485.8,-363.03 525.97,-342.66 558.36,-326.23"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="559.59,-328.35 564.72,-323 557.37,-323.98 559.59,-328.35"/>
+<text text-anchor="middle" x="531" y="-344" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> no</text>
+</g>
+<g id="node7" class="node">
+<title>Hold</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M195.5,-206.5C195.5,-206.5 28.5,-206.5 28.5,-206.5 22.5,-206.5 16.5,-200.5 16.5,-194.5 16.5,-194.5 16.5,-178.5 16.5,-178.5 16.5,-172.5 22.5,-166.5 28.5,-166.5 28.5,-166.5 195.5,-166.5 195.5,-166.5 201.5,-166.5 207.5,-172.5 207.5,-178.5 207.5,-178.5 207.5,-194.5 207.5,-194.5 207.5,-200.5 201.5,-206.5 195.5,-206.5"/>
+<text text-anchor="middle" x="112" y="-189.9" font-family="Helvetica,sans-Serif" font-size="12.00">Hold and monitor</text>
+<text text-anchor="middle" x="112" y="-176.9" font-family="Helvetica,sans-Serif" font-size="12.00">wait for recovery of trading</text>
+</g>
+<g id="edge10" class="edge">
+<title>Handover&#45;&gt;Hold</title>
+<path fill="none" stroke="#4b5563" d="M500.73,-271.91C496.78,-271.24 492.86,-270.6 489,-270 381.2,-253.16 350.64,-270.29 245,-243 214.31,-235.07 181.43,-221.4 156.04,-209.61"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="156.79,-207.26 149.41,-206.5 154.71,-211.69 156.79,-207.26"/>
+</g>
+<g id="node8" class="node">
+<title>Restr</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M457,-213C457,-213 269,-213 269,-213 263,-213 257,-207 257,-201 257,-201 257,-172 257,-172 257,-166 263,-160 269,-160 269,-160 457,-160 457,-160 463,-160 469,-166 469,-172 469,-172 469,-201 469,-201 469,-207 463,-213 457,-213"/>
+<text text-anchor="middle" x="363" y="-196.4" font-family="Helvetica,sans-Serif" font-size="12.00">Restructure</text>
+<text text-anchor="middle" x="363" y="-183.4" font-family="Helvetica,sans-Serif" font-size="12.00">extend, holiday, capitalise,</text>
+<text text-anchor="middle" x="363" y="-170.4" font-family="Helvetica,sans-Serif" font-size="12.00">covenant reset, debt for equity</text>
+</g>
+<g id="edge11" class="edge">
+<title>Handover&#45;&gt;Restr</title>
+<path fill="none" stroke="#4b5563" d="M555.28,-269.91C517.44,-253.69 468.46,-232.7 429.4,-215.96"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="430.13,-213.6 422.73,-213.1 428.2,-218.11 430.13,-213.6"/>
+</g>
+<g id="node9" class="node">
+<title>Refi</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M699,-206.5C699,-206.5 531,-206.5 531,-206.5 525,-206.5 519,-200.5 519,-194.5 519,-194.5 519,-178.5 519,-178.5 519,-172.5 525,-166.5 531,-166.5 531,-166.5 699,-166.5 699,-166.5 705,-166.5 711,-172.5 711,-178.5 711,-178.5 711,-194.5 711,-194.5 711,-200.5 705,-206.5 699,-206.5"/>
+<text text-anchor="middle" x="615" y="-189.9" font-family="Helvetica,sans-Serif" font-size="12.00">Refinance out</text>
+<text text-anchor="middle" x="615" y="-176.9" font-family="Helvetica,sans-Serif" font-size="12.00">another lender takes us out</text>
+</g>
+<g id="edge12" class="edge">
+<title>Handover&#45;&gt;Refi</title>
+<path fill="none" stroke="#4b5563" d="M615,-269.91C615,-253.14 615,-231.26 615,-214.26"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="617.45,-213.83 615,-206.83 612.55,-213.83 617.45,-213.83"/>
+</g>
+<g id="node10" class="node">
+<title>Enf</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M963.5,-206.5C963.5,-206.5 772.5,-206.5 772.5,-206.5 766.5,-206.5 760.5,-200.5 760.5,-194.5 760.5,-194.5 760.5,-178.5 760.5,-178.5 760.5,-172.5 766.5,-166.5 772.5,-166.5 772.5,-166.5 963.5,-166.5 963.5,-166.5 969.5,-166.5 975.5,-172.5 975.5,-178.5 975.5,-178.5 975.5,-194.5 975.5,-194.5 975.5,-200.5 969.5,-206.5 963.5,-206.5"/>
+<text text-anchor="middle" x="868" y="-189.9" font-family="Helvetica,sans-Serif" font-size="12.00">Enforce security</text>
+<text text-anchor="middle" x="868" y="-176.9" font-family="Helvetica,sans-Serif" font-size="12.00">receivership, repossession, sale</text>
+</g>
+<g id="edge13" class="edge">
+<title>Handover&#45;&gt;Enf</title>
+<path fill="none" stroke="#4b5563" d="M674.96,-269.91C718.01,-251.53 775.43,-227.02 816.43,-209.52"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="817.64,-211.66 823.12,-206.66 815.72,-207.15 817.64,-211.66"/>
+</g>
+<g id="node11" class="node">
+<title>Sell</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M1274.5,-206.5C1274.5,-206.5 1037.5,-206.5 1037.5,-206.5 1031.5,-206.5 1025.5,-200.5 1025.5,-194.5 1025.5,-194.5 1025.5,-178.5 1025.5,-178.5 1025.5,-172.5 1031.5,-166.5 1037.5,-166.5 1037.5,-166.5 1274.5,-166.5 1274.5,-166.5 1280.5,-166.5 1286.5,-172.5 1286.5,-178.5 1286.5,-178.5 1286.5,-194.5 1286.5,-194.5 1286.5,-200.5 1280.5,-206.5 1274.5,-206.5"/>
+<text text-anchor="middle" x="1156" y="-189.9" font-family="Helvetica,sans-Serif" font-size="12.00">Sell the loan</text>
+<text text-anchor="middle" x="1156" y="-176.9" font-family="Helvetica,sans-Serif" font-size="12.00">secondary market or NPL portfolio sale</text>
+</g>
+<g id="edge14" class="edge">
+<title>Handover&#45;&gt;Sell</title>
+<path fill="none" stroke="#4b5563" d="M729.01,-284.81C803.37,-276.53 902.19,-263.04 988,-243 1025.84,-234.16 1067.3,-220.51 1099.57,-208.95"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="1100.56,-211.2 1106.31,-206.52 1098.9,-206.59 1100.56,-211.2"/>
+</g>
+<g id="node12" class="node">
+<title>Q2</title>
+<polygon fill="#fef3c7" stroke="#d97706" points="615,-123 554.12,-105 615,-87 675.88,-105 615,-123"/>
+<text text-anchor="middle" x="615" y="-101.9" font-family="Helvetica,sans-Serif" font-size="12.00">Outcome?</text>
+</g>
+<g id="edge15" class="edge">
+<title>Hold&#45;&gt;Q2</title>
+<path fill="none" stroke="#4b5563" d="M180.67,-166.49C201.24,-161.26 223.94,-155.95 245,-152 357.41,-130.94 490.9,-117.04 562.83,-110.45"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="563.27,-112.87 570.02,-109.79 562.82,-107.99 563.27,-112.87"/>
+</g>
+<g id="edge16" class="edge">
+<title>Restr&#45;&gt;Q2</title>
+<path fill="none" stroke="#4b5563" d="M444.12,-159.91C490.12,-145.4 545.29,-127.99 580.25,-116.96"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="581.03,-119.29 586.97,-114.84 579.56,-114.61 581.03,-119.29"/>
+</g>
+<g id="edge17" class="edge">
+<title>Refi&#45;&gt;Q2</title>
+<path fill="none" stroke="#4b5563" d="M615,-166.26C615,-155.47 615,-141.92 615,-130.4"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="617.45,-130.17 615,-123.17 612.55,-130.17 617.45,-130.17"/>
+</g>
+<g id="edge18" class="edge">
+<title>Enf&#45;&gt;Q2</title>
+<path fill="none" stroke="#4b5563" d="M807.4,-166.46C758.07,-150.96 690.18,-129.62 649.63,-116.88"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="650.29,-114.52 642.87,-114.76 648.82,-119.19 650.29,-114.52"/>
+</g>
+<g id="edge19" class="edge">
+<title>Sell&#45;&gt;Q2</title>
+<path fill="none" stroke="#4b5563" d="M1066.85,-166.45C1041.45,-161.36 1013.69,-156.14 988,-152 873.1,-133.48 737.23,-118.44 665.39,-111.02"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="665.44,-108.56 658.22,-110.28 664.94,-113.43 665.44,-108.56"/>
+</g>
+<g id="node13" class="node">
+<title>Good</title>
+<path fill="#065f46" stroke="#065f46" d="M594,-40C594,-40 420,-40 420,-40 414,-40 408,-34 408,-28 408,-28 408,-12 408,-12 408,-6 414,0 420,0 420,0 594,0 594,0 600,0 606,-6 606,-12 606,-12 606,-28 606,-28 606,-34 600,-40 594,-40"/>
+<text text-anchor="middle" x="507" y="-23.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Cured, returns to performing</text>
+<text text-anchor="middle" x="507" y="-10.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">after probation period</text>
+</g>
+<g id="edge20" class="edge">
+<title>Q2&#45;&gt;Good</title>
+<path fill="none" stroke="#4b5563" d="M598.6,-91.39C582.48,-79.01 557.51,-59.82 537.7,-44.6"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="539.05,-42.54 532,-40.21 536.06,-46.42 539.05,-42.54"/>
+<text text-anchor="middle" x="590" y="-61" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> recovers</text>
+</g>
+<g id="node14" class="node">
+<title>Bad</title>
+<path fill="#991b1b" stroke="#991b1b" d="M804.5,-40C804.5,-40 643.5,-40 643.5,-40 637.5,-40 631.5,-34 631.5,-28 631.5,-28 631.5,-12 631.5,-12 631.5,-6 637.5,0 643.5,0 643.5,0 804.5,0 804.5,0 810.5,0 816.5,-6 816.5,-12 816.5,-12 816.5,-28 816.5,-28 816.5,-34 810.5,-40 804.5,-40"/>
+<text text-anchor="middle" x="724" y="-23.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Loss crystallised, write&#45;off,</text>
+<text text-anchor="middle" x="724" y="-10.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">LGD data recorded</text>
+</g>
+<g id="edge21" class="edge">
+<title>Q2&#45;&gt;Bad</title>
+<path fill="none" stroke="#4b5563" d="M631.08,-91.75C647.36,-79.36 672.94,-59.88 693.14,-44.5"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="694.87,-46.26 698.95,-40.07 691.9,-42.36 694.87,-46.26"/>
+<text text-anchor="middle" x="684.5" y="-61" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> fails</text>
+</g>
+</g>
+</svg>

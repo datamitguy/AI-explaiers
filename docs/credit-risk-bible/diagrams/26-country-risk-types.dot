@@ -1,0 +1,38 @@
+digraph CountryRiskTypes {
+  graph [rankdir=TB, splines=true, nodesep=0.35, ranksep=0.5, fontname="Helvetica", fontsize=13, bgcolor="white", newrank=true, pad=0.2];
+  node  [shape=box, style="rounded,filled", fillcolor="#eef2ff", color="#6366f1", fontname="Helvetica", fontsize=12, margin="0.18,0.10"];
+  edge  [color="#4b5563", arrowsize=0.7, fontname="Helvetica", fontsize=10, fontcolor="#374151"];
+
+  Start [label="Bank lends across a border\n(or to a government)", fillcolor="#1f2937", fontcolor="white", color="#1f2937"];
+  Q1 [label="Who is the borrower?", shape=diamond, style=filled, fillcolor="#fef3c7", color="#d97706", margin="0.05,0.05"];
+
+  subgraph cluster_sov {
+    label="Sovereign risk"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
+    Sov [label="The government itself\nor its central bank"];
+    Q2  [label="Which currency?", shape=diamond, style=filled, fillcolor="#fef3c7", color="#d97706", margin="0.05,0.05"];
+    LC  [label="Local currency debt\ngovernment can print money\n(inflation risk instead)"];
+    FC  [label="Foreign currency debt\ngovernment must earn or\nborrow dollars; defaults happen", fillcolor="#991b1b", fontcolor="white", color="#991b1b"];
+    Sov -> Q2;
+    Q2 -> LC [label=" local"];
+    Q2 -> FC [label=" foreign"];
+  }
+
+  subgraph cluster_priv {
+    label="Country risk on a private borrower"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
+    Priv [label="A company or bank\nin that country"];
+    Own  [label="Its own credit risk\n(normal analysis)"];
+    TC   [label="Transfer and convertibility risk\nsound company, but capital controls\nstop it buying or sending dollars", fillcolor="#991b1b", fontcolor="white", color="#991b1b"];
+    Pol  [label="Political risk\nexpropriation, war,\ncontract repudiation"];
+    Priv -> {Own TC Pol};
+  }
+
+  Mit [label="Mitigants\npolitical risk insurance,\nexport credit agency cover,\noffshore accounts, MDB umbrella"];
+  Lim [label="Country limit and country rating\nultimate risk basis", fillcolor="#065f46", fontcolor="white", color="#065f46"];
+
+  Start -> Q1;
+  Q1 -> Sov [label=" government"];
+  Q1 -> Priv [label=" private"];
+  {FC TC Pol} -> Mit -> Lim;
+  LC -> Lim;
+  Own -> Lim;
+}

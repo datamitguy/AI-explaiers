@@ -1,0 +1,131 @@
+<svg width="100%"
+ viewBox="0.00 0.00 553.80 840.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 826.4)">
+<title>DocumentHierarchy</title>
+<polygon fill="white" stroke="transparent" points="-14.4,14.4 -14.4,-826.4 539.4,-826.4 539.4,14.4 -14.4,14.4"/>
+<g id="clust1" class="cluster">
+<title>cluster_pre</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M34,-562C34,-562 278,-562 278,-562 284,-562 290,-568 290,-574 290,-574 290,-735 290,-735 290,-741 284,-747 278,-747 278,-747 34,-747 34,-747 28,-747 22,-741 22,-735 22,-735 22,-574 22,-574 22,-568 28,-562 34,-562"/>
+<text text-anchor="middle" x="156" y="-732.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">Before approval: not yet binding</text>
+</g>
+<g id="clust2" class="cluster">
+<title>cluster_main</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M32,-350C32,-350 280,-350 280,-350 286,-350 292,-356 292,-362 292,-362 292,-442 292,-442 292,-448 286,-454 280,-454 280,-454 32,-454 32,-454 26,-454 20,-448 20,-442 20,-442 20,-362 20,-362 20,-356 26,-350 32,-350"/>
+<text text-anchor="middle" x="156" y="-439.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">The binding contract</text>
+</g>
+<g id="clust3" class="cluster">
+<title>cluster_sec</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M20,-8C20,-8 258,-8 258,-8 264,-8 270,-14 270,-20 270,-20 270,-317 270,-317 270,-323 264,-329 258,-329 258,-329 20,-329 20,-329 14,-329 8,-323 8,-317 8,-317 8,-20 8,-20 8,-14 14,-8 20,-8"/>
+<text text-anchor="middle" x="139" y="-314.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">Security and ranking documents</text>
+</g>
+<g id="clust4" class="cluster">
+<title>cluster_ops</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M290,-91C290,-91 505,-91 505,-91 511,-91 517,-97 517,-103 517,-103 517,-317 517,-317 517,-323 511,-329 505,-329 505,-329 290,-329 290,-329 284,-329 278,-323 278,-317 278,-317 278,-103 278,-103 278,-97 284,-91 290,-91"/>
+<text text-anchor="middle" x="397.5" y="-314.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">Living documents during the loan</text>
+</g>
+<g id="node1" class="node">
+<title>Start</title>
+<path fill="#1f2937" stroke="#1f2937" d="M232,-812C232,-812 80,-812 80,-812 74,-812 68,-806 68,-800 68,-800 68,-788 68,-788 68,-782 74,-776 80,-776 80,-776 232,-776 232,-776 238,-776 244,-782 244,-788 244,-788 244,-800 244,-800 244,-806 238,-812 232,-812"/>
+<text text-anchor="middle" x="156" y="-790.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Customer asks to borrow</text>
+</g>
+<g id="node2" class="node">
+<title>Term</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M260,-717C260,-717 52,-717 52,-717 46,-717 40,-711 40,-705 40,-705 40,-676 40,-676 40,-670 46,-664 52,-664 52,-664 260,-664 260,-664 266,-664 272,-670 272,-676 272,-676 272,-705 272,-705 272,-711 266,-717 260,-717"/>
+<text text-anchor="middle" x="156" y="-700.4" font-family="Helvetica,sans-Serif" font-size="12.00">Term sheet</text>
+<text text-anchor="middle" x="156" y="-687.4" font-family="Helvetica,sans-Serif" font-size="12.00">2 to 10 pages, the headline terms,</text>
+<text text-anchor="middle" x="156" y="-674.4" font-family="Helvetica,sans-Serif" font-size="12.00">usually &#39;subject to credit approval&#39;</text>
+</g>
+<g id="edge7" class="edge">
+<title>Start&#45;&gt;Term</title>
+<path fill="none" stroke="#4b5563" d="M156,-775.78C156,-761.73 156,-741.46 156,-724.32"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="158.45,-724.2 156,-717.2 153.55,-724.2 158.45,-724.2"/>
+</g>
+<g id="node3" class="node">
+<title>Commit</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M270,-623C270,-623 42,-623 42,-623 36,-623 30,-617 30,-611 30,-611 30,-582 30,-582 30,-576 36,-570 42,-570 42,-570 270,-570 270,-570 276,-570 282,-576 282,-582 282,-582 282,-611 282,-611 282,-617 276,-623 270,-623"/>
+<text text-anchor="middle" x="156" y="-606.4" font-family="Helvetica,sans-Serif" font-size="12.00">Commitment letter or mandate letter</text>
+<text text-anchor="middle" x="156" y="-593.4" font-family="Helvetica,sans-Serif" font-size="12.00">bank is now committed, subject to</text>
+<text text-anchor="middle" x="156" y="-580.4" font-family="Helvetica,sans-Serif" font-size="12.00">documentation and conditions</text>
+</g>
+<g id="edge1" class="edge">
+<title>Term&#45;&gt;Commit</title>
+<path fill="none" stroke="#4b5563" d="M156,-663.87C156,-653.49 156,-641.38 156,-630.36"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="158.45,-630.31 156,-623.31 153.55,-630.31 158.45,-630.31"/>
+</g>
+<g id="node4" class="node">
+<title>Approval</title>
+<polygon fill="#fef3c7" stroke="#d97706" points="156,-529 9.99,-511 156,-493 302.01,-511 156,-529"/>
+<text text-anchor="middle" x="156" y="-507.9" font-family="Helvetica,sans-Serif" font-size="12.00">Credit committee approval</text>
+</g>
+<g id="edge8" class="edge">
+<title>Commit&#45;&gt;Approval</title>
+<path fill="none" stroke="#4b5563" d="M156,-569.99C156,-559.24 156,-546.78 156,-536.17"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="158.45,-536.17 156,-529.17 153.55,-536.17 158.45,-536.17"/>
+</g>
+<g id="node5" class="node">
+<title>FA</title>
+<path fill="#1e3a8a" stroke="#1e3a8a" d="M272,-424C272,-424 40,-424 40,-424 34,-424 28,-418 28,-412 28,-412 28,-370 28,-370 28,-364 34,-358 40,-358 40,-358 272,-358 272,-358 278,-358 284,-364 284,-370 284,-370 284,-412 284,-412 284,-418 278,-424 272,-424"/>
+<text text-anchor="middle" x="156" y="-407.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Facility agreement</text>
+<text text-anchor="middle" x="156" y="-394.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">100 to 300 pages: definitions, facility,</text>
+<text text-anchor="middle" x="156" y="-381.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">conditions precedent, representations,</text>
+<text text-anchor="middle" x="156" y="-368.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">covenants, events of default, agency</text>
+</g>
+<g id="edge9" class="edge">
+<title>Approval&#45;&gt;FA</title>
+<path fill="none" stroke="#4b5563" d="M156,-492.84C156,-476.83 156,-452.35 156,-431.52"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="158.45,-431.33 156,-424.33 153.55,-431.33 158.45,-431.33"/>
+<text text-anchor="middle" x="180.5" y="-465" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> approved</text>
+</g>
+<g id="node6" class="node">
+<title>Deb</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M248.5,-299C248.5,-299 45.5,-299 45.5,-299 39.5,-299 33.5,-293 33.5,-287 33.5,-287 33.5,-271 33.5,-271 33.5,-265 39.5,-259 45.5,-259 45.5,-259 248.5,-259 248.5,-259 254.5,-259 260.5,-265 260.5,-271 260.5,-271 260.5,-287 260.5,-287 260.5,-293 254.5,-299 248.5,-299"/>
+<text text-anchor="middle" x="147" y="-282.4" font-family="Helvetica,sans-Serif" font-size="12.00">Debenture or security agreement</text>
+<text text-anchor="middle" x="147" y="-269.4" font-family="Helvetica,sans-Serif" font-size="12.00">(fixed and floating charges)</text>
+</g>
+<g id="edge10" class="edge">
+<title>FA&#45;&gt;Deb</title>
+<path fill="none" stroke="#4b5563" d="M153.37,-357.89C152.03,-341.54 150.43,-321.91 149.16,-306.44"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="151.59,-305.99 148.57,-299.22 146.7,-306.39 151.59,-305.99"/>
+</g>
+<g id="node10" class="node">
+<title>CP</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M485.5,-299C485.5,-299 300.5,-299 300.5,-299 294.5,-299 288.5,-293 288.5,-287 288.5,-287 288.5,-271 288.5,-271 288.5,-265 294.5,-259 300.5,-259 300.5,-259 485.5,-259 485.5,-259 491.5,-259 497.5,-265 497.5,-271 497.5,-271 497.5,-287 497.5,-287 497.5,-293 491.5,-299 485.5,-299"/>
+<text text-anchor="middle" x="393" y="-282.4" font-family="Helvetica,sans-Serif" font-size="12.00">Conditions precedent checklist</text>
+<text text-anchor="middle" x="393" y="-269.4" font-family="Helvetica,sans-Serif" font-size="12.00">and legal opinions</text>
+</g>
+<g id="edge11" class="edge">
+<title>FA&#45;&gt;CP</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M225.19,-357.89C263.74,-339.99 310.77,-318.16 345.23,-302.17"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="346.62,-304.23 351.94,-299.06 344.56,-299.78 346.62,-304.23"/>
+</g>
+<g id="node7" class="node">
+<title>Mort</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M208.5,-218C208.5,-218 75.5,-218 75.5,-218 69.5,-218 63.5,-212 63.5,-206 63.5,-206 63.5,-190 63.5,-190 63.5,-184 69.5,-178 75.5,-178 75.5,-178 208.5,-178 208.5,-178 214.5,-178 220.5,-184 220.5,-190 220.5,-190 220.5,-206 220.5,-206 220.5,-212 214.5,-218 208.5,-218"/>
+<text text-anchor="middle" x="142" y="-201.4" font-family="Helvetica,sans-Serif" font-size="12.00">Mortgage or charge</text>
+<text text-anchor="middle" x="142" y="-188.4" font-family="Helvetica,sans-Serif" font-size="12.00">over specific property</text>
+</g>
+<g id="node8" class="node">
+<title>Guar</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M247.5,-137C247.5,-137 32.5,-137 32.5,-137 26.5,-137 20.5,-131 20.5,-125 20.5,-125 20.5,-109 20.5,-109 20.5,-103 26.5,-97 32.5,-97 32.5,-97 247.5,-97 247.5,-97 253.5,-97 259.5,-103 259.5,-109 259.5,-109 259.5,-125 259.5,-125 259.5,-131 253.5,-137 247.5,-137"/>
+<text text-anchor="middle" x="140" y="-120.4" font-family="Helvetica,sans-Serif" font-size="12.00">Guarantee</text>
+<text text-anchor="middle" x="140" y="-107.4" font-family="Helvetica,sans-Serif" font-size="12.00">(parent, personal, cross&#45;guarantee)</text>
+</g>
+<g id="node9" class="node">
+<title>Inter</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M249.5,-56C249.5,-56 28.5,-56 28.5,-56 22.5,-56 16.5,-50 16.5,-44 16.5,-44 16.5,-28 16.5,-28 16.5,-22 22.5,-16 28.5,-16 28.5,-16 249.5,-16 249.5,-16 255.5,-16 261.5,-22 261.5,-28 261.5,-28 261.5,-44 261.5,-44 261.5,-50 255.5,-56 249.5,-56"/>
+<text text-anchor="middle" x="139" y="-39.4" font-family="Helvetica,sans-Serif" font-size="12.00">Intercreditor agreement</text>
+<text text-anchor="middle" x="139" y="-26.4" font-family="Helvetica,sans-Serif" font-size="12.00">(who ranks where, who can enforce)</text>
+</g>
+<g id="node11" class="node">
+<title>Cert</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M466,-218C466,-218 322,-218 322,-218 316,-218 310,-212 310,-206 310,-206 310,-190 310,-190 310,-184 316,-178 322,-178 322,-178 466,-178 466,-178 472,-178 478,-184 478,-190 478,-190 478,-206 478,-206 478,-212 472,-218 466,-218"/>
+<text text-anchor="middle" x="394" y="-201.4" font-family="Helvetica,sans-Serif" font-size="12.00">Compliance certificates</text>
+<text text-anchor="middle" x="394" y="-188.4" font-family="Helvetica,sans-Serif" font-size="12.00">(each test date)</text>
+</g>
+<g id="node12" class="node">
+<title>Amend</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M493.5,-135C493.5,-135 298.5,-135 298.5,-135 292.5,-135 286.5,-129 286.5,-123 286.5,-123 286.5,-111 286.5,-111 286.5,-105 292.5,-99 298.5,-99 298.5,-99 493.5,-99 493.5,-99 499.5,-99 505.5,-105 505.5,-111 505.5,-111 505.5,-123 505.5,-123 505.5,-129 499.5,-135 493.5,-135"/>
+<text text-anchor="middle" x="396" y="-113.9" font-family="Helvetica,sans-Serif" font-size="12.00">Waivers and amendment letters</text>
+</g>
+</g>
+</svg>

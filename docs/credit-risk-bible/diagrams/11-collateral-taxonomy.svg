@@ -1,0 +1,222 @@
+<svg width="100%"
+ viewBox="0.00 0.00 701.80 1028.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 1014.4)">
+<title>CollateralTaxonomy</title>
+<polygon fill="white" stroke="transparent" points="-14.4,14.4 -14.4,-1014.4 687.4,-1014.4 687.4,14.4 -14.4,14.4"/>
+<g id="clust1" class="cluster">
+<title>cluster_fin</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M412,-784C412,-784 653,-784 653,-784 659,-784 665,-790 665,-796 665,-796 665,-980 665,-980 665,-986 659,-992 653,-992 653,-992 412,-992 412,-992 406,-992 400,-986 400,-980 400,-980 400,-796 400,-796 400,-790 406,-784 412,-784"/>
+<text text-anchor="middle" x="532.5" y="-977.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">Financial collateral</text>
+</g>
+<g id="clust2" class="cluster">
+<title>cluster_phys</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M421,-408C421,-408 644,-408 644,-408 650,-408 656,-414 656,-420 656,-420 656,-764 656,-764 656,-770 650,-776 644,-776 644,-776 421,-776 421,-776 415,-776 409,-770 409,-764 409,-764 409,-420 409,-420 409,-414 415,-408 421,-408"/>
+<text text-anchor="middle" x="532.5" y="-761.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">Physical collateral</text>
+</g>
+<g id="clust3" class="cluster">
+<title>cluster_intang</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M428.5,-264C428.5,-264 636.5,-264 636.5,-264 642.5,-264 648.5,-270 648.5,-276 648.5,-276 648.5,-388 648.5,-388 648.5,-394 642.5,-400 636.5,-400 636.5,-400 428.5,-400 428.5,-400 422.5,-400 416.5,-394 416.5,-388 416.5,-388 416.5,-276 416.5,-276 416.5,-270 422.5,-264 428.5,-264"/>
+<text text-anchor="middle" x="532.5" y="-385.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">Rights and intangibles</text>
+</g>
+<g id="clust7" class="cluster">
+<title>cluster_guar</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M441.5,-8C441.5,-8 623.5,-8 623.5,-8 629.5,-8 635.5,-14 635.5,-20 635.5,-20 635.5,-244 635.5,-244 635.5,-250 629.5,-256 623.5,-256 623.5,-256 441.5,-256 441.5,-256 435.5,-256 429.5,-250 429.5,-244 429.5,-244 429.5,-20 429.5,-20 429.5,-14 435.5,-8 441.5,-8"/>
+<text text-anchor="middle" x="532.5" y="-241.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">Third&#45;party support</text>
+</g>
+<g id="node1" class="node">
+<title>Root</title>
+<path fill="#1f2937" stroke="#1f2937" d="M138,-381.5C138,-381.5 12,-381.5 12,-381.5 6,-381.5 0,-375.5 0,-369.5 0,-369.5 0,-334.5 0,-334.5 0,-328.5 6,-322.5 12,-322.5 12,-322.5 138,-322.5 138,-322.5 144,-322.5 150,-328.5 150,-334.5 150,-334.5 150,-369.5 150,-369.5 150,-375.5 144,-381.5 138,-381.5"/>
+<text text-anchor="middle" x="75" y="-363.3" font-family="Helvetica,sans-Serif" font-size="14.00" fill="white">Credit protection</text>
+<text text-anchor="middle" x="75" y="-348.3" font-family="Helvetica,sans-Serif" font-size="14.00" fill="white">(things that make</text>
+<text text-anchor="middle" x="75" y="-333.3" font-family="Helvetica,sans-Serif" font-size="14.00" fill="white">a loan safer)</text>
+</g>
+<g id="node2" class="node">
+<title>Coll</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M336,-607.5C336,-607.5 222,-607.5 222,-607.5 216,-607.5 210,-601.5 210,-595.5 210,-595.5 210,-566.5 210,-566.5 210,-560.5 216,-554.5 222,-554.5 222,-554.5 336,-554.5 336,-554.5 342,-554.5 348,-560.5 348,-566.5 348,-566.5 348,-595.5 348,-595.5 348,-601.5 342,-607.5 336,-607.5"/>
+<text text-anchor="middle" x="279" y="-590.9" font-family="Helvetica,sans-Serif" font-size="12.00">Collateral</text>
+<text text-anchor="middle" x="279" y="-577.9" font-family="Helvetica,sans-Serif" font-size="12.00">(an asset the bank</text>
+<text text-anchor="middle" x="279" y="-564.9" font-family="Helvetica,sans-Serif" font-size="12.00">can sell)</text>
+</g>
+<g id="edge1" class="edge">
+<title>Root&#45;&gt;Coll</title>
+<path fill="none" stroke="#4b5563" d="M102.41,-381.94C140.46,-425.07 210.41,-504.38 249.56,-548.76"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="247.94,-550.63 254.41,-554.26 251.62,-547.39 247.94,-550.63"/>
+</g>
+<g id="node3" class="node">
+<title>Guar</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M353,-172C353,-172 205,-172 205,-172 199,-172 193,-166 193,-160 193,-160 193,-144 193,-144 193,-138 199,-132 205,-132 205,-132 353,-132 353,-132 359,-132 365,-138 365,-144 365,-144 365,-160 365,-160 365,-166 359,-172 353,-172"/>
+<text text-anchor="middle" x="279" y="-155.4" font-family="Helvetica,sans-Serif" font-size="12.00">Guarantees and support</text>
+<text text-anchor="middle" x="279" y="-142.4" font-family="Helvetica,sans-Serif" font-size="12.00">(a third party&#39;s promise)</text>
+</g>
+<g id="edge2" class="edge">
+<title>Root&#45;&gt;Guar</title>
+<path fill="none" stroke="#4b5563" d="M105.81,-322.49C145.45,-283.24 214.87,-214.51 252.31,-177.43"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="254.35,-178.87 257.6,-172.2 250.9,-175.38 254.35,-178.87"/>
+</g>
+<g id="node4" class="node">
+<title>Cash</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M596.5,-962C596.5,-962 468.5,-962 468.5,-962 462.5,-962 456.5,-956 456.5,-950 456.5,-950 456.5,-934 456.5,-934 456.5,-928 462.5,-922 468.5,-922 468.5,-922 596.5,-922 596.5,-922 602.5,-922 608.5,-928 608.5,-934 608.5,-934 608.5,-950 608.5,-950 608.5,-956 602.5,-962 596.5,-962"/>
+<text text-anchor="middle" x="532.5" y="-945.4" font-family="Helvetica,sans-Serif" font-size="12.00">Cash and deposits</text>
+<text text-anchor="middle" x="532.5" y="-932.4" font-family="Helvetica,sans-Serif" font-size="12.00">(the best: no haircut)</text>
+</g>
+<g id="edge3" class="edge">
+<title>Coll&#45;&gt;Cash</title>
+<path fill="none" stroke="#4b5563" d="M281.31,-607.71C285.93,-671.04 306.74,-831.12 400,-913 413.73,-925.05 431.32,-932.45 449.15,-936.91"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="448.88,-939.36 456.25,-938.53 449.97,-934.58 448.88,-939.36"/>
+</g>
+<g id="node5" class="node">
+<title>Secs</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M645,-903.5C645,-903.5 420,-903.5 420,-903.5 414,-903.5 408,-897.5 408,-891.5 408,-891.5 408,-862.5 408,-862.5 408,-856.5 414,-850.5 420,-850.5 420,-850.5 645,-850.5 645,-850.5 651,-850.5 657,-856.5 657,-862.5 657,-862.5 657,-891.5 657,-891.5 657,-897.5 651,-903.5 645,-903.5"/>
+<text text-anchor="middle" x="532.5" y="-886.9" font-family="Helvetica,sans-Serif" font-size="12.00">Financial securities</text>
+<text text-anchor="middle" x="532.5" y="-873.9" font-family="Helvetica,sans-Serif" font-size="12.00">government bonds, corporate bonds,</text>
+<text text-anchor="middle" x="532.5" y="-860.9" font-family="Helvetica,sans-Serif" font-size="12.00">listed shares, gold, fund units</text>
+</g>
+<g id="edge4" class="edge">
+<title>Coll&#45;&gt;Secs</title>
+<path fill="none" stroke="#4b5563" d="M284.59,-607.58C295.12,-660.28 326.03,-778.34 400,-841 402.29,-842.94 404.67,-844.77 407.13,-846.5"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="405.82,-848.57 413.01,-850.38 408.51,-844.48 405.82,-848.57"/>
+</g>
+<g id="node6" class="node">
+<title>SubSh</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M604.5,-832C604.5,-832 460.5,-832 460.5,-832 454.5,-832 448.5,-826 448.5,-820 448.5,-820 448.5,-804 448.5,-804 448.5,-798 454.5,-792 460.5,-792 460.5,-792 604.5,-792 604.5,-792 610.5,-792 616.5,-798 616.5,-804 616.5,-804 616.5,-820 616.5,-820 616.5,-826 610.5,-832 604.5,-832"/>
+<text text-anchor="middle" x="532.5" y="-815.4" font-family="Helvetica,sans-Serif" font-size="12.00">Shares in subsidiaries</text>
+<text text-anchor="middle" x="532.5" y="-802.4" font-family="Helvetica,sans-Serif" font-size="12.00">(unlisted, hard to value)</text>
+</g>
+<g id="edge5" class="edge">
+<title>Coll&#45;&gt;SubSh</title>
+<path fill="none" stroke="#4b5563" d="M288.44,-607.54C303.58,-650.66 339.52,-735.58 400,-780 412.23,-788.99 426.67,-795.47 441.41,-800.15"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="440.8,-802.52 448.2,-802.18 442.2,-797.83 440.8,-802.52"/>
+</g>
+<g id="node7" class="node">
+<title>Res</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M593.5,-746C593.5,-746 471.5,-746 471.5,-746 465.5,-746 459.5,-740 459.5,-734 459.5,-734 459.5,-718 459.5,-718 459.5,-712 465.5,-706 471.5,-706 471.5,-706 593.5,-706 593.5,-706 599.5,-706 605.5,-712 605.5,-718 605.5,-718 605.5,-734 605.5,-734 605.5,-740 599.5,-746 593.5,-746"/>
+<text text-anchor="middle" x="532.5" y="-729.4" font-family="Helvetica,sans-Serif" font-size="12.00">Residential property</text>
+<text text-anchor="middle" x="532.5" y="-716.4" font-family="Helvetica,sans-Serif" font-size="12.00">(homes, flats)</text>
+</g>
+<g id="edge6" class="edge">
+<title>Coll&#45;&gt;Res</title>
+<path fill="none" stroke="#4b5563" d="M300.33,-607.95C322.03,-634.74 358.9,-674.93 400,-697 416,-705.59 434.4,-711.64 452.27,-715.9"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="451.98,-718.34 459.35,-717.5 453.06,-713.56 451.98,-718.34"/>
+</g>
+<g id="node8" class="node">
+<title>Com</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M618,-688C618,-688 447,-688 447,-688 441,-688 435,-682 435,-676 435,-676 435,-660 435,-660 435,-654 441,-648 447,-648 447,-648 618,-648 618,-648 624,-648 630,-654 630,-660 630,-660 630,-676 630,-676 630,-682 624,-688 618,-688"/>
+<text text-anchor="middle" x="532.5" y="-671.4" font-family="Helvetica,sans-Serif" font-size="12.00">Commercial property</text>
+<text text-anchor="middle" x="532.5" y="-658.4" font-family="Helvetica,sans-Serif" font-size="12.00">(offices, shops, warehouses)</text>
+</g>
+<g id="edge7" class="edge">
+<title>Coll&#45;&gt;Com</title>
+<path fill="none" stroke="#4b5563" d="M328.24,-607.5C349.72,-618.46 375.62,-630.55 400,-639 408.98,-642.11 418.42,-644.97 427.95,-647.57"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="427.5,-649.98 434.9,-649.41 428.76,-645.25 427.5,-649.98"/>
+</g>
+<g id="node9" class="node">
+<title>Land</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M636,-630C636,-630 429,-630 429,-630 423,-630 417,-624 417,-618 417,-618 417,-602 417,-602 417,-596 423,-590 429,-590 429,-590 636,-590 636,-590 642,-590 648,-596 648,-602 648,-602 648,-618 648,-618 648,-624 642,-630 636,-630"/>
+<text text-anchor="middle" x="532.5" y="-613.4" font-family="Helvetica,sans-Serif" font-size="12.00">Land</text>
+<text text-anchor="middle" x="532.5" y="-600.4" font-family="Helvetica,sans-Serif" font-size="12.00">(with or without planning consent)</text>
+</g>
+<g id="edge8" class="edge">
+<title>Coll&#45;&gt;Land</title>
+<path fill="none" stroke="#4b5563" d="M348.06,-588.85C367.14,-591.05 388.49,-593.51 409.68,-595.95"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="409.63,-598.41 416.86,-596.78 410.19,-593.55 409.63,-598.41"/>
+</g>
+<g id="node10" class="node">
+<title>Plant</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M595.5,-572C595.5,-572 469.5,-572 469.5,-572 463.5,-572 457.5,-566 457.5,-560 457.5,-560 457.5,-544 457.5,-544 457.5,-538 463.5,-532 469.5,-532 469.5,-532 595.5,-532 595.5,-532 601.5,-532 607.5,-538 607.5,-544 607.5,-544 607.5,-560 607.5,-560 607.5,-566 601.5,-572 595.5,-572"/>
+<text text-anchor="middle" x="532.5" y="-555.4" font-family="Helvetica,sans-Serif" font-size="12.00">Plant and machinery</text>
+<text text-anchor="middle" x="532.5" y="-542.4" font-family="Helvetica,sans-Serif" font-size="12.00">(factory equipment)</text>
+</g>
+<g id="edge9" class="edge">
+<title>Coll&#45;&gt;Plant</title>
+<path fill="none" stroke="#4b5563" d="M348.06,-573.15C379.57,-569.52 417.25,-565.17 450.24,-561.37"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="450.53,-563.8 457.2,-560.57 449.97,-558.94 450.53,-563.8"/>
+</g>
+<g id="node11" class="node">
+<title>Veh</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M619.5,-514C619.5,-514 445.5,-514 445.5,-514 439.5,-514 433.5,-508 433.5,-502 433.5,-502 433.5,-486 433.5,-486 433.5,-480 439.5,-474 445.5,-474 445.5,-474 619.5,-474 619.5,-474 625.5,-474 631.5,-480 631.5,-486 631.5,-486 631.5,-502 631.5,-502 631.5,-508 625.5,-514 619.5,-514"/>
+<text text-anchor="middle" x="532.5" y="-497.4" font-family="Helvetica,sans-Serif" font-size="12.00">Vehicles, ships, aircraft</text>
+<text text-anchor="middle" x="532.5" y="-484.4" font-family="Helvetica,sans-Serif" font-size="12.00">(registered movable objects)</text>
+</g>
+<g id="edge10" class="edge">
+<title>Coll&#45;&gt;Veh</title>
+<path fill="none" stroke="#4b5563" d="M328.24,-554.5C349.72,-543.54 375.62,-531.45 400,-523 408.54,-520.04 417.49,-517.31 426.55,-514.82"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="427.36,-517.14 433.49,-512.95 426.09,-512.4 427.36,-517.14"/>
+</g>
+<g id="node12" class="node">
+<title>Inv</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M610.5,-456C610.5,-456 454.5,-456 454.5,-456 448.5,-456 442.5,-450 442.5,-444 442.5,-444 442.5,-428 442.5,-428 442.5,-422 448.5,-416 454.5,-416 454.5,-416 610.5,-416 610.5,-416 616.5,-416 622.5,-422 622.5,-428 622.5,-428 622.5,-444 622.5,-444 622.5,-450 616.5,-456 610.5,-456"/>
+<text text-anchor="middle" x="532.5" y="-439.4" font-family="Helvetica,sans-Serif" font-size="12.00">Inventory and stock</text>
+<text text-anchor="middle" x="532.5" y="-426.4" font-family="Helvetica,sans-Serif" font-size="12.00">(goods waiting to be sold)</text>
+</g>
+<g id="edge11" class="edge">
+<title>Coll&#45;&gt;Inv</title>
+<path fill="none" stroke="#4b5563" d="M300.33,-554.05C322.03,-527.26 358.9,-487.07 400,-465 411.04,-459.07 423.21,-454.36 435.57,-450.61"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="436.4,-452.92 442.44,-448.62 435.04,-448.21 436.4,-452.92"/>
+</g>
+<g id="node13" class="node">
+<title>Rec</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M628.5,-370C628.5,-370 436.5,-370 436.5,-370 430.5,-370 424.5,-364 424.5,-358 424.5,-358 424.5,-342 424.5,-342 424.5,-336 430.5,-330 436.5,-330 436.5,-330 628.5,-330 628.5,-330 634.5,-330 640.5,-336 640.5,-342 640.5,-342 640.5,-358 640.5,-358 640.5,-364 634.5,-370 628.5,-370"/>
+<text text-anchor="middle" x="532.5" y="-353.4" font-family="Helvetica,sans-Serif" font-size="12.00">Receivables</text>
+<text text-anchor="middle" x="532.5" y="-340.4" font-family="Helvetica,sans-Serif" font-size="12.00">(invoices owed to the borrower)</text>
+</g>
+<g id="edge12" class="edge">
+<title>Coll&#45;&gt;Rec</title>
+<path fill="none" stroke="#4b5563" d="M291.89,-554.29C310.09,-516.14 348.28,-446.02 400,-404 416.02,-390.98 435.61,-380.71 454.72,-372.77"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="455.88,-374.95 461.46,-370.06 454.05,-370.4 455.88,-374.95"/>
+</g>
+<g id="node14" class="node">
+<title>IP</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M614.5,-312C614.5,-312 450.5,-312 450.5,-312 444.5,-312 438.5,-306 438.5,-300 438.5,-300 438.5,-284 438.5,-284 438.5,-278 444.5,-272 450.5,-272 450.5,-272 614.5,-272 614.5,-272 620.5,-272 626.5,-278 626.5,-284 626.5,-284 626.5,-300 626.5,-300 626.5,-306 620.5,-312 614.5,-312"/>
+<text text-anchor="middle" x="532.5" y="-295.4" font-family="Helvetica,sans-Serif" font-size="12.00">Intellectual property</text>
+<text text-anchor="middle" x="532.5" y="-282.4" font-family="Helvetica,sans-Serif" font-size="12.00">(patents, brands, software)</text>
+</g>
+<g id="edge13" class="edge">
+<title>Coll&#45;&gt;IP</title>
+<path fill="none" stroke="#4b5563" d="M284.33,-554.1C294.38,-500.82 324.48,-381.79 400,-321 409.29,-313.53 420.09,-307.88 431.44,-303.63"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="432.37,-305.9 438.18,-301.28 430.76,-301.27 432.37,-305.9"/>
+</g>
+<g id="node15" class="node">
+<title>Parent</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M615.5,-226C615.5,-226 449.5,-226 449.5,-226 443.5,-226 437.5,-220 437.5,-214 437.5,-214 437.5,-202 437.5,-202 437.5,-196 443.5,-190 449.5,-190 449.5,-190 615.5,-190 615.5,-190 621.5,-190 627.5,-196 627.5,-202 627.5,-202 627.5,-214 627.5,-214 627.5,-220 621.5,-226 615.5,-226"/>
+<text text-anchor="middle" x="532.5" y="-204.9" font-family="Helvetica,sans-Serif" font-size="12.00">Parent company guarantee</text>
+</g>
+<g id="edge14" class="edge">
+<title>Guar&#45;&gt;Parent</title>
+<path fill="none" stroke="#4b5563" d="M361.24,-172.04C374.19,-175.11 387.45,-178.2 400,-181 411.22,-183.51 422.99,-186.05 434.7,-188.52"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="434.22,-190.92 441.58,-189.97 435.23,-186.13 434.22,-190.92"/>
+</g>
+<g id="node16" class="node">
+<title>Pers</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M592.5,-172C592.5,-172 472.5,-172 472.5,-172 466.5,-172 460.5,-166 460.5,-160 460.5,-160 460.5,-144 460.5,-144 460.5,-138 466.5,-132 472.5,-132 472.5,-132 592.5,-132 592.5,-132 598.5,-132 604.5,-138 604.5,-144 604.5,-144 604.5,-160 604.5,-160 604.5,-166 598.5,-172 592.5,-172"/>
+<text text-anchor="middle" x="532.5" y="-155.4" font-family="Helvetica,sans-Serif" font-size="12.00">Personal guarantee</text>
+<text text-anchor="middle" x="532.5" y="-142.4" font-family="Helvetica,sans-Serif" font-size="12.00">(owner or director)</text>
+</g>
+<g id="edge15" class="edge">
+<title>Guar&#45;&gt;Pers</title>
+<path fill="none" stroke="#4b5563" d="M365.15,-152C393.65,-152 425.28,-152 453.24,-152"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="453.26,-154.45 460.26,-152 453.26,-149.55 453.26,-154.45"/>
+</g>
+<g id="node17" class="node">
+<title>Cross</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M613.5,-114C613.5,-114 451.5,-114 451.5,-114 445.5,-114 439.5,-108 439.5,-102 439.5,-102 439.5,-86 439.5,-86 439.5,-80 445.5,-74 451.5,-74 451.5,-74 613.5,-74 613.5,-74 619.5,-74 625.5,-80 625.5,-86 625.5,-86 625.5,-102 625.5,-102 625.5,-108 619.5,-114 613.5,-114"/>
+<text text-anchor="middle" x="532.5" y="-97.4" font-family="Helvetica,sans-Serif" font-size="12.00">Cross&#45;guarantees</text>
+<text text-anchor="middle" x="532.5" y="-84.4" font-family="Helvetica,sans-Serif" font-size="12.00">between group companies</text>
+</g>
+<g id="edge16" class="edge">
+<title>Guar&#45;&gt;Cross</title>
+<path fill="none" stroke="#4b5563" d="M361.93,-131.97C374.66,-128.92 387.68,-125.85 400,-123 410.56,-120.56 421.61,-118.05 432.63,-115.58"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="433.19,-117.97 439.48,-114.05 432.11,-113.18 433.19,-117.97"/>
+</g>
+<g id="node18" class="node">
+<title>Comfort</title>
+<path fill="#6b7280" stroke="#6b7280" d="M612,-56C612,-56 453,-56 453,-56 447,-56 441,-50 441,-44 441,-44 441,-28 441,-28 441,-22 447,-16 453,-16 453,-16 612,-16 612,-16 618,-16 624,-22 624,-28 624,-28 624,-44 624,-44 624,-50 618,-56 612,-56"/>
+<text text-anchor="middle" x="532.5" y="-39.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Letter of comfort</text>
+<text text-anchor="middle" x="532.5" y="-26.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">(not legally binding: weak)</text>
+</g>
+<g id="edge17" class="edge">
+<title>Guar&#45;&gt;Comfort</title>
+<path fill="none" stroke="#4b5563" d="M301.7,-131.96C324.49,-112.01 362.21,-81.98 400,-65 410.7,-60.2 422.25,-56.16 433.91,-52.78"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="434.7,-55.1 440.79,-50.86 433.38,-50.38 434.7,-55.1"/>
+</g>
+</g>
+</svg>

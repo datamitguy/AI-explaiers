@@ -1,0 +1,165 @@
+<svg width="100%"
+ viewBox="0.00 0.00 548.15 685.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 671.4)">
+<title>WatchlistStates</title>
+<polygon fill="white" stroke="transparent" points="-14.4,14.4 -14.4,-671.4 533.75,-671.4 533.75,14.4 -14.4,14.4"/>
+<g id="clust1" class="cluster">
+<title>cluster_watch</title>
+<path fill="white" stroke="#d97706" stroke-dasharray="5,2" d="M53,-256C53,-256 362,-256 362,-256 368,-256 374,-262 374,-268 374,-268 374,-551 374,-551 374,-557 368,-563 362,-563 362,-563 53,-563 53,-563 47,-563 41,-557 41,-551 41,-551 41,-268 41,-268 41,-262 47,-256 53,-256"/>
+<text text-anchor="middle" x="207.5" y="-548.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">Watchlist (still performing, but closer attention)</text>
+</g>
+<g id="node1" class="node">
+<title>Perf</title>
+<path fill="#065f46" stroke="#065f46" d="M400,-657C400,-657 268,-657 268,-657 262,-657 256,-651 256,-645 256,-645 256,-616 256,-616 256,-610 262,-604 268,-604 268,-604 400,-604 400,-604 406,-604 412,-610 412,-616 412,-616 412,-645 412,-645 412,-651 406,-657 400,-657"/>
+<text text-anchor="middle" x="334" y="-640.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Performing</text>
+<text text-anchor="middle" x="334" y="-627.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">normal annual review</text>
+<text text-anchor="middle" x="334" y="-614.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">IFRS 9 stage 1</text>
+</g>
+<g id="node2" class="node">
+<title>W1</title>
+<path fill="#fef3c7" stroke="#d97706" d="M343.5,-533C343.5,-533 178.5,-533 178.5,-533 172.5,-533 166.5,-527 166.5,-521 166.5,-521 166.5,-492 166.5,-492 166.5,-486 172.5,-480 178.5,-480 178.5,-480 343.5,-480 343.5,-480 349.5,-480 355.5,-486 355.5,-492 355.5,-492 355.5,-521 355.5,-521 355.5,-527 349.5,-533 343.5,-533"/>
+<text text-anchor="middle" x="261" y="-516.4" font-family="Helvetica,sans-Serif" font-size="12.00">Watch category 1 &#39;monitor&#39;</text>
+<text text-anchor="middle" x="261" y="-503.4" font-family="Helvetica,sans-Serif" font-size="12.00">quarterly review,</text>
+<text text-anchor="middle" x="261" y="-490.4" font-family="Helvetica,sans-Serif" font-size="12.00">usually still stage 1</text>
+</g>
+<g id="edge5" class="edge">
+<title>Perf&#45;&gt;W1</title>
+<path fill="none" stroke="#4b5563" d="M277.65,-603.83C269.77,-597.8 262.75,-590.57 258,-582 251.05,-569.47 250.68,-553.84 252.48,-540.14"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="254.91,-540.48 253.61,-533.18 250.07,-539.7 254.91,-540.48"/>
+<text text-anchor="middle" x="276" y="-574" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> trigger</text>
+</g>
+<g id="node6" class="node">
+<title>NPL</title>
+<path fill="#991b1b" stroke="#991b1b" d="M455,-191.5C455,-191.5 285,-191.5 285,-191.5 279,-191.5 273,-185.5 273,-179.5 273,-179.5 273,-150.5 273,-150.5 273,-144.5 279,-138.5 285,-138.5 285,-138.5 455,-138.5 455,-138.5 461,-138.5 467,-144.5 467,-150.5 467,-150.5 467,-179.5 467,-179.5 467,-185.5 461,-191.5 455,-191.5"/>
+<text text-anchor="middle" x="370" y="-174.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Non&#45;performing / defaulted</text>
+<text text-anchor="middle" x="370" y="-161.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">90 days past due or unlikely</text>
+<text text-anchor="middle" x="370" y="-148.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">to pay; IFRS 9 stage 3</text>
+</g>
+<g id="edge11" class="edge">
+<title>Perf&#45;&gt;NPL</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M363.79,-603.61C386.53,-580.85 414,-545.49 414,-507.5 414,-507.5 414,-507.5 414,-289.5 414,-256.91 400.23,-222.13 388.1,-197.82"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="390.27,-196.67 384.9,-191.56 385.9,-198.91 390.27,-196.67"/>
+<text text-anchor="middle" x="452" y="-401.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> sudden default</text>
+<text text-anchor="middle" x="452" y="-390.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> (fraud, shock)</text>
+</g>
+<g id="edge6" class="edge">
+<title>W1&#45;&gt;Perf</title>
+<path fill="none" stroke="#4b5563" d="M276.28,-533.04C287.57,-551.9 303,-577.69 315.07,-597.86"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="313,-599.18 318.7,-603.92 317.2,-596.66 313,-599.18"/>
+<text text-anchor="middle" x="327" y="-574" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> resolved</text>
+</g>
+<g id="node3" class="node">
+<title>W2</title>
+<path fill="#fef3c7" stroke="#d97706" d="M263,-425C263,-425 97,-425 97,-425 91,-425 85,-419 85,-413 85,-413 85,-384 85,-384 85,-378 91,-372 97,-372 97,-372 263,-372 263,-372 269,-372 275,-378 275,-384 275,-384 275,-413 275,-413 275,-419 269,-425 263,-425"/>
+<text text-anchor="middle" x="180" y="-408.4" font-family="Helvetica,sans-Serif" font-size="12.00">Watch category 2 &#39;concern&#39;</text>
+<text text-anchor="middle" x="180" y="-395.4" font-family="Helvetica,sans-Serif" font-size="12.00">monthly review,</text>
+<text text-anchor="middle" x="180" y="-382.4" font-family="Helvetica,sans-Serif" font-size="12.00">IFRS 9 stage 2 likely</text>
+</g>
+<g id="edge1" class="edge">
+<title>W1&#45;&gt;W2</title>
+<path fill="none" stroke="#4b5563" d="M197.59,-479.87C189.37,-473.9 182.06,-466.68 177,-458 172.51,-450.31 171.45,-441.03 171.99,-432.15"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="174.43,-432.38 172.73,-425.16 169.55,-431.86 174.43,-432.38"/>
+<text text-anchor="middle" x="199" y="-450" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> worsens</text>
+</g>
+<g id="edge3" class="edge">
+<title>W2&#45;&gt;W1</title>
+<path fill="none" stroke="#4b5563" d="M206.24,-425.26C212.67,-432.08 219.33,-439.61 225,-447 231.43,-455.38 237.72,-464.96 243.2,-473.91"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="241.15,-475.25 246.85,-479.98 245.35,-472.72 241.15,-475.25"/>
+<text text-anchor="middle" x="256.5" y="-450" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> improves</text>
+</g>
+<g id="node4" class="node">
+<title>W3</title>
+<path fill="#fef3c7" stroke="#d97706" d="M352.5,-317C352.5,-317 151.5,-317 151.5,-317 145.5,-317 139.5,-311 139.5,-305 139.5,-305 139.5,-276 139.5,-276 139.5,-270 145.5,-264 151.5,-264 151.5,-264 352.5,-264 352.5,-264 358.5,-264 364.5,-270 364.5,-276 364.5,-276 364.5,-305 364.5,-305 364.5,-311 358.5,-317 352.5,-317"/>
+<text text-anchor="middle" x="252" y="-300.4" font-family="Helvetica,sans-Serif" font-size="12.00">Watch category 3 &#39;intensive care&#39;</text>
+<text text-anchor="middle" x="252" y="-287.4" font-family="Helvetica,sans-Serif" font-size="12.00">workout team involved,</text>
+<text text-anchor="middle" x="252" y="-274.4" font-family="Helvetica,sans-Serif" font-size="12.00">stage 2 or 3</text>
+</g>
+<g id="edge2" class="edge">
+<title>W2&#45;&gt;W3</title>
+<path fill="none" stroke="#4b5563" d="M169.79,-371.97C167.13,-361.2 166.37,-348.89 172,-339 175.73,-332.44 180.76,-326.7 186.5,-321.69"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="188.04,-323.59 191.95,-317.29 184.96,-319.78 188.04,-323.59"/>
+<text text-anchor="middle" x="194" y="-342" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> worsens</text>
+</g>
+<g id="node5" class="node">
+<title>Forb</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M174,-198C174,-198 12,-198 12,-198 6,-198 0,-192 0,-186 0,-186 0,-144 0,-144 0,-138 6,-132 12,-132 12,-132 174,-132 174,-132 180,-132 186,-138 186,-144 186,-144 186,-186 186,-186 186,-192 180,-198 174,-198"/>
+<text text-anchor="middle" x="93" y="-181.4" font-family="Helvetica,sans-Serif" font-size="12.00">Forborne</text>
+<text text-anchor="middle" x="93" y="-168.4" font-family="Helvetica,sans-Serif" font-size="12.00">terms changed because of</text>
+<text text-anchor="middle" x="93" y="-155.4" font-family="Helvetica,sans-Serif" font-size="12.00">financial difficulty; flagged</text>
+<text text-anchor="middle" x="93" y="-142.4" font-family="Helvetica,sans-Serif" font-size="12.00">for a probation period</text>
+</g>
+<g id="edge7" class="edge">
+<title>W2&#45;&gt;Forb</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M122.23,-371.84C100.15,-358.82 77.32,-340.67 65,-317 46.67,-281.79 59.13,-236.45 72.77,-204.68"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="75.09,-205.51 75.69,-198.11 70.61,-203.51 75.09,-205.51"/>
+<text text-anchor="middle" x="94" y="-293.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> concession</text>
+<text text-anchor="middle" x="94" y="-282.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> granted</text>
+</g>
+<g id="edge4" class="edge">
+<title>W3&#45;&gt;W2</title>
+<path fill="none" stroke="#4b5563" d="M239.36,-317.2C233.86,-327.66 227.06,-339.68 220,-350 216.33,-355.36 212.18,-360.82 207.97,-366.05"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="205.95,-364.65 203.4,-371.61 209.73,-367.76 205.95,-364.65"/>
+<text text-anchor="middle" x="250.5" y="-342" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> improves</text>
+</g>
+<g id="edge8" class="edge">
+<title>W3&#45;&gt;Forb</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M219.06,-263.91C196.22,-246.18 165.48,-222.3 140.07,-202.56"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="141.43,-200.52 134.4,-198.16 138.43,-204.39 141.43,-200.52"/>
+<text text-anchor="middle" x="215" y="-234" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> concession</text>
+<text text-anchor="middle" x="215" y="-223" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> granted</text>
+</g>
+<g id="edge9" class="edge">
+<title>W3&#45;&gt;NPL</title>
+<path fill="none" stroke="#4b5563" d="M276.45,-263.91C295.12,-244.37 320.92,-217.37 340.69,-196.67"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="342.52,-198.31 345.58,-191.56 338.97,-194.93 342.52,-198.31"/>
+<text text-anchor="middle" x="337" y="-228.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> default</text>
+</g>
+<g id="edge10" class="edge">
+<title>Forb&#45;&gt;NPL</title>
+<path fill="none" stroke="#4b5563" d="M186.01,-165C211.58,-165 239.48,-165 265.65,-165"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="265.98,-167.45 272.98,-165 265.98,-162.55 265.98,-167.45"/>
+<text text-anchor="middle" x="229.5" y="-171" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> fails again</text>
+</g>
+<g id="node7" class="node">
+<title>Cure</title>
+<path fill="#065f46" stroke="#065f46" d="M233.5,-66C233.5,-66 46.5,-66 46.5,-66 40.5,-66 34.5,-60 34.5,-54 34.5,-54 34.5,-12 34.5,-12 34.5,-6 40.5,0 46.5,0 46.5,0 233.5,0 233.5,0 239.5,0 245.5,-6 245.5,-12 245.5,-12 245.5,-54 245.5,-54 245.5,-60 239.5,-66 233.5,-66"/>
+<text text-anchor="middle" x="140" y="-49.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Cured</text>
+<text text-anchor="middle" x="140" y="-36.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">back to performing after</text>
+<text text-anchor="middle" x="140" y="-23.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">probation (often 12 months for</text>
+<text text-anchor="middle" x="140" y="-10.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">non&#45;performing forborne)</text>
+</g>
+<g id="edge14" class="edge">
+<title>Forb&#45;&gt;Cure</title>
+<path fill="none" stroke="#4b5563" d="M102.36,-131.97C106.55,-118.31 111.72,-102.28 117,-88 118.86,-82.96 120.94,-77.71 123.05,-72.54"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="125.32,-73.47 125.74,-66.06 120.79,-71.59 125.32,-73.47"/>
+<text text-anchor="middle" x="161" y="-102" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> performs through</text>
+<text text-anchor="middle" x="161" y="-91" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> probation</text>
+</g>
+<g id="edge12" class="edge">
+<title>NPL&#45;&gt;Cure</title>
+<path fill="none" stroke="#4b5563" d="M324.83,-138.47C290.06,-118.82 241.58,-91.42 203,-69.61"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="204.19,-67.47 196.9,-66.16 201.78,-71.74 204.19,-67.47"/>
+<text text-anchor="middle" x="307.5" y="-102" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> pays, probation</text>
+<text text-anchor="middle" x="307.5" y="-91" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> completed</text>
+</g>
+<g id="node8" class="node">
+<title>Loss</title>
+<path fill="#1f2937" stroke="#1f2937" d="M439,-59.5C439,-59.5 301,-59.5 301,-59.5 295,-59.5 289,-53.5 289,-47.5 289,-47.5 289,-18.5 289,-18.5 289,-12.5 295,-6.5 301,-6.5 301,-6.5 439,-6.5 439,-6.5 445,-6.5 451,-12.5 451,-18.5 451,-18.5 451,-47.5 451,-47.5 451,-53.5 445,-59.5 439,-59.5"/>
+<text text-anchor="middle" x="370" y="-42.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Loss</text>
+<text text-anchor="middle" x="370" y="-29.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">write&#45;off, sale,</text>
+<text text-anchor="middle" x="370" y="-16.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">enforcement proceeds</text>
+</g>
+<g id="edge13" class="edge">
+<title>NPL&#45;&gt;Loss</title>
+<path fill="none" stroke="#4b5563" d="M370,-138.32C370,-117.84 370,-89.03 370,-66.87"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="372.45,-66.63 370,-59.63 367.55,-66.63 372.45,-66.63"/>
+<text text-anchor="middle" x="397.5" y="-102" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> recovery</text>
+<text text-anchor="middle" x="397.5" y="-91" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> exhausted</text>
+</g>
+<g id="edge15" class="edge">
+<title>Cure&#45;&gt;Perf</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M245.79,-60.46C254.97,-62.45 264.13,-64.33 273,-66 369.14,-84.13 439.94,-44.15 483,-132 541.42,-251.17 515.61,-349.43 498,-425 479.9,-502.69 473.58,-532.52 411,-582 403.09,-588.25 394.31,-594.36 385.59,-599.99"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="384.16,-597.99 379.57,-603.82 386.79,-602.13 384.16,-597.99"/>
+</g>
+</g>
+</svg>

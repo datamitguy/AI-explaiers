@@ -1,0 +1,115 @@
+<svg width="100%"
+ viewBox="0.00 0.00 793.80 622.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 608.4)">
+<title>ExpectedUnexpectedLoss</title>
+<polygon fill="white" stroke="transparent" points="-14.4,14.4 -14.4,-608.4 779.4,-608.4 779.4,14.4 -14.4,14.4"/>
+<g id="clust1" class="cluster">
+<title>cluster_inputs</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M20,-508C20,-508 745,-508 745,-508 751,-508 757,-514 757,-520 757,-520 757,-574 757,-574 757,-580 751,-586 745,-586 745,-586 20,-586 20,-586 14,-586 8,-580 8,-574 8,-574 8,-520 8,-520 8,-514 14,-508 20,-508"/>
+<text text-anchor="middle" x="382.5" y="-571.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">The three ingredients</text>
+</g>
+<g id="node1" class="node">
+<title>PD</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M195.5,-556C195.5,-556 28.5,-556 28.5,-556 22.5,-556 16.5,-550 16.5,-544 16.5,-544 16.5,-528 16.5,-528 16.5,-522 22.5,-516 28.5,-516 28.5,-516 195.5,-516 195.5,-516 201.5,-516 207.5,-522 207.5,-528 207.5,-528 207.5,-544 207.5,-544 207.5,-550 201.5,-556 195.5,-556"/>
+<text text-anchor="middle" x="112" y="-539.4" font-family="Helvetica,sans-Serif" font-size="12.00">PD: probability of default</text>
+<text text-anchor="middle" x="112" y="-526.4" font-family="Helvetica,sans-Serif" font-size="12.00">how likely? (e.g. 2% a year)</text>
+</g>
+<g id="node2" class="node">
+<title>LGD</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M471,-556C471,-556 269,-556 269,-556 263,-556 257,-550 257,-544 257,-544 257,-528 257,-528 257,-522 263,-516 269,-516 269,-516 471,-516 471,-516 477,-516 483,-522 483,-528 483,-528 483,-544 483,-544 483,-550 477,-556 471,-556"/>
+<text text-anchor="middle" x="370" y="-539.4" font-family="Helvetica,sans-Serif" font-size="12.00">LGD: loss given default</text>
+<text text-anchor="middle" x="370" y="-526.4" font-family="Helvetica,sans-Serif" font-size="12.00">how bad if it happens? (e.g. 40%)</text>
+</g>
+<g id="node4" class="node">
+<title>EL</title>
+<path fill="#1e3a8a" stroke="#1e3a8a" d="M482,-475C482,-475 258,-475 258,-475 252,-475 246,-469 246,-463 246,-463 246,-434 246,-434 246,-428 252,-422 258,-422 258,-422 482,-422 482,-422 488,-422 494,-428 494,-434 494,-434 494,-463 494,-463 494,-469 488,-475 482,-475"/>
+<text text-anchor="middle" x="370" y="-458.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Expected loss (EL) = PD x LGD x EAD</text>
+<text text-anchor="middle" x="370" y="-445.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">= 0.02 x 0.40 x 1,000 = 8 a year</text>
+<text text-anchor="middle" x="370" y="-432.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">the normal, budgeted cost of lending</text>
+</g>
+<g id="edge3" class="edge">
+<title>PD&#45;&gt;EL</title>
+<path fill="none" stroke="#4b5563" d="M169.58,-515.92C203.83,-504.57 247.9,-489.96 285.98,-477.34"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="287.15,-479.54 293.02,-475.01 285.6,-474.89 287.15,-479.54"/>
+</g>
+<g id="node3" class="node">
+<title>EAD</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M737,-556C737,-556 545,-556 545,-556 539,-556 533,-550 533,-544 533,-544 533,-528 533,-528 533,-522 539,-516 545,-516 545,-516 737,-516 737,-516 743,-516 749,-522 749,-528 749,-528 749,-544 749,-544 749,-550 743,-556 737,-556"/>
+<text text-anchor="middle" x="641" y="-539.4" font-family="Helvetica,sans-Serif" font-size="12.00">EAD: exposure at default</text>
+<text text-anchor="middle" x="641" y="-526.4" font-family="Helvetica,sans-Serif" font-size="12.00">how much is owed? (e.g. 1,000)</text>
+</g>
+<g id="edge4" class="edge">
+<title>LGD&#45;&gt;EL</title>
+<path fill="none" stroke="#4b5563" d="M370,-515.6C370,-505.82 370,-493.68 370,-482.49"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="372.45,-482.31 370,-475.31 367.55,-482.31 372.45,-482.31"/>
+</g>
+<g id="edge5" class="edge">
+<title>EAD&#45;&gt;EL</title>
+<path fill="none" stroke="#4b5563" d="M580.52,-515.92C544.39,-504.52 497.87,-489.84 457.75,-477.19"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="458.27,-474.78 450.86,-475.01 456.8,-479.45 458.27,-474.78"/>
+</g>
+<g id="node5" class="node">
+<title>Q</title>
+<polygon fill="#fef3c7" stroke="#d97706" points="370,-381 195,-347 370,-313 545,-347 370,-381"/>
+<text text-anchor="middle" x="370" y="-350.4" font-family="Helvetica,sans-Serif" font-size="12.00">Is the loss the average year</text>
+<text text-anchor="middle" x="370" y="-337.4" font-family="Helvetica,sans-Serif" font-size="12.00">or a very bad year?</text>
+</g>
+<g id="edge6" class="edge">
+<title>EL&#45;&gt;Q</title>
+<path fill="none" stroke="#4b5563" d="M370,-421.88C370,-411.67 370,-399.69 370,-388.37"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="372.45,-388.05 370,-381.05 367.55,-388.05 372.45,-388.05"/>
+</g>
+<g id="node6" class="node">
+<title>UL</title>
+<path fill="#991b1b" stroke="#991b1b" d="M345,-255.5C345,-255.5 141,-255.5 141,-255.5 135,-255.5 129,-249.5 129,-243.5 129,-243.5 129,-214.5 129,-214.5 129,-208.5 135,-202.5 141,-202.5 141,-202.5 345,-202.5 345,-202.5 351,-202.5 357,-208.5 357,-214.5 357,-214.5 357,-243.5 357,-243.5 357,-249.5 351,-255.5 345,-255.5"/>
+<text text-anchor="middle" x="243" y="-238.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Unexpected loss (UL)</text>
+<text text-anchor="middle" x="243" y="-225.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">the bad year, well above average</text>
+<text text-anchor="middle" x="243" y="-212.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">(e.g. 8% default instead of 2%)</text>
+</g>
+<g id="edge7" class="edge">
+<title>Q&#45;&gt;UL</title>
+<path fill="none" stroke="#4b5563" d="M339.9,-318.51C320.86,-301.12 296.22,-278.61 276.55,-260.64"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="277.96,-258.62 271.14,-255.7 274.66,-262.23 277.96,-258.62"/>
+<text text-anchor="middle" x="333" y="-285" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> bad year</text>
+</g>
+<g id="node7" class="node">
+<title>Prov</title>
+<path fill="#065f46" stroke="#065f46" d="M598,-262C598,-262 394,-262 394,-262 388,-262 382,-256 382,-250 382,-250 382,-208 382,-208 382,-202 388,-196 394,-196 394,-196 598,-196 598,-196 604,-196 610,-202 610,-208 610,-208 610,-250 610,-250 610,-256 604,-262 598,-262"/>
+<text text-anchor="middle" x="496" y="-245.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Covered by provisions</text>
+<text text-anchor="middle" x="496" y="-232.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">(expected credit loss on the</text>
+<text text-anchor="middle" x="496" y="-219.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">income statement, IFRS 9 / CECL)</text>
+<text text-anchor="middle" x="496" y="-206.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">and by the margin in the price</text>
+</g>
+<g id="edge8" class="edge">
+<title>Q&#45;&gt;Prov</title>
+<path fill="none" stroke="#4b5563" d="M399.86,-318.51C416.48,-303.21 437.4,-283.95 455.48,-267.3"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="457.5,-268.77 460.99,-262.23 454.18,-265.17 457.5,-268.77"/>
+<text text-anchor="middle" x="470" y="-285" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> average year</text>
+</g>
+<g id="node8" class="node">
+<title>Cap</title>
+<path fill="#065f46" stroke="#065f46" d="M339,-155C339,-155 147,-155 147,-155 141,-155 135,-149 135,-143 135,-143 135,-114 135,-114 135,-108 141,-102 147,-102 147,-102 339,-102 339,-102 345,-102 351,-108 351,-114 351,-114 351,-143 351,-143 351,-149 345,-155 339,-155"/>
+<text text-anchor="middle" x="243" y="-138.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Covered by capital</text>
+<text text-anchor="middle" x="243" y="-125.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">(shareholders&#39; cushion, sized by</text>
+<text text-anchor="middle" x="243" y="-112.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Basel risk&#45;weighted assets)</text>
+</g>
+<g id="edge9" class="edge">
+<title>UL&#45;&gt;Cap</title>
+<path fill="none" stroke="#4b5563" d="M243,-202.38C243,-190.16 243,-175.4 243,-162.37"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="245.45,-162.34 243,-155.34 240.55,-162.34 245.45,-162.34"/>
+</g>
+<g id="node9" class="node">
+<title>Tail</title>
+<path fill="#6b7280" stroke="#6b7280" d="M322.5,-40C322.5,-40 163.5,-40 163.5,-40 157.5,-40 151.5,-34 151.5,-28 151.5,-28 151.5,-12 151.5,-12 151.5,-6 157.5,0 163.5,0 163.5,0 322.5,0 322.5,0 328.5,0 334.5,-6 334.5,-12 334.5,-12 334.5,-28 334.5,-28 334.5,-34 328.5,-40 322.5,-40"/>
+<text text-anchor="middle" x="243" y="-23.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Beyond capital: bank fails,</text>
+<text text-anchor="middle" x="243" y="-10.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">resolution or bail&#45;out</text>
+</g>
+<g id="edge10" class="edge">
+<title>Cap&#45;&gt;Tail</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M243,-101.99C243,-85.55 243,-64.23 243,-47.58"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="245.45,-47.3 243,-40.3 240.55,-47.3 245.45,-47.3"/>
+<text text-anchor="middle" x="284" y="-74" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> if losses exceed</text>
+<text text-anchor="middle" x="284" y="-63" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> the cushion</text>
+</g>
+</g>
+</svg>

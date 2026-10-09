@@ -1,0 +1,27 @@
+digraph LoanPricingBuild {
+  graph [rankdir=TB, splines=true, nodesep=0.35, ranksep=0.5, fontname="Helvetica", fontsize=13, bgcolor="white", newrank=true, pad=0.2];
+  node  [shape=box, style="rounded,filled", fillcolor="#eef2ff", color="#6366f1", fontname="Helvetica", fontsize=12, margin="0.18,0.10"];
+  edge  [color="#4b5563", arrowsize=0.7, fontname="Helvetica", fontsize=10, fontcolor="#374151"];
+
+  Start [label="Price a 10 million, 5-year\ncorporate term loan from scratch", fillcolor="#1f2937", fontcolor="white", color="#1f2937"];
+
+  subgraph cluster_stack {
+    label="Building blocks of the all-in rate (illustrative numbers)"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
+    CoF [label="1. Cost of funds (funds transfer price)\nbase rate plus bank's own term\nfunding and liquidity premium: 4.00%"];
+    EL  [label="2. Expected loss\nPD x LGD = 1.5% x 40% = 0.60%"];
+    Cap [label="3. Cost of capital\ncapital held 8% of RWA, hurdle 12%\nRWA 80% of EAD: 0.77%"];
+    Opx [label="4. Operating cost\norigination, servicing, monitoring,\ncollections: 0.50%"];
+    Mgn [label="5. Target margin and\nrelationship adjustments: 0.30%"];
+    CoF -> EL -> Cap -> Opx -> Mgn;
+  }
+
+  Rate [label="All-in customer rate about 6.17%\n(margin over base about 2.17%)", fillcolor="#1e3a8a", fontcolor="white", color="#1e3a8a"];
+  Q [label="Market will pay it?", shape=diamond, style=filled, fillcolor="#fef3c7", color="#d97706", margin="0.05,0.05"];
+  Yes [label="Book the loan at or above\nthe risk-adjusted price", fillcolor="#065f46", fontcolor="white", color="#065f46"];
+  No  [label="Reprice, add collateral to cut LGD,\nshorten tenor, cross-sell,\nor decline", fillcolor="#991b1b", fontcolor="white", color="#991b1b"];
+
+  Start -> CoF;
+  Mgn -> Rate -> Q;
+  Q -> Yes [label=" yes"];
+  Q -> No  [label=" no"];
+}

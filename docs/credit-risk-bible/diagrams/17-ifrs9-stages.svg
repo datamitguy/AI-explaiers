@@ -1,0 +1,121 @@
+<svg width="100%"
+ viewBox="0.00 0.00 1245.80 393.30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 378.9)">
+<title>IFRS9Stages</title>
+<polygon fill="white" stroke="transparent" points="-14.4,14.4 -14.4,-378.9 1231.4,-378.9 1231.4,14.4 -14.4,14.4"/>
+<g id="clust1" class="cluster">
+<title>cluster_sicr</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M273,-8C273,-8 506,-8 506,-8 512,-8 518,-14 518,-20 518,-20 518,-291 518,-291 518,-297 512,-303 506,-303 506,-303 273,-303 273,-303 267,-303 261,-297 261,-291 261,-291 261,-20 261,-20 261,-14 267,-8 273,-8"/>
+<text text-anchor="middle" x="389.5" y="-288.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">Typical SICR tests (any one triggers)</text>
+</g>
+<g id="node1" class="node">
+<title>New</title>
+<path fill="#1f2937" stroke="#1f2937" d="M212,-358C212,-358 12,-358 12,-358 6,-358 0,-352 0,-346 0,-346 0,-330 0,-330 0,-324 6,-318 12,-318 12,-318 212,-318 212,-318 218,-318 224,-324 224,-330 224,-330 224,-346 224,-346 224,-352 218,-358 212,-358"/>
+<text text-anchor="middle" x="112" y="-341.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Loan originated</text>
+<text text-anchor="middle" x="112" y="-328.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">(not credit&#45;impaired at purchase)</text>
+</g>
+<g id="node2" class="node">
+<title>S1</title>
+<path fill="#065f46" stroke="#065f46" d="M481,-364.5C481,-364.5 297,-364.5 297,-364.5 291,-364.5 285,-358.5 285,-352.5 285,-352.5 285,-323.5 285,-323.5 285,-317.5 291,-311.5 297,-311.5 297,-311.5 481,-311.5 481,-311.5 487,-311.5 493,-317.5 493,-323.5 493,-323.5 493,-352.5 493,-352.5 493,-358.5 487,-364.5 481,-364.5"/>
+<text text-anchor="middle" x="389" y="-347.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Stage 1: performing</text>
+<text text-anchor="middle" x="389" y="-334.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">12&#45;month expected credit loss</text>
+<text text-anchor="middle" x="389" y="-321.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">interest on gross balance</text>
+</g>
+<g id="edge1" class="edge">
+<title>New&#45;&gt;S1</title>
+<path fill="none" stroke="#4b5563" d="M224.06,-338C241.83,-338 260.2,-338 277.95,-338"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="277.98,-340.45 284.98,-338 277.98,-335.55 277.98,-340.45"/>
+</g>
+<g id="node3" class="node">
+<title>S2</title>
+<path fill="#d97706" stroke="#d97706" d="M831,-254C831,-254 657,-254 657,-254 651,-254 645,-248 645,-242 645,-242 645,-200 645,-200 645,-194 651,-188 657,-188 657,-188 831,-188 831,-188 837,-188 843,-194 843,-200 843,-200 843,-242 843,-242 843,-248 837,-254 831,-254"/>
+<text text-anchor="middle" x="744" y="-237.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Stage 2: significant increase</text>
+<text text-anchor="middle" x="744" y="-224.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">in credit risk (SICR)</text>
+<text text-anchor="middle" x="744" y="-211.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Lifetime expected credit loss</text>
+<text text-anchor="middle" x="744" y="-198.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">interest on gross balance</text>
+</g>
+<g id="edge2" class="edge">
+<title>S1&#45;&gt;S2</title>
+<path fill="none" stroke="#4b5563" d="M493.07,-326.03C534.37,-319.21 581.83,-308.76 623,-293 646.34,-284.07 670.29,-270.69 690.6,-257.88"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="691.92,-259.94 696.5,-254.11 689.28,-255.82 691.92,-259.94"/>
+<text text-anchor="middle" x="577.5" y="-321" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> SICR</text>
+</g>
+<g id="node4" class="node">
+<title>S3</title>
+<path fill="#991b1b" stroke="#991b1b" d="M1205,-299C1205,-299 976,-299 976,-299 970,-299 964,-293 964,-287 964,-287 964,-245 964,-245 964,-239 970,-233 976,-233 976,-233 1205,-233 1205,-233 1211,-233 1217,-239 1217,-245 1217,-245 1217,-287 1217,-287 1217,-293 1211,-299 1205,-299"/>
+<text text-anchor="middle" x="1090.5" y="-282.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Stage 3: credit&#45;impaired</text>
+<text text-anchor="middle" x="1090.5" y="-269.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">(defaulted, 90 days or unlikely to pay)</text>
+<text text-anchor="middle" x="1090.5" y="-256.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Lifetime expected credit loss</text>
+<text text-anchor="middle" x="1090.5" y="-243.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">interest on net balance</text>
+</g>
+<g id="edge5" class="edge">
+<title>S1&#45;&gt;S3</title>
+<path fill="none" stroke="#4b5563" d="M493.08,-340.22C533.63,-340.28 580.56,-339.35 623,-336 736.3,-327.06 863.85,-307.24 956.91,-290.97"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="957.36,-293.37 963.83,-289.75 956.51,-288.55 957.36,-293.37"/>
+<text text-anchor="middle" x="744" y="-336" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> straight to default</text>
+</g>
+<g id="edge3" class="edge">
+<title>S2&#45;&gt;S1</title>
+<path fill="none" stroke="#4b5563" d="M644.77,-236.4C594.06,-245.17 540.93,-255.97 532,-264 516.73,-277.71 533.06,-294.06 518,-308 512.42,-313.16 506.13,-317.49 499.4,-321.11"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="498.28,-318.93 493.1,-324.24 500.46,-323.32 498.28,-318.93"/>
+<text text-anchor="middle" x="577.5" y="-278" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> SICR reverses</text>
+<text text-anchor="middle" x="577.5" y="-267" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> (after cure period)</text>
+</g>
+<g id="edge4" class="edge">
+<title>S2&#45;&gt;S3</title>
+<path fill="none" stroke="#4b5563" d="M843.26,-233.83C878.55,-238.44 918.96,-243.72 956.7,-248.65"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="956.45,-251.09 963.71,-249.57 957.09,-246.23 956.45,-251.09"/>
+<text text-anchor="middle" x="903.5" y="-249" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> default</text>
+</g>
+<g id="edge6" class="edge">
+<title>S3&#45;&gt;S2</title>
+<path fill="none" stroke="#4b5563" d="M998.45,-232.91C980,-227.55 960.56,-222.83 942,-220 908.17,-214.85 899.22,-219.86 865,-220 860.24,-220.02 855.38,-220.04 850.46,-220.07"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="850.22,-217.62 843.23,-220.11 850.25,-222.52 850.22,-217.62"/>
+<text text-anchor="middle" x="903.5" y="-223" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> cure, probation</text>
+</g>
+<g id="node5" class="node">
+<title>T1</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M472,-69.5C472,-69.5 306,-69.5 306,-69.5 300,-69.5 294,-63.5 294,-57.5 294,-57.5 294,-28.5 294,-28.5 294,-22.5 300,-16.5 306,-16.5 306,-16.5 472,-16.5 472,-16.5 478,-16.5 484,-22.5 484,-28.5 484,-28.5 484,-57.5 484,-57.5 484,-63.5 478,-69.5 472,-69.5"/>
+<text text-anchor="middle" x="389" y="-52.9" font-family="Helvetica,sans-Serif" font-size="12.00">Lifetime PD now more than</text>
+<text text-anchor="middle" x="389" y="-39.9" font-family="Helvetica,sans-Serif" font-size="12.00">X times origination PD</text>
+<text text-anchor="middle" x="389" y="-26.9" font-family="Helvetica,sans-Serif" font-size="12.00">(relative test)</text>
+</g>
+<g id="edge7" class="edge">
+<title>T1&#45;&gt;S2</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M479.83,-69.6C492.82,-74.27 505.88,-79.44 518,-85 579.53,-113.25 645.3,-154.42 689.74,-184.06"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="688.41,-186.12 695.59,-187.98 691.14,-182.05 688.41,-186.12"/>
+</g>
+<g id="node6" class="node">
+<title>T2</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M482,-273C482,-273 296,-273 296,-273 290,-273 284,-267 284,-261 284,-261 284,-245 284,-245 284,-239 290,-233 296,-233 296,-233 482,-233 482,-233 488,-233 494,-239 494,-245 494,-245 494,-261 494,-261 494,-267 488,-273 482,-273"/>
+<text text-anchor="middle" x="389" y="-256.4" font-family="Helvetica,sans-Serif" font-size="12.00">Absolute PD above a threshold</text>
+<text text-anchor="middle" x="389" y="-243.4" font-family="Helvetica,sans-Serif" font-size="12.00">or rating below a grade</text>
+</g>
+<g id="edge8" class="edge">
+<title>T2&#45;&gt;S2</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M494.3,-243.43C507,-242.27 519.8,-241.11 532,-240 566.37,-236.88 603.89,-233.49 637.63,-230.46"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="638.02,-232.88 644.77,-229.81 637.58,-228 638.02,-232.88"/>
+</g>
+<g id="node7" class="node">
+<title>T3</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M470,-204C470,-204 308,-204 308,-204 302,-204 296,-198 296,-192 296,-192 296,-180 296,-180 296,-174 302,-168 308,-168 308,-168 470,-168 470,-168 476,-168 482,-174 482,-180 482,-180 482,-192 482,-192 482,-198 476,-204 470,-204"/>
+<text text-anchor="middle" x="389" y="-182.9" font-family="Helvetica,sans-Serif" font-size="12.00">30 days past due backstop</text>
+</g>
+<g id="edge9" class="edge">
+<title>T3&#45;&gt;S2</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M482.29,-195.15C529.89,-199.87 588.17,-205.65 637.55,-210.54"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="637.56,-213.01 644.77,-211.26 638.04,-208.13 637.56,-213.01"/>
+</g>
+<g id="node8" class="node">
+<title>T4</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M463,-139C463,-139 315,-139 315,-139 309,-139 303,-133 303,-127 303,-127 303,-111 303,-111 303,-105 309,-99 315,-99 315,-99 463,-99 463,-99 469,-99 475,-105 475,-111 475,-111 475,-127 475,-127 475,-133 469,-139 463,-139"/>
+<text text-anchor="middle" x="389" y="-122.4" font-family="Helvetica,sans-Serif" font-size="12.00">Qualitative: watchlist,</text>
+<text text-anchor="middle" x="389" y="-109.4" font-family="Helvetica,sans-Serif" font-size="12.00">forbearance, sector flag</text>
+</g>
+<g id="edge10" class="edge">
+<title>T4&#45;&gt;S2</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M464.53,-139.08C482.09,-143.89 500.72,-149.07 518,-154 557.2,-165.19 600.12,-177.87 637.86,-189.16"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="637.44,-191.59 644.85,-191.25 638.84,-186.9 637.44,-191.59"/>
+</g>
+</g>
+</svg>

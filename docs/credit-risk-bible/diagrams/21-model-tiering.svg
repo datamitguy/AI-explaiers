@@ -1,0 +1,142 @@
+<svg width="100%"
+ viewBox="0.00 0.00 797.80 802.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 788.4)">
+<title>ModelTiering</title>
+<polygon fill="white" stroke="transparent" points="-14.4,14.4 -14.4,-788.4 783.4,-788.4 783.4,14.4 -14.4,14.4"/>
+<g id="node1" class="node">
+<title>Start</title>
+<path fill="#1f2937" stroke="#1f2937" d="M275,-774C275,-774 131,-774 131,-774 125,-774 119,-768 119,-762 119,-762 119,-746 119,-746 119,-740 125,-734 131,-734 131,-734 275,-734 275,-734 281,-734 287,-740 287,-746 287,-746 287,-762 287,-762 287,-768 281,-774 275,-774"/>
+<text text-anchor="middle" x="203" y="-757.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Something a team calls</text>
+<text text-anchor="middle" x="203" y="-744.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">&#39;the model&#39; or &#39;the tool&#39;</text>
+</g>
+<g id="node2" class="node">
+<title>Q0</title>
+<polygon fill="#fef3c7" stroke="#d97706" points="203,-697 0,-650 203,-603 406,-650 203,-697"/>
+<text text-anchor="middle" x="203" y="-659.9" font-family="Helvetica,sans-Serif" font-size="12.00">Does it apply a method to inputs</text>
+<text text-anchor="middle" x="203" y="-646.9" font-family="Helvetica,sans-Serif" font-size="12.00">to produce an estimate</text>
+<text text-anchor="middle" x="203" y="-633.9" font-family="Helvetica,sans-Serif" font-size="12.00">that drives a decision?</text>
+</g>
+<g id="edge1" class="edge">
+<title>Start&#45;&gt;Q0</title>
+<path fill="none" stroke="#4b5563" d="M203,-733.81C203,-725.37 203,-715 203,-704.48"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="205.45,-704.2 203,-697.2 200.55,-704.2 205.45,-704.2"/>
+</g>
+<g id="node3" class="node">
+<title>NotModel</title>
+<path fill="#6b7280" stroke="#6b7280" d="M299.5,-548.5C299.5,-548.5 60.5,-548.5 60.5,-548.5 54.5,-548.5 48.5,-542.5 48.5,-536.5 48.5,-536.5 48.5,-507.5 48.5,-507.5 48.5,-501.5 54.5,-495.5 60.5,-495.5 60.5,-495.5 299.5,-495.5 299.5,-495.5 305.5,-495.5 311.5,-501.5 311.5,-507.5 311.5,-507.5 311.5,-536.5 311.5,-536.5 311.5,-542.5 305.5,-548.5 299.5,-548.5"/>
+<text text-anchor="middle" x="180" y="-531.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Not a model</text>
+<text text-anchor="middle" x="180" y="-518.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">(calculator, report, lookup table)</text>
+<text text-anchor="middle" x="180" y="-505.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Still needs end&#45;user computing controls</text>
+</g>
+<g id="edge2" class="edge">
+<title>Q0&#45;&gt;NotModel</title>
+<path fill="none" stroke="#4b5563" d="M194.89,-604.58C191.96,-588.5 188.7,-570.66 185.98,-555.76"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="188.36,-555.16 184.69,-548.71 183.54,-556.04 188.36,-555.16"/>
+<text text-anchor="middle" x="199" y="-577" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> no</text>
+</g>
+<g id="node4" class="node">
+<title>Q1</title>
+<polygon fill="#fef3c7" stroke="#d97706" points="553,-556 337,-522 553,-488 769,-522 553,-556"/>
+<text text-anchor="middle" x="553" y="-525.4" font-family="Helvetica,sans-Serif" font-size="12.00">Used for regulatory capital,</text>
+<text text-anchor="middle" x="553" y="-512.4" font-family="Helvetica,sans-Serif" font-size="12.00">provisions or financial statements?</text>
+</g>
+<g id="edge3" class="edge">
+<title>Q0&#45;&gt;Q1</title>
+<path fill="none" stroke="#4b5563" d="M281.11,-620.88C341.44,-599.16 424.21,-569.36 482.53,-548.37"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="483.41,-550.66 489.16,-545.98 481.75,-546.05 483.41,-550.66"/>
+<text text-anchor="middle" x="420.5" y="-577" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> yes</text>
+</g>
+<g id="node5" class="node">
+<title>Q2</title>
+<polygon fill="#fef3c7" stroke="#d97706" points="395,-441 233,-394 395,-347 557,-394 395,-441"/>
+<text text-anchor="middle" x="395" y="-403.9" font-family="Helvetica,sans-Serif" font-size="12.00">Large exposure or</text>
+<text text-anchor="middle" x="395" y="-390.9" font-family="Helvetica,sans-Serif" font-size="12.00">many customer decisions</text>
+<text text-anchor="middle" x="395" y="-377.9" font-family="Helvetica,sans-Serif" font-size="12.00">depend on it?</text>
+</g>
+<g id="edge5" class="edge">
+<title>Q1&#45;&gt;Q2</title>
+<path fill="none" stroke="#4b5563" d="M518.33,-493.35C496.29,-475.78 467.46,-452.78 443.21,-433.45"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="444.47,-431.32 437.47,-428.87 441.42,-435.15 444.47,-431.32"/>
+<text text-anchor="middle" x="497" y="-462" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> no</text>
+</g>
+<g id="node7" class="node">
+<title>T1</title>
+<path fill="#991b1b" stroke="#991b1b" d="M724,-143C724,-143 506,-143 506,-143 500,-143 494,-137 494,-131 494,-131 494,-89 494,-89 494,-83 500,-77 506,-77 506,-77 724,-77 724,-77 730,-77 736,-83 736,-89 736,-89 736,-131 736,-131 736,-137 730,-143 724,-143"/>
+<text text-anchor="middle" x="615" y="-126.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Tier 1: highest materiality</text>
+<text text-anchor="middle" x="615" y="-113.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Full independent validation,</text>
+<text text-anchor="middle" x="615" y="-100.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">annual review, committee approval,</text>
+<text text-anchor="middle" x="615" y="-87.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">regulator may inspect</text>
+</g>
+<g id="edge4" class="edge">
+<title>Q1&#45;&gt;T1</title>
+<path fill="none" stroke="#4b5563" d="M559.9,-488.77C562.89,-474.22 566.32,-456.78 569,-441 586.7,-336.6 602.61,-212.77 610.24,-150.68"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="612.71,-150.66 611.12,-143.42 607.84,-150.07 612.71,-150.66"/>
+<text text-anchor="middle" x="598.5" y="-321" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> yes</text>
+</g>
+<g id="node6" class="node">
+<title>Q3</title>
+<polygon fill="#fef3c7" stroke="#d97706" points="395,-300 267,-266 395,-232 523,-266 395,-300"/>
+<text text-anchor="middle" x="395" y="-269.4" font-family="Helvetica,sans-Serif" font-size="12.00">Complex method or</text>
+<text text-anchor="middle" x="395" y="-256.4" font-family="Helvetica,sans-Serif" font-size="12.00">poor data?</text>
+</g>
+<g id="edge6" class="edge">
+<title>Q2&#45;&gt;Q3</title>
+<path fill="none" stroke="#4b5563" d="M395,-346.8C395,-333.88 395,-319.95 395,-307.4"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="397.45,-307.18 395,-300.18 392.55,-307.18 397.45,-307.18"/>
+<text text-anchor="middle" x="405.5" y="-321" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> yes</text>
+</g>
+<g id="node9" class="node">
+<title>T3</title>
+<path fill="#065f46" stroke="#065f46" d="M314,-214C314,-214 124,-214 124,-214 118,-214 112,-208 112,-202 112,-202 112,-173 112,-173 112,-167 118,-161 124,-161 124,-161 314,-161 314,-161 320,-161 326,-167 326,-173 326,-173 326,-202 326,-202 326,-208 320,-214 314,-214"/>
+<text text-anchor="middle" x="219" y="-197.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Tier 3: low</text>
+<text text-anchor="middle" x="219" y="-184.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Lighter review, self&#45;assessment</text>
+<text text-anchor="middle" x="219" y="-171.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">by owner, periodic check</text>
+</g>
+<g id="edge7" class="edge">
+<title>Q2&#45;&gt;T3</title>
+<path fill="none" stroke="#4b5563" d="M333.7,-364.75C305.88,-349.18 274.65,-327.4 254,-300 236.62,-276.95 227.75,-245.08 223.3,-221.31"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="225.67,-220.69 222.05,-214.22 220.85,-221.53 225.67,-220.69"/>
+<text text-anchor="middle" x="289" y="-321" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> no</text>
+</g>
+<g id="edge8" class="edge">
+<title>Q3&#45;&gt;T1</title>
+<path fill="none" stroke="#4b5563" d="M429.38,-240.94C465.2,-215.86 521.76,-176.27 563.04,-147.37"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="564.69,-149.21 569.01,-143.19 561.88,-145.2 564.69,-149.21"/>
+<text text-anchor="middle" x="548.5" y="-185" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> yes</text>
+</g>
+<g id="node8" class="node">
+<title>T2</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M457,-136.5C457,-136.5 265,-136.5 265,-136.5 259,-136.5 253,-130.5 253,-124.5 253,-124.5 253,-95.5 253,-95.5 253,-89.5 259,-83.5 265,-83.5 265,-83.5 457,-83.5 457,-83.5 463,-83.5 469,-89.5 469,-95.5 469,-95.5 469,-124.5 469,-124.5 469,-130.5 463,-136.5 457,-136.5"/>
+<text text-anchor="middle" x="361" y="-119.9" font-family="Helvetica,sans-Serif" font-size="12.00">Tier 2: medium</text>
+<text text-anchor="middle" x="361" y="-106.9" font-family="Helvetica,sans-Serif" font-size="12.00">Independent validation,</text>
+<text text-anchor="middle" x="361" y="-93.9" font-family="Helvetica,sans-Serif" font-size="12.00">review every two to three years</text>
+</g>
+<g id="edge9" class="edge">
+<title>Q3&#45;&gt;T2</title>
+<path fill="none" stroke="#4b5563" d="M388.04,-233.46C382.28,-207.4 374.14,-170.52 368.3,-144.05"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="370.61,-143.18 366.71,-136.88 365.83,-144.24 370.61,-143.18"/>
+<text text-anchor="middle" x="392" y="-185" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> no</text>
+</g>
+<g id="node10" class="node">
+<title>Inv</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M470.5,-40C470.5,-40 251.5,-40 251.5,-40 245.5,-40 239.5,-34 239.5,-28 239.5,-28 239.5,-12 239.5,-12 239.5,-6 245.5,0 251.5,0 251.5,0 470.5,0 470.5,0 476.5,0 482.5,-6 482.5,-12 482.5,-12 482.5,-28 482.5,-28 482.5,-34 476.5,-40 470.5,-40"/>
+<text text-anchor="middle" x="361" y="-23.4" font-family="Helvetica,sans-Serif" font-size="12.00">Recorded in the model inventory</text>
+<text text-anchor="middle" x="361" y="-10.4" font-family="Helvetica,sans-Serif" font-size="12.00">owner, tier, status, next review date</text>
+</g>
+<g id="edge10" class="edge">
+<title>T1&#45;&gt;Inv</title>
+<path fill="none" stroke="#4b5563" d="M522.58,-76.98C489.35,-65.47 452.7,-52.77 422.72,-42.38"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="423.45,-40.04 416.03,-40.07 421.84,-44.67 423.45,-40.04"/>
+</g>
+<g id="edge11" class="edge">
+<title>T2&#45;&gt;Inv</title>
+<path fill="none" stroke="#4b5563" d="M361,-83.07C361,-71.76 361,-58.52 361,-47.18"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="363.45,-47.04 361,-40.04 358.55,-47.04 363.45,-47.04"/>
+</g>
+<g id="edge12" class="edge">
+<title>T3&#45;&gt;Inv</title>
+<path fill="none" stroke="#4b5563" d="M217.6,-160.78C217.63,-136.7 221.29,-100.94 240,-77 251.45,-62.35 267.63,-51.38 284.44,-43.22"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="285.84,-45.28 291.16,-40.12 283.78,-40.83 285.84,-45.28"/>
+</g>
+</g>
+</svg>

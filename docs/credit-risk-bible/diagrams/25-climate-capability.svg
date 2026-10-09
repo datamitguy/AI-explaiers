@@ -1,0 +1,194 @@
+<svg width="100%"
+ viewBox="0.00 0.00 1220.80 775.30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 760.9)">
+<title>ClimateCapability</title>
+<polygon fill="white" stroke="transparent" points="-14.4,14.4 -14.4,-760.9 1206.4,-760.9 1206.4,14.4 -14.4,14.4"/>
+<g id="clust1" class="cluster">
+<title>cluster_s1</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M811,-498.5C811,-498.5 1172,-498.5 1172,-498.5 1178,-498.5 1184,-504.5 1184,-510.5 1184,-510.5 1184,-667.5 1184,-667.5 1184,-673.5 1178,-679.5 1172,-679.5 1172,-679.5 811,-679.5 811,-679.5 805,-679.5 799,-673.5 799,-667.5 799,-667.5 799,-510.5 799,-510.5 799,-504.5 805,-498.5 811,-498.5"/>
+<text text-anchor="middle" x="991.5" y="-665.1" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">Stage 1: see the exposure (months 0 to 6)</text>
+</g>
+<g id="clust2" class="cluster">
+<title>cluster_s2</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M806,-8C806,-8 1033,-8 1033,-8 1039,-8 1045,-14 1045,-20 1045,-20 1045,-467.5 1045,-467.5 1045,-473.5 1039,-479.5 1033,-479.5 1033,-479.5 806,-479.5 806,-479.5 800,-479.5 794,-473.5 794,-467.5 794,-467.5 794,-20 794,-20 794,-14 800,-8 806,-8"/>
+<text text-anchor="middle" x="919.5" y="-465.1" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">Stage 2: measure (months 6 to 18)</text>
+</g>
+<g id="clust3" class="cluster">
+<title>cluster_s3</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M20,-112.5C20,-112.5 623,-112.5 623,-112.5 629,-112.5 635,-118.5 635,-124.5 635,-124.5 635,-178.5 635,-178.5 635,-184.5 629,-190.5 623,-190.5 623,-190.5 20,-190.5 20,-190.5 14,-190.5 8,-184.5 8,-178.5 8,-178.5 8,-124.5 8,-124.5 8,-118.5 14,-112.5 20,-112.5"/>
+<text text-anchor="middle" x="321.5" y="-176.1" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">Stage 3: manage (18 months onwards)</text>
+</g>
+<g id="node1" class="node">
+<title>Start</title>
+<path fill="#1f2937" stroke="#1f2937" d="M1089,-746.5C1089,-746.5 917,-746.5 917,-746.5 911,-746.5 905,-740.5 905,-734.5 905,-734.5 905,-718.5 905,-718.5 905,-712.5 911,-706.5 917,-706.5 917,-706.5 1089,-706.5 1089,-706.5 1095,-706.5 1101,-712.5 1101,-718.5 1101,-718.5 1101,-734.5 1101,-734.5 1101,-740.5 1095,-746.5 1089,-746.5"/>
+<text text-anchor="middle" x="1003" y="-729.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Credit team starts from zero</text>
+<text text-anchor="middle" x="1003" y="-716.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">on climate and ESG</text>
+</g>
+<g id="node2" class="node">
+<title>Tag</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M991,-643C991,-643 819,-643 819,-643 813,-643 807,-637 807,-631 807,-631 807,-615 807,-615 807,-609 813,-603 819,-603 819,-603 991,-603 991,-603 997,-603 1003,-609 1003,-615 1003,-615 1003,-631 1003,-631 1003,-637 997,-643 991,-643"/>
+<text text-anchor="middle" x="905" y="-626.4" font-family="Helvetica,sans-Serif" font-size="12.00">Tag every borrower with</text>
+<text text-anchor="middle" x="905" y="-613.4" font-family="Helvetica,sans-Serif" font-size="12.00">sector and sub&#45;sector codes</text>
+</g>
+<g id="edge7" class="edge">
+<title>Start&#45;&gt;Tag</title>
+<path fill="none" stroke="#4b5563" d="M984.57,-706.41C968.69,-689.96 945.68,-666.13 928.49,-648.32"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="929.98,-646.34 923.35,-643.01 926.45,-649.74 929.98,-646.34"/>
+</g>
+<g id="node4" class="node">
+<title>Geo</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M1163.5,-649.5C1163.5,-649.5 1040.5,-649.5 1040.5,-649.5 1034.5,-649.5 1028.5,-643.5 1028.5,-637.5 1028.5,-637.5 1028.5,-608.5 1028.5,-608.5 1028.5,-602.5 1034.5,-596.5 1040.5,-596.5 1040.5,-596.5 1163.5,-596.5 1163.5,-596.5 1169.5,-596.5 1175.5,-602.5 1175.5,-608.5 1175.5,-608.5 1175.5,-637.5 1175.5,-637.5 1175.5,-643.5 1169.5,-649.5 1163.5,-649.5"/>
+<text text-anchor="middle" x="1102" y="-632.9" font-family="Helvetica,sans-Serif" font-size="12.00">Geolocate collateral</text>
+<text text-anchor="middle" x="1102" y="-619.9" font-family="Helvetica,sans-Serif" font-size="12.00">postcode, flood and</text>
+<text text-anchor="middle" x="1102" y="-606.9" font-family="Helvetica,sans-Serif" font-size="12.00">hazard overlays</text>
+</g>
+<g id="edge8" class="edge">
+<title>Start&#45;&gt;Geo</title>
+<path fill="none" stroke="#4b5563" d="M1021.62,-706.41C1035.83,-691.84 1055.7,-671.47 1072.13,-654.63"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="1073.97,-656.24 1077.11,-649.52 1070.46,-652.82 1073.97,-656.24"/>
+</g>
+<g id="node3" class="node">
+<title>Heat</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M1068.5,-559.5C1068.5,-559.5 931.5,-559.5 931.5,-559.5 925.5,-559.5 919.5,-553.5 919.5,-547.5 919.5,-547.5 919.5,-518.5 919.5,-518.5 919.5,-512.5 925.5,-506.5 931.5,-506.5 931.5,-506.5 1068.5,-506.5 1068.5,-506.5 1074.5,-506.5 1080.5,-512.5 1080.5,-518.5 1080.5,-518.5 1080.5,-547.5 1080.5,-547.5 1080.5,-553.5 1074.5,-559.5 1068.5,-559.5"/>
+<text text-anchor="middle" x="1000" y="-542.9" font-family="Helvetica,sans-Serif" font-size="12.00">Sector heatmap</text>
+<text text-anchor="middle" x="1000" y="-529.9" font-family="Helvetica,sans-Serif" font-size="12.00">high, medium, low</text>
+<text text-anchor="middle" x="1000" y="-516.9" font-family="Helvetica,sans-Serif" font-size="12.00">physical and transition</text>
+</g>
+<g id="edge1" class="edge">
+<title>Tag&#45;&gt;Heat</title>
+<path fill="none" stroke="#4b5563" d="M925.61,-602.91C937.66,-591.75 953.14,-577.41 966.86,-564.7"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="968.75,-566.29 972.22,-559.74 965.42,-562.7 968.75,-566.29"/>
+</g>
+<g id="node5" class="node">
+<title>Qn</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M990.5,-449.5C990.5,-449.5 817.5,-449.5 817.5,-449.5 811.5,-449.5 805.5,-443.5 805.5,-437.5 805.5,-437.5 805.5,-421.5 805.5,-421.5 805.5,-415.5 811.5,-409.5 817.5,-409.5 817.5,-409.5 990.5,-409.5 990.5,-409.5 996.5,-409.5 1002.5,-415.5 1002.5,-421.5 1002.5,-421.5 1002.5,-437.5 1002.5,-437.5 1002.5,-443.5 996.5,-449.5 990.5,-449.5"/>
+<text text-anchor="middle" x="904" y="-432.9" font-family="Helvetica,sans-Serif" font-size="12.00">Counterparty questionnaires</text>
+<text text-anchor="middle" x="904" y="-419.9" font-family="Helvetica,sans-Serif" font-size="12.00">emissions, targets, plans</text>
+</g>
+<g id="edge9" class="edge">
+<title>Heat&#45;&gt;Qn</title>
+<path fill="none" stroke="#4b5563" d="M975.78,-506.39C960.8,-490.56 941.7,-470.36 926.97,-454.79"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="928.75,-453.1 922.16,-449.7 925.19,-456.46 928.75,-453.1"/>
+</g>
+<g id="node6" class="node">
+<title>Data</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M1009.5,-56C1009.5,-56 814.5,-56 814.5,-56 808.5,-56 802.5,-50 802.5,-44 802.5,-44 802.5,-28 802.5,-28 802.5,-22 808.5,-16 814.5,-16 814.5,-16 1009.5,-16 1009.5,-16 1015.5,-16 1021.5,-22 1021.5,-28 1021.5,-28 1021.5,-44 1021.5,-44 1021.5,-50 1015.5,-56 1009.5,-56"/>
+<text text-anchor="middle" x="912" y="-39.4" font-family="Helvetica,sans-Serif" font-size="12.00">Buy or build emissions and</text>
+<text text-anchor="middle" x="912" y="-26.4" font-family="Helvetica,sans-Serif" font-size="12.00">hazard data, record quality flags</text>
+</g>
+<g id="edge10" class="edge">
+<title>Heat&#45;&gt;Data</title>
+<path fill="none" stroke="#4b5563" d="M1017.08,-506.49C1028.71,-486.64 1042,-457.96 1042,-430.5 1042,-430.5 1042,-430.5 1042,-139.5 1042,-109.42 1045.59,-95.92 1025,-74 1019.75,-68.41 1013.65,-63.67 1007.05,-59.64"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="1008.16,-57.45 1000.86,-56.14 1005.74,-61.72 1008.16,-57.45"/>
+</g>
+<g id="edge2" class="edge">
+<title>Geo&#45;&gt;Heat</title>
+<path fill="none" stroke="#4b5563" d="M1072.22,-596.31C1060.6,-586.28 1047.18,-574.7 1035.09,-564.27"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="1036.54,-562.29 1029.64,-559.57 1033.34,-566 1036.54,-562.29"/>
+</g>
+<g id="node7" class="node">
+<title>Scen</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M991.5,-372.5C991.5,-372.5 814.5,-372.5 814.5,-372.5 808.5,-372.5 802.5,-366.5 802.5,-360.5 802.5,-360.5 802.5,-344.5 802.5,-344.5 802.5,-338.5 808.5,-332.5 814.5,-332.5 814.5,-332.5 991.5,-332.5 991.5,-332.5 997.5,-332.5 1003.5,-338.5 1003.5,-344.5 1003.5,-344.5 1003.5,-360.5 1003.5,-360.5 1003.5,-366.5 997.5,-372.5 991.5,-372.5"/>
+<text text-anchor="middle" x="903" y="-355.9" font-family="Helvetica,sans-Serif" font-size="12.00">Scenario analysis</text>
+<text text-anchor="middle" x="903" y="-342.9" font-family="Helvetica,sans-Serif" font-size="12.00">orderly, disorderly, hot house</text>
+</g>
+<g id="edge3" class="edge">
+<title>Qn&#45;&gt;Scen</title>
+<path fill="none" stroke="#4b5563" d="M903.74,-409.19C903.62,-400.26 903.48,-389.53 903.35,-379.87"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="905.8,-379.72 903.26,-372.75 900.9,-379.78 905.8,-379.72"/>
+</g>
+<g id="edge4" class="edge">
+<title>Data&#45;&gt;Scen</title>
+<path fill="none" stroke="#4b5563" d="M911.45,-56.35C909.9,-110.48 905.52,-263.55 903.75,-325.24"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="901.3,-325.23 903.55,-332.3 906.2,-325.37 901.3,-325.23"/>
+</g>
+<g id="node11" class="node">
+<title>Q</title>
+<polygon fill="#fef3c7" stroke="#d97706" points="539,-295.5 419,-261.5 539,-227.5 659,-261.5 539,-295.5"/>
+<text text-anchor="middle" x="539" y="-264.9" font-family="Helvetica,sans-Serif" font-size="12.00">Data good enough</text>
+<text text-anchor="middle" x="539" y="-251.9" font-family="Helvetica,sans-Serif" font-size="12.00">to quantify?</text>
+</g>
+<g id="edge11" class="edge">
+<title>Scen&#45;&gt;Q</title>
+<path fill="none" stroke="#4b5563" d="M824.91,-332.41C760.65,-316.69 670.39,-294.62 608.57,-279.51"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="608.94,-277.08 601.55,-277.79 607.77,-281.84 608.94,-277.08"/>
+</g>
+<g id="node8" class="node">
+<title>App</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M614.5,-160.5C614.5,-160.5 463.5,-160.5 463.5,-160.5 457.5,-160.5 451.5,-154.5 451.5,-148.5 451.5,-148.5 451.5,-132.5 451.5,-132.5 451.5,-126.5 457.5,-120.5 463.5,-120.5 463.5,-120.5 614.5,-120.5 614.5,-120.5 620.5,-120.5 626.5,-126.5 626.5,-132.5 626.5,-132.5 626.5,-148.5 626.5,-148.5 626.5,-154.5 620.5,-160.5 614.5,-160.5"/>
+<text text-anchor="middle" x="539" y="-143.9" font-family="Helvetica,sans-Serif" font-size="12.00">Risk appetite statements</text>
+<text text-anchor="middle" x="539" y="-130.9" font-family="Helvetica,sans-Serif" font-size="12.00">and sector limits</text>
+</g>
+<g id="node9" class="node">
+<title>Rat</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M205.5,-160.5C205.5,-160.5 28.5,-160.5 28.5,-160.5 22.5,-160.5 16.5,-154.5 16.5,-148.5 16.5,-148.5 16.5,-132.5 16.5,-132.5 16.5,-126.5 22.5,-120.5 28.5,-120.5 28.5,-120.5 205.5,-120.5 205.5,-120.5 211.5,-120.5 217.5,-126.5 217.5,-132.5 217.5,-132.5 217.5,-148.5 217.5,-148.5 217.5,-154.5 211.5,-160.5 205.5,-160.5"/>
+<text text-anchor="middle" x="117" y="-143.9" font-family="Helvetica,sans-Serif" font-size="12.00">Rating overlays or</text>
+<text text-anchor="middle" x="117" y="-130.9" font-family="Helvetica,sans-Serif" font-size="12.00">climate&#45;adjusted PD and LGD</text>
+</g>
+<g id="node13" class="node">
+<title>End</title>
+<path fill="#065f46" stroke="#065f46" d="M413,-56C413,-56 281,-56 281,-56 275,-56 269,-50 269,-44 269,-44 269,-28 269,-28 269,-22 275,-16 281,-16 281,-16 413,-16 413,-16 419,-16 425,-22 425,-28 425,-28 425,-44 425,-44 425,-50 419,-56 413,-56"/>
+<text text-anchor="middle" x="347" y="-39.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Climate embedded in</text>
+<text text-anchor="middle" x="347" y="-26.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">normal credit process</text>
+</g>
+<g id="edge17" class="edge">
+<title>App&#45;&gt;End</title>
+<path fill="none" stroke="#4b5563" d="M503.34,-120.46C470.97,-103.18 423.22,-77.69 389.02,-59.43"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="390.13,-57.25 382.8,-56.11 387.82,-61.57 390.13,-57.25"/>
+</g>
+<g id="node10" class="node">
+<title>Disc</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M414.5,-160.5C414.5,-160.5 279.5,-160.5 279.5,-160.5 273.5,-160.5 267.5,-154.5 267.5,-148.5 267.5,-148.5 267.5,-132.5 267.5,-132.5 267.5,-126.5 273.5,-120.5 279.5,-120.5 279.5,-120.5 414.5,-120.5 414.5,-120.5 420.5,-120.5 426.5,-126.5 426.5,-132.5 426.5,-132.5 426.5,-148.5 426.5,-148.5 426.5,-154.5 420.5,-160.5 414.5,-160.5"/>
+<text text-anchor="middle" x="347" y="-143.9" font-family="Helvetica,sans-Serif" font-size="12.00">Disclosure and</text>
+<text text-anchor="middle" x="347" y="-130.9" font-family="Helvetica,sans-Serif" font-size="12.00">regulatory stress tests</text>
+</g>
+<g id="edge18" class="edge">
+<title>Rat&#45;&gt;End</title>
+<path fill="none" stroke="#4b5563" d="M159.72,-120.46C198.81,-103.04 256.64,-77.27 297.68,-58.98"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="298.72,-61.2 304.12,-56.11 296.73,-56.72 298.72,-61.2"/>
+</g>
+<g id="edge19" class="edge">
+<title>Disc&#45;&gt;End</title>
+<path fill="none" stroke="#4b5563" d="M347,-120.22C347,-104.19 347,-81.2 347,-63.45"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="349.45,-63.19 347,-56.19 344.55,-63.19 349.45,-63.19"/>
+</g>
+<g id="edge14" class="edge">
+<title>Q&#45;&gt;App</title>
+<path fill="none" stroke="#4b5563" d="M539,-227.35C539,-208.58 539,-185.42 539,-167.88"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="541.45,-167.74 539,-160.74 536.55,-167.74 541.45,-167.74"/>
+<text text-anchor="middle" x="549.5" y="-201.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> yes</text>
+</g>
+<g id="edge15" class="edge">
+<title>Q&#45;&gt;Rat</title>
+<path fill="none" stroke="#4b5563" d="M472.79,-246.14C414.91,-233.13 328.81,-212.64 255,-190.5 227.96,-182.39 198.4,-172.09 173.61,-163.03"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="174.17,-160.63 166.75,-160.52 172.48,-165.23 174.17,-160.63"/>
+<text text-anchor="middle" x="326.5" y="-201.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> yes</text>
+</g>
+<g id="edge16" class="edge">
+<title>Q&#45;&gt;Disc</title>
+<path fill="none" stroke="#4b5563" d="M502.43,-237.84C468.43,-216.76 418.02,-185.52 383.9,-164.37"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="384.97,-162.15 377.73,-160.55 382.39,-166.32 384.97,-162.15"/>
+<text text-anchor="middle" x="464.5" y="-201.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> yes</text>
+</g>
+<g id="node12" class="node">
+<title>Qual</title>
+<path fill="#6b7280" stroke="#6b7280" d="M774,-167C774,-167 664,-167 664,-167 658,-167 652,-161 652,-155 652,-155 652,-126 652,-126 652,-120 658,-114 664,-114 664,-114 774,-114 774,-114 780,-114 786,-120 786,-126 786,-126 786,-155 786,-155 786,-161 780,-167 774,-167"/>
+<text text-anchor="middle" x="719" y="-150.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Stay qualitative:</text>
+<text text-anchor="middle" x="719" y="-137.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">flags, overlays,</text>
+<text text-anchor="middle" x="719" y="-124.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">expert judgement</text>
+</g>
+<g id="edge12" class="edge">
+<title>Q&#45;&gt;Qual</title>
+<path fill="none" stroke="#4b5563" d="M574.13,-237.27C602.72,-218.38 643.24,-191.59 674.16,-171.14"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="675.72,-173.05 680.21,-167.14 673.02,-168.96 675.72,-173.05"/>
+<text text-anchor="middle" x="637" y="-201.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> no</text>
+</g>
+<g id="edge13" class="edge">
+<title>Qual&#45;&gt;Data</title>
+<path fill="none" stroke="#4b5563" d="M767.2,-113.9C798.68,-97.18 839.4,-75.56 869.64,-59.5"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="870.89,-61.61 875.92,-56.16 868.59,-57.28 870.89,-61.61"/>
+<text text-anchor="middle" x="860" y="-88" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> improve</text>
+<text text-anchor="middle" x="860" y="-77" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> data</text>
+</g>
+</g>
+</svg>

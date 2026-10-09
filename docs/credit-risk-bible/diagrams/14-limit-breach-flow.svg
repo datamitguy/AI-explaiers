@@ -1,0 +1,185 @@
+<svg width="100%"
+ viewBox="0.00 0.00 906.30 783.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 769.4)">
+<title>LimitBreachFlow</title>
+<polygon fill="white" stroke="transparent" points="-14.4,14.4 -14.4,-769.4 891.9,-769.4 891.9,14.4 -14.4,14.4"/>
+<g id="node1" class="node">
+<title>Start</title>
+<path fill="#1f2937" stroke="#1f2937" d="M443.5,-755C443.5,-755 234.5,-755 234.5,-755 228.5,-755 222.5,-749 222.5,-743 222.5,-743 222.5,-727 222.5,-727 222.5,-721 228.5,-715 234.5,-715 234.5,-715 443.5,-715 443.5,-715 449.5,-715 455.5,-721 455.5,-727 455.5,-727 455.5,-743 455.5,-743 455.5,-749 449.5,-755 443.5,-755"/>
+<text text-anchor="middle" x="339" y="-738.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Limit utilisation measured</text>
+<text text-anchor="middle" x="339" y="-725.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">(pre&#45;deal check or end&#45;of&#45;day run)</text>
+</g>
+<g id="node2" class="node">
+<title>Q1</title>
+<polygon fill="#fef3c7" stroke="#d97706" points="339,-678 231,-644 339,-610 447,-644 339,-678"/>
+<text text-anchor="middle" x="339" y="-647.4" font-family="Helvetica,sans-Serif" font-size="12.00">Utilisation above</text>
+<text text-anchor="middle" x="339" y="-634.4" font-family="Helvetica,sans-Serif" font-size="12.00">the limit?</text>
+</g>
+<g id="edge1" class="edge">
+<title>Start&#45;&gt;Q1</title>
+<path fill="none" stroke="#4b5563" d="M339,-714.69C339,-706.05 339,-695.52 339,-685.29"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="341.45,-685.28 339,-678.28 336.55,-685.28 341.45,-685.28"/>
+</g>
+<g id="node3" class="node">
+<title>Q2</title>
+<polygon fill="#fef3c7" stroke="#d97706" points="154,-550 0,-516 154,-482 308,-516 154,-550"/>
+<text text-anchor="middle" x="154" y="-519.4" font-family="Helvetica,sans-Serif" font-size="12.00">Above the early warning</text>
+<text text-anchor="middle" x="154" y="-506.4" font-family="Helvetica,sans-Serif" font-size="12.00">threshold (e.g. 85%)?</text>
+</g>
+<g id="edge2" class="edge">
+<title>Q1&#45;&gt;Q2</title>
+<path fill="none" stroke="#4b5563" d="M305.5,-620.18C275.01,-599.42 229.85,-568.66 196.77,-546.13"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="197.91,-543.94 190.74,-542.02 195.15,-547.99 197.91,-543.94"/>
+<text text-anchor="middle" x="272" y="-584" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> no</text>
+</g>
+<g id="node6" class="node">
+<title>Q3</title>
+<polygon fill="#fef3c7" stroke="#d97706" points="524,-563 333,-516 524,-469 715,-516 524,-563"/>
+<text text-anchor="middle" x="524" y="-525.9" font-family="Helvetica,sans-Serif" font-size="12.00">Active breach (new deal) or</text>
+<text text-anchor="middle" x="524" y="-512.9" font-family="Helvetica,sans-Serif" font-size="12.00">passive breach (market move,</text>
+<text text-anchor="middle" x="524" y="-499.9" font-family="Helvetica,sans-Serif" font-size="12.00">rating change, FX)?</text>
+</g>
+<g id="edge5" class="edge">
+<title>Q1&#45;&gt;Q3</title>
+<path fill="none" stroke="#4b5563" d="M372.5,-620.18C399.15,-602.03 437.01,-576.24 468.22,-554.99"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="469.96,-556.77 474.37,-550.8 467.2,-552.72 469.96,-556.77"/>
+<text text-anchor="middle" x="436.5" y="-584" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> yes</text>
+</g>
+<g id="node4" class="node">
+<title>Green</title>
+<path fill="#065f46" stroke="#065f46" d="M155.5,-415.5C155.5,-415.5 50.5,-415.5 50.5,-415.5 44.5,-415.5 38.5,-409.5 38.5,-403.5 38.5,-403.5 38.5,-387.5 38.5,-387.5 38.5,-381.5 44.5,-375.5 50.5,-375.5 50.5,-375.5 155.5,-375.5 155.5,-375.5 161.5,-375.5 167.5,-381.5 167.5,-387.5 167.5,-387.5 167.5,-403.5 167.5,-403.5 167.5,-409.5 161.5,-415.5 155.5,-415.5"/>
+<text text-anchor="middle" x="103" y="-398.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Green: no action,</text>
+<text text-anchor="middle" x="103" y="-385.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">report utilisation</text>
+</g>
+<g id="edge3" class="edge">
+<title>Q2&#45;&gt;Green</title>
+<path fill="none" stroke="#4b5563" d="M141,-484.79C132.64,-465.37 121.9,-440.42 113.97,-422"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="116.21,-420.99 111.19,-415.53 111.71,-422.93 116.21,-420.99"/>
+<text text-anchor="middle" x="134" y="-443" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> no</text>
+</g>
+<g id="node5" class="node">
+<title>Amber</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M286.5,-351C286.5,-351 125.5,-351 125.5,-351 119.5,-351 113.5,-345 113.5,-339 113.5,-339 113.5,-310 113.5,-310 113.5,-304 119.5,-298 125.5,-298 125.5,-298 286.5,-298 286.5,-298 292.5,-298 298.5,-304 298.5,-310 298.5,-310 298.5,-339 298.5,-339 298.5,-345 292.5,-351 286.5,-351"/>
+<text text-anchor="middle" x="206" y="-334.4" font-family="Helvetica,sans-Serif" font-size="12.00">Amber: warn the business,</text>
+<text text-anchor="middle" x="206" y="-321.4" font-family="Helvetica,sans-Serif" font-size="12.00">no new exposure without</text>
+<text text-anchor="middle" x="206" y="-308.4" font-family="Helvetica,sans-Serif" font-size="12.00">credit sign&#45;off</text>
+</g>
+<g id="edge4" class="edge">
+<title>Q2&#45;&gt;Amber</title>
+<path fill="none" stroke="#4b5563" d="M162.86,-483.6C167.92,-465.58 174.36,-442.53 180,-422 185.8,-400.88 192.2,-377.12 197.2,-358.46"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="199.67,-358.72 199.11,-351.32 194.94,-357.45 199.67,-358.72"/>
+<text text-anchor="middle" x="185.5" y="-443" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> yes</text>
+</g>
+<g id="node14" class="node">
+<title>Report</title>
+<path fill="#1e3a8a" stroke="#1e3a8a" d="M545.5,-53C545.5,-53 384.5,-53 384.5,-53 378.5,-53 372.5,-47 372.5,-41 372.5,-41 372.5,-12 372.5,-12 372.5,-6 378.5,0 384.5,0 384.5,0 545.5,0 545.5,0 551.5,0 557.5,-6 557.5,-12 557.5,-12 557.5,-41 557.5,-41 557.5,-47 551.5,-53 545.5,-53"/>
+<text text-anchor="middle" x="465" y="-36.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">All breaches reported to</text>
+<text text-anchor="middle" x="465" y="-23.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">risk committee monthly</text>
+<text text-anchor="middle" x="465" y="-10.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">and to the board quarterly</text>
+</g>
+<g id="edge14" class="edge">
+<title>Amber&#45;&gt;Report</title>
+<path fill="none" stroke="#4b5563" d="M206,-297.63C206,-277.12 206,-247.73 206,-222 206,-222 206,-222 206,-109 206,-74.18 292.25,-52.41 365.21,-40.22"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="365.72,-42.62 372.23,-39.07 364.92,-37.78 365.72,-42.62"/>
+</g>
+<g id="node7" class="node">
+<title>Active</title>
+<path fill="#991b1b" stroke="#991b1b" d="M540.5,-422C540.5,-422 347.5,-422 347.5,-422 341.5,-422 335.5,-416 335.5,-410 335.5,-410 335.5,-381 335.5,-381 335.5,-375 341.5,-369 347.5,-369 347.5,-369 540.5,-369 540.5,-369 546.5,-369 552.5,-375 552.5,-381 552.5,-381 552.5,-410 552.5,-410 552.5,-416 546.5,-422 540.5,-422"/>
+<text text-anchor="middle" x="444" y="-405.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Active breach: deal should have</text>
+<text text-anchor="middle" x="444" y="-392.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">been blocked; incident raised,</text>
+<text text-anchor="middle" x="444" y="-379.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">root cause investigated</text>
+</g>
+<g id="edge6" class="edge">
+<title>Q3&#45;&gt;Active</title>
+<path fill="none" stroke="#4b5563" d="M497.36,-475.54C486.94,-460.11 475.15,-442.65 465.31,-428.07"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="467.17,-426.45 461.22,-422.01 463.11,-429.19 467.17,-426.45"/>
+<text text-anchor="middle" x="497" y="-443" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> active</text>
+</g>
+<g id="node8" class="node">
+<title>Passive</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M758.5,-415.5C758.5,-415.5 589.5,-415.5 589.5,-415.5 583.5,-415.5 577.5,-409.5 577.5,-403.5 577.5,-403.5 577.5,-387.5 577.5,-387.5 577.5,-381.5 583.5,-375.5 589.5,-375.5 589.5,-375.5 758.5,-375.5 758.5,-375.5 764.5,-375.5 770.5,-381.5 770.5,-387.5 770.5,-387.5 770.5,-403.5 770.5,-403.5 770.5,-409.5 764.5,-415.5 758.5,-415.5"/>
+<text text-anchor="middle" x="674" y="-398.9" font-family="Helvetica,sans-Serif" font-size="12.00">Passive breach: record,</text>
+<text text-anchor="middle" x="674" y="-385.9" font-family="Helvetica,sans-Serif" font-size="12.00">explain cause, propose plan</text>
+</g>
+<g id="edge7" class="edge">
+<title>Q3&#45;&gt;Passive</title>
+<path fill="none" stroke="#4b5563" d="M568.6,-479.77C593.02,-460.48 622.61,-437.1 644.21,-420.03"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="645.83,-421.88 649.8,-415.62 642.79,-418.03 645.83,-421.88"/>
+<text text-anchor="middle" x="637.5" y="-443" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> passive</text>
+</g>
+<g id="node9" class="node">
+<title>Esc</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M664.5,-280C664.5,-280 495.5,-280 495.5,-280 489.5,-280 483.5,-274 483.5,-268 483.5,-268 483.5,-252 483.5,-252 483.5,-246 489.5,-240 495.5,-240 495.5,-240 664.5,-240 664.5,-240 670.5,-240 676.5,-246 676.5,-252 676.5,-252 676.5,-268 676.5,-268 676.5,-274 670.5,-280 664.5,-280"/>
+<text text-anchor="middle" x="580" y="-263.4" font-family="Helvetica,sans-Serif" font-size="12.00">Escalate to the limit owner</text>
+<text text-anchor="middle" x="580" y="-250.4" font-family="Helvetica,sans-Serif" font-size="12.00">within agreed hours or days</text>
+</g>
+<g id="edge8" class="edge">
+<title>Active&#45;&gt;Esc</title>
+<path fill="none" stroke="#4b5563" d="M470.22,-368.76C494.76,-344.67 531.16,-308.94 555.22,-285.32"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="557.18,-286.83 560.46,-280.18 553.75,-283.34 557.18,-286.83"/>
+</g>
+<g id="edge9" class="edge">
+<title>Passive&#45;&gt;Esc</title>
+<path fill="none" stroke="#4b5563" d="M660.53,-375.37C643.99,-351.88 615.88,-311.96 597.63,-286.04"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="599.48,-284.4 593.44,-280.09 595.47,-287.23 599.48,-284.4"/>
+</g>
+<g id="node10" class="node">
+<title>Decide</title>
+<polygon fill="#fef3c7" stroke="#d97706" points="580,-203 467.89,-185 580,-167 692.11,-185 580,-203"/>
+<text text-anchor="middle" x="580" y="-181.9" font-family="Helvetica,sans-Serif" font-size="12.00">Limit owner decides</text>
+</g>
+<g id="edge10" class="edge">
+<title>Esc&#45;&gt;Decide</title>
+<path fill="none" stroke="#4b5563" d="M580,-239.82C580,-230.8 580,-219.94 580,-210.34"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="582.45,-210.31 580,-203.31 577.55,-210.31 582.45,-210.31"/>
+</g>
+<g id="node11" class="node">
+<title>Reduce</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M445.5,-130C445.5,-130 256.5,-130 256.5,-130 250.5,-130 244.5,-124 244.5,-118 244.5,-118 244.5,-102 244.5,-102 244.5,-96 250.5,-90 256.5,-90 256.5,-90 445.5,-90 445.5,-90 451.5,-90 457.5,-96 457.5,-102 457.5,-102 457.5,-118 457.5,-118 457.5,-124 451.5,-130 445.5,-130"/>
+<text text-anchor="middle" x="351" y="-113.4" font-family="Helvetica,sans-Serif" font-size="12.00">Reduce exposure</text>
+<text text-anchor="middle" x="351" y="-100.4" font-family="Helvetica,sans-Serif" font-size="12.00">(sell down, hedge, let it run off)</text>
+</g>
+<g id="edge11" class="edge">
+<title>Decide&#45;&gt;Reduce</title>
+<path fill="none" stroke="#4b5563" d="M544.22,-172.59C510.5,-161.84 459.12,-145.47 417.82,-132.3"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="418.43,-129.92 411.02,-130.13 416.94,-134.59 418.43,-129.92"/>
+</g>
+<g id="node12" class="node">
+<title>Temp</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M665.5,-130C665.5,-130 494.5,-130 494.5,-130 488.5,-130 482.5,-124 482.5,-118 482.5,-118 482.5,-102 482.5,-102 482.5,-96 488.5,-90 494.5,-90 494.5,-90 665.5,-90 665.5,-90 671.5,-90 677.5,-96 677.5,-102 677.5,-102 677.5,-118 677.5,-118 677.5,-124 671.5,-130 665.5,-130"/>
+<text text-anchor="middle" x="580" y="-113.4" font-family="Helvetica,sans-Serif" font-size="12.00">Temporary excess approved</text>
+<text text-anchor="middle" x="580" y="-100.4" font-family="Helvetica,sans-Serif" font-size="12.00">with expiry date</text>
+</g>
+<g id="edge12" class="edge">
+<title>Decide&#45;&gt;Temp</title>
+<path fill="none" stroke="#4b5563" d="M580,-166.7C580,-157.96 580,-147.18 580,-137.43"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="582.45,-137.23 580,-130.23 577.55,-137.23 582.45,-137.23"/>
+</g>
+<g id="node13" class="node">
+<title>Raise</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M865.5,-130C865.5,-130 714.5,-130 714.5,-130 708.5,-130 702.5,-124 702.5,-118 702.5,-118 702.5,-102 702.5,-102 702.5,-96 708.5,-90 714.5,-90 714.5,-90 865.5,-90 865.5,-90 871.5,-90 877.5,-96 877.5,-102 877.5,-102 877.5,-118 877.5,-118 877.5,-124 871.5,-130 865.5,-130"/>
+<text text-anchor="middle" x="790" y="-113.4" font-family="Helvetica,sans-Serif" font-size="12.00">Raise the limit</text>
+<text text-anchor="middle" x="790" y="-100.4" font-family="Helvetica,sans-Serif" font-size="12.00">(needs the next level up)</text>
+</g>
+<g id="edge13" class="edge">
+<title>Decide&#45;&gt;Raise</title>
+<path fill="none" stroke="#4b5563" d="M613.74,-172.27C644.52,-161.57 690.77,-145.49 728.17,-132.49"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="729.24,-134.72 735.04,-130.1 727.63,-130.09 729.24,-134.72"/>
+</g>
+<g id="edge15" class="edge">
+<title>Reduce&#45;&gt;Report</title>
+<path fill="none" stroke="#4b5563" d="M377.73,-89.89C391.21,-80.26 407.87,-68.35 423.01,-57.52"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="424.67,-59.34 428.94,-53.28 421.83,-55.35 424.67,-59.34"/>
+</g>
+<g id="edge16" class="edge">
+<title>Temp&#45;&gt;Report</title>
+<path fill="none" stroke="#4b5563" d="M553.04,-89.89C539.44,-80.26 522.63,-68.35 507.36,-57.52"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="508.5,-55.33 501.37,-53.28 505.67,-59.32 508.5,-55.33"/>
+</g>
+<g id="edge17" class="edge">
+<title>Raise&#45;&gt;Report</title>
+<path fill="none" stroke="#4b5563" d="M714.21,-89.99C669.7,-78.83 612.9,-64.59 564.78,-52.52"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="565.13,-50.08 557.75,-50.76 563.94,-54.84 565.13,-50.08"/>
+</g>
+</g>
+</svg>
