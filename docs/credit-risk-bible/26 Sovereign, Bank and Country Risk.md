@@ -1,309 +1,467 @@
 # Sovereign, Bank and Country Risk
 
-**Why this matters to you.** Most of this vault is about lending to companies and people. This note is about the two kinds of borrower that are supposed to be the safest in the system and occasionally are not: governments and other banks. Governments default more often than most people think, and when they do, every company and bank in that country goes down with them. Banks lend to each other every day in enormous amounts, through channels most outsiders never see, and the failure of one bank can cascade through those channels to others. Measuring these exposures needs a different lens from corporate credit: country ratings, sovereign ceilings, transfer risk, bail-in rules, and a way of adding up exposure by *where the risk really sits* rather than where the borrower happens to be registered. That last piece, country exposure aggregation on an ultimate risk basis, is one of the hardest data problems in credit risk and one the regulator will ask about the moment a country gets into trouble.
+**Why this matters to you.** Most notes in this vault are about lending to people and companies. This one is about the counterparties underneath everyone else: governments, other banks, and whole countries. A government can print its own money but can still default; another bank is both your competitor and a counterparty you lend to every day; a perfectly healthy company can fail to repay you because its government has forbidden it from buying dollars. These exposures are large, short-dated and fast-moving, and they are added up in an unusual way (by *country of risk*, not by where the borrower happens to be registered). For a platform lead, this means separate rating models and capital rules, a country field that must be right on every exposure, guarantee and collateral data that can move an exposure from one country to another, and limits checked intraday.
 
 ---
 
 ## Table of contents
 
-1. [What sovereign risk is](#1-what-sovereign-risk-is)
+1. [Governments can and do default](#1-governments-can-and-do-default)
 2. [Local currency versus foreign currency debt](#2-local-currency-versus-foreign-currency-debt)
-3. [The 0% risk weight and the debate about it](#3-the-0-risk-weight-and-the-debate-about-it)
-4. [Country risk, sovereign risk, and transfer and convertibility risk](#4-country-risk-sovereign-risk-and-transfer-and-convertibility-risk)
-5. [Country limits and country ratings](#5-country-limits-and-country-ratings)
+3. [Sovereigns in the capital rules and the zero risk weight debate](#3-sovereigns-in-the-capital-rules-and-the-zero-risk-weight-debate)
+4. [Country risk, sovereign risk and transfer risk](#4-country-risk-sovereign-risk-and-transfer-risk)
+5. [Country ratings and country limits](#5-country-ratings-and-country-limits)
 6. [Political risk insurance and export credit agencies](#6-political-risk-insurance-and-export-credit-agencies)
-7. [Bank counterparty risk: why banks lend to each other](#7-bank-counterparty-risk-why-banks-lend-to-each-other)
-8. [Bank ratings, the SCRA grades and the bail-in regime](#8-bank-ratings-the-scra-grades-and-the-bail-in-regime)
-9. [Public sector entities and multilateral development banks](#9-public-sector-entities-and-multilateral-development-banks)
-10. [Financial institution analysis: the CAMELS lens](#10-financial-institution-analysis-the-camels-lens)
-11. [How a bank sets limits for other banks and countries](#11-how-a-bank-sets-limits-for-other-banks-and-countries)
-12. [Data and systems for country exposure aggregation](#12-data-and-systems-for-country-exposure-aggregation)
-13. [Common mistakes and misunderstandings](#13-common-mistakes-and-misunderstandings)
-14. [What a platform lead needs to know about this](#14-what-a-platform-lead-needs-to-know-about-this)
-15. [Related notes](#15-related-notes)
+7. [Why banks lend to each other](#7-why-banks-lend-to-each-other)
+8. [How Basel treats exposures to banks](#8-how-basel-treats-exposures-to-banks)
+9. [Bank ratings, resolution and bail-in](#9-bank-ratings-resolution-and-bail-in)
+10. [Public sector entities and multilateral development banks](#10-public-sector-entities-and-multilateral-development-banks)
+11. [Analysing a bank: the CAMELS lens](#11-analysing-a-bank-the-camels-lens)
+12. [Setting limits for banks and countries](#12-setting-limits-for-banks-and-countries)
+13. [Country exposure aggregation: data and systems](#13-country-exposure-aggregation-data-and-systems)
+14. [Common mistakes and misunderstandings](#14-common-mistakes-and-misunderstandings)
+15. [What a platform lead needs to know about this](#15-what-a-platform-lead-needs-to-know-about-this)
+16. [Related notes](#16-related-notes)
 
 ---
 
-## 1. What sovereign risk is
+## 1. Governments can and do default
 
-In the lemonade stand world, imagine the headteacher borrows 100 coins from the pupils to build a new playground, promising to pay back from next year's school fees. The headteacher cannot be taken to court by a pupil. If the fees do not come in, or the headteacher decides the money is better spent on something else, the pupils simply do not get paid, and there is nobody above the headteacher to complain to.
+Imagine the school borrows money from its pupils to fix the roof, promising to repay next term. It feels like the safest borrower imaginable. But if the school runs out of money, there is no headteacher above it to force it to pay and no bailiff who can seize the gym. It can simply announce that it will repay half, later. That is a **sovereign**: a government borrowing in its own name. **Sovereign risk** is the risk that a government does not pay its debts in full and on time.
 
-A **sovereign** is a national government, and **sovereign risk** is the risk that it does not repay its debt. What makes it different from corporate credit risk is that a government cannot be put into bankruptcy. There is no court that can seize its assets and no receiver who can sell them. When a sovereign defaults, creditors negotiate a **restructuring** (less money, later, or both) with no legal power to force anything, only the government's wish to regain access to borrowing.
+The common intuition that governments do not default is wrong. Defaults and restructurings have happened in every century and on every continent. Some episodes, described generally:
 
-Governments do default. Over the last two centuries, dozens of countries have defaulted on external debt, some repeatedly. In living memory: a large Latin American economy in the early 2000s in one of the biggest defaults on record, with creditors eventually receiving around a third of face value; a euro-area country in 2012, where private creditors took a loss of more than half; several emerging and frontier markets after 2020, when the pandemic, commodity shocks and rising dollar interest rates combined. The pattern is usually the same: heavy borrowing in a currency the government does not control, a shock that cuts export earnings or raises borrowing costs, reserves running down, and then a choice between default and economic collapse.
+| Episode | What happened | Lesson for lenders |
+|---|---|---|
+| Latin American debt crisis (1980s) | Governments that had borrowed heavily in dollars from international banks could not pay when United States interest rates rose and commodity prices fell. Mexico's 1982 announcement started a decade of restructurings, ending with loans swapped into new bonds at a loss. | Foreign currency debt plus rising global rates is dangerous. Large banks were nearly wiped out by loans treated as safe. |
+| Russia (1998) | The government defaulted on its own local currency treasury bills and imposed a moratorium on certain foreign payments by Russian banks and companies as the rouble collapsed. | Even local currency debt can be defaulted on, and a sovereign crisis instantly becomes a transfer risk event for private borrowers. |
+| Argentina (2001 and later) | A very large bond default, frozen bank deposits, a broken dollar peg, restructurings in 2005 and 2010, years of litigation with holdout creditors, and another restructuring in 2020. | Recovery can take a decade, some sovereigns default repeatedly, and legal enforcement is very hard. |
+| Greece (2012) | The largest sovereign debt restructuring on record at the time. Private bondholders swapped into new bonds worth well under half of the old ones in present-value terms. Capital controls followed in 2015. | A rich-country government that cannot print its own currency can default, and its banks suffer with it. |
 
-Why a government defaults, the **ability and willingness** lens:
+Why it differs from lending to a company:
 
-| Ability to pay | Willingness to pay |
-|---|---|
-| Size of debt relative to the economy (debt to gross domestic product) | Political cost of austerity versus political cost of default |
-| Share of debt in foreign currency | History of past defaults |
-| Foreign currency reserves versus upcoming payments | Strength of institutions and rule of law |
-| Export earnings and current account | Relationship with international lenders of last resort |
-| Growth, inflation, tax base | Who the creditors are (domestic voters versus foreign funds) |
+- **No bankruptcy court.** There is no international insolvency process for governments. Restructuring is a negotiation, sometimes alongside the International Monetary Fund (IMF), and creditors mostly accept what is offered.
+- **Willingness as well as ability.** Paying may be politically unbearable, so sovereign analysis includes politics.
+- **Negotiated recovery.** Loss given default (LGD), from [[02 What Credit Risk Is]], comes from negotiation, not collateral, and has ranged from small haircuts to most of the value.
+- **Contagion.** A defaulting government's banks usually nearly fail (they hold its bonds) and its companies lose access to foreign currency: one event hits every exposure in the country, which is why country risk is its own discipline (section 4).
 
 ---
 
 ## 2. Local currency versus foreign currency debt
 
-This is the single most important distinction in sovereign risk.
+If you owe your sister ten tokens of a currency that *you* print in your bedroom, you can always pay: you print ten more. The tokens may become worthless if you print too many, but you never fail to hand them over. If you owe her ten real pounds, you must earn or borrow them, and if you cannot, you default.
 
-If the headteacher borrowed in school tokens that the school itself prints, it can always pay: print more tokens. The pupils get paid in full, though each token buys less at the tuck shop. That is **local currency debt**: a government that controls its own currency can always, in the end, create the money to repay. The risk to lenders is not default but **inflation** and **devaluation**, which are market risks rather than credit risks. (Governments that have given up their own currency, as in a monetary union, lose this escape route, which is why a euro-area sovereign could default on euro debt in a way the United States cannot default on dollar debt.)
+**Local currency debt** is borrowed in the country's own currency. A government with its own central bank can, in the last resort, create the money to repay, so the risk changes shape into **inflation and devaluation risk**: the lender is paid in full, in money that buys less. Outright default is rarer but happens (Russia 1998), usually when a government chooses default over the political cost of printing.
 
-If the headteacher borrowed in real coins that only the bank in town can issue, it must earn or borrow those coins to repay. That is **foreign currency debt**, usually dollars or euros. The government must earn them through exports, attract them through investment, or borrow them again. If it cannot, it defaults. Nearly every sovereign default in history has been on foreign currency debt or on debt owed to foreigners.
+**Foreign currency debt** is borrowed in a currency the government does not control, usually dollars or euros. To repay, the country must earn it through exports, attract it through investment, or borrow more. Most historical sovereign defaults have been on foreign currency debt.
 
-Consequences for a bank:
+A worked example. The fictional country Zandia owes the equivalent of 100 billion zand: half in zand, half in dollars (5 billion dollars at 10 zand to the dollar). A crisis halves the zand to 20 per dollar. The zand debt is still 50 billion zand, but the dollar debt now costs 100 billion zand to repay. Total debt in local terms jumps from 100 billion to 150 billion zand overnight with no new borrowing, while tax revenue still arrives in zand. This is why agencies often rate a country's local currency debt higher than its foreign currency debt.
 
-- Rating agencies and internal rating systems give most sovereigns **two ratings**, local currency and foreign currency, with the foreign currency rating usually lower.
-- Under the Basel standardised approach, a bank may apply a preferential risk weight to its home sovereign's local currency debt funded in that currency, which is where the famous 0% comes from, discussed next.
-- A loan in dollars to a company in a country that may run out of dollars carries a risk that has nothing to do with the company. That is transfer risk, in section 4.
+Countries using a currency they do not issue (euro area members, dollarised countries) are a special case: their "local" debt behaves like foreign currency debt, as Greece showed.
 
----
-
-## 3. The 0% risk weight and the debate about it
-
-Under the standardised approach in [[18 Regulatory Capital and Basel - the Short Version]], sovereigns are risk-weighted by their external rating: 0% for the highest grades, rising to 150% for the weakest, and 100% for unrated. In addition, national regulators may allow banks to apply a lower weight, in practice 0%, to exposures to their own government and central bank in local currency, funded in local currency, regardless of rating. Most do. Under the IRB approach, sovereigns are exempt from the PD floor that applies to other classes, so a bank's own model can also produce a near-zero capital requirement.
-
-The result is that banks across the world hold very large amounts of their own government's bonds with little or no capital against them. The arguments for and against:
-
-| For a 0% weight | Against |
-|---|---|
-| A government that prints its currency cannot be forced to default in that currency | Governments in currency unions have defaulted on their own-currency debt |
-| Government bonds are the safest, most liquid asset banks can hold for liquidity rules | Zero risk weight encourages banks to load up on sovereign debt, especially of weak sovereigns, because it earns yield with no capital cost |
-| Making banks hold capital against their own government would raise government borrowing costs and could destabilise the sovereign in a crisis | The **sovereign-bank doom loop**: a weak sovereign weakens the banks that hold its bonds, which then need rescue from the sovereign, which weakens it further. This nearly broke the euro area in 2010 to 2012 |
-| Risk weights are meant for credit risk; sovereign local currency risk is mostly inflation risk, which is captured elsewhere | A rating-based or debt-level-based weight would be more honest and would reward prudent governments |
-
-The Basel Committee reviewed the treatment and, at the time of writing, has not changed the core rules, mainly because members could not agree. Some national regulators have introduced concentration limits or Pillar 2 add-ons for large sovereign holdings. Expect this debate to continue, and expect any bank's internal view of sovereign risk to be more conservative than the regulatory risk weight suggests.
+| Feature | Local currency debt | Foreign currency debt |
+|---|---|---|
+| Can the government print it? | Yes, in the last resort | No |
+| Main risk to lender | Inflation, devaluation | Default and restructuring |
+| Effect of currency crash | Repaid in weaker money | Debt burden jumps |
 
 ---
 
-## 4. Country risk, sovereign risk, and transfer and convertibility risk
+## 3. Sovereigns in the capital rules and the zero risk weight debate
 
-These three terms overlap and are often confused.
+Under the Basel standardised approach (explained in [[basel-credit-risk-explained-simply]] and [[18 Regulatory Capital and Basel - the Short Version]]), exposures to sovereigns and their central banks are risk-weighted by external rating. The illustrative shape:
+
+| Sovereign rating | AAA to AA- | A+ to A- | BBB+ to BBB- | BB+ to B- | Below B- | Unrated |
+|---|---|---|---|---|---|---|
+| Risk weight | 0% | 20% | 50% | 100% | 150% | 100% |
+
+The Basel text also allows supervisors to use country risk scores published by export credit agencies instead of agency ratings. Check which your jurisdiction uses.
+
+The key national discretion: supervisors may allow a **lower risk weight, typically 0%, for a bank's exposures to its own sovereign and central bank, denominated and funded in the domestic currency**. Many jurisdictions apply it.
+
+A worked example. A bank holds 1 billion of its own government's local currency bonds and 200 million of dollar bonds issued by a foreign government rated BBB.
+
+- Own government at 0%: risk-weighted assets (RWA) = 0, capital = 0.
+- Foreign government at 50%: RWA = 100 million. At an illustrative 10% capital requirement, capital = 10 million.
+
+The domestic holding, five times larger, attracts no credit risk capital at all.
+
+**The debate.** Supporters argue government bonds are the safest local asset, banks need them for liquidity, and a government that can print its currency should not default on it. Critics point to the European sovereign debt crisis of 2010 to 2012: banks loaded up on "free" home government bonds, the government weakened, the banks weakened with it, and supporting the banks weakened the government further. This feedback is the **sovereign-bank doom loop**. The Basel Committee consulted on changes (concentration limits, positive risk weights) but, at the time of writing, did not reach consensus to change the standard. Sovereigns are also largely exempt from large exposure limits.
+
+Under the internal ratings-based (IRB) approach in [[10 Internal Ratings, Scorecards and PD Models]], banks model sovereign probability of default (PD) themselves. With so few defaults, these are usually expert scorecards calibrated to agency studies, and often challenged in [[21 Model Risk Management and Validation]].
+
+Whatever the capital rule says, a well-run bank still rates, limits and stresses every sovereign ([[20 Stress Testing and ICAAP]]).
+
+---
+
+## 4. Country risk, sovereign risk and transfer risk
+
+**Sovereign risk** is the risk of lending to the government itself. **Country risk** is wider: the risk that something happening at the level of a country causes losses on *any* exposure there, including to perfectly sound companies and banks. Its components:
+
+- **Transfer and convertibility risk.** The borrower has local currency and is willing to pay, but the government will not let it convert into dollars (convertibility) or send them abroad (transfer), usually through **capital controls** in a crisis.
+- **Political risk.** Expropriation, nationalisation, war, civil unrest, sanctions, or the government cancelling contracts (contract repudiation).
+- **Macroeconomic risk.** A recession, banking collapse or currency crash that raises PD for everyone at once.
+- **Legal risk.** Weak creditor rights, raising LGD everywhere.
+
+The analogy for transfer risk. You lend pocket money to an honest friend at another school who has the money to repay. But their headteacher has a rule: no money leaves the school during term. You lose nothing on your friend's character and everything on the school's rules.
+
+A banking example. A bank lends 10 million dollars to a well-run Zandian exporter. Zandia hits a balance of payments crisis and rations access to dollars. The exporter has plenty of zand but cannot pay, so the loan defaults: not credit risk in the ordinary sense, but transfer risk. It must be provisioned under [[17 Provisioning and Expected Credit Loss - IFRS 9 and CECL]] and perhaps restructured under [[16 Problem Loans, Restructuring and Recovery]], even if it is eventually repaid in full when controls lift.
 
 ![[26-country-risk-types.svg]]
-*How sovereign risk, country risk on private borrowers, and transfer and convertibility risk relate, and where the mitigants and the country limit sit.*
+*How a cross-border exposure breaks down: lending to the government is sovereign risk (local and foreign currency debt behaving differently), while lending to a private borrower carries its own credit risk plus transfer, convertibility and political risk. Mitigants reduce the country component, and everything rolls up into a country limit on an ultimate risk basis.*
 
-**Sovereign risk** is the narrow one: will the government repay its own debt.
+### The sovereign ceiling
 
-**Country risk** is the wide one: the risk of loss on *any* exposure in a country caused by events in that country, whatever the borrower. It includes sovereign risk, plus political risk (expropriation, war, civil unrest, repudiation of contracts, currency controls), plus the macro-economic risk that a national crisis drags down every borrower, plus the legal risk that the courts will not enforce the bank's rights.
+If a government can stop any company in the country paying foreign currency debt, a private borrower is unlikely to be a better foreign currency risk than its government. This is the **sovereign ceiling**: a company's or bank's foreign currency rating is capped at the sovereign rating. Agencies have softened it into a **country ceiling** that can sit above the sovereign, because defaulting governments do not always impose controls and some companies are protected (export revenue paid offshore, a strong foreign parent, assets abroad). Bank ratings stay tightly tied to their sovereign, because banks hold its bonds, depend on its central bank, and would need its support.
 
-**Transfer and convertibility risk** is the specific and most important part of country risk for a lender to private borrowers. Imagine a well-run manufacturer in a country that is running out of dollars. The manufacturer has plenty of local currency and is happy to pay its dollar loan. But the central bank has imposed **capital controls**: nobody may buy dollars (a **convertibility** restriction) or send money abroad (a **transfer** restriction). The company is solvent, willing, and unable to pay. The bank's loan is in default through no fault of the borrower. This happened to lenders in several countries in the 2010s and 2020s.
-
-Consequences:
-
-- A private borrower's foreign currency rating is normally **capped** at the sovereign's foreign currency rating, the **sovereign ceiling**, because the company cannot be more able to get dollars than its own country. Exceptions exist for companies with large offshore earnings and offshore accounts.
-- Banks hold **transfer risk provisions** or treat transfer risk as a separate risk type with its own limits, and some regulators require specific provisions on exposures to countries with payment difficulties.
-- The mitigants in section 6 (political risk insurance, export credit agency cover, offshore collection accounts, structures where repayment is collected outside the country from export receipts) exist mainly to deal with this risk.
+| Term | What can go wrong | Main mitigant |
+|---|---|---|
+| Sovereign risk | Government does not pay its own debt | Limits, diversification, rating |
+| Transfer and convertibility risk | Borrower cannot buy or send foreign currency | Offshore accounts, political risk insurance, local lending funded locally |
+| Political risk | Expropriation, war, contract repudiation, sanctions | Political risk insurance, export credit agency cover |
+| Macroeconomic risk | PDs rise across the country | Country limits, stress testing |
 
 ---
 
-## 5. Country limits and country ratings
+## 5. Country ratings and country limits
 
-Just as a bank limits its exposure to any single borrower, it limits its exposure to any single country. A **country limit** is the maximum total exposure the bank will accept to all borrowers in a country, usually split by tenor (short-term trade exposure is less risky than ten-year loans) and by type (sovereign, bank, corporate).
+### Internal country ratings
 
-The limit is set from a **country rating**, which the bank produces itself from a country risk model, informed by external agency ratings, international body assessments, and its own economists. The model scores things like: debt levels and structure, reserves cover of imports and short-term debt, current account balance, growth and inflation, banking system strength, political stability, institutional quality, and track record. The rating maps to a grade which maps to a maximum limit, scaled by the bank's capital and its strategic interest in the country.
+Every bank with cross-border business assigns an **internal country rating**, usually on the same master scale as counterparty ratings. Often there are two: a **sovereign rating** (will the government pay) and a **transfer and convertibility rating** or country ceiling (will private borrowers be allowed to pay in foreign currency). A small country risk team in the second line produces them, and a committee approves them as in [[13 Credit Governance - Committees, Authorities and the Three Lines]].
 
-| Country grade (illustrative) | Typical characteristics | Limit style |
+| Factor family | Examples |
+|---|---|
+| Economic strength | GDP (gross domestic product) per head, growth, diversification |
+| Government finances | Debt to GDP, deficit, interest cost to revenue, share of debt in foreign currency |
+| External position | Current account, foreign currency reserves, external debt, commodity dependence |
+| Monetary and financial system | Inflation record, central bank independence, banking system health |
+| Institutions and politics | Rule of law, stability, corruption, default history, sanctions |
+
+Agency ratings are an input, not a substitute, and the rating must move with events, not wait for annual review.
+
+### Country limits
+
+A **country limit** caps total exposure to a country across all counterparties, products and booking entities, because a hundred loans to a hundred Zandian companies are not diversified against a Zandian crisis. It is part of the concentration framework in [[14 Risk Appetite, Limits and Concentration]]. Sizing typically starts from the country rating, is scaled by the bank's capital and business need, and is split into **sub-limits** by tenor (short trade runs off quickly in a crisis), product and counterparty type.
+
+A worked example. Tier 1 capital is 5 billion. An illustrative policy:
+
+| Country grade | Maximum limit as % of Tier 1 | Maximum tenor |
 |---|---|---|
-| 1 to 2 | Highly rated, own currency, deep markets | Large limit, mostly a monitoring tool |
-| 3 to 4 | Investment grade, some external vulnerability | Capped limit, tenor sub-limits |
-| 5 to 6 | Sub-investment grade, meaningful transfer risk | Tight limit, short tenors, mitigants expected |
-| 7 and below | Distressed or in default | No new exposure; run-off and recovery only |
+| 1 to 3 | Monitored, no fixed cap | Any |
+| 4 to 5 | 20% | 10 years |
+| 6 to 7 | 8% | 5 years |
+| 8 to 9 | 3% | 2 years |
+| 10 and below | Trade only, case by case | 1 year |
 
-A country risk committee reviews ratings and limits at least annually and immediately on events (a coup, a currency crisis, sanctions). Country limits feed the limits system described in [[14 Risk Appetite, Limits and Concentration]] and are checked at the moment of every new booking.
+Zandia is grade 7: maximum 8% x 5 billion = 400 million. The committee approves 250 million: 150 million trade up to one year, 100 million term lending up to five years, of which no more than 50 million to the government. Six months later Zandia falls to grade 8, and the maximum becomes 3% x 5 billion = 150 million. The bank is in excess, stops new business, and lets trade run off until it fits.
+
+Many banks add a traffic light: green, amber (no increases), red (run-off), black (frozen, for example by sanctions, see [[25 Climate, ESG and Emerging Credit Risks]]).
 
 ---
 
 ## 6. Political risk insurance and export credit agencies
 
-Two institutions exist to make lending into risky countries possible.
+You can sometimes pay someone else to carry country risk.
 
-**Political risk insurance** (PRI) is bought from specialist insurers (private insurers and a multilateral insurer attached to the World Bank group). It pays out if the loss is caused by defined political events: expropriation, war and civil disturbance, currency inconvertibility and transfer restriction, and breach of contract by a government. It does not cover ordinary commercial default. For capital purposes, an insured exposure may be treated as guaranteed by the insurer, substituting the insurer's risk weight for the covered portion, subject to the usual legal certainty conditions in [[basel-credit-risk-explained-simply]].
+**Political risk insurance (PRI)** pays if a loan is not repaid because of a defined political event: transfer restrictions, expropriation, political violence, sometimes non-payment by a government. It does not cover ordinary commercial default, usually covers a percentage (say 90%), has waiting periods, and has conditions the bank must meet.
 
-**Export credit agencies** (ECAs) are government bodies (or private agencies acting for governments) that support their country's exporters. When a company in country A exports machinery to a buyer in country B, A's export credit agency may guarantee or insure the loan the buyer takes to pay for it, covering both commercial and political risk, typically for 85% to 95% of the amount (varies by agency and deal). The guaranteed portion carries the sovereign risk weight of country A, which is often 0%. ECA-backed finance is a large part of long-term lending to emerging markets, especially for infrastructure, aircraft and ships, and connects to [[06 Specialised Finance - Project, Object, Commodities, Real Estate]] and [[08 Trade Finance and Guarantees]].
+**Export credit agencies (ECAs)** are government-backed bodies that support their own exporters by guaranteeing loans to foreign buyers. If a German manufacturer sells turbines to a Zandian power company, the German ECA may guarantee 95% of the financing loan against both political and commercial risk. The guaranteed part becomes, for the lender, an exposure to the ECA and its government. See [[06 Specialised Finance - Project, Object, Commodities, Real Estate]] and [[08 Trade Finance and Guarantees]].
 
-| Mitigant | Covers | Does not cover | Capital effect |
-|---|---|---|---|
-| Political risk insurance | Expropriation, war, inconvertibility, government breach | Commercial default | Insurer's risk weight on covered portion |
-| Export credit agency guarantee | Commercial and political default on an export loan | Uncovered percentage; policy exclusions | Agency's sovereign risk weight on covered portion |
-| Multilateral development bank umbrella (preferred creditor status, co-lending) | Transfer risk in practice, because governments prioritise multilateral lenders | Not a legal guarantee | Usually none directly; reduces internal transfer risk assessment |
-| Offshore collection accounts | Transfer risk on export receipts | Commercial default | May support a rating above the sovereign ceiling |
+**Multilateral development bank (MDB) participation** is a softer mitigant: governments rarely block payments on loans where an MDB is lender of record.
 
----
+A worked example. A bank lends 50 million to a Zandian company. Uncovered, it all counts against the Zandia limit at a 100% corporate risk weight (RWA 50 million). With a 95% guarantee from an ECA backed by a AAA government:
 
-## 7. Bank counterparty risk: why banks lend to each other
+| Portion | Amount | Country of risk | Illustrative risk weight | RWA |
+|---|---|---|---|---|
+| ECA-guaranteed | 47.5 million | The ECA's country | 0% | 0 |
+| Uncovered | 2.5 million | Zandia | 100% | 2.5 million |
 
-Banks are each other's biggest counterparties, through channels most people never see.
-
-**Interbank lending.** Every day some banks have surplus cash and others are short. They lend to each other overnight or for a few weeks in the **money market**. Before 2008 this was huge and unsecured; since then it is smaller and mostly secured (repos, described in [[19 Counterparty Credit Risk and Derivatives]]), but unsecured interbank exposure still exists.
-
-**Nostro accounts.** "Nostro" is Italian for "ours." A nostro account is an account a bank holds at another bank, usually in that bank's currency, to make and receive payments in that currency. A British bank's dollar nostro is at a United States bank. The balance in that account is an unsecured deposit with the other bank: if that bank fails, the money is at risk. Large banks hold nostro balances in dozens of currencies at dozens of banks.
-
-**Correspondent banking.** The wider relationship in which one bank provides payment, clearing, trade and foreign exchange services to another, especially across borders. The correspondent takes on exposure to the respondent bank through intraday overdrafts, trade confirmations and settlement.
-
-**Trade finance.** When a bank confirms a letter of credit issued by a bank in another country ([[08 Trade Finance and Guarantees]]), it takes on the issuing bank's credit risk.
-
-**Derivatives and settlement.** Foreign exchange and interest rate derivatives between banks, and the settlement risk at the moment of exchange, both covered in [[19 Counterparty Credit Risk and Derivatives]].
-
-**Securities.** Banks hold each other's bonds, including the loss-absorbing bonds described in section 8.
-
-The reason this matters so much is **contagion**. In 2008, the failure of one investment bank froze the interbank market because nobody knew who was exposed to whom. Interconnection is why the Basel large exposures rule has a tighter limit (15% of Tier 1) between global systemically important banks, and why supervisors require banks to be able to report their exposure to any other bank within hours.
+Zandia usage and RWA both fall by 95%, provided the guarantee meets the eligibility rules in [[11 Collateral and Security]] and is linked to the facility in the data (section 13). Private PRI often gives only internal limit relief, not capital relief.
 
 ---
 
-## 8. Bank ratings, the SCRA grades and the bail-in regime
+## 7. Why banks lend to each other
 
-**External ratings.** Rating agencies rate banks on their standalone strength and then on the likelihood of support from their government or parent. Before 2008 the support assumption lifted most large bank ratings by several notches, because everyone assumed governments would rescue banks. Under the Basel standardised approach, rated banks get a risk weight from their rating.
+On a hot Saturday the lemonade stand by the park runs out of cups while the one by the library has too many. The library stand lends cups until Monday; next week it may be the other way round. Neither needs a huge stockpile. Banks do the same with cash: some take in more deposits than they lend, others the reverse, and the **interbank market** moves the surplus. A bank that cannot deal with other banks cannot function.
 
-**The SCRA grades.** For unrated banks (most banks in the world), the standardised approach uses the **standardised credit risk assessment approach** (SCRA), explained in [[basel-credit-risk-explained-simply]] section 11: grade A if the bank comfortably meets its own regulatory minimums and buffers (40% risk weight, or 30% if very strong), grade B if it meets minimums but not buffers (75%), grade C if it does not meet minimums or has a qualified audit (150%). Assigning the grade requires the lending bank to obtain and assess the counterparty bank's published capital ratios, which is itself a data task.
-
-**Bail-in.** After 2008, taxpayers had rescued banks at enormous cost and governments resolved that next time, the bank's own creditors would pay. **Resolution regimes** introduced in the European Union, the United Kingdom, the United States and elsewhere give authorities the power, when a bank fails, to **bail in** its creditors: write down their claims or convert them to shares, in a set order, to absorb losses and recapitalise the bank without public money. To make this work, large banks must issue a minimum amount of bail-in-able debt, known in Europe as **MREL** (minimum requirement for own funds and eligible liabilities) and globally for the largest banks as **TLAC** (total loss-absorbing capacity).
-
-The plain-words consequence: **since roughly 2014, when these regimes came into force, lending to a bank or holding its bonds became riskier**, because the implicit government guarantee was removed. A senior bond that would once have been rescued can now be written down. Rating agencies reduced or removed the support uplift. Banks reassessed their limits on other banks accordingly. Depositors below the insured threshold are protected; large corporate deposits, nostro balances and bonds are not.
-
-| Instrument (from safest to riskiest in a bail-in) | Position in the order | Typical investor |
+| Exposure | What it is | Typical tenor |
 |---|---|---|
-| Insured deposits | Protected, outside the bail-in | Retail |
-| Secured liabilities (covered bonds, repos) | Protected by collateral | Banks, funds |
-| Uninsured deposits and ordinary senior debt (varies by regime; some rank deposits above senior bonds) | Bailed in after the layers below | Corporates, banks (nostros), funds |
-| Senior non-preferred or holding company senior debt | Designed to be bailed in before ordinary senior | Institutional investors |
-| Tier 2 subordinated debt | Bailed in before senior | Institutional investors |
-| Additional Tier 1 (contingent convertible) | Converted or written down first | Specialist funds |
-| Shares | Wiped out first | Shareholders |
+| Interbank deposits and money market placements | Lending surplus cash to another bank, unsecured | Overnight to 12 months, mostly under 3 months |
+| Repurchase agreements (repo) | Lending cash against bonds as collateral | Overnight to months |
+| Nostro accounts | "Ours with you": our account at a foreign bank in its currency, used for payments | Permanent, balance changes daily |
+| Correspondent banking | Accounts and payments for a bank with no direct access to a currency | Ongoing |
+| Trade finance confirmations | Adding our guarantee to a foreign bank's letter of credit | Usually under 1 year |
+| Foreign exchange (FX) settlement | Paying one currency before receiving the other | Same day to a few days |
+| Derivatives | Swaps and options with other banks, see [[19 Counterparty Credit Risk and Derivatives]] | Months to decades |
 
-A 2023 case in which a large bank's additional Tier 1 bonds were written to zero while shareholders received something (an outcome specific to that country's rules) reminded the market that the order is not identical everywhere and that the documents matter.
+Three that are often missed:
 
----
+- **Nostro balances are credit exposure.** If our yen correspondent fails, we are an unsecured creditor for the balance. Operations own these accounts, so they often escape the credit limit.
+- **Confirmations carry bank and country risk.** Confirming a Zandian bank's letter of credit is exposure to that bank and to Zandia ([[08 Trade Finance and Guarantees]]).
+- **FX settlement risk** is named after Herstatt, a German bank closed mid-day in 1974 after counterparties had paid it but before they were paid back. Simultaneous settlement systems reduce it; the rest is controlled by **settlement limits**.
 
-## 9. Public sector entities and multilateral development banks
-
-**Public sector entities** (PSEs) are regional and local governments and government-owned bodies that are not the sovereign itself: a state or province, a city, a public hospital trust, a state-owned utility. Under the standardised approach they are treated either like their sovereign or like banks, depending on how much taxing power and government backing they have, and national regulators decide which. The credit question is always **how real is the sovereign support**: a province with its own tax base is one thing; a loss-making state company with an informal promise is another. Several high-profile defaults have been municipal or state-owned entities whose government declined to step in.
-
-**Multilateral development banks** (MDBs) are international institutions owned by many governments that lend for development: the World Bank group, regional development banks, and others. The strongest get a 0% risk weight under the standardised approach because of their capital, their shareholders and their **preferred creditor status**: governments in difficulty repay multilateral lenders before anyone else, because losing access to them is catastrophic. For a commercial bank, lending alongside an MDB (co-financing, or participating in an MDB-arranged loan under its umbrella) borrows some of that protection in practice, and is a common way to lend into risky countries.
+Since 2008 the market has shifted towards secured repo and central bank deposits, but nostro, settlement and trade exposures are unavoidable.
 
 ---
 
-## 10. Financial institution analysis: the CAMELS lens
+## 8. How Basel treats exposures to banks
 
-Analysing a bank is different from analysing a company, because a bank's "product" is risk and its balance sheet is mostly other people's money. The standard framework, used by supervisors and by credit analysts, is **CAMELS**, an acronym for the six things to look at.
+The revised Basel standardised approach uses one of two methods. Two terms first: **CET1** (Common Equity Tier 1) is the highest-quality capital, and the **leverage ratio** is capital divided by total unweighted exposure (both in [[18 Regulatory Capital and Basel - the Short Version]]).
+
+### External credit risk assessment approach (ECRA)
+
+Where external ratings may be used, a rated bank's risk weight comes from its rating, with lower weights for short-term exposures (original maturity of three months or less, and some short-term trade). Illustrative shape:
+
+| Bank rating | AAA to AA- | A+ to A- | BBB+ to BBB- | BB+ to B- | Below B- |
+|---|---|---|---|---|---|
+| Base risk weight | 20% | 30% | 50% | 100% | 150% |
+| Short-term | 20% | 20% | 20% | 50% | 150% |
+
+The rating must not include **implicit government support**, except for public banks. This follows directly from bail-in (section 9).
+
+### Standardised credit risk assessment approach (SCRA)
+
+Where ratings may not be used (the United States restricts reliance on them in regulation) or the bank is unrated, the lending bank grades the counterparty itself:
+
+| Grade | In plain words | Illustrative criteria | Base risk weight | Short-term |
+|---|---|---|---|---|
+| A | Strong in any reasonable conditions | Meets all published minimum requirements and buffers | 40% (30% if CET1 at least 14% and leverage ratio at least 5%) | 20% |
+| B | Some vulnerability | Meets minimums but not all buffers, or has known weaknesses | 75% | 50% |
+| C | Material default risk | Fails minimums, or auditor doubts it is a going concern | 150% | 150% |
+
+A **sovereign floor** broadly stops a foreign bank's SCRA risk weight going below its home sovereign's for exposures not in the bank's local currency, with exceptions for short-term trade: the sovereign ceiling written into capital rules. Exact conditions are in your local text and in [[basel-credit-risk-decision-tree]].
+
+A worked example. We place 100 million for six months with Bank North (Grade A, CET1 15%, leverage 5.5%) and 100 million for one month with Bank South (Grade B).
+
+- North: not short-term, Grade A with high capital, 30%. RWA 30 million.
+- South: short-term, Grade B, 50%. RWA 50 million. Rolled into six months, 75% and RWA 75 million.
+
+Every grade needs evidence: counterparties' capital ratios from their Pillar 3 disclosures ([[23 Reporting - Regulatory Returns, Pillar 3 and Management Information]]), collected and stored.
+
+**Under IRB**, the final Basel III reforms restrict exposures to banks and other financial institutions to the **foundation** approach (own PD, supervisory LGD), because there are too few bank defaults to model LGD. A PD floor applies, and large financial institutions get a higher correlation in the formula because banks tend to fail together.
+
+---
+
+## 9. Bank ratings, resolution and bail-in
+
+**Before 2008.** A bank's rating was its standalone strength plus several notches of uplift for expected government rescue. In 2008 governments did rescue them, with taxpayers' money.
+
+**After 2008.** Governments resolved that taxpayers should not pay again. Countries passed **resolution regimes**: a resolution authority can take control of a failing bank and impose losses on its creditors. The central tool is **bail-in**: writing down debt or converting it into shares to recapitalise the bank from inside. Bail-out is the government's money; bail-in is the creditors'.
+
+The analogy. A lemonade stand runs out of money. The council used to pay everyone; now it says lenders' IOUs will be cut or swapped for a share of the stand, which keeps trading. Lending to the stand is suddenly less safe than lending to the council.
+
+Simplified creditor hierarchy (the exact order varies by country):
+
+| Loses first to last | Instrument |
+|---|---|
+| 1 | Equity (CET1) |
+| 2 | Additional Tier 1 |
+| 3 | Tier 2 subordinated debt |
+| 4 | Senior non-preferred debt, or senior debt of the holding company |
+| 5 | Senior preferred operating company debt, large corporate deposits |
+| Protected or excluded | Insured deposits, secured liabilities, very short-term interbank liabilities in some regimes |
+
+Large banks must hold minimum bail-in-able debt: TLAC (total loss-absorbing capacity) for the largest global banks and, in the European Union, MREL (minimum requirement for own funds and eligible liabilities).
+
+A worked example. A bank has 100 of assets funded by 6 equity, 2 Additional Tier 1, 4 Tier 2, 8 senior bail-in-able bonds and 80 of protected liabilities. It loses 15. Before: the government injects capital and bondholders lose nothing. Now: equity, Additional Tier 1 and Tier 2 (12 in total) are wiped out, and senior bonds absorb the remaining 3, a 37.5% loss. The authority may then convert more senior debt into equity to recapitalise the bank.
+
+So agencies removed most support uplift from bank ratings in major jurisdictions, and senior bank bonds became genuinely risky. **Which instrument** matters (an overnight deposit and a Tier 2 bond of the same bank have very different LGDs), **which entity** matters (holding company bonds absorb losses first), and support still matters for state-owned banks and in many emerging markets.
+
+---
+
+## 10. Public sector entities and multilateral development banks
+
+**Public sector entities (PSEs)** are government-owned or controlled bodies that are not the central government: regions, cities, agencies, some non-commercial enterprises. Supervisors choose whether to treat a PSE like a bank or, where it has revenue-raising powers and arrangements making it as safe as the state, like the sovereign. State-owned commercial companies are corporates.
+
+**Multilateral development banks** are owned by groups of governments to lend for development (the World Bank group and the large regional development banks). Basel lists qualifying MDBs that get a **0% risk weight** for very high credit quality and strong shareholder backing; others are weighted by rating on a favourable scale. MDBs also enjoy **preferred creditor status** in practice: countries tend to keep paying them even when defaulting on others.
+
+| Counterparty type | Typical standardised treatment (illustrative) | Country of risk |
+|---|---|---|
+| Own sovereign, local currency | Often 0% | Home country |
+| Other sovereign or central bank | By rating, 0% to 150% | That country |
+| PSE with tax-raising powers | As sovereign or as bank, supervisor's choice | That country |
+| Commercial state-owned company | Corporate | That country |
+| Qualifying listed MDB | 0% | Supranational code |
+| Bank | ECRA or SCRA | Incorporation, unless risk transferred |
+
+Data trap: MDBs need a supranational bucket, or they are counted against their headquarters country.
+
+---
+
+## 11. Analysing a bank: the CAMELS lens
+
+A bank is unlike a company ([[09 Credit Analysis - Reading a Borrower]]): it is leveraged by design (equity often well under 10% of assets), and its biggest danger is funding running faster than assets can be sold. The standard framework, borrowed from the United States supervisory rating system, is **CAMELS**.
+
+| Letter | Stands for | Question | Indicators |
+|---|---|---|---|
+| C | Capital | How big is the cushion? | CET1 ratio, leverage ratio, headroom over requirements and buffers |
+| A | Asset quality | How good are its loans? | Non-performing loan (NPL) ratio, provision coverage, concentrations |
+| M | Management | Is it run sensibly and honestly? | Strategy, governance, regulatory sanctions |
+| E | Earnings | Can it absorb losses and grow capital? | Return on equity (ROE), cost-to-income, stability |
+| L | Liquidity | Can it survive a funding run? | Liquidity coverage ratio (LCR), net stable funding ratio (NSFR), wholesale reliance |
+| S | Sensitivity | How hard would a market move hit it? | Interest rate and FX risk, holdings of its own sovereign's bonds |
+
+The LCR asks whether liquid assets cover a 30-day stress; the NSFR asks whether long-term assets have stable funding. Both should be at least 100%. Analysts add **support** (parent or state, after bail-in) and **operating environment** (country rating and ceiling).
+
+### Worked example: two banks
+
+| Measure | Bank North | Bank South |
+|---|---|---|
+| Home country grade | 3 (strong) | 7 (weak) |
+| CET1 ratio (requirement plus buffers 10.5%) | 15.0% | 11.5% |
+| Leverage ratio | 5.5% | 4.0% |
+| NPL ratio | 1.8% | 9.5% |
+| Provision coverage of NPLs | 65% | 40% |
+| Home sovereign bonds as % of CET1 | 120% | 380% |
+| ROE | 10% | 14% |
+| LCR / NSFR | 160% / 125% | 115% / 103% |
+| Wholesale funding share | 15% | 35% |
+| Management | Stable, clean record | New chief executive, regulatory fine |
+
+Reading it:
+
+- **Capital and asset quality.** South has one point of headroom against North's four and a half, and its NPLs are badly under-provisioned. Raising coverage to 65% costs roughly 25% x 9.5% = 2.4% of loans. On loans of 45 billion that is about 1.1 billion, against CET1 of about 3 billion (11.5% of around 26 billion RWA). CET1 would fall to about 7%, below requirement. Reported capital flatters it.
+- **Earnings.** South's higher ROE comes from riskier lending and thin provisioning, a warning sign.
+- **Liquidity and sensitivity.** South barely passes while leaning on wholesale money, and a home sovereign restructuring would wipe it out.
+
+Outcome: North is internal grade 4 and SCRA Grade A, with a 12-month unsecured limit. South is grade 8 (capped by its sovereign and pulled down by asset quality) and SCRA Grade B on watch for C, with short trade confirmations and overnight or repo only.
+
+---
+
+## 12. Setting limits for banks and countries
 
 ![[26-bank-limit-setting.svg]]
-*How a bank sets a limit on another bank: CAMELS analysis produces a rating, the sovereign ceiling is checked, the limit is sized and split by product and tenor, and the country and concentration headroom are confirmed.*
+*From limit request to approved bank limit: CAMELS analysis feeds an internal rating and SCRA grade, the sovereign ceiling is checked, size comes from a rating grid and is split into product and tenor sub-limits, then cut to fit the country limit and the large exposure rule.*
 
-| Letter | Area | Questions | Key ratios (illustrative good values vary by market) |
+A bank limit (a financial institution, or FI, line) follows [[14 Risk Appetite, Limits and Concentration]] with a few special features.
+
+**Size from a rating grid**, as a percentage of our capital, capped by a percentage of the counterparty's capital. Illustrative:
+
+| Internal grade | Max % of our Tier 1 | Max % of counterparty equity | Max unsecured tenor |
 |---|---|---|---|
-| C | Capital | How big is the cushion, and what quality? Is it above minimums and buffers with room to spare? | CET1 ratio (see [[18 Regulatory Capital and Basel - the Short Version]]), total capital ratio, leverage ratio, headroom over requirements |
-| A | Asset quality | How bad is the loan book and how well is it covered? Concentrations? | Non-performing loan ratio, provision coverage, loan growth (fast growth is a warning), sector and single-name concentrations, share of stage 2 loans |
-| M | Management | Is strategy coherent, governance sound, risk management credible? Regulatory history? | Qualitative: fines, enforcement actions, management turnover, audit qualifications |
-| E | Earnings | Does it make money sustainably, or from one-off and volatile sources? | Return on equity, return on assets, net interest margin, cost-to-income ratio, cost of risk |
-| L | Liquidity | Can it meet outflows? How reliant is it on flighty wholesale funding? | Liquidity coverage ratio, net stable funding ratio, loan-to-deposit ratio, share of wholesale funding, central bank eligible collateral |
-| S | Sensitivity to market risk | How exposed is it to rate and price moves, and to its own sovereign? | Interest rate risk measures, trading book size, sovereign bond holdings relative to capital |
+| 1 to 3 | 8% | 15% | 5 years |
+| 4 | 5% | 10% | 3 years |
+| 5 to 6 | 2% | 5% | 1 year |
+| 7 to 8 | 0.5% | 2% | 6 months |
+| 9 and below | Secured or trade only | | 3 months |
 
-Two bank-specific points. First, a bank's rating is almost always **capped by its sovereign**, because a sovereign crisis takes down the banking system (the doom loop again). Second, bank failures are usually **fast and liquidity-driven**: a bank can report strong capital and fail within days when depositors run, as happened in 2023 to several mid-sized banks. Liquidity and funding structure therefore get more weight in bank analysis than in corporate analysis, and limits on banks are reviewed on news, not just annually.
+**Sub-limits** for money market, nostro, FX settlement, derivatives (measured as potential future exposure, PFE), trade and bonds, each measured differently and often fed by different systems.
 
----
+**Large exposures.** Under the Basel framework, exposure to one counterparty or connected group must not exceed 25% of Tier 1 (15% between the largest global systemically important banks); intraday interbank exposures are excluded.
 
-## 11. How a bank sets limits for other banks and countries
+**Country fit.** Every bank limit also uses its home country limit.
 
-Putting the pieces together, a typical process:
+A worked example. Our Tier 1 is 5 billion. Bank North (grade 4, equity 6 billion): the lower of 5% x 5 billion = 250 million and 10% x 6 billion = 600 million, so 250 million. A request for 200 million across five sub-limits is approved. Bank South (grade 8, equity 4 billion): the lower of 25 million and 80 million, so 25 million. The business asks for 60 million of confirmations, but the Zandia country limit (150 million after downgrade) has only 20 million headroom. Approved: 20 million, trade only, six months maximum, with ECA or insurance cover suggested for the rest so it moves off Zandia.
 
-1. **Analyse** the counterparty bank through the CAMELS lens using its published accounts, regulatory disclosures ([[23 Reporting - Regulatory Returns, Pillar 3 and Management Information]] from its side), external ratings and market signals (bond spreads, credit default swap prices, share price).
-2. **Rate** it on the internal financial institution rating scale; derive the SCRA grade for capital purposes.
-3. **Apply the sovereign ceiling** from the country rating.
-4. **Size** the overall limit from a grid that maps the rating to a maximum, scaled by the lending bank's own capital (so that no single bank exposure approaches the large exposure limit) and by the counterparty's size (a limit should not be a large share of the counterparty's capital either).
-5. **Split** the limit into product and tenor sub-limits: money market placements (short, unsecured, high risk per unit), foreign exchange settlement (large, intraday, mitigated by payment-versus-payment systems), derivatives (measured as potential future exposure under [[19 Counterparty Credit Risk and Derivatives]]), trade finance confirmations (short, self-liquidating), nostro balances (continuous, unsecured), and securities holdings.
-6. **Check headroom** against the country limit and the large exposures rule.
-7. **Approve** at the appropriate authority ([[13 Credit Governance - Committees, Authorities and the Three Lines]]), load into the limits system, and set the review date.
-8. **Monitor** continuously: rating actions, results announcements, spread widening, regulatory news, and sovereign events, with the ability to cut a limit within hours.
-
-A worked illustration. A bank with Tier 1 capital of 10 billion considers a limit on a foreign bank rated internally at grade 3 (roughly single-A equivalent), in a country rated grade 2. The rating grid caps grade 3 banks at 2.5% of Tier 1, so 250 million overall. The country limit for that country has 400 million of headroom, so no constraint. The limit is split: 80 million money market up to 3 months, 100 million foreign exchange settlement (all through a payment-versus-payment system), 40 million derivatives potential future exposure, 20 million trade confirmations up to 180 days, 10 million nostro. Total 250 million. The large exposures rule allows up to 25% of Tier 1, or 2.5 billion, so there is no regulatory constraint; the internal grid is far tighter, as it should be.
+**Monitoring.** Bank credit can deteriorate in days. Spreads, share prices, rating actions and deposit outflow news feed [[15 Monitoring, Early Warning and Watchlist]], and treasury may cut placements to overnight within hours, which needs a live view across products.
 
 ---
 
-## 12. Data and systems for country exposure aggregation
+## 13. Country exposure aggregation: data and systems
 
-This is where the note becomes a platform problem, and it is a hard one.
+"How much do we have in Zandia?" is one of the hardest numbers a credit platform produces.
 
-**The question.** "What is our total exposure to country X?" sounds simple. It is not, because of three choices.
+### Which country?
 
-**Immediate borrower basis versus ultimate risk basis.** On the **immediate borrower** basis, exposure is assigned to the country where the direct counterparty is located. On the **ultimate risk** basis, exposure is assigned to the country where the risk *finally* sits after taking account of guarantees, collateral and parent support. A loan to the French subsidiary of a Brazilian company is France on the immediate basis and (if the parent guarantees it, or the subsidiary depends on the parent) Brazil on the ultimate basis. A loan to a Brazilian company guaranteed by a United States bank is Brazil on the immediate basis and the United States on the ultimate basis. Regulators and the Bank for International Settlements statistics require both views, and the ultimate risk view is the one that matters in a crisis.
+| Attribute | Meaning |
+|---|---|
+| Country of incorporation | Where the counterparty is legally registered |
+| Country of residence or operations | Where it is based and does business |
+| Booking location | Where our facility is booked |
+| Country of risk | Where the ultimate source of repayment, guarantor or collateral is |
 
-**Risk transfer.** The movement of exposure from the immediate country to the ultimate country is called **risk transfer**, and the aggregation must record both the **outward** transfers (exposure in country X that is really someone else's risk) and the **inward** transfers (exposure elsewhere that is really country X's risk). The net of the two is the adjustment between the two views. Every guarantee, every eligible collateral item, and every parent relationship generates a transfer record.
+For country risk, **country of risk** is what matters. Banks that confuse it with incorporation show large exposures to small offshore centres where holding companies keep a brass plate.
 
-**What counts as exposure.** Loans and bonds, obviously. Also: undrawn commitments (at full or converted amount), derivatives (at potential future exposure or replacement cost), guarantees issued, trade finance, nostro balances, securities financing, and the sovereign bonds in the treasury portfolio. Different reports use different measures, and the aggregation must be able to produce each.
+### Immediate borrower basis versus ultimate risk basis
 
-**Branches and subsidiaries.** Exposure booked in the bank's own foreign branch or subsidiary in country X is local exposure, often funded locally and in local currency, with a different risk profile from cross-border exposure. Country reporting typically distinguishes **cross-border** from **local** claims.
+**Immediate borrower basis** counts each exposure against the direct borrower's country. **Ultimate risk basis** reallocates it to whoever ultimately bears the risk, after **risk transfers**: guarantees (to the guarantor's country), collateral (to the country of the cash or securities issuer), branches (a branch is not a separate legal entity, so to the head office), and insurance or ECA cover (to the insurer's country). Supervisors often expect limits managed on an ultimate risk basis with both bases reported.
 
-**The data needed.**
+![[26-ultimate-risk-reallocation.svg]]
+*How 120m booked to borrowers located in Zandia becomes only 40m of Zandia country risk once guarantees, collateral and branch structures are taken into account. Transfer risk on the branch placement is still watched, because local controls can trap money in the branch.*
 
-| Data element | Source | Common problem |
-|---|---|---|
-| Counterparty country of incorporation and of operations | Customer master | Only one country held; branch addresses used instead of legal entity |
-| Ultimate parent and its country | Hierarchy in customer master | Missing group links (see [[22 Credit Risk Data, Systems and BCBS 239]]) |
-| Guarantor identity and country | Collateral and guarantee system | Guarantees held as documents, not structured data |
-| Collateral location and issuer country | Collateral system | Location not captured for financial collateral |
-| Booking entity and branch | Core banking | Branch coding inconsistent across systems |
-| Exposure by product at the right measure | All product systems, warehouse | Derivatives and trade exposure on different measures |
-| Country rating, limit and sanctions status | Country risk system, compliance | Not linked to the same country code list |
+| Facility | Risk transfer | Ultimate country | Amount |
+|---|---|---|---|
+| L1 Zandia Cement | None | Zandia | 40m |
+| L2 Zandia Motors | Guarantee from Nordland parent | Nordland | 35m |
+| L3 Zandia Foods | Cash deposit held in Westland | Westland | 25m |
+| L4 Zandia branch of a Nordland bank | Head office liable | Nordland | 20m |
 
-**The crisis test.** When a country gets into trouble, the supervisor's first call asks for total exposure on both bases, split by sovereign, bank, corporate and retail, by cross-border and local, by tenor, with mitigants, by tomorrow. BCBS 239 Principle 5 (timeliness) was written with precisely this in mind. A bank whose answer requires three teams and two days of spreadsheets has a documented gap.
+Immediate basis: Zandia 120 million against a 150 million limit. Ultimate basis: 40 million. Policy must say which drives the limit, and the ultimate number is only trustworthy if guarantees and collateral are eligible, linked and current: a lapsed Nordland guarantee left in the system understates Zandia by 35 million.
+
+Two subtleties. **Partial transfers**: a 60% guarantee moves only 60%, and collateral only its post-haircut value. **Transfer risk can survive the move**: capital controls could trap L4's money in the branch, so some banks keep a separate transfer risk measure that still counts it against Zandia.
+
+### What the data model needs
+
+| Data element | Common problem |
+|---|---|
+| Incorporation, residence and risk country on every counterparty | Only incorporation captured; country of risk defaulted to it |
+| Group hierarchy and ultimate parent | Missing or stale links |
+| Guarantees and insurance linked to facilities, with guarantor country and coverage % | Held as a document, not a linked record |
+| Collateral location (issuer or custodian country) | Missing for securities in custody |
+| Branch versus subsidiary flag | Branches treated as separate counterparties |
+| Sovereign, PSE, MDB, bank classification | Differs from the classification used in capital |
+| Country ratings and limits | A spreadsheet maintained by one person |
+
+The aggregation follows [[22 Credit Risk Data, Systems and BCBS 239]]: every exposure from every system, one counterparty and country hierarchy, reconciled to the ledger.
 
 ---
 
-## 13. Common mistakes and misunderstandings
+## 14. Common mistakes and misunderstandings
 
-- **"Governments do not default."** They do, regularly, on foreign currency debt, and in currency unions on local currency debt too.
-- **"0% risk weight means zero risk."** It means zero *regulatory capital*. The bank's internal view, limits and stress tests must treat sovereign risk honestly.
-- **"A good company in a bad country is a good loan."** Only if it can get hard currency out. Transfer and convertibility risk is independent of the borrower's quality.
-- **"Country risk is just the sovereign rating."** Country risk covers every borrower in the country and includes political, legal and macro channels.
-- **"Lending to a bank is safe because banks are regulated."** Banks fail fast and, since bail-in, creditors pay. Limits on banks need faster review than limits on corporates.
-- **"Our nostro balances are operational, not credit."** They are unsecured deposits with another bank. They are credit exposure and belong in the limit.
-- **"Immediate borrower country is good enough."** It hides guarantees and parent support in both directions and gives the wrong answer in a crisis.
-- **"The sovereign ceiling is absolute."** It is a strong presumption with defined exceptions for genuinely offshore cash flows.
-- **"An export credit agency guarantee covers everything."** Typically 85% to 95%, with exclusions. The uncovered portion is ordinary country and borrower risk.
-- **"Public sector entities are the government."** Only if the government says so in a legally binding way. Many are not.
+- **"Governments do not default."** They do, regularly, mostly on foreign currency debt, and occasionally rich ones too.
+- **"A 0% risk weight means zero risk."** It means zero capital under a national discretion. Rate, limit and stress the exposure anyway.
+- **"Country risk is sovereign risk."** Country risk includes transfer, political and macro risk on private borrowers who may be in excellent health.
+- **"A strong company in a weak country is a strong credit."** For foreign currency lending, transfer risk may cap it.
+- **"Senior bank bonds are as safe as deposits."** Since resolution regimes, they can be bailed in; ranking and issuing entity matter.
+- **"Country of incorporation is the country of risk."** For offshore holding companies, vehicles and branches, often not.
+- **"Ultimate risk basis is lower, so always use it."** Only if the guarantees and collateral are eligible, linked and current.
 
 ---
 
-## 14. What a platform lead needs to know about this
+## 15. What a platform lead needs to know about this
 
-**Country exposure aggregation is the flagship BCBS 239 use case.** If you build one thing to prove the platform can aggregate risk fast and flexibly, build the country exposure view on both bases with risk transfer, across all products, all entities and all measures, re-runnable for any date. It exercises every data domain in [[22 Credit Risk Data, Systems and BCBS 239]].
+**The country dimension is core data.** Every counterparty needs incorporation, residence and risk country held separately, with governed derivation rules for country of risk. Every facility needs linked guarantees, insurance and collateral, each with country and coverage, so ultimate risk is computed, not estimated.
 
-**Country is not one field.** A counterparty needs country of incorporation, country of main operations, country of risk (the bank's judgement), and the countries of its ultimate parent and any guarantor. Collateral needs location and issuer country. Facilities need booking entity and branch country. All of them must use one governed country code list, the same one the country rating, limit and sanctions systems use.
+**Two bases, one engine.** Produce immediate and ultimate views from the same data, with an audit trail of each transfer.
 
-**Risk transfer needs structured guarantee and support data.** A guarantee held as a scanned document cannot transfer risk in a report. Guarantor identifier, guarantee amount, coverage percentage, expiry and the facilities covered must be structured fields, which is also what the capital engine needs for credit risk mitigation.
+**Classification drives capital.** Sovereign, central bank, PSE, MDB, bank or corporate sets the risk weight and the large exposure treatment. Capital, limits and reporting must use the same classification; mismatches are a common audit finding.
 
-**Bank counterparty exposure is spread across every system.** Money market in treasury, foreign exchange settlement in the payments and trading systems, derivatives in the trading systems, trade in the trade finance system, nostros in the payments and accounting systems, bonds in the securities system. The limits system must see all of them against one counterparty identifier, intraday where the exposure moves intraday, with the group hierarchy so that exposure to a bank's branches and subsidiaries rolls up.
+**SCRA grades need evidence.** Capital ratios, buffer requirements and auditor opinions for each counterparty bank, captured as structured data from public disclosures and refreshed at least annually and on news.
 
-**Feeds that must be near real-time.** Sanctions designations (country and entity), country rating changes, bank rating actions, and large market moves on a bank's bonds and shares should reach the limits and watchlist processes within hours. A monthly batch is not acceptable for these.
+**Treasury and operations exposures must reach credit.** Money market, repo, nostro, settlement and confirmations often live in systems never connected to limits.
 
-**SCRA data.** To assign SCRA grades the bank must hold, for each counterparty bank, its published capital and buffer requirements and actuals, with dates and sources. This is a small but awkward reference data set that needs an owner and a refresh process.
+**Limits must be near real time.** Pre-deal checks, intraday utilisation, and instant actions: suspend a bank, move a country to run-off, freeze a sanctioned country.
 
-**Who owns what.**
+**Country ratings and limits belong in a governed system** with history and approvals, not a spreadsheet, and market data should feed the watchlist automatically.
 
 | Thing | Owner | Platform role |
 |---|---|---|
-| Country ratings, limits and the country risk committee | Country risk team in credit risk | Hold ratings and limits as governed data; feed the limits engine |
-| Financial institution ratings and bank limits | Financial institutions credit team | Same, plus SCRA reference data |
-| Counterparty country attributes and hierarchy | Customer master owner | Data model, quality rules, single country code list |
-| Guarantee and support structured data | Credit operations and collateral | Capture and lineage |
-| Exposure by product on the required measures | Product system owners and warehouse | Integrate; produce both bases with risk transfer |
-| Country exposure regulatory returns and central bank statistics | Regulatory reporting | Generate from the aggregation; reconcile |
-| Sanctions status | Compliance | Real-time feed into limits and watchlist |
-| Crisis reporting playbook | Chief risk officer with risk reporting | The re-runnable, fast aggregation that makes it possible |
+| Country ratings and country risk policy | Country risk team, approved by committee | Governed reference data with history |
+| Country limits | Country risk committee | Limits engine with tenor and product sub-limits, both bases |
+| Bank ratings and SCRA grades | FI credit analysts | Structured CAMELS inputs and grade evidence |
+| Bank limits | FI credit with treasury, trade and markets | Pre-deal checks, intraday aggregation across products |
+| Counterparty classification | Credit risk and regulatory reporting jointly | One classification for capital, limits and reporting |
+| Guarantees, ECA cover, PRI | Credit operations and collateral management | Linked records with coverage and guarantor country |
+| Nostro and settlement exposure | Operations and treasury | Daily or intraday feed into limits |
+| Sanctions-driven country freezes | Compliance with country risk | Immediate limit action and alerting |
 
 ---
 
-## 15. Related notes
+## 16. Related notes
 
-- [[08 Trade Finance and Guarantees]]: letters of credit and bank confirmations as a source of bank exposure.
-- [[13 Credit Governance - Committees, Authorities and the Three Lines]]: the country risk and financial institutions approval authorities.
-- [[14 Risk Appetite, Limits and Concentration]]: country and bank limits inside the wider limit framework.
-- [[18 Regulatory Capital and Basel - the Short Version]]: sovereign and bank risk weights, large exposures.
-- [[19 Counterparty Credit Risk and Derivatives]]: the derivatives and settlement part of bank exposure.
-- [[22 Credit Risk Data, Systems and BCBS 239]]: the aggregation capability this note depends on.
-- [[23 Reporting - Regulatory Returns, Pillar 3 and Management Information]]: country exposure returns.
+- [[01 What a Bank Is and How It Makes Money]]: why banks lend to each other.
+- [[02 What Credit Risk Is]]: PD, LGD and exposure applied to sovereigns and banks.
+- [[08 Trade Finance and Guarantees]]: confirmations and ECA-backed trade.
+- [[09 Credit Analysis - Reading a Borrower]]: the corporate analysis CAMELS adapts.
+- [[10 Internal Ratings, Scorecards and PD Models]]: sovereign and bank rating models.
+- [[11 Collateral and Security]]: guarantee eligibility and risk transfer.
+- [[14 Risk Appetite, Limits and Concentration]]: country limits, bank limits and large exposures.
+- [[15 Monitoring, Early Warning and Watchlist]]: market signals for banks and sovereigns.
+- [[18 Regulatory Capital and Basel - the Short Version]]: risk weights for sovereigns, banks, PSEs and MDBs.
+- [[19 Counterparty Credit Risk and Derivatives]]: derivative exposure to banks.
+- [[20 Stress Testing and ICAAP]]: sovereign and country stress.
+- [[22 Credit Risk Data, Systems and BCBS 239]]: aggregation by country and counterparty hierarchy.
+- [[23 Reporting - Regulatory Returns, Pillar 3 and Management Information]]: country exposure reporting and Pillar 3.
 - [[25 Climate, ESG and Emerging Credit Risks]]: geopolitical and sanctions risk.
 - [[27 A Platform Lead's First 90 Days]] and [[28 Master Glossary]].
-- [[basel-credit-risk-explained-simply]] and [[basel-credit-risk-decision-tree]]: the exposure classes and the SCRA grades.
+- [[basel-credit-risk-explained-simply]] and [[basel-credit-risk-decision-tree]]: the capital framework behind these exposure classes.

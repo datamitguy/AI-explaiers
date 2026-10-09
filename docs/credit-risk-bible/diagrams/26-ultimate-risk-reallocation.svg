@@ -1,146 +1,146 @@
 <svg width="100%"
- viewBox="0.00 0.00 1496.80 344.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 330.4)">
+ viewBox="0.00 0.00 869.80 554.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 540.4)">
 <title>UltimateRiskReallocation</title>
-<polygon fill="white" stroke="transparent" points="-14.4,14.4 -14.4,-330.4 1482.4,-330.4 1482.4,14.4 -14.4,14.4"/>
+<polygon fill="white" stroke="transparent" points="-14.4,14.4 -14.4,-540.4 855.4,-540.4 855.4,14.4 -14.4,14.4"/>
 <g id="clust1" class="cluster">
 <title>cluster_items</title>
-<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M255,-8C255,-8 521,-8 521,-8 527,-8 533,-14 533,-20 533,-20 533,-296 533,-296 533,-302 527,-308 521,-308 521,-308 255,-308 255,-308 249,-308 243,-302 243,-296 243,-296 243,-20 243,-20 243,-14 249,-8 255,-8"/>
-<text text-anchor="middle" x="388" y="-293.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">Facilities (immediate borrower in Zandia)</text>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M20,-351C20,-351 821,-351 821,-351 827,-351 833,-357 833,-363 833,-363 833,-430 833,-430 833,-436 827,-442 821,-442 821,-442 20,-442 20,-442 14,-442 8,-436 8,-430 8,-430 8,-363 8,-363 8,-357 14,-351 20,-351"/>
+<text text-anchor="middle" x="420.5" y="-427.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">Facilities (immediate borrower in Zandia)</text>
 </g>
 <g id="clust2" class="cluster">
 <title>cluster_result</title>
-<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M1011,-54C1011,-54 1237,-54 1237,-54 1243,-54 1249,-60 1249,-66 1249,-66 1249,-250 1249,-250 1249,-256 1243,-262 1237,-262 1237,-262 1011,-262 1011,-262 1005,-262 999,-256 999,-250 999,-250 999,-66 999,-66 999,-60 1005,-54 1011,-54"/>
-<text text-anchor="middle" x="1124" y="-247.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">Ultimate risk basis (country of risk)</text>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M235,-90C235,-90 569,-90 569,-90 575,-90 581,-96 581,-102 581,-102 581,-156 581,-156 581,-162 575,-168 569,-168 569,-168 235,-168 235,-168 229,-168 223,-162 223,-156 223,-156 223,-102 223,-102 223,-96 229,-90 235,-90"/>
+<text text-anchor="middle" x="402" y="-153.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">Ultimate risk basis (country of risk)</text>
 </g>
 <g id="node1" class="node">
 <title>Start</title>
-<path fill="#1f2937" stroke="#1f2937" d="M194,-161.5C194,-161.5 12,-161.5 12,-161.5 6,-161.5 0,-155.5 0,-149.5 0,-149.5 0,-120.5 0,-120.5 0,-114.5 6,-108.5 12,-108.5 12,-108.5 194,-108.5 194,-108.5 200,-108.5 206,-114.5 206,-120.5 206,-120.5 206,-149.5 206,-149.5 206,-155.5 200,-161.5 194,-161.5"/>
-<text text-anchor="middle" x="103" y="-144.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Immediate borrower basis</text>
-<text text-anchor="middle" x="103" y="-131.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">all 120m booked to borrowers</text>
-<text text-anchor="middle" x="103" y="-118.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">located in Zandia</text>
+<path fill="#1f2937" stroke="#1f2937" d="M444,-526C444,-526 262,-526 262,-526 256,-526 250,-520 250,-514 250,-514 250,-485 250,-485 250,-479 256,-473 262,-473 262,-473 444,-473 444,-473 450,-473 456,-479 456,-485 456,-485 456,-514 456,-514 456,-520 450,-526 444,-526"/>
+<text text-anchor="middle" x="353" y="-509.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Immediate borrower basis</text>
+<text text-anchor="middle" x="353" y="-496.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">all 120m booked to borrowers</text>
+<text text-anchor="middle" x="353" y="-483.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">located in Zandia</text>
 </g>
 <g id="node2" class="node">
 <title>L1</title>
-<path fill="#eef2ff" stroke="#6366f1" d="M459.5,-278C459.5,-278 315.5,-278 315.5,-278 309.5,-278 303.5,-272 303.5,-266 303.5,-266 303.5,-250 303.5,-250 303.5,-244 309.5,-238 315.5,-238 315.5,-238 459.5,-238 459.5,-238 465.5,-238 471.5,-244 471.5,-250 471.5,-250 471.5,-266 471.5,-266 471.5,-272 465.5,-278 459.5,-278"/>
-<text text-anchor="middle" x="387.5" y="-261.4" font-family="Helvetica,sans-Serif" font-size="12.00">Loan to Zandia Cement</text>
-<text text-anchor="middle" x="387.5" y="-248.4" font-family="Helvetica,sans-Serif" font-size="12.00">unsecured, 40m</text>
+<path fill="#eef2ff" stroke="#6366f1" d="M172,-405.5C172,-405.5 28,-405.5 28,-405.5 22,-405.5 16,-399.5 16,-393.5 16,-393.5 16,-377.5 16,-377.5 16,-371.5 22,-365.5 28,-365.5 28,-365.5 172,-365.5 172,-365.5 178,-365.5 184,-371.5 184,-377.5 184,-377.5 184,-393.5 184,-393.5 184,-399.5 178,-405.5 172,-405.5"/>
+<text text-anchor="middle" x="100" y="-388.9" font-family="Helvetica,sans-Serif" font-size="12.00">Loan to Zandia Cement</text>
+<text text-anchor="middle" x="100" y="-375.9" font-family="Helvetica,sans-Serif" font-size="12.00">unsecured, 40m</text>
 </g>
 <g id="edge1" class="edge">
 <title>Start&#45;&gt;L1</title>
-<path fill="none" stroke="#4b5563" d="M137.53,-161.51C164.57,-181.67 204.35,-208.64 243,-225 259.73,-232.08 278.23,-237.77 296.23,-242.3"/>
-<polygon fill="#4b5563" stroke="#4b5563" points="295.98,-244.76 303.36,-244.04 297.15,-240 295.98,-244.76"/>
+<path fill="none" stroke="#4b5563" d="M274.17,-472.93C249.13,-464.02 221.57,-453.38 197,-442 176.46,-432.49 154.49,-420.12 136.67,-409.47"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="137.56,-407.15 130.3,-405.64 135.03,-411.35 137.56,-407.15"/>
 </g>
 <g id="node3" class="node">
 <title>L2</title>
-<path fill="#eef2ff" stroke="#6366f1" d="M462.5,-212.5C462.5,-212.5 312.5,-212.5 312.5,-212.5 306.5,-212.5 300.5,-206.5 300.5,-200.5 300.5,-200.5 300.5,-171.5 300.5,-171.5 300.5,-165.5 306.5,-159.5 312.5,-159.5 312.5,-159.5 462.5,-159.5 462.5,-159.5 468.5,-159.5 474.5,-165.5 474.5,-171.5 474.5,-171.5 474.5,-200.5 474.5,-200.5 474.5,-206.5 468.5,-212.5 462.5,-212.5"/>
-<text text-anchor="middle" x="387.5" y="-195.9" font-family="Helvetica,sans-Serif" font-size="12.00">Loan to Zandia Motors</text>
-<text text-anchor="middle" x="387.5" y="-182.9" font-family="Helvetica,sans-Serif" font-size="12.00">guaranteed by its parent</text>
-<text text-anchor="middle" x="387.5" y="-169.9" font-family="Helvetica,sans-Serif" font-size="12.00">in Nordland, 35m</text>
+<path fill="#eef2ff" stroke="#6366f1" d="M371,-412C371,-412 221,-412 221,-412 215,-412 209,-406 209,-400 209,-400 209,-371 209,-371 209,-365 215,-359 221,-359 221,-359 371,-359 371,-359 377,-359 383,-365 383,-371 383,-371 383,-400 383,-400 383,-406 377,-412 371,-412"/>
+<text text-anchor="middle" x="296" y="-395.4" font-family="Helvetica,sans-Serif" font-size="12.00">Loan to Zandia Motors</text>
+<text text-anchor="middle" x="296" y="-382.4" font-family="Helvetica,sans-Serif" font-size="12.00">guaranteed by its parent</text>
+<text text-anchor="middle" x="296" y="-369.4" font-family="Helvetica,sans-Serif" font-size="12.00">in Nordland, 35m</text>
 </g>
 <g id="edge2" class="edge">
 <title>Start&#45;&gt;L2</title>
-<path fill="none" stroke="#4b5563" d="M206.39,-153.48C234.77,-158.61 265.43,-164.14 293.26,-169.17"/>
-<polygon fill="#4b5563" stroke="#4b5563" points="292.95,-171.6 300.28,-170.43 293.82,-166.78 292.95,-171.6"/>
+<path fill="none" stroke="#4b5563" d="M339.92,-472.8C331.74,-456.73 321.13,-435.88 312.39,-418.7"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="314.37,-417.2 309.02,-412.08 310.01,-419.43 314.37,-417.2"/>
 </g>
 <g id="node4" class="node">
 <title>L3</title>
-<path fill="#eef2ff" stroke="#6366f1" d="M461,-134.5C461,-134.5 314,-134.5 314,-134.5 308,-134.5 302,-128.5 302,-122.5 302,-122.5 302,-93.5 302,-93.5 302,-87.5 308,-81.5 314,-81.5 314,-81.5 461,-81.5 461,-81.5 467,-81.5 473,-87.5 473,-93.5 473,-93.5 473,-122.5 473,-122.5 473,-128.5 467,-134.5 461,-134.5"/>
-<text text-anchor="middle" x="387.5" y="-117.9" font-family="Helvetica,sans-Serif" font-size="12.00">Loan to Zandia Foods</text>
-<text text-anchor="middle" x="387.5" y="-104.9" font-family="Helvetica,sans-Serif" font-size="12.00">secured on cash deposit</text>
-<text text-anchor="middle" x="387.5" y="-91.9" font-family="Helvetica,sans-Serif" font-size="12.00">held in Westland, 25m</text>
+<path fill="#eef2ff" stroke="#6366f1" d="M567.5,-412C567.5,-412 420.5,-412 420.5,-412 414.5,-412 408.5,-406 408.5,-400 408.5,-400 408.5,-371 408.5,-371 408.5,-365 414.5,-359 420.5,-359 420.5,-359 567.5,-359 567.5,-359 573.5,-359 579.5,-365 579.5,-371 579.5,-371 579.5,-400 579.5,-400 579.5,-406 573.5,-412 567.5,-412"/>
+<text text-anchor="middle" x="494" y="-395.4" font-family="Helvetica,sans-Serif" font-size="12.00">Loan to Zandia Foods</text>
+<text text-anchor="middle" x="494" y="-382.4" font-family="Helvetica,sans-Serif" font-size="12.00">secured on cash deposit</text>
+<text text-anchor="middle" x="494" y="-369.4" font-family="Helvetica,sans-Serif" font-size="12.00">held in Westland, 25m</text>
 </g>
 <g id="edge3" class="edge">
 <title>Start&#45;&gt;L3</title>
-<path fill="none" stroke="#4b5563" d="M206.39,-125.21C235.21,-122.46 266.37,-119.48 294.55,-116.79"/>
-<polygon fill="#4b5563" stroke="#4b5563" points="294.91,-119.22 301.64,-116.11 294.44,-114.34 294.91,-119.22"/>
+<path fill="none" stroke="#4b5563" d="M385.35,-472.8C406.48,-456.02 434.17,-434.03 456.3,-416.44"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="457.84,-418.35 461.8,-412.08 454.8,-414.51 457.84,-418.35"/>
 </g>
 <g id="node5" class="node">
 <title>L4</title>
-<path fill="#eef2ff" stroke="#6366f1" d="M486,-56C486,-56 289,-56 289,-56 283,-56 277,-50 277,-44 277,-44 277,-28 277,-28 277,-22 283,-16 289,-16 289,-16 486,-16 486,-16 492,-16 498,-22 498,-28 498,-28 498,-44 498,-44 498,-50 492,-56 486,-56"/>
-<text text-anchor="middle" x="387.5" y="-39.4" font-family="Helvetica,sans-Serif" font-size="12.00">Placement with Zandia</text>
-<text text-anchor="middle" x="387.5" y="-26.4" font-family="Helvetica,sans-Serif" font-size="12.00">branch of a Nordland bank, 20m</text>
+<path fill="#eef2ff" stroke="#6366f1" d="M813.5,-405.5C813.5,-405.5 616.5,-405.5 616.5,-405.5 610.5,-405.5 604.5,-399.5 604.5,-393.5 604.5,-393.5 604.5,-377.5 604.5,-377.5 604.5,-371.5 610.5,-365.5 616.5,-365.5 616.5,-365.5 813.5,-365.5 813.5,-365.5 819.5,-365.5 825.5,-371.5 825.5,-377.5 825.5,-377.5 825.5,-393.5 825.5,-393.5 825.5,-399.5 819.5,-405.5 813.5,-405.5"/>
+<text text-anchor="middle" x="715" y="-388.9" font-family="Helvetica,sans-Serif" font-size="12.00">Placement with Zandia</text>
+<text text-anchor="middle" x="715" y="-375.9" font-family="Helvetica,sans-Serif" font-size="12.00">branch of a Nordland bank, 20m</text>
 </g>
 <g id="edge4" class="edge">
 <title>Start&#45;&gt;L4</title>
-<path fill="none" stroke="#4b5563" d="M153.08,-108.48C179.21,-95.2 212.22,-79.7 243,-69 254.71,-64.93 267.14,-61.21 279.59,-57.87"/>
-<polygon fill="#4b5563" stroke="#4b5563" points="280.36,-60.2 286.51,-56.05 279.11,-55.46 280.36,-60.2"/>
+<path fill="none" stroke="#4b5563" d="M456.28,-478.62C498.83,-469.27 548.31,-456.87 592,-442 619.06,-432.79 648.27,-419.75 671.43,-408.62"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="672.57,-410.8 677.8,-405.54 670.43,-406.39 672.57,-410.8"/>
 </g>
 <g id="node6" class="node">
 <title>Q</title>
-<polygon fill="#fef3c7" stroke="#d97706" points="727,-194 570,-147 727,-100 884,-147 727,-194"/>
-<text text-anchor="middle" x="727" y="-156.9" font-family="Helvetica,sans-Serif" font-size="12.00">Is the risk transferred</text>
-<text text-anchor="middle" x="727" y="-143.9" font-family="Helvetica,sans-Serif" font-size="12.00">by an eligible guarantee,</text>
-<text text-anchor="middle" x="727" y="-130.9" font-family="Helvetica,sans-Serif" font-size="12.00">collateral or head office?</text>
+<polygon fill="#fef3c7" stroke="#d97706" points="395,-314 238,-267 395,-220 552,-267 395,-314"/>
+<text text-anchor="middle" x="395" y="-276.9" font-family="Helvetica,sans-Serif" font-size="12.00">Is the risk transferred</text>
+<text text-anchor="middle" x="395" y="-263.9" font-family="Helvetica,sans-Serif" font-size="12.00">by an eligible guarantee,</text>
+<text text-anchor="middle" x="395" y="-250.9" font-family="Helvetica,sans-Serif" font-size="12.00">collateral or head office?</text>
 </g>
 <g id="edge5" class="edge">
 <title>L1&#45;&gt;Q</title>
-<path fill="none" stroke="#4b5563" d="M471.64,-241.4C491.88,-236.7 513.36,-231.17 533,-225 574.87,-211.85 620.45,-193.62 656.79,-178.1"/>
-<polygon fill="#4b5563" stroke="#4b5563" points="658,-180.24 663.47,-175.23 656.07,-175.74 658,-180.24"/>
+<path fill="none" stroke="#4b5563" d="M148.38,-365.39C195.58,-346.75 267.99,-318.16 322.15,-296.77"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="323.05,-299.05 328.66,-294.2 321.25,-294.49 323.05,-299.05"/>
 </g>
 <g id="edge6" class="edge">
 <title>L2&#45;&gt;Q</title>
-<path fill="none" stroke="#4b5563" d="M474.54,-176.06C514.5,-171.44 562.68,-165.87 606.13,-160.85"/>
-<polygon fill="#4b5563" stroke="#4b5563" points="606.67,-163.26 613.34,-160.02 606.1,-158.39 606.67,-163.26"/>
+<path fill="none" stroke="#4b5563" d="M317.73,-358.93C329.79,-344.73 345.12,-326.7 358.93,-310.44"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="360.89,-311.92 363.55,-305 357.15,-308.75 360.89,-311.92"/>
 </g>
 <g id="edge7" class="edge">
 <title>L3&#45;&gt;Q</title>
-<path fill="none" stroke="#4b5563" d="M473.23,-117.79C513.45,-122.44 562.22,-128.07 606.15,-133.15"/>
-<polygon fill="#4b5563" stroke="#4b5563" points="605.92,-135.59 613.16,-133.96 606.48,-130.72 605.92,-135.59"/>
+<path fill="none" stroke="#4b5563" d="M472.27,-358.93C460.21,-344.73 444.88,-326.7 431.07,-310.44"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="432.85,-308.75 426.45,-305 429.11,-311.92 432.85,-308.75"/>
 </g>
 <g id="edge8" class="edge">
 <title>L4&#45;&gt;Q</title>
-<path fill="none" stroke="#4b5563" d="M486.23,-56.09C501.98,-59.96 518.02,-64.3 533,-69 574.87,-82.15 620.45,-100.38 656.79,-115.9"/>
-<polygon fill="#4b5563" stroke="#4b5563" points="656.07,-118.26 663.47,-118.77 658,-113.76 656.07,-118.26"/>
+<path fill="none" stroke="#4b5563" d="M662.52,-365.39C610.53,-346.47 530.36,-317.28 471.33,-295.79"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="472.01,-293.43 464.6,-293.34 470.34,-298.04 472.01,-293.43"/>
 </g>
 <g id="node7" class="node">
 <title>Z</title>
-<path fill="#991b1b" stroke="#991b1b" d="M1146,-232C1146,-232 1102,-232 1102,-232 1096,-232 1090,-226 1090,-220 1090,-220 1090,-204 1090,-204 1090,-198 1096,-192 1102,-192 1102,-192 1146,-192 1146,-192 1152,-192 1158,-198 1158,-204 1158,-204 1158,-220 1158,-220 1158,-226 1152,-232 1146,-232"/>
-<text text-anchor="middle" x="1124" y="-215.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Zandia</text>
-<text text-anchor="middle" x="1124" y="-202.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">40m</text>
+<path fill="#991b1b" stroke="#991b1b" d="M287,-138C287,-138 243,-138 243,-138 237,-138 231,-132 231,-126 231,-126 231,-110 231,-110 231,-104 237,-98 243,-98 243,-98 287,-98 287,-98 293,-98 299,-104 299,-110 299,-110 299,-126 299,-126 299,-132 293,-138 287,-138"/>
+<text text-anchor="middle" x="265" y="-121.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Zandia</text>
+<text text-anchor="middle" x="265" y="-108.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">40m</text>
 </g>
 <g id="edge9" class="edge">
 <title>Q&#45;&gt;Z</title>
-<path fill="none" stroke="#4b5563" d="M828.7,-163.57C911.28,-177.16 1023.87,-195.69 1082.99,-205.42"/>
-<polygon fill="#4b5563" stroke="#4b5563" points="1082.62,-207.84 1089.93,-206.56 1083.42,-203 1082.62,-207.84"/>
-<text text-anchor="middle" x="945.5" y="-192" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> no (L1)</text>
+<path fill="none" stroke="#4b5563" d="M362.53,-229.28C338.86,-202.52 307.43,-166.98 286.73,-143.57"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="288.44,-141.81 281.97,-138.19 284.77,-145.05 288.44,-141.81"/>
+<text text-anchor="middle" x="351.5" y="-184.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> no (L1)</text>
 </g>
 <g id="node8" class="node">
 <title>N</title>
-<path fill="#eef2ff" stroke="#6366f1" d="M1183,-167C1183,-167 1065,-167 1065,-167 1059,-167 1053,-161 1053,-155 1053,-155 1053,-139 1053,-139 1053,-133 1059,-127 1065,-127 1065,-127 1183,-127 1183,-127 1189,-127 1195,-133 1195,-139 1195,-139 1195,-155 1195,-155 1195,-161 1189,-167 1183,-167"/>
-<text text-anchor="middle" x="1124" y="-150.4" font-family="Helvetica,sans-Serif" font-size="12.00">Nordland</text>
-<text text-anchor="middle" x="1124" y="-137.4" font-family="Helvetica,sans-Serif" font-size="12.00">35m + 20m = 55m</text>
+<path fill="#eef2ff" stroke="#6366f1" d="M454,-138C454,-138 336,-138 336,-138 330,-138 324,-132 324,-126 324,-126 324,-110 324,-110 324,-104 330,-98 336,-98 336,-98 454,-98 454,-98 460,-98 466,-104 466,-110 466,-110 466,-126 466,-126 466,-132 460,-138 454,-138"/>
+<text text-anchor="middle" x="395" y="-121.4" font-family="Helvetica,sans-Serif" font-size="12.00">Nordland</text>
+<text text-anchor="middle" x="395" y="-108.4" font-family="Helvetica,sans-Serif" font-size="12.00">35m + 20m = 55m</text>
 </g>
 <g id="edge10" class="edge">
 <title>Q&#45;&gt;N</title>
-<path fill="none" stroke="#4b5563" d="M884.11,-147C939.59,-147 999.62,-147 1045.63,-147"/>
-<polygon fill="#4b5563" stroke="#4b5563" points="1045.89,-149.45 1052.89,-147 1045.89,-144.55 1045.89,-149.45"/>
-<text text-anchor="middle" x="945.5" y="-161" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> guarantee (L2),</text>
-<text text-anchor="middle" x="945.5" y="-150" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> head office (L4)</text>
+<path fill="none" stroke="#4b5563" d="M395,-219.89C395,-195.29 395,-165.92 395,-145.23"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="397.45,-145.02 395,-138.02 392.55,-145.02 397.45,-145.02"/>
+<text text-anchor="middle" x="434.5" y="-190" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> guarantee (L2),</text>
+<text text-anchor="middle" x="434.5" y="-179" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> head office (L4)</text>
 </g>
 <g id="node9" class="node">
 <title>W</title>
-<path fill="#eef2ff" stroke="#6366f1" d="M1152.5,-102C1152.5,-102 1095.5,-102 1095.5,-102 1089.5,-102 1083.5,-96 1083.5,-90 1083.5,-90 1083.5,-74 1083.5,-74 1083.5,-68 1089.5,-62 1095.5,-62 1095.5,-62 1152.5,-62 1152.5,-62 1158.5,-62 1164.5,-68 1164.5,-74 1164.5,-74 1164.5,-90 1164.5,-90 1164.5,-96 1158.5,-102 1152.5,-102"/>
-<text text-anchor="middle" x="1124" y="-85.4" font-family="Helvetica,sans-Serif" font-size="12.00">Westland</text>
-<text text-anchor="middle" x="1124" y="-72.4" font-family="Helvetica,sans-Serif" font-size="12.00">25m</text>
+<path fill="#eef2ff" stroke="#6366f1" d="M560.5,-138C560.5,-138 503.5,-138 503.5,-138 497.5,-138 491.5,-132 491.5,-126 491.5,-126 491.5,-110 491.5,-110 491.5,-104 497.5,-98 503.5,-98 503.5,-98 560.5,-98 560.5,-98 566.5,-98 572.5,-104 572.5,-110 572.5,-110 572.5,-126 572.5,-126 572.5,-132 566.5,-138 560.5,-138"/>
+<text text-anchor="middle" x="532" y="-121.4" font-family="Helvetica,sans-Serif" font-size="12.00">Westland</text>
+<text text-anchor="middle" x="532" y="-108.4" font-family="Helvetica,sans-Serif" font-size="12.00">25m</text>
 </g>
 <g id="edge11" class="edge">
 <title>Q&#45;&gt;W</title>
-<path fill="none" stroke="#4b5563" d="M828.7,-130.43C908.21,-117.35 1015.53,-99.69 1076.17,-89.71"/>
-<polygon fill="#4b5563" stroke="#4b5563" points="1076.82,-92.08 1083.33,-88.53 1076.02,-87.25 1076.82,-92.08"/>
-<text text-anchor="middle" x="945.5" y="-119" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> collateral (L3)</text>
+<path fill="none" stroke="#4b5563" d="M440.98,-233.51C454.33,-222.98 468.42,-210.71 480,-198 494.94,-181.61 508.59,-160.52 518.15,-144.26"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="520.36,-145.34 521.74,-138.06 516.11,-142.89 520.36,-145.34"/>
+<text text-anchor="middle" x="531.5" y="-184.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> collateral (L3)</text>
 </g>
 <g id="node10" class="node">
 <title>Note</title>
-<path fill="#f3f4f6" stroke="#9ca3af" d="M1456,-173.5C1456,-173.5 1298,-173.5 1298,-173.5 1292,-173.5 1286,-167.5 1286,-161.5 1286,-161.5 1286,-132.5 1286,-132.5 1286,-126.5 1292,-120.5 1298,-120.5 1298,-120.5 1456,-120.5 1456,-120.5 1462,-120.5 1468,-126.5 1468,-132.5 1468,-132.5 1468,-161.5 1468,-161.5 1468,-167.5 1462,-173.5 1456,-173.5"/>
-<text text-anchor="middle" x="1377" y="-156.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#374151">Zandia transfer risk still</text>
-<text text-anchor="middle" x="1377" y="-143.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#374151">watched on the branch</text>
-<text text-anchor="middle" x="1377" y="-130.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#374151">placement (local controls)</text>
+<path fill="#f3f4f6" stroke="#9ca3af" d="M474,-53C474,-53 316,-53 316,-53 310,-53 304,-47 304,-41 304,-41 304,-12 304,-12 304,-6 310,0 316,0 316,0 474,0 474,0 480,0 486,-6 486,-12 486,-12 486,-41 486,-41 486,-47 480,-53 474,-53"/>
+<text text-anchor="middle" x="395" y="-36.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#374151">Zandia transfer risk still</text>
+<text text-anchor="middle" x="395" y="-23.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#374151">watched on the branch</text>
+<text text-anchor="middle" x="395" y="-10.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="#374151">placement (local controls)</text>
 </g>
 <g id="edge12" class="edge">
 <title>N&#45;&gt;Note</title>
-<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M1195.25,-147C1221.19,-147 1251.06,-147 1278.95,-147"/>
-<polygon fill="#4b5563" stroke="#4b5563" points="1279,-149.45 1286,-147 1279,-144.55 1279,-149.45"/>
+<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M395,-97.58C395,-86.66 395,-72.75 395,-60.2"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="397.45,-60 395,-53 392.55,-60 397.45,-60"/>
 </g>
 </g>
 </svg>
