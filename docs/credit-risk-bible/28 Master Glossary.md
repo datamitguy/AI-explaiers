@@ -50,10 +50,13 @@ Letters: [A](#a) · [B](#b) · [C](#c) · [D](#d) · [E](#e) · [F](#f) · [G](#
 | Bilateral loan | A loan between one bank and one borrower. | [[04 Commercial and Corporate Lending]] |
 | Board risk committee | The board committee that oversees risk appetite and the risk function. | [[13 Credit Governance - Committees, Authorities and the Three Lines]] |
 | Borrowing base | The maximum a borrower can draw, recalculated from the current value of eligible collateral after advance rates. | [[06 Specialised Finance - Project, Object, Commodities, Real Estate]], [[04 Commercial and Corporate Lending]] |
+| Boundary event | An operational failure that causes a credit or market loss, such as unperfected security. Usually capitalised as credit or market risk but logged as an operational event. | [[30 Operational Risk]] |
 | Bridge loan | Short-term financing until permanent funding, such as a bond, is in place. | [[07 Leveraged and Acquisition Finance]] |
 | Buffer | Capital above the minimum. Using it restricts dividends and bonuses but does not close the bank. | [[18 Regulatory Capital and Basel - the Short Version]] |
 | Bullet repayment | All the capital is repaid in one go at maturity. | [[04 Commercial and Corporate Lending]] |
 | Bureau (credit bureau) | A company that collects people's and companies' credit histories and sells reports and scores. | [[05 Retail Lending]] |
+| Business indicator (BI) | A measure of bank size from the income statement, the starting point for operational risk capital under Basel III. | [[30 Operational Risk]] |
+| Business indicator component (BIC) | The business indicator multiplied by marginal coefficients of 12%, 15% and 18% by size band. | [[30 Operational Risk]] |
 | Business model test | The IFRS 9 test of why an asset is held: to collect, to collect and sell, or something else. | [[ifrs9-decision-tree]], [[ifrs9-explained-simply]] |
 | Buy-to-let | A mortgage on a property bought to rent out, repaid mainly from rent. | [[05 Retail Lending]] |
 
@@ -148,6 +151,7 @@ Letters: [A](#a) · [B](#b) · [C](#c) · [D](#d) · [E](#e) · [F](#f) · [G](#
 | ECL (expected credit loss) | The probability-weighted loss accountants require banks to provide for. | [[17 Provisioning and Expected Credit Loss - IFRS 9 and CECL]] |
 | Economic capital | The bank's own estimate of capital needed for its risks, as opposed to regulatory capital. | [[24 Pricing, RAROC and Return on Capital]] |
 | Effective interest rate (EIR) | The rate that discounts a loan's expected cash flows, including fees, exactly to its starting value. Used for interest income and to discount ECL. | [[ifrs9-explained-simply]] |
+| End-user computing (EUC) | Spreadsheets and small tools built outside controlled IT, used in important processes. An operational risk. | [[30 Operational Risk]] |
 | Enforcement | Taking legal action to seize and sell security after default. | [[16 Problem Loans, Restructuring and Recovery]], [[11 Collateral and Security]] |
 | EPC contractor | Engineering, procurement and construction contractor that builds a project for a fixed price and date. | [[06 Specialised Finance - Project, Object, Commodities, Real Estate]] |
 | Equity | The owners' stake: assets minus liabilities. | [[01 What a Bank Is and How It Makes Money]] |
@@ -213,7 +217,9 @@ Letters: [A](#a) · [B](#b) · [C](#c) · [D](#d) · [E](#e) · [F](#f) · [G](#
 | IFRS 9 | The international accounting standard for financial instruments: classification, expected credit loss impairment, and hedge accounting. | [[17 Provisioning and Expected Credit Loss - IFRS 9 and CECL]], [[ifrs9-decision-tree]], [[ifrs9-explained-simply]] |
 | ILAAP (internal liquidity adequacy assessment process) | The liquidity equivalent of the ICAAP. | [[20 Stress Testing and ICAAP]] |
 | IMM (internal model method) | A bank's own simulation model for counterparty exposure, with regulatory approval. | [[19 Counterparty Credit Risk and Derivatives]] |
+| Impact tolerance | The maximum disruption an important business service can suffer before causing intolerable harm. | [[30 Operational Risk]] |
 | Impairment | A reduction in the value of a loan in the accounts because of expected loss. | [[17 Provisioning and Expected Credit Loss - IFRS 9 and CECL]] |
+| Important business service | A service whose disruption would harm customers or markets, mapped and tested under operational resilience rules. | [[30 Operational Risk]] |
 | Income statement | The financial statement showing revenue, costs and profit over a period. | [[09 Credit Analysis - Reading a Borrower]] |
 | Independent price verification (IPV) | A check, by a team outside the trading desk, that trading positions are valued at fair prices. | [[29 Market Risk]] |
 | Information covenant | A promise to supply accounts, compliance certificates and other information. | [[12 Loan Documentation, Covenants and Conditions]] |
@@ -221,6 +227,7 @@ Letters: [A](#a) · [B](#b) · [C](#c) · [D](#d) · [E](#e) · [F](#f) · [G](#
 | Input floor | A minimum value an IRB estimate may not fall below. | [[18 Regulatory Capital and Basel - the Short Version]] |
 | Intercreditor agreement | A contract between lender groups setting who ranks first and who controls enforcement. | [[12 Loan Documentation, Covenants and Conditions]], [[07 Leveraged and Acquisition Finance]] |
 | Internal audit | The third line of defence. Independently checks that controls work. | [[13 Credit Governance - Committees, Authorities and the Three Lines]] |
+| Internal loss multiplier (ILM) | A factor that scales operational risk capital up or down with the bank's own ten-year loss history. Many supervisors set it to 1. | [[30 Operational Risk]] |
 | Investment grade | External ratings of BBB- (or Baa3) and above. | [[10 Internal Ratings, Scorecards and PD Models]] |
 | IPRE (income-producing real estate) | A property whose rent is the main source of loan repayment. | [[06 Specialised Finance - Project, Object, Commodities, Real Estate]] |
 | IRB (internal ratings-based approach) | Basel approaches where the bank uses its own estimates. Covers F-IRB and A-IRB. | [[18 Regulatory Capital and Basel - the Short Version]], [[10 Internal Ratings, Scorecards and PD Models]] |
@@ -233,6 +240,7 @@ Letters: [A](#a) · [B](#b) · [C](#c) · [D](#d) · [E](#e) · [F](#f) · [G](#
 | Term | Meaning | Explained in |
 |---|---|---|
 | K | The output of the IRB capital formula: capital needed as a fraction of exposure. | [[basel-credit-risk-explained-simply]] |
+| KRI (key risk indicator) | A measured signal, with red, amber and green thresholds, that an operational risk is rising. | [[30 Operational Risk]] |
 | KS statistic (Kolmogorov-Smirnov) | A measure of how well a scorecard separates goods from bads. | [[10 Internal Ratings, Scorecards and PD Models]], [[21 Model Risk Management and Validation]] |
 | KYC (know your customer) | Checks to confirm a customer's identity and the legitimacy of their business. | [[03 The Credit Lifecycle]] |
 
@@ -255,6 +263,7 @@ Letters: [A](#a) · [B](#b) · [C](#c) · [D](#d) · [E](#e) · [F](#f) · [G](#
 | LMA (Loan Market Association) | The body that publishes standard loan documents used in Europe, the Middle East and Africa. | [[12 Loan Documentation, Covenants and Conditions]] |
 | Loan origination system | Software that captures applications and supports assessment and approval. | [[03 The Credit Lifecycle]], [[22 Credit Risk Data, Systems and BCBS 239]] |
 | Loan-to-income (LTI) | Mortgage size divided by the borrower's annual income. | [[05 Retail Lending]] |
+| Loss event | A recorded operational incident with its gross loss, recoveries and key dates. | [[30 Operational Risk]] |
 | Low credit risk exemption | An optional IFRS 9 shortcut letting roughly investment-grade exposures stay in stage 1 without a SICR test. | [[ifrs9-decision-tree]], [[ifrs9-explained-simply]] |
 | Low-default portfolio | A portfolio with too few defaults to build a reliable statistical model, such as banks or sovereigns. | [[10 Internal Ratings, Scorecards and PD Models]] |
 | LTV (loan-to-value) | Loan amount divided by collateral value. | [[11 Collateral and Security]], [[05 Retail Lending]] |
@@ -285,6 +294,7 @@ Letters: [A](#a) · [B](#b) · [C](#c) · [D](#d) · [E](#e) · [F](#f) · [G](#
 
 | Term | Meaning | Explained in |
 |---|---|---|
+| Near miss | An operational failure that could have caused a loss but did not. | [[30 Operational Risk]] |
 | Negative pledge | A promise not to give security over assets to other lenders. | [[12 Loan Documentation, Covenants and Conditions]] |
 | Net interest margin (NIM) | The difference between interest earned and interest paid, as a share of assets. | [[01 What a Bank Is and How It Makes Money]] |
 | Netting | Offsetting amounts owed in both directions so only the net is at risk. | [[19 Counterparty Credit Risk and Derivatives]] |
@@ -300,7 +310,8 @@ Letters: [A](#a) · [B](#b) · [C](#c) · [D](#d) · [E](#e) · [F](#f) · [G](#
 | OCI (other comprehensive income) | A section of the accounts for gains and losses kept out of profit, such as some fair value changes. | [[ifrs9-explained-simply]] |
 | Off-balance sheet | A commitment or guarantee not yet drawn, so not shown as a loan. | [[08 Trade Finance and Guarantees]], [[basel-credit-risk-explained-simply]] |
 | Offtake agreement | A long-term contract to buy a project's output, which underpins its revenue. | [[06 Specialised Finance - Project, Object, Commodities, Real Estate]] |
-| Operational risk | The risk of loss from failed processes, people, systems or external events. | [[02 What Credit Risk Is]] |
+| Operational resilience | The ability to keep important services running, or recover them within tolerance, through disruption. | [[30 Operational Risk]] |
+| Operational risk | The risk of loss from failed processes, people, systems or external events. | [[30 Operational Risk]], [[02 What Credit Risk Is]] |
 | Origination | Finding and bringing in new lending business. | [[03 The Credit Lifecycle]] |
 | Output floor | Total risk-weighted assets cannot fall below 72.5% of the standardised figure. | [[18 Regulatory Capital and Basel - the Short Version]] |
 | Overdraft | A facility letting a current account go below zero up to a limit. | [[04 Commercial and Corporate Lending]], [[05 Retail Lending]] |
@@ -343,6 +354,7 @@ Letters: [A](#a) · [B](#b) · [C](#c) · [D](#d) · [E](#e) · [F](#f) · [G](#
 |---|---|---|
 | RAROC (risk-adjusted return on capital) | Risk-adjusted profit divided by the capital a deal uses. | [[24 Pricing, RAROC and Return on Capital]] |
 | Rating | A grade summarising a borrower's creditworthiness. | [[10 Internal Ratings, Scorecards and PD Models]] |
+| RCSA (risk and control self-assessment) | A structured review where a team rates its risks and how well its controls work. | [[30 Operational Risk]] |
 | Reconciliation | Proving two sets of numbers agree, such as risk outputs and the general ledger. | [[22 Credit Risk Data, Systems and BCBS 239]], [[23 Reporting - Regulatory Returns, Pillar 3 and Management Information]] |
 | Recovery rate | The share of a defaulted exposure eventually recovered. One minus LGD. | [[16 Problem Loans, Restructuring and Recovery]] |
 | Recovery risk | The risk of getting back less than expected after a default. Measured by loss given default. | [[02 What Credit Risk Is]], [[16 Problem Loans, Restructuring and Recovery]] |
@@ -414,6 +426,7 @@ Letters: [A](#a) · [B](#b) · [C](#c) · [D](#d) · [E](#e) · [F](#f) · [G](#
 | Term loan A / B | Amortising bank tranche / bullet tranche sold mainly to institutional investors. | [[07 Leveraged and Acquisition Finance]] |
 | Term sheet | A short summary of proposed loan terms before the full agreement. | [[12 Loan Documentation, Covenants and Conditions]] |
 | Third line of defence | Internal audit, which independently checks the first two lines. | [[13 Credit Governance - Committees, Authorities and the Three Lines]] |
+| Third-party risk | Risk from suppliers and outsourced services, such as a vendor calculation engine failing. | [[30 Operational Risk]] |
 | Three lines of defence | The model splitting risk ownership, oversight and assurance between business, risk and audit. | [[13 Credit Governance - Committees, Authorities and the Three Lines]] |
 | Tier 1 / Tier 2 | Capital quality layers. Tier 1 is CET1 plus AT1; Tier 2 is subordinated debt that absorbs losses on failure. | [[18 Regulatory Capital and Basel - the Short Version]] |
 | Trade finance | Banking products that help buyers and sellers trade safely across borders. | [[08 Trade Finance and Guarantees]] |

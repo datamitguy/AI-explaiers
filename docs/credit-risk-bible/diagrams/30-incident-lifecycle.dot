@@ -1,0 +1,28 @@
+digraph Incident {
+  graph [rankdir=TB, splines=true, nodesep=0.35, ranksep=0.4, fontname="Helvetica", fontsize=13, bgcolor="white", newrank=true, pad=0.2];
+  node  [shape=box, style="rounded,filled", fillcolor="#eef2ff", color="#6366f1", fontname="Helvetica", fontsize=12, margin="0.16,0.08"];
+  edge  [color="#4b5563", arrowsize=0.7, fontname="Helvetica", fontsize=10, fontcolor="#374151"];
+
+  Start [label="Something goes wrong\n(or nearly goes wrong)", fillcolor="#1f2937", fontcolor="white", color="#1f2937"];
+  Detect [label="Detect\nalert, reconciliation break,\ncomplaint, sharp-eyed colleague"];
+  Contain [label="Contain\nstop the bleeding:\nfix data, pause job, call vendor"];
+  Log [label="Log the event\nin the operational risk system\nwithin the set deadline"];
+  Q [label="Money lost\nor at risk?", shape=diamond, fillcolor="#fef3c7", color="#d97706"];
+  Near [label="Near miss\nrecord anyway:\nfree lessons", fillcolor="#065f46", fontcolor="white", color="#065f46"];
+  Loss [label="Loss event record\ngross loss, recoveries, net,\nthree dates, event type"];
+  Bound [label="Caused a credit\nor market loss?", shape=diamond, fillcolor="#fef3c7", color="#d97706"];
+  Flag [label="Boundary flag\ncapital stays in credit or\nmarket risk, op risk data notes it", fillcolor="#6b7280", fontcolor="white", color="#6b7280"];
+  Root [label="Root cause analysis\nwhy did the control fail?\n(ask why five times)"];
+  Fix [label="Issue and action\nowner, due date,\nvalidation of the fix"];
+  Close [label="Close and learn\nupdate RCSA, KRIs,\ncontrol library", fillcolor="#065f46", fontcolor="white", color="#065f46"];
+
+  Start -> Detect -> Contain -> Log -> Q;
+  Q -> Near [label="no"];
+  Q -> Loss [label="yes"];
+  Loss -> Bound;
+  Bound -> Flag [label="yes"];
+  Bound -> Root [label="no"];
+  Flag -> Root;
+  Near -> Root;
+  Root -> Fix -> Close;
+}

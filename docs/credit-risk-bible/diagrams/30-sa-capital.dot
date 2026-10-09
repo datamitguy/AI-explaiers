@@ -1,0 +1,33 @@
+digraph SACapital {
+  graph [rankdir=TB, splines=true, nodesep=0.35, ranksep=0.4, fontname="Helvetica", fontsize=13, bgcolor="white", newrank=true, pad=0.2];
+  node  [shape=box, style="rounded,filled", fillcolor="#eef2ff", color="#6366f1", fontname="Helvetica", fontsize=12, margin="0.16,0.08"];
+  edge  [color="#4b5563", arrowsize=0.7, fontname="Helvetica", fontsize=10, fontcolor="#374151"];
+
+  Fin [label="Three years of\nfinancial statements", fillcolor="#1f2937", fontcolor="white", color="#1f2937"];
+  Ledger [label="Ten years of internal\nloss data (net losses)", fillcolor="#1f2937", fontcolor="white", color="#1f2937"];
+
+  subgraph cluster_bi {
+    label="Business indicator (size)"; style="dashed,rounded"; color="#9ca3af"; fontcolor="#374151"; fontsize=11;
+    ILDC [label="Interest, leases\nand dividends component"];
+    SC [label="Services component\nfees and other income"];
+    FC [label="Financial component\ntrading and banking book P&L"];
+  }
+  BI [label="Business indicator (BI)\n= sum of the three components"];
+  BIC [label="Business indicator component (BIC)\nmarginal coefficients:\n12% up to 1bn, 15% 1bn to 30bn,\n18% above 30bn (euro)"];
+  LC [label="Loss component (LC)\n= 15 x average annual\nnet loss over ten years"];
+  Q [label="Jurisdiction uses\nloss history?", shape=diamond, fillcolor="#fef3c7", color="#d97706"];
+  ILM [label="Internal loss multiplier (ILM)\n= ln(e - 1 + (LC / BIC) ^ 0.8)"];
+  One [label="ILM set to 1", fillcolor="#6b7280", fontcolor="white", color="#6b7280"];
+  ORC [label="Operational risk capital\n= BIC x ILM"];
+  RWA [label="Operational risk RWA\n= 12.5 x capital", fillcolor="#065f46", fontcolor="white", color="#065f46"];
+
+  Fin -> ILDC; Fin -> SC; Fin -> FC;
+  ILDC -> BI; SC -> BI; FC -> BI;
+  BI -> BIC -> Q;
+  Ledger -> LC;
+  Q -> ILM [label="yes"];
+  Q -> One [label="no"];
+  LC -> ILM;
+  ILM -> ORC; One -> ORC;
+  ORC -> RWA;
+}

@@ -1,0 +1,108 @@
+<svg width="100%"
+ viewBox="0.00 0.00 474.80 550.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 536.4)">
+<title>EventTypes</title>
+<polygon fill="white" stroke="transparent" points="-14.4,14.4 -14.4,-536.4 460.4,-536.4 460.4,14.4 -14.4,14.4"/>
+<g id="clust1" class="cluster">
+<title>cluster_people</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M223,-225C223,-225 426,-225 426,-225 432,-225 438,-231 438,-237 438,-237 438,-502 438,-502 438,-508 432,-514 426,-514 426,-514 223,-514 223,-514 217,-514 211,-508 211,-502 211,-502 211,-237 211,-237 211,-231 217,-225 223,-225"/>
+<text text-anchor="middle" x="391" y="-501.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#374151">Mostly people</text>
+</g>
+<g id="clust2" class="cluster">
+<title>cluster_things</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M223,-8C223,-8 427,-8 427,-8 433,-8 439,-14 439,-20 439,-20 439,-205 439,-205 439,-211 433,-217 427,-217 427,-217 223,-217 223,-217 217,-217 211,-211 211,-205 211,-205 211,-20 211,-20 211,-14 217,-8 223,-8"/>
+<text text-anchor="middle" x="325" y="-204.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#374151">Mostly things, systems and processes</text>
+</g>
+<g id="node1" class="node">
+<title>Root</title>
+<path fill="#1f2937" stroke="#1f2937" d="M171,-291C171,-291 12,-291 12,-291 6,-291 0,-285 0,-279 0,-279 0,-239 0,-239 0,-233 6,-227 12,-227 12,-227 171,-227 171,-227 177,-227 183,-233 183,-239 183,-239 183,-279 183,-279 183,-285 177,-291 171,-291"/>
+<text text-anchor="middle" x="91.5" y="-275.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Operational risk</text>
+<text text-anchor="middle" x="91.5" y="-262.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">loss from failed processes,</text>
+<text text-anchor="middle" x="91.5" y="-249.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">people, systems or</text>
+<text text-anchor="middle" x="91.5" y="-236.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">external events</text>
+</g>
+<g id="node2" class="node">
+<title>E1</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M410.5,-485.5C410.5,-485.5 238.5,-485.5 238.5,-485.5 232.5,-485.5 226.5,-479.5 226.5,-473.5 226.5,-473.5 226.5,-446.5 226.5,-446.5 226.5,-440.5 232.5,-434.5 238.5,-434.5 238.5,-434.5 410.5,-434.5 410.5,-434.5 416.5,-434.5 422.5,-440.5 422.5,-446.5 422.5,-446.5 422.5,-473.5 422.5,-473.5 422.5,-479.5 416.5,-485.5 410.5,-485.5"/>
+<text text-anchor="middle" x="324.5" y="-469.9" font-family="Helvetica,sans-Serif" font-size="12.00">1. Internal fraud</text>
+<text text-anchor="middle" x="324.5" y="-456.9" font-family="Helvetica,sans-Serif" font-size="12.00">rogue trader, staff theft,</text>
+<text text-anchor="middle" x="324.5" y="-443.9" font-family="Helvetica,sans-Serif" font-size="12.00">deliberately hidden positions</text>
+</g>
+<g id="edge1" class="edge">
+<title>Root&#45;&gt;E1</title>
+<path fill="none" stroke="#4b5563" d="M106.93,-291.19C125.59,-329.2 161.65,-391.7 211,-427 213.85,-429.04 216.83,-430.95 219.9,-432.75"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="219.01,-435.06 226.33,-436.27 221.37,-430.76 219.01,-435.06"/>
+</g>
+<g id="node3" class="node">
+<title>E2</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M418,-418.5C418,-418.5 231,-418.5 231,-418.5 225,-418.5 219,-412.5 219,-406.5 219,-406.5 219,-379.5 219,-379.5 219,-373.5 225,-367.5 231,-367.5 231,-367.5 418,-367.5 418,-367.5 424,-367.5 430,-373.5 430,-379.5 430,-379.5 430,-406.5 430,-406.5 430,-412.5 424,-418.5 418,-418.5"/>
+<text text-anchor="middle" x="324.5" y="-402.9" font-family="Helvetica,sans-Serif" font-size="12.00">2. External fraud</text>
+<text text-anchor="middle" x="324.5" y="-389.9" font-family="Helvetica,sans-Serif" font-size="12.00">cyber theft, forged documents,</text>
+<text text-anchor="middle" x="324.5" y="-376.9" font-family="Helvetica,sans-Serif" font-size="12.00">fake loan applications</text>
+</g>
+<g id="edge2" class="edge">
+<title>Root&#45;&gt;E2</title>
+<path fill="none" stroke="#4b5563" d="M122.94,-291.33C145.39,-313.48 177.71,-342 211,-360 213.92,-361.58 216.93,-363.09 220,-364.54"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="219,-366.78 226.38,-367.42 221.01,-362.31 219,-366.78"/>
+</g>
+<g id="node4" class="node">
+<title>E3</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M413,-351.5C413,-351.5 236,-351.5 236,-351.5 230,-351.5 224,-345.5 224,-339.5 224,-339.5 224,-312.5 224,-312.5 224,-306.5 230,-300.5 236,-300.5 236,-300.5 413,-300.5 413,-300.5 419,-300.5 425,-306.5 425,-312.5 425,-312.5 425,-339.5 425,-339.5 425,-345.5 419,-351.5 413,-351.5"/>
+<text text-anchor="middle" x="324.5" y="-335.9" font-family="Helvetica,sans-Serif" font-size="12.00">3. Employment practices and</text>
+<text text-anchor="middle" x="324.5" y="-322.9" font-family="Helvetica,sans-Serif" font-size="12.00">workplace safety</text>
+<text text-anchor="middle" x="324.5" y="-309.9" font-family="Helvetica,sans-Serif" font-size="12.00">discrimination claims, injuries</text>
+</g>
+<g id="edge3" class="edge">
+<title>Root&#45;&gt;E3</title>
+<path fill="none" stroke="#4b5563" d="M183.13,-285.29C198.04,-289.61 213.53,-294.1 228.54,-298.46"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="227.99,-300.85 235.4,-300.45 229.36,-296.14 227.99,-300.85"/>
+</g>
+<g id="node5" class="node">
+<title>E4</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M400,-284.5C400,-284.5 249,-284.5 249,-284.5 243,-284.5 237,-278.5 237,-272.5 237,-272.5 237,-245.5 237,-245.5 237,-239.5 243,-233.5 249,-233.5 249,-233.5 400,-233.5 400,-233.5 406,-233.5 412,-239.5 412,-245.5 412,-245.5 412,-272.5 412,-272.5 412,-278.5 406,-284.5 400,-284.5"/>
+<text text-anchor="middle" x="324.5" y="-268.9" font-family="Helvetica,sans-Serif" font-size="12.00">4. Clients, products and</text>
+<text text-anchor="middle" x="324.5" y="-255.9" font-family="Helvetica,sans-Serif" font-size="12.00">business practices</text>
+<text text-anchor="middle" x="324.5" y="-242.9" font-family="Helvetica,sans-Serif" font-size="12.00">mis&#45;selling, conduct fines</text>
+</g>
+<g id="edge4" class="edge">
+<title>Root&#45;&gt;E4</title>
+<path fill="none" stroke="#4b5563" d="M183.13,-259C198.48,-259 214.44,-259 229.86,-259"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="229.9,-261.45 236.9,-259 229.9,-256.55 229.9,-261.45"/>
+</g>
+<g id="node6" class="node">
+<title>E5</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M412,-189C412,-189 237,-189 237,-189 231,-189 225,-183 225,-177 225,-177 225,-163 225,-163 225,-157 231,-151 237,-151 237,-151 412,-151 412,-151 418,-151 424,-157 424,-163 424,-163 424,-177 424,-177 424,-183 418,-189 412,-189"/>
+<text text-anchor="middle" x="324.5" y="-173.4" font-family="Helvetica,sans-Serif" font-size="12.00">5. Damage to physical assets</text>
+<text text-anchor="middle" x="324.5" y="-160.4" font-family="Helvetica,sans-Serif" font-size="12.00">fire, flood, storm, terrorism</text>
+</g>
+<g id="edge5" class="edge">
+<title>Root&#45;&gt;E5</title>
+<path fill="none" stroke="#4b5563" d="M175.57,-226.99C205.98,-215.28 239.65,-202.31 267.17,-191.7"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="268.38,-193.86 274.03,-189.06 266.62,-189.29 268.38,-193.86"/>
+</g>
+<g id="node7" class="node">
+<title>E6</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M403,-134.5C403,-134.5 246,-134.5 246,-134.5 240,-134.5 234,-128.5 234,-122.5 234,-122.5 234,-95.5 234,-95.5 234,-89.5 240,-83.5 246,-83.5 246,-83.5 403,-83.5 403,-83.5 409,-83.5 415,-89.5 415,-95.5 415,-95.5 415,-122.5 415,-122.5 415,-128.5 409,-134.5 403,-134.5"/>
+<text text-anchor="middle" x="324.5" y="-118.9" font-family="Helvetica,sans-Serif" font-size="12.00">6. Business disruption and</text>
+<text text-anchor="middle" x="324.5" y="-105.9" font-family="Helvetica,sans-Serif" font-size="12.00">system failures</text>
+<text text-anchor="middle" x="324.5" y="-92.9" font-family="Helvetica,sans-Serif" font-size="12.00">IT outage, failed upgrade</text>
+</g>
+<g id="edge6" class="edge">
+<title>Root&#45;&gt;E6</title>
+<path fill="none" stroke="#4b5563" d="M117.73,-226.85C139.76,-200.79 173.95,-164.91 211,-143 216.18,-139.94 221.65,-137.13 227.29,-134.56"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="228.53,-136.69 233.97,-131.65 226.57,-132.2 228.53,-136.69"/>
+</g>
+<g id="node8" class="node">
+<title>E7</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M413,-67.5C413,-67.5 236,-67.5 236,-67.5 230,-67.5 224,-61.5 224,-55.5 224,-55.5 224,-28.5 224,-28.5 224,-22.5 230,-16.5 236,-16.5 236,-16.5 413,-16.5 413,-16.5 419,-16.5 425,-22.5 425,-28.5 425,-28.5 425,-55.5 425,-55.5 425,-61.5 419,-67.5 413,-67.5"/>
+<text text-anchor="middle" x="324.5" y="-51.9" font-family="Helvetica,sans-Serif" font-size="12.00">7. Execution, delivery and</text>
+<text text-anchor="middle" x="324.5" y="-38.9" font-family="Helvetica,sans-Serif" font-size="12.00">process management</text>
+<text text-anchor="middle" x="324.5" y="-25.9" font-family="Helvetica,sans-Serif" font-size="12.00">keying error, missed deadline</text>
+</g>
+<g id="edge7" class="edge">
+<title>Root&#45;&gt;E7</title>
+<path fill="none" stroke="#4b5563" d="M104.98,-226.89C122.54,-185.9 158.36,-115.59 211,-76 213.17,-74.37 215.41,-72.82 217.72,-71.34"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="219.22,-73.3 223.97,-67.6 216.7,-69.09 219.22,-73.3"/>
+</g>
+</g>
+</svg>

@@ -1,0 +1,169 @@
+<svg width="100%"
+ viewBox="0.00 0.00 655.80 645.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 631.4)">
+<title>SACapital</title>
+<polygon fill="white" stroke="transparent" points="-14.4,14.4 -14.4,-631.4 641.4,-631.4 641.4,14.4 -14.4,14.4"/>
+<g id="clust1" class="cluster">
+<title>cluster_bi</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M20,-481C20,-481 607,-481 607,-481 613,-481 619,-487 619,-493 619,-493 619,-543 619,-543 619,-549 613,-555 607,-555 607,-555 20,-555 20,-555 14,-555 8,-549 8,-543 8,-543 8,-493 8,-493 8,-487 14,-481 20,-481"/>
+<text text-anchor="middle" x="313.5" y="-542.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#374151">Business indicator (size)</text>
+</g>
+<g id="node1" class="node">
+<title>Fin</title>
+<path fill="#1f2937" stroke="#1f2937" d="M362,-617C362,-617 240,-617 240,-617 234,-617 228,-611 228,-605 228,-605 228,-591 228,-591 228,-585 234,-579 240,-579 240,-579 362,-579 362,-579 368,-579 374,-585 374,-591 374,-591 374,-605 374,-605 374,-611 368,-617 362,-617"/>
+<text text-anchor="middle" x="301" y="-601.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Three years of</text>
+<text text-anchor="middle" x="301" y="-588.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">financial statements</text>
+</g>
+<g id="node3" class="node">
+<title>ILDC</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M183.5,-527C183.5,-527 28.5,-527 28.5,-527 22.5,-527 16.5,-521 16.5,-515 16.5,-515 16.5,-501 16.5,-501 16.5,-495 22.5,-489 28.5,-489 28.5,-489 183.5,-489 183.5,-489 189.5,-489 195.5,-495 195.5,-501 195.5,-501 195.5,-515 195.5,-515 195.5,-521 189.5,-527 183.5,-527"/>
+<text text-anchor="middle" x="106" y="-511.4" font-family="Helvetica,sans-Serif" font-size="12.00">Interest, leases</text>
+<text text-anchor="middle" x="106" y="-498.4" font-family="Helvetica,sans-Serif" font-size="12.00">and dividends component</text>
+</g>
+<g id="edge1" class="edge">
+<title>Fin&#45;&gt;ILDC</title>
+<path fill="none" stroke="#4b5563" d="M261.07,-578.98C229.63,-564.79 185.74,-544.98 152.67,-530.06"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="153.6,-527.79 146.21,-527.15 151.59,-532.26 153.6,-527.79"/>
+</g>
+<g id="node4" class="node">
+<title>SC</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M369,-527C369,-527 233,-527 233,-527 227,-527 221,-521 221,-515 221,-515 221,-501 221,-501 221,-495 227,-489 233,-489 233,-489 369,-489 369,-489 375,-489 381,-495 381,-501 381,-501 381,-515 381,-515 381,-521 375,-527 369,-527"/>
+<text text-anchor="middle" x="301" y="-511.4" font-family="Helvetica,sans-Serif" font-size="12.00">Services component</text>
+<text text-anchor="middle" x="301" y="-498.4" font-family="Helvetica,sans-Serif" font-size="12.00">fees and other income</text>
+</g>
+<g id="edge2" class="edge">
+<title>Fin&#45;&gt;SC</title>
+<path fill="none" stroke="#4b5563" d="M301,-578.77C301,-565.91 301,-548.51 301,-534.31"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="303.45,-534.21 301,-527.21 298.55,-534.21 303.45,-534.21"/>
+</g>
+<g id="node5" class="node">
+<title>FC</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M599.5,-527C599.5,-527 418.5,-527 418.5,-527 412.5,-527 406.5,-521 406.5,-515 406.5,-515 406.5,-501 406.5,-501 406.5,-495 412.5,-489 418.5,-489 418.5,-489 599.5,-489 599.5,-489 605.5,-489 611.5,-495 611.5,-501 611.5,-501 611.5,-515 611.5,-515 611.5,-521 605.5,-527 599.5,-527"/>
+<text text-anchor="middle" x="509" y="-511.4" font-family="Helvetica,sans-Serif" font-size="12.00">Financial component</text>
+<text text-anchor="middle" x="509" y="-498.4" font-family="Helvetica,sans-Serif" font-size="12.00">trading and banking book P&amp;L</text>
+</g>
+<g id="edge3" class="edge">
+<title>Fin&#45;&gt;FC</title>
+<path fill="none" stroke="#4b5563" d="M343.59,-578.98C377.27,-564.73 424.34,-544.82 459.65,-529.88"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="460.61,-532.13 466.11,-527.15 458.7,-527.62 460.61,-532.13"/>
+</g>
+<g id="node2" class="node">
+<title>Ledger</title>
+<path fill="#1f2937" stroke="#1f2937" d="M591,-375C591,-375 465,-375 465,-375 459,-375 453,-369 453,-363 453,-363 453,-349 453,-349 453,-343 459,-337 465,-337 465,-337 591,-337 591,-337 597,-337 603,-343 603,-349 603,-349 603,-363 603,-363 603,-369 597,-375 591,-375"/>
+<text text-anchor="middle" x="528" y="-359.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Ten years of internal</text>
+<text text-anchor="middle" x="528" y="-346.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">loss data (net losses)</text>
+</g>
+<g id="node8" class="node">
+<title>LC</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M596.5,-280.5C596.5,-280.5 459.5,-280.5 459.5,-280.5 453.5,-280.5 447.5,-274.5 447.5,-268.5 447.5,-268.5 447.5,-241.5 447.5,-241.5 447.5,-235.5 453.5,-229.5 459.5,-229.5 459.5,-229.5 596.5,-229.5 596.5,-229.5 602.5,-229.5 608.5,-235.5 608.5,-241.5 608.5,-241.5 608.5,-268.5 608.5,-268.5 608.5,-274.5 602.5,-280.5 596.5,-280.5"/>
+<text text-anchor="middle" x="528" y="-264.9" font-family="Helvetica,sans-Serif" font-size="12.00">Loss component (LC)</text>
+<text text-anchor="middle" x="528" y="-251.9" font-family="Helvetica,sans-Serif" font-size="12.00">= 15 x average annual</text>
+<text text-anchor="middle" x="528" y="-238.9" font-family="Helvetica,sans-Serif" font-size="12.00">net loss over ten years</text>
+</g>
+<g id="edge9" class="edge">
+<title>Ledger&#45;&gt;LC</title>
+<path fill="none" stroke="#4b5563" d="M528,-336.84C528,-323.19 528,-304.14 528,-287.96"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="530.45,-287.75 528,-280.75 525.55,-287.75 530.45,-287.75"/>
+</g>
+<g id="node6" class="node">
+<title>BI</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M397,-457C397,-457 205,-457 205,-457 199,-457 193,-451 193,-445 193,-445 193,-431 193,-431 193,-425 199,-419 205,-419 205,-419 397,-419 397,-419 403,-419 409,-425 409,-431 409,-431 409,-445 409,-445 409,-451 403,-457 397,-457"/>
+<text text-anchor="middle" x="301" y="-441.4" font-family="Helvetica,sans-Serif" font-size="12.00">Business indicator (BI)</text>
+<text text-anchor="middle" x="301" y="-428.4" font-family="Helvetica,sans-Serif" font-size="12.00">= sum of the three components</text>
+</g>
+<g id="edge4" class="edge">
+<title>ILDC&#45;&gt;BI</title>
+<path fill="none" stroke="#4b5563" d="M157.74,-488.96C183.85,-479.85 215.62,-468.77 242.6,-459.36"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="243.55,-461.63 249.35,-457.01 241.94,-457 243.55,-461.63"/>
+</g>
+<g id="edge5" class="edge">
+<title>SC&#45;&gt;BI</title>
+<path fill="none" stroke="#4b5563" d="M301,-488.78C301,-481.31 301,-472.53 301,-464.45"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="303.45,-464.27 301,-457.27 298.55,-464.27 303.45,-464.27"/>
+</g>
+<g id="edge6" class="edge">
+<title>FC&#45;&gt;BI</title>
+<path fill="none" stroke="#4b5563" d="M453.81,-488.96C425.84,-479.81 391.78,-468.68 362.93,-459.24"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="363.51,-456.86 356.09,-457.01 361.98,-461.51 363.51,-456.86"/>
+</g>
+<g id="node7" class="node">
+<title>BIC</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M408,-388C408,-388 194,-388 194,-388 188,-388 182,-382 182,-376 182,-376 182,-336 182,-336 182,-330 188,-324 194,-324 194,-324 408,-324 408,-324 414,-324 420,-330 420,-336 420,-336 420,-376 420,-376 420,-382 414,-388 408,-388"/>
+<text text-anchor="middle" x="301" y="-372.4" font-family="Helvetica,sans-Serif" font-size="12.00">Business indicator component (BIC)</text>
+<text text-anchor="middle" x="301" y="-359.4" font-family="Helvetica,sans-Serif" font-size="12.00">marginal coefficients:</text>
+<text text-anchor="middle" x="301" y="-346.4" font-family="Helvetica,sans-Serif" font-size="12.00">12% up to 1bn, 15% 1bn to 30bn,</text>
+<text text-anchor="middle" x="301" y="-333.4" font-family="Helvetica,sans-Serif" font-size="12.00">18% above 30bn (euro)</text>
+</g>
+<g id="edge7" class="edge">
+<title>BI&#45;&gt;BIC</title>
+<path fill="none" stroke="#4b5563" d="M301,-418.85C301,-411.93 301,-403.75 301,-395.65"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="303.45,-395.27 301,-388.27 298.55,-395.27 303.45,-395.27"/>
+</g>
+<g id="node9" class="node">
+<title>Q</title>
+<path fill="#fef3c7" stroke="#d97706" d="M289.55,-289.4C289.55,-289.4 191.45,-258.6 191.45,-258.6 185.72,-256.8 185.72,-253.2 191.45,-251.4 191.45,-251.4 289.55,-220.6 289.55,-220.6 295.28,-218.8 306.72,-218.8 312.45,-220.6 312.45,-220.6 410.55,-251.4 410.55,-251.4 416.28,-253.2 416.28,-256.8 410.55,-258.6 410.55,-258.6 312.45,-289.4 312.45,-289.4 306.72,-291.2 295.28,-291.2 289.55,-289.4"/>
+<text text-anchor="middle" x="301" y="-258.4" font-family="Helvetica,sans-Serif" font-size="12.00">Jurisdiction uses</text>
+<text text-anchor="middle" x="301" y="-245.4" font-family="Helvetica,sans-Serif" font-size="12.00">loss history?</text>
+</g>
+<g id="edge8" class="edge">
+<title>BIC&#45;&gt;Q</title>
+<path fill="none" stroke="#4b5563" d="M301,-323.95C301,-316.48 301,-308.36 301,-300.41"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="303.45,-300.19 301,-293.19 298.55,-300.19 303.45,-300.19"/>
+</g>
+<g id="node10" class="node">
+<title>ILM</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M554.5,-176C554.5,-176 385.5,-176 385.5,-176 379.5,-176 373.5,-170 373.5,-164 373.5,-164 373.5,-150 373.5,-150 373.5,-144 379.5,-138 385.5,-138 385.5,-138 554.5,-138 554.5,-138 560.5,-138 566.5,-144 566.5,-150 566.5,-150 566.5,-164 566.5,-164 566.5,-170 560.5,-176 554.5,-176"/>
+<text text-anchor="middle" x="470" y="-160.4" font-family="Helvetica,sans-Serif" font-size="12.00">Internal loss multiplier (ILM)</text>
+<text text-anchor="middle" x="470" y="-147.4" font-family="Helvetica,sans-Serif" font-size="12.00">= ln(e &#45; 1 + (LC / BIC) ^ 0.8)</text>
+</g>
+<g id="edge12" class="edge">
+<title>LC&#45;&gt;ILM</title>
+<path fill="none" stroke="#4b5563" d="M513.06,-229.28C504.39,-214.92 493.5,-196.9 484.84,-182.57"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="486.76,-180.99 481.04,-176.27 482.56,-183.53 486.76,-180.99"/>
+</g>
+<g id="edge10" class="edge">
+<title>Q&#45;&gt;ILM</title>
+<path fill="none" stroke="#4b5563" d="M343.21,-230.02C370.45,-214.55 405.6,-194.58 431.98,-179.6"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="433.27,-181.68 438.14,-176.1 430.85,-177.42 433.27,-181.68"/>
+<text text-anchor="middle" x="419" y="-194" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151">yes</text>
+</g>
+<g id="node11" class="node">
+<title>One</title>
+<path fill="#6b7280" stroke="#6b7280" d="M336,-175C336,-175 266,-175 266,-175 260,-175 254,-169 254,-163 254,-163 254,-151 254,-151 254,-145 260,-139 266,-139 266,-139 336,-139 336,-139 342,-139 348,-145 348,-151 348,-151 348,-163 348,-163 348,-169 342,-175 336,-175"/>
+<text text-anchor="middle" x="301" y="-153.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">ILM set to 1</text>
+</g>
+<g id="edge11" class="edge">
+<title>Q&#45;&gt;One</title>
+<path fill="none" stroke="#4b5563" d="M301,-216.88C301,-205.34 301,-192.9 301,-182.45"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="303.45,-182.23 301,-175.23 298.55,-182.23 303.45,-182.23"/>
+<text text-anchor="middle" x="307.5" y="-194" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151">no</text>
+</g>
+<g id="node12" class="node">
+<title>ORC</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M454.5,-107C454.5,-107 315.5,-107 315.5,-107 309.5,-107 303.5,-101 303.5,-95 303.5,-95 303.5,-81 303.5,-81 303.5,-75 309.5,-69 315.5,-69 315.5,-69 454.5,-69 454.5,-69 460.5,-69 466.5,-75 466.5,-81 466.5,-81 466.5,-95 466.5,-95 466.5,-101 460.5,-107 454.5,-107"/>
+<text text-anchor="middle" x="385" y="-91.4" font-family="Helvetica,sans-Serif" font-size="12.00">Operational risk capital</text>
+<text text-anchor="middle" x="385" y="-78.4" font-family="Helvetica,sans-Serif" font-size="12.00">= BIC x ILM</text>
+</g>
+<g id="edge13" class="edge">
+<title>ILM&#45;&gt;ORC</title>
+<path fill="none" stroke="#4b5563" d="M446.77,-137.69C436.48,-129.58 424.26,-119.95 413.43,-111.41"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="414.92,-109.46 407.9,-107.05 411.89,-113.31 414.92,-109.46"/>
+</g>
+<g id="edge14" class="edge">
+<title>One&#45;&gt;ORC</title>
+<path fill="none" stroke="#4b5563" d="M322.63,-138.75C332.98,-130.49 345.51,-120.5 356.61,-111.64"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="358.32,-113.41 362.27,-107.13 355.27,-109.58 358.32,-113.41"/>
+</g>
+<g id="node13" class="node">
+<title>RWA</title>
+<path fill="#065f46" stroke="#065f46" d="M448.5,-38C448.5,-38 321.5,-38 321.5,-38 315.5,-38 309.5,-32 309.5,-26 309.5,-26 309.5,-12 309.5,-12 309.5,-6 315.5,0 321.5,0 321.5,0 448.5,0 448.5,0 454.5,0 460.5,-6 460.5,-12 460.5,-12 460.5,-26 460.5,-26 460.5,-32 454.5,-38 448.5,-38"/>
+<text text-anchor="middle" x="385" y="-22.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Operational risk RWA</text>
+<text text-anchor="middle" x="385" y="-9.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">= 12.5 x capital</text>
+</g>
+<g id="edge15" class="edge">
+<title>ORC&#45;&gt;RWA</title>
+<path fill="none" stroke="#4b5563" d="M385,-68.69C385,-61.6 385,-53.36 385,-45.69"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="387.45,-45.29 385,-38.29 382.55,-45.29 387.45,-45.29"/>
+</g>
+</g>
+</svg>

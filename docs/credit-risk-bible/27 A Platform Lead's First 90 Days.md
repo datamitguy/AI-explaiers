@@ -272,6 +272,7 @@ Before a meeting with a specific team, read the note that matches their world: t
 
 ## Related notes
 
+- [[30 Operational Risk]] for the controls, incidents and resilience you will personally own.
 - [[00 Start Here]]
 - [[22 Credit Risk Data, Systems and BCBS 239]]
 - [[23 Reporting - Regulatory Returns, Pillar 3 and Management Information]]

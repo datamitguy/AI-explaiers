@@ -1,0 +1,157 @@
+<svg width="100%"
+ viewBox="0.00 0.00 389.80 1006.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 992.4)">
+<title>Incident</title>
+<polygon fill="white" stroke="transparent" points="-14.4,14.4 -14.4,-992.4 375.4,-992.4 375.4,14.4 -14.4,14.4"/>
+<g id="node1" class="node">
+<title>Start</title>
+<path fill="#1f2937" stroke="#1f2937" d="M179,-978C179,-978 41,-978 41,-978 35,-978 29,-972 29,-966 29,-966 29,-952 29,-952 29,-946 35,-940 41,-940 41,-940 179,-940 179,-940 185,-940 191,-946 191,-952 191,-952 191,-966 191,-966 191,-972 185,-978 179,-978"/>
+<text text-anchor="middle" x="110" y="-962.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Something goes wrong</text>
+<text text-anchor="middle" x="110" y="-949.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">(or nearly goes wrong)</text>
+</g>
+<g id="node2" class="node">
+<title>Detect</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M208,-909C208,-909 12,-909 12,-909 6,-909 0,-903 0,-897 0,-897 0,-870 0,-870 0,-864 6,-858 12,-858 12,-858 208,-858 208,-858 214,-858 220,-864 220,-870 220,-870 220,-897 220,-897 220,-903 214,-909 208,-909"/>
+<text text-anchor="middle" x="110" y="-893.4" font-family="Helvetica,sans-Serif" font-size="12.00">Detect</text>
+<text text-anchor="middle" x="110" y="-880.4" font-family="Helvetica,sans-Serif" font-size="12.00">alert, reconciliation break,</text>
+<text text-anchor="middle" x="110" y="-867.4" font-family="Helvetica,sans-Serif" font-size="12.00">complaint, sharp&#45;eyed colleague</text>
+</g>
+<g id="edge1" class="edge">
+<title>Start&#45;&gt;Detect</title>
+<path fill="none" stroke="#4b5563" d="M110,-939.83C110,-932.74 110,-924.39 110,-916.36"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="112.45,-916.11 110,-909.11 107.55,-916.11 112.45,-916.11"/>
+</g>
+<g id="node3" class="node">
+<title>Contain</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M202,-827C202,-827 18,-827 18,-827 12,-827 6,-821 6,-815 6,-815 6,-788 6,-788 6,-782 12,-776 18,-776 18,-776 202,-776 202,-776 208,-776 214,-782 214,-788 214,-788 214,-815 214,-815 214,-821 208,-827 202,-827"/>
+<text text-anchor="middle" x="110" y="-811.4" font-family="Helvetica,sans-Serif" font-size="12.00">Contain</text>
+<text text-anchor="middle" x="110" y="-798.4" font-family="Helvetica,sans-Serif" font-size="12.00">stop the bleeding:</text>
+<text text-anchor="middle" x="110" y="-785.4" font-family="Helvetica,sans-Serif" font-size="12.00">fix data, pause job, call vendor</text>
+</g>
+<g id="edge2" class="edge">
+<title>Detect&#45;&gt;Contain</title>
+<path fill="none" stroke="#4b5563" d="M110,-857.63C110,-850.18 110,-841.92 110,-834.1"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="112.45,-834.08 110,-827.08 107.55,-834.08 112.45,-834.08"/>
+</g>
+<g id="node4" class="node">
+<title>Log</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M199,-745C199,-745 21,-745 21,-745 15,-745 9,-739 9,-733 9,-733 9,-706 9,-706 9,-700 15,-694 21,-694 21,-694 199,-694 199,-694 205,-694 211,-700 211,-706 211,-706 211,-733 211,-733 211,-739 205,-745 199,-745"/>
+<text text-anchor="middle" x="110" y="-729.4" font-family="Helvetica,sans-Serif" font-size="12.00">Log the event</text>
+<text text-anchor="middle" x="110" y="-716.4" font-family="Helvetica,sans-Serif" font-size="12.00">in the operational risk system</text>
+<text text-anchor="middle" x="110" y="-703.4" font-family="Helvetica,sans-Serif" font-size="12.00">within the set deadline</text>
+</g>
+<g id="edge3" class="edge">
+<title>Contain&#45;&gt;Log</title>
+<path fill="none" stroke="#4b5563" d="M110,-775.63C110,-768.18 110,-759.92 110,-752.1"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="112.45,-752.08 110,-745.08 107.55,-752.08 112.45,-752.08"/>
+</g>
+<g id="node5" class="node">
+<title>Q</title>
+<path fill="#fef3c7" stroke="#d97706" d="M98.96,-658.29C98.96,-658.29 32.04,-629.71 32.04,-629.71 26.52,-627.36 26.52,-622.64 32.04,-620.29 32.04,-620.29 98.96,-591.71 98.96,-591.71 104.48,-589.36 115.52,-589.36 121.04,-591.71 121.04,-591.71 187.96,-620.29 187.96,-620.29 193.48,-622.64 193.48,-627.36 187.96,-629.71 187.96,-629.71 121.04,-658.29 121.04,-658.29 115.52,-660.64 104.48,-660.64 98.96,-658.29"/>
+<text text-anchor="middle" x="110" y="-628.4" font-family="Helvetica,sans-Serif" font-size="12.00">Money lost</text>
+<text text-anchor="middle" x="110" y="-615.4" font-family="Helvetica,sans-Serif" font-size="12.00">or at risk?</text>
+</g>
+<g id="edge4" class="edge">
+<title>Log&#45;&gt;Q</title>
+<path fill="none" stroke="#4b5563" d="M110,-693.71C110,-686.5 110,-678.4 110,-670.37"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="112.45,-670.04 110,-663.04 107.55,-670.04 112.45,-670.04"/>
+</g>
+<g id="node6" class="node">
+<title>Near</title>
+<path fill="#065f46" stroke="#065f46" d="M128.5,-480C128.5,-480 37.5,-480 37.5,-480 31.5,-480 25.5,-474 25.5,-468 25.5,-468 25.5,-441 25.5,-441 25.5,-435 31.5,-429 37.5,-429 37.5,-429 128.5,-429 128.5,-429 134.5,-429 140.5,-435 140.5,-441 140.5,-441 140.5,-468 140.5,-468 140.5,-474 134.5,-480 128.5,-480"/>
+<text text-anchor="middle" x="83" y="-464.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Near miss</text>
+<text text-anchor="middle" x="83" y="-451.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">record anyway:</text>
+<text text-anchor="middle" x="83" y="-438.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">free lessons</text>
+</g>
+<g id="edge5" class="edge">
+<title>Q&#45;&gt;Near</title>
+<path fill="none" stroke="#4b5563" d="M104.41,-589.09C99.59,-559.05 92.71,-516.1 88.06,-487.07"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="90.45,-486.53 86.93,-480.01 85.62,-487.31 90.45,-486.53"/>
+<text text-anchor="middle" x="108.5" y="-564" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151">no</text>
+</g>
+<g id="node7" class="node">
+<title>Loss</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M301.5,-546C301.5,-546 142.5,-546 142.5,-546 136.5,-546 130.5,-540 130.5,-534 130.5,-534 130.5,-507 130.5,-507 130.5,-501 136.5,-495 142.5,-495 142.5,-495 301.5,-495 301.5,-495 307.5,-495 313.5,-501 313.5,-507 313.5,-507 313.5,-534 313.5,-534 313.5,-540 307.5,-546 301.5,-546"/>
+<text text-anchor="middle" x="222" y="-530.4" font-family="Helvetica,sans-Serif" font-size="12.00">Loss event record</text>
+<text text-anchor="middle" x="222" y="-517.4" font-family="Helvetica,sans-Serif" font-size="12.00">gross loss, recoveries, net,</text>
+<text text-anchor="middle" x="222" y="-504.4" font-family="Helvetica,sans-Serif" font-size="12.00">three dates, event type</text>
+</g>
+<g id="edge6" class="edge">
+<title>Q&#45;&gt;Loss</title>
+<path fill="none" stroke="#4b5563" d="M137.69,-598.66C153.4,-584.28 173.15,-566.21 189.58,-551.17"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="191.51,-552.73 195.02,-546.19 188.2,-549.11 191.51,-552.73"/>
+<text text-anchor="middle" x="186" y="-564" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151">yes</text>
+</g>
+<g id="node10" class="node">
+<title>Root</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M289,-215C289,-215 147,-215 147,-215 141,-215 135,-209 135,-203 135,-203 135,-176 135,-176 135,-170 141,-164 147,-164 147,-164 289,-164 289,-164 295,-164 301,-170 301,-176 301,-176 301,-203 301,-203 301,-209 295,-215 289,-215"/>
+<text text-anchor="middle" x="218" y="-199.4" font-family="Helvetica,sans-Serif" font-size="12.00">Root cause analysis</text>
+<text text-anchor="middle" x="218" y="-186.4" font-family="Helvetica,sans-Serif" font-size="12.00">why did the control fail?</text>
+<text text-anchor="middle" x="218" y="-173.4" font-family="Helvetica,sans-Serif" font-size="12.00">(ask why five times)</text>
+</g>
+<g id="edge11" class="edge">
+<title>Near&#45;&gt;Root</title>
+<path fill="none" stroke="#4b5563" d="M77.05,-428.85C68.48,-387.14 57.61,-301.73 96,-246 104.28,-233.98 115.83,-224.52 128.55,-217.08"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="129.93,-219.12 134.88,-213.59 127.56,-214.83 129.93,-219.12"/>
+</g>
+<g id="node8" class="node">
+<title>Bound</title>
+<path fill="#fef3c7" stroke="#d97706" d="M214.58,-410.32C214.58,-410.32 119.42,-379.68 119.42,-379.68 113.71,-377.84 113.71,-374.16 119.42,-372.32 119.42,-372.32 214.58,-341.68 214.58,-341.68 220.29,-339.84 231.71,-339.84 237.42,-341.68 237.42,-341.68 332.58,-372.32 332.58,-372.32 338.29,-374.16 338.29,-377.84 332.58,-379.68 332.58,-379.68 237.42,-410.32 237.42,-410.32 231.71,-412.16 220.29,-412.16 214.58,-410.32"/>
+<text text-anchor="middle" x="226" y="-379.4" font-family="Helvetica,sans-Serif" font-size="12.00">Caused a credit</text>
+<text text-anchor="middle" x="226" y="-366.4" font-family="Helvetica,sans-Serif" font-size="12.00">or market loss?</text>
+</g>
+<g id="edge7" class="edge">
+<title>Loss&#45;&gt;Bound</title>
+<path fill="none" stroke="#4b5563" d="M222.7,-494.68C223.27,-474.36 224.09,-445.11 224.77,-420.86"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="227.22,-420.9 224.97,-413.84 222.32,-420.76 227.22,-420.9"/>
+</g>
+<g id="node9" class="node">
+<title>Flag</title>
+<path fill="#6b7280" stroke="#6b7280" d="M315.5,-297C315.5,-297 120.5,-297 120.5,-297 114.5,-297 108.5,-291 108.5,-285 108.5,-285 108.5,-258 108.5,-258 108.5,-252 114.5,-246 120.5,-246 120.5,-246 315.5,-246 315.5,-246 321.5,-246 327.5,-252 327.5,-258 327.5,-258 327.5,-285 327.5,-285 327.5,-291 321.5,-297 315.5,-297"/>
+<text text-anchor="middle" x="218" y="-281.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Boundary flag</text>
+<text text-anchor="middle" x="218" y="-268.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">capital stays in credit or</text>
+<text text-anchor="middle" x="218" y="-255.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">market risk, op risk data notes it</text>
+</g>
+<g id="edge8" class="edge">
+<title>Bound&#45;&gt;Flag</title>
+<path fill="none" stroke="#4b5563" d="M223.18,-338.86C222.29,-327.51 221.32,-315.08 220.46,-304.08"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="222.91,-303.86 219.92,-297.08 218.02,-304.25 222.91,-303.86"/>
+<text text-anchor="middle" x="230" y="-315" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151">yes</text>
+</g>
+<g id="edge9" class="edge">
+<title>Bound&#45;&gt;Root</title>
+<path fill="none" stroke="#4b5563" d="M276.38,-354.22C300.25,-341.49 326.46,-322.67 340,-297 350.57,-276.95 352.27,-265.06 340,-246 331.99,-233.56 320.43,-223.87 307.58,-216.34"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="308.49,-214.05 301.18,-212.81 306.13,-218.34 308.49,-214.05"/>
+<text text-anchor="middle" x="354.5" y="-269" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151">no</text>
+</g>
+<g id="edge10" class="edge">
+<title>Flag&#45;&gt;Root</title>
+<path fill="none" stroke="#4b5563" d="M218,-245.63C218,-238.18 218,-229.92 218,-222.1"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="220.45,-222.08 218,-215.08 215.55,-222.08 220.45,-222.08"/>
+</g>
+<g id="node11" class="node">
+<title>Fix</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M275.5,-133C275.5,-133 160.5,-133 160.5,-133 154.5,-133 148.5,-127 148.5,-121 148.5,-121 148.5,-94 148.5,-94 148.5,-88 154.5,-82 160.5,-82 160.5,-82 275.5,-82 275.5,-82 281.5,-82 287.5,-88 287.5,-94 287.5,-94 287.5,-121 287.5,-121 287.5,-127 281.5,-133 275.5,-133"/>
+<text text-anchor="middle" x="218" y="-117.4" font-family="Helvetica,sans-Serif" font-size="12.00">Issue and action</text>
+<text text-anchor="middle" x="218" y="-104.4" font-family="Helvetica,sans-Serif" font-size="12.00">owner, due date,</text>
+<text text-anchor="middle" x="218" y="-91.4" font-family="Helvetica,sans-Serif" font-size="12.00">validation of the fix</text>
+</g>
+<g id="edge12" class="edge">
+<title>Root&#45;&gt;Fix</title>
+<path fill="none" stroke="#4b5563" d="M218,-163.63C218,-156.18 218,-147.92 218,-140.1"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="220.45,-140.08 218,-133.08 215.55,-140.08 220.45,-140.08"/>
+</g>
+<g id="node12" class="node">
+<title>Close</title>
+<path fill="#065f46" stroke="#065f46" d="M275.5,-51C275.5,-51 160.5,-51 160.5,-51 154.5,-51 148.5,-45 148.5,-39 148.5,-39 148.5,-12 148.5,-12 148.5,-6 154.5,0 160.5,0 160.5,0 275.5,0 275.5,0 281.5,0 287.5,-6 287.5,-12 287.5,-12 287.5,-39 287.5,-39 287.5,-45 281.5,-51 275.5,-51"/>
+<text text-anchor="middle" x="218" y="-35.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Close and learn</text>
+<text text-anchor="middle" x="218" y="-22.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">update RCSA, KRIs,</text>
+<text text-anchor="middle" x="218" y="-9.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">control library</text>
+</g>
+<g id="edge13" class="edge">
+<title>Fix&#45;&gt;Close</title>
+<path fill="none" stroke="#4b5563" d="M218,-81.63C218,-74.18 218,-65.92 218,-58.1"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="220.45,-58.08 218,-51.08 215.55,-58.08 220.45,-58.08"/>
+</g>
+</g>
+</svg>

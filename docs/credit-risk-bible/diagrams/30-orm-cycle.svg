@@ -1,0 +1,168 @@
+<svg width="100%"
+ viewBox="0.00 0.00 696.30 709.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 695.4)">
+<title>ORMCycle</title>
+<polygon fill="white" stroke="transparent" points="-14.4,14.4 -14.4,-695.4 681.9,-695.4 681.9,14.4 -14.4,14.4"/>
+<g id="node1" class="node">
+<title>Start</title>
+<path fill="#1f2937" stroke="#1f2937" d="M192,-681C192,-681 24,-681 24,-681 18,-681 12,-675 12,-669 12,-669 12,-642 12,-642 12,-636 18,-630 24,-630 24,-630 192,-630 192,-630 198,-630 204,-636 204,-642 204,-642 204,-669 204,-669 204,-675 198,-681 192,-681"/>
+<text text-anchor="middle" x="108" y="-665.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Risk appetite and taxonomy</text>
+<text text-anchor="middle" x="108" y="-652.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">what can go wrong, and</text>
+<text text-anchor="middle" x="108" y="-639.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">how much we will tolerate</text>
+</g>
+<g id="node2" class="node">
+<title>Id</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M156.5,-599C156.5,-599 59.5,-599 59.5,-599 53.5,-599 47.5,-593 47.5,-587 47.5,-587 47.5,-560 47.5,-560 47.5,-554 53.5,-548 59.5,-548 59.5,-548 156.5,-548 156.5,-548 162.5,-548 168.5,-554 168.5,-560 168.5,-560 168.5,-587 168.5,-587 168.5,-593 162.5,-599 156.5,-599"/>
+<text text-anchor="middle" x="108" y="-583.4" font-family="Helvetica,sans-Serif" font-size="12.00">1. Identify</text>
+<text text-anchor="middle" x="108" y="-570.4" font-family="Helvetica,sans-Serif" font-size="12.00">risk register and</text>
+<text text-anchor="middle" x="108" y="-557.4" font-family="Helvetica,sans-Serif" font-size="12.00">control library</text>
+</g>
+<g id="edge1" class="edge">
+<title>Start&#45;&gt;Id</title>
+<path fill="none" stroke="#4b5563" d="M108,-629.63C108,-622.18 108,-613.92 108,-606.1"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="110.45,-606.08 108,-599.08 105.55,-606.08 110.45,-606.08"/>
+</g>
+<g id="node3" class="node">
+<title>Assess</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M204,-517C204,-517 12,-517 12,-517 6,-517 0,-511 0,-505 0,-505 0,-478 0,-478 0,-472 6,-466 12,-466 12,-466 204,-466 204,-466 210,-466 216,-472 216,-478 216,-478 216,-505 216,-505 216,-511 210,-517 204,-517"/>
+<text text-anchor="middle" x="108" y="-501.4" font-family="Helvetica,sans-Serif" font-size="12.00">2. Assess</text>
+<text text-anchor="middle" x="108" y="-488.4" font-family="Helvetica,sans-Serif" font-size="12.00">risk and control self&#45;assessment</text>
+<text text-anchor="middle" x="108" y="-475.4" font-family="Helvetica,sans-Serif" font-size="12.00">(inherent, controls, residual)</text>
+</g>
+<g id="edge2" class="edge">
+<title>Id&#45;&gt;Assess</title>
+<path fill="none" stroke="#4b5563" d="M108,-547.63C108,-540.18 108,-531.92 108,-524.1"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="110.45,-524.08 108,-517.08 105.55,-524.08 110.45,-524.08"/>
+</g>
+<g id="node4" class="node">
+<title>Test</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M418.5,-517C418.5,-517 277.5,-517 277.5,-517 271.5,-517 265.5,-511 265.5,-505 265.5,-505 265.5,-478 265.5,-478 265.5,-472 271.5,-466 277.5,-466 277.5,-466 418.5,-466 418.5,-466 424.5,-466 430.5,-472 430.5,-478 430.5,-478 430.5,-505 430.5,-505 430.5,-511 424.5,-517 418.5,-517"/>
+<text text-anchor="middle" x="348" y="-501.4" font-family="Helvetica,sans-Serif" font-size="12.00">Control testing</text>
+<text text-anchor="middle" x="348" y="-488.4" font-family="Helvetica,sans-Serif" font-size="12.00">design and</text>
+<text text-anchor="middle" x="348" y="-475.4" font-family="Helvetica,sans-Serif" font-size="12.00">operating effectiveness</text>
+</g>
+<g id="edge6" class="edge">
+<title>Assess&#45;&gt;Test</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M216.28,-491.5C230.23,-491.5 244.18,-491.5 258.12,-491.5"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="258.42,-493.95 265.42,-491.5 258.42,-489.05 258.42,-493.95"/>
+</g>
+<g id="node5" class="node">
+<title>Mon</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M177,-435C177,-435 39,-435 39,-435 33,-435 27,-429 27,-423 27,-423 27,-396 27,-396 27,-390 33,-384 39,-384 39,-384 177,-384 177,-384 183,-384 189,-390 189,-396 189,-396 189,-423 189,-423 189,-429 183,-435 177,-435"/>
+<text text-anchor="middle" x="108" y="-419.4" font-family="Helvetica,sans-Serif" font-size="12.00">3. Monitor</text>
+<text text-anchor="middle" x="108" y="-406.4" font-family="Helvetica,sans-Serif" font-size="12.00">key risk indicators</text>
+<text text-anchor="middle" x="108" y="-393.4" font-family="Helvetica,sans-Serif" font-size="12.00">with red, amber, green</text>
+</g>
+<g id="edge3" class="edge">
+<title>Assess&#45;&gt;Mon</title>
+<path fill="none" stroke="#4b5563" d="M108,-465.63C108,-458.18 108,-449.92 108,-442.1"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="110.45,-442.08 108,-435.08 105.55,-442.08 110.45,-442.08"/>
+</g>
+<g id="node6" class="node">
+<title>Loss</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M367,-428.5C367,-428.5 251,-428.5 251,-428.5 245,-428.5 239,-422.5 239,-416.5 239,-416.5 239,-402.5 239,-402.5 239,-396.5 245,-390.5 251,-390.5 251,-390.5 367,-390.5 367,-390.5 373,-390.5 379,-396.5 379,-402.5 379,-402.5 379,-416.5 379,-416.5 379,-422.5 373,-428.5 367,-428.5"/>
+<text text-anchor="middle" x="309" y="-412.9" font-family="Helvetica,sans-Serif" font-size="12.00">Internal loss events</text>
+<text text-anchor="middle" x="309" y="-399.9" font-family="Helvetica,sans-Serif" font-size="12.00">and near misses</text>
+</g>
+<g id="edge7" class="edge">
+<title>Mon&#45;&gt;Loss</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M189.26,-409.5C203.34,-409.5 217.41,-409.5 231.48,-409.5"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="231.84,-411.95 238.84,-409.5 231.84,-407.05 231.84,-411.95"/>
+</g>
+<g id="node9" class="node">
+<title>Rep</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M597,-353C597,-353 443,-353 443,-353 437,-353 431,-347 431,-341 431,-341 431,-314 431,-314 431,-308 437,-302 443,-302 443,-302 597,-302 597,-302 603,-302 609,-308 609,-314 609,-314 609,-341 609,-341 609,-347 603,-353 597,-353"/>
+<text text-anchor="middle" x="520" y="-337.4" font-family="Helvetica,sans-Serif" font-size="12.00">4. Report</text>
+<text text-anchor="middle" x="520" y="-324.4" font-family="Helvetica,sans-Serif" font-size="12.00">risk profile to committees</text>
+<text text-anchor="middle" x="520" y="-311.4" font-family="Helvetica,sans-Serif" font-size="12.00">and the board</text>
+</g>
+<g id="edge4" class="edge">
+<title>Mon&#45;&gt;Rep</title>
+<path fill="none" stroke="#4b5563" d="M189.2,-391.4C201.52,-388.88 214.09,-386.34 226,-384 300.07,-369.44 318.83,-367.04 393,-353 402.95,-351.12 413.33,-349.14 423.69,-347.15"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="424.44,-349.5 430.85,-345.78 423.52,-344.69 424.44,-349.5"/>
+</g>
+<g id="node8" class="node">
+<title>Scen</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M369,-353C369,-353 249,-353 249,-353 243,-353 237,-347 237,-341 237,-341 237,-314 237,-314 237,-308 243,-302 249,-302 249,-302 369,-302 369,-302 375,-302 381,-308 381,-314 381,-314 381,-341 381,-341 381,-347 375,-353 369,-353"/>
+<text text-anchor="middle" x="309" y="-337.4" font-family="Helvetica,sans-Serif" font-size="12.00">Scenario analysis</text>
+<text text-anchor="middle" x="309" y="-324.4" font-family="Helvetica,sans-Serif" font-size="12.00">severe but plausible</text>
+<text text-anchor="middle" x="309" y="-311.4" font-family="Helvetica,sans-Serif" font-size="12.00">&quot;what if&quot; workshops</text>
+</g>
+<g id="edge9" class="edge">
+<title>Loss&#45;&gt;Scen</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M309,-390.35C309,-381.52 309,-370.64 309,-360.48"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="311.45,-360.25 309,-353.25 306.55,-360.25 311.45,-360.25"/>
+</g>
+<g id="node7" class="node">
+<title>Ext</title>
+<path fill="#6b7280" stroke="#6b7280" d="M540,-428.5C540,-428.5 416,-428.5 416,-428.5 410,-428.5 404,-422.5 404,-416.5 404,-416.5 404,-402.5 404,-402.5 404,-396.5 410,-390.5 416,-390.5 416,-390.5 540,-390.5 540,-390.5 546,-390.5 552,-396.5 552,-402.5 552,-402.5 552,-416.5 552,-416.5 552,-422.5 546,-428.5 540,-428.5"/>
+<text text-anchor="middle" x="478" y="-412.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">External loss data</text>
+<text text-anchor="middle" x="478" y="-399.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">what hit other banks</text>
+</g>
+<g id="edge8" class="edge">
+<title>Ext&#45;&gt;Scen</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M439.65,-390.35C418.29,-380.23 391.24,-367.43 367.31,-356.1"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="368.35,-353.88 360.97,-353.1 366.25,-358.31 368.35,-353.88"/>
+</g>
+<g id="edge10" class="edge">
+<title>Scen&#45;&gt;Rep</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M381.12,-327.5C395.21,-327.5 409.3,-327.5 423.39,-327.5"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="423.76,-329.95 430.76,-327.5 423.76,-325.05 423.76,-329.95"/>
+</g>
+<g id="node10" class="node">
+<title>Ok</title>
+<path fill="#fef3c7" stroke="#d97706" d="M509.16,-265.85C509.16,-265.85 450.84,-238.15 450.84,-238.15 445.42,-235.57 445.42,-230.43 450.84,-227.85 450.84,-227.85 509.16,-200.15 509.16,-200.15 514.58,-197.57 525.42,-197.57 530.84,-200.15 530.84,-200.15 589.16,-227.85 589.16,-227.85 594.58,-230.43 594.58,-235.57 589.16,-238.15 589.16,-238.15 530.84,-265.85 530.84,-265.85 525.42,-268.43 514.58,-268.43 509.16,-265.85"/>
+<text text-anchor="middle" x="520" y="-236.4" font-family="Helvetica,sans-Serif" font-size="12.00">Within</text>
+<text text-anchor="middle" x="520" y="-223.4" font-family="Helvetica,sans-Serif" font-size="12.00">appetite?</text>
+</g>
+<g id="edge5" class="edge">
+<title>Rep&#45;&gt;Ok</title>
+<path fill="none" stroke="#4b5563" d="M520,-301.71C520,-294.5 520,-286.4 520,-278.37"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="522.45,-278.04 520,-271.04 517.55,-278.04 522.45,-278.04"/>
+</g>
+<g id="node11" class="node">
+<title>Act</title>
+<path fill="#991b1b" stroke="#991b1b" d="M505,-154C505,-154 369,-154 369,-154 363,-154 357,-148 357,-142 357,-142 357,-115 357,-115 357,-109 363,-103 369,-103 369,-103 505,-103 505,-103 511,-103 517,-109 517,-115 517,-115 517,-142 517,-142 517,-148 511,-154 505,-154"/>
+<text text-anchor="middle" x="437" y="-138.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">5. Act</text>
+<text text-anchor="middle" x="437" y="-125.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">issues and actions</text>
+<text text-anchor="middle" x="437" y="-112.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">with owners and dates</text>
+</g>
+<g id="edge11" class="edge">
+<title>Ok&#45;&gt;Act</title>
+<path fill="none" stroke="#4b5563" d="M498.19,-205.07C486.91,-191.14 473.11,-174.09 461.47,-159.72"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="463.27,-158.04 456.96,-154.15 459.46,-161.13 463.27,-158.04"/>
+<text text-anchor="middle" x="482.5" y="-172" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151">no</text>
+</g>
+<g id="node12" class="node">
+<title>Accept</title>
+<path fill="#065f46" stroke="#065f46" d="M655.5,-147.5C655.5,-147.5 554.5,-147.5 554.5,-147.5 548.5,-147.5 542.5,-141.5 542.5,-135.5 542.5,-135.5 542.5,-121.5 542.5,-121.5 542.5,-115.5 548.5,-109.5 554.5,-109.5 554.5,-109.5 655.5,-109.5 655.5,-109.5 661.5,-109.5 667.5,-115.5 667.5,-121.5 667.5,-121.5 667.5,-135.5 667.5,-135.5 667.5,-141.5 661.5,-147.5 655.5,-147.5"/>
+<text text-anchor="middle" x="605" y="-131.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Accept and keep</text>
+<text text-anchor="middle" x="605" y="-118.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">monitoring</text>
+</g>
+<g id="edge12" class="edge">
+<title>Ok&#45;&gt;Accept</title>
+<path fill="none" stroke="#4b5563" d="M542.11,-205.34C555.52,-189.17 572.47,-168.73 585.39,-153.14"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="587.38,-154.59 589.96,-147.64 583.61,-151.46 587.38,-154.59"/>
+<text text-anchor="middle" x="579" y="-172" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151">yes</text>
+</g>
+<g id="node13" class="node">
+<title>Loop</title>
+<path fill="#1f2937" stroke="#1f2937" d="M595.5,-51C595.5,-51 444.5,-51 444.5,-51 438.5,-51 432.5,-45 432.5,-39 432.5,-39 432.5,-12 432.5,-12 432.5,-6 438.5,0 444.5,0 444.5,0 595.5,0 595.5,0 601.5,0 607.5,-6 607.5,-12 607.5,-12 607.5,-39 607.5,-39 607.5,-45 601.5,-51 595.5,-51"/>
+<text text-anchor="middle" x="520" y="-35.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Back to step 1</text>
+<text text-anchor="middle" x="520" y="-22.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">update register, controls,</text>
+<text text-anchor="middle" x="520" y="-9.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">RCSA and KRI thresholds</text>
+</g>
+<g id="edge13" class="edge">
+<title>Act&#45;&gt;Loop</title>
+<path fill="none" stroke="#4b5563" d="M457.3,-102.79C468.66,-88.98 482.91,-71.64 494.95,-56.98"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="497.07,-58.27 499.62,-51.3 493.28,-55.16 497.07,-58.27"/>
+</g>
+<g id="edge14" class="edge">
+<title>Accept&#45;&gt;Loop</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M589.8,-109.44C577.53,-94.86 560,-74.03 545.57,-56.89"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="547.19,-55.01 540.81,-51.23 543.44,-58.16 547.19,-55.01"/>
+<text text-anchor="middle" x="590" y="-80" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151">periodic</text>
+<text text-anchor="middle" x="590" y="-69" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151">refresh</text>
+</g>
+</g>
+</svg>

@@ -1,0 +1,32 @@
+digraph ORMCycle {
+  graph [rankdir=TB, splines=true, nodesep=0.35, ranksep=0.4, fontname="Helvetica", fontsize=13, bgcolor="white", newrank=true, pad=0.2];
+  node  [shape=box, style="rounded,filled", fillcolor="#eef2ff", color="#6366f1", fontname="Helvetica", fontsize=12, margin="0.16,0.08"];
+  edge  [color="#4b5563", arrowsize=0.7, fontname="Helvetica", fontsize=10, fontcolor="#374151"];
+
+  Start [label="Risk appetite and taxonomy\nwhat can go wrong, and\nhow much we will tolerate", fillcolor="#1f2937", fontcolor="white", color="#1f2937"];
+  Id [label="1. Identify\nrisk register and\ncontrol library"];
+  Assess [label="2. Assess\nrisk and control self-assessment\n(inherent, controls, residual)"];
+  Test [label="Control testing\ndesign and\noperating effectiveness"];
+  Mon [label="3. Monitor\nkey risk indicators\nwith red, amber, green"];
+  Loss [label="Internal loss events\nand near misses"];
+  Ext [label="External loss data\nwhat hit other banks", fillcolor="#6b7280", fontcolor="white", color="#6b7280"];
+  Scen [label="Scenario analysis\nsevere but plausible\n\"what if\" workshops"];
+  Rep [label="4. Report\nrisk profile to committees\nand the board"];
+  Ok [label="Within\nappetite?", shape=diamond, fillcolor="#fef3c7", color="#d97706"];
+  Act [label="5. Act\nissues and actions\nwith owners and dates", fillcolor="#991b1b", fontcolor="white", color="#991b1b"];
+  Accept [label="Accept and keep\nmonitoring", fillcolor="#065f46", fontcolor="white", color="#065f46"];
+
+  Start -> Id -> Assess -> Mon -> Rep -> Ok;
+  Assess -> Test [style=dashed];
+  {rank=same; Assess Test}
+  Mon -> Loss [style=dashed];
+  {rank=same; Mon Loss}
+  Ext -> Scen [style=dashed];
+  Loss -> Scen [style=dashed];
+  Scen -> Rep [style=dashed];
+  {rank=same; Rep Scen}
+  Ok -> Act [label="no"];
+  Ok -> Accept [label="yes"];
+  Loop [label="Back to step 1\nupdate register, controls,\nRCSA and KRI thresholds", fillcolor="#1f2937", fontcolor="white", color="#1f2937"];
+  Act -> Loop; Accept -> Loop [style=dashed, label="periodic\nrefresh"];
+}

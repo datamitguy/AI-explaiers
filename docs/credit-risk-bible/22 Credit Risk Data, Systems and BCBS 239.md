@@ -342,6 +342,7 @@ This whole note is your territory, so this section is about priorities and owner
 
 ## 15. Related notes
 
+- [[30 Operational Risk]] for incidents, change risk, end-user computing and resilience.
 - [[03 The Credit Lifecycle]]: where each piece of data is created.
 - [[10 Internal Ratings, Scorecards and PD Models]], [[11 Collateral and Security]] and [[14 Risk Appetite, Limits and Concentration]]: the three domains that cause the most data problems.
 - [[17 Provisioning and Expected Credit Loss - IFRS 9 and CECL]], [[18 Regulatory Capital and Basel - the Short Version]] and [[20 Stress Testing and ICAAP]]: the engines that consume the data.

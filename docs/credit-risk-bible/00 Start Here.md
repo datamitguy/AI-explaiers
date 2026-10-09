@@ -83,6 +83,7 @@ A bank lends out money that mostly belongs to its depositors. Some borrowers wil
 |---|---|
 | [[25 Climate, ESG and Emerging Credit Risks]] | Physical and transition climate risk, environmental and social scoring, other emerging risks. |
 | [[26 Sovereign, Bank and Country Risk]] | Lending to governments and banks, country limits, transfer risk, bail-in, correspondent banking. |
+| [[30 Operational Risk]] | Losses from failed processes, people, systems and outside events: event types, controls, incidents, resilience and capital. |
 | [[29 Market Risk]] | The trading book side of risk: price moves, sensitivities, value at risk, expected shortfall, FRTB capital, limits and the daily risk process. |
 
 ### Orientation and reference

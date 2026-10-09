@@ -297,6 +297,7 @@ The Basel Committee's **Corporate Governance Principles for Banks** add expectat
 
 ## 18. Related notes
 
+- [[30 Operational Risk]] for the operational risk framework that shares the three lines model.
 - [[01 What a Bank Is and How It Makes Money]] for the organisation of a bank.
 - [[03 The Credit Lifecycle]] for where approval sits in the lifecycle.
 - [[09 Credit Analysis - Reading a Borrower]] for the content of the credit memo.

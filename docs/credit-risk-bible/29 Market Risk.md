@@ -388,6 +388,7 @@ The **market risk function** is the independent **second line of defence** (see 
 
 ## Related notes
 
+- [[30 Operational Risk]] for operational risk, including trading losses caused by operational failures.
 - [[basel-credit-risk-explained-simply]], section 8, for the banking book versus trading book split this note continues.
 - [[basel-credit-risk-decision-tree]] for where the trading book branches off.
 - [[01 What a Bank Is and How It Makes Money]] for where markets and treasury sit.
