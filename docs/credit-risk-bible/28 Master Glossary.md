@@ -91,6 +91,7 @@ Letters: [A](#a) · [B](#b) · [C](#c) · [D](#d) · [E](#e) · [F](#f) · [G](#
 | Conditions subsequent | Things the borrower must deliver within a set time after drawing. | [[12 Loan Documentation, Covenants and Conditions]] |
 | Confirming bank | A second bank that adds its own promise to pay under a letter of credit. | [[08 Trade Finance and Guarantees]] |
 | Connected counterparties | Borrowers linked by control or economic dependence, treated as one for limits. | [[14 Risk Appetite, Limits and Concentration]] |
+| Correlation risk | The risk that borrowers fail together because they share a hidden common driver. | [[02 What Credit Risk Is]], [[14 Risk Appetite, Limits and Concentration]] |
 | Correspondent banking | One bank providing accounts and payment services to another, often across borders. | [[26 Sovereign, Bank and Country Risk]] |
 | Cost of funds | What it costs the bank to borrow the money it lends. | [[24 Pricing, RAROC and Return on Capital]] |
 | Countercyclical buffer | A 0% to 2.5% buffer that regulators raise in booms and release in downturns. | [[18 Regulatory Capital and Basel - the Short Version]] |
@@ -106,6 +107,7 @@ Letters: [A](#a) · [B](#b) · [C](#c) · [D](#d) · [E](#e) · [F](#f) · [G](#
 | Cross-default | An event of default triggered by the borrower defaulting on a different debt. | [[12 Loan Documentation, Covenants and Conditions]] |
 | CSA (credit support annex) | The part of a derivatives master agreement governing collateral. | [[19 Counterparty Credit Risk and Derivatives]] |
 | Cure | A defaulted or stage 2 exposure returning to performing after meeting set conditions. | [[16 Problem Loans, Restructuring and Recovery]], [[17 Provisioning and Expected Credit Loss - IFRS 9 and CECL]] |
+| Currency-induced credit risk (CICR) | Extra default and exposure risk when a borrower earns one currency and owes another without a hedge. | [[02 What Credit Risk Is]] |
 | Current ratio | Current assets divided by current liabilities. A liquidity measure. | [[09 Credit Analysis - Reading a Borrower]] |
 | CVA (credit valuation adjustment) | The reduction in a derivative's value for the chance the counterparty defaults. | [[19 Counterparty Credit Risk and Derivatives]] |
 
@@ -121,6 +123,7 @@ Letters: [A](#a) · [B](#b) · [C](#c) · [D](#d) · [E](#e) · [F](#f) · [G](#
 | Decision engine | Software that applies scores and policy rules to approve, decline or refer applications automatically. | [[05 Retail Lending]] |
 | Default | A borrower is 90 days past due on a material amount, or judged unlikely to pay. | [[02 What Credit Risk Is]] |
 | Default fund | A central counterparty's pooled reserve, funded by its members. | [[19 Counterparty Credit Risk and Derivatives]] |
+| Default risk | The risk that a borrower fails to pay. Measured by probability of default. | [[02 What Credit Risk Is]] |
 | Delegated authority | Permission given to an individual or committee to approve loans up to a set size and risk. | [[13 Credit Governance - Committees, Authorities and the Three Lines]] |
 | Delinquency bucket | A band of days past due, such as 30 to 59 days. | [[05 Retail Lending]] |
 | Delta | How much a position's value changes for a small move in the underlying price. | [[29 Market Risk]] |
@@ -154,6 +157,7 @@ Letters: [A](#a) · [B](#b) · [C](#c) · [D](#d) · [E](#e) · [F](#f) · [G](#
 | Expected shortfall (ES) | The average loss on the worst days beyond a confidence level. Replaced value at risk for trading book capital under FRTB. | [[29 Market Risk]] |
 | Exposure | Any situation where the bank could lose money if someone fails. | [[02 What Credit Risk Is]] |
 | Exposure class | The Basel category a borrower falls into: sovereign, bank, corporate, retail, real estate and so on. | [[basel-credit-risk-explained-simply]] |
+| Exposure risk | Uncertainty about how much will be owed at default, for example from drawdowns on credit lines. | [[02 What Credit Risk Is]] |
 
 ## F
 
@@ -271,6 +275,7 @@ Letters: [A](#a) · [B](#b) · [C](#c) · [D](#d) · [E](#e) · [F](#f) · [G](#
 | Material adverse change (MAC) | A clause triggered by a serious deterioration in the borrower's position. | [[12 Loan Documentation, Covenants and Conditions]] |
 | Mezzanine debt | Debt ranking below senior debt but above equity, with higher returns. | [[07 Leveraged and Acquisition Finance]], [[04 Commercial and Corporate Lending]] |
 | Migration matrix | A table of how often borrowers move between rating grades in a year. | [[10 Internal Ratings, Scorecards and PD Models]] |
+| Migration risk | Loss of value because a borrower is downgraded, before any default. | [[02 What Credit Risk Is]], [[10 Internal Ratings, Scorecards and PD Models]] |
 | Model inventory | The register of every model the bank uses, with its owner, tier and status. | [[21 Model Risk Management and Validation]] |
 | Model risk | The risk of loss from a model being wrong or misused. | [[21 Model Risk Management and Validation]] |
 | Mortgage | A loan secured on property. Also the legal charge over the property. | [[05 Retail Lending]], [[11 Collateral and Security]] |
@@ -340,6 +345,7 @@ Letters: [A](#a) · [B](#b) · [C](#c) · [D](#d) · [E](#e) · [F](#f) · [G](#
 | Rating | A grade summarising a borrower's creditworthiness. | [[10 Internal Ratings, Scorecards and PD Models]] |
 | Reconciliation | Proving two sets of numbers agree, such as risk outputs and the general ledger. | [[22 Credit Risk Data, Systems and BCBS 239]], [[23 Reporting - Regulatory Returns, Pillar 3 and Management Information]] |
 | Recovery rate | The share of a defaulted exposure eventually recovered. One minus LGD. | [[16 Problem Loans, Restructuring and Recovery]] |
+| Recovery risk | The risk of getting back less than expected after a default. Measured by loss given default. | [[02 What Credit Risk Is]], [[16 Problem Loans, Restructuring and Recovery]] |
 | Regulatory return | A standard report submitted to the regulator on a fixed timetable. | [[23 Reporting - Regulatory Returns, Pillar 3 and Management Information]] |
 | Repo (repurchase agreement) | Selling a security with a promise to buy it back. Economically a secured short-term loan. | [[19 Counterparty Credit Risk and Derivatives]] |
 | Representations and warranties | Statements of fact the borrower confirms in the loan agreement. | [[12 Loan Documentation, Covenants and Conditions]] |
@@ -383,6 +389,7 @@ Letters: [A](#a) · [B](#b) · [C](#c) · [D](#d) · [E](#e) · [F](#f) · [G](#
 | Specialised lending | Loans repaid from one specific asset: project, object, commodities or income-producing real estate. | [[06 Specialised Finance - Project, Object, Commodities, Real Estate]] |
 | Sponsor | The owner or developer backing a project or buyout. | [[06 Specialised Finance - Project, Object, Commodities, Real Estate]], [[07 Leveraged and Acquisition Finance]] |
 | SPPI test (solely payments of principal and interest) | The IFRS 9 test of whether an asset's cash flows are just a plain loan's. Failing sends it to FVTPL. | [[ifrs9-decision-tree]], [[ifrs9-explained-simply]] |
+| Spread risk (credit spread risk) | Loss of value because the market demands a higher credit spread for a borrower. | [[02 What Credit Risk Is]], [[29 Market Risk]] |
 | Spreading | Entering a borrower's financial statements into a standard template for analysis. | [[15 Monitoring, Early Warning and Watchlist]], [[09 Credit Analysis - Reading a Borrower]] |
 | SPV (special purpose vehicle) | A company created only to own one project or asset. | [[06 Specialised Finance - Project, Object, Commodities, Real Estate]] |
 | SREP (supervisory review and evaluation process) | The regulator's annual review that sets Pillar 2 capital. | [[20 Stress Testing and ICAAP]] |

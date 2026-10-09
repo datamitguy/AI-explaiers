@@ -1,0 +1,160 @@
+<svg width="100%"
+ viewBox="0.00 0.00 691.30 554.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 540.4)">
+<title>LossDrivers</title>
+<polygon fill="white" stroke="transparent" points="-14.4,14.4 -14.4,-540.4 676.9,-540.4 676.9,14.4 -14.4,14.4"/>
+<g id="node1" class="node">
+<title>Root</title>
+<path fill="#1f2937" stroke="#1f2937" d="M384.5,-526C384.5,-526 228.5,-526 228.5,-526 222.5,-526 216.5,-520 216.5,-514 216.5,-514 216.5,-496 216.5,-496 216.5,-490 222.5,-484 228.5,-484 228.5,-484 384.5,-484 384.5,-484 390.5,-484 396.5,-490 396.5,-496 396.5,-496 396.5,-514 396.5,-514 396.5,-520 390.5,-526 384.5,-526"/>
+<text text-anchor="middle" x="306.5" y="-508.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="white">Types of credit risk</text>
+<text text-anchor="middle" x="306.5" y="-494.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="white">by what drives the loss</text>
+</g>
+<g id="node2" class="node">
+<title>A</title>
+<path fill="#1e3a8a" stroke="#1e3a8a" d="M195,-452C195,-452 24,-452 24,-452 18,-452 12,-446 12,-440 12,-440 12,-424 12,-424 12,-418 18,-412 24,-412 24,-412 195,-412 195,-412 201,-412 207,-418 207,-424 207,-424 207,-440 207,-440 207,-446 201,-452 195,-452"/>
+<text text-anchor="middle" x="109.5" y="-435.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">1. Single exposure</text>
+<text text-anchor="middle" x="109.5" y="-422.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">(one loan, bond or contract)</text>
+</g>
+<g id="edge1" class="edge">
+<title>Root&#45;&gt;A</title>
+<path fill="none" stroke="#4b5563" d="M250.84,-483.94C225.35,-474.75 195.12,-463.86 169.16,-454.5"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="169.73,-452.1 162.31,-452.03 168.07,-456.71 169.73,-452.1"/>
+</g>
+<g id="node3" class="node">
+<title>B</title>
+<path fill="#1e3a8a" stroke="#1e3a8a" d="M367,-452C367,-452 246,-452 246,-452 240,-452 234,-446 234,-440 234,-440 234,-424 234,-424 234,-418 240,-412 246,-412 246,-412 367,-412 367,-412 373,-412 379,-418 379,-424 379,-424 379,-440 379,-440 379,-446 373,-452 367,-452"/>
+<text text-anchor="middle" x="306.5" y="-435.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">2. Portfolio</text>
+<text text-anchor="middle" x="306.5" y="-422.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">(how losses add up)</text>
+</g>
+<g id="edge2" class="edge">
+<title>Root&#45;&gt;B</title>
+<path fill="none" stroke="#4b5563" d="M306.5,-483.84C306.5,-476.31 306.5,-467.64 306.5,-459.61"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="308.95,-459.47 306.5,-452.47 304.05,-459.47 308.95,-459.47"/>
+</g>
+<g id="node4" class="node">
+<title>C</title>
+<path fill="#1e3a8a" stroke="#1e3a8a" d="M577,-452C577,-452 448,-452 448,-452 442,-452 436,-446 436,-440 436,-440 436,-424 436,-424 436,-418 442,-412 448,-412 448,-412 577,-412 577,-412 583,-412 589,-418 589,-424 589,-424 589,-440 589,-440 589,-446 583,-452 577,-452"/>
+<text text-anchor="middle" x="512.5" y="-435.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">3. Underlying causes</text>
+<text text-anchor="middle" x="512.5" y="-422.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">(act through 1 and 2)</text>
+</g>
+<g id="edge3" class="edge">
+<title>Root&#45;&gt;C</title>
+<path fill="none" stroke="#4b5563" d="M364.71,-483.94C391.47,-474.71 423.24,-463.76 450.46,-454.38"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="451.45,-456.63 457.27,-452.03 449.86,-452 451.45,-456.63"/>
+</g>
+<g id="node5" class="node">
+<title>A1</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M161.5,-373.5C161.5,-373.5 51.5,-373.5 51.5,-373.5 45.5,-373.5 39.5,-367.5 39.5,-361.5 39.5,-361.5 39.5,-345.5 39.5,-345.5 39.5,-339.5 45.5,-333.5 51.5,-333.5 51.5,-333.5 161.5,-333.5 161.5,-333.5 167.5,-333.5 173.5,-339.5 173.5,-345.5 173.5,-345.5 173.5,-361.5 173.5,-361.5 173.5,-367.5 167.5,-373.5 161.5,-373.5"/>
+<text text-anchor="middle" x="106.5" y="-356.9" font-family="Helvetica,sans-Serif" font-size="12.00">Default risk</text>
+<text text-anchor="middle" x="106.5" y="-343.9" font-family="Helvetica,sans-Serif" font-size="12.00">Will they fail? (PD)</text>
+</g>
+<g id="edge4" class="edge">
+<title>A&#45;&gt;A1</title>
+<path fill="none" stroke="#9ca3af" d="M108.74,-411.7C108.28,-400.01 107.7,-385.17 107.25,-373.53"/>
+</g>
+<g id="node10" class="node">
+<title>B1</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M391,-380C391,-380 222,-380 222,-380 216,-380 210,-374 210,-368 210,-368 210,-339 210,-339 210,-333 216,-327 222,-327 222,-327 391,-327 391,-327 397,-327 403,-333 403,-339 403,-339 403,-368 403,-368 403,-374 397,-380 391,-380"/>
+<text text-anchor="middle" x="306.5" y="-363.4" font-family="Helvetica,sans-Serif" font-size="12.00">Concentration risk</text>
+<text text-anchor="middle" x="306.5" y="-350.4" font-family="Helvetica,sans-Serif" font-size="12.00">Too much with one name,</text>
+<text text-anchor="middle" x="306.5" y="-337.4" font-family="Helvetica,sans-Serif" font-size="12.00">sector, country or collateral</text>
+</g>
+<g id="edge9" class="edge">
+<title>B&#45;&gt;B1</title>
+<path fill="none" stroke="#9ca3af" d="M306.5,-411.7C306.5,-402.14 306.5,-390.46 306.5,-380.16"/>
+</g>
+<g id="node13" class="node">
+<title>C1</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M650.5,-380C650.5,-380 440.5,-380 440.5,-380 434.5,-380 428.5,-374 428.5,-368 428.5,-368 428.5,-339 428.5,-339 428.5,-333 434.5,-327 440.5,-327 440.5,-327 650.5,-327 650.5,-327 656.5,-327 662.5,-333 662.5,-339 662.5,-339 662.5,-368 662.5,-368 662.5,-374 656.5,-380 650.5,-380"/>
+<text text-anchor="middle" x="545.5" y="-363.4" font-family="Helvetica,sans-Serif" font-size="12.00">Currency&#45;induced credit risk</text>
+<text text-anchor="middle" x="545.5" y="-350.4" font-family="Helvetica,sans-Serif" font-size="12.00">Earns one currency, owes another,</text>
+<text text-anchor="middle" x="545.5" y="-337.4" font-family="Helvetica,sans-Serif" font-size="12.00">unhedged: raises PD and EAD</text>
+</g>
+<g id="edge12" class="edge">
+<title>C&#45;&gt;C1</title>
+<path fill="none" stroke="#9ca3af" d="M520.83,-411.7C524.95,-402.14 529.99,-390.46 534.43,-380.16"/>
+</g>
+<g id="node6" class="node">
+<title>A2</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M189,-288.5C189,-288.5 12,-288.5 12,-288.5 6,-288.5 0,-282.5 0,-276.5 0,-276.5 0,-260.5 0,-260.5 0,-254.5 6,-248.5 12,-248.5 12,-248.5 189,-248.5 189,-248.5 195,-248.5 201,-254.5 201,-260.5 201,-260.5 201,-276.5 201,-276.5 201,-282.5 195,-288.5 189,-288.5"/>
+<text text-anchor="middle" x="100.5" y="-271.9" font-family="Helvetica,sans-Serif" font-size="12.00">Recovery risk</text>
+<text text-anchor="middle" x="100.5" y="-258.9" font-family="Helvetica,sans-Serif" font-size="12.00">How little comes back? (LGD)</text>
+</g>
+<g id="edge5" class="edge">
+<title>A1&#45;&gt;A2</title>
+<path fill="none" stroke="#9ca3af" d="M105.11,-333.25C104.14,-319.84 102.85,-302.03 101.88,-288.65"/>
+</g>
+<g id="node7" class="node">
+<title>A3</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M166,-210C166,-210 35,-210 35,-210 29,-210 23,-204 23,-198 23,-198 23,-169 23,-169 23,-163 29,-157 35,-157 35,-157 166,-157 166,-157 172,-157 178,-163 178,-169 178,-169 178,-198 178,-198 178,-204 172,-210 166,-210"/>
+<text text-anchor="middle" x="100.5" y="-193.4" font-family="Helvetica,sans-Serif" font-size="12.00">Exposure risk</text>
+<text text-anchor="middle" x="100.5" y="-180.4" font-family="Helvetica,sans-Serif" font-size="12.00">How much is owed at</text>
+<text text-anchor="middle" x="100.5" y="-167.4" font-family="Helvetica,sans-Serif" font-size="12.00">default? (EAD)</text>
+</g>
+<g id="edge6" class="edge">
+<title>A2&#45;&gt;A3</title>
+<path fill="none" stroke="#9ca3af" d="M100.5,-248.25C100.5,-236.95 100.5,-222.52 100.5,-210.25"/>
+</g>
+<g id="node8" class="node">
+<title>A4</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M183.5,-125C183.5,-125 17.5,-125 17.5,-125 11.5,-125 5.5,-119 5.5,-113 5.5,-113 5.5,-84 5.5,-84 5.5,-78 11.5,-72 17.5,-72 17.5,-72 183.5,-72 183.5,-72 189.5,-72 195.5,-78 195.5,-84 195.5,-84 195.5,-113 195.5,-113 195.5,-119 189.5,-125 183.5,-125"/>
+<text text-anchor="middle" x="100.5" y="-108.4" font-family="Helvetica,sans-Serif" font-size="12.00">Migration and spread risk</text>
+<text text-anchor="middle" x="100.5" y="-95.4" font-family="Helvetica,sans-Serif" font-size="12.00">Value falls as the borrower</text>
+<text text-anchor="middle" x="100.5" y="-82.4" font-family="Helvetica,sans-Serif" font-size="12.00">looks riskier, before default</text>
+</g>
+<g id="edge7" class="edge">
+<title>A3&#45;&gt;A4</title>
+<path fill="none" stroke="#9ca3af" d="M100.5,-156.69C100.5,-146.6 100.5,-135.07 100.5,-125.01"/>
+</g>
+<g id="node9" class="node">
+<title>A5</title>
+<path fill="#6b7280" stroke="#6b7280" d="M185,-40C185,-40 16,-40 16,-40 10,-40 4,-34 4,-28 4,-28 4,-12 4,-12 4,-6 10,0 16,0 16,0 185,0 185,0 191,0 197,-6 197,-12 197,-12 197,-28 197,-28 197,-34 191,-40 185,-40"/>
+<text text-anchor="middle" x="100.5" y="-23.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Trading book bonds: spread</text>
+<text text-anchor="middle" x="100.5" y="-10.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">moves count as market risk</text>
+</g>
+<g id="edge8" class="edge">
+<title>A4&#45;&gt;A5</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M100.5,-71.6C100.5,-63.93 100.5,-55.51 100.5,-47.79"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="102.95,-47.34 100.5,-40.34 98.05,-47.34 102.95,-47.34"/>
+</g>
+<g id="node11" class="node">
+<title>B2</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M379,-288.5C379,-288.5 238,-288.5 238,-288.5 232,-288.5 226,-282.5 226,-276.5 226,-276.5 226,-260.5 226,-260.5 226,-254.5 232,-248.5 238,-248.5 238,-248.5 379,-248.5 379,-248.5 385,-248.5 391,-254.5 391,-260.5 391,-260.5 391,-276.5 391,-276.5 391,-282.5 385,-288.5 379,-288.5"/>
+<text text-anchor="middle" x="308.5" y="-271.9" font-family="Helvetica,sans-Serif" font-size="12.00">Correlation risk</text>
+<text text-anchor="middle" x="308.5" y="-258.9" font-family="Helvetica,sans-Serif" font-size="12.00">Borrowers fail together</text>
+</g>
+<g id="edge10" class="edge">
+<title>B1&#45;&gt;B2</title>
+<path fill="none" stroke="#9ca3af" d="M307.12,-326.69C307.42,-314.42 307.77,-299.99 308.04,-288.7"/>
+</g>
+<g id="node12" class="node">
+<title>B3</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M377.5,-210C377.5,-210 239.5,-210 239.5,-210 233.5,-210 227.5,-204 227.5,-198 227.5,-198 227.5,-169 227.5,-169 227.5,-163 233.5,-157 239.5,-157 239.5,-157 377.5,-157 377.5,-157 383.5,-157 389.5,-163 389.5,-169 389.5,-169 389.5,-198 389.5,-198 389.5,-204 383.5,-210 377.5,-210"/>
+<text text-anchor="middle" x="308.5" y="-193.4" font-family="Helvetica,sans-Serif" font-size="12.00">Wrong&#45;way risk</text>
+<text text-anchor="middle" x="308.5" y="-180.4" font-family="Helvetica,sans-Serif" font-size="12.00">Exposure grows just as</text>
+<text text-anchor="middle" x="308.5" y="-167.4" font-family="Helvetica,sans-Serif" font-size="12.00">the borrower weakens</text>
+</g>
+<g id="edge11" class="edge">
+<title>B2&#45;&gt;B3</title>
+<path fill="none" stroke="#9ca3af" d="M308.5,-248.25C308.5,-236.95 308.5,-222.52 308.5,-210.25"/>
+</g>
+<g id="node14" class="node">
+<title>C2</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M643.5,-295C643.5,-295 447.5,-295 447.5,-295 441.5,-295 435.5,-289 435.5,-283 435.5,-283 435.5,-254 435.5,-254 435.5,-248 441.5,-242 447.5,-242 447.5,-242 643.5,-242 643.5,-242 649.5,-242 655.5,-248 655.5,-254 655.5,-254 655.5,-283 655.5,-283 655.5,-289 649.5,-295 643.5,-295"/>
+<text text-anchor="middle" x="545.5" y="-278.4" font-family="Helvetica,sans-Serif" font-size="12.00">Country and transfer risk</text>
+<text text-anchor="middle" x="545.5" y="-265.4" font-family="Helvetica,sans-Serif" font-size="12.00">The country blocks payments</text>
+<text text-anchor="middle" x="545.5" y="-252.4" font-family="Helvetica,sans-Serif" font-size="12.00">abroad or its economy collapses</text>
+</g>
+<g id="edge13" class="edge">
+<title>C1&#45;&gt;C2</title>
+<path fill="none" stroke="#9ca3af" d="M545.5,-326.69C545.5,-316.6 545.5,-305.07 545.5,-295.01"/>
+</g>
+<g id="node15" class="node">
+<title>Other</title>
+<path fill="#6b7280" stroke="#6b7280" d="M643,-210C643,-210 448,-210 448,-210 442,-210 436,-204 436,-198 436,-198 436,-169 436,-169 436,-163 442,-157 448,-157 448,-157 643,-157 643,-157 649,-157 655,-163 655,-169 655,-169 655,-198 655,-198 655,-204 649,-210 643,-210"/>
+<text text-anchor="middle" x="545.5" y="-193.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Also classified by who fails:</text>
+<text text-anchor="middle" x="545.5" y="-180.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">borrower, issuer, counterparty,</text>
+<text text-anchor="middle" x="545.5" y="-167.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">settlement (see diagram above)</text>
+</g>
+</g>
+</svg>

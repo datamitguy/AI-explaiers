@@ -1,0 +1,32 @@
+digraph LossDrivers {
+  graph [rankdir=TB, splines=true, nodesep=0.35, ranksep=0.45, fontname="Helvetica", fontsize=13, bgcolor="white", newrank=true, pad=0.2];
+  node  [shape=box, style="rounded,filled", fillcolor="#eef2ff", color="#6366f1", fontname="Helvetica", fontsize=12, margin="0.18,0.10"];
+  edge  [color="#4b5563", arrowsize=0.7];
+
+  Root [label="Types of credit risk\nby what drives the loss", fillcolor="#1f2937", fontcolor="white", color="#1f2937", fontsize=13];
+
+  A [label="1. Single exposure\n(one loan, bond or contract)", fillcolor="#1e3a8a", fontcolor="white", color="#1e3a8a"];
+  B [label="2. Portfolio\n(how losses add up)", fillcolor="#1e3a8a", fontcolor="white", color="#1e3a8a"];
+  C [label="3. Underlying causes\n(act through 1 and 2)", fillcolor="#1e3a8a", fontcolor="white", color="#1e3a8a"];
+  Root -> {A B C};
+
+  A1 [label="Default risk\nWill they fail? (PD)"];
+  A2 [label="Recovery risk\nHow little comes back? (LGD)"];
+  A3 [label="Exposure risk\nHow much is owed at\ndefault? (EAD)"];
+  A4 [label="Migration and spread risk\nValue falls as the borrower\nlooks riskier, before default"];
+  A5 [label="Trading book bonds: spread\nmoves count as market risk", fillcolor="#6b7280", fontcolor="white", color="#6b7280"];
+  A -> A1 -> A2 -> A3 -> A4 [arrowhead=none, color="#9ca3af"];
+  A4 -> A5 [style=dashed];
+
+  B1 [label="Concentration risk\nToo much with one name,\nsector, country or collateral"];
+  B2 [label="Correlation risk\nBorrowers fail together"];
+  B3 [label="Wrong-way risk\nExposure grows just as\nthe borrower weakens"];
+  B -> B1 -> B2 -> B3 [arrowhead=none, color="#9ca3af"];
+
+  C1 [label="Currency-induced credit risk\nEarns one currency, owes another,\nunhedged: raises PD and EAD"];
+  C2 [label="Country and transfer risk\nThe country blocks payments\nabroad or its economy collapses"];
+  C -> C1 -> C2 [arrowhead=none, color="#9ca3af"];
+
+  Other [label="Also classified by who fails:\nborrower, issuer, counterparty,\nsettlement (see diagram above)", fillcolor="#6b7280", fontcolor="white", color="#6b7280"];
+  C2 -> Other [style=invis];
+}

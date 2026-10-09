@@ -14,11 +14,12 @@
 8. [Flavours of credit risk: borrower, issuer, counterparty, settlement](#flavours-of-credit-risk-borrower-issuer-counterparty-settlement)
 9. [Concentration: the risk of too many eggs in one basket](#concentration-the-risk-of-too-many-eggs-in-one-basket)
 10. [Credit spread: the price of risk](#credit-spread-the-price-of-risk)
-11. [A short history of famous credit losses](#a-short-history-of-famous-credit-losses)
-12. [A worked example from a single loan to a whole book](#a-worked-example-from-a-single-loan-to-a-whole-book)
-13. [Common mistakes and misunderstandings](#common-mistakes-and-misunderstandings)
-14. [What a platform lead needs to know about this](#what-a-platform-lead-needs-to-know-about-this)
-15. [Related notes](#related-notes)
+11. [A second way to slice it: what drives the loss](#a-second-way-to-slice-it-what-drives-the-loss)
+12. [A short history of famous credit losses](#a-short-history-of-famous-credit-losses)
+13. [A worked example from a single loan to a whole book](#a-worked-example-from-a-single-loan-to-a-whole-book)
+14. [Common mistakes and misunderstandings](#common-mistakes-and-misunderstandings)
+15. [What a platform lead needs to know about this](#what-a-platform-lead-needs-to-know-about-this)
+16. [Related notes](#related-notes)
 
 ## The borrowed bike version
 
@@ -230,6 +231,64 @@ The credit spread should at least cover expected loss. If PD is 2% and LGD 40%, 
 The credit spread is also the market's running vote on a borrower's health. When a company's bonds trade at a wider spread, the market thinks it has become riskier. When a whole country's spreads widen at once, the market is pricing a recession. Credit risk teams watch spreads as an early warning signal, and the **credit default swap** (**CDS**) market, where you can buy insurance against a named borrower's default, gives a daily spread for thousands of names.
 
 A spread that is too thin for the risk is the most common way banks get into trouble in good times: competition drives prices down, the expected loss is still quietly there, and the bank is lending at a loss without noticing until the cycle turns.
+
+## A second way to slice it: what drives the loss
+
+The diagram earlier sorted credit risk by **who fails**: a borrower, a bond issuer, a derivative counterparty, or someone in the middle of a settlement. Textbooks and training courses often use a second sort, by **what drives the size of the loss**. You will meet both in meetings, so it helps to see how they fit together.
+
+![[02-loss-drivers.svg]]
+*Credit risk sorted by what drives the loss. The first branch is about one exposure, the second about how losses add up across a portfolio, and the third holds underlying causes that work through the first two.*
+
+### Branch 1: a single exposure
+
+Think of lending your bike to a friend. Three separate things decide how upset you end up: whether they crash it, how badly it is damaged if they do, and whether they borrowed your expensive new bike or the old one. A fourth thing can hurt you even if they never crash: if everyone starts saying your friend is a reckless rider, nobody would pay you much to take over the loan of your bike.
+
+| Type | The question | Measured by | Explained in |
+|---|---|---|---|
+| **Default risk** | Will the borrower fail to pay? | Probability of default (PD) | The PD section above, and [[10 Internal Ratings, Scorecards and PD Models]] |
+| **Recovery risk** | If they fail, how little will we get back? Collateral can fall in value, enforcement can take years, other creditors can rank ahead. | Loss given default (LGD), which is one minus the recovery rate | The LGD section above, [[11 Collateral and Security]], [[16 Problem Loans, Restructuring and Recovery]] |
+| **Exposure risk** | How much will be owed at the moment they fail? Struggling companies draw down their credit lines; a derivative's value can swing. | Exposure at default (EAD), using credit conversion factors for undrawn lines | The EAD section above, [[19 Counterparty Credit Risk and Derivatives]] |
+| **Migration and spread risk** | Even with no default, does the exposure lose value because the borrower now looks riskier? A downgrade from A to BBB widens the credit spread and cuts a bond's price. | Rating migration, credit spread sensitivity | [[10 Internal Ratings, Scorecards and PD Models]], [[29 Market Risk]] |
+
+Two points that simpler versions of this chart miss:
+
+- **Exposure risk belongs alongside default and recovery.** Expected loss is PD times LGD times EAD. A chart that shows default risk and recovery risk but not exposure risk is missing a third of the formula.
+- **Spread risk sits on the boundary with market risk.** For bonds held in the trading book, regulators treat moves in credit spreads as market risk and capitalise them under the market risk rules. For loans and bonds in the banking book, a downgrade matters through provisions (a move to stage 2 under IFRS 9, see [[17 Provisioning and Expected Credit Loss - IFRS 9 and CECL]]) and through supervisors' review of credit spread risk in the banking book.
+
+### Branch 2: the portfolio
+
+These risks do not exist for a single loan. They appear only when you hold many.
+
+- **Concentration risk**: too much exposure to one name, sector, country or type of collateral, so one event causes many losses. Covered in the section above and in [[14 Risk Appetite, Limits and Concentration]].
+- **Correlation risk**: borrowers who look different fail at the same time because they share a hidden common driver, such as the same local economy, the same commodity price, or the same interest rate. Correlation is what turns many small losses into one big one; the Basel capital formula has a correlation input built into it for exactly this reason.
+- **Wrong-way risk**: a nasty special case where the bank's exposure to a borrower grows at exactly the moment the borrower weakens. The classic example is buying protection against a country's default from a bank based in that same country. See [[19 Counterparty Credit Risk and Derivatives]].
+
+### Branch 3: underlying causes
+
+Some risks you will see listed as "types of credit risk" are really causes that work through the branches above. They matter, but it is clearer to see where they bite.
+
+**Currency-induced credit risk.** A borrower earns money in one currency but owes the bank in another, without a hedge. Picture a family in Poland that earns zloty but took a mortgage in Swiss francs because the interest rate was lower. In January 2015 the Swiss franc jumped by around a fifth against many currencies in a single day. The family's income did not change, but their mortgage, measured in zloty, suddenly got much bigger. Two things happened at once:
+
+- **Default risk went up**, because each monthly payment now cost more of their income.
+- **Exposure risk went up** in local-currency terms, because the debt itself grew.
+
+That is why currency-induced credit risk is best treated as a driver of PD and EAD, not as a separate box. Worked example: a borrower earns 5,000 a month in local currency and pays 1,500 a month on a foreign-currency loan, 30% of income. The local currency falls 25% against the loan currency. Each payment now costs 1,500 divided by 0.75, which is 2,000, or 40% of income. The outstanding balance, measured in local currency, also rises by a third.
+
+The Basel rules recognise this. Under the standardised approach, retail exposures and residential mortgages where the loan currency differs from the borrower's income currency, and the borrower is not hedged, get their risk weight multiplied by 1.5 (capped at 150%). Banks also set limits on foreign-currency lending to unhedged borrowers, and the bank needs data on the currency of each borrower's income, which many systems do not hold. See [[05 Retail Lending]], [[18 Regulatory Capital and Basel - the Short Version]] and [[basel-credit-risk-explained-simply]].
+
+**Country and transfer risk.** A healthy borrower can still fail to pay if their government stops money leaving the country, or if the whole economy collapses. Again this works through default risk (and through concentration if many borrowers sit in one country). Covered fully in [[26 Sovereign, Bank and Country Risk]].
+
+### How the two ways of slicing fit together
+
+| Sorted by **who fails** | Sorted by **what drives the loss** |
+|---|---|
+| Borrower risk, issuer risk | Default, recovery, exposure and migration risk all apply |
+| Counterparty risk | Exposure risk dominates, because the amount owed moves daily; wrong-way risk is the portfolio twist |
+| Settlement risk | Exposure is the full amount in flight; recovery is usually poor |
+| Country and sovereign risk | An underlying cause that pushes up default risk for everyone in the country |
+| Concentration risk | Appears in both lists: it is a portfolio driver, whoever the counterparties are |
+
+Neither view is "the" right one. Credit officers tend to think about who fails; modellers and capital teams tend to think in PD, LGD, EAD and correlation. A good platform holds the data for both: the counterparty and its type, and the separate inputs to each driver.
 
 ## A short history of famous credit losses
 
