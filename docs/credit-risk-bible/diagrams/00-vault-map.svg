@@ -1,252 +1,257 @@
 <svg width="100%"
- viewBox="0.00 0.00 562.00 1557.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 1553)">
+ viewBox="0.00 0.00 562.00 1636.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 1632)">
 <title>VaultMap</title>
-<polygon fill="white" stroke="transparent" points="-4,4 -4,-1553 558,-1553 558,4 -4,4"/>
+<polygon fill="white" stroke="transparent" points="-4,4 -4,-1632 558,-1632 558,4 -4,4"/>
 <g id="clust1" class="cluster">
 <title>cluster_a</title>
-<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M199,-1268C199,-1268 339,-1268 339,-1268 345,-1268 351,-1274 351,-1280 351,-1280 351,-1488 351,-1488 351,-1494 345,-1500 339,-1500 339,-1500 199,-1500 199,-1500 193,-1500 187,-1494 187,-1488 187,-1488 187,-1280 187,-1280 187,-1274 193,-1268 199,-1268"/>
-<text text-anchor="middle" x="269" y="-1485.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">Foundations</text>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M199,-1347C199,-1347 339,-1347 339,-1347 345,-1347 351,-1353 351,-1359 351,-1359 351,-1567 351,-1567 351,-1573 345,-1579 339,-1579 339,-1579 199,-1579 199,-1579 193,-1579 187,-1573 187,-1567 187,-1567 187,-1359 187,-1359 187,-1353 193,-1347 199,-1347"/>
+<text text-anchor="middle" x="269" y="-1564.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">Foundations</text>
 </g>
 <g id="clust2" class="cluster">
 <title>cluster_b</title>
-<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M20,-870C20,-870 158,-870 158,-870 164,-870 170,-876 170,-882 170,-882 170,-1248 170,-1248 170,-1254 164,-1260 158,-1260 158,-1260 20,-1260 20,-1260 14,-1260 8,-1254 8,-1248 8,-1248 8,-882 8,-882 8,-876 14,-870 20,-870"/>
-<text text-anchor="middle" x="89" y="-1245.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">Products and lending</text>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M20,-949C20,-949 158,-949 158,-949 164,-949 170,-955 170,-961 170,-961 170,-1327 170,-1327 170,-1333 164,-1339 158,-1339 158,-1339 20,-1339 20,-1339 14,-1339 8,-1333 8,-1327 8,-1327 8,-961 8,-961 8,-955 14,-949 20,-949"/>
+<text text-anchor="middle" x="89" y="-1324.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">Products and lending</text>
 </g>
 <g id="clust3" class="cluster">
 <title>cluster_c</title>
-<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M190,-870C190,-870 348,-870 348,-870 354,-870 360,-876 360,-882 360,-882 360,-1248 360,-1248 360,-1254 354,-1260 348,-1260 348,-1260 190,-1260 190,-1260 184,-1260 178,-1254 178,-1248 178,-1248 178,-882 178,-882 178,-876 184,-870 190,-870"/>
-<text text-anchor="middle" x="269" y="-1245.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">Assessing and securing</text>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M190,-949C190,-949 348,-949 348,-949 354,-949 360,-955 360,-961 360,-961 360,-1327 360,-1327 360,-1333 354,-1339 348,-1339 348,-1339 190,-1339 190,-1339 184,-1339 178,-1333 178,-1327 178,-1327 178,-961 178,-961 178,-955 184,-949 190,-949"/>
+<text text-anchor="middle" x="269" y="-1324.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">Assessing and securing</text>
 </g>
 <g id="clust4" class="cluster">
 <title>cluster_d</title>
-<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M380,-949C380,-949 534,-949 534,-949 540,-949 546,-955 546,-961 546,-961 546,-1248 546,-1248 546,-1254 540,-1260 534,-1260 534,-1260 380,-1260 380,-1260 374,-1260 368,-1254 368,-1248 368,-1248 368,-961 368,-961 368,-955 374,-949 380,-949"/>
-<text text-anchor="middle" x="457" y="-1245.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">Governing and watching</text>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M380,-1028C380,-1028 534,-1028 534,-1028 540,-1028 546,-1034 546,-1040 546,-1040 546,-1327 546,-1327 546,-1333 540,-1339 534,-1339 534,-1339 380,-1339 380,-1339 374,-1339 368,-1333 368,-1327 368,-1327 368,-1040 368,-1040 368,-1034 374,-1028 380,-1028"/>
+<text text-anchor="middle" x="457" y="-1324.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">Governing and watching</text>
 </g>
 <g id="clust5" class="cluster">
 <title>cluster_e</title>
-<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M122,-551C122,-551 413,-551 413,-551 419,-551 425,-557 425,-563 425,-563 425,-850 425,-850 425,-856 419,-862 413,-862 413,-862 122,-862 122,-862 116,-862 110,-856 110,-850 110,-850 110,-563 110,-563 110,-557 116,-551 122,-551"/>
-<text text-anchor="middle" x="267.5" y="-847.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">Measuring: accounting and capital</text>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M122,-630C122,-630 413,-630 413,-630 419,-630 425,-636 425,-642 425,-642 425,-929 425,-929 425,-935 419,-941 413,-941 413,-941 122,-941 122,-941 116,-941 110,-935 110,-929 110,-929 110,-642 110,-642 110,-636 116,-630 122,-630"/>
+<text text-anchor="middle" x="267.5" y="-926.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">Measuring: accounting and capital</text>
 </g>
 <g id="clust6" class="cluster">
 <title>cluster_f</title>
-<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M118,-232C118,-232 254,-232 254,-232 260,-232 266,-238 266,-244 266,-244 266,-531 266,-531 266,-537 260,-543 254,-543 254,-543 118,-543 118,-543 112,-543 106,-537 106,-531 106,-531 106,-244 106,-244 106,-238 112,-232 118,-232"/>
-<text text-anchor="middle" x="186" y="-528.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">Running the platform</text>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M118,-311C118,-311 254,-311 254,-311 260,-311 266,-317 266,-323 266,-323 266,-610 266,-610 266,-616 260,-622 254,-622 254,-622 118,-622 118,-622 112,-622 106,-616 106,-610 106,-610 106,-323 106,-323 106,-317 112,-311 118,-311"/>
+<text text-anchor="middle" x="186" y="-607.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">Running the platform</text>
 </g>
 <g id="clust7" class="cluster">
 <title>cluster_g</title>
-<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M122,-71C122,-71 250,-71 250,-71 256,-71 262,-77 262,-83 262,-83 262,-212 262,-212 262,-218 256,-224 250,-224 250,-224 122,-224 122,-224 116,-224 110,-218 110,-212 110,-212 110,-83 110,-83 110,-77 116,-71 122,-71"/>
-<text text-anchor="middle" x="186" y="-209.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">Wider risks</text>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M122,-71C122,-71 250,-71 250,-71 256,-71 262,-77 262,-83 262,-83 262,-291 262,-291 262,-297 256,-303 250,-303 250,-303 122,-303 122,-303 116,-303 110,-297 110,-291 110,-291 110,-83 110,-83 110,-77 116,-71 122,-71"/>
+<text text-anchor="middle" x="186" y="-288.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="#374151">Wider risks</text>
 </g>
 <g id="node1" class="node">
 <title>Start</title>
-<path fill="#1f2937" stroke="#1f2937" d="M305.5,-1549C305.5,-1549 232.5,-1549 232.5,-1549 226.5,-1549 220.5,-1543 220.5,-1537 220.5,-1537 220.5,-1525 220.5,-1525 220.5,-1519 226.5,-1513 232.5,-1513 232.5,-1513 305.5,-1513 305.5,-1513 311.5,-1513 317.5,-1519 317.5,-1525 317.5,-1525 317.5,-1537 317.5,-1537 317.5,-1543 311.5,-1549 305.5,-1549"/>
-<text text-anchor="middle" x="269" y="-1528.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="white">00 Start Here</text>
+<path fill="#1f2937" stroke="#1f2937" d="M305.5,-1628C305.5,-1628 232.5,-1628 232.5,-1628 226.5,-1628 220.5,-1622 220.5,-1616 220.5,-1616 220.5,-1604 220.5,-1604 220.5,-1598 226.5,-1592 232.5,-1592 232.5,-1592 305.5,-1592 305.5,-1592 311.5,-1592 317.5,-1598 317.5,-1604 317.5,-1604 317.5,-1616 317.5,-1616 317.5,-1622 311.5,-1628 305.5,-1628"/>
+<text text-anchor="middle" x="269" y="-1607.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="white">00 Start Here</text>
 </g>
 <g id="node2" class="node">
 <title>N01</title>
-<path fill="#eef2ff" stroke="#6366f1" d="M318.5,-1470C318.5,-1470 219.5,-1470 219.5,-1470 213.5,-1470 207.5,-1464 207.5,-1458 207.5,-1458 207.5,-1446 207.5,-1446 207.5,-1440 213.5,-1434 219.5,-1434 219.5,-1434 318.5,-1434 318.5,-1434 324.5,-1434 330.5,-1440 330.5,-1446 330.5,-1446 330.5,-1458 330.5,-1458 330.5,-1464 324.5,-1470 318.5,-1470"/>
-<text text-anchor="middle" x="269" y="-1449.2" font-family="Helvetica,sans-Serif" font-size="11.00">01 What a Bank Is</text>
+<path fill="#eef2ff" stroke="#6366f1" d="M318.5,-1549C318.5,-1549 219.5,-1549 219.5,-1549 213.5,-1549 207.5,-1543 207.5,-1537 207.5,-1537 207.5,-1525 207.5,-1525 207.5,-1519 213.5,-1513 219.5,-1513 219.5,-1513 318.5,-1513 318.5,-1513 324.5,-1513 330.5,-1519 330.5,-1525 330.5,-1525 330.5,-1537 330.5,-1537 330.5,-1543 324.5,-1549 318.5,-1549"/>
+<text text-anchor="middle" x="269" y="-1528.2" font-family="Helvetica,sans-Serif" font-size="11.00">01 What a Bank Is</text>
 </g>
 <g id="edge1" class="edge">
 <title>Start&#45;&gt;N01</title>
-<path fill="none" stroke="#4b5563" d="M269,-1512.91C269,-1502.44 269,-1488.88 269,-1477.31"/>
-<polygon fill="#4b5563" stroke="#4b5563" points="271.45,-1477.04 269,-1470.04 266.55,-1477.04 271.45,-1477.04"/>
+<path fill="none" stroke="#4b5563" d="M269,-1591.91C269,-1581.44 269,-1567.88 269,-1556.31"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="271.45,-1556.04 269,-1549.04 266.55,-1556.04 271.45,-1556.04"/>
 </g>
 <g id="node3" class="node">
 <title>N02</title>
-<path fill="#eef2ff" stroke="#6366f1" d="M329.5,-1391C329.5,-1391 208.5,-1391 208.5,-1391 202.5,-1391 196.5,-1385 196.5,-1379 196.5,-1379 196.5,-1367 196.5,-1367 196.5,-1361 202.5,-1355 208.5,-1355 208.5,-1355 329.5,-1355 329.5,-1355 335.5,-1355 341.5,-1361 341.5,-1367 341.5,-1367 341.5,-1379 341.5,-1379 341.5,-1385 335.5,-1391 329.5,-1391"/>
-<text text-anchor="middle" x="269" y="-1370.2" font-family="Helvetica,sans-Serif" font-size="11.00">02 What Credit Risk Is</text>
+<path fill="#eef2ff" stroke="#6366f1" d="M329.5,-1470C329.5,-1470 208.5,-1470 208.5,-1470 202.5,-1470 196.5,-1464 196.5,-1458 196.5,-1458 196.5,-1446 196.5,-1446 196.5,-1440 202.5,-1434 208.5,-1434 208.5,-1434 329.5,-1434 329.5,-1434 335.5,-1434 341.5,-1440 341.5,-1446 341.5,-1446 341.5,-1458 341.5,-1458 341.5,-1464 335.5,-1470 329.5,-1470"/>
+<text text-anchor="middle" x="269" y="-1449.2" font-family="Helvetica,sans-Serif" font-size="11.00">02 What Credit Risk Is</text>
 </g>
 <g id="edge2" class="edge">
 <title>N01&#45;&gt;N02</title>
-<path fill="none" stroke="#4b5563" d="M269,-1433.91C269,-1423.44 269,-1409.88 269,-1398.31"/>
-<polygon fill="#4b5563" stroke="#4b5563" points="271.45,-1398.04 269,-1391.04 266.55,-1398.04 271.45,-1398.04"/>
+<path fill="none" stroke="#4b5563" d="M269,-1512.91C269,-1502.44 269,-1488.88 269,-1477.31"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="271.45,-1477.04 269,-1470.04 266.55,-1477.04 271.45,-1477.04"/>
 </g>
 <g id="node4" class="node">
 <title>N03</title>
-<path fill="#eef2ff" stroke="#6366f1" d="M331.5,-1312C331.5,-1312 206.5,-1312 206.5,-1312 200.5,-1312 194.5,-1306 194.5,-1300 194.5,-1300 194.5,-1288 194.5,-1288 194.5,-1282 200.5,-1276 206.5,-1276 206.5,-1276 331.5,-1276 331.5,-1276 337.5,-1276 343.5,-1282 343.5,-1288 343.5,-1288 343.5,-1300 343.5,-1300 343.5,-1306 337.5,-1312 331.5,-1312"/>
-<text text-anchor="middle" x="269" y="-1291.2" font-family="Helvetica,sans-Serif" font-size="11.00">03 The Credit Lifecycle</text>
+<path fill="#eef2ff" stroke="#6366f1" d="M331.5,-1391C331.5,-1391 206.5,-1391 206.5,-1391 200.5,-1391 194.5,-1385 194.5,-1379 194.5,-1379 194.5,-1367 194.5,-1367 194.5,-1361 200.5,-1355 206.5,-1355 206.5,-1355 331.5,-1355 331.5,-1355 337.5,-1355 343.5,-1361 343.5,-1367 343.5,-1367 343.5,-1379 343.5,-1379 343.5,-1385 337.5,-1391 331.5,-1391"/>
+<text text-anchor="middle" x="269" y="-1370.2" font-family="Helvetica,sans-Serif" font-size="11.00">03 The Credit Lifecycle</text>
 </g>
 <g id="edge3" class="edge">
 <title>N02&#45;&gt;N03</title>
-<path fill="none" stroke="#4b5563" d="M269,-1354.91C269,-1344.44 269,-1330.88 269,-1319.31"/>
-<polygon fill="#4b5563" stroke="#4b5563" points="271.45,-1319.04 269,-1312.04 266.55,-1319.04 271.45,-1319.04"/>
+<path fill="none" stroke="#4b5563" d="M269,-1433.91C269,-1423.44 269,-1409.88 269,-1398.31"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="271.45,-1398.04 269,-1391.04 266.55,-1398.04 271.45,-1398.04"/>
 </g>
 <g id="node5" class="node">
 <title>N04</title>
-<path fill="#eef2ff" stroke="#6366f1" d="M147.5,-1230C147.5,-1230 42.5,-1230 42.5,-1230 36.5,-1230 30.5,-1224 30.5,-1218 30.5,-1218 30.5,-1206 30.5,-1206 30.5,-1200 36.5,-1194 42.5,-1194 42.5,-1194 147.5,-1194 147.5,-1194 153.5,-1194 159.5,-1200 159.5,-1206 159.5,-1206 159.5,-1218 159.5,-1218 159.5,-1224 153.5,-1230 147.5,-1230"/>
-<text text-anchor="middle" x="95" y="-1215.2" font-family="Helvetica,sans-Serif" font-size="11.00">04 Commercial and</text>
-<text text-anchor="middle" x="95" y="-1203.2" font-family="Helvetica,sans-Serif" font-size="11.00">Corporate Lending</text>
+<path fill="#eef2ff" stroke="#6366f1" d="M147.5,-1309C147.5,-1309 42.5,-1309 42.5,-1309 36.5,-1309 30.5,-1303 30.5,-1297 30.5,-1297 30.5,-1285 30.5,-1285 30.5,-1279 36.5,-1273 42.5,-1273 42.5,-1273 147.5,-1273 147.5,-1273 153.5,-1273 159.5,-1279 159.5,-1285 159.5,-1285 159.5,-1297 159.5,-1297 159.5,-1303 153.5,-1309 147.5,-1309"/>
+<text text-anchor="middle" x="95" y="-1294.2" font-family="Helvetica,sans-Serif" font-size="11.00">04 Commercial and</text>
+<text text-anchor="middle" x="95" y="-1282.2" font-family="Helvetica,sans-Serif" font-size="11.00">Corporate Lending</text>
 </g>
 <g id="edge4" class="edge">
 <title>N03&#45;&gt;N04</title>
-<path fill="none" stroke="#4b5563" d="M212.88,-1275.93C199.59,-1271.29 185.62,-1265.89 173,-1260 157.1,-1252.58 140.32,-1242.76 126.42,-1234.01"/>
-<polygon fill="#4b5563" stroke="#4b5563" points="127.47,-1231.77 120.25,-1230.08 124.84,-1235.91 127.47,-1231.77"/>
+<path fill="none" stroke="#4b5563" d="M212.88,-1354.93C199.59,-1350.29 185.62,-1344.89 173,-1339 157.1,-1331.58 140.32,-1321.76 126.42,-1313.01"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="127.47,-1310.77 120.25,-1309.08 124.84,-1314.91 127.47,-1310.77"/>
 </g>
 <g id="node10" class="node">
 <title>N09</title>
-<path fill="#eef2ff" stroke="#6366f1" d="M318,-1230C318,-1230 220,-1230 220,-1230 214,-1230 208,-1224 208,-1218 208,-1218 208,-1206 208,-1206 208,-1200 214,-1194 220,-1194 220,-1194 318,-1194 318,-1194 324,-1194 330,-1200 330,-1206 330,-1206 330,-1218 330,-1218 330,-1224 324,-1230 318,-1230"/>
-<text text-anchor="middle" x="269" y="-1209.2" font-family="Helvetica,sans-Serif" font-size="11.00">09 Credit Analysis</text>
+<path fill="#eef2ff" stroke="#6366f1" d="M318,-1309C318,-1309 220,-1309 220,-1309 214,-1309 208,-1303 208,-1297 208,-1297 208,-1285 208,-1285 208,-1279 214,-1273 220,-1273 220,-1273 318,-1273 318,-1273 324,-1273 330,-1279 330,-1285 330,-1285 330,-1297 330,-1297 330,-1303 324,-1309 318,-1309"/>
+<text text-anchor="middle" x="269" y="-1288.2" font-family="Helvetica,sans-Serif" font-size="11.00">09 Credit Analysis</text>
 </g>
 <g id="edge5" class="edge">
 <title>N03&#45;&gt;N09</title>
-<path fill="none" stroke="#4b5563" d="M269,-1275.64C269,-1264.45 269,-1249.74 269,-1237.39"/>
-<polygon fill="#4b5563" stroke="#4b5563" points="271.45,-1237.05 269,-1230.05 266.55,-1237.05 271.45,-1237.05"/>
+<path fill="none" stroke="#4b5563" d="M269,-1354.64C269,-1343.45 269,-1328.74 269,-1316.39"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="271.45,-1316.05 269,-1309.05 266.55,-1316.05 271.45,-1316.05"/>
 </g>
 <g id="node14" class="node">
 <title>N13</title>
-<path fill="#eef2ff" stroke="#6366f1" d="M507.5,-1230C507.5,-1230 388.5,-1230 388.5,-1230 382.5,-1230 376.5,-1224 376.5,-1218 376.5,-1218 376.5,-1206 376.5,-1206 376.5,-1200 382.5,-1194 388.5,-1194 388.5,-1194 507.5,-1194 507.5,-1194 513.5,-1194 519.5,-1200 519.5,-1206 519.5,-1206 519.5,-1218 519.5,-1218 519.5,-1224 513.5,-1230 507.5,-1230"/>
-<text text-anchor="middle" x="448" y="-1209.2" font-family="Helvetica,sans-Serif" font-size="11.00">13 Credit Governance</text>
+<path fill="#eef2ff" stroke="#6366f1" d="M507.5,-1309C507.5,-1309 388.5,-1309 388.5,-1309 382.5,-1309 376.5,-1303 376.5,-1297 376.5,-1297 376.5,-1285 376.5,-1285 376.5,-1279 382.5,-1273 388.5,-1273 388.5,-1273 507.5,-1273 507.5,-1273 513.5,-1273 519.5,-1279 519.5,-1285 519.5,-1285 519.5,-1297 519.5,-1297 519.5,-1303 513.5,-1309 507.5,-1309"/>
+<text text-anchor="middle" x="448" y="-1288.2" font-family="Helvetica,sans-Serif" font-size="11.00">13 Credit Governance</text>
 </g>
 <g id="edge6" class="edge">
 <title>N03&#45;&gt;N13</title>
-<path fill="none" stroke="#4b5563" d="M324.25,-1275.95C337.77,-1271.25 352.06,-1265.83 365,-1260 381.78,-1252.44 399.63,-1242.59 414.46,-1233.86"/>
-<polygon fill="#4b5563" stroke="#4b5563" points="415.86,-1235.88 420.62,-1230.2 413.35,-1231.67 415.86,-1235.88"/>
+<path fill="none" stroke="#4b5563" d="M324.25,-1354.95C337.77,-1350.25 352.06,-1344.83 365,-1339 381.78,-1331.44 399.63,-1321.59 414.46,-1312.86"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="415.86,-1314.88 420.62,-1309.2 413.35,-1310.67 415.86,-1314.88"/>
 </g>
 <g id="node6" class="node">
 <title>N05</title>
-<path fill="#eef2ff" stroke="#6366f1" d="M138,-1151C138,-1151 44,-1151 44,-1151 38,-1151 32,-1145 32,-1139 32,-1139 32,-1127 32,-1127 32,-1121 38,-1115 44,-1115 44,-1115 138,-1115 138,-1115 144,-1115 150,-1121 150,-1127 150,-1127 150,-1139 150,-1139 150,-1145 144,-1151 138,-1151"/>
-<text text-anchor="middle" x="91" y="-1130.2" font-family="Helvetica,sans-Serif" font-size="11.00">05 Retail Lending</text>
+<path fill="#eef2ff" stroke="#6366f1" d="M138,-1230C138,-1230 44,-1230 44,-1230 38,-1230 32,-1224 32,-1218 32,-1218 32,-1206 32,-1206 32,-1200 38,-1194 44,-1194 44,-1194 138,-1194 138,-1194 144,-1194 150,-1200 150,-1206 150,-1206 150,-1218 150,-1218 150,-1224 144,-1230 138,-1230"/>
+<text text-anchor="middle" x="91" y="-1209.2" font-family="Helvetica,sans-Serif" font-size="11.00">05 Retail Lending</text>
 </g>
 <g id="node7" class="node">
 <title>N06</title>
-<path fill="#eef2ff" stroke="#6366f1" d="M150,-1072C150,-1072 28,-1072 28,-1072 22,-1072 16,-1066 16,-1060 16,-1060 16,-1048 16,-1048 16,-1042 22,-1036 28,-1036 28,-1036 150,-1036 150,-1036 156,-1036 162,-1042 162,-1048 162,-1048 162,-1060 162,-1060 162,-1066 156,-1072 150,-1072"/>
-<text text-anchor="middle" x="89" y="-1051.2" font-family="Helvetica,sans-Serif" font-size="11.00">06 Specialised Finance</text>
+<path fill="#eef2ff" stroke="#6366f1" d="M150,-1151C150,-1151 28,-1151 28,-1151 22,-1151 16,-1145 16,-1139 16,-1139 16,-1127 16,-1127 16,-1121 22,-1115 28,-1115 28,-1115 150,-1115 150,-1115 156,-1115 162,-1121 162,-1127 162,-1127 162,-1139 162,-1139 162,-1145 156,-1151 150,-1151"/>
+<text text-anchor="middle" x="89" y="-1130.2" font-family="Helvetica,sans-Serif" font-size="11.00">06 Specialised Finance</text>
 </g>
 <g id="node8" class="node">
 <title>N07</title>
-<path fill="#eef2ff" stroke="#6366f1" d="M145,-993C145,-993 41,-993 41,-993 35,-993 29,-987 29,-981 29,-981 29,-969 29,-969 29,-963 35,-957 41,-957 41,-957 145,-957 145,-957 151,-957 157,-963 157,-969 157,-969 157,-981 157,-981 157,-987 151,-993 145,-993"/>
-<text text-anchor="middle" x="93" y="-978.2" font-family="Helvetica,sans-Serif" font-size="11.00">07 Leveraged and</text>
-<text text-anchor="middle" x="93" y="-966.2" font-family="Helvetica,sans-Serif" font-size="11.00">Acquisition Finance</text>
+<path fill="#eef2ff" stroke="#6366f1" d="M145,-1072C145,-1072 41,-1072 41,-1072 35,-1072 29,-1066 29,-1060 29,-1060 29,-1048 29,-1048 29,-1042 35,-1036 41,-1036 41,-1036 145,-1036 145,-1036 151,-1036 157,-1042 157,-1048 157,-1048 157,-1060 157,-1060 157,-1066 151,-1072 145,-1072"/>
+<text text-anchor="middle" x="93" y="-1057.2" font-family="Helvetica,sans-Serif" font-size="11.00">07 Leveraged and</text>
+<text text-anchor="middle" x="93" y="-1045.2" font-family="Helvetica,sans-Serif" font-size="11.00">Acquisition Finance</text>
 </g>
 <g id="node9" class="node">
 <title>N08</title>
-<path fill="#eef2ff" stroke="#6366f1" d="M145.5,-914C145.5,-914 54.5,-914 54.5,-914 48.5,-914 42.5,-908 42.5,-902 42.5,-902 42.5,-890 42.5,-890 42.5,-884 48.5,-878 54.5,-878 54.5,-878 145.5,-878 145.5,-878 151.5,-878 157.5,-884 157.5,-890 157.5,-890 157.5,-902 157.5,-902 157.5,-908 151.5,-914 145.5,-914"/>
-<text text-anchor="middle" x="100" y="-899.2" font-family="Helvetica,sans-Serif" font-size="11.00">08 Trade Finance</text>
-<text text-anchor="middle" x="100" y="-887.2" font-family="Helvetica,sans-Serif" font-size="11.00">and Guarantees</text>
+<path fill="#eef2ff" stroke="#6366f1" d="M145.5,-993C145.5,-993 54.5,-993 54.5,-993 48.5,-993 42.5,-987 42.5,-981 42.5,-981 42.5,-969 42.5,-969 42.5,-963 48.5,-957 54.5,-957 54.5,-957 145.5,-957 145.5,-957 151.5,-957 157.5,-963 157.5,-969 157.5,-969 157.5,-981 157.5,-981 157.5,-987 151.5,-993 145.5,-993"/>
+<text text-anchor="middle" x="100" y="-978.2" font-family="Helvetica,sans-Serif" font-size="11.00">08 Trade Finance</text>
+<text text-anchor="middle" x="100" y="-966.2" font-family="Helvetica,sans-Serif" font-size="11.00">and Guarantees</text>
 </g>
 <g id="node18" class="node">
 <title>N17</title>
-<path fill="#eef2ff" stroke="#6366f1" d="M313,-832C313,-832 225,-832 225,-832 219,-832 213,-826 213,-820 213,-820 213,-808 213,-808 213,-802 219,-796 225,-796 225,-796 313,-796 313,-796 319,-796 325,-802 325,-808 325,-808 325,-820 325,-820 325,-826 319,-832 313,-832"/>
-<text text-anchor="middle" x="269" y="-817.2" font-family="Helvetica,sans-Serif" font-size="11.00">17 Provisioning</text>
-<text text-anchor="middle" x="269" y="-805.2" font-family="Helvetica,sans-Serif" font-size="11.00">IFRS 9 and CECL</text>
+<path fill="#eef2ff" stroke="#6366f1" d="M313,-911C313,-911 225,-911 225,-911 219,-911 213,-905 213,-899 213,-899 213,-887 213,-887 213,-881 219,-875 225,-875 225,-875 313,-875 313,-875 319,-875 325,-881 325,-887 325,-887 325,-899 325,-899 325,-905 319,-911 313,-911"/>
+<text text-anchor="middle" x="269" y="-896.2" font-family="Helvetica,sans-Serif" font-size="11.00">17 Provisioning</text>
+<text text-anchor="middle" x="269" y="-884.2" font-family="Helvetica,sans-Serif" font-size="11.00">IFRS 9 and CECL</text>
 </g>
 <g id="node11" class="node">
 <title>N10</title>
-<path fill="#eef2ff" stroke="#6366f1" d="M331.5,-1151C331.5,-1151 206.5,-1151 206.5,-1151 200.5,-1151 194.5,-1145 194.5,-1139 194.5,-1139 194.5,-1127 194.5,-1127 194.5,-1121 200.5,-1115 206.5,-1115 206.5,-1115 331.5,-1115 331.5,-1115 337.5,-1115 343.5,-1121 343.5,-1127 343.5,-1127 343.5,-1139 343.5,-1139 343.5,-1145 337.5,-1151 331.5,-1151"/>
-<text text-anchor="middle" x="269" y="-1136.2" font-family="Helvetica,sans-Serif" font-size="11.00">10 Ratings, Scorecards</text>
-<text text-anchor="middle" x="269" y="-1124.2" font-family="Helvetica,sans-Serif" font-size="11.00">and PD Models</text>
+<path fill="#eef2ff" stroke="#6366f1" d="M331.5,-1230C331.5,-1230 206.5,-1230 206.5,-1230 200.5,-1230 194.5,-1224 194.5,-1218 194.5,-1218 194.5,-1206 194.5,-1206 194.5,-1200 200.5,-1194 206.5,-1194 206.5,-1194 331.5,-1194 331.5,-1194 337.5,-1194 343.5,-1200 343.5,-1206 343.5,-1206 343.5,-1218 343.5,-1218 343.5,-1224 337.5,-1230 331.5,-1230"/>
+<text text-anchor="middle" x="269" y="-1215.2" font-family="Helvetica,sans-Serif" font-size="11.00">10 Ratings, Scorecards</text>
+<text text-anchor="middle" x="269" y="-1203.2" font-family="Helvetica,sans-Serif" font-size="11.00">and PD Models</text>
 </g>
 <g id="node12" class="node">
 <title>N11</title>
-<path fill="#eef2ff" stroke="#6366f1" d="M339.5,-1072C339.5,-1072 198.5,-1072 198.5,-1072 192.5,-1072 186.5,-1066 186.5,-1060 186.5,-1060 186.5,-1048 186.5,-1048 186.5,-1042 192.5,-1036 198.5,-1036 198.5,-1036 339.5,-1036 339.5,-1036 345.5,-1036 351.5,-1042 351.5,-1048 351.5,-1048 351.5,-1060 351.5,-1060 351.5,-1066 345.5,-1072 339.5,-1072"/>
-<text text-anchor="middle" x="269" y="-1051.2" font-family="Helvetica,sans-Serif" font-size="11.00">11 Collateral and Security</text>
+<path fill="#eef2ff" stroke="#6366f1" d="M339.5,-1151C339.5,-1151 198.5,-1151 198.5,-1151 192.5,-1151 186.5,-1145 186.5,-1139 186.5,-1139 186.5,-1127 186.5,-1127 186.5,-1121 192.5,-1115 198.5,-1115 198.5,-1115 339.5,-1115 339.5,-1115 345.5,-1115 351.5,-1121 351.5,-1127 351.5,-1127 351.5,-1139 351.5,-1139 351.5,-1145 345.5,-1151 339.5,-1151"/>
+<text text-anchor="middle" x="269" y="-1130.2" font-family="Helvetica,sans-Serif" font-size="11.00">11 Collateral and Security</text>
 </g>
 <g id="node13" class="node">
 <title>N12</title>
-<path fill="#eef2ff" stroke="#6366f1" d="M319,-914C319,-914 219,-914 219,-914 213,-914 207,-908 207,-902 207,-902 207,-890 207,-890 207,-884 213,-878 219,-878 219,-878 319,-878 319,-878 325,-878 331,-884 331,-890 331,-890 331,-902 331,-902 331,-908 325,-914 319,-914"/>
-<text text-anchor="middle" x="269" y="-899.2" font-family="Helvetica,sans-Serif" font-size="11.00">12 Documentation</text>
-<text text-anchor="middle" x="269" y="-887.2" font-family="Helvetica,sans-Serif" font-size="11.00">and Covenants</text>
+<path fill="#eef2ff" stroke="#6366f1" d="M319,-993C319,-993 219,-993 219,-993 213,-993 207,-987 207,-981 207,-981 207,-969 207,-969 207,-963 213,-957 219,-957 219,-957 319,-957 319,-957 325,-957 331,-963 331,-969 331,-969 331,-981 331,-981 331,-987 325,-993 319,-993"/>
+<text text-anchor="middle" x="269" y="-978.2" font-family="Helvetica,sans-Serif" font-size="11.00">12 Documentation</text>
+<text text-anchor="middle" x="269" y="-966.2" font-family="Helvetica,sans-Serif" font-size="11.00">and Covenants</text>
 </g>
 <g id="node15" class="node">
 <title>N14</title>
-<path fill="#eef2ff" stroke="#6366f1" d="M490.5,-1151C490.5,-1151 401.5,-1151 401.5,-1151 395.5,-1151 389.5,-1145 389.5,-1139 389.5,-1139 389.5,-1127 389.5,-1127 389.5,-1121 395.5,-1115 401.5,-1115 401.5,-1115 490.5,-1115 490.5,-1115 496.5,-1115 502.5,-1121 502.5,-1127 502.5,-1127 502.5,-1139 502.5,-1139 502.5,-1145 496.5,-1151 490.5,-1151"/>
-<text text-anchor="middle" x="446" y="-1136.2" font-family="Helvetica,sans-Serif" font-size="11.00">14 Risk Appetite</text>
-<text text-anchor="middle" x="446" y="-1124.2" font-family="Helvetica,sans-Serif" font-size="11.00">and Limits</text>
+<path fill="#eef2ff" stroke="#6366f1" d="M490.5,-1230C490.5,-1230 401.5,-1230 401.5,-1230 395.5,-1230 389.5,-1224 389.5,-1218 389.5,-1218 389.5,-1206 389.5,-1206 389.5,-1200 395.5,-1194 401.5,-1194 401.5,-1194 490.5,-1194 490.5,-1194 496.5,-1194 502.5,-1200 502.5,-1206 502.5,-1206 502.5,-1218 502.5,-1218 502.5,-1224 496.5,-1230 490.5,-1230"/>
+<text text-anchor="middle" x="446" y="-1215.2" font-family="Helvetica,sans-Serif" font-size="11.00">14 Risk Appetite</text>
+<text text-anchor="middle" x="446" y="-1203.2" font-family="Helvetica,sans-Serif" font-size="11.00">and Limits</text>
 </g>
 <g id="node16" class="node">
 <title>N15</title>
-<path fill="#eef2ff" stroke="#6366f1" d="M494,-1072C494,-1072 396,-1072 396,-1072 390,-1072 384,-1066 384,-1060 384,-1060 384,-1048 384,-1048 384,-1042 390,-1036 396,-1036 396,-1036 494,-1036 494,-1036 500,-1036 506,-1042 506,-1048 506,-1048 506,-1060 506,-1060 506,-1066 500,-1072 494,-1072"/>
-<text text-anchor="middle" x="445" y="-1057.2" font-family="Helvetica,sans-Serif" font-size="11.00">15 Monitoring and</text>
-<text text-anchor="middle" x="445" y="-1045.2" font-family="Helvetica,sans-Serif" font-size="11.00">Early Warning</text>
+<path fill="#eef2ff" stroke="#6366f1" d="M494,-1151C494,-1151 396,-1151 396,-1151 390,-1151 384,-1145 384,-1139 384,-1139 384,-1127 384,-1127 384,-1121 390,-1115 396,-1115 396,-1115 494,-1115 494,-1115 500,-1115 506,-1121 506,-1127 506,-1127 506,-1139 506,-1139 506,-1145 500,-1151 494,-1151"/>
+<text text-anchor="middle" x="445" y="-1136.2" font-family="Helvetica,sans-Serif" font-size="11.00">15 Monitoring and</text>
+<text text-anchor="middle" x="445" y="-1124.2" font-family="Helvetica,sans-Serif" font-size="11.00">Early Warning</text>
 </g>
 <g id="node17" class="node">
 <title>N16</title>
-<path fill="#eef2ff" stroke="#6366f1" d="M490.5,-993C490.5,-993 393.5,-993 393.5,-993 387.5,-993 381.5,-987 381.5,-981 381.5,-981 381.5,-969 381.5,-969 381.5,-963 387.5,-957 393.5,-957 393.5,-957 490.5,-957 490.5,-957 496.5,-957 502.5,-963 502.5,-969 502.5,-969 502.5,-981 502.5,-981 502.5,-987 496.5,-993 490.5,-993"/>
-<text text-anchor="middle" x="442" y="-978.2" font-family="Helvetica,sans-Serif" font-size="11.00">16 Problem Loans</text>
-<text text-anchor="middle" x="442" y="-966.2" font-family="Helvetica,sans-Serif" font-size="11.00">and Recovery</text>
+<path fill="#eef2ff" stroke="#6366f1" d="M490.5,-1072C490.5,-1072 393.5,-1072 393.5,-1072 387.5,-1072 381.5,-1066 381.5,-1060 381.5,-1060 381.5,-1048 381.5,-1048 381.5,-1042 387.5,-1036 393.5,-1036 393.5,-1036 490.5,-1036 490.5,-1036 496.5,-1036 502.5,-1042 502.5,-1048 502.5,-1048 502.5,-1060 502.5,-1060 502.5,-1066 496.5,-1072 490.5,-1072"/>
+<text text-anchor="middle" x="442" y="-1057.2" font-family="Helvetica,sans-Serif" font-size="11.00">16 Problem Loans</text>
+<text text-anchor="middle" x="442" y="-1045.2" font-family="Helvetica,sans-Serif" font-size="11.00">and Recovery</text>
 </g>
 <g id="edge19" class="edge">
 <title>N16&#45;&gt;N17</title>
-<path fill="none" stroke="#4b5563" d="M432.35,-956.82C419.29,-934.69 394.21,-895.98 365,-870 349.66,-856.36 330.4,-844.52 313.16,-835.36"/>
-<polygon fill="#4b5563" stroke="#4b5563" points="314.25,-833.17 306.91,-832.11 311.99,-837.51 314.25,-833.17"/>
+<path fill="none" stroke="#4b5563" d="M432.35,-1035.82C419.29,-1013.69 394.21,-974.98 365,-949 349.66,-935.36 330.4,-923.52 313.16,-914.36"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="314.25,-912.17 306.91,-911.11 311.99,-916.51 314.25,-912.17"/>
 </g>
 <g id="node19" class="node">
 <title>N18</title>
-<path fill="#eef2ff" stroke="#6366f1" d="M328,-753C328,-753 210,-753 210,-753 204,-753 198,-747 198,-741 198,-741 198,-729 198,-729 198,-723 204,-717 210,-717 210,-717 328,-717 328,-717 334,-717 340,-723 340,-729 340,-729 340,-741 340,-741 340,-747 334,-753 328,-753"/>
-<text text-anchor="middle" x="269" y="-738.2" font-family="Helvetica,sans-Serif" font-size="11.00">18 Regulatory Capital</text>
-<text text-anchor="middle" x="269" y="-726.2" font-family="Helvetica,sans-Serif" font-size="11.00">and Basel</text>
+<path fill="#eef2ff" stroke="#6366f1" d="M328,-832C328,-832 210,-832 210,-832 204,-832 198,-826 198,-820 198,-820 198,-808 198,-808 198,-802 204,-796 210,-796 210,-796 328,-796 328,-796 334,-796 340,-802 340,-808 340,-808 340,-820 340,-820 340,-826 334,-832 328,-832"/>
+<text text-anchor="middle" x="269" y="-817.2" font-family="Helvetica,sans-Serif" font-size="11.00">18 Regulatory Capital</text>
+<text text-anchor="middle" x="269" y="-805.2" font-family="Helvetica,sans-Serif" font-size="11.00">and Basel</text>
 </g>
 <g id="node20" class="node">
 <title>N19</title>
-<path fill="#eef2ff" stroke="#6366f1" d="M254.5,-674C254.5,-674 129.5,-674 129.5,-674 123.5,-674 117.5,-668 117.5,-662 117.5,-662 117.5,-650 117.5,-650 117.5,-644 123.5,-638 129.5,-638 129.5,-638 254.5,-638 254.5,-638 260.5,-638 266.5,-644 266.5,-650 266.5,-650 266.5,-662 266.5,-662 266.5,-668 260.5,-674 254.5,-674"/>
-<text text-anchor="middle" x="192" y="-659.2" font-family="Helvetica,sans-Serif" font-size="11.00">19 Counterparty Credit</text>
-<text text-anchor="middle" x="192" y="-647.2" font-family="Helvetica,sans-Serif" font-size="11.00">Risk and Derivatives</text>
+<path fill="#eef2ff" stroke="#6366f1" d="M254.5,-753C254.5,-753 129.5,-753 129.5,-753 123.5,-753 117.5,-747 117.5,-741 117.5,-741 117.5,-729 117.5,-729 117.5,-723 123.5,-717 129.5,-717 129.5,-717 254.5,-717 254.5,-717 260.5,-717 266.5,-723 266.5,-729 266.5,-729 266.5,-741 266.5,-741 266.5,-747 260.5,-753 254.5,-753"/>
+<text text-anchor="middle" x="192" y="-738.2" font-family="Helvetica,sans-Serif" font-size="11.00">19 Counterparty Credit</text>
+<text text-anchor="middle" x="192" y="-726.2" font-family="Helvetica,sans-Serif" font-size="11.00">Risk and Derivatives</text>
 </g>
 <g id="node22" class="node">
 <title>Basel</title>
-<path fill="#1e3a8a" stroke="#1e3a8a" d="M405,-674C405,-674 301,-674 301,-674 295,-674 289,-668 289,-662 289,-662 289,-650 289,-650 289,-644 295,-638 301,-638 301,-638 405,-638 405,-638 411,-638 417,-644 417,-650 417,-650 417,-662 417,-662 417,-668 411,-674 405,-674"/>
-<text text-anchor="middle" x="353" y="-659.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="white">Basel decision tree</text>
-<text text-anchor="middle" x="353" y="-647.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="white">and long explainer</text>
+<path fill="#1e3a8a" stroke="#1e3a8a" d="M405,-753C405,-753 301,-753 301,-753 295,-753 289,-747 289,-741 289,-741 289,-729 289,-729 289,-723 295,-717 301,-717 301,-717 405,-717 405,-717 411,-717 417,-723 417,-729 417,-729 417,-741 417,-741 417,-747 411,-753 405,-753"/>
+<text text-anchor="middle" x="353" y="-738.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="white">Basel decision tree</text>
+<text text-anchor="middle" x="353" y="-726.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="white">and long explainer</text>
 </g>
 <g id="edge23" class="edge">
 <title>N18&#45;&gt;Basel</title>
-<path fill="none" stroke="#4b5563" d="M287.64,-716.91C299.82,-705.75 315.85,-691.06 328.98,-679.02"/>
-<polygon fill="#4b5563" stroke="#4b5563" points="330.91,-680.58 334.41,-674.04 327.59,-676.97 330.91,-680.58"/>
+<path fill="none" stroke="#4b5563" d="M287.64,-795.91C299.82,-784.75 315.85,-770.06 328.98,-758.02"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="330.91,-759.58 334.41,-753.04 327.59,-755.97 330.91,-759.58"/>
 </g>
 <g id="node21" class="node">
 <title>N20</title>
-<path fill="#eef2ff" stroke="#6366f1" d="M238,-595C238,-595 146,-595 146,-595 140,-595 134,-589 134,-583 134,-583 134,-571 134,-571 134,-565 140,-559 146,-559 146,-559 238,-559 238,-559 244,-559 250,-565 250,-571 250,-571 250,-583 250,-583 250,-589 244,-595 238,-595"/>
-<text text-anchor="middle" x="192" y="-580.2" font-family="Helvetica,sans-Serif" font-size="11.00">20 Stress Testing</text>
-<text text-anchor="middle" x="192" y="-568.2" font-family="Helvetica,sans-Serif" font-size="11.00">and ICAAP</text>
+<path fill="#eef2ff" stroke="#6366f1" d="M238,-674C238,-674 146,-674 146,-674 140,-674 134,-668 134,-662 134,-662 134,-650 134,-650 134,-644 140,-638 146,-638 146,-638 238,-638 238,-638 244,-638 250,-644 250,-650 250,-650 250,-662 250,-662 250,-668 244,-674 238,-674"/>
+<text text-anchor="middle" x="192" y="-659.2" font-family="Helvetica,sans-Serif" font-size="11.00">20 Stress Testing</text>
+<text text-anchor="middle" x="192" y="-647.2" font-family="Helvetica,sans-Serif" font-size="11.00">and ICAAP</text>
 </g>
 <g id="node23" class="node">
 <title>N21</title>
-<path fill="#eef2ff" stroke="#6366f1" d="M230.5,-513C230.5,-513 153.5,-513 153.5,-513 147.5,-513 141.5,-507 141.5,-501 141.5,-501 141.5,-489 141.5,-489 141.5,-483 147.5,-477 153.5,-477 153.5,-477 230.5,-477 230.5,-477 236.5,-477 242.5,-483 242.5,-489 242.5,-489 242.5,-501 242.5,-501 242.5,-507 236.5,-513 230.5,-513"/>
-<text text-anchor="middle" x="192" y="-498.2" font-family="Helvetica,sans-Serif" font-size="11.00">21 Model Risk</text>
-<text text-anchor="middle" x="192" y="-486.2" font-family="Helvetica,sans-Serif" font-size="11.00">and Validation</text>
+<path fill="#eef2ff" stroke="#6366f1" d="M230.5,-592C230.5,-592 153.5,-592 153.5,-592 147.5,-592 141.5,-586 141.5,-580 141.5,-580 141.5,-568 141.5,-568 141.5,-562 147.5,-556 153.5,-556 153.5,-556 230.5,-556 230.5,-556 236.5,-556 242.5,-562 242.5,-568 242.5,-568 242.5,-580 242.5,-580 242.5,-586 236.5,-592 230.5,-592"/>
+<text text-anchor="middle" x="192" y="-577.2" font-family="Helvetica,sans-Serif" font-size="11.00">21 Model Risk</text>
+<text text-anchor="middle" x="192" y="-565.2" font-family="Helvetica,sans-Serif" font-size="11.00">and Validation</text>
 </g>
 <g id="node24" class="node">
 <title>N22</title>
-<path fill="#eef2ff" stroke="#6366f1" d="M240.5,-434C240.5,-434 143.5,-434 143.5,-434 137.5,-434 131.5,-428 131.5,-422 131.5,-422 131.5,-410 131.5,-410 131.5,-404 137.5,-398 143.5,-398 143.5,-398 240.5,-398 240.5,-398 246.5,-398 252.5,-404 252.5,-410 252.5,-410 252.5,-422 252.5,-422 252.5,-428 246.5,-434 240.5,-434"/>
-<text text-anchor="middle" x="192" y="-419.2" font-family="Helvetica,sans-Serif" font-size="11.00">22 Data, Systems</text>
-<text text-anchor="middle" x="192" y="-407.2" font-family="Helvetica,sans-Serif" font-size="11.00">and BCBS 239</text>
+<path fill="#eef2ff" stroke="#6366f1" d="M240.5,-513C240.5,-513 143.5,-513 143.5,-513 137.5,-513 131.5,-507 131.5,-501 131.5,-501 131.5,-489 131.5,-489 131.5,-483 137.5,-477 143.5,-477 143.5,-477 240.5,-477 240.5,-477 246.5,-477 252.5,-483 252.5,-489 252.5,-489 252.5,-501 252.5,-501 252.5,-507 246.5,-513 240.5,-513"/>
+<text text-anchor="middle" x="192" y="-498.2" font-family="Helvetica,sans-Serif" font-size="11.00">22 Data, Systems</text>
+<text text-anchor="middle" x="192" y="-486.2" font-family="Helvetica,sans-Serif" font-size="11.00">and BCBS 239</text>
 </g>
 <g id="node25" class="node">
 <title>N23</title>
-<path fill="#eef2ff" stroke="#6366f1" d="M223.5,-355C223.5,-355 154.5,-355 154.5,-355 148.5,-355 142.5,-349 142.5,-343 142.5,-343 142.5,-331 142.5,-331 142.5,-325 148.5,-319 154.5,-319 154.5,-319 223.5,-319 223.5,-319 229.5,-319 235.5,-325 235.5,-331 235.5,-331 235.5,-343 235.5,-343 235.5,-349 229.5,-355 223.5,-355"/>
-<text text-anchor="middle" x="189" y="-334.2" font-family="Helvetica,sans-Serif" font-size="11.00">23 Reporting</text>
+<path fill="#eef2ff" stroke="#6366f1" d="M223.5,-434C223.5,-434 154.5,-434 154.5,-434 148.5,-434 142.5,-428 142.5,-422 142.5,-422 142.5,-410 142.5,-410 142.5,-404 148.5,-398 154.5,-398 154.5,-398 223.5,-398 223.5,-398 229.5,-398 235.5,-404 235.5,-410 235.5,-410 235.5,-422 235.5,-422 235.5,-428 229.5,-434 223.5,-434"/>
+<text text-anchor="middle" x="189" y="-413.2" font-family="Helvetica,sans-Serif" font-size="11.00">23 Reporting</text>
 </g>
-<g id="node29" class="node">
+<g id="node30" class="node">
 <title>N27</title>
-<path fill="#065f46" stroke="#065f46" d="M399.5,-355C399.5,-355 286.5,-355 286.5,-355 280.5,-355 274.5,-349 274.5,-343 274.5,-343 274.5,-331 274.5,-331 274.5,-325 280.5,-319 286.5,-319 286.5,-319 399.5,-319 399.5,-319 405.5,-319 411.5,-325 411.5,-331 411.5,-331 411.5,-343 411.5,-343 411.5,-349 405.5,-355 399.5,-355"/>
-<text text-anchor="middle" x="343" y="-340.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="white">27 A Platform Lead&#39;s</text>
-<text text-anchor="middle" x="343" y="-328.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="white">First 90 Days</text>
+<path fill="#065f46" stroke="#065f46" d="M399.5,-434C399.5,-434 286.5,-434 286.5,-434 280.5,-434 274.5,-428 274.5,-422 274.5,-422 274.5,-410 274.5,-410 274.5,-404 280.5,-398 286.5,-398 286.5,-398 399.5,-398 399.5,-398 405.5,-398 411.5,-404 411.5,-410 411.5,-410 411.5,-422 411.5,-422 411.5,-428 405.5,-434 399.5,-434"/>
+<text text-anchor="middle" x="343" y="-419.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="white">27 A Platform Lead&#39;s</text>
+<text text-anchor="middle" x="343" y="-407.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="white">First 90 Days</text>
 </g>
-<g id="edge30" class="edge">
+<g id="edge31" class="edge">
 <title>N22&#45;&gt;N27</title>
-<path fill="none" stroke="#4b5563" d="M225.51,-397.91C248.48,-386.2 279.06,-370.61 303.26,-358.27"/>
-<polygon fill="#4b5563" stroke="#4b5563" points="304.46,-360.4 309.58,-355.04 302.23,-356.04 304.46,-360.4"/>
+<path fill="none" stroke="#4b5563" d="M225.51,-476.91C248.48,-465.2 279.06,-449.61 303.26,-437.27"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="304.46,-439.4 309.58,-434.04 302.23,-435.04 304.46,-439.4"/>
 </g>
 <g id="node26" class="node">
 <title>N24</title>
-<path fill="#eef2ff" stroke="#6366f1" d="M245.5,-276C245.5,-276 126.5,-276 126.5,-276 120.5,-276 114.5,-270 114.5,-264 114.5,-264 114.5,-252 114.5,-252 114.5,-246 120.5,-240 126.5,-240 126.5,-240 245.5,-240 245.5,-240 251.5,-240 257.5,-246 257.5,-252 257.5,-252 257.5,-264 257.5,-264 257.5,-270 251.5,-276 245.5,-276"/>
-<text text-anchor="middle" x="186" y="-255.2" font-family="Helvetica,sans-Serif" font-size="11.00">24 Pricing and RAROC</text>
+<path fill="#eef2ff" stroke="#6366f1" d="M245.5,-355C245.5,-355 126.5,-355 126.5,-355 120.5,-355 114.5,-349 114.5,-343 114.5,-343 114.5,-331 114.5,-331 114.5,-325 120.5,-319 126.5,-319 126.5,-319 245.5,-319 245.5,-319 251.5,-319 257.5,-325 257.5,-331 257.5,-331 257.5,-343 257.5,-343 257.5,-349 251.5,-355 245.5,-355"/>
+<text text-anchor="middle" x="186" y="-334.2" font-family="Helvetica,sans-Serif" font-size="11.00">24 Pricing and RAROC</text>
 </g>
 <g id="node27" class="node">
 <title>N25</title>
-<path fill="#eef2ff" stroke="#6366f1" d="M241.5,-194C241.5,-194 130.5,-194 130.5,-194 124.5,-194 118.5,-188 118.5,-182 118.5,-182 118.5,-170 118.5,-170 118.5,-164 124.5,-158 130.5,-158 130.5,-158 241.5,-158 241.5,-158 247.5,-158 253.5,-164 253.5,-170 253.5,-170 253.5,-182 253.5,-182 253.5,-188 247.5,-194 241.5,-194"/>
-<text text-anchor="middle" x="186" y="-179.2" font-family="Helvetica,sans-Serif" font-size="11.00">25 Climate, ESG and</text>
-<text text-anchor="middle" x="186" y="-167.2" font-family="Helvetica,sans-Serif" font-size="11.00">Emerging Risks</text>
+<path fill="#eef2ff" stroke="#6366f1" d="M241.5,-273C241.5,-273 130.5,-273 130.5,-273 124.5,-273 118.5,-267 118.5,-261 118.5,-261 118.5,-249 118.5,-249 118.5,-243 124.5,-237 130.5,-237 130.5,-237 241.5,-237 241.5,-237 247.5,-237 253.5,-243 253.5,-249 253.5,-249 253.5,-261 253.5,-261 253.5,-267 247.5,-273 241.5,-273"/>
+<text text-anchor="middle" x="186" y="-258.2" font-family="Helvetica,sans-Serif" font-size="11.00">25 Climate, ESG and</text>
+<text text-anchor="middle" x="186" y="-246.2" font-family="Helvetica,sans-Serif" font-size="11.00">Emerging Risks</text>
 </g>
 <g id="node28" class="node">
 <title>N26</title>
-<path fill="#eef2ff" stroke="#6366f1" d="M238.5,-115C238.5,-115 133.5,-115 133.5,-115 127.5,-115 121.5,-109 121.5,-103 121.5,-103 121.5,-91 121.5,-91 121.5,-85 127.5,-79 133.5,-79 133.5,-79 238.5,-79 238.5,-79 244.5,-79 250.5,-85 250.5,-91 250.5,-91 250.5,-103 250.5,-103 250.5,-109 244.5,-115 238.5,-115"/>
-<text text-anchor="middle" x="186" y="-100.2" font-family="Helvetica,sans-Serif" font-size="11.00">26 Sovereign, Bank</text>
-<text text-anchor="middle" x="186" y="-88.2" font-family="Helvetica,sans-Serif" font-size="11.00">and Country Risk</text>
+<path fill="#eef2ff" stroke="#6366f1" d="M238.5,-194C238.5,-194 133.5,-194 133.5,-194 127.5,-194 121.5,-188 121.5,-182 121.5,-182 121.5,-170 121.5,-170 121.5,-164 127.5,-158 133.5,-158 133.5,-158 238.5,-158 238.5,-158 244.5,-158 250.5,-164 250.5,-170 250.5,-170 250.5,-182 250.5,-182 250.5,-188 244.5,-194 238.5,-194"/>
+<text text-anchor="middle" x="186" y="-179.2" font-family="Helvetica,sans-Serif" font-size="11.00">26 Sovereign, Bank</text>
+<text text-anchor="middle" x="186" y="-167.2" font-family="Helvetica,sans-Serif" font-size="11.00">and Country Risk</text>
 </g>
-<g id="node30" class="node">
+<g id="node29" class="node">
+<title>N29</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M226,-115C226,-115 146,-115 146,-115 140,-115 134,-109 134,-103 134,-103 134,-91 134,-91 134,-85 140,-79 146,-79 146,-79 226,-79 226,-79 232,-79 238,-85 238,-91 238,-91 238,-103 238,-103 238,-109 232,-115 226,-115"/>
+<text text-anchor="middle" x="186" y="-94.2" font-family="Helvetica,sans-Serif" font-size="11.00">29 Market Risk</text>
+</g>
+<g id="node31" class="node">
 <title>N28</title>
 <path fill="#6b7280" stroke="#6b7280" d="M239,-36C239,-36 133,-36 133,-36 127,-36 121,-30 121,-24 121,-24 121,-12 121,-12 121,-6 127,0 133,0 133,0 239,0 239,0 245,0 251,-6 251,-12 251,-12 251,-24 251,-24 251,-30 245,-36 239,-36"/>
 <text text-anchor="middle" x="186" y="-15.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="white">28 Master Glossary</text>

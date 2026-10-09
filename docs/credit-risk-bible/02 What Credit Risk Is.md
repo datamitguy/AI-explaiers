@@ -286,6 +286,7 @@ Credit losses are not theoretical. A few episodes everyone in the industry knows
 ## Related notes
 
 - [[00 Start Here]]
+- [[29 Market Risk]] for market risk, the closest neighbour to credit risk.
 - [[01 What a Bank Is and How It Makes Money]]
 - [[03 The Credit Lifecycle]]
 - [[09 Credit Analysis - Reading a Borrower]]

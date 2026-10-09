@@ -49,6 +49,7 @@ This vault is written for someone who has just joined a bank as a platform lead 
 26 Sovereign, Bank and Country Risk
 27 A Platform Lead's First 90 Days
 28 Master Glossary
+29 Market Risk
 ```
 
 ## Diagrams (SVG)

@@ -35,6 +35,7 @@ Letters: [A](#a) · [B](#b) · [C](#c) · [D](#d) · [E](#e) · [F](#f) · [G](#
 | Term | Meaning | Explained in |
 |---|---|---|
 | Backtesting | Comparing a model's predictions with what actually happened. | [[21 Model Risk Management and Validation]] |
+| Backtesting (market risk) | Counting the days actual losses exceeded value at risk, to check the model. | [[29 Market Risk]] |
 | Bail-in | Writing down or converting a failing bank's debt into shares so creditors, not taxpayers, absorb losses. | [[26 Sovereign, Bank and Country Risk]] |
 | Balance sheet | The list of what an organisation owns (assets) and owes (liabilities), with the difference being equity. | [[01 What a Bank Is and How It Makes Money]], [[09 Credit Analysis - Reading a Borrower]] |
 | Balloon repayment | A large final payment at the end of a loan after smaller regular ones. | [[04 Commercial and Corporate Lending]] |
@@ -122,6 +123,7 @@ Letters: [A](#a) · [B](#b) · [C](#c) · [D](#d) · [E](#e) · [F](#f) · [G](#
 | Default fund | A central counterparty's pooled reserve, funded by its members. | [[19 Counterparty Credit Risk and Derivatives]] |
 | Delegated authority | Permission given to an individual or committee to approve loans up to a set size and risk. | [[13 Credit Governance - Committees, Authorities and the Three Lines]] |
 | Delinquency bucket | A band of days past due, such as 30 to 59 days. | [[05 Retail Lending]] |
+| Delta | How much a position's value changes for a small move in the underlying price. | [[29 Market Risk]] |
 | Demand guarantee | A guarantee payable on first written demand without proof of the underlying failure. | [[08 Trade Finance and Guarantees]] |
 | Derecognition | Removing an asset from the balance sheet, for example after a sale or a substantial modification. | [[ifrs9-explained-simply]] |
 | Derivative | A contract whose value depends on something else, like an interest rate or currency. | [[19 Counterparty Credit Risk and Derivatives]] |
@@ -129,6 +131,7 @@ Letters: [A](#a) · [B](#b) · [C](#c) · [D](#d) · [E](#e) · [F](#f) · [G](#
 | Downturn LGD | Loss given default estimated for a severe economic downturn, required for IRB capital. | [[10 Internal Ratings, Scorecards and PD Models]] |
 | DSCR (debt service coverage ratio) | Cash available for debt service divided by debt payments due. | [[09 Credit Analysis - Reading a Borrower]], [[06 Specialised Finance - Project, Object, Commodities, Real Estate]] |
 | D-SIB (domestic systemically important bank) | A bank whose failure would seriously harm its home economy. Holds an extra buffer. | [[18 Regulatory Capital and Basel - the Short Version]] |
+| DV01 (dollar value of a basis point) | The change in a bond's or portfolio's value for a one basis point move in rates. Also called PV01. | [[29 Market Risk]] |
 | DvP (delivery versus payment) | Securities and cash change hands at the same instant. | [[19 Counterparty Credit Risk and Derivatives]], [[basel-credit-risk-explained-simply]] |
 
 ## E
@@ -148,6 +151,7 @@ Letters: [A](#a) · [B](#b) · [C](#c) · [D](#d) · [E](#e) · [F](#f) · [G](#
 | ESG | Environmental, social and governance factors. | [[25 Climate, ESG and Emerging Credit Risks]] |
 | Event of default | A listed event that lets lenders accelerate the loan. | [[12 Loan Documentation, Covenants and Conditions]] |
 | Expected loss | PD times LGD times EAD. The average loss to budget for. | [[02 What Credit Risk Is]] |
+| Expected shortfall (ES) | The average loss on the worst days beyond a confidence level. Replaced value at risk for trading book capital under FRTB. | [[29 Market Risk]] |
 | Exposure | Any situation where the bank could lose money if someone fails. | [[02 What Credit Risk Is]] |
 | Exposure class | The Basel category a borrower falls into: sovereign, bank, corporate, retail, real estate and so on. | [[basel-credit-risk-explained-simply]] |
 
@@ -166,6 +170,7 @@ Letters: [A](#a) · [B](#b) · [C](#c) · [D](#d) · [E](#e) · [F](#f) · [G](#
 | Forced-sale value | What an asset would fetch in a quick sale, usually below market value. | [[11 Collateral and Security]] |
 | Forward | An agreement to buy or sell something at a fixed price on a future date. | [[19 Counterparty Credit Risk and Derivatives]] |
 | Four-eyes principle | Every significant decision needs two people. | [[13 Credit Governance - Committees, Authorities and the Three Lines]] |
+| FRTB (Fundamental Review of the Trading Book) | The current Basel rules for market risk capital. | [[29 Market Risk]] |
 | FTP (funds transfer pricing) | The internal charge for funding that treasury applies to each loan. | [[24 Pricing, RAROC and Return on Capital]] |
 | FVOCI (fair value through other comprehensive income) | An IFRS 9 bucket: fair value on the balance sheet, with some changes held in other comprehensive income instead of profit. | [[ifrs9-decision-tree]], [[ifrs9-explained-simply]] |
 | FVTPL (fair value through profit or loss) | The IFRS 9 bucket where every change in fair value goes straight to profit. | [[ifrs9-decision-tree]], [[ifrs9-explained-simply]] |
@@ -174,10 +179,12 @@ Letters: [A](#a) · [B](#b) · [C](#c) · [D](#d) · [E](#e) · [F](#f) · [G](#
 
 | Term | Meaning | Explained in |
 |---|---|---|
+| Gamma | How fast delta itself changes as the price moves. | [[29 Market Risk]] |
 | Gearing | Debt compared with equity. | [[09 Credit Analysis - Reading a Borrower]] |
 | General ledger | The bank's master accounting record, which risk numbers must reconcile to. | [[22 Credit Risk Data, Systems and BCBS 239]] |
 | Gini coefficient | A measure of how well a model ranks good borrowers from bad, from 0 (random) to 1 (perfect). | [[10 Internal Ratings, Scorecards and PD Models]], [[21 Model Risk Management and Validation]] |
 | Golden source | The single authoritative system for a given piece of data. | [[22 Credit Risk Data, Systems and BCBS 239]] |
+| Greeks | Sensitivities of an option's value: delta, gamma, vega, theta. | [[29 Market Risk]] |
 | G-SIB (global systemically important bank) | One of about 30 banks whose failure would harm the world economy. | [[18 Regulatory Capital and Basel - the Short Version]] |
 | Guarantee | A promise by a third party to pay if the borrower does not. | [[11 Collateral and Security]], [[08 Trade Finance and Guarantees]] |
 
@@ -204,6 +211,7 @@ Letters: [A](#a) · [B](#b) · [C](#c) · [D](#d) · [E](#e) · [F](#f) · [G](#
 | IMM (internal model method) | A bank's own simulation model for counterparty exposure, with regulatory approval. | [[19 Counterparty Credit Risk and Derivatives]] |
 | Impairment | A reduction in the value of a loan in the accounts because of expected loss. | [[17 Provisioning and Expected Credit Loss - IFRS 9 and CECL]] |
 | Income statement | The financial statement showing revenue, costs and profit over a period. | [[09 Credit Analysis - Reading a Borrower]] |
+| Independent price verification (IPV) | A check, by a team outside the trading desk, that trading positions are valued at fair prices. | [[29 Market Risk]] |
 | Information covenant | A promise to supply accounts, compliance certificates and other information. | [[12 Loan Documentation, Covenants and Conditions]] |
 | Initial margin | Collateral posted at the start of a derivative trade to cover future moves. | [[19 Counterparty Credit Risk and Derivatives]] |
 | Input floor | A minimum value an IRB estimate may not fall below. | [[18 Regulatory Capital and Basel - the Short Version]] |
@@ -256,7 +264,8 @@ Letters: [A](#a) · [B](#b) · [C](#c) · [D](#d) · [E](#e) · [F](#f) · [G](#
 | Management overlay / post-model adjustment | A manual adjustment to model output for risks the model misses. | [[17 Provisioning and Expected Credit Loss - IFRS 9 and CECL]] |
 | Margin call | A demand for more collateral when its value falls or exposure rises. | [[11 Collateral and Security]], [[19 Counterparty Credit Risk and Derivatives]] |
 | Margin (lending) | The extra over the base rate that the borrower pays. | [[04 Commercial and Corporate Lending]], [[24 Pricing, RAROC and Return on Capital]] |
-| Market risk | The risk that prices move against you. | [[02 What Credit Risk Is]] |
+| Market data | Prices, rates, curves and volatilities used to value positions, sourced from external providers. | [[29 Market Risk]] |
+| Market risk | The risk that prices move against you. | [[29 Market Risk]], [[02 What Credit Risk Is]] |
 | Mark-to-market | Valuing a contract at today's market price. | [[19 Counterparty Credit Risk and Derivatives]] |
 | Master scale | A bank's internal rating scale, with each grade mapped to a probability of default range. | [[10 Internal Ratings, Scorecards and PD Models]] |
 | Material adverse change (MAC) | A clause triggered by a serious deterioration in the borrower's position. | [[12 Loan Documentation, Covenants and Conditions]] |
@@ -305,6 +314,7 @@ Letters: [A](#a) · [B](#b) · [C](#c) · [D](#d) · [E](#e) · [F](#f) · [G](#
 | PIK (payment in kind) | Interest added to the loan balance instead of paid in cash. | [[07 Leveraged and Acquisition Finance]] |
 | Pillar 1 / 2 / 3 | Minimum capital rules / supervisory review and extra capital / public disclosure. | [[18 Regulatory Capital and Basel - the Short Version]] |
 | Pillar 3 disclosure | The published report of a bank's risk and capital figures. | [[23 Reporting - Regulatory Returns, Pillar 3 and Management Information]] |
+| P&L attribution | Explaining the day's profit or loss by risk factor; under FRTB also a test that risk models match the desk's real P&L. | [[29 Market Risk]] |
 | Pledge | Security where the asset, such as shares, is held by or for the lender. | [[11 Collateral and Security]] |
 | POCI (purchased or originated credit-impaired) | An asset already credit-impaired when bought or made. Gets its own IFRS 9 treatment and never enters stage 1. | [[ifrs9-decision-tree]], [[ifrs9-explained-simply]] |
 | Point-in-time / through-the-cycle | Ratings that move with the economy / ratings that average across a full cycle. | [[10 Internal Ratings, Scorecards and PD Models]] |
@@ -339,6 +349,7 @@ Letters: [A](#a) · [B](#b) · [C](#c) · [D](#d) · [E](#e) · [F](#f) · [G](#
 | Reverse stress test | Working backwards from failure to find what scenario would cause it. | [[20 Stress Testing and ICAAP]] |
 | Revolving credit facility (RCF) | A facility that can be drawn, repaid and redrawn up to a limit. | [[04 Commercial and Corporate Lending]] |
 | Risk appetite | The amount and type of risk the board is willing to take. | [[14 Risk Appetite, Limits and Concentration]] |
+| Risk factor | A market variable that moves a position's value, such as an interest rate, an exchange rate or a share price. | [[29 Market Risk]] |
 | Risk weight | The percentage an exposure is multiplied by to reflect its risk. | [[18 Regulatory Capital and Basel - the Short Version]] |
 | Roll rate | The share of accounts moving from one delinquency bucket to the next each month. | [[05 Retail Lending]] |
 | RoRWA (return on risk-weighted assets) | Profit divided by risk-weighted assets. | [[24 Pricing, RAROC and Return on Capital]] |
@@ -359,6 +370,7 @@ Letters: [A](#a) · [B](#b) · [C](#c) · [D](#d) · [E](#e) · [F](#f) · [G](#
 | Securitisation | Pooling loans and selling slices of the pool's cash flows to investors. | [[basel-credit-risk-explained-simply]], [[07 Leveraged and Acquisition Finance]] |
 | Security | A legal right over assets that secures repayment. | [[11 Collateral and Security]] |
 | Senior debt | Debt that ranks first for repayment. | [[04 Commercial and Corporate Lending]], [[07 Leveraged and Acquisition Finance]] |
+| Sensitivities-based method (SBM) | The core of the FRTB standardised approach: capital from delta, vega and curvature sensitivities. | [[29 Market Risk]] |
 | Settlement risk | The risk of paying your side of a deal and not receiving the other. | [[02 What Credit Risk Is]], [[19 Counterparty Credit Risk and Derivatives]] |
 | SFT (securities financing transaction) | Repos, securities lending and margin lending. | [[19 Counterparty Credit Risk and Derivatives]] |
 | SICR (significant increase in credit risk) | The IFRS 9 test that moves a loan from stage 1 to stage 2. | [[17 Provisioning and Expected Credit Loss - IFRS 9 and CECL]] |
@@ -378,7 +390,9 @@ Letters: [A](#a) · [B](#b) · [C](#c) · [D](#d) · [E](#e) · [F](#f) · [G](#
 | Standby letter of credit | A letter of credit used only if the applicant fails to pay. | [[08 Trade Finance and Guarantees]] |
 | Standstill agreement | Creditors agree not to enforce for a period while a restructuring is negotiated. | [[16 Problem Loans, Restructuring and Recovery]] |
 | Step-in rights | Lenders' right to take over a project contract if the project company fails. | [[06 Specialised Finance - Project, Object, Commodities, Real Estate]] |
+| Stop-loss limit | A cap on cumulative trading losses that forces a desk to cut positions. | [[29 Market Risk]] |
 | Stress test | Running the portfolio through a severe scenario to see if the bank survives. | [[20 Stress Testing and ICAAP]] |
+| Stressed VaR | Value at risk calculated on data from a past period of severe stress. | [[29 Market Risk]] |
 | Subordinated debt | Debt repaid after senior debt. | [[04 Commercial and Corporate Lending]] |
 | Supply chain finance | A bank pays a supplier early against an approved invoice from a strong buyer. | [[08 Trade Finance and Guarantees]] |
 | Swap | An agreement to exchange one stream of payments for another. | [[19 Counterparty Credit Risk and Derivatives]] |
@@ -396,7 +410,7 @@ Letters: [A](#a) · [B](#b) · [C](#c) · [D](#d) · [E](#e) · [F](#f) · [G](#
 | Three lines of defence | The model splitting risk ownership, oversight and assurance between business, risk and audit. | [[13 Credit Governance - Committees, Authorities and the Three Lines]] |
 | Tier 1 / Tier 2 | Capital quality layers. Tier 1 is CET1 plus AT1; Tier 2 is subordinated debt that absorbs losses on failure. | [[18 Regulatory Capital and Basel - the Short Version]] |
 | Trade finance | Banking products that help buyers and sellers trade safely across borders. | [[08 Trade Finance and Guarantees]] |
-| Trading book | Positions held to sell soon. Market risk rules apply. | [[basel-credit-risk-explained-simply]] |
+| Trading book | Positions held to sell soon. Market risk rules apply. | [[29 Market Risk]], [[basel-credit-risk-explained-simply]] |
 | Tranche | One slice of a loan or securitisation with its own terms or ranking. | [[07 Leveraged and Acquisition Finance]] |
 | Transactor / revolver | A card customer who pays in full each month / one who carries a balance. | [[05 Retail Lending]] |
 | Transfer and convertibility risk | A healthy borrower cannot pay because their government blocks foreign currency payments. | [[26 Sovereign, Bank and Country Risk]] |
@@ -421,7 +435,9 @@ Letters: [A](#a) · [B](#b) · [C](#c) · [D](#d) · [E](#e) · [F](#f) · [G](#
 |---|---|---|
 | Validation | Independent review of whether a model is sound and works as intended. | [[21 Model Risk Management and Validation]] |
 | Valuation | An estimate of what collateral is worth, by a qualified valuer or an automated model. | [[11 Collateral and Security]] |
+| VaR (value at risk) | The loss a portfolio should not exceed on, say, 99 days in 100 over a set horizon. | [[29 Market Risk]] |
 | Variation margin | Collateral exchanged daily to cover changes in a derivative's value. | [[19 Counterparty Credit Risk and Derivatives]] |
+| Vega | How much an option's value changes when expected volatility changes. | [[29 Market Risk]] |
 | Vintage analysis | Comparing loan performance by the month or year loans were made. | [[05 Retail Lending]] |
 
 ## W

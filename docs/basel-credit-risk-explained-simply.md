@@ -168,7 +168,7 @@ Banks sort everything they own into two piles. They literally call the piles "bo
 
 **The banking book** is the pile of things the bank plans to keep. Loans to customers, mortgages, bonds it intends to hold until they are repaid. The risk here is mainly credit risk: will I get paid back? This is the pile the credit risk rules apply to, and it is what the whole diagram is about.
 
-**The trading book** is the pile of things the bank bought in order to sell again soon, hoping to make money from price moves. Shares, bonds, currencies, and derivatives that the trading desk flips around daily. The risk here is mainly market risk: will the price drop before I sell? This pile is covered by a different rulebook, the market risk framework, currently a set of rules nicknamed **FRTB** (Fundamental Review of the Trading Book). The diagram shows this as a grey box and says "out of scope."
+**The trading book** is the pile of things the bank bought in order to sell again soon, hoping to make money from price moves. Shares, bonds, currencies, and derivatives that the trading desk flips around daily. The risk here is mainly market risk: will the price drop before I sell? This pile is covered by a different rulebook, the market risk framework, currently a set of rules nicknamed **FRTB** (Fundamental Review of the Trading Book). The diagram shows this as a grey box and says "out of scope." For how market risk itself is measured and capitalised, see [[29 Market Risk]].
 
 Why does the split matter? Because the same bond could sit in either pile, and the capital rules are different. Regulators keep a close eye on the boundary so banks cannot shuffle things between piles to pick whichever rule is cheaper.
 

@@ -30,7 +30,7 @@ digraph VaultMap {
     N23 [label="23 Reporting"]; N24 [label="24 Pricing and RAROC"];
   }
   subgraph cluster_g { label="Wider risks"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
-    N25 [label="25 Climate, ESG and\nEmerging Risks"]; N26 [label="26 Sovereign, Bank\nand Country Risk"];
+    N25 [label="25 Climate, ESG and\nEmerging Risks"]; N26 [label="26 Sovereign, Bank\nand Country Risk"]; N29 [label="29 Market Risk"];
   }
   N27 [label="27 A Platform Lead's\nFirst 90 Days", fillcolor="#065f46", fontcolor="white", color="#065f46"];
   N28 [label="28 Master Glossary", fillcolor="#6b7280", fontcolor="white", color="#6b7280"];
@@ -45,7 +45,7 @@ digraph VaultMap {
   N18 -> Basel;
   N20 -> N21 [style=invis];
   N21 -> N22 -> N23 -> N24 [style=invis];
-  N24 -> N25 -> N26 [style=invis];
+  N24 -> N25 -> N26 -> N29 [style=invis];
   N22 -> N27;
-  N26 -> N28 [style=invis];
+  N29 -> N28 [style=invis];
 }
