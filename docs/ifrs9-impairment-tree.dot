@@ -1,0 +1,49 @@
+digraph IFRS9Impairment {
+  graph [rankdir=TB, splines=true, nodesep=0.35, ranksep=0.5, fontname="Helvetica", fontsize=13, bgcolor="white", newrank=true, pad=0.2];
+  node  [shape=box, style="rounded,filled", fillcolor="#eef2ff", color="#6366f1", fontname="Helvetica", fontsize=12, margin="0.18,0.10"];
+  edge  [color="#4b5563", arrowsize=0.7, fontname="Helvetica", fontsize=10, fontcolor="#374151"];
+
+  Start [label="Exposure in scope of impairment\n(IFRS 9 Part 2: expected credit loss)", fillcolor="#1f2937", fontcolor="white", color="#1f2937", fontsize=13];
+  Scope [label="In scope: debt at amortised cost or FVOCI,\nlease receivables, contract assets,\nloan commitments and financial guarantees\nnot at FVTPL"];
+  Start -> Scope;
+
+  POCI [label="Purchased or originated\ncredit-impaired (POCI)?", shape=diamond, style=filled, fillcolor="#fef3c7", color="#d97706", margin="0.05,0.05"];
+  Scope -> POCI;
+  POCIr [label="POCI treatment\nOnly changes in lifetime ECL since purchase\nare recognised; credit-adjusted interest rate;\nnever moves to stage 1"];
+  POCI -> POCIr [label=" yes"];
+
+  Simple [label="Trade receivable, contract asset\nor lease receivable?", shape=diamond, style=filled, fillcolor="#fef3c7", color="#d97706", margin="0.05,0.05"];
+  POCI -> Simple [label=" no"];
+  SimpleR [label="Simplified approach\nAlways lifetime ECL, often via a\nprovision matrix by days past due\n(required without a significant financing\ncomponent; a policy choice otherwise)"];
+  Simple -> SimpleR [label=" yes"];
+
+  Impaired [label="Credit-impaired now?\n(in default: 90 days past due rebuttable\npresumption, or unlikely to pay)", shape=diamond, style=filled, fillcolor="#fef3c7", color="#d97706", margin="0.05,0.05"];
+  Simple -> Impaired [label=" no: general approach"];
+
+  LCR [label="Low credit risk at reporting date?\n(optional exemption, roughly\ninvestment grade)", shape=diamond, style=filled, fillcolor="#fef3c7", color="#d97706", margin="0.05,0.05"];
+  SICR [label="Significant increase in credit risk\nsince initial recognition?\nRelative PD change, qualitative flags such as\nwatchlist or forbearance, 30 days past due\nrebuttable backstop", shape=diamond, style=filled, fillcolor="#fef3c7", color="#d97706", margin="0.05,0.05"];
+  Impaired -> LCR [label=" no"];
+  LCR -> SICR [label=" no, or exemption\n not used"];
+
+  S1 [label="Stage 1: performing\n12-month ECL\nInterest on gross carrying amount", fillcolor="#065f46", fontcolor="white", color="#065f46"];
+  S2 [label="Stage 2: underperforming\nLifetime ECL\nInterest on gross carrying amount", fillcolor="#d97706", fontcolor="white", color="#d97706"];
+  S3 [label="Stage 3: credit-impaired\nLifetime ECL\nInterest on net carrying amount\n(gross minus the allowance)", fillcolor="#991b1b", fontcolor="white", color="#991b1b"];
+  LCR -> S1 [label=" yes"];
+  SICR -> S1 [label=" no"];
+  SICR -> S2 [label=" yes"];
+  Impaired -> S3 [label=" yes"];
+  { rank=same; S1; S2; S3; }
+
+  Measure [label="Measure ECL = sum over time of\nPD x LGD x EAD, discounted at the\neffective interest rate\nUnbiased, probability-weighted across\nseveral economic scenarios, using\nreasonable and supportable forecasts", fillcolor="#1e3a8a", fontcolor="white", color="#1e3a8a"];
+  S1 -> Measure; S2 -> Measure; S3 -> Measure; SimpleR -> Measure; POCIr -> Measure;
+
+  Overlay [label="Post-model adjustments and\nmanagement overlays for risks the\nmodels miss, governed and documented"];
+  Measure -> Overlay;
+
+  Book [label="Book the loss allowance\nChange in allowance hits profit or loss\n(for FVOCI debt, the allowance sits in OCI,\nnot as a reduction of the asset)"];
+  Overlay -> Book;
+
+  Move [label="Every reporting date: re-stage\nStage 2 and 3 can cure back after\nprobation; modifications are assessed;\nwrite off when there is no reasonable\nexpectation of recovery"];
+  Book -> Move;
+  Move -> Impaired [style=dashed, constraint=false, label=" next period"];
+}

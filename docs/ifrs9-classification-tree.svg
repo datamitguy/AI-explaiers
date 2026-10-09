@@ -1,0 +1,206 @@
+<svg width="100%"
+ viewBox="0.00 0.00 1289.30 809.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 795.4)">
+<title>IFRS9Classification</title>
+<polygon fill="white" stroke="transparent" points="-14.4,14.4 -14.4,-795.4 1274.9,-795.4 1274.9,14.4 -14.4,14.4"/>
+<g id="node1" class="node">
+<title>Start</title>
+<path fill="#1f2937" stroke="#1f2937" d="M408,-781C408,-781 89,-781 89,-781 83,-781 77,-775 77,-769 77,-769 77,-751 77,-751 77,-745 83,-739 89,-739 89,-739 408,-739 408,-739 414,-739 420,-745 420,-751 420,-751 420,-769 420,-769 420,-775 414,-781 408,-781"/>
+<text text-anchor="middle" x="248.5" y="-763.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="white">Financial asset on the balance sheet</text>
+<text text-anchor="middle" x="248.5" y="-749.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="white">(IFRS 9 Part 1: classification and measurement)</text>
+</g>
+<g id="node2" class="node">
+<title>Type</title>
+<polygon fill="#fef3c7" stroke="#d97706" points="248.5,-702 144.5,-668 248.5,-634 352.5,-668 248.5,-702"/>
+<text text-anchor="middle" x="248.5" y="-671.4" font-family="Helvetica,sans-Serif" font-size="12.00">What kind of</text>
+<text text-anchor="middle" x="248.5" y="-658.4" font-family="Helvetica,sans-Serif" font-size="12.00">instrument is it?</text>
+</g>
+<g id="edge1" class="edge">
+<title>Start&#45;&gt;Type</title>
+<path fill="none" stroke="#4b5563" d="M248.5,-738.58C248.5,-729.9 248.5,-719.46 248.5,-709.33"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="250.95,-709.05 248.5,-702.05 246.05,-709.05 250.95,-709.05"/>
+</g>
+<g id="node3" class="node">
+<title>Deriv</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M153,-464C153,-464 12,-464 12,-464 6,-464 0,-458 0,-452 0,-452 0,-436 0,-436 0,-430 6,-424 12,-424 12,-424 153,-424 153,-424 159,-424 165,-430 165,-436 165,-436 165,-452 165,-452 165,-458 159,-464 153,-464"/>
+<text text-anchor="middle" x="82.5" y="-447.4" font-family="Helvetica,sans-Serif" font-size="12.00">Derivative</text>
+<text text-anchor="middle" x="82.5" y="-434.4" font-family="Helvetica,sans-Serif" font-size="12.00">(swap, forward, option)</text>
+</g>
+<g id="edge2" class="edge">
+<title>Type&#45;&gt;Deriv</title>
+<path fill="none" stroke="#4b5563" d="M211.87,-645.75C199.65,-637.51 186.6,-627.32 176.5,-616 136.53,-571.21 106.86,-506.5 92.38,-470.91"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="94.56,-469.78 89.69,-464.19 90.02,-471.6 94.56,-469.78"/>
+<text text-anchor="middle" x="203" y="-602.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> derivative</text>
+</g>
+<g id="node4" class="node">
+<title>EqQ</title>
+<polygon fill="#fef3c7" stroke="#d97706" points="248.5,-390 153.72,-372 248.5,-354 343.28,-372 248.5,-390"/>
+<text text-anchor="middle" x="248.5" y="-368.9" font-family="Helvetica,sans-Serif" font-size="12.00">Held for trading?</text>
+</g>
+<g id="edge3" class="edge">
+<title>Type&#45;&gt;EqQ</title>
+<path fill="none" stroke="#4b5563" d="M248.5,-633.85C248.5,-574.16 248.5,-449.95 248.5,-397.36"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="250.95,-397.14 248.5,-390.14 246.05,-397.14 250.95,-397.14"/>
+<text text-anchor="middle" x="287" y="-526.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> equity (shares)</text>
+</g>
+<g id="node7" class="node">
+<title>SPPI</title>
+<polygon fill="#fef3c7" stroke="#d97706" points="533.5,-576 356.5,-529 533.5,-482 710.5,-529 533.5,-576"/>
+<text text-anchor="middle" x="533.5" y="-538.9" font-family="Helvetica,sans-Serif" font-size="12.00">SPPI test: are the cash flows</text>
+<text text-anchor="middle" x="533.5" y="-525.9" font-family="Helvetica,sans-Serif" font-size="12.00">solely payments of principal</text>
+<text text-anchor="middle" x="533.5" y="-512.9" font-family="Helvetica,sans-Serif" font-size="12.00">and interest?</text>
+</g>
+<g id="edge6" class="edge">
+<title>Type&#45;&gt;SPPI</title>
+<path fill="none" stroke="#4b5563" d="M289.64,-647.23C335.48,-625.19 410.35,-589.2 465.06,-562.9"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="466.38,-564.98 471.62,-559.74 464.25,-560.57 466.38,-564.98"/>
+<text text-anchor="middle" x="443.5" y="-608" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> debt (loan, bond,</text>
+<text text-anchor="middle" x="443.5" y="-597" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> receivable)</text>
+</g>
+<g id="node12" class="node">
+<title>FVTPL</title>
+<path fill="#991b1b" stroke="#991b1b" d="M603,-143C603,-143 414,-143 414,-143 408,-143 402,-137 402,-131 402,-131 402,-89 402,-89 402,-83 408,-77 414,-77 414,-77 603,-77 603,-77 609,-77 615,-83 615,-89 615,-89 615,-131 615,-131 615,-137 609,-143 603,-143"/>
+<text text-anchor="middle" x="508.5" y="-126.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">FVTPL</text>
+<text text-anchor="middle" x="508.5" y="-113.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Fair value through profit or loss</text>
+<text text-anchor="middle" x="508.5" y="-100.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Every value change hits profit</text>
+<text text-anchor="middle" x="508.5" y="-87.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">No separate impairment</text>
+</g>
+<g id="edge11" class="edge">
+<title>Deriv&#45;&gt;FVTPL</title>
+<path fill="none" stroke="#4b5563" d="M68.1,-423.92C36.52,-379.61 -31.78,-268.36 23.5,-201 72.12,-141.75 288,-156.19 363.5,-143 373.71,-141.22 384.28,-139.2 394.86,-137.08"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="395.44,-139.46 401.81,-135.67 394.46,-134.66 395.44,-139.46"/>
+<text text-anchor="middle" x="59.5" y="-306.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> always (unless a</text>
+<text text-anchor="middle" x="59.5" y="-295.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> designated hedge)</text>
+</g>
+<g id="node5" class="node">
+<title>EqElect</title>
+<polygon fill="#fef3c7" stroke="#d97706" points="230.5,-269 36.5,-235 230.5,-201 424.5,-235 230.5,-269"/>
+<text text-anchor="middle" x="230.5" y="-238.4" font-family="Helvetica,sans-Serif" font-size="12.00">Irrevocable election at day one</text>
+<text text-anchor="middle" x="230.5" y="-225.4" font-family="Helvetica,sans-Serif" font-size="12.00">to present changes in OCI?</text>
+</g>
+<g id="edge4" class="edge">
+<title>EqQ&#45;&gt;EqElect</title>
+<path fill="none" stroke="#4b5563" d="M246.26,-354.18C243.65,-334.6 239.25,-301.62 235.76,-275.47"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="238.16,-274.91 234.81,-268.29 233.3,-275.55 238.16,-274.91"/>
+<text text-anchor="middle" x="250.5" y="-301" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> no</text>
+</g>
+<g id="edge12" class="edge">
+<title>EqQ&#45;&gt;FVTPL</title>
+<path fill="none" stroke="#4b5563" d="M282.23,-360.22C323.45,-345.52 393.06,-315.57 436.5,-269 468.21,-235.01 487.84,-184.63 498.44,-149.95"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="500.79,-150.64 500.44,-143.23 496.1,-149.24 500.79,-150.64"/>
+<text text-anchor="middle" x="490" y="-232.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> yes</text>
+</g>
+<g id="node6" class="node">
+<title>FVOCIeq</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M339,-143C339,-143 122,-143 122,-143 116,-143 110,-137 110,-131 110,-131 110,-89 110,-89 110,-83 116,-77 122,-77 122,-77 339,-77 339,-77 345,-77 351,-83 351,-89 351,-89 351,-131 351,-131 351,-137 345,-143 339,-143"/>
+<text text-anchor="middle" x="230.5" y="-126.4" font-family="Helvetica,sans-Serif" font-size="12.00">FVOCI (equity)</text>
+<text text-anchor="middle" x="230.5" y="-113.4" font-family="Helvetica,sans-Serif" font-size="12.00">Fair value changes in OCI, never</text>
+<text text-anchor="middle" x="230.5" y="-100.4" font-family="Helvetica,sans-Serif" font-size="12.00">recycled to profit; dividends in profit</text>
+<text text-anchor="middle" x="230.5" y="-87.4" font-family="Helvetica,sans-Serif" font-size="12.00">No impairment</text>
+</g>
+<g id="edge5" class="edge">
+<title>EqElect&#45;&gt;FVOCIeq</title>
+<path fill="none" stroke="#4b5563" d="M230.5,-200.71C230.5,-185.17 230.5,-166.55 230.5,-150.31"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="232.95,-150.04 230.5,-143.04 228.05,-150.04 232.95,-150.04"/>
+<text text-anchor="middle" x="241" y="-169.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> yes</text>
+</g>
+<g id="edge13" class="edge">
+<title>EqElect&#45;&gt;FVTPL</title>
+<path fill="none" stroke="#4b5563" d="M284.1,-210.28C325.39,-192.02 383.09,-166.49 429.65,-145.89"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="430.73,-148.09 436.14,-143.02 428.75,-143.61 430.73,-148.09"/>
+<text text-anchor="middle" x="402.5" y="-169.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> no</text>
+</g>
+<g id="node8" class="node">
+<title>BM</title>
+<polygon fill="#fef3c7" stroke="#d97706" points="739.5,-406 571.5,-372 739.5,-338 907.5,-372 739.5,-406"/>
+<text text-anchor="middle" x="739.5" y="-375.4" font-family="Helvetica,sans-Serif" font-size="12.00">Business model test:</text>
+<text text-anchor="middle" x="739.5" y="-362.4" font-family="Helvetica,sans-Serif" font-size="12.00">why does the bank hold it?</text>
+</g>
+<g id="edge7" class="edge">
+<title>SPPI&#45;&gt;BM</title>
+<path fill="none" stroke="#4b5563" d="M578.71,-493.98C614.65,-466.94 664.46,-429.46 699.09,-403.41"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="700.82,-405.17 704.94,-399.01 697.87,-401.26 700.82,-405.17"/>
+<text text-anchor="middle" x="679.5" y="-441.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> pass</text>
+</g>
+<g id="edge14" class="edge">
+<title>SPPI&#45;&gt;FVTPL</title>
+<path fill="none" stroke="#4b5563" d="M530.78,-482.58C525.84,-400.27 515.5,-227.82 510.85,-150.26"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="513.29,-149.9 510.42,-143.06 508.4,-150.19 513.29,-149.9"/>
+<text text-anchor="middle" x="568" y="-312" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> fail (e.g. returns</text>
+<text text-anchor="middle" x="568" y="-301" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> linked to equity or</text>
+<text text-anchor="middle" x="568" y="-290" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> commodity prices)</text>
+</g>
+<g id="node9" class="node">
+<title>FVO</title>
+<polygon fill="#fef3c7" stroke="#d97706" points="990.5,-269 785.5,-235 990.5,-201 1195.5,-235 990.5,-269"/>
+<text text-anchor="middle" x="990.5" y="-238.4" font-family="Helvetica,sans-Serif" font-size="12.00">Fair value option used to remove</text>
+<text text-anchor="middle" x="990.5" y="-225.4" font-family="Helvetica,sans-Serif" font-size="12.00">an accounting mismatch?</text>
+</g>
+<g id="edge8" class="edge">
+<title>BM&#45;&gt;FVO</title>
+<path fill="none" stroke="#4b5563" d="M784.08,-347.02C826.87,-324.01 891.53,-289.23 937.05,-264.75"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="938.34,-266.83 943.35,-261.36 936.02,-262.52 938.34,-266.83"/>
+<text text-anchor="middle" x="951.5" y="-306.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> hold to collect, or</text>
+<text text-anchor="middle" x="951.5" y="-295.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> hold to collect and sell</text>
+</g>
+<g id="edge15" class="edge">
+<title>BM&#45;&gt;FVTPL</title>
+<path fill="none" stroke="#4b5563" d="M714.34,-342.68C672.51,-295.6 588.65,-201.22 541.91,-148.61"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="543.71,-146.95 537.23,-143.34 540.05,-150.2 543.71,-146.95"/>
+<text text-anchor="middle" x="703.5" y="-238" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> other: trading, or</text>
+<text text-anchor="middle" x="703.5" y="-227" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> managed on fair value</text>
+</g>
+<g id="node10" class="node">
+<title>AC</title>
+<path fill="#065f46" stroke="#065f46" d="M953.5,-143C953.5,-143 755.5,-143 755.5,-143 749.5,-143 743.5,-137 743.5,-131 743.5,-131 743.5,-89 743.5,-89 743.5,-83 749.5,-77 755.5,-77 755.5,-77 953.5,-77 953.5,-77 959.5,-77 965.5,-83 965.5,-89 965.5,-89 965.5,-131 965.5,-131 965.5,-137 959.5,-143 953.5,-143"/>
+<text text-anchor="middle" x="854.5" y="-126.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Amortised cost</text>
+<text text-anchor="middle" x="854.5" y="-113.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Carried at cost less repayments,</text>
+<text text-anchor="middle" x="854.5" y="-100.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">interest by effective interest rate</text>
+<text text-anchor="middle" x="854.5" y="-87.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Impairment applies</text>
+</g>
+<g id="edge9" class="edge">
+<title>FVO&#45;&gt;AC</title>
+<path fill="none" stroke="#4b5563" d="M959.64,-206.09C940.65,-188.91 916.08,-166.69 895.47,-148.05"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="896.88,-146.02 890.04,-143.15 893.59,-149.66 896.88,-146.02"/>
+<text text-anchor="middle" x="973" y="-175" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> no, and model is</text>
+<text text-anchor="middle" x="973" y="-164" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> hold to collect</text>
+</g>
+<g id="node11" class="node">
+<title>FVOCI</title>
+<path fill="#1e3a8a" stroke="#1e3a8a" d="M1248.5,-143C1248.5,-143 1002.5,-143 1002.5,-143 996.5,-143 990.5,-137 990.5,-131 990.5,-131 990.5,-89 990.5,-89 990.5,-83 996.5,-77 1002.5,-77 1002.5,-77 1248.5,-77 1248.5,-77 1254.5,-77 1260.5,-83 1260.5,-89 1260.5,-89 1260.5,-131 1260.5,-131 1260.5,-137 1254.5,-143 1248.5,-143"/>
+<text text-anchor="middle" x="1125.5" y="-126.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">FVOCI (debt)</text>
+<text text-anchor="middle" x="1125.5" y="-113.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Fair value on balance sheet, interest and</text>
+<text text-anchor="middle" x="1125.5" y="-100.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">impairment in profit, rest in OCI,</text>
+<text text-anchor="middle" x="1125.5" y="-87.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">recycled to profit on sale</text>
+</g>
+<g id="edge10" class="edge">
+<title>FVO&#45;&gt;FVOCI</title>
+<path fill="none" stroke="#4b5563" d="M1021.47,-205.78C1040.19,-188.72 1064.28,-166.78 1084.56,-148.3"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="1086.38,-149.96 1089.9,-143.43 1083.08,-146.34 1086.38,-149.96"/>
+<text text-anchor="middle" x="1126.5" y="-175" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> no, and model is</text>
+<text text-anchor="middle" x="1126.5" y="-164" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> hold to collect and sell</text>
+</g>
+<g id="edge16" class="edge">
+<title>FVO&#45;&gt;FVTPL</title>
+<path fill="none" stroke="#4b5563" d="M911.99,-213.96C833.34,-193.89 711.48,-162.8 622.25,-140.03"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="622.74,-137.62 615.35,-138.27 621.53,-142.37 622.74,-137.62"/>
+<text text-anchor="middle" x="788" y="-169.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> yes</text>
+</g>
+<g id="node13" class="node">
+<title>Imp</title>
+<path fill="#6b7280" stroke="#6b7280" d="M1076.5,-40C1076.5,-40 902.5,-40 902.5,-40 896.5,-40 890.5,-34 890.5,-28 890.5,-28 890.5,-12 890.5,-12 890.5,-6 896.5,0 902.5,0 902.5,0 1076.5,0 1076.5,0 1082.5,0 1088.5,-6 1088.5,-12 1088.5,-12 1088.5,-28 1088.5,-28 1088.5,-34 1082.5,-40 1076.5,-40"/>
+<text text-anchor="middle" x="989.5" y="-23.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Go to the impairment tree</text>
+<text text-anchor="middle" x="989.5" y="-10.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">(Part 2: expected credit loss)</text>
+</g>
+<g id="edge17" class="edge">
+<title>AC&#45;&gt;Imp</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M903.62,-76.98C920.39,-66.05 938.8,-54.05 954.26,-43.97"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="955.72,-45.94 960.25,-40.07 953.05,-41.84 955.72,-45.94"/>
+</g>
+<g id="edge18" class="edge">
+<title>FVOCI&#45;&gt;Imp</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M1076.02,-76.98C1059.12,-66.05 1040.57,-54.05 1025,-43.97"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="1026.17,-41.81 1018.97,-40.07 1023.51,-45.93 1026.17,-41.81"/>
+</g>
+</g>
+</svg>

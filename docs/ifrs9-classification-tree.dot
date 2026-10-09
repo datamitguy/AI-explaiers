@@ -1,0 +1,50 @@
+digraph IFRS9Classification {
+  graph [rankdir=TB, splines=true, nodesep=0.35, ranksep=0.5, fontname="Helvetica", fontsize=13, bgcolor="white", newrank=true, pad=0.2];
+  node  [shape=box, style="rounded,filled", fillcolor="#eef2ff", color="#6366f1", fontname="Helvetica", fontsize=12, margin="0.18,0.10"];
+  edge  [color="#4b5563", arrowsize=0.7, fontname="Helvetica", fontsize=10, fontcolor="#374151"];
+
+  Start [label="Financial asset on the balance sheet\n(IFRS 9 Part 1: classification and measurement)", fillcolor="#1f2937", fontcolor="white", color="#1f2937", fontsize=13];
+
+  Type [label="What kind of\ninstrument is it?", shape=diamond, style=filled, fillcolor="#fef3c7", color="#d97706", margin="0.05,0.05"];
+  Start -> Type;
+
+  /* Derivatives */
+  Deriv [label="Derivative\n(swap, forward, option)"];
+  Type -> Deriv [label=" derivative"];
+
+  /* Equity */
+  EqQ [label="Held for trading?", shape=diamond, style=filled, fillcolor="#fef3c7", color="#d97706", margin="0.05,0.05"];
+  Type -> EqQ [label=" equity (shares)"];
+  EqElect [label="Irrevocable election at day one\nto present changes in OCI?", shape=diamond, style=filled, fillcolor="#fef3c7", color="#d97706", margin="0.05,0.05"];
+  EqQ -> EqElect [label=" no"];
+  FVOCIeq [label="FVOCI (equity)\nFair value changes in OCI, never\nrecycled to profit; dividends in profit\nNo impairment"];
+  EqElect -> FVOCIeq [label=" yes"];
+
+  /* Debt */
+  SPPI [label="SPPI test: are the cash flows\nsolely payments of principal\nand interest?", shape=diamond, style=filled, fillcolor="#fef3c7", color="#d97706", margin="0.05,0.05"];
+  Type -> SPPI [label=" debt (loan, bond,\n receivable)"];
+  BM [label="Business model test:\nwhy does the bank hold it?", shape=diamond, style=filled, fillcolor="#fef3c7", color="#d97706", margin="0.05,0.05"];
+  SPPI -> BM [label=" pass"];
+
+  FVO [label="Fair value option used to remove\nan accounting mismatch?", shape=diamond, style=filled, fillcolor="#fef3c7", color="#d97706", margin="0.05,0.05"];
+  BM -> FVO [label=" hold to collect, or\n hold to collect and sell"];
+
+  AC [label="Amortised cost\nCarried at cost less repayments,\ninterest by effective interest rate\nImpairment applies", fillcolor="#065f46", fontcolor="white", color="#065f46"];
+  FVOCI [label="FVOCI (debt)\nFair value on balance sheet, interest and\nimpairment in profit, rest in OCI,\nrecycled to profit on sale", fillcolor="#1e3a8a", fontcolor="white", color="#1e3a8a"];
+  FVO -> AC [label=" no, and model is\n hold to collect"];
+  FVO -> FVOCI [label=" no, and model is\n hold to collect and sell"];
+
+  FVTPL [label="FVTPL\nFair value through profit or loss\nEvery value change hits profit\nNo separate impairment", fillcolor="#991b1b", fontcolor="white", color="#991b1b"];
+  Deriv -> FVTPL [label=" always (unless a\n designated hedge)"];
+  EqQ -> FVTPL [label=" yes"];
+  EqElect -> FVTPL [label=" no"];
+  SPPI -> FVTPL [label=" fail (e.g. returns\n linked to equity or\n commodity prices)"];
+  BM -> FVTPL [label=" other: trading, or\n managed on fair value"];
+  FVO -> FVTPL [label=" yes"];
+
+  Imp [label="Go to the impairment tree\n(Part 2: expected credit loss)", fillcolor="#6b7280", fontcolor="white", color="#6b7280"];
+  AC -> Imp [style=dashed];
+  FVOCI -> Imp [style=dashed];
+
+  { rank=same; AC; FVOCI; FVTPL; }
+}

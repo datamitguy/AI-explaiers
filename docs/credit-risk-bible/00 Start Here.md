@@ -60,6 +60,8 @@ A bank lends out money that mostly belongs to its depositors. Some borrowers wil
 | Note | What you will learn |
 |---|---|
 | [[17 Provisioning and Expected Credit Loss - IFRS 9 and CECL]] | The three stages, significant increase in credit risk, scenarios and overlays, how a provisioning engine works. |
+| [[ifrs9-decision-tree]] | The IFRS 9 decision trees: how assets are classified, and how exposures are staged for impairment. |
+| [[ifrs9-explained-simply]] | The long walk through all of IFRS 9: classification, impairment and hedge accounting, box by box. |
 | [[18 Regulatory Capital and Basel - the Short Version]] | The condensed guide to risk-weighted assets, the three approaches, ratios and buffers, and how the quarterly calculation runs. |
 | [[basel-credit-risk-explained-simply]] | The long walk through the Basel credit risk framework, box by box. |
 | [[basel-credit-risk-decision-tree]] | The decision tree diagram itself, with the Graphviz source. |

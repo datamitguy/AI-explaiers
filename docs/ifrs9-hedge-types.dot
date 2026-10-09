@@ -1,0 +1,40 @@
+digraph IFRS9HedgeTypes {
+  graph [rankdir=TB, splines=true, nodesep=0.35, ranksep=0.5, fontname="Helvetica", fontsize=13, bgcolor="white", newrank=true, pad=0.2];
+  node  [shape=box, style="rounded,filled", fillcolor="#eef2ff", color="#6366f1", fontname="Helvetica", fontsize=12, margin="0.18,0.10"];
+  edge  [color="#4b5563", arrowsize=0.7, fontname="Helvetica", fontsize=10, fontcolor="#374151"];
+
+  Start [label="Hedging instrument (usually a derivative)\ndesignated against a hedged item\n(IFRS 9 Part 3: hedge accounting)", fillcolor="#1f2937", fontcolor="white", color="#1f2937", fontsize=13];
+
+  Qual [label="Qualifies? Documented at the start,\neconomic relationship exists, credit risk\ndoes not dominate, sensible hedge ratio", shape=diamond, style=filled, fillcolor="#fef3c7", color="#d97706", margin="0.05,0.05"];
+  Start -> Qual;
+
+  NoHA [label="No hedge accounting\nDerivative at FVTPL, item at its\nnormal measurement: profit swings", fillcolor="#991b1b", fontcolor="white", color="#991b1b"];
+  Qual -> NoHA [label=" no"];
+
+  Risk [label="What is being protected?", shape=diamond, style=filled, fillcolor="#fef3c7", color="#d97706", margin="0.05,0.05"];
+  Qual -> Risk [label=" yes"];
+
+  FVH [label="Fair value hedge\nRisk: the value of a fixed-rate\nasset or liability moves with rates"];
+  CFH [label="Cash flow hedge\nRisk: future cash flows vary\n(floating-rate loan, forecast purchase)"];
+  NIH [label="Net investment hedge\nRisk: currency moves on the bank's\nstake in a foreign subsidiary"];
+  Risk -> FVH [label=" a value"];
+  Risk -> CFH [label=" a cash flow"];
+  Risk -> NIH [label=" a foreign\n operation"];
+
+  FVHex [label="Example: fixed-rate bond issued,\nswapped to floating with an\ninterest rate swap"];
+  CFHex [label="Example: floating-rate loans,\nswapped to fixed so income\nis predictable"];
+  NIHex [label="Example: euro borrowing or an FX\nforward against a euro subsidiary\nowned by a sterling bank"];
+  FVH -> FVHex; CFH -> CFHex; NIH -> NIHex;
+
+  FVHacc [label="Accounting: hedged item is adjusted\nfor the hedged risk; both changes\nin profit and largely cancel", fillcolor="#065f46", fontcolor="white", color="#065f46"];
+  CFHacc [label="Accounting: effective part of the\nderivative parked in OCI (cash flow\nhedge reserve), released to profit\nwhen the hedged cash flow hits", fillcolor="#065f46", fontcolor="white", color="#065f46"];
+  NIHacc [label="Accounting: effective part in OCI\n(translation reserve), recycled\nonly if the subsidiary is sold", fillcolor="#065f46", fontcolor="white", color="#065f46"];
+  FVHex -> FVHacc; CFHex -> CFHacc; NIHex -> NIHacc;
+  { rank=same; FVHacc; CFHacc; NIHacc; }
+
+  Ineff [label="Any ineffective part goes straight\nto profit or loss; hedge is rebalanced\nor stopped if the relationship breaks"];
+  FVHacc -> Ineff; CFHacc -> Ineff; NIHacc -> Ineff;
+
+  Policy [label="Policy choice: many banks kept IAS 39\nhedge accounting; macro (portfolio)\nhedging is a separate, ongoing project", fillcolor="#6b7280", fontcolor="white", color="#6b7280"];
+  Ineff -> Policy [style=dashed];
+}

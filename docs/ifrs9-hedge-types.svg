@@ -1,0 +1,197 @@
+<svg width="100%"
+ viewBox="0.00 0.00 925.30 799.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 785.4)">
+<title>IFRS9HedgeTypes</title>
+<polygon fill="white" stroke="transparent" points="-14.4,14.4 -14.4,-785.4 910.9,-785.4 910.9,14.4 -14.4,14.4"/>
+<g id="node1" class="node">
+<title>Start</title>
+<path fill="#1f2937" stroke="#1f2937" d="M388.5,-771C388.5,-771 109.5,-771 109.5,-771 103.5,-771 97.5,-765 97.5,-759 97.5,-759 97.5,-727 97.5,-727 97.5,-721 103.5,-715 109.5,-715 109.5,-715 388.5,-715 388.5,-715 394.5,-715 400.5,-721 400.5,-727 400.5,-727 400.5,-759 400.5,-759 400.5,-765 394.5,-771 388.5,-771"/>
+<text text-anchor="middle" x="249" y="-753.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="white">Hedging instrument (usually a derivative)</text>
+<text text-anchor="middle" x="249" y="-739.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="white">designated against a hedged item</text>
+<text text-anchor="middle" x="249" y="-725.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="white">(IFRS 9 Part 3: hedge accounting)</text>
+</g>
+<g id="node2" class="node">
+<title>Qual</title>
+<polygon fill="#fef3c7" stroke="#d97706" points="249,-678 0,-631 249,-584 498,-631 249,-678"/>
+<text text-anchor="middle" x="249" y="-640.9" font-family="Helvetica,sans-Serif" font-size="12.00">Qualifies? Documented at the start,</text>
+<text text-anchor="middle" x="249" y="-627.9" font-family="Helvetica,sans-Serif" font-size="12.00">economic relationship exists, credit risk</text>
+<text text-anchor="middle" x="249" y="-614.9" font-family="Helvetica,sans-Serif" font-size="12.00">does not dominate, sensible hedge ratio</text>
+</g>
+<g id="edge1" class="edge">
+<title>Start&#45;&gt;Qual</title>
+<path fill="none" stroke="#4b5563" d="M249,-714.81C249,-705.81 249,-695.47 249,-685.22"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="251.45,-685.14 249,-678.14 246.55,-685.14 251.45,-685.14"/>
+</g>
+<g id="node3" class="node">
+<title>NoHA</title>
+<path fill="#991b1b" stroke="#991b1b" d="M333.5,-537C333.5,-537 118.5,-537 118.5,-537 112.5,-537 106.5,-531 106.5,-525 106.5,-525 106.5,-496 106.5,-496 106.5,-490 112.5,-484 118.5,-484 118.5,-484 333.5,-484 333.5,-484 339.5,-484 345.5,-490 345.5,-496 345.5,-496 345.5,-525 345.5,-525 345.5,-531 339.5,-537 333.5,-537"/>
+<text text-anchor="middle" x="226" y="-520.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">No hedge accounting</text>
+<text text-anchor="middle" x="226" y="-507.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Derivative at FVTPL, item at its</text>
+<text text-anchor="middle" x="226" y="-494.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">normal measurement: profit swings</text>
+</g>
+<g id="edge2" class="edge">
+<title>Qual&#45;&gt;NoHA</title>
+<path fill="none" stroke="#4b5563" d="M240.37,-585.54C237.73,-571.92 234.87,-557.2 232.4,-544.49"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="234.74,-543.67 231,-537.26 229.93,-544.6 234.74,-543.67"/>
+<text text-anchor="middle" x="245" y="-558" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> no</text>
+</g>
+<g id="node4" class="node">
+<title>Risk</title>
+<polygon fill="#fef3c7" stroke="#d97706" points="507,-528.5 370.14,-510.5 507,-492.5 643.86,-510.5 507,-528.5"/>
+<text text-anchor="middle" x="507" y="-507.4" font-family="Helvetica,sans-Serif" font-size="12.00">What is being protected?</text>
+</g>
+<g id="edge3" class="edge">
+<title>Qual&#45;&gt;Risk</title>
+<path fill="none" stroke="#4b5563" d="M320.18,-597.31C369.39,-574.7 432.75,-545.6 471.59,-527.76"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="472.74,-529.93 478.08,-524.78 470.7,-525.48 472.74,-529.93"/>
+<text text-anchor="middle" x="419.5" y="-558" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> yes</text>
+</g>
+<g id="node5" class="node">
+<title>FVH</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M343,-426C343,-426 141,-426 141,-426 135,-426 129,-420 129,-414 129,-414 129,-385 129,-385 129,-379 135,-373 141,-373 141,-373 343,-373 343,-373 349,-373 355,-379 355,-385 355,-385 355,-414 355,-414 355,-420 349,-426 343,-426"/>
+<text text-anchor="middle" x="242" y="-409.4" font-family="Helvetica,sans-Serif" font-size="12.00">Fair value hedge</text>
+<text text-anchor="middle" x="242" y="-396.4" font-family="Helvetica,sans-Serif" font-size="12.00">Risk: the value of a fixed&#45;rate</text>
+<text text-anchor="middle" x="242" y="-383.4" font-family="Helvetica,sans-Serif" font-size="12.00">asset or liability moves with rates</text>
+</g>
+<g id="edge4" class="edge">
+<title>Risk&#45;&gt;FVH</title>
+<path fill="none" stroke="#4b5563" d="M475.56,-496.57C435.2,-479.97 364.03,-450.69 310.83,-428.81"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="311.51,-426.44 304.1,-426.04 309.64,-430.97 311.51,-426.44"/>
+<text text-anchor="middle" x="419" y="-452.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> a value</text>
+</g>
+<g id="node6" class="node">
+<title>CFH</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M622,-426C622,-426 392,-426 392,-426 386,-426 380,-420 380,-414 380,-414 380,-385 380,-385 380,-379 386,-373 392,-373 392,-373 622,-373 622,-373 628,-373 634,-379 634,-385 634,-385 634,-414 634,-414 634,-420 628,-426 622,-426"/>
+<text text-anchor="middle" x="507" y="-409.4" font-family="Helvetica,sans-Serif" font-size="12.00">Cash flow hedge</text>
+<text text-anchor="middle" x="507" y="-396.4" font-family="Helvetica,sans-Serif" font-size="12.00">Risk: future cash flows vary</text>
+<text text-anchor="middle" x="507" y="-383.4" font-family="Helvetica,sans-Serif" font-size="12.00">(floating&#45;rate loan, forecast purchase)</text>
+</g>
+<g id="edge5" class="edge">
+<title>Risk&#45;&gt;CFH</title>
+<path fill="none" stroke="#4b5563" d="M507,-492.47C507,-476.75 507,-452.98 507,-433.54"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="509.45,-433.33 507,-426.33 504.55,-433.33 509.45,-433.33"/>
+<text text-anchor="middle" x="536" y="-452.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> a cash flow</text>
+</g>
+<g id="node7" class="node">
+<title>NIH</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M884.5,-426C884.5,-426 671.5,-426 671.5,-426 665.5,-426 659.5,-420 659.5,-414 659.5,-414 659.5,-385 659.5,-385 659.5,-379 665.5,-373 671.5,-373 671.5,-373 884.5,-373 884.5,-373 890.5,-373 896.5,-379 896.5,-385 896.5,-385 896.5,-414 896.5,-414 896.5,-420 890.5,-426 884.5,-426"/>
+<text text-anchor="middle" x="778" y="-409.4" font-family="Helvetica,sans-Serif" font-size="12.00">Net investment hedge</text>
+<text text-anchor="middle" x="778" y="-396.4" font-family="Helvetica,sans-Serif" font-size="12.00">Risk: currency moves on the bank&#39;s</text>
+<text text-anchor="middle" x="778" y="-383.4" font-family="Helvetica,sans-Serif" font-size="12.00">stake in a foreign subsidiary</text>
+</g>
+<g id="edge6" class="edge">
+<title>Risk&#45;&gt;NIH</title>
+<path fill="none" stroke="#4b5563" d="M538.88,-496.68C580.16,-480.07 653.26,-450.67 707.8,-428.74"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="708.77,-430.98 714.35,-426.1 706.95,-426.44 708.77,-430.98"/>
+<text text-anchor="middle" x="691" y="-458" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> a foreign</text>
+<text text-anchor="middle" x="691" y="-447" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> operation</text>
+</g>
+<g id="node8" class="node">
+<title>FVHex</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M341.5,-336C341.5,-336 142.5,-336 142.5,-336 136.5,-336 130.5,-330 130.5,-324 130.5,-324 130.5,-295 130.5,-295 130.5,-289 136.5,-283 142.5,-283 142.5,-283 341.5,-283 341.5,-283 347.5,-283 353.5,-289 353.5,-295 353.5,-295 353.5,-324 353.5,-324 353.5,-330 347.5,-336 341.5,-336"/>
+<text text-anchor="middle" x="242" y="-319.4" font-family="Helvetica,sans-Serif" font-size="12.00">Example: fixed&#45;rate bond issued,</text>
+<text text-anchor="middle" x="242" y="-306.4" font-family="Helvetica,sans-Serif" font-size="12.00">swapped to floating with an</text>
+<text text-anchor="middle" x="242" y="-293.4" font-family="Helvetica,sans-Serif" font-size="12.00">interest rate swap</text>
+</g>
+<g id="edge7" class="edge">
+<title>FVH&#45;&gt;FVHex</title>
+<path fill="none" stroke="#4b5563" d="M242,-372.57C242,-363.44 242,-353.06 242,-343.43"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="244.45,-343.24 242,-336.24 239.55,-343.24 244.45,-343.24"/>
+</g>
+<g id="node9" class="node">
+<title>CFHex</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M594.5,-336C594.5,-336 419.5,-336 419.5,-336 413.5,-336 407.5,-330 407.5,-324 407.5,-324 407.5,-295 407.5,-295 407.5,-289 413.5,-283 419.5,-283 419.5,-283 594.5,-283 594.5,-283 600.5,-283 606.5,-289 606.5,-295 606.5,-295 606.5,-324 606.5,-324 606.5,-330 600.5,-336 594.5,-336"/>
+<text text-anchor="middle" x="507" y="-319.4" font-family="Helvetica,sans-Serif" font-size="12.00">Example: floating&#45;rate loans,</text>
+<text text-anchor="middle" x="507" y="-306.4" font-family="Helvetica,sans-Serif" font-size="12.00">swapped to fixed so income</text>
+<text text-anchor="middle" x="507" y="-293.4" font-family="Helvetica,sans-Serif" font-size="12.00">is predictable</text>
+</g>
+<g id="edge8" class="edge">
+<title>CFH&#45;&gt;CFHex</title>
+<path fill="none" stroke="#4b5563" d="M507,-372.57C507,-363.44 507,-353.06 507,-343.43"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="509.45,-343.24 507,-336.24 504.55,-343.24 509.45,-343.24"/>
+</g>
+<g id="node10" class="node">
+<title>NIHex</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M878,-336C878,-336 672,-336 672,-336 666,-336 660,-330 660,-324 660,-324 660,-295 660,-295 660,-289 666,-283 672,-283 672,-283 878,-283 878,-283 884,-283 890,-289 890,-295 890,-295 890,-324 890,-324 890,-330 884,-336 878,-336"/>
+<text text-anchor="middle" x="775" y="-319.4" font-family="Helvetica,sans-Serif" font-size="12.00">Example: euro borrowing or an FX</text>
+<text text-anchor="middle" x="775" y="-306.4" font-family="Helvetica,sans-Serif" font-size="12.00">forward against a euro subsidiary</text>
+<text text-anchor="middle" x="775" y="-293.4" font-family="Helvetica,sans-Serif" font-size="12.00">owned by a sterling bank</text>
+</g>
+<g id="edge9" class="edge">
+<title>NIH&#45;&gt;NIHex</title>
+<path fill="none" stroke="#4b5563" d="M777.12,-372.57C776.8,-363.44 776.45,-353.06 776.12,-343.43"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="778.56,-343.15 775.88,-336.24 773.67,-343.32 778.56,-343.15"/>
+</g>
+<g id="node11" class="node">
+<title>FVHacc</title>
+<path fill="#065f46" stroke="#065f46" d="M352,-239.5C352,-239.5 132,-239.5 132,-239.5 126,-239.5 120,-233.5 120,-227.5 120,-227.5 120,-198.5 120,-198.5 120,-192.5 126,-186.5 132,-186.5 132,-186.5 352,-186.5 352,-186.5 358,-186.5 364,-192.5 364,-198.5 364,-198.5 364,-227.5 364,-227.5 364,-233.5 358,-239.5 352,-239.5"/>
+<text text-anchor="middle" x="242" y="-222.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Accounting: hedged item is adjusted</text>
+<text text-anchor="middle" x="242" y="-209.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">for the hedged risk; both changes</text>
+<text text-anchor="middle" x="242" y="-196.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">in profit and largely cancel</text>
+</g>
+<g id="edge10" class="edge">
+<title>FVHex&#45;&gt;FVHacc</title>
+<path fill="none" stroke="#4b5563" d="M242,-282.68C242,-271.64 242,-258.61 242,-246.89"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="244.45,-246.79 242,-239.79 239.55,-246.79 244.45,-246.79"/>
+</g>
+<g id="node12" class="node">
+<title>CFHacc</title>
+<path fill="#065f46" stroke="#065f46" d="M613,-246C613,-246 401,-246 401,-246 395,-246 389,-240 389,-234 389,-234 389,-192 389,-192 389,-186 395,-180 401,-180 401,-180 613,-180 613,-180 619,-180 625,-186 625,-192 625,-192 625,-234 625,-234 625,-240 619,-246 613,-246"/>
+<text text-anchor="middle" x="507" y="-229.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Accounting: effective part of the</text>
+<text text-anchor="middle" x="507" y="-216.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">derivative parked in OCI (cash flow</text>
+<text text-anchor="middle" x="507" y="-203.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">hedge reserve), released to profit</text>
+<text text-anchor="middle" x="507" y="-190.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">when the hedged cash flow hits</text>
+</g>
+<g id="edge11" class="edge">
+<title>CFHex&#45;&gt;CFHacc</title>
+<path fill="none" stroke="#4b5563" d="M507,-282.68C507,-273.62 507,-263.23 507,-253.31"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="509.45,-253.21 507,-246.21 504.55,-253.21 509.45,-253.21"/>
+</g>
+<g id="node13" class="node">
+<title>NIHacc</title>
+<path fill="#065f46" stroke="#065f46" d="M863.5,-239.5C863.5,-239.5 666.5,-239.5 666.5,-239.5 660.5,-239.5 654.5,-233.5 654.5,-227.5 654.5,-227.5 654.5,-198.5 654.5,-198.5 654.5,-192.5 660.5,-186.5 666.5,-186.5 666.5,-186.5 863.5,-186.5 863.5,-186.5 869.5,-186.5 875.5,-192.5 875.5,-198.5 875.5,-198.5 875.5,-227.5 875.5,-227.5 875.5,-233.5 869.5,-239.5 863.5,-239.5"/>
+<text text-anchor="middle" x="765" y="-222.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Accounting: effective part in OCI</text>
+<text text-anchor="middle" x="765" y="-209.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">(translation reserve), recycled</text>
+<text text-anchor="middle" x="765" y="-196.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">only if the subsidiary is sold</text>
+</g>
+<g id="edge12" class="edge">
+<title>NIHex&#45;&gt;NIHacc</title>
+<path fill="none" stroke="#4b5563" d="M772.27,-282.68C771.1,-271.64 769.72,-258.61 768.48,-246.89"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="770.9,-246.49 767.73,-239.79 766.03,-247.01 770.9,-246.49"/>
+</g>
+<g id="node14" class="node">
+<title>Ineff</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M617.5,-143C617.5,-143 396.5,-143 396.5,-143 390.5,-143 384.5,-137 384.5,-131 384.5,-131 384.5,-102 384.5,-102 384.5,-96 390.5,-90 396.5,-90 396.5,-90 617.5,-90 617.5,-90 623.5,-90 629.5,-96 629.5,-102 629.5,-102 629.5,-131 629.5,-131 629.5,-137 623.5,-143 617.5,-143"/>
+<text text-anchor="middle" x="507" y="-126.4" font-family="Helvetica,sans-Serif" font-size="12.00">Any ineffective part goes straight</text>
+<text text-anchor="middle" x="507" y="-113.4" font-family="Helvetica,sans-Serif" font-size="12.00">to profit or loss; hedge is rebalanced</text>
+<text text-anchor="middle" x="507" y="-100.4" font-family="Helvetica,sans-Serif" font-size="12.00">or stopped if the relationship breaks</text>
+</g>
+<g id="edge13" class="edge">
+<title>FVHacc&#45;&gt;Ineff</title>
+<path fill="none" stroke="#4b5563" d="M313.71,-186.43C349.21,-173.77 392.14,-158.46 428.52,-145.49"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="429.46,-147.75 435.23,-143.09 427.81,-143.14 429.46,-147.75"/>
+</g>
+<g id="edge14" class="edge">
+<title>CFHacc&#45;&gt;Ineff</title>
+<path fill="none" stroke="#4b5563" d="M507,-179.74C507,-170.2 507,-159.74 507,-150.17"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="509.45,-150.06 507,-143.06 504.55,-150.06 509.45,-150.06"/>
+</g>
+<g id="edge15" class="edge">
+<title>NIHacc&#45;&gt;Ineff</title>
+<path fill="none" stroke="#4b5563" d="M695.18,-186.43C660.76,-173.82 619.17,-158.59 583.85,-145.65"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="584.29,-143.2 576.87,-143.09 582.6,-147.8 584.29,-143.2"/>
+</g>
+<g id="node15" class="node">
+<title>Policy</title>
+<path fill="#6b7280" stroke="#6b7280" d="M623,-53C623,-53 391,-53 391,-53 385,-53 379,-47 379,-41 379,-41 379,-12 379,-12 379,-6 385,0 391,0 391,0 623,0 623,0 629,0 635,-6 635,-12 635,-12 635,-41 635,-41 635,-47 629,-53 623,-53"/>
+<text text-anchor="middle" x="507" y="-36.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Policy choice: many banks kept IAS 39</text>
+<text text-anchor="middle" x="507" y="-23.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">hedge accounting; macro (portfolio)</text>
+<text text-anchor="middle" x="507" y="-10.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">hedging is a separate, ongoing project</text>
+</g>
+<g id="edge16" class="edge">
+<title>Ineff&#45;&gt;Policy</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M507,-89.57C507,-80.44 507,-70.06 507,-60.43"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="509.45,-60.24 507,-53.24 504.55,-60.24 509.45,-60.24"/>
+</g>
+</g>
+</svg>

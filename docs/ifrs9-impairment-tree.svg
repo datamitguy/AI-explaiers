@@ -1,0 +1,246 @@
+<svg width="100%"
+ viewBox="0.00 0.00 1148.45 1563.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 1549.4)">
+<title>IFRS9Impairment</title>
+<polygon fill="white" stroke="transparent" points="-14.4,14.4 -14.4,-1549.4 1134.05,-1549.4 1134.05,14.4 -14.4,14.4"/>
+<g id="node1" class="node">
+<title>Start</title>
+<path fill="#1f2937" stroke="#1f2937" d="M364.5,-1535C364.5,-1535 124.5,-1535 124.5,-1535 118.5,-1535 112.5,-1529 112.5,-1523 112.5,-1523 112.5,-1505 112.5,-1505 112.5,-1499 118.5,-1493 124.5,-1493 124.5,-1493 364.5,-1493 364.5,-1493 370.5,-1493 376.5,-1499 376.5,-1505 376.5,-1505 376.5,-1523 376.5,-1523 376.5,-1529 370.5,-1535 364.5,-1535"/>
+<text text-anchor="middle" x="244.5" y="-1517.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="white">Exposure in scope of impairment</text>
+<text text-anchor="middle" x="244.5" y="-1503.6" font-family="Helvetica,sans-Serif" font-size="13.00" fill="white">(IFRS 9 Part 2: expected credit loss)</text>
+</g>
+<g id="node2" class="node">
+<title>Scope</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M378,-1456C378,-1456 111,-1456 111,-1456 105,-1456 99,-1450 99,-1444 99,-1444 99,-1402 99,-1402 99,-1396 105,-1390 111,-1390 111,-1390 378,-1390 378,-1390 384,-1390 390,-1396 390,-1402 390,-1402 390,-1444 390,-1444 390,-1450 384,-1456 378,-1456"/>
+<text text-anchor="middle" x="244.5" y="-1439.4" font-family="Helvetica,sans-Serif" font-size="12.00">In scope: debt at amortised cost or FVOCI,</text>
+<text text-anchor="middle" x="244.5" y="-1426.4" font-family="Helvetica,sans-Serif" font-size="12.00">lease receivables, contract assets,</text>
+<text text-anchor="middle" x="244.5" y="-1413.4" font-family="Helvetica,sans-Serif" font-size="12.00">loan commitments and financial guarantees</text>
+<text text-anchor="middle" x="244.5" y="-1400.4" font-family="Helvetica,sans-Serif" font-size="12.00">not at FVTPL</text>
+</g>
+<g id="edge1" class="edge">
+<title>Start&#45;&gt;Scope</title>
+<path fill="none" stroke="#4b5563" d="M244.5,-1492.8C244.5,-1484.14 244.5,-1473.7 244.5,-1463.6"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="246.95,-1463.33 244.5,-1456.33 242.05,-1463.33 246.95,-1463.33"/>
+</g>
+<g id="node3" class="node">
+<title>POCI</title>
+<polygon fill="#fef3c7" stroke="#d97706" points="244.5,-1353 93.5,-1319 244.5,-1285 395.5,-1319 244.5,-1353"/>
+<text text-anchor="middle" x="244.5" y="-1322.4" font-family="Helvetica,sans-Serif" font-size="12.00">Purchased or originated</text>
+<text text-anchor="middle" x="244.5" y="-1309.4" font-family="Helvetica,sans-Serif" font-size="12.00">credit&#45;impaired (POCI)?</text>
+</g>
+<g id="edge2" class="edge">
+<title>Scope&#45;&gt;POCI</title>
+<path fill="none" stroke="#4b5563" d="M244.5,-1389.73C244.5,-1380.33 244.5,-1369.96 244.5,-1360.14"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="246.95,-1360.12 244.5,-1353.12 242.05,-1360.12 246.95,-1360.12"/>
+</g>
+<g id="node4" class="node">
+<title>POCIr</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M281,-1152C281,-1152 12,-1152 12,-1152 6,-1152 0,-1146 0,-1140 0,-1140 0,-1098 0,-1098 0,-1092 6,-1086 12,-1086 12,-1086 281,-1086 281,-1086 287,-1086 293,-1092 293,-1098 293,-1098 293,-1140 293,-1140 293,-1146 287,-1152 281,-1152"/>
+<text text-anchor="middle" x="146.5" y="-1135.4" font-family="Helvetica,sans-Serif" font-size="12.00">POCI treatment</text>
+<text text-anchor="middle" x="146.5" y="-1122.4" font-family="Helvetica,sans-Serif" font-size="12.00">Only changes in lifetime ECL since purchase</text>
+<text text-anchor="middle" x="146.5" y="-1109.4" font-family="Helvetica,sans-Serif" font-size="12.00">are recognised; credit&#45;adjusted interest rate;</text>
+<text text-anchor="middle" x="146.5" y="-1096.4" font-family="Helvetica,sans-Serif" font-size="12.00">never moves to stage 1</text>
+</g>
+<g id="edge3" class="edge">
+<title>POCI&#45;&gt;POCIr</title>
+<path fill="none" stroke="#4b5563" d="M229.62,-1287.93C212.51,-1253.36 184.38,-1196.54 165.65,-1158.7"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="167.8,-1157.52 162.5,-1152.33 163.41,-1159.69 167.8,-1157.52"/>
+<text text-anchor="middle" x="229" y="-1259" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> yes</text>
+</g>
+<g id="node5" class="node">
+<title>Simple</title>
+<polygon fill="#fef3c7" stroke="#d97706" points="493.5,-1238 293.5,-1204 493.5,-1170 693.5,-1204 493.5,-1238"/>
+<text text-anchor="middle" x="493.5" y="-1207.4" font-family="Helvetica,sans-Serif" font-size="12.00">Trade receivable, contract asset</text>
+<text text-anchor="middle" x="493.5" y="-1194.4" font-family="Helvetica,sans-Serif" font-size="12.00">or lease receivable?</text>
+</g>
+<g id="edge4" class="edge">
+<title>POCI&#45;&gt;Simple</title>
+<path fill="none" stroke="#4b5563" d="M293.4,-1295.81C333.68,-1277.53 390.95,-1251.54 433.91,-1232.04"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="435.05,-1234.22 440.41,-1229.09 433.02,-1229.76 435.05,-1234.22"/>
+<text text-anchor="middle" x="383.5" y="-1259" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> no</text>
+</g>
+<g id="node13" class="node">
+<title>Measure</title>
+<path fill="#1e3a8a" stroke="#1e3a8a" d="M574,-401C574,-401 345,-401 345,-401 339,-401 333,-395 333,-389 333,-389 333,-321 333,-321 333,-315 339,-309 345,-309 345,-309 574,-309 574,-309 580,-309 586,-315 586,-321 586,-321 586,-389 586,-389 586,-395 580,-401 574,-401"/>
+<text text-anchor="middle" x="459.5" y="-384.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Measure ECL = sum over time of</text>
+<text text-anchor="middle" x="459.5" y="-371.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">PD x LGD x EAD, discounted at the</text>
+<text text-anchor="middle" x="459.5" y="-358.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">effective interest rate</text>
+<text text-anchor="middle" x="459.5" y="-345.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Unbiased, probability&#45;weighted across</text>
+<text text-anchor="middle" x="459.5" y="-332.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">several economic scenarios, using</text>
+<text text-anchor="middle" x="459.5" y="-319.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">reasonable and supportable forecasts</text>
+</g>
+<g id="edge17" class="edge">
+<title>POCIr&#45;&gt;Measure</title>
+<path fill="none" stroke="#4b5563" d="M117.25,-1085.94C86.18,-1048.45 41.5,-983.12 41.5,-917.5 41.5,-917.5 41.5,-917.5 41.5,-480 41.5,-419.7 203.41,-386.43 325.69,-369.9"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="326.34,-372.28 332.95,-368.93 325.69,-367.42 326.34,-372.28"/>
+</g>
+<g id="node6" class="node">
+<title>SimpleR</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M1008,-956C1008,-956 769,-956 769,-956 763,-956 757,-950 757,-944 757,-944 757,-889 757,-889 757,-883 763,-877 769,-877 769,-877 1008,-877 1008,-877 1014,-877 1020,-883 1020,-889 1020,-889 1020,-944 1020,-944 1020,-950 1014,-956 1008,-956"/>
+<text text-anchor="middle" x="888.5" y="-939.4" font-family="Helvetica,sans-Serif" font-size="12.00">Simplified approach</text>
+<text text-anchor="middle" x="888.5" y="-926.4" font-family="Helvetica,sans-Serif" font-size="12.00">Always lifetime ECL, often via a</text>
+<text text-anchor="middle" x="888.5" y="-913.4" font-family="Helvetica,sans-Serif" font-size="12.00">provision matrix by days past due</text>
+<text text-anchor="middle" x="888.5" y="-900.4" font-family="Helvetica,sans-Serif" font-size="12.00">(required without a significant financing</text>
+<text text-anchor="middle" x="888.5" y="-887.4" font-family="Helvetica,sans-Serif" font-size="12.00">component; a policy choice otherwise)</text>
+</g>
+<g id="edge5" class="edge">
+<title>Simple&#45;&gt;SimpleR</title>
+<path fill="none" stroke="#4b5563" d="M548.42,-1179.28C566.75,-1171.02 587.18,-1161.45 605.5,-1152 671.69,-1117.86 692.44,-1114.65 750.5,-1068 789.82,-1036.41 828.05,-993.45 854.27,-961.51"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="856.17,-963.06 858.7,-956.09 852.37,-959.96 856.17,-963.06"/>
+<text text-anchor="middle" x="736" y="-1116.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> yes</text>
+</g>
+<g id="node7" class="node">
+<title>Impaired</title>
+<polygon fill="#fef3c7" stroke="#d97706" points="493.5,-1068 249.5,-1021 493.5,-974 737.5,-1021 493.5,-1068"/>
+<text text-anchor="middle" x="493.5" y="-1030.9" font-family="Helvetica,sans-Serif" font-size="12.00">Credit&#45;impaired now?</text>
+<text text-anchor="middle" x="493.5" y="-1017.9" font-family="Helvetica,sans-Serif" font-size="12.00">(in default: 90 days past due rebuttable</text>
+<text text-anchor="middle" x="493.5" y="-1004.9" font-family="Helvetica,sans-Serif" font-size="12.00">presumption, or unlikely to pay)</text>
+</g>
+<g id="edge6" class="edge">
+<title>Simple&#45;&gt;Impaired</title>
+<path fill="none" stroke="#4b5563" d="M493.5,-1169.8C493.5,-1143.44 493.5,-1106.06 493.5,-1075.49"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="495.95,-1075.28 493.5,-1068.28 491.05,-1075.28 495.95,-1075.28"/>
+<text text-anchor="middle" x="546.5" y="-1116.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> no: general approach</text>
+</g>
+<g id="edge16" class="edge">
+<title>SimpleR&#45;&gt;Measure</title>
+<path fill="none" stroke="#4b5563" d="M884.4,-876.9C880.93,-840.78 876.5,-785.3 876.5,-737 876.5,-737 876.5,-737 876.5,-480 876.5,-419.88 715.23,-386.58 593.27,-369.99"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="593.29,-367.52 586.03,-369.02 592.64,-372.38 593.29,-367.52"/>
+</g>
+<g id="node8" class="node">
+<title>LCR</title>
+<polygon fill="#fef3c7" stroke="#d97706" points="425.5,-859 219.5,-812 425.5,-765 631.5,-812 425.5,-859"/>
+<text text-anchor="middle" x="425.5" y="-821.9" font-family="Helvetica,sans-Serif" font-size="12.00">Low credit risk at reporting date?</text>
+<text text-anchor="middle" x="425.5" y="-808.9" font-family="Helvetica,sans-Serif" font-size="12.00">(optional exemption, roughly</text>
+<text text-anchor="middle" x="425.5" y="-795.9" font-family="Helvetica,sans-Serif" font-size="12.00">investment grade)</text>
+</g>
+<g id="edge7" class="edge">
+<title>Impaired&#45;&gt;LCR</title>
+<path fill="none" stroke="#4b5563" d="M479.24,-976.61C468.33,-943.37 453.26,-897.49 441.85,-862.77"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="444.13,-861.87 439.62,-855.98 439.48,-863.4 444.13,-861.87"/>
+<text text-anchor="middle" x="479.5" y="-914" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> no</text>
+</g>
+<g id="node12" class="node">
+<title>S3</title>
+<path fill="#991b1b" stroke="#991b1b" d="M814,-514C814,-514 621,-514 621,-514 615,-514 609,-508 609,-502 609,-502 609,-460 609,-460 609,-454 615,-448 621,-448 621,-448 814,-448 814,-448 820,-448 826,-454 826,-460 826,-460 826,-502 826,-502 826,-508 820,-514 814,-514"/>
+<text text-anchor="middle" x="717.5" y="-497.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Stage 3: credit&#45;impaired</text>
+<text text-anchor="middle" x="717.5" y="-484.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Lifetime ECL</text>
+<text text-anchor="middle" x="717.5" y="-471.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Interest on net carrying amount</text>
+<text text-anchor="middle" x="717.5" y="-458.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">(gross minus the allowance)</text>
+</g>
+<g id="edge12" class="edge">
+<title>Impaired&#45;&gt;S3</title>
+<path fill="none" stroke="#4b5563" d="M535.94,-982.12C568.65,-951.33 613.38,-905.5 644.5,-859 685.76,-797.34 697.17,-779.37 713.5,-707 727.91,-643.15 725.17,-566.51 721.56,-521.16"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="724,-520.93 720.97,-514.16 719.12,-521.34 724,-520.93"/>
+<text text-anchor="middle" x="719" y="-733.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> yes</text>
+</g>
+<g id="node9" class="node">
+<title>SICR</title>
+<polygon fill="#fef3c7" stroke="#d97706" points="425.5,-707 150.5,-634 425.5,-561 700.5,-634 425.5,-707"/>
+<text text-anchor="middle" x="425.5" y="-656.9" font-family="Helvetica,sans-Serif" font-size="12.00">Significant increase in credit risk</text>
+<text text-anchor="middle" x="425.5" y="-643.9" font-family="Helvetica,sans-Serif" font-size="12.00">since initial recognition?</text>
+<text text-anchor="middle" x="425.5" y="-630.9" font-family="Helvetica,sans-Serif" font-size="12.00">Relative PD change, qualitative flags such as</text>
+<text text-anchor="middle" x="425.5" y="-617.9" font-family="Helvetica,sans-Serif" font-size="12.00">watchlist or forbearance, 30 days past due</text>
+<text text-anchor="middle" x="425.5" y="-604.9" font-family="Helvetica,sans-Serif" font-size="12.00">rebuttable backstop</text>
+</g>
+<g id="edge8" class="edge">
+<title>LCR&#45;&gt;SICR</title>
+<path fill="none" stroke="#4b5563" d="M425.5,-764.76C425.5,-749.34 425.5,-731.7 425.5,-714.49"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="427.95,-714.15 425.5,-707.15 423.05,-714.15 427.95,-714.15"/>
+<text text-anchor="middle" x="468.5" y="-739" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> no, or exemption</text>
+<text text-anchor="middle" x="468.5" y="-728" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> not used</text>
+</g>
+<g id="node10" class="node">
+<title>S1</title>
+<path fill="#065f46" stroke="#065f46" d="M308,-507.5C308,-507.5 103,-507.5 103,-507.5 97,-507.5 91,-501.5 91,-495.5 91,-495.5 91,-466.5 91,-466.5 91,-460.5 97,-454.5 103,-454.5 103,-454.5 308,-454.5 308,-454.5 314,-454.5 320,-460.5 320,-466.5 320,-466.5 320,-495.5 320,-495.5 320,-501.5 314,-507.5 308,-507.5"/>
+<text text-anchor="middle" x="205.5" y="-490.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Stage 1: performing</text>
+<text text-anchor="middle" x="205.5" y="-477.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">12&#45;month ECL</text>
+<text text-anchor="middle" x="205.5" y="-464.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Interest on gross carrying amount</text>
+</g>
+<g id="edge9" class="edge">
+<title>LCR&#45;&gt;S1</title>
+<path fill="none" stroke="#4b5563" d="M278.5,-798.44C218.12,-785.18 153.74,-758.83 116.5,-707 78.64,-654.3 89.9,-620.18 116.5,-561 125.18,-541.7 141.16,-525.2 157.21,-512.34"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="159.07,-514 163.11,-507.77 156.07,-510.12 159.07,-514"/>
+<text text-anchor="middle" x="127" y="-631.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> yes</text>
+</g>
+<g id="edge10" class="edge">
+<title>SICR&#45;&gt;S1</title>
+<path fill="none" stroke="#4b5563" d="M349.79,-581.03C316.02,-557.86 277.46,-531.39 248.71,-511.66"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="249.88,-509.49 242.72,-507.55 247.11,-513.53 249.88,-509.49"/>
+<text text-anchor="middle" x="297.5" y="-535" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> no</text>
+</g>
+<g id="node11" class="node">
+<title>S2</title>
+<path fill="#d97706" stroke="#d97706" d="M562,-507.5C562,-507.5 357,-507.5 357,-507.5 351,-507.5 345,-501.5 345,-495.5 345,-495.5 345,-466.5 345,-466.5 345,-460.5 351,-454.5 357,-454.5 357,-454.5 562,-454.5 562,-454.5 568,-454.5 574,-460.5 574,-466.5 574,-466.5 574,-495.5 574,-495.5 574,-501.5 568,-507.5 562,-507.5"/>
+<text text-anchor="middle" x="459.5" y="-490.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Stage 2: underperforming</text>
+<text text-anchor="middle" x="459.5" y="-477.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Lifetime ECL</text>
+<text text-anchor="middle" x="459.5" y="-464.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Interest on gross carrying amount</text>
+</g>
+<g id="edge11" class="edge">
+<title>SICR&#45;&gt;S2</title>
+<path fill="none" stroke="#4b5563" d="M440.81,-565.01C444.75,-547.52 448.81,-529.49 452.13,-514.71"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="454.56,-515.11 453.7,-507.74 449.78,-514.03 454.56,-515.11"/>
+<text text-anchor="middle" x="458" y="-535" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> yes</text>
+</g>
+<g id="edge13" class="edge">
+<title>S1&#45;&gt;Measure</title>
+<path fill="none" stroke="#4b5563" d="M257.82,-454.46C287.49,-439.97 325.59,-421.37 360.67,-404.25"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="361.97,-406.34 367.18,-401.07 359.82,-401.94 361.97,-406.34"/>
+</g>
+<g id="edge14" class="edge">
+<title>S2&#45;&gt;Measure</title>
+<path fill="none" stroke="#4b5563" d="M459.5,-454.31C459.5,-441.02 459.5,-424.3 459.5,-408.43"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="461.95,-408.22 459.5,-401.22 457.05,-408.22 461.95,-408.22"/>
+</g>
+<g id="edge15" class="edge">
+<title>S3&#45;&gt;Measure</title>
+<path fill="none" stroke="#4b5563" d="M650.72,-447.91C622.98,-434.57 590.2,-418.82 559.68,-404.15"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="560.58,-401.86 553.2,-401.04 558.45,-406.28 560.58,-401.86"/>
+</g>
+<g id="node14" class="node">
+<title>Overlay</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M582.5,-272C582.5,-272 336.5,-272 336.5,-272 330.5,-272 324.5,-266 324.5,-260 324.5,-260 324.5,-231 324.5,-231 324.5,-225 330.5,-219 336.5,-219 336.5,-219 582.5,-219 582.5,-219 588.5,-219 594.5,-225 594.5,-231 594.5,-231 594.5,-260 594.5,-260 594.5,-266 588.5,-272 582.5,-272"/>
+<text text-anchor="middle" x="459.5" y="-255.4" font-family="Helvetica,sans-Serif" font-size="12.00">Post&#45;model adjustments and</text>
+<text text-anchor="middle" x="459.5" y="-242.4" font-family="Helvetica,sans-Serif" font-size="12.00">management overlays for risks the</text>
+<text text-anchor="middle" x="459.5" y="-229.4" font-family="Helvetica,sans-Serif" font-size="12.00">models miss, governed and documented</text>
+</g>
+<g id="edge18" class="edge">
+<title>Measure&#45;&gt;Overlay</title>
+<path fill="none" stroke="#4b5563" d="M459.5,-308.72C459.5,-298.85 459.5,-288.59 459.5,-279.31"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="461.95,-279.11 459.5,-272.11 457.05,-279.11 461.95,-279.11"/>
+</g>
+<g id="node15" class="node">
+<title>Book</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M586,-182C586,-182 333,-182 333,-182 327,-182 321,-176 321,-170 321,-170 321,-128 321,-128 321,-122 327,-116 333,-116 333,-116 586,-116 586,-116 592,-116 598,-122 598,-128 598,-128 598,-170 598,-170 598,-176 592,-182 586,-182"/>
+<text text-anchor="middle" x="459.5" y="-165.4" font-family="Helvetica,sans-Serif" font-size="12.00">Book the loss allowance</text>
+<text text-anchor="middle" x="459.5" y="-152.4" font-family="Helvetica,sans-Serif" font-size="12.00">Change in allowance hits profit or loss</text>
+<text text-anchor="middle" x="459.5" y="-139.4" font-family="Helvetica,sans-Serif" font-size="12.00">(for FVOCI debt, the allowance sits in OCI,</text>
+<text text-anchor="middle" x="459.5" y="-126.4" font-family="Helvetica,sans-Serif" font-size="12.00">not as a reduction of the asset)</text>
+</g>
+<g id="edge19" class="edge">
+<title>Overlay&#45;&gt;Book</title>
+<path fill="none" stroke="#4b5563" d="M459.5,-218.68C459.5,-209.62 459.5,-199.23 459.5,-189.31"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="461.95,-189.21 459.5,-182.21 457.05,-189.21 461.95,-189.21"/>
+</g>
+<g id="node16" class="node">
+<title>Move</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M575.5,-79C575.5,-79 343.5,-79 343.5,-79 337.5,-79 331.5,-73 331.5,-67 331.5,-67 331.5,-12 331.5,-12 331.5,-6 337.5,0 343.5,0 343.5,0 575.5,0 575.5,0 581.5,0 587.5,-6 587.5,-12 587.5,-12 587.5,-67 587.5,-67 587.5,-73 581.5,-79 575.5,-79"/>
+<text text-anchor="middle" x="459.5" y="-62.4" font-family="Helvetica,sans-Serif" font-size="12.00">Every reporting date: re&#45;stage</text>
+<text text-anchor="middle" x="459.5" y="-49.4" font-family="Helvetica,sans-Serif" font-size="12.00">Stage 2 and 3 can cure back after</text>
+<text text-anchor="middle" x="459.5" y="-36.4" font-family="Helvetica,sans-Serif" font-size="12.00">probation; modifications are assessed;</text>
+<text text-anchor="middle" x="459.5" y="-23.4" font-family="Helvetica,sans-Serif" font-size="12.00">write off when there is no reasonable</text>
+<text text-anchor="middle" x="459.5" y="-10.4" font-family="Helvetica,sans-Serif" font-size="12.00">expectation of recovery</text>
+</g>
+<g id="edge20" class="edge">
+<title>Book&#45;&gt;Move</title>
+<path fill="none" stroke="#4b5563" d="M459.5,-115.75C459.5,-106.49 459.5,-96.22 459.5,-86.31"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="461.95,-86.18 459.5,-79.18 457.05,-86.18 461.95,-86.18"/>
+</g>
+<g id="edge21" class="edge">
+<title>Move&#45;&gt;Impaired</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M551.24,-79.05C571.69,-89.6 592.59,-102.03 610.5,-116 938.19,-371.66 1297.14,-644.93 1021.5,-956 998.9,-981.51 826.77,-998.88 685.09,-1009.02"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="684.75,-1006.58 677.94,-1009.52 685.09,-1011.47 684.75,-1006.58"/>
+<text text-anchor="middle" x="1003" y="-422" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> next period</text>
+</g>
+</g>
+</svg>

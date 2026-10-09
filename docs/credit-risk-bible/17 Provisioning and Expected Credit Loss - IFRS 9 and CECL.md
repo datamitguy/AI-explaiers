@@ -2,6 +2,8 @@
 
 **Why this matters to you.** A provision is the bank's own estimate, written into its accounts, of how much of its loan book it will not get back. It is the biggest judgement in a bank's financial statements, it moves the reported profit by hundreds of millions in a bad quarter, it feeds straight into regulatory capital, and it is produced by a large, fragile system that pulls data from every corner of the bank and runs it through statistical models under multiple economic scenarios. If you lead the platform for a credit risk team, the expected credit loss engine will be one of the two or three most important things you run, and the one with the hardest deadlines, because the accounts have to close every quarter.
 
+> **Going deeper.** This note covers impairment from a credit risk team's point of view. For the whole of IFRS 9, including how assets are classified and hedge accounting, see the decision trees in [[ifrs9-decision-tree]] and the long plain-language walk-through in [[ifrs9-explained-simply]].
+
 ## Table of contents
 
 1. [The lemonade stand version](#the-lemonade-stand-version)
@@ -303,6 +305,7 @@ A bank has a portfolio of 10,000 personal loans, average balance 10,000, total 1
 
 ## Related notes
 
+- [[ifrs9-decision-tree]] and [[ifrs9-explained-simply]] for the full IFRS 9 standard, box by box.
 - [[02 What Credit Risk Is]] for PD, LGD and EAD.
 - [[10 Internal Ratings, Scorecards and PD Models]] for where the PDs and term structures come from.
 - [[11 Collateral and Security]] for the collateral values that drive LGD.

@@ -10,7 +10,6 @@ Letters: [A](#a) · [B](#b) · [C](#c) · [D](#d) · [E](#e) · [F](#f) · [G](#
 
 | Term | Meaning | Explained in |
 |---|---|---|
-| A-IRB (advanced internal ratings-based approach) | The Basel approach where the bank estimates all of probability of default, loss given default, exposure at default and maturity itself. | [[18 Regulatory Capital and Basel - the Short Version]], [[basel-credit-risk-explained-simply]] |
 | Acceleration | The lender's right, after an event of default, to demand the whole loan back immediately. | [[12 Loan Documentation, Covenants and Conditions]] |
 | Acceptance | A bank's written promise to pay a trade bill on a set future date. | [[08 Trade Finance and Guarantees]] |
 | ADC (acquisition, development and construction) | Lending to build property that does not exist yet. The riskiest kind of real estate loan. | [[06 Specialised Finance - Project, Object, Commodities, Real Estate]] |
@@ -19,6 +18,8 @@ Letters: [A](#a) · [B](#b) · [C](#c) · [D](#d) · [E](#e) · [F](#f) · [G](#
 | Advising bank | The bank in the seller's country that passes a letter of credit on to the seller and checks it is genuine. | [[08 Trade Finance and Guarantees]] |
 | Affordability assessment | Checking a retail borrower can meet repayments out of income after essential spending, including if rates rise. | [[05 Retail Lending]] |
 | Agent (facility agent) | The bank that administers a syndicated loan on behalf of all lenders: collects payments, passes notices, tracks votes. | [[04 Commercial and Corporate Lending]] |
+| A-IRB (advanced internal ratings-based approach) | The Basel approach where the bank estimates all of probability of default, loss given default, exposure at default and maturity itself. | [[18 Regulatory Capital and Basel - the Short Version]], [[basel-credit-risk-explained-simply]] |
+| Amortised cost | The IFRS 9 bucket for loans held to collect simple principal and interest: carried at cost less repayments, with impairment. | [[ifrs9-decision-tree]], [[ifrs9-explained-simply]] |
 | Amortising loan | A loan repaid in regular instalments of capital plus interest, so the balance falls over time. | [[04 Commercial and Corporate Lending]] |
 | Annual review | The yearly re-assessment of every corporate borrower and their facilities. | [[15 Monitoring, Early Warning and Watchlist]] |
 | Applicant | In a letter of credit, the buyer who asks their bank to issue it. | [[08 Trade Finance and Guarantees]] |
@@ -52,6 +53,7 @@ Letters: [A](#a) · [B](#b) · [C](#c) · [D](#d) · [E](#e) · [F](#f) · [G](#
 | Buffer | Capital above the minimum. Using it restricts dividends and bonuses but does not close the bank. | [[18 Regulatory Capital and Basel - the Short Version]] |
 | Bullet repayment | All the capital is repaid in one go at maturity. | [[04 Commercial and Corporate Lending]] |
 | Bureau (credit bureau) | A company that collects people's and companies' credit histories and sells reports and scores. | [[05 Retail Lending]] |
+| Business model test | The IFRS 9 test of why an asset is held: to collect, to collect and sell, or something else. | [[ifrs9-decision-tree]], [[ifrs9-explained-simply]] |
 | Buy-to-let | A mortgage on a property bought to rent out, repaid mainly from rent. | [[05 Retail Lending]] |
 
 ## C
@@ -121,6 +123,7 @@ Letters: [A](#a) · [B](#b) · [C](#c) · [D](#d) · [E](#e) · [F](#f) · [G](#
 | Delegated authority | Permission given to an individual or committee to approve loans up to a set size and risk. | [[13 Credit Governance - Committees, Authorities and the Three Lines]] |
 | Delinquency bucket | A band of days past due, such as 30 to 59 days. | [[05 Retail Lending]] |
 | Demand guarantee | A guarantee payable on first written demand without proof of the underlying failure. | [[08 Trade Finance and Guarantees]] |
+| Derecognition | Removing an asset from the balance sheet, for example after a sale or a substantial modification. | [[ifrs9-explained-simply]] |
 | Derivative | A contract whose value depends on something else, like an interest rate or currency. | [[19 Counterparty Credit Risk and Derivatives]] |
 | Documentary collection | A trade payment method where banks pass documents in exchange for payment, without a bank guarantee to pay. | [[08 Trade Finance and Guarantees]] |
 | Downturn LGD | Loss given default estimated for a severe economic downturn, required for IRB capital. | [[10 Internal Ratings, Scorecards and PD Models]] |
@@ -138,6 +141,7 @@ Letters: [A](#a) · [B](#b) · [C](#c) · [D](#d) · [E](#e) · [F](#f) · [G](#
 | ECA (export credit agency) | A government-backed body that insures or guarantees exports. | [[08 Trade Finance and Guarantees]], [[26 Sovereign, Bank and Country Risk]] |
 | ECL (expected credit loss) | The probability-weighted loss accountants require banks to provide for. | [[17 Provisioning and Expected Credit Loss - IFRS 9 and CECL]] |
 | Economic capital | The bank's own estimate of capital needed for its risks, as opposed to regulatory capital. | [[24 Pricing, RAROC and Return on Capital]] |
+| Effective interest rate (EIR) | The rate that discounts a loan's expected cash flows, including fees, exactly to its starting value. Used for interest income and to discount ECL. | [[ifrs9-explained-simply]] |
 | Enforcement | Taking legal action to seize and sell security after default. | [[16 Problem Loans, Restructuring and Recovery]], [[11 Collateral and Security]] |
 | EPC contractor | Engineering, procurement and construction contractor that builds a project for a fixed price and date. | [[06 Specialised Finance - Project, Object, Commodities, Real Estate]] |
 | Equity | The owners' stake: assets minus liabilities. | [[01 What a Bank Is and How It Makes Money]] |
@@ -154,15 +158,17 @@ Letters: [A](#a) · [B](#b) · [C](#c) · [D](#d) · [E](#e) · [F](#f) · [G](#
 | Facility | A lending arrangement: a loan, overdraft, credit line or guarantee line. | [[04 Commercial and Corporate Lending]] |
 | Facility agreement | The legal contract governing a loan. | [[12 Loan Documentation, Covenants and Conditions]] |
 | Factoring | Selling invoices to a finance company, which collects them from customers. | [[04 Commercial and Corporate Lending]] |
-| F-IRB (foundation internal ratings-based approach) | The Basel approach where the bank estimates probability of default only. | [[18 Regulatory Capital and Basel - the Short Version]] |
 | Financial covenant | A covenant set as a numeric test, such as leverage below 3.5 times. | [[12 Loan Documentation, Covenants and Conditions]] |
 | FINREP / COREP | European regulatory reporting templates for financial and capital information. | [[23 Reporting - Regulatory Returns, Pillar 3 and Management Information]] |
+| F-IRB (foundation internal ratings-based approach) | The Basel approach where the bank estimates probability of default only. | [[18 Regulatory Capital and Basel - the Short Version]] |
 | First line of defence | The business units that take risk and own it day to day. | [[13 Credit Governance - Committees, Authorities and the Three Lines]] |
 | Forbearance | A concession to a borrower in financial difficulty, such as a payment holiday. | [[16 Problem Loans, Restructuring and Recovery]], [[15 Monitoring, Early Warning and Watchlist]] |
 | Forced-sale value | What an asset would fetch in a quick sale, usually below market value. | [[11 Collateral and Security]] |
 | Forward | An agreement to buy or sell something at a fixed price on a future date. | [[19 Counterparty Credit Risk and Derivatives]] |
 | Four-eyes principle | Every significant decision needs two people. | [[13 Credit Governance - Committees, Authorities and the Three Lines]] |
 | FTP (funds transfer pricing) | The internal charge for funding that treasury applies to each loan. | [[24 Pricing, RAROC and Return on Capital]] |
+| FVOCI (fair value through other comprehensive income) | An IFRS 9 bucket: fair value on the balance sheet, with some changes held in other comprehensive income instead of profit. | [[ifrs9-decision-tree]], [[ifrs9-explained-simply]] |
+| FVTPL (fair value through profit or loss) | The IFRS 9 bucket where every change in fair value goes straight to profit. | [[ifrs9-decision-tree]], [[ifrs9-explained-simply]] |
 
 ## G
 
@@ -181,6 +187,7 @@ Letters: [A](#a) · [B](#b) · [C](#c) · [D](#d) · [E](#e) · [F](#f) · [G](#
 |---|---|---|
 | Haircut | A reduction applied to collateral value for possible price falls before sale. | [[11 Collateral and Security]] |
 | Headroom | How far a covenant ratio is from breaching. | [[12 Loan Documentation, Covenants and Conditions]] |
+| Hedge accounting | IFRS 9 rules that let a hedge and the item it protects be shown together, so the accounts are not distorted. | [[ifrs9-explained-simply]] |
 | Hedging | Using a derivative to offset a risk. | [[19 Counterparty Credit Risk and Derivatives]] |
 | Herfindahl index | A single number measuring how concentrated a portfolio is. | [[14 Risk Appetite, Limits and Concentration]] |
 | Hire purchase | Buying a car or asset in instalments, owning it only after the last payment. | [[05 Retail Lending]] |
@@ -192,7 +199,7 @@ Letters: [A](#a) · [B](#b) · [C](#c) · [D](#d) · [E](#e) · [F](#f) · [G](#
 |---|---|---|
 | ICAAP (internal capital adequacy assessment process) | The bank's own assessment of the capital it needs for all its risks, under stress. | [[20 Stress Testing and ICAAP]] |
 | ICR (interest cover ratio) | Earnings divided by interest payable. | [[09 Credit Analysis - Reading a Borrower]], [[06 Specialised Finance - Project, Object, Commodities, Real Estate]] |
-| IFRS 9 | The international accounting standard for expected credit loss provisions. | [[17 Provisioning and Expected Credit Loss - IFRS 9 and CECL]] |
+| IFRS 9 | The international accounting standard for financial instruments: classification, expected credit loss impairment, and hedge accounting. | [[17 Provisioning and Expected Credit Loss - IFRS 9 and CECL]], [[ifrs9-decision-tree]], [[ifrs9-explained-simply]] |
 | ILAAP (internal liquidity adequacy assessment process) | The liquidity equivalent of the ICAAP. | [[20 Stress Testing and ICAAP]] |
 | IMM (internal model method) | A bank's own simulation model for counterparty exposure, with regulatory approval. | [[19 Counterparty Credit Risk and Derivatives]] |
 | Impairment | A reduction in the value of a loan in the accounts because of expected loss. | [[17 Provisioning and Expected Credit Loss - IFRS 9 and CECL]] |
@@ -236,6 +243,7 @@ Letters: [A](#a) · [B](#b) · [C](#c) · [D](#d) · [E](#e) · [F](#f) · [G](#
 | LMA (Loan Market Association) | The body that publishes standard loan documents used in Europe, the Middle East and Africa. | [[12 Loan Documentation, Covenants and Conditions]] |
 | Loan origination system | Software that captures applications and supports assessment and approval. | [[03 The Credit Lifecycle]], [[22 Credit Risk Data, Systems and BCBS 239]] |
 | Loan-to-income (LTI) | Mortgage size divided by the borrower's annual income. | [[05 Retail Lending]] |
+| Low credit risk exemption | An optional IFRS 9 shortcut letting roughly investment-grade exposures stay in stage 1 without a SICR test. | [[ifrs9-decision-tree]], [[ifrs9-explained-simply]] |
 | Low-default portfolio | A portfolio with too few defaults to build a reliable statistical model, such as banks or sovereigns. | [[10 Internal Ratings, Scorecards and PD Models]] |
 | LTV (loan-to-value) | Loan amount divided by collateral value. | [[11 Collateral and Security]], [[05 Retail Lending]] |
 
@@ -246,10 +254,10 @@ Letters: [A](#a) · [B](#b) · [C](#c) · [D](#d) · [E](#e) · [F](#f) · [G](#
 | M (maturity) | Time until a loan is repaid. An input to IRB capital. | [[basel-credit-risk-explained-simply]] |
 | Management information (MI) | Internal reports used to run the business and inform committees. | [[23 Reporting - Regulatory Returns, Pillar 3 and Management Information]] |
 | Management overlay / post-model adjustment | A manual adjustment to model output for risks the model misses. | [[17 Provisioning and Expected Credit Loss - IFRS 9 and CECL]] |
-| Margin (lending) | The extra over the base rate that the borrower pays. | [[04 Commercial and Corporate Lending]], [[24 Pricing, RAROC and Return on Capital]] |
 | Margin call | A demand for more collateral when its value falls or exposure rises. | [[11 Collateral and Security]], [[19 Counterparty Credit Risk and Derivatives]] |
-| Mark-to-market | Valuing a contract at today's market price. | [[19 Counterparty Credit Risk and Derivatives]] |
+| Margin (lending) | The extra over the base rate that the borrower pays. | [[04 Commercial and Corporate Lending]], [[24 Pricing, RAROC and Return on Capital]] |
 | Market risk | The risk that prices move against you. | [[02 What Credit Risk Is]] |
+| Mark-to-market | Valuing a contract at today's market price. | [[19 Counterparty Credit Risk and Derivatives]] |
 | Master scale | A bank's internal rating scale, with each grade mapped to a probability of default range. | [[10 Internal Ratings, Scorecards and PD Models]] |
 | Material adverse change (MAC) | A clause triggered by a serious deterioration in the borrower's position. | [[12 Loan Documentation, Covenants and Conditions]] |
 | Mezzanine debt | Debt ranking below senior debt but above equity, with higher returns. | [[07 Leveraged and Acquisition Finance]], [[04 Commercial and Corporate Lending]] |
@@ -275,6 +283,7 @@ Letters: [A](#a) · [B](#b) · [C](#c) · [D](#d) · [E](#e) · [F](#f) · [G](#
 | Term | Meaning | Explained in |
 |---|---|---|
 | Object finance | Lending to buy a ship, aircraft or train, repaid from its earnings. | [[06 Specialised Finance - Project, Object, Commodities, Real Estate]] |
+| OCI (other comprehensive income) | A section of the accounts for gains and losses kept out of profit, such as some fair value changes. | [[ifrs9-explained-simply]] |
 | Off-balance sheet | A commitment or guarantee not yet drawn, so not shown as a loan. | [[08 Trade Finance and Guarantees]], [[basel-credit-risk-explained-simply]] |
 | Offtake agreement | A long-term contract to buy a project's output, which underpins its revenue. | [[06 Specialised Finance - Project, Object, Commodities, Real Estate]] |
 | Operational risk | The risk of loss from failed processes, people, systems or external events. | [[02 What Credit Risk Is]] |
@@ -297,10 +306,12 @@ Letters: [A](#a) · [B](#b) · [C](#c) · [D](#d) · [E](#e) · [F](#f) · [G](#
 | Pillar 1 / 2 / 3 | Minimum capital rules / supervisory review and extra capital / public disclosure. | [[18 Regulatory Capital and Basel - the Short Version]] |
 | Pillar 3 disclosure | The published report of a bank's risk and capital figures. | [[23 Reporting - Regulatory Returns, Pillar 3 and Management Information]] |
 | Pledge | Security where the asset, such as shares, is held by or for the lender. | [[11 Collateral and Security]] |
+| POCI (purchased or originated credit-impaired) | An asset already credit-impaired when bought or made. Gets its own IFRS 9 treatment and never enters stage 1. | [[ifrs9-decision-tree]], [[ifrs9-explained-simply]] |
 | Point-in-time / through-the-cycle | Ratings that move with the economy / ratings that average across a full cycle. | [[10 Internal Ratings, Scorecards and PD Models]] |
 | Population stability index (PSI) | A measure of whether today's applicants look like those a model was built on. | [[21 Model Risk Management and Validation]] |
 | Project finance | Lending to a single project company, repaid only from the project's cash flows. | [[06 Specialised Finance - Project, Object, Commodities, Real Estate]] |
 | Provision | Money set aside in the accounts against expected credit losses. | [[17 Provisioning and Expected Credit Loss - IFRS 9 and CECL]] |
+| Provision matrix | A table of loss rates by days past due, used for trade receivables under the simplified approach. | [[ifrs9-explained-simply]] |
 | PvP (payment versus payment) | Both currencies in an exchange are paid at the same instant. | [[19 Counterparty Credit Risk and Derivatives]] |
 
 ## Q
@@ -343,8 +354,8 @@ Letters: [A](#a) · [B](#b) · [C](#c) · [D](#d) · [E](#e) · [F](#f) · [G](#
 | Scenario | A consistent story of how the economy might evolve, used in stress tests and provisions. | [[20 Stress Testing and ICAAP]] |
 | Scorecard | A points-based statistical model ranking applicants by risk. | [[10 Internal Ratings, Scorecards and PD Models]] |
 | SCRA (standardised credit risk assessment approach) | The checklist grading unrated banks into A, B or C for risk weights. | [[26 Sovereign, Bank and Country Risk]] |
-| Second line of defence | The independent risk and compliance functions that set limits and challenge the business. | [[13 Credit Governance - Committees, Authorities and the Three Lines]] |
 | Second lien | Debt secured on the same assets as senior debt but ranking behind it. | [[07 Leveraged and Acquisition Finance]] |
+| Second line of defence | The independent risk and compliance functions that set limits and challenge the business. | [[13 Credit Governance - Committees, Authorities and the Three Lines]] |
 | Securitisation | Pooling loans and selling slices of the pool's cash flows to investors. | [[basel-credit-risk-explained-simply]], [[07 Leveraged and Acquisition Finance]] |
 | Security | A legal right over assets that secures repayment. | [[11 Collateral and Security]] |
 | Senior debt | Debt that ranks first for repayment. | [[04 Commercial and Corporate Lending]], [[07 Leveraged and Acquisition Finance]] |
@@ -352,14 +363,16 @@ Letters: [A](#a) · [B](#b) · [C](#c) · [D](#d) · [E](#e) · [F](#f) · [G](#
 | SFT (securities financing transaction) | Repos, securities lending and margin lending. | [[19 Counterparty Credit Risk and Derivatives]] |
 | SICR (significant increase in credit risk) | The IFRS 9 test that moves a loan from stage 1 to stage 2. | [[17 Provisioning and Expected Credit Loss - IFRS 9 and CECL]] |
 | Simple approach | The Basel collateral method substituting the collateral's risk weight for the covered part. | [[11 Collateral and Security]] |
+| Simplified approach | The IFRS 9 approach for trade receivables, contract assets and leases: always lifetime ECL, no staging. | [[ifrs9-decision-tree]], [[ifrs9-explained-simply]] |
 | Single-name limit | A limit on exposure to one counterparty or group. | [[14 Risk Appetite, Limits and Concentration]] |
 | Slotting | The Basel approach for specialised lending using five categories: strong, good, satisfactory, weak, default. | [[06 Specialised Finance - Project, Object, Commodities, Real Estate]] |
 | SME (small and medium-sized enterprise) | A smaller business, given slightly lower risk weights. | [[04 Commercial and Corporate Lending]] |
 | Sovereign | A national government as a borrower. | [[26 Sovereign, Bank and Country Risk]] |
 | Specialised lending | Loans repaid from one specific asset: project, object, commodities or income-producing real estate. | [[06 Specialised Finance - Project, Object, Commodities, Real Estate]] |
 | Sponsor | The owner or developer backing a project or buyout. | [[06 Specialised Finance - Project, Object, Commodities, Real Estate]], [[07 Leveraged and Acquisition Finance]] |
-| SPV (special purpose vehicle) | A company created only to own one project or asset. | [[06 Specialised Finance - Project, Object, Commodities, Real Estate]] |
+| SPPI test (solely payments of principal and interest) | The IFRS 9 test of whether an asset's cash flows are just a plain loan's. Failing sends it to FVTPL. | [[ifrs9-decision-tree]], [[ifrs9-explained-simply]] |
 | Spreading | Entering a borrower's financial statements into a standard template for analysis. | [[15 Monitoring, Early Warning and Watchlist]], [[09 Credit Analysis - Reading a Borrower]] |
+| SPV (special purpose vehicle) | A company created only to own one project or asset. | [[06 Specialised Finance - Project, Object, Commodities, Real Estate]] |
 | SREP (supervisory review and evaluation process) | The regulator's annual review that sets Pillar 2 capital. | [[20 Stress Testing and ICAAP]] |
 | Stage 1 / 2 / 3 | IFRS 9 buckets: performing with 12-month loss / deteriorated with lifetime loss / credit-impaired. | [[17 Provisioning and Expected Credit Loss - IFRS 9 and CECL]] |
 | Standby letter of credit | A letter of credit used only if the applicant fails to pay. | [[08 Trade Finance and Guarantees]] |
@@ -419,8 +432,8 @@ Letters: [A](#a) · [B](#b) · [C](#c) · [D](#d) · [E](#e) · [F](#f) · [G](#
 | Warehouse receipt | A document proving goods are held in a warehouse, used as collateral. | [[06 Specialised Finance - Project, Object, Commodities, Real Estate]] |
 | Watchlist | The list of borrowers showing signs of stress that need closer monitoring. | [[15 Monitoring, Early Warning and Watchlist]] |
 | Weight of evidence (WoE) | A transformation that converts a variable's bands into risk-ranked values for a scorecard. | [[10 Internal Ratings, Scorecards and PD Models]] |
-| Workout | The specialist process for managing loans in serious difficulty. | [[16 Problem Loans, Restructuring and Recovery]] |
 | Working capital | Money tied up in day-to-day operations: stock and receivables minus payables. | [[09 Credit Analysis - Reading a Borrower]] |
+| Workout | The specialist process for managing loans in serious difficulty. | [[16 Problem Loans, Restructuring and Recovery]] |
 | Write-off | Removing a loan from the books once recovery is no longer expected. | [[16 Problem Loans, Restructuring and Recovery]], [[17 Provisioning and Expected Credit Loss - IFRS 9 and CECL]] |
 | Wrong-way risk | Exposure rises exactly when the counterparty is more likely to fail. | [[19 Counterparty Credit Risk and Derivatives]], [[14 Risk Appetite, Limits and Concentration]] |
 
