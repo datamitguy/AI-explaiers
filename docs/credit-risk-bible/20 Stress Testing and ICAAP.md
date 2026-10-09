@@ -50,15 +50,13 @@ Most of this note is about **credit risk stress testing**, because loans are usu
 
 ## Why regulators require them after 2008
 
-Before the 2008 global financial crisis, banks ran stress tests, but they were often small, owned by a single risk team, and treated as an academic exercise. The scenarios were usually mild, because a severe scenario produced an uncomfortable answer that nobody wanted to act on. Regulatory capital rules, then mostly based on Basel II, measured risk on the current balance sheet and said very little about what would happen if the economy turned.
+Before the 2008 global financial crisis, stress tests were small, owned by a single team and mostly academic. Scenarios were mild, because a severe one produced an answer nobody wanted to act on. The crisis exposed three things:
 
-The crisis exposed three things:
+1. **Healthy-looking capital ratios were not enough.** Banks with comfortable ratios in 2007 needed rescues in 2008. The ratios measured today's risk, not tomorrow's losses.
+2. **Nobody could add up the risk quickly.** Many banks could not say within days what their total exposure was to a failing counterparty. That led directly to the data principles in [[22 Credit Risk Data, Systems and BCBS 239]].
+3. **Markets did not trust bank numbers.** In 2009 United States supervisors ran a public stress test on the largest banks, told the weak ones how much capital to raise, and published the results. Confidence returned faster there, and supervisors elsewhere took note.
 
-1. **Capital ratios that looked healthy were not enough.** Banks reporting comfortable ratios in 2007 needed government rescues in 2008. The ratios measured today's risk, not tomorrow's losses.
-2. **Nobody could add up the risk quickly.** When supervisors asked banks "what is your total exposure to this failing counterparty, or to American subprime mortgages?", many could not answer within days. That failure led directly to the data principles in [[22 Credit Risk Data, Systems and BCBS 239]].
-3. **Markets did not trust bank numbers.** In 2009 the United States supervisors ran a public stress test on the largest banks, told the weak ones exactly how much capital to raise, and published the results. Confidence returned faster than in places that did not. Supervisors around the world took note.
-
-Since then, supervisory stress testing has become a core tool of regulation. Regulators use it to set capital buffers, to decide whether banks can pay dividends and buy back shares, to compare banks with each other on the same scenario, and to look at the system as a whole. Banks are also required to run their own internal stress tests as part of the ICAAP and to use them in risk management, not just file them away. The Basel Committee published principles for stress testing that national supervisors build on, but the detail of each country's regime varies.
+Since then, supervisory stress testing has become a core tool of regulation: to set capital buffers, decide whether banks may pay dividends, compare banks on the same scenario and look at the system as a whole. Banks must also run their own stress tests as part of the ICAAP and use them in risk management. The Basel Committee publishes stress testing principles; each country's regime differs in detail.
 
 ## Types of stress test: sensitivity, scenario and reverse
 
@@ -111,16 +109,14 @@ Notice that rates can go either way. A stagflation story (prices rising, economy
 
 The **macroeconomic variables**, or macro variables, are the numbers that describe the economy in the scenario. The ones that matter most for credit risk:
 
-| Variable | What it means in plain words | Why it matters for credit losses |
+| Variable | Plain words | Why it matters for credit losses |
 |---|---|---|
-| GDP growth | How fast the economy is growing or shrinking | Companies earn less in a recession, so corporate and small business defaults rise |
-| Unemployment | Share of people who want a job and cannot find one | People who lose their jobs stop paying mortgages, cards and car loans. The single biggest driver of retail losses |
-| House prices | What homes are worth | Lower prices mean lower recoveries when a mortgage defaults, so loss given default rises. Also some borrowers walk away from negative equity |
-| Interest rates | The cost of borrowing | Higher rates raise repayments for floating-rate borrowers and highly indebted companies, pushing up defaults. They also change the bank's interest income |
-| Commercial property prices | What offices, shops, warehouses and hotels are worth | Commercial real estate loans are secured on these. Big falls cause both defaults (refinancing fails) and high losses |
-| Exchange rates | Value of the home currency | Borrowers who earn in one currency and owe in another get hurt; exposures in foreign currency inflate RWA |
-| Equity prices and credit spreads | Stock markets and the extra yield on risky bonds | Drive trading losses, counterparty exposure, and some corporate PD models that use market data |
-| Inflation and commodity prices | General price rises, oil and gas | Squeeze household budgets and some sectors (airlines, chemicals) |
+| GDP growth | How fast the economy grows or shrinks | Companies earn less in a recession, so business defaults rise |
+| Unemployment | Share of people who cannot find a job | People who lose jobs stop paying mortgages and cards. The biggest driver of retail losses |
+| House prices | What homes are worth | Lower prices mean lower mortgage recoveries, so loss given default rises |
+| Interest rates | The cost of borrowing | Higher repayments push up defaults for floating-rate and highly indebted borrowers; also changes the bank's interest income |
+| Commercial property prices | Value of offices, shops, warehouses | Big falls cause both defaults (refinancing fails) and high losses on commercial real estate loans |
+| Exchange rates, equity prices, credit spreads, commodities | Currency values, markets, oil and gas | Hurt borrowers with currency mismatches or sector exposure; drive trading and counterparty losses |
 
 Scenarios are usually specified for several countries, because an international bank's losses depend on the economy where each borrower lives, as covered in [[26 Sovereign, Bank and Country Risk]].
 
@@ -146,7 +142,7 @@ The **probability of default** (PD), introduced in [[02 What Credit Risk Is]] an
 
 ### Channel 2: rating migration
 
-Higher PDs show up as borrowers being **downgraded** on the bank's internal rating scale. A BBB-equivalent borrower becomes BB, a BB becomes B, some Bs default. Migration matters three times over. It raises expected losses. It moves loans from IFRS 9 Stage 1 to Stage 2, where the provision becomes lifetime rather than 12-month (see [[17 Provisioning and Expected Credit Loss - IFRS 9 and CECL]]), which is often the largest single source of stress impairment in the first year. And for banks on the internal ratings-based (IRB) approach, a worse rating means a higher risk weight, so RWA inflates just as capital is falling. Stress testers model this with **migration matrices** that are "stressed" (shifted towards downgrades) according to the scenario.
+Higher PDs show up as borrowers being **downgraded** on the bank's internal rating scale. A BBB-equivalent borrower becomes BB, a BB becomes B, some Bs default. Migration matters three times over. It raises expected losses. It moves loans from Stage 1 to Stage 2 under International Financial Reporting Standard 9 (IFRS 9), where the provision becomes lifetime rather than 12-month (see [[17 Provisioning and Expected Credit Loss - IFRS 9 and CECL]]), which is often the largest single source of stress impairment in the first year. And for banks on the internal ratings-based (IRB) approach, a worse rating means a higher risk weight, so RWA inflates just as capital is falling. Stress testers model this with **migration matrices** that are "stressed" (shifted towards downgrades) according to the scenario.
 
 ### Channel 3: collateral values fall, so LGD rises
 
@@ -171,7 +167,7 @@ For each segment and each year of the scenario:
 
 > Stressed loss = stressed PD x stressed LGD x stressed EAD
 
-plus the change in provisions caused by stage transfers, applied using the bank's IFRS 9 or current expected credit loss (CECL) engine. The same stressed parameters feed the RWA calculation and the projection of net interest income (defaulted loans stop paying interest). All three flow into the capital ratio.
+plus the change in provisions caused by stage transfers, applied using the bank's expected credit loss (ECL) engine under IFRS 9 or current expected credit loss (CECL) rules. The same stressed parameters feed the RWA calculation and the projection of net interest income (defaulted loans stop paying interest). All three flow into the capital ratio.
 
 ## A worked example: three years of adverse scenario
 
@@ -244,11 +240,11 @@ The trough is now 8.4% in year 2. The **drawdown**, the fall from the starting r
 
 Supervisors run their own stress tests on the banks they oversee. The details change from year to year and from country to country, so treat the descriptions below as generic.
 
-| Exercise (generic description) | Who runs it | Approach | What it is used for |
-|---|---|---|---|
-| Central bank or national supervisor annual stress test | The national central bank or prudential regulator, covering the largest domestic banks | A common scenario set by the supervisor, often with a severe domestic and global recession; banks run it on their own models, the supervisor challenges and adjusts the results, sometimes with its own models alongside | Setting bank-specific buffers, assessing the system as a whole, deciding on dividends and buybacks, published results |
-| European Banking Authority (EBA) EU-wide exercise | The EBA with the European Central Bank and national supervisors, typically every two years | Common methodology and scenarios across the European Union; mostly a static balance sheet; banks project losses with their own models within strict constraints and templates; quality assurance by supervisors; results published bank by bank | Informing each bank's Pillar 2 guidance through the supervisory review; transparency to markets. It is not formally pass or fail |
-| United States Federal Reserve programme | The Federal Reserve Board for large bank holding companies | The Federal Reserve projects losses itself, using its own supervisory models on detailed data submitted by banks, under a baseline and a severely adverse scenario; large banks also submit their own capital plans | Setting each bank's **stress capital buffer**, which feeds directly into its capital requirement and limits on distributions |
+| Exercise (generic) | Approach | Used for |
+|---|---|---|
+| Central bank annual stress test, covering the largest domestic banks | Supervisor sets a common severe scenario; banks run it on their own models; the supervisor challenges and adjusts, sometimes with its own models | Bank-specific buffers, system-wide view, dividend decisions, published results |
+| European Banking Authority (EBA) EU-wide exercise, typically every two years with the European Central Bank and national supervisors | Common methodology and templates, mostly static balance sheet, banks' own models within strict constraints, supervisory quality assurance, results published by bank | Informing each bank's Pillar 2 guidance; market transparency. Not formally pass or fail |
+| United States Federal Reserve programme for large bank holding companies | The Federal Reserve projects losses with its own supervisory models on detailed bank data, under baseline and severely adverse scenarios; banks also submit capital plans | Setting each bank's **stress capital buffer**, which feeds its capital requirement and limits on distributions |
 
 Common features matter more to a platform lead than the differences: a fixed starting date, a prescribed scenario, prescribed templates with thousands of cells, a short submission window (often a few months), several rounds of supervisory questions requiring re-runs, and a requirement to explain every number back to loan-level data.
 
@@ -261,53 +257,53 @@ The **internal capital adequacy assessment process**, or ICAAP, is the bank's ow
 
 ### 1. Risk identification
 
-The bank builds a **risk inventory**: a list of every risk it faces, not only those that Pillar 1 covers. Credit, market and operational risk are obvious. But the list also includes concentration risk (too much lent to one sector or name), interest rate risk in the banking book, pension obligation risk, business and strategic risk, reputational risk, climate risk, model risk, step-in risk (having to support an entity it does not legally own), and others. Each risk has an owner. The analogy is a household listing every way its finances could go wrong, not just the mortgage: the car breaking down, a job loss, a leaking roof.
+The bank builds a **risk inventory** of every risk it faces, not only those Pillar 1 covers: concentration risk, interest rate risk in the banking book, pension risk, business and strategic risk, reputational risk, climate risk, model risk and others, each with an owner. The analogy is a household listing every way its finances could go wrong, not just the mortgage: a job loss, the car breaking down, a leaking roof.
 
 ### 2. Materiality assessment
 
-Not every risk needs capital. The bank assesses each one against **materiality** criteria (size of potential loss compared with capital, likelihood, and whether it can be mitigated) and decides which are material. Material risks are quantified; immaterial ones are documented, monitored and revisited next year. Supervisors look hard at risks a bank declares immaterial, because that is an easy way to understate the need for capital.
+Each risk is assessed against **materiality** criteria (potential loss compared with capital, likelihood, mitigation). Material risks are quantified; immaterial ones are documented and revisited next year. Supervisors look hard at risks declared immaterial, because that is an easy way to understate capital needs.
 
 ### 3. Quantification
 
-For each material risk, the bank estimates how much capital it needs today. For credit risk, the starting point is the Pillar 1 calculation from [[18 Regulatory Capital and Basel - the Short Version]], then the bank asks whether Pillar 1 misses anything: a single-name or sector concentration (Pillar 1 assumes a well-diversified book), weaknesses in models, or risks in specific portfolios. Many banks also run an **economic capital** model, their own estimate of the capital needed to survive losses with a high confidence level over one year, as a comparison. Risks with no Pillar 1 charge, such as interest rate risk in the banking book or pension risk, get their own quantification.
+For each material risk, the bank estimates the capital needed today. For credit risk it starts from Pillar 1 (see [[18 Regulatory Capital and Basel - the Short Version]]) and asks what Pillar 1 misses, chiefly concentration, since Pillar 1 assumes a well-diversified book. Many banks also run an **economic capital** model as a comparison. Risks with no Pillar 1 charge get their own quantification.
 
 ### 4. Capital planning over three to five years
 
-The bank projects its balance sheet, earnings, RWA, dividends and capital in the **base case** for the next three to five years, using the strategic plan and budget. This answers "if things go as planned, will we have enough capital, and how much spare?". It must be consistent with the plan the finance team gives the board; a common supervisory criticism is an ICAAP plan that does not match the bank's own budget.
+The bank projects balance sheet, earnings, RWA, dividends and capital in the **base case** over three to five years, from the strategic plan and budget. A common supervisory criticism is an ICAAP plan that does not match the bank's own budget.
 
 ### 5. Stress testing
 
-The bank then runs severe but plausible stress scenarios over the same horizon, chosen for its own vulnerabilities rather than only the regulator's generic scenario. A bank heavy in commercial property designs a property crash; a bank with a large trade finance book designs a trade war; a bank in one region designs a regional downturn. It also runs reverse stress tests and sensitivities. The output is a capital ratio path like the worked example above.
+The bank runs severe but plausible scenarios over the same horizon, designed around its own vulnerabilities: a property crash for a property-heavy lender, a regional downturn for a regional bank. It adds reverse stress tests and sensitivities. The output is a capital path like the worked example.
 
 ### 6. Management actions
 
-The bank sets out what it would do if stress happened: cut or cancel dividends, stop share buybacks, reduce bonuses, slow lending growth, sell a portfolio, issue capital instruments such as Additional Tier 1 (AT1), cut costs. Supervisors only give credit for actions that are **credible** (could really be done in a stressed market), **timed** (when exactly they would happen), **quantified** and **within the bank's control**. "We will sell our credit card book for a profit in the middle of a recession" is not credible. Many supervisors want results shown both before and after management actions.
+The bank sets out what it would do: cancel dividends, stop buybacks, slow lending, sell a portfolio, issue Additional Tier 1 (AT1) capital, cut costs. Supervisors only credit actions that are **credible** in a stressed market, **timed**, **quantified** and **within the bank's control**. "We will sell the card book at a profit mid-recession" is not credible. Results are usually shown before and after actions.
 
 ### 7. Assessment against hurdles
 
-If capital stays above the hurdles in every year of every scenario, the plan is adequate. If not, the bank goes back to step 4 and changes something: holds more capital, cuts risk appetite, changes strategy. This loop is the point of the whole exercise.
+If capital stays above the hurdles in every year of every scenario, the plan is adequate. If not, the bank goes back to step 4: more capital, lower risk appetite or a different strategy. This loop is the point of the exercise.
 
 ### 8. Board challenge and sign-off
 
-The board owns the ICAAP. It approves the scope and scenarios at the start and the final document at the end, usually through the board risk committee first. Supervisors expect evidence of genuine challenge in the minutes: questions asked, assumptions changed, not a rubber stamp. Governance is described in [[13 Credit Governance - Committees, Authorities and the Three Lines]].
+The board owns the ICAAP, approving scope and scenarios at the start and the document at the end, usually through the board risk committee. Supervisors expect minutes showing genuine challenge (see [[13 Credit Governance - Committees, Authorities and the Three Lines]]).
 
 ### 9. Submission
 
-The ICAAP document, with supporting templates and appendices (model documentation, scenario narratives, risk inventory, capital plan), is submitted to the supervisor, often alongside the ILAAP (below). Timing and format vary by country.
+The ICAAP document and appendices (risk inventory, model documentation, scenario narratives, capital plan) go to the supervisor, often with the ILAAP. Timing and format vary by country.
 
 ### 10. Supervisory review
 
-The supervisor reviews the ICAAP as part of its **supervisory review and evaluation process** (SREP in Europe; other countries use different names for the same idea). It assesses the bank's business model, governance, risks, capital and liquidity, compares the bank's own numbers with its own benchmarks and peer analysis, and then sets the bank-specific **Pillar 2 requirements** and guidance. The bank receives a letter that tells it how much capital it must hold above the Pillar 1 minimum. That letter is one of the most important documents the bank receives each year.
+The supervisor reviews the ICAAP within its **supervisory review and evaluation process** (SREP in Europe; other countries use other names). It assesses business model, governance, risks, capital and liquidity against its own benchmarks and peers, then sets bank-specific **Pillar 2 requirements** and guidance in a letter that is one of the most important documents the bank receives each year.
 
 ### The use test
 
-Supervisors do not want the ICAAP to be a document produced once a year and filed. They want to see it used: stress results informing risk appetite, capital allocation to business lines, pricing (see [[24 Pricing, RAROC and Return on Capital]]), limits and strategy. This is often called the **use test**, and a bank that cannot show it will be criticised.
+Supervisors want the ICAAP used, not filed: stress results informing risk appetite, capital allocation, pricing (see [[24 Pricing, RAROC and Return on Capital]]), limits and strategy. This is the **use test**.
 
 ## The ILAAP in brief
 
 The **internal liquidity adequacy assessment process**, or ILAAP, is the sister of the ICAAP, but for liquidity: does the bank have enough cash and easily sold assets to survive a period of stress in which deposits leave, markets close and committed lines are drawn? The analogy is the difference between being rich and having cash in your pocket. You can own a house worth a fortune and still be unable to buy lunch if your wallet is empty and the banks are shut.
 
-The ILAAP covers the bank's funding profile, its liquidity buffer, its liquidity stress tests (typically over periods from a few days to a year), the survival horizon under stress, intraday liquidity, and the contingency funding plan. It links to credit risk mainly through the drawdown assumption: the same committed credit lines that raise EAD in a credit stress also drain cash in a liquidity stress. The regulatory measures behind it, such as the liquidity coverage ratio and net stable funding ratio, are owned by treasury rather than credit risk, but the credit risk platform often supplies the undrawn commitment data.
+The ILAAP covers the funding profile, the liquidity buffer, liquidity stress tests (from a few days to a year), the survival horizon, intraday liquidity and the contingency funding plan. It is owned by treasury, but links to credit risk through drawdowns: the committed lines that raise EAD in a credit stress also drain cash in a liquidity stress, and the credit platform often supplies the undrawn commitment data.
 
 ## Pillar 2 add-ons
 

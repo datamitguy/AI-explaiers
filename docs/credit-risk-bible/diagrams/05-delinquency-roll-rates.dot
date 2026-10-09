@@ -4,9 +4,9 @@ digraph DelinquencyRollRates {
   edge  [color="#4b5563", arrowsize=0.7, fontname="Helvetica", fontsize=10, fontcolor="#374151"];
 
   Cur [label="Current\n0 days past due\n100,000 accounts", fillcolor="#065f46", fontcolor="white", color="#065f46"];
-  B1  [label="Bucket 1\n1 to 30 days past due\n(illustrative: 3,000)"];
-  B2  [label="Bucket 2\n31 to 60 days past due\n(illustrative: 900)"];
-  B3  [label="Bucket 3\n61 to 90 days past due\n(illustrative: 540)"];
+  B1  [label="Bucket 1\n1 to 29 days past due\n(illustrative: 3,000)"];
+  B2  [label="Bucket 2\n30 to 59 days past due\n(illustrative: 900)"];
+  B3  [label="Bucket 3\n60 to 89 days past due\n(illustrative: 540)"];
   Def [label="Default\n90+ days past due\n(illustrative: 432)", fillcolor="#991b1b", fontcolor="white", color="#991b1b"];
   WO  [label="Charge-off / write-off\nafter 180 days (varies)\nsold or recovered", fillcolor="#1f2937", fontcolor="white", color="#1f2937"];
 

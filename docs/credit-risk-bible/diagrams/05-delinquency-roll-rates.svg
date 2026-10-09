@@ -19,7 +19,7 @@
 <title>B1</title>
 <path fill="#eef2ff" stroke="#6366f1" d="M269,-515C269,-515 137,-515 137,-515 131,-515 125,-509 125,-503 125,-503 125,-474 125,-474 125,-468 131,-462 137,-462 137,-462 269,-462 269,-462 275,-462 281,-468 281,-474 281,-474 281,-503 281,-503 281,-509 275,-515 269,-515"/>
 <text text-anchor="middle" x="203" y="-498.4" font-family="Helvetica,sans-Serif" font-size="12.00">Bucket 1</text>
-<text text-anchor="middle" x="203" y="-485.4" font-family="Helvetica,sans-Serif" font-size="12.00">1 to 30 days past due</text>
+<text text-anchor="middle" x="203" y="-485.4" font-family="Helvetica,sans-Serif" font-size="12.00">1 to 29 days past due</text>
 <text text-anchor="middle" x="203" y="-472.4" font-family="Helvetica,sans-Serif" font-size="12.00">(illustrative: 3,000)</text>
 </g>
 <g id="edge1" class="edge">
@@ -38,7 +38,7 @@
 <title>B2</title>
 <path fill="#eef2ff" stroke="#6366f1" d="M403.5,-397.5C403.5,-397.5 264.5,-397.5 264.5,-397.5 258.5,-397.5 252.5,-391.5 252.5,-385.5 252.5,-385.5 252.5,-356.5 252.5,-356.5 252.5,-350.5 258.5,-344.5 264.5,-344.5 264.5,-344.5 403.5,-344.5 403.5,-344.5 409.5,-344.5 415.5,-350.5 415.5,-356.5 415.5,-356.5 415.5,-385.5 415.5,-385.5 415.5,-391.5 409.5,-397.5 403.5,-397.5"/>
 <text text-anchor="middle" x="334" y="-380.9" font-family="Helvetica,sans-Serif" font-size="12.00">Bucket 2</text>
-<text text-anchor="middle" x="334" y="-367.9" font-family="Helvetica,sans-Serif" font-size="12.00">31 to 60 days past due</text>
+<text text-anchor="middle" x="334" y="-367.9" font-family="Helvetica,sans-Serif" font-size="12.00">30 to 59 days past due</text>
 <text text-anchor="middle" x="334" y="-354.9" font-family="Helvetica,sans-Serif" font-size="12.00">(illustrative: 900)</text>
 </g>
 <g id="edge2" class="edge">
@@ -68,7 +68,7 @@
 <title>B3</title>
 <path fill="#eef2ff" stroke="#6366f1" d="M405.5,-289.5C405.5,-289.5 266.5,-289.5 266.5,-289.5 260.5,-289.5 254.5,-283.5 254.5,-277.5 254.5,-277.5 254.5,-248.5 254.5,-248.5 254.5,-242.5 260.5,-236.5 266.5,-236.5 266.5,-236.5 405.5,-236.5 405.5,-236.5 411.5,-236.5 417.5,-242.5 417.5,-248.5 417.5,-248.5 417.5,-277.5 417.5,-277.5 417.5,-283.5 411.5,-289.5 405.5,-289.5"/>
 <text text-anchor="middle" x="336" y="-272.9" font-family="Helvetica,sans-Serif" font-size="12.00">Bucket 3</text>
-<text text-anchor="middle" x="336" y="-259.9" font-family="Helvetica,sans-Serif" font-size="12.00">61 to 90 days past due</text>
+<text text-anchor="middle" x="336" y="-259.9" font-family="Helvetica,sans-Serif" font-size="12.00">60 to 89 days past due</text>
 <text text-anchor="middle" x="336" y="-246.9" font-family="Helvetica,sans-Serif" font-size="12.00">(illustrative: 540)</text>
 </g>
 <g id="edge3" class="edge">
