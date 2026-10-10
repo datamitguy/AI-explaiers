@@ -1,0 +1,212 @@
+<svg width="100%"
+ viewBox="0.00 0.00 885.30 631.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 617.4)">
+<title>EntityRelationships</title>
+<polygon fill="white" stroke="transparent" points="-14.4,14.4 -14.4,-617.4 870.9,-617.4 870.9,14.4 -14.4,14.4"/>
+<g id="node1" class="node">
+<title>Ref</title>
+<path fill="#6b7280" stroke="#6b7280" d="M427.5,-603C427.5,-603 249.5,-603 249.5,-603 243.5,-603 237.5,-597 237.5,-591 237.5,-591 237.5,-566 237.5,-566 237.5,-560 243.5,-554 249.5,-554 249.5,-554 427.5,-554 427.5,-554 433.5,-554 439.5,-560 439.5,-566 439.5,-566 439.5,-591 439.5,-591 439.5,-597 433.5,-603 427.5,-603"/>
+<text text-anchor="middle" x="338.5" y="-588.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Reference data</text>
+<text text-anchor="middle" x="338.5" y="-575.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">products, currencies, FX rates,</text>
+<text text-anchor="middle" x="338.5" y="-562.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">countries, industry codes</text>
+</g>
+<g id="node4" class="node">
+<title>Party</title>
+<path fill="#1e3a8a" stroke="#1e3a8a" d="M400,-511C400,-511 277,-511 277,-511 271,-511 265,-505 265,-499 265,-499 265,-474 265,-474 265,-468 271,-462 277,-462 277,-462 400,-462 400,-462 406,-462 412,-468 412,-474 412,-474 412,-499 412,-499 412,-505 406,-511 400,-511"/>
+<text text-anchor="middle" x="338.5" y="-496.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Party (counterparty)</text>
+<text text-anchor="middle" x="338.5" y="-483.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">LEI, internal IDs, KYC,</text>
+<text text-anchor="middle" x="338.5" y="-470.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">sector, country</text>
+</g>
+<g id="edge1" class="edge">
+<title>Ref&#45;&gt;Party</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="1,5" d="M338.5,-553.85C338.5,-540.73 338.5,-524.45 338.5,-511.3"/>
+<text text-anchor="middle" x="354.5" y="-530" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> codes</text>
+</g>
+<g id="node2" class="node">
+<title>Snap</title>
+<path fill="#1f2937" stroke="#1f2937" d="M652.5,-603C652.5,-603 502.5,-603 502.5,-603 496.5,-603 490.5,-597 490.5,-591 490.5,-591 490.5,-566 490.5,-566 490.5,-560 496.5,-554 502.5,-554 502.5,-554 652.5,-554 652.5,-554 658.5,-554 664.5,-560 664.5,-566 664.5,-566 664.5,-591 664.5,-591 664.5,-597 658.5,-603 652.5,-603"/>
+<text text-anchor="middle" x="577.5" y="-588.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Time dimension</text>
+<text text-anchor="middle" x="577.5" y="-575.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">as&#45;of date, snapshot,</text>
+<text text-anchor="middle" x="577.5" y="-562.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">valid and knowledge time</text>
+</g>
+<g id="node3" class="node">
+<title>Group</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M656,-511C656,-511 499,-511 499,-511 493,-511 487,-505 487,-499 487,-499 487,-474 487,-474 487,-468 493,-462 499,-462 499,-462 656,-462 656,-462 662,-462 668,-468 668,-474 668,-474 668,-499 668,-499 668,-505 662,-511 656,-511"/>
+<text text-anchor="middle" x="577.5" y="-496.4" font-family="Helvetica,sans-Serif" font-size="12.00">Group relationship</text>
+<text text-anchor="middle" x="577.5" y="-483.4" font-family="Helvetica,sans-Serif" font-size="12.00">parent, ultimate parent,</text>
+<text text-anchor="middle" x="577.5" y="-470.4" font-family="Helvetica,sans-Serif" font-size="12.00">connected party, % owned</text>
+</g>
+<g id="edge3" class="edge">
+<title>Party&#45;&gt;Group</title>
+<path fill="none" stroke="#4b5563" d="M412.16,-486.5C433.45,-486.5 457.02,-486.5 479.54,-486.5"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="479.81,-488.95 486.81,-486.5 479.81,-484.05 479.81,-488.95"/>
+<text text-anchor="middle" x="449.5" y="-492.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> 1 to many</text>
+</g>
+<g id="node5" class="node">
+<title>Fin</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M155,-412.5C155,-412.5 12,-412.5 12,-412.5 6,-412.5 0,-406.5 0,-400.5 0,-400.5 0,-388.5 0,-388.5 0,-382.5 6,-376.5 12,-376.5 12,-376.5 155,-376.5 155,-376.5 161,-376.5 167,-382.5 167,-388.5 167,-388.5 167,-400.5 167,-400.5 167,-406.5 161,-412.5 155,-412.5"/>
+<text text-anchor="middle" x="83.5" y="-397.9" font-family="Helvetica,sans-Serif" font-size="12.00">Financial statement</text>
+<text text-anchor="middle" x="83.5" y="-384.9" font-family="Helvetica,sans-Serif" font-size="12.00">spreads, statement date</text>
+</g>
+<g id="edge4" class="edge">
+<title>Party&#45;&gt;Fin</title>
+<path fill="none" stroke="#4b5563" d="M271.83,-461.97C230.4,-447.35 177.78,-428.78 138.7,-414.98"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="139.47,-412.66 132.05,-412.64 137.84,-417.28 139.47,-412.66"/>
+<text text-anchor="middle" x="253" y="-438" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> 1 to many</text>
+</g>
+<g id="node6" class="node">
+<title>Rating</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M619.5,-419C619.5,-419 481.5,-419 481.5,-419 475.5,-419 469.5,-413 469.5,-407 469.5,-407 469.5,-382 469.5,-382 469.5,-376 475.5,-370 481.5,-370 481.5,-370 619.5,-370 619.5,-370 625.5,-370 631.5,-376 631.5,-382 631.5,-382 631.5,-407 631.5,-407 631.5,-413 625.5,-419 619.5,-419"/>
+<text text-anchor="middle" x="550.5" y="-404.4" font-family="Helvetica,sans-Serif" font-size="12.00">Internal rating</text>
+<text text-anchor="middle" x="550.5" y="-391.4" font-family="Helvetica,sans-Serif" font-size="12.00">grade, PD, date,</text>
+<text text-anchor="middle" x="550.5" y="-378.4" font-family="Helvetica,sans-Serif" font-size="12.00">model version, override</text>
+</g>
+<g id="edge5" class="edge">
+<title>Party&#45;&gt;Rating</title>
+<path fill="none" stroke="#4b5563" d="M393.92,-461.97C422.89,-449.67 458.45,-434.58 488.35,-421.88"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="489.55,-424.04 495.03,-419.05 487.63,-419.53 489.55,-424.04"/>
+<text text-anchor="middle" x="484" y="-438" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> 1 to many</text>
+</g>
+<g id="node7" class="node">
+<title>ExtR</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M318,-412.5C318,-412.5 201,-412.5 201,-412.5 195,-412.5 189,-406.5 189,-400.5 189,-400.5 189,-388.5 189,-388.5 189,-382.5 195,-376.5 201,-376.5 201,-376.5 318,-376.5 318,-376.5 324,-376.5 330,-382.5 330,-388.5 330,-388.5 330,-400.5 330,-400.5 330,-406.5 324,-412.5 318,-412.5"/>
+<text text-anchor="middle" x="259.5" y="-397.9" font-family="Helvetica,sans-Serif" font-size="12.00">External rating</text>
+<text text-anchor="middle" x="259.5" y="-384.9" font-family="Helvetica,sans-Serif" font-size="12.00">agency, grade, date</text>
+</g>
+<g id="edge6" class="edge">
+<title>Party&#45;&gt;ExtR</title>
+<path fill="none" stroke="#4b5563" d="M317.74,-461.85C305.9,-448.36 291.14,-431.54 279.44,-418.21"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="281.09,-416.38 274.63,-412.73 277.4,-419.61 281.09,-416.38"/>
+<text text-anchor="middle" x="331" y="-438" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> 0 to many</text>
+</g>
+<g id="node8" class="node">
+<title>Fac</title>
+<path fill="#1e3a8a" stroke="#1e3a8a" d="M581,-337C581,-337 412,-337 412,-337 406,-337 400,-331 400,-325 400,-325 400,-300 400,-300 400,-294 406,-288 412,-288 412,-288 581,-288 581,-288 587,-288 593,-294 593,-300 593,-300 593,-325 593,-325 593,-331 587,-337 581,-337"/>
+<text text-anchor="middle" x="496.5" y="-322.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Facility (limit)</text>
+<text text-anchor="middle" x="496.5" y="-309.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">committed amount, product,</text>
+<text text-anchor="middle" x="496.5" y="-296.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">tenor, sub&#45;limits</text>
+</g>
+<g id="edge8" class="edge">
+<title>Party&#45;&gt;Fac</title>
+<path fill="none" stroke="#4b5563" d="M351.05,-461.92C353.64,-456.73 356.26,-451.23 358.5,-446 372.62,-413.05 361.85,-396.93 385.5,-370 395.96,-358.09 409.52,-348.38 423.56,-340.57"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="425.01,-342.57 430.03,-337.11 422.7,-338.25 425.01,-342.57"/>
+<text text-anchor="middle" x="422" y="-397.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> borrows under</text>
+<text text-anchor="middle" x="422" y="-386.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> 1 to many</text>
+</g>
+<g id="node9" class="node">
+<title>Prot</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M330,-330.5C330,-330.5 189,-330.5 189,-330.5 183,-330.5 177,-324.5 177,-318.5 177,-318.5 177,-306.5 177,-306.5 177,-300.5 183,-294.5 189,-294.5 189,-294.5 330,-294.5 330,-294.5 336,-294.5 342,-300.5 342,-306.5 342,-306.5 342,-318.5 342,-318.5 342,-324.5 336,-330.5 330,-330.5"/>
+<text text-anchor="middle" x="259.5" y="-315.9" font-family="Helvetica,sans-Serif" font-size="12.00">Guarantee or protection</text>
+<text text-anchor="middle" x="259.5" y="-302.9" font-family="Helvetica,sans-Serif" font-size="12.00">provider, cover amount</text>
+</g>
+<g id="node10" class="node">
+<title>Cov</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M307,-227.5C307,-227.5 184,-227.5 184,-227.5 178,-227.5 172,-221.5 172,-215.5 172,-215.5 172,-203.5 172,-203.5 172,-197.5 178,-191.5 184,-191.5 184,-191.5 307,-191.5 307,-191.5 313,-191.5 319,-197.5 319,-203.5 319,-203.5 319,-215.5 319,-215.5 319,-221.5 313,-227.5 307,-227.5"/>
+<text text-anchor="middle" x="245.5" y="-212.9" font-family="Helvetica,sans-Serif" font-size="12.00">Covenant</text>
+<text text-anchor="middle" x="245.5" y="-199.9" font-family="Helvetica,sans-Serif" font-size="12.00">test, threshold, result</text>
+</g>
+<g id="edge11" class="edge">
+<title>Fac&#45;&gt;Cov</title>
+<path fill="none" stroke="#4b5563" d="M425.3,-287.92C411.04,-282.89 396.23,-277.45 382.5,-272 350.33,-259.24 314.68,-243.17 287.82,-230.66"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="288.56,-228.31 281.19,-227.56 286.49,-232.75 288.56,-228.31"/>
+<text text-anchor="middle" x="409" y="-258.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> 0 to many</text>
+</g>
+<g id="node11" class="node">
+<title>Param</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M448,-227.5C448,-227.5 353,-227.5 353,-227.5 347,-227.5 341,-221.5 341,-215.5 341,-215.5 341,-203.5 341,-203.5 341,-197.5 347,-191.5 353,-191.5 353,-191.5 448,-191.5 448,-191.5 454,-191.5 460,-197.5 460,-203.5 460,-203.5 460,-215.5 460,-215.5 460,-221.5 454,-227.5 448,-227.5"/>
+<text text-anchor="middle" x="400.5" y="-212.9" font-family="Helvetica,sans-Serif" font-size="12.00">Risk parameters</text>
+<text text-anchor="middle" x="400.5" y="-199.9" font-family="Helvetica,sans-Serif" font-size="12.00">LGD, CCF, EAD</text>
+</g>
+<g id="edge12" class="edge">
+<title>Fac&#45;&gt;Param</title>
+<path fill="none" stroke="#4b5563" d="M473.99,-287.82C458.26,-271.27 437.38,-249.3 421.89,-233.01"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="423.46,-231.1 416.86,-227.72 419.91,-234.48 423.46,-231.1"/>
+<text text-anchor="middle" x="484" y="-258.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> 1 to many</text>
+</g>
+<g id="node12" class="node">
+<title>Alloc</title>
+<path fill="#fef3c7" stroke="#d97706" d="M761,-234C761,-234 646,-234 646,-234 640,-234 634,-228 634,-222 634,-222 634,-197 634,-197 634,-191 640,-185 646,-185 646,-185 761,-185 761,-185 767,-185 773,-191 773,-197 773,-197 773,-222 773,-222 773,-228 767,-234 761,-234"/>
+<text text-anchor="middle" x="703.5" y="-219.4" font-family="Helvetica,sans-Serif" font-size="12.00">Collateral allocation</text>
+<text text-anchor="middle" x="703.5" y="-206.4" font-family="Helvetica,sans-Serif" font-size="12.00">amount or % per</text>
+<text text-anchor="middle" x="703.5" y="-193.4" font-family="Helvetica,sans-Serif" font-size="12.00">facility, rank</text>
+</g>
+<g id="edge13" class="edge">
+<title>Fac&#45;&gt;Alloc</title>
+<path fill="none" stroke="#4b5563" d="M544.77,-287.95C575.91,-272.76 616.47,-252.96 648.8,-237.19"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="649.94,-239.36 655.15,-234.09 647.79,-234.96 649.94,-239.36"/>
+<text text-anchor="middle" x="644" y="-264" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> many to</text>
+<text text-anchor="middle" x="644" y="-253" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> many via</text>
+</g>
+<g id="node14" class="node">
+<title>Exp</title>
+<path fill="#1e3a8a" stroke="#1e3a8a" d="M700,-152C700,-152 517,-152 517,-152 511,-152 505,-146 505,-140 505,-140 505,-115 505,-115 505,-109 511,-103 517,-103 517,-103 700,-103 700,-103 706,-103 712,-109 712,-115 712,-115 712,-140 712,-140 712,-146 706,-152 700,-152"/>
+<text text-anchor="middle" x="608.5" y="-137.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Exposure (drawdown, account)</text>
+<text text-anchor="middle" x="608.5" y="-124.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">outstanding, undrawn, accrued</text>
+<text text-anchor="middle" x="608.5" y="-111.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">interest, fees, days past due</text>
+</g>
+<g id="edge15" class="edge">
+<title>Fac&#45;&gt;Exp</title>
+<path fill="none" stroke="#4b5563" d="M593.25,-298.71C667.87,-286.56 762.03,-265.44 784.5,-234 797.16,-216.28 797.33,-202.6 784.5,-185 768.7,-163.34 744.48,-149.8 719,-141.39"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="719.56,-138.99 712.15,-139.25 718.1,-143.67 719.56,-138.99"/>
+<text text-anchor="middle" x="820" y="-212.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> drawn as</text>
+<text text-anchor="middle" x="820" y="-201.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> 1 to many</text>
+</g>
+<g id="edge9" class="edge">
+<title>Prot&#45;&gt;Fac</title>
+<path fill="none" stroke="#4b5563" d="M342.06,-312.5C358.31,-312.5 375.55,-312.5 392.4,-312.5"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="392.59,-314.95 399.59,-312.5 392.59,-310.05 392.59,-314.95"/>
+<text text-anchor="middle" x="371" y="-318.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> covers</text>
+</g>
+<g id="node13" class="node">
+<title>Coll</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M578.5,-234C578.5,-234 494.5,-234 494.5,-234 488.5,-234 482.5,-228 482.5,-222 482.5,-222 482.5,-197 482.5,-197 482.5,-191 488.5,-185 494.5,-185 494.5,-185 578.5,-185 578.5,-185 584.5,-185 590.5,-191 590.5,-197 590.5,-197 590.5,-222 590.5,-222 590.5,-228 584.5,-234 578.5,-234"/>
+<text text-anchor="middle" x="536.5" y="-219.4" font-family="Helvetica,sans-Serif" font-size="12.00">Collateral item</text>
+<text text-anchor="middle" x="536.5" y="-206.4" font-family="Helvetica,sans-Serif" font-size="12.00">type, value,</text>
+<text text-anchor="middle" x="536.5" y="-193.4" font-family="Helvetica,sans-Serif" font-size="12.00">valuation date</text>
+</g>
+<g id="edge14" class="edge">
+<title>Coll&#45;&gt;Alloc</title>
+<path fill="none" stroke="#4b5563" d="M590.72,-209.5C602.18,-209.5 614.49,-209.5 626.61,-209.5"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="626.72,-211.95 633.72,-209.5 626.72,-207.05 626.72,-211.95"/>
+<text text-anchor="middle" x="612.25" y="-215.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> via</text>
+</g>
+<g id="node15" class="node">
+<title>Prov</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M524.5,-42.5C524.5,-42.5 412.5,-42.5 412.5,-42.5 406.5,-42.5 400.5,-36.5 400.5,-30.5 400.5,-30.5 400.5,-18.5 400.5,-18.5 400.5,-12.5 406.5,-6.5 412.5,-6.5 412.5,-6.5 524.5,-6.5 524.5,-6.5 530.5,-6.5 536.5,-12.5 536.5,-18.5 536.5,-18.5 536.5,-30.5 536.5,-30.5 536.5,-36.5 530.5,-42.5 524.5,-42.5"/>
+<text text-anchor="middle" x="468.5" y="-27.9" font-family="Helvetica,sans-Serif" font-size="12.00">Provision and stage</text>
+<text text-anchor="middle" x="468.5" y="-14.9" font-family="Helvetica,sans-Serif" font-size="12.00">ECL amount, stage</text>
+</g>
+<g id="edge17" class="edge">
+<title>Exp&#45;&gt;Prov</title>
+<path fill="none" stroke="#4b5563" d="M566,-102.9C557.72,-97.89 549.21,-92.46 541.5,-87 524.31,-74.82 506.19,-59.57 492.31,-47.31"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="493.87,-45.42 487.01,-42.59 490.61,-49.08 493.87,-45.42"/>
+<text text-anchor="middle" x="572.5" y="-73.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> 1 per period</text>
+</g>
+<g id="node16" class="node">
+<title>WO</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M646,-42.5C646,-42.5 571,-42.5 571,-42.5 565,-42.5 559,-36.5 559,-30.5 559,-30.5 559,-18.5 559,-18.5 559,-12.5 565,-6.5 571,-6.5 571,-6.5 646,-6.5 646,-6.5 652,-6.5 658,-12.5 658,-18.5 658,-18.5 658,-30.5 658,-30.5 658,-36.5 652,-42.5 646,-42.5"/>
+<text text-anchor="middle" x="608.5" y="-27.9" font-family="Helvetica,sans-Serif" font-size="12.00">Write&#45;off and</text>
+<text text-anchor="middle" x="608.5" y="-14.9" font-family="Helvetica,sans-Serif" font-size="12.00">recovery</text>
+</g>
+<g id="edge18" class="edge">
+<title>Exp&#45;&gt;WO</title>
+<path fill="none" stroke="#4b5563" d="M608.5,-102.82C608.5,-86.84 608.5,-65.82 608.5,-49.73"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="610.95,-49.72 608.5,-42.72 606.05,-49.72 610.95,-49.72"/>
+<text text-anchor="middle" x="635" y="-73.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> 0 to many</text>
+</g>
+<g id="node17" class="node">
+<title>RegC</title>
+<path fill="#065f46" stroke="#065f46" d="M844.5,-49C844.5,-49 692.5,-49 692.5,-49 686.5,-49 680.5,-43 680.5,-37 680.5,-37 680.5,-12 680.5,-12 680.5,-6 686.5,0 692.5,0 692.5,0 844.5,0 844.5,0 850.5,0 856.5,-6 856.5,-12 856.5,-12 856.5,-37 856.5,-37 856.5,-43 850.5,-49 844.5,-49"/>
+<text text-anchor="middle" x="768.5" y="-34.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Regulatory classification</text>
+<text text-anchor="middle" x="768.5" y="-21.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">exposure class, approach,</text>
+<text text-anchor="middle" x="768.5" y="-8.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">risk weight, CRM eligibility</text>
+</g>
+<g id="edge19" class="edge">
+<title>Exp&#45;&gt;RegC</title>
+<path fill="none" stroke="#4b5563" d="M646.01,-102.82C669.68,-87.88 700.35,-68.52 725.07,-52.91"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="726.61,-54.84 731.22,-49.03 724,-50.7 726.61,-54.84"/>
+<text text-anchor="middle" x="726.5" y="-79" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> 1 per</text>
+<text text-anchor="middle" x="726.5" y="-68" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> snapshot</text>
+</g>
+</g>
+</svg>

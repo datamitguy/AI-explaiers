@@ -250,6 +250,8 @@ A mid-sized bank at a quarter end. Illustrative numbers.
 
 ## Related notes
 
+- [[35 Regulatory Landscape and Change Calendar]] for how and when the rules reach your jurisdiction.
+- [[36 Credit Portfolio Management and Risk Transfer]] for capital relief through risk transfer.
 - [[basel-credit-risk-explained-simply]] for the full walk-through of every box in the decision tree.
 - [[basel-credit-risk-decision-tree]] for the diagram itself.
 - [[01 What a Bank Is and How It Makes Money]] for why capital exists.

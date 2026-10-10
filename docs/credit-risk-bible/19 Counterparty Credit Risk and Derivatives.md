@@ -250,6 +250,7 @@ The characteristic data problems: trades not linked to a netting agreement (so m
 
 ## Related notes
 
+- [[31 Settlement and Pre-Settlement Risk]] for pre-settlement versus settlement exposure over a trade's life.
 - [[29 Market Risk]] for the market risk side of the same derivatives: sensitivities, value at risk and FRTB.
 - [[basel-credit-risk-explained-simply]] for the Basel treatment of counterparty risk, settlement risk and CCPs, and the correction that netting sits inside SA-CCR.
 - [[basel-credit-risk-decision-tree]] for the diagram.

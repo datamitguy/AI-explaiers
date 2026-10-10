@@ -293,6 +293,7 @@ Who credit risk talks to, and about what:
 
 ## Related notes
 
+- [[37 Liquidity Risk and Funding]] for liquidity risk and how banks fund themselves.
 - [[00 Start Here]]
 - [[02 What Credit Risk Is]]
 - [[03 The Credit Lifecycle]]

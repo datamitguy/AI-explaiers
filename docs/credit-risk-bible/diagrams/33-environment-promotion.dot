@@ -1,0 +1,25 @@
+digraph EnvironmentPromotion {
+  graph [rankdir=TB, splines=true, nodesep=0.35, ranksep=0.4, fontname="Helvetica", fontsize=13, bgcolor="white", newrank=true, pad=0.2];
+  node  [shape=box, style="rounded,filled", fillcolor="#eef2ff", color="#6366f1", fontname="Helvetica", fontsize=12, margin="0.14,0.07"];
+  edge  [color="#4b5563", arrowsize=0.7, fontname="Helvetica", fontsize=10, fontcolor="#374151"];
+
+  Req [label="Approved change request\nregulatory rule, model version,\nmapping table, new feed", fillcolor="#1f2937", fontcolor="white", color="#1f2937"];
+  Dev [label="Development\nbuild and unit test,\nsynthetic or masked data"];
+  SIT [label="System integration test\nend-to-end batch,\nregression pack on frozen portfolio"];
+  UAT [label="User acceptance test\nrisk, finance and model owners\nconfirm results"];
+  Par [label="Parallel run (pre-production)\nold and new side by side\non real month-end data"];
+  Q [label="Differences\nexplained and\nsigned off?", shape=diamond, fillcolor="#fef3c7", color="#d97706"];
+  Back [label="Back to development\nfix and retest", fillcolor="#991b1b", fontcolor="white", color="#991b1b"];
+  CAB [label="Change approval\noutside freeze window,\nrollback plan ready"];
+  Prod [label="Production\nofficial runs and submissions", fillcolor="#065f46", fontcolor="white", color="#065f46"];
+  DR [label="Disaster recovery\nreplicated copy, tested\nfailover", fillcolor="#6b7280", fontcolor="white", color="#6b7280"];
+
+  Req -> Dev -> SIT -> UAT -> Par -> Q;
+  Q -> Back [label="no"];
+  Back -> Dev [constraint=false, style=dashed];
+  Q -> CAB [label="yes"];
+  CAB -> Prod;
+  Prod -> DR [style=dashed, label=" replicate"];
+  {rank=same; Q Back}
+  {rank=same; Prod DR}
+}

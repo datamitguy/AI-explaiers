@@ -288,6 +288,8 @@ The practical message: reporting accuracy is a prudential matter and a personal 
 
 ## 14. Related notes
 
+- [[35 Regulatory Landscape and Change Calendar]] for upcoming reporting changes.
+- [[38 Platform Lead Toolkit - Runbooks, Metrics and Templates]] for reporting runbooks and checklists.
 - [[13 Credit Governance - Committees, Authorities and the Three Lines]]: the committees and board that consume the MI.
 - [[14 Risk Appetite, Limits and Concentration]]: the appetite measures the dashboard and board report are built around.
 - [[16 Problem Loans, Restructuring and Recovery]] and [[17 Provisioning and Expected Credit Loss - IFRS 9 and CECL]]: the NPL and provisioning numbers in FINREP-style returns.

@@ -1,0 +1,218 @@
+<svg width="100%"
+ viewBox="0.00 0.00 535.30 1105.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 1091.4)">
+<title>MonthEndBatch</title>
+<polygon fill="white" stroke="transparent" points="-14.4,14.4 -14.4,-1091.4 520.9,-1091.4 520.9,14.4 -14.4,14.4"/>
+<g id="node1" class="node">
+<title>Start</title>
+<path fill="#1f2937" stroke="#1f2937" d="M250.5,-1077C250.5,-1077 111.5,-1077 111.5,-1077 105.5,-1077 99.5,-1071 99.5,-1065 99.5,-1065 99.5,-1040 99.5,-1040 99.5,-1034 105.5,-1028 111.5,-1028 111.5,-1028 250.5,-1028 250.5,-1028 256.5,-1028 262.5,-1034 262.5,-1040 262.5,-1040 262.5,-1065 262.5,-1065 262.5,-1071 256.5,-1077 250.5,-1077"/>
+<text text-anchor="middle" x="181" y="-1062.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Day 0: month&#45;end close</text>
+<text text-anchor="middle" x="181" y="-1049.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">source systems finish</text>
+<text text-anchor="middle" x="181" y="-1036.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">end&#45;of&#45;day processing</text>
+</g>
+<g id="node2" class="node">
+<title>Ext</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M272.5,-1001C272.5,-1001 89.5,-1001 89.5,-1001 83.5,-1001 77.5,-995 77.5,-989 77.5,-989 77.5,-964 77.5,-964 77.5,-958 83.5,-952 89.5,-952 89.5,-952 272.5,-952 272.5,-952 278.5,-952 284.5,-958 284.5,-964 284.5,-964 284.5,-989 284.5,-989 284.5,-995 278.5,-1001 272.5,-1001"/>
+<text text-anchor="middle" x="181" y="-986.4" font-family="Helvetica,sans-Serif" font-size="12.00">Day 1: source extracts land</text>
+<text text-anchor="middle" x="181" y="-973.4" font-family="Helvetica,sans-Serif" font-size="12.00">loans, collateral, limits, ratings,</text>
+<text text-anchor="middle" x="181" y="-960.4" font-family="Helvetica,sans-Serif" font-size="12.00">trades, FX rates, ledger</text>
+</g>
+<g id="edge1" class="edge">
+<title>Start&#45;&gt;Ext</title>
+<path fill="none" stroke="#4b5563" d="M181,-1027.68C181,-1021.54 181,-1014.85 181,-1008.42"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="183.45,-1008.02 181,-1001.02 178.55,-1008.02 183.45,-1008.02"/>
+</g>
+<g id="node3" class="node">
+<title>Land</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M249.5,-925C249.5,-925 112.5,-925 112.5,-925 106.5,-925 100.5,-919 100.5,-913 100.5,-913 100.5,-888 100.5,-888 100.5,-882 106.5,-876 112.5,-876 112.5,-876 249.5,-876 249.5,-876 255.5,-876 261.5,-882 261.5,-888 261.5,-888 261.5,-913 261.5,-913 261.5,-919 255.5,-925 249.5,-925"/>
+<text text-anchor="middle" x="181" y="-910.4" font-family="Helvetica,sans-Serif" font-size="12.00">Landing checks</text>
+<text text-anchor="middle" x="181" y="-897.4" font-family="Helvetica,sans-Serif" font-size="12.00">file arrived, row counts,</text>
+<text text-anchor="middle" x="181" y="-884.4" font-family="Helvetica,sans-Serif" font-size="12.00">control totals, schema</text>
+</g>
+<g id="edge2" class="edge">
+<title>Ext&#45;&gt;Land</title>
+<path fill="none" stroke="#4b5563" d="M181,-951.68C181,-945.54 181,-938.85 181,-932.42"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="183.45,-932.02 181,-925.02 178.55,-932.02 183.45,-932.02"/>
+</g>
+<g id="node4" class="node">
+<title>Q1</title>
+<path fill="#fef3c7" stroke="#d97706" d="M169.99,-844.22C169.99,-844.22 109.01,-817.78 109.01,-817.78 103.5,-815.39 103.5,-810.61 109.01,-808.22 109.01,-808.22 169.99,-781.78 169.99,-781.78 175.5,-779.39 186.5,-779.39 192.01,-781.78 192.01,-781.78 252.99,-808.22 252.99,-808.22 258.5,-810.61 258.5,-815.39 252.99,-817.78 252.99,-817.78 192.01,-844.22 192.01,-844.22 186.5,-846.61 175.5,-846.61 169.99,-844.22"/>
+<text text-anchor="middle" x="181" y="-816.4" font-family="Helvetica,sans-Serif" font-size="12.00">All feeds</text>
+<text text-anchor="middle" x="181" y="-803.4" font-family="Helvetica,sans-Serif" font-size="12.00">complete?</text>
+</g>
+<g id="edge3" class="edge">
+<title>Land&#45;&gt;Q1</title>
+<path fill="none" stroke="#4b5563" d="M181,-875.68C181,-869.66 181,-863.01 181,-856.37"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="183.45,-856.2 181,-849.2 178.55,-856.2 183.45,-856.2"/>
+</g>
+<g id="node5" class="node">
+<title>Chase</title>
+<path fill="#991b1b" stroke="#991b1b" d="M400.5,-831C400.5,-831 319.5,-831 319.5,-831 313.5,-831 307.5,-825 307.5,-819 307.5,-819 307.5,-807 307.5,-807 307.5,-801 313.5,-795 319.5,-795 319.5,-795 400.5,-795 400.5,-795 406.5,-795 412.5,-801 412.5,-807 412.5,-807 412.5,-819 412.5,-819 412.5,-825 406.5,-831 400.5,-831"/>
+<text text-anchor="middle" x="360" y="-816.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Chase source,</text>
+<text text-anchor="middle" x="360" y="-803.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">rerun extract</text>
+</g>
+<g id="edge4" class="edge">
+<title>Q1&#45;&gt;Chase</title>
+<path fill="none" stroke="#4b5563" d="M264.21,-813C276.38,-813 288.71,-813 300.29,-813"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="300.39,-815.45 307.39,-813 300.39,-810.55 300.39,-815.45"/>
+<text text-anchor="middle" x="285.75" y="-819" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151">no</text>
+</g>
+<g id="node6" class="node">
+<title>Conf</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M276,-740C276,-740 86,-740 86,-740 80,-740 74,-734 74,-728 74,-728 74,-703 74,-703 74,-697 80,-691 86,-691 86,-691 276,-691 276,-691 282,-691 288,-697 288,-703 288,-703 288,-728 288,-728 288,-734 282,-740 276,-740"/>
+<text text-anchor="middle" x="181" y="-725.4" font-family="Helvetica,sans-Serif" font-size="12.00">Day 1 to 2: conform</text>
+<text text-anchor="middle" x="181" y="-712.4" font-family="Helvetica,sans-Serif" font-size="12.00">map keys, apply reference data,</text>
+<text text-anchor="middle" x="181" y="-699.4" font-family="Helvetica,sans-Serif" font-size="12.00">convert currencies</text>
+</g>
+<g id="edge6" class="edge">
+<title>Q1&#45;&gt;Conf</title>
+<path fill="none" stroke="#4b5563" d="M181,-776.98C181,-767.22 181,-756.7 181,-747.21"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="183.45,-747.19 181,-740.19 178.55,-747.19 183.45,-747.19"/>
+<text text-anchor="middle" x="190" y="-756" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151">yes</text>
+</g>
+<g id="edge5" class="edge">
+<title>Chase&#45;&gt;Land</title>
+<path fill="none" stroke="#4b5563" d="M324.39,-831.01C299.37,-842.96 265.38,-859.19 236.78,-872.86"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="235.65,-870.68 230.39,-875.91 237.76,-875.1 235.65,-870.68"/>
+</g>
+<g id="node7" class="node">
+<title>DQ</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M278.5,-664C278.5,-664 83.5,-664 83.5,-664 77.5,-664 71.5,-658 71.5,-652 71.5,-652 71.5,-640 71.5,-640 71.5,-634 77.5,-628 83.5,-628 83.5,-628 278.5,-628 278.5,-628 284.5,-628 290.5,-634 290.5,-640 290.5,-640 290.5,-652 290.5,-652 290.5,-658 284.5,-664 278.5,-664"/>
+<text text-anchor="middle" x="181" y="-649.4" font-family="Helvetica,sans-Serif" font-size="12.00">Day 2 to 3: data quality rules</text>
+<text text-anchor="middle" x="181" y="-636.4" font-family="Helvetica,sans-Serif" font-size="12.00">and GL reconciliation of balances</text>
+</g>
+<g id="edge7" class="edge">
+<title>Conf&#45;&gt;DQ</title>
+<path fill="none" stroke="#4b5563" d="M181,-690.89C181,-684.55 181,-677.69 181,-671.31"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="183.45,-671.11 181,-664.11 178.55,-671.11 183.45,-671.11"/>
+</g>
+<g id="node8" class="node">
+<title>Q2</title>
+<path fill="#fef3c7" stroke="#d97706" d="M169.55,-597.42C169.55,-597.42 77.45,-568.58 77.45,-568.58 71.73,-566.79 71.73,-563.21 77.45,-561.42 77.45,-561.42 169.55,-532.58 169.55,-532.58 175.27,-530.79 186.73,-530.79 192.45,-532.58 192.45,-532.58 284.55,-561.42 284.55,-561.42 290.27,-563.21 290.27,-566.79 284.55,-568.58 284.55,-568.58 192.45,-597.42 192.45,-597.42 186.73,-599.21 175.27,-599.21 169.55,-597.42"/>
+<text text-anchor="middle" x="181" y="-568.4" font-family="Helvetica,sans-Serif" font-size="12.00">Breaches within</text>
+<text text-anchor="middle" x="181" y="-555.4" font-family="Helvetica,sans-Serif" font-size="12.00">tolerance?</text>
+</g>
+<g id="edge8" class="edge">
+<title>DQ&#45;&gt;Q2</title>
+<path fill="none" stroke="#4b5563" d="M181,-627.86C181,-622.13 181,-615.46 181,-608.66"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="183.45,-608.28 181,-601.28 178.55,-608.28 183.45,-608.28"/>
+</g>
+<g id="node9" class="node">
+<title>Fix</title>
+<path fill="#991b1b" stroke="#991b1b" d="M494.5,-583C494.5,-583 351.5,-583 351.5,-583 345.5,-583 339.5,-577 339.5,-571 339.5,-571 339.5,-559 339.5,-559 339.5,-553 345.5,-547 351.5,-547 351.5,-547 494.5,-547 494.5,-547 500.5,-547 506.5,-553 506.5,-559 506.5,-559 506.5,-571 506.5,-571 506.5,-577 500.5,-583 494.5,-583"/>
+<text text-anchor="middle" x="423" y="-568.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Fix at source or log</text>
+<text text-anchor="middle" x="423" y="-555.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">an approved adjustment</text>
+</g>
+<g id="edge9" class="edge">
+<title>Q2&#45;&gt;Fix</title>
+<path fill="none" stroke="#4b5563" d="M296.33,-565C308.33,-565 320.4,-565 332.07,-565"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="332.28,-567.45 339.28,-565 332.28,-562.55 332.28,-567.45"/>
+<text text-anchor="middle" x="317.75" y="-571" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151">no</text>
+</g>
+<g id="node10" class="node">
+<title>Snap</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M267,-492C267,-492 95,-492 95,-492 89,-492 83,-486 83,-480 83,-480 83,-468 83,-468 83,-462 89,-456 95,-456 95,-456 267,-456 267,-456 273,-456 279,-462 279,-468 279,-468 279,-480 279,-480 279,-486 273,-492 267,-492"/>
+<text text-anchor="middle" x="181" y="-477.4" font-family="Helvetica,sans-Serif" font-size="12.00">Curated month&#45;end snapshot</text>
+<text text-anchor="middle" x="181" y="-464.4" font-family="Helvetica,sans-Serif" font-size="12.00">frozen and versioned</text>
+</g>
+<g id="edge11" class="edge">
+<title>Q2&#45;&gt;Snap</title>
+<path fill="none" stroke="#4b5563" d="M181,-528.82C181,-518.96 181,-508.45 181,-499.36"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="183.45,-499.1 181,-492.1 178.55,-499.1 183.45,-499.1"/>
+<text text-anchor="middle" x="190" y="-508" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151">yes</text>
+</g>
+<g id="edge10" class="edge">
+<title>Fix&#45;&gt;DQ</title>
+<path fill="none" stroke="#4b5563" d="M370.88,-583.01C332.42,-595.57 280.03,-612.67 240.03,-625.73"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="239.11,-623.45 233.21,-627.96 240.63,-628.11 239.11,-623.45"/>
+</g>
+<g id="node11" class="node">
+<title>Rate</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M168,-429C168,-429 12,-429 12,-429 6,-429 0,-423 0,-417 0,-417 0,-392 0,-392 0,-386 6,-380 12,-380 12,-380 168,-380 168,-380 174,-380 180,-386 180,-392 180,-392 180,-417 180,-417 180,-423 174,-429 168,-429"/>
+<text text-anchor="middle" x="90" y="-414.4" font-family="Helvetica,sans-Serif" font-size="12.00">Day 3 to 4: ratings and</text>
+<text text-anchor="middle" x="90" y="-401.4" font-family="Helvetica,sans-Serif" font-size="12.00">parameters assigned</text>
+<text text-anchor="middle" x="90" y="-388.4" font-family="Helvetica,sans-Serif" font-size="12.00">(PD, LGD, CCF by purpose)</text>
+</g>
+<g id="edge12" class="edge">
+<title>Snap&#45;&gt;Rate</title>
+<path fill="none" stroke="#4b5563" d="M158.04,-455.97C148.8,-449.11 137.9,-441.03 127.56,-433.36"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="128.97,-431.36 121.89,-429.16 126.05,-435.29 128.97,-431.36"/>
+</g>
+<g id="node13" class="node">
+<title>Lim</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M331.5,-422.5C331.5,-422.5 214.5,-422.5 214.5,-422.5 208.5,-422.5 202.5,-416.5 202.5,-410.5 202.5,-410.5 202.5,-398.5 202.5,-398.5 202.5,-392.5 208.5,-386.5 214.5,-386.5 214.5,-386.5 331.5,-386.5 331.5,-386.5 337.5,-386.5 343.5,-392.5 343.5,-398.5 343.5,-398.5 343.5,-410.5 343.5,-410.5 343.5,-416.5 337.5,-422.5 331.5,-422.5"/>
+<text text-anchor="middle" x="273" y="-407.9" font-family="Helvetica,sans-Serif" font-size="12.00">Exposure, limits and</text>
+<text text-anchor="middle" x="273" y="-394.9" font-family="Helvetica,sans-Serif" font-size="12.00">large exposures</text>
+</g>
+<g id="edge13" class="edge">
+<title>Snap&#45;&gt;Lim</title>
+<path fill="none" stroke="#4b5563" d="M204.22,-455.97C216.31,-447.09 231.22,-436.16 244.06,-426.74"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="245.6,-428.64 249.79,-422.53 242.7,-424.69 245.6,-428.64"/>
+</g>
+<g id="node12" class="node">
+<title>ECL</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M165,-353C165,-353 33,-353 33,-353 27,-353 21,-347 21,-341 21,-341 21,-316 21,-316 21,-310 27,-304 33,-304 33,-304 165,-304 165,-304 171,-304 177,-310 177,-316 177,-316 177,-341 177,-341 177,-347 171,-353 165,-353"/>
+<text text-anchor="middle" x="99" y="-338.4" font-family="Helvetica,sans-Serif" font-size="12.00">Day 4 to 5: ECL engine</text>
+<text text-anchor="middle" x="99" y="-325.4" font-family="Helvetica,sans-Serif" font-size="12.00">staging, scenarios,</text>
+<text text-anchor="middle" x="99" y="-312.4" font-family="Helvetica,sans-Serif" font-size="12.00">provisions</text>
+</g>
+<g id="edge14" class="edge">
+<title>Rate&#45;&gt;ECL</title>
+<path fill="none" stroke="#4b5563" d="M92.9,-379.68C93.66,-373.41 94.49,-366.56 95.29,-360"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="97.73,-360.27 96.14,-353.02 92.86,-359.68 97.73,-360.27"/>
+</g>
+<g id="node14" class="node">
+<title>RWA</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M222.5,-277C222.5,-277 51.5,-277 51.5,-277 45.5,-277 39.5,-271 39.5,-265 39.5,-265 39.5,-240 39.5,-240 39.5,-234 45.5,-228 51.5,-228 51.5,-228 222.5,-228 222.5,-228 228.5,-228 234.5,-234 234.5,-240 234.5,-240 234.5,-265 234.5,-265 234.5,-271 228.5,-277 222.5,-277"/>
+<text text-anchor="middle" x="137" y="-262.4" font-family="Helvetica,sans-Serif" font-size="12.00">Day 5 to 6: RWA engine</text>
+<text text-anchor="middle" x="137" y="-249.4" font-family="Helvetica,sans-Serif" font-size="12.00">uses provisions for</text>
+<text text-anchor="middle" x="137" y="-236.4" font-family="Helvetica,sans-Serif" font-size="12.00">net exposure and EL shortfall</text>
+</g>
+<g id="edge15" class="edge">
+<title>ECL&#45;&gt;RWA</title>
+<path fill="none" stroke="#4b5563" d="M111.23,-303.68C114.52,-297.28 118.12,-290.27 121.55,-283.58"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="123.9,-284.37 124.92,-277.02 119.54,-282.13 123.9,-284.37"/>
+</g>
+<g id="node15" class="node">
+<title>Rec</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M296,-201C296,-201 112,-201 112,-201 106,-201 100,-195 100,-189 100,-189 100,-164 100,-164 100,-158 106,-152 112,-152 112,-152 296,-152 296,-152 302,-152 308,-158 308,-164 308,-164 308,-189 308,-189 308,-195 302,-201 296,-201"/>
+<text text-anchor="middle" x="204" y="-186.4" font-family="Helvetica,sans-Serif" font-size="12.00">Day 6 to 7: reconciliations</text>
+<text text-anchor="middle" x="204" y="-173.4" font-family="Helvetica,sans-Serif" font-size="12.00">engine to engine, engine to GL,</text>
+<text text-anchor="middle" x="204" y="-160.4" font-family="Helvetica,sans-Serif" font-size="12.00">variance analysis</text>
+</g>
+<g id="edge16" class="edge">
+<title>Lim&#45;&gt;Rec</title>
+<path fill="none" stroke="#4b5563" d="M273.15,-386.22C272.83,-353.76 269.16,-282.09 245,-228 241.72,-220.66 237.09,-213.49 232.12,-206.98"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="233.78,-205.12 227.49,-201.19 229.95,-208.18 233.78,-205.12"/>
+</g>
+<g id="edge17" class="edge">
+<title>RWA&#45;&gt;Rec</title>
+<path fill="none" stroke="#4b5563" d="M158.57,-227.68C164.73,-220.88 171.5,-213.39 177.9,-206.33"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="179.82,-207.86 182.7,-201.02 176.19,-204.57 179.82,-207.86"/>
+</g>
+<g id="node16" class="node">
+<title>Sign</title>
+<path fill="#065f46" stroke="#065f46" d="M240.5,-125C240.5,-125 167.5,-125 167.5,-125 161.5,-125 155.5,-119 155.5,-113 155.5,-113 155.5,-88 155.5,-88 155.5,-82 161.5,-76 167.5,-76 167.5,-76 240.5,-76 240.5,-76 246.5,-76 252.5,-82 252.5,-88 252.5,-88 252.5,-113 252.5,-113 252.5,-119 246.5,-125 240.5,-125"/>
+<text text-anchor="middle" x="204" y="-110.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Sign&#45;off</text>
+<text text-anchor="middle" x="204" y="-97.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">risk, finance,</text>
+<text text-anchor="middle" x="204" y="-84.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">data owners</text>
+</g>
+<g id="edge18" class="edge">
+<title>Rec&#45;&gt;Sign</title>
+<path fill="none" stroke="#4b5563" d="M204,-151.68C204,-145.54 204,-138.85 204,-132.42"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="206.45,-132.02 204,-125.02 201.55,-132.02 206.45,-132.02"/>
+</g>
+<g id="node17" class="node">
+<title>Out</title>
+<path fill="#1f2937" stroke="#1f2937" d="M317.5,-49C317.5,-49 90.5,-49 90.5,-49 84.5,-49 78.5,-43 78.5,-37 78.5,-37 78.5,-12 78.5,-12 78.5,-6 84.5,0 90.5,0 90.5,0 317.5,0 317.5,0 323.5,0 329.5,-6 329.5,-12 329.5,-12 329.5,-37 329.5,-37 329.5,-43 323.5,-49 317.5,-49"/>
+<text text-anchor="middle" x="204" y="-34.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Day 8 to 10: management information</text>
+<text text-anchor="middle" x="204" y="-21.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Quarter&#45;end: regulatory returns</text>
+<text text-anchor="middle" x="204" y="-8.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">(deadlines vary)</text>
+</g>
+<g id="edge19" class="edge">
+<title>Sign&#45;&gt;Out</title>
+<path fill="none" stroke="#4b5563" d="M204,-75.68C204,-69.54 204,-62.85 204,-56.42"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="206.45,-56.02 204,-49.02 201.55,-56.02 206.45,-56.02"/>
+</g>
+</g>
+</svg>

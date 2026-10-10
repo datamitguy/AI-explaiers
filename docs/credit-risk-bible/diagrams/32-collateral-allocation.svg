@@ -1,0 +1,104 @@
+<svg width="100%"
+ viewBox="0.00 0.00 635.30 266.30" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 251.9)">
+<title>CollateralAllocation</title>
+<polygon fill="white" stroke="transparent" points="-14.4,14.4 -14.4,-251.9 620.9,-251.9 620.9,14.4 -14.4,14.4"/>
+<g id="clust1" class="cluster">
+<title>cluster_coll</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M46,-144.5C46,-144.5 548,-144.5 548,-144.5 554,-144.5 560,-150.5 560,-156.5 560,-156.5 560,-217.5 560,-217.5 560,-223.5 554,-229.5 548,-229.5 548,-229.5 46,-229.5 46,-229.5 40,-229.5 34,-223.5 34,-217.5 34,-217.5 34,-156.5 34,-156.5 34,-150.5 40,-144.5 46,-144.5"/>
+<text text-anchor="middle" x="297" y="-216.7" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#374151">Collateral items (what the bank holds)</text>
+</g>
+<g id="clust2" class="cluster">
+<title>cluster_fac</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M20,-8C20,-8 415,-8 415,-8 421,-8 427,-14 427,-20 427,-20 427,-68 427,-68 427,-74 421,-80 415,-80 415,-80 20,-80 20,-80 14,-80 8,-74 8,-68 8,-68 8,-20 8,-20 8,-14 14,-8 20,-8"/>
+<text text-anchor="middle" x="217.5" y="-67.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#374151">Facilities of Northwind Logistics Ltd</text>
+</g>
+<g id="node1" class="node">
+<title>C1</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M334,-201.5C334,-201.5 208,-201.5 208,-201.5 202,-201.5 196,-195.5 196,-189.5 196,-189.5 196,-164.5 196,-164.5 196,-158.5 202,-152.5 208,-152.5 208,-152.5 334,-152.5 334,-152.5 340,-152.5 346,-158.5 346,-164.5 346,-164.5 346,-189.5 346,-189.5 346,-195.5 340,-201.5 334,-201.5"/>
+<text text-anchor="middle" x="271" y="-186.9" font-family="Helvetica,sans-Serif" font-size="12.00">C1 Debenture over</text>
+<text text-anchor="middle" x="271" y="-173.9" font-family="Helvetica,sans-Serif" font-size="12.00">receivables and stock</text>
+<text text-anchor="middle" x="271" y="-160.9" font-family="Helvetica,sans-Serif" font-size="12.00">value 8.0m</text>
+</g>
+<g id="node4" class="node">
+<title>F1</title>
+<path fill="#1e3a8a" stroke="#1e3a8a" d="M274,-52C274,-52 160,-52 160,-52 154,-52 148,-46 148,-40 148,-40 148,-28 148,-28 148,-22 154,-16 160,-16 160,-16 274,-16 274,-16 280,-16 286,-22 286,-28 286,-28 286,-40 286,-40 286,-46 280,-52 274,-52"/>
+<text text-anchor="middle" x="217" y="-37.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">F1 Revolving facility</text>
+<text text-anchor="middle" x="217" y="-24.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">limit 10.0m</text>
+</g>
+<g id="edge1" class="edge">
+<title>C1&#45;&gt;F1</title>
+<path fill="none" stroke="#4b5563" d="M261.96,-152.4C251.98,-126.35 236.02,-84.66 226.04,-58.61"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="228.31,-57.68 223.52,-52.02 223.73,-59.43 228.31,-57.68"/>
+<text text-anchor="middle" x="262" y="-103" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> 4.5m</text>
+</g>
+<g id="node5" class="node">
+<title>F2</title>
+<path fill="#1e3a8a" stroke="#1e3a8a" d="M407.5,-52C407.5,-52 334.5,-52 334.5,-52 328.5,-52 322.5,-46 322.5,-40 322.5,-40 322.5,-28 322.5,-28 322.5,-22 328.5,-16 334.5,-16 334.5,-16 407.5,-16 407.5,-16 413.5,-16 419.5,-22 419.5,-28 419.5,-28 419.5,-40 419.5,-40 419.5,-46 413.5,-52 407.5,-52"/>
+<text text-anchor="middle" x="371" y="-37.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">F2 Term loan</text>
+<text text-anchor="middle" x="371" y="-24.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">4.0m</text>
+</g>
+<g id="edge2" class="edge">
+<title>C1&#45;&gt;F2</title>
+<path fill="none" stroke="#4b5563" d="M287.74,-152.4C306.37,-126.13 336.28,-83.95 354.73,-57.94"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="356.88,-59.14 358.93,-52.02 352.88,-56.31 356.88,-59.14"/>
+<text text-anchor="middle" x="341" y="-103" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> 2.5m</text>
+</g>
+<g id="node6" class="node">
+<title>F3</title>
+<path fill="#1e3a8a" stroke="#1e3a8a" d="M100,-52C100,-52 28,-52 28,-52 22,-52 16,-46 16,-40 16,-40 16,-28 16,-28 16,-22 22,-16 28,-16 28,-16 100,-16 100,-16 106,-16 112,-22 112,-28 112,-28 112,-40 112,-40 112,-46 106,-52 100,-52"/>
+<text text-anchor="middle" x="64" y="-37.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">F3 Overdraft</text>
+<text text-anchor="middle" x="64" y="-24.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">limit 1.0m</text>
+</g>
+<g id="edge3" class="edge">
+<title>C1&#45;&gt;F3</title>
+<path fill="none" stroke="#4b5563" d="M203.34,-152.4C171.72,-140.58 138.16,-126.66 125,-116.5 104.57,-100.72 87.59,-76.42 76.78,-58.45"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="78.74,-56.94 73.08,-52.15 74.51,-59.42 78.74,-56.94"/>
+<text text-anchor="middle" x="139" y="-103" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> 1.0m</text>
+</g>
+<g id="node2" class="node">
+<title>C2</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M147.5,-195C147.5,-195 54.5,-195 54.5,-195 48.5,-195 42.5,-189 42.5,-183 42.5,-183 42.5,-171 42.5,-171 42.5,-165 48.5,-159 54.5,-159 54.5,-159 147.5,-159 147.5,-159 153.5,-159 159.5,-165 159.5,-171 159.5,-171 159.5,-183 159.5,-183 159.5,-189 153.5,-195 147.5,-195"/>
+<text text-anchor="middle" x="101" y="-180.4" font-family="Helvetica,sans-Serif" font-size="12.00">C2 Cash deposit</text>
+<text text-anchor="middle" x="101" y="-167.4" font-family="Helvetica,sans-Serif" font-size="12.00">value 2.0m</text>
+</g>
+<g id="edge4" class="edge">
+<title>C2&#45;&gt;F1</title>
+<path fill="none" stroke="#065f46" d="M120.42,-158.96C132.94,-147.54 149.2,-131.83 162,-116.5 177.36,-98.11 192.41,-75.38 202.87,-58.61"/>
+<polygon fill="#065f46" stroke="#065f46" points="205.2,-59.51 206.79,-52.26 201.03,-56.93 205.2,-59.51"/>
+<text text-anchor="middle" x="193" y="-103" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#065f46"> 1.5m</text>
+</g>
+<g id="edge5" class="edge">
+<title>C2&#45;&gt;F3</title>
+<path fill="none" stroke="#065f46" d="M84.92,-158.77C75.67,-147.64 64.92,-132.31 60,-116.5 54.23,-97.97 55.78,-75.93 58.47,-59.44"/>
+<polygon fill="#065f46" stroke="#065f46" points="60.93,-59.61 59.77,-52.29 56.11,-58.74 60.93,-59.61"/>
+<text text-anchor="middle" x="74" y="-103" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#065f46"> 0.5m</text>
+</g>
+<g id="node3" class="node">
+<title>C3</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M540,-195C540,-195 394,-195 394,-195 388,-195 382,-189 382,-183 382,-183 382,-171 382,-171 382,-165 388,-159 394,-159 394,-159 540,-159 540,-159 546,-159 552,-165 552,-171 552,-171 552,-183 552,-183 552,-189 546,-195 540,-195"/>
+<text text-anchor="middle" x="467" y="-180.4" font-family="Helvetica,sans-Serif" font-size="12.00">C3 Warehouse mortgage</text>
+<text text-anchor="middle" x="467" y="-167.4" font-family="Helvetica,sans-Serif" font-size="12.00">value 6.0m</text>
+</g>
+<g id="edge6" class="edge">
+<title>C3&#45;&gt;F2</title>
+<path fill="none" stroke="#4b5563" d="M455.42,-158.99C438.27,-133.8 406.06,-86.49 386.76,-58.15"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="388.59,-56.48 382.62,-52.07 384.54,-59.23 388.59,-56.48"/>
+<text text-anchor="middle" x="454" y="-108.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> 4.0m</text>
+<text text-anchor="middle" x="454" y="-97.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> first charge</text>
+</g>
+<g id="node7" class="node">
+<title>S</title>
+<path fill="#6b7280" stroke="#6b7280" d="M594.5,-58.5C594.5,-58.5 467.5,-58.5 467.5,-58.5 461.5,-58.5 455.5,-52.5 455.5,-46.5 455.5,-46.5 455.5,-21.5 455.5,-21.5 455.5,-15.5 461.5,-9.5 467.5,-9.5 467.5,-9.5 594.5,-9.5 594.5,-9.5 600.5,-9.5 606.5,-15.5 606.5,-21.5 606.5,-21.5 606.5,-46.5 606.5,-46.5 606.5,-52.5 600.5,-58.5 594.5,-58.5"/>
+<text text-anchor="middle" x="531" y="-43.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Surplus 2.0m</text>
+<text text-anchor="middle" x="531" y="-30.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">unallocated, available</text>
+<text text-anchor="middle" x="531" y="-17.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">for future lending</text>
+</g>
+<g id="edge7" class="edge">
+<title>C3&#45;&gt;S</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M474.72,-158.99C485.25,-135.8 504.28,-93.88 517.27,-65.26"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="519.6,-66.03 520.27,-58.65 515.14,-64.01 519.6,-66.03"/>
+<text text-anchor="middle" x="517" y="-103" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> 2.0m</text>
+</g>
+</g>
+</svg>

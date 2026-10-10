@@ -344,6 +344,7 @@ Credit losses are not theoretical. A few episodes everyone in the industry knows
 
 ## Related notes
 
+- [[31 Settlement and Pre-Settlement Risk]] for settlement and pre-settlement risk side by side.
 - [[30 Operational Risk]] for operational risk, and how operational failures can turn into credit losses.
 - [[00 Start Here]]
 - [[29 Market Risk]] for market risk, the closest neighbour to credit risk.

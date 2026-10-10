@@ -1,0 +1,40 @@
+digraph MonthEndBatch {
+  graph [rankdir=TB, splines=true, nodesep=0.3, ranksep=0.35, fontname="Helvetica", fontsize=13, bgcolor="white", newrank=true, pad=0.2];
+  node  [shape=box, style="rounded,filled", fillcolor="#eef2ff", color="#6366f1", fontname="Helvetica", fontsize=12, margin="0.14,0.07"];
+  edge  [color="#4b5563", arrowsize=0.7, fontname="Helvetica", fontsize=10, fontcolor="#374151"];
+
+  Start [label="Day 0: month-end close\nsource systems finish\nend-of-day processing", fillcolor="#1f2937", fontcolor="white", color="#1f2937"];
+  Ext [label="Day 1: source extracts land\nloans, collateral, limits, ratings,\ntrades, FX rates, ledger"];
+  Land [label="Landing checks\nfile arrived, row counts,\ncontrol totals, schema"];
+  Q1 [label="All feeds\ncomplete?", shape=diamond, fillcolor="#fef3c7", color="#d97706"];
+  Chase [label="Chase source,\nrerun extract", fillcolor="#991b1b", fontcolor="white", color="#991b1b"];
+  Conf [label="Day 1 to 2: conform\nmap keys, apply reference data,\nconvert currencies"];
+  DQ [label="Day 2 to 3: data quality rules\nand GL reconciliation of balances"];
+  Q2 [label="Breaches within\ntolerance?", shape=diamond, fillcolor="#fef3c7", color="#d97706"];
+  Fix [label="Fix at source or log\nan approved adjustment", fillcolor="#991b1b", fontcolor="white", color="#991b1b"];
+  Snap [label="Curated month-end snapshot\nfrozen and versioned"];
+  Rate [label="Day 3 to 4: ratings and\nparameters assigned\n(PD, LGD, CCF by purpose)"];
+  ECL [label="Day 4 to 5: ECL engine\nstaging, scenarios,\nprovisions"];
+  Lim [label="Exposure, limits and\nlarge exposures"];
+  RWA [label="Day 5 to 6: RWA engine\nuses provisions for\nnet exposure and EL shortfall"];
+  Rec [label="Day 6 to 7: reconciliations\nengine to engine, engine to GL,\nvariance analysis"];
+  Sign [label="Sign-off\nrisk, finance,\ndata owners", fillcolor="#065f46", fontcolor="white", color="#065f46"];
+  Out [label="Day 8 to 10: management information\nQuarter-end: regulatory returns\n(deadlines vary)", fillcolor="#1f2937", fontcolor="white", color="#1f2937"];
+
+  Start -> Ext -> Land -> Q1;
+  Q1 -> Chase [label="no"];
+  Chase -> Land [constraint=false];
+  Q1 -> Conf [label="yes"];
+  Conf -> DQ -> Q2;
+  Q2 -> Fix [label="no"];
+  Fix -> DQ [constraint=false];
+  Q2 -> Snap [label="yes"];
+  Snap -> Rate;
+  Snap -> Lim;
+  Rate -> ECL -> RWA;
+  Lim -> Rec;
+  RWA -> Rec -> Sign -> Out;
+  {rank=same; Q1 Chase}
+  {rank=same; Q2 Fix}
+  {rank=same; Rate Lim}
+}

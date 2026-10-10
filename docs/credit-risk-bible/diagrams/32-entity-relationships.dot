@@ -1,0 +1,54 @@
+digraph EntityRelationships {
+  graph [rankdir=TB, splines=true, nodesep=0.3, ranksep=0.45, fontname="Helvetica", fontsize=13, bgcolor="white", newrank=true, pad=0.2];
+  node  [shape=box, style="rounded,filled", fillcolor="#eef2ff", color="#6366f1", fontname="Helvetica", fontsize=12, margin="0.14,0.07"];
+  edge  [color="#4b5563", arrowsize=0.7, fontname="Helvetica", fontsize=10, fontcolor="#374151"];
+
+  Ref [label="Reference data\nproducts, currencies, FX rates,\ncountries, industry codes", fillcolor="#6b7280", fontcolor="white", color="#6b7280"];
+  Snap [label="Time dimension\nas-of date, snapshot,\nvalid and knowledge time", fillcolor="#1f2937", fontcolor="white", color="#1f2937"];
+
+  Group [label="Group relationship\nparent, ultimate parent,\nconnected party, % owned"];
+  Party [label="Party (counterparty)\nLEI, internal IDs, KYC,\nsector, country", fillcolor="#1e3a8a", fontcolor="white", color="#1e3a8a"];
+  Fin [label="Financial statement\nspreads, statement date"];
+  Rating [label="Internal rating\ngrade, PD, date,\nmodel version, override"];
+  ExtR [label="External rating\nagency, grade, date"];
+
+  Fac [label="Facility (limit)\ncommitted amount, product,\ntenor, sub-limits", fillcolor="#1e3a8a", fontcolor="white", color="#1e3a8a"];
+  Prot [label="Guarantee or protection\nprovider, cover amount"];
+  Cov [label="Covenant\ntest, threshold, result"];
+  Param [label="Risk parameters\nLGD, CCF, EAD"];
+  Alloc [label="Collateral allocation\namount or % per\nfacility, rank", fillcolor="#fef3c7", color="#d97706"];
+  Coll [label="Collateral item\ntype, value,\nvaluation date"];
+
+  Exp [label="Exposure (drawdown, account)\noutstanding, undrawn, accrued\ninterest, fees, days past due", fillcolor="#1e3a8a", fontcolor="white", color="#1e3a8a"];
+
+  Prov [label="Provision and stage\nECL amount, stage"];
+  WO [label="Write-off and\nrecovery"];
+  RegC [label="Regulatory classification\nexposure class, approach,\nrisk weight, CRM eligibility", fillcolor="#065f46", fontcolor="white", color="#065f46"];
+
+  {rank=same; Ref Snap}
+  {rank=same; Party Group}
+  {rank=same; Fin Rating ExtR}
+  {rank=same; Fac Prot}
+  {rank=same; Cov Param Alloc Coll}
+  {rank=same; Prov WO RegC}
+
+  Ref -> Party [style=dotted, arrowhead=none, label=" codes"];
+  Snap -> Group [style=invis];
+  Party -> Group [label=" 1 to many"];
+  Party -> Fin [label=" 1 to many"];
+  Party -> Rating [label=" 1 to many"];
+  Party -> ExtR [label=" 0 to many"];
+  Rating -> Fac [style=invis];
+  Party -> Fac [label=" borrows under\n 1 to many"];
+  Prot -> Fac [label=" covers"];
+  ExtR -> Prot [style=invis];
+  Fac -> Cov [label=" 0 to many"];
+  Fac -> Param [label=" 1 to many"];
+  Fac -> Alloc [label=" many to\n many via"];
+  Coll -> Alloc [label=" via"];
+  Fac -> Exp [label=" drawn as\n 1 to many"];
+  Param -> Exp [style=invis];
+  Exp -> Prov [label=" 1 per period"];
+  Exp -> WO [label=" 0 to many"];
+  Exp -> RegC [label=" 1 per\n snapshot"];
+}

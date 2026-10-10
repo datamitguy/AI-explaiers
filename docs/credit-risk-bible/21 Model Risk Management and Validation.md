@@ -393,6 +393,7 @@ Model risk management is where the platform is most visibly part of the control 
 
 ## 16. Related notes
 
+- [[34 Delivering Change in a Regulated Risk Platform]] for testing and releasing model changes.
 - [[30 Operational Risk]] for how model risk sits within the wider operational risk framework.
 - [[10 Internal Ratings, Scorecards and PD Models]]: how the models being validated are built.
 - [[17 Provisioning and Expected Credit Loss - IFRS 9 and CECL]] and [[18 Regulatory Capital and Basel - the Short Version]]: the two biggest consumers of model output.

@@ -48,11 +48,13 @@ Letters: [A](#a) · [B](#b) · [C](#c) · [D](#d) · [E](#e) · [F](#f) · [G](#
 | Beneficiary | In a letter of credit or guarantee, the party who gets paid: usually the seller. | [[08 Trade Finance and Guarantees]] |
 | Bid bond | A guarantee that a company bidding for a contract will sign it if it wins. | [[08 Trade Finance and Guarantees]] |
 | Bilateral loan | A loan between one bank and one borrower. | [[04 Commercial and Corporate Lending]] |
+| Bitemporal data | Data that records both when a fact was true and when the bank knew it, so past reports can be reproduced exactly. | [[32 The Credit Risk Data Model]] |
 | Board risk committee | The board committee that oversees risk appetite and the risk function. | [[13 Credit Governance - Committees, Authorities and the Three Lines]] |
 | Borrowing base | The maximum a borrower can draw, recalculated from the current value of eligible collateral after advance rates. | [[06 Specialised Finance - Project, Object, Commodities, Real Estate]], [[04 Commercial and Corporate Lending]] |
 | Boundary event | An operational failure that causes a credit or market loss, such as unperfected security. Usually capitalised as credit or market risk but logged as an operational event. | [[30 Operational Risk]] |
 | Bridge loan | Short-term financing until permanent funding, such as a bond, is in place. | [[07 Leveraged and Acquisition Finance]] |
 | Buffer | Capital above the minimum. Using it restricts dividends and bonuses but does not close the bank. | [[18 Regulatory Capital and Basel - the Short Version]] |
+| Build versus buy | The choice between developing a system in-house and licensing a vendor product. | [[33 Platform Architecture and Vendor Landscape]] |
 | Bullet repayment | All the capital is repaid in one go at maturity. | [[04 Commercial and Corporate Lending]] |
 | Bureau (credit bureau) | A company that collects people's and companies' credit histories and sells reports and scores. | [[05 Retail Lending]] |
 | Business indicator (BI) | A measure of bank size from the income statement, the starting point for operational risk capital under Basel III. | [[30 Operational Risk]] |
@@ -77,10 +79,12 @@ Letters: [A](#a) · [B](#b) · [C](#c) · [D](#d) · [E](#e) · [F](#f) · [G](#
 | CECL (current expected credit loss) | The US accounting standard requiring lifetime expected losses from day one. | [[17 Provisioning and Expected Credit Loss - IFRS 9 and CECL]] |
 | CET1 (Common Equity Tier 1) | The highest-quality capital: ordinary shares plus retained earnings. | [[18 Regulatory Capital and Basel - the Short Version]] |
 | Champion-challenger | Testing a new credit strategy on a small share of applications against the current one. | [[05 Retail Lending]] |
+| Change advisory board (CAB) | The forum that approves releases into production. | [[34 Delivering Change in a Regulated Risk Platform]] |
 | Change of control clause | A covenant letting lenders demand repayment if the borrower's owner changes. | [[12 Loan Documentation, Covenants and Conditions]] |
 | Charge (fixed or floating) | A security interest over assets. Fixed attaches to specific assets; floating covers a changing pool and "crystallises" on default. | [[11 Collateral and Security]] |
 | Chief risk officer (CRO) | The executive who leads the independent risk function. | [[13 Credit Governance - Committees, Authorities and the Three Lines]] |
 | CLO (collateralised loan obligation) | A securitisation of leveraged loans sold in slices to investors. | [[07 Leveraged and Acquisition Finance]] |
+| CLS | The specialist bank that settles most large currency trades payment versus payment, removing settlement risk. | [[31 Settlement and Pre-Settlement Risk]] |
 | Club deal | A loan shared among a small group of banks that each know the borrower. | [[04 Commercial and Corporate Lending]] |
 | Collateral | Something pledged that the lender can sell if the borrower fails. | [[11 Collateral and Security]] |
 | Collections | The process of contacting customers who have missed payments to get them back on track. | [[05 Retail Lending]], [[16 Problem Loans, Restructuring and Recovery]] |
@@ -94,6 +98,8 @@ Letters: [A](#a) · [B](#b) · [C](#c) · [D](#d) · [E](#e) · [F](#f) · [G](#
 | Conditions subsequent | Things the borrower must deliver within a set time after drawing. | [[12 Loan Documentation, Covenants and Conditions]] |
 | Confirming bank | A second bank that adds its own promise to pay under a letter of credit. | [[08 Trade Finance and Guarantees]] |
 | Connected counterparties | Borrowers linked by control or economic dependence, treated as one for limits. | [[14 Risk Appetite, Limits and Concentration]] |
+| Consultation paper | A regulator's draft rules published for comment before final rules are issued. | [[35 Regulatory Landscape and Change Calendar]] |
+| Contingency funding plan | The bank's playbook for raising cash if funding dries up. | [[37 Liquidity Risk and Funding]] |
 | Correlation risk | The risk that borrowers fail together because they share a hidden common driver. | [[02 What Credit Risk Is]], [[14 Risk Appetite, Limits and Concentration]] |
 | Correspondent banking | One bank providing accounts and payment services to another, often across borders. | [[26 Sovereign, Bank and Country Risk]] |
 | Cost of funds | What it costs the bank to borrow the money it lends. | [[24 Pricing, RAROC and Return on Capital]] |
@@ -104,8 +110,10 @@ Letters: [A](#a) · [B](#b) · [C](#c) · [D](#d) · [E](#e) · [F](#f) · [G](#
 | Credit committee | The group that approves loans above a certain size or risk. | [[13 Credit Governance - Committees, Authorities and the Three Lines]] |
 | Credit default swap (CDS) | A contract paying out if a named borrower defaults. Its price signals market views of credit risk. | [[19 Counterparty Credit Risk and Derivatives]], [[15 Monitoring, Early Warning and Watchlist]] |
 | Credit memo / credit paper | The written analysis and recommendation presented for approval. | [[09 Credit Analysis - Reading a Borrower]] |
+| Credit portfolio management (CPM) | The function that manages the loan book as a portfolio, selling, hedging or insuring risk to keep it within appetite. | [[36 Credit Portfolio Management and Risk Transfer]] |
 | Credit risk | The risk a borrower does not pay back in full and on time. | [[02 What Credit Risk Is]] |
 | Credit spread | The extra interest a borrower pays above a risk-free rate, reflecting their credit risk. | [[02 What Credit Risk Is]] |
+| Critical data element (CDE) | A data field whose errors would materially affect risk numbers or reports, given extra quality controls. | [[32 The Credit Risk Data Model]] |
 | CRM (credit risk mitigation) | Collateral, guarantees and netting that reduce measured risk under Basel. | [[11 Collateral and Security]], [[basel-credit-risk-explained-simply]] |
 | Cross-default | An event of default triggered by the borrower defaulting on a different debt. | [[12 Loan Documentation, Covenants and Conditions]] |
 | CSA (credit support annex) | The part of a derivatives master agreement governing collateral. | [[19 Counterparty Credit Risk and Derivatives]] |
@@ -151,6 +159,7 @@ Letters: [A](#a) · [B](#b) · [C](#c) · [D](#d) · [E](#e) · [F](#f) · [G](#
 | ECL (expected credit loss) | The probability-weighted loss accountants require banks to provide for. | [[17 Provisioning and Expected Credit Loss - IFRS 9 and CECL]] |
 | Economic capital | The bank's own estimate of capital needed for its risks, as opposed to regulatory capital. | [[24 Pricing, RAROC and Return on Capital]] |
 | Effective interest rate (EIR) | The rate that discounts a loan's expected cash flows, including fees, exactly to its starting value. Used for interest income and to discount ECL. | [[ifrs9-explained-simply]] |
+| Encumbrance | Assets already pledged as collateral, so not available to raise cash. | [[37 Liquidity Risk and Funding]] |
 | End-user computing (EUC) | Spreadsheets and small tools built outside controlled IT, used in important processes. An operational risk. | [[30 Operational Risk]] |
 | Enforcement | Taking legal action to seize and sell security after default. | [[16 Problem Loans, Restructuring and Recovery]], [[11 Collateral and Security]] |
 | EPC contractor | Engineering, procurement and construction contractor that builds a project for a fixed price and date. | [[06 Specialised Finance - Project, Object, Commodities, Real Estate]] |
@@ -188,6 +197,7 @@ Letters: [A](#a) · [B](#b) · [C](#c) · [D](#d) · [E](#e) · [F](#f) · [G](#
 | Term | Meaning | Explained in |
 |---|---|---|
 | Gamma | How fast delta itself changes as the price moves. | [[29 Market Risk]] |
+| Gap analysis | Comparing what a new rule requires with what the bank does today, to size the work. | [[35 Regulatory Landscape and Change Calendar]] |
 | Gearing | Debt compared with equity. | [[09 Credit Analysis - Reading a Borrower]] |
 | General ledger | The bank's master accounting record, which risk numbers must reconcile to. | [[22 Credit Risk Data, Systems and BCBS 239]] |
 | Gini coefficient | A measure of how well a model ranks good borrowers from bad, from 0 (random) to 1 (perfect). | [[10 Internal Ratings, Scorecards and PD Models]], [[21 Model Risk Management and Validation]] |
@@ -206,6 +216,8 @@ Letters: [A](#a) · [B](#b) · [C](#c) · [D](#d) · [E](#e) · [F](#f) · [G](#
 | Hedging | Using a derivative to offset a risk. | [[19 Counterparty Credit Risk and Derivatives]] |
 | Herfindahl index | A single number measuring how concentrated a portfolio is. | [[14 Risk Appetite, Limits and Concentration]] |
 | Hire purchase | Buying a car or asset in instalments, owning it only after the last payment. | [[05 Retail Lending]] |
+| Horizon scanning | Watching for upcoming regulatory changes and assessing which apply to the bank. | [[35 Regulatory Landscape and Change Calendar]] |
+| HQLA (high-quality liquid assets) | Assets that can be turned into cash quickly at little loss even in a stress, used in the LCR. | [[37 Liquidity Risk and Funding]] |
 | Hurdle rate | The minimum return on capital a deal must earn. | [[24 Pricing, RAROC and Return on Capital]] |
 
 ## I
@@ -217,6 +229,7 @@ Letters: [A](#a) · [B](#b) · [C](#c) · [D](#d) · [E](#e) · [F](#f) · [G](#
 | IFRS 9 | The international accounting standard for financial instruments: classification, expected credit loss impairment, and hedge accounting. | [[17 Provisioning and Expected Credit Loss - IFRS 9 and CECL]], [[ifrs9-decision-tree]], [[ifrs9-explained-simply]] |
 | ILAAP (internal liquidity adequacy assessment process) | The liquidity equivalent of the ICAAP. | [[20 Stress Testing and ICAAP]] |
 | IMM (internal model method) | A bank's own simulation model for counterparty exposure, with regulatory approval. | [[19 Counterparty Credit Risk and Derivatives]] |
+| Impact analysis | Estimating how a change will move capital, provisions, limits or reports before building it. | [[34 Delivering Change in a Regulated Risk Platform]] |
 | Impact tolerance | The maximum disruption an important business service can suffer before causing intolerable harm. | [[30 Operational Risk]] |
 | Impairment | A reduction in the value of a loan in the accounts because of expected loss. | [[17 Provisioning and Expected Credit Loss - IFRS 9 and CECL]] |
 | Important business service | A service whose disruption would harm customers or markets, mapped and tested under operational resilience rules. | [[30 Operational Risk]] |
@@ -250,6 +263,8 @@ Letters: [A](#a) · [B](#b) · [C](#c) · [D](#d) · [E](#e) · [F](#f) · [G](#
 |---|---|---|
 | Large exposures | The Basel rule capping exposure to one counterparty group at 25% of Tier 1 capital. | [[14 Risk Appetite, Limits and Concentration]] |
 | LBO (leveraged buyout) | Buying a company using a lot of borrowed money, repaid from the company's cash flow. | [[07 Leveraged and Acquisition Finance]] |
+| LCR (liquidity coverage ratio) | High-quality liquid assets divided by net cash outflows over a 30-day stress. Must be at least 100%. | [[37 Liquidity Risk and Funding]] |
+| Legal entity identifier (LEI) | A global 20-character code that uniquely identifies a legal entity. | [[32 The Credit Risk Data Model]] |
 | Letter of comfort | A parent's non-binding statement of support for a subsidiary. Weak protection. | [[11 Collateral and Security]] |
 | Letter of credit (LC) | A bank's promise to pay a seller when they present correct documents. | [[08 Trade Finance and Guarantees]] |
 | Leverage | The amount of debt relative to earnings or equity. | [[07 Leveraged and Acquisition Finance]] |
@@ -262,6 +277,7 @@ Letters: [A](#a) · [B](#b) · [C](#c) · [D](#d) · [E](#e) · [F](#f) · [G](#
 | LLCR (loan life coverage ratio) | Present value of project cash flows over the loan's life divided by debt outstanding. | [[06 Specialised Finance - Project, Object, Commodities, Real Estate]] |
 | LMA (Loan Market Association) | The body that publishes standard loan documents used in Europe, the Middle East and Africa. | [[12 Loan Documentation, Covenants and Conditions]] |
 | Loan origination system | Software that captures applications and supports assessment and approval. | [[03 The Credit Lifecycle]], [[22 Credit Risk Data, Systems and BCBS 239]] |
+| Loan sale | Selling a loan, or part of it, to another lender in the secondary market. | [[36 Credit Portfolio Management and Risk Transfer]] |
 | Loan-to-income (LTI) | Mortgage size divided by the borrower's annual income. | [[05 Retail Lending]] |
 | Loss event | A recorded operational incident with its gross loss, recoveries and key dates. | [[30 Operational Risk]] |
 | Low credit risk exemption | An optional IFRS 9 shortcut letting roughly investment-grade exposures stay in stage 1 without a SICR test. | [[ifrs9-decision-tree]], [[ifrs9-explained-simply]] |
@@ -301,6 +317,7 @@ Letters: [A](#a) · [B](#b) · [C](#c) · [D](#d) · [E](#e) · [F](#f) · [G](#
 | Non-recourse | Lending repaid only from a specific asset or project, with no claim on the owners. | [[06 Specialised Finance - Project, Object, Commodities, Real Estate]] |
 | Nostro account | An account a bank holds with another bank, often in a foreign currency. | [[26 Sovereign, Bank and Country Risk]] |
 | NPL (non-performing loan) | A loan in default, more than 90 days past due or unlikely to be paid. | [[16 Problem Loans, Restructuring and Recovery]] |
+| NSFR (net stable funding ratio) | Available stable funding divided by required stable funding over one year. Must be at least 100%. | [[37 Liquidity Risk and Funding]] |
 
 ## O
 
@@ -321,6 +338,7 @@ Letters: [A](#a) · [B](#b) · [C](#c) · [D](#d) · [E](#e) · [F](#f) · [G](#
 
 | Term | Meaning | Explained in |
 |---|---|---|
+| Parallel run | Running a new calculation alongside the old one for several periods and explaining every difference before switching. | [[34 Delivering Change in a Regulated Risk Platform]] |
 | Pari passu | Ranking equally with other creditors. | [[12 Loan Documentation, Covenants and Conditions]] |
 | PD (probability of default) | The chance a borrower defaults in the next year. | [[02 What Credit Risk Is]], [[10 Internal Ratings, Scorecards and PD Models]] |
 | Perfection | The legal steps, such as registration, that make security valid against third parties. | [[11 Collateral and Security]] |
@@ -335,6 +353,7 @@ Letters: [A](#a) · [B](#b) · [C](#c) · [D](#d) · [E](#e) · [F](#f) · [G](#
 | POCI (purchased or originated credit-impaired) | An asset already credit-impaired when bought or made. Gets its own IFRS 9 treatment and never enters stage 1. | [[ifrs9-decision-tree]], [[ifrs9-explained-simply]] |
 | Point-in-time / through-the-cycle | Ratings that move with the economy / ratings that average across a full cycle. | [[10 Internal Ratings, Scorecards and PD Models]] |
 | Population stability index (PSI) | A measure of whether today's applicants look like those a model was built on. | [[21 Model Risk Management and Validation]] |
+| Pre-settlement risk | The risk a counterparty fails before a trade settles, while the contract has value to you. Another name for counterparty credit risk. | [[31 Settlement and Pre-Settlement Risk]] |
 | Project finance | Lending to a single project company, repaid only from the project's cash flows. | [[06 Specialised Finance - Project, Object, Commodities, Real Estate]] |
 | Provision | Money set aside in the accounts against expected credit losses. | [[17 Provisioning and Expected Credit Loss - IFRS 9 and CECL]] |
 | Provision matrix | A table of loss rates by days past due, used for trade receivables under the simplified approach. | [[ifrs9-explained-simply]] |
@@ -352,12 +371,14 @@ Letters: [A](#a) · [B](#b) · [C](#c) · [D](#d) · [E](#e) · [F](#f) · [G](#
 
 | Term | Meaning | Explained in |
 |---|---|---|
+| RACI | A chart showing who is responsible, accountable, consulted and informed for each task. | [[38 Platform Lead Toolkit - Runbooks, Metrics and Templates]] |
 | RAROC (risk-adjusted return on capital) | Risk-adjusted profit divided by the capital a deal uses. | [[24 Pricing, RAROC and Return on Capital]] |
 | Rating | A grade summarising a borrower's creditworthiness. | [[10 Internal Ratings, Scorecards and PD Models]] |
 | RCSA (risk and control self-assessment) | A structured review where a team rates its risks and how well its controls work. | [[30 Operational Risk]] |
 | Reconciliation | Proving two sets of numbers agree, such as risk outputs and the general ledger. | [[22 Credit Risk Data, Systems and BCBS 239]], [[23 Reporting - Regulatory Returns, Pillar 3 and Management Information]] |
 | Recovery rate | The share of a defaulted exposure eventually recovered. One minus LGD. | [[16 Problem Loans, Restructuring and Recovery]] |
 | Recovery risk | The risk of getting back less than expected after a default. Measured by loss given default. | [[02 What Credit Risk Is]], [[16 Problem Loans, Restructuring and Recovery]] |
+| Reference architecture | A standard layered blueprint of the systems a platform needs and how data flows between them. | [[33 Platform Architecture and Vendor Landscape]] |
 | Regulatory return | A standard report submitted to the regulator on a fixed timetable. | [[23 Reporting - Regulatory Returns, Pillar 3 and Management Information]] |
 | Repo (repurchase agreement) | Selling a security with a promise to buy it back. Economically a secured short-term loan. | [[19 Counterparty Credit Risk and Derivatives]] |
 | Representations and warranties | Statements of fact the borrower confirms in the loan agreement. | [[12 Loan Documentation, Covenants and Conditions]] |
@@ -371,6 +392,8 @@ Letters: [A](#a) · [B](#b) · [C](#c) · [D](#d) · [E](#e) · [F](#f) · [G](#
 | Risk weight | The percentage an exposure is multiplied by to reflect its risk. | [[18 Regulatory Capital and Basel - the Short Version]] |
 | Roll rate | The share of accounts moving from one delinquency bucket to the next each month. | [[05 Retail Lending]] |
 | RoRWA (return on risk-weighted assets) | Profit divided by risk-weighted assets. | [[24 Pricing, RAROC and Return on Capital]] |
+| Runbook | Step-by-step instructions for running or recovering a process, such as the quarter-end run. | [[38 Platform Lead Toolkit - Runbooks, Metrics and Templates]] |
+| Run-off rate | The share of a funding source or commitment assumed to leave in a stress. | [[37 Liquidity Risk and Funding]] |
 | RWA (risk-weighted assets) | Exposures multiplied by risk weights and added up. The base for capital ratios. | [[18 Regulatory Capital and Basel - the Short Version]] |
 
 ## S
@@ -389,9 +412,12 @@ Letters: [A](#a) · [B](#b) · [C](#c) · [D](#d) · [E](#e) · [F](#f) · [G](#
 | Security | A legal right over assets that secures repayment. | [[11 Collateral and Security]] |
 | Senior debt | Debt that ranks first for repayment. | [[04 Commercial and Corporate Lending]], [[07 Leveraged and Acquisition Finance]] |
 | Sensitivities-based method (SBM) | The core of the FRTB standardised approach: capital from delta, vega and curvature sensitivities. | [[29 Market Risk]] |
+| Service level objective (SLO) | A target for how a platform should perform, such as run completion time. | [[38 Platform Lead Toolkit - Runbooks, Metrics and Templates]] |
+| Settlement limit | A cap on the gross amount the bank will pay to one counterparty on one value date. | [[31 Settlement and Pre-Settlement Risk]] |
 | Settlement risk | The risk of paying your side of a deal and not receiving the other. | [[02 What Credit Risk Is]], [[19 Counterparty Credit Risk and Derivatives]] |
 | SFT (securities financing transaction) | Repos, securities lending and margin lending. | [[19 Counterparty Credit Risk and Derivatives]] |
 | SICR (significant increase in credit risk) | The IFRS 9 test that moves a loan from stage 1 to stage 2. | [[17 Provisioning and Expected Credit Loss - IFRS 9 and CECL]] |
+| Significant risk transfer (SRT) | Moving enough credit risk on a loan pool to investors that the regulator lets the bank hold less capital against it. | [[36 Credit Portfolio Management and Risk Transfer]] |
 | Simple approach | The Basel collateral method substituting the collateral's risk weight for the covered part. | [[11 Collateral and Security]] |
 | Simplified approach | The IFRS 9 approach for trade receivables, contract assets and leases: always lifetime ECL, no staging. | [[ifrs9-decision-tree]], [[ifrs9-explained-simply]] |
 | Single-name limit | A limit on exposure to one counterparty or group. | [[14 Risk Appetite, Limits and Concentration]] |
@@ -416,6 +442,7 @@ Letters: [A](#a) · [B](#b) · [C](#c) · [D](#d) · [E](#e) · [F](#f) · [G](#
 | Supply chain finance | A bank pays a supplier early against an approved invoice from a strong buyer. | [[08 Trade Finance and Guarantees]] |
 | Swap | An agreement to exchange one stream of payments for another. | [[19 Counterparty Credit Risk and Derivatives]] |
 | Syndicated loan | A large loan shared among many banks under one agreement. | [[04 Commercial and Corporate Lending]] |
+| Synthetic securitisation | Transferring a loan pool's credit risk with a guarantee or credit derivative while keeping the loans on the balance sheet. | [[36 Credit Portfolio Management and Risk Transfer]] |
 
 ## T
 
@@ -429,6 +456,8 @@ Letters: [A](#a) · [B](#b) · [C](#c) · [D](#d) · [E](#e) · [F](#f) · [G](#
 | Third-party risk | Risk from suppliers and outsourced services, such as a vendor calculation engine failing. | [[30 Operational Risk]] |
 | Three lines of defence | The model splitting risk ownership, oversight and assurance between business, risk and audit. | [[13 Credit Governance - Committees, Authorities and the Three Lines]] |
 | Tier 1 / Tier 2 | Capital quality layers. Tier 1 is CET1 plus AT1; Tier 2 is subordinated debt that absorbs losses on failure. | [[18 Regulatory Capital and Basel - the Short Version]] |
+| Traceability | Being able to link each requirement and test back to the regulatory paragraph it implements. | [[34 Delivering Change in a Regulated Risk Platform]] |
+| Trade date | The day a deal is agreed. Settlement follows on the value date, such as two business days later (T+2). | [[31 Settlement and Pre-Settlement Risk]] |
 | Trade finance | Banking products that help buyers and sellers trade safely across borders. | [[08 Trade Finance and Guarantees]] |
 | Trading book | Positions held to sell soon. Market risk rules apply. | [[29 Market Risk]], [[basel-credit-risk-explained-simply]] |
 | Tranche | One slice of a loan or securitisation with its own terms or ranking. | [[07 Leveraged and Acquisition Finance]] |
@@ -441,6 +470,7 @@ Letters: [A](#a) · [B](#b) · [C](#c) · [D](#d) · [E](#e) · [F](#f) · [G](#
 | Term | Meaning | Explained in |
 |---|---|---|
 | UCP 600 | The international rules governing documentary letters of credit. | [[08 Trade Finance and Guarantees]] |
+| Ultimate parent | The top company in a corporate group, used to aggregate exposure to the whole group. | [[32 The Credit Risk Data Model]] |
 | Uncommitted facility | A facility the bank can refuse to lend under at any time. | [[04 Commercial and Corporate Lending]] |
 | Underwriting | Assessing and accepting a credit risk; in syndication, committing to provide the full amount before selling down. | [[03 The Credit Lifecycle]], [[07 Leveraged and Acquisition Finance]] |
 | Unexpected loss | Losses above the expected average in a bad year. What capital is for. | [[02 What Credit Risk Is]] |
@@ -455,6 +485,7 @@ Letters: [A](#a) · [B](#b) · [C](#c) · [D](#d) · [E](#e) · [F](#f) · [G](#
 |---|---|---|
 | Validation | Independent review of whether a model is sound and works as intended. | [[21 Model Risk Management and Validation]] |
 | Valuation | An estimate of what collateral is worth, by a qualified valuer or an automated model. | [[11 Collateral and Security]] |
+| Value date | The day on which a trade's payments are actually exchanged. | [[31 Settlement and Pre-Settlement Risk]] |
 | VaR (value at risk) | The loss a portfolio should not exceed on, say, 99 days in 100 over a set horizon. | [[29 Market Risk]] |
 | Variation margin | Collateral exchanged daily to cover changes in a derivative's value. | [[19 Counterparty Credit Risk and Derivatives]] |
 | Vega | How much an option's value changes when expected volatility changes. | [[29 Market Risk]] |

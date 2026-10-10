@@ -286,6 +286,8 @@ Notice that all five checks were sums and ratios on data the bank already had. N
 
 ## 16. Related notes
 
+- [[31 Settlement and Pre-Settlement Risk]] for settlement and pre-settlement limits.
+- [[36 Credit Portfolio Management and Risk Transfer]] for reducing concentrations by selling or hedging.
 - [[02 What Credit Risk Is]] for expected and unexpected loss.
 - [[04 Commercial and Corporate Lending]] and [[07 Leveraged and Acquisition Finance]] for products with specific limits.
 - [[09 Credit Analysis - Reading a Borrower]] for identifying economic dependence.

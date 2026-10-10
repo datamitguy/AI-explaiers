@@ -272,6 +272,9 @@ Before a meeting with a specific team, read the note that matches their world: t
 
 ## Related notes
 
+- [[38 Platform Lead Toolkit - Runbooks, Metrics and Templates]] for copy-ready runbooks, templates and metrics.
+- [[34 Delivering Change in a Regulated Risk Platform]] for how to deliver change safely.
+- [[35 Regulatory Landscape and Change Calendar]] for the regulatory calendar behind your roadmap.
 - [[30 Operational Risk]] for the controls, incidents and resilience you will personally own.
 - [[00 Start Here]]
 - [[22 Credit Risk Data, Systems and BCBS 239]]

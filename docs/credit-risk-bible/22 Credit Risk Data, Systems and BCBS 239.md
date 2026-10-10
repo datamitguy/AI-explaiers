@@ -342,6 +342,8 @@ This whole note is your territory, so this section is about priorities and owner
 
 ## 15. Related notes
 
+- [[32 The Credit Risk Data Model]] for the entities, keys and critical data elements.
+- [[33 Platform Architecture and Vendor Landscape]] for the reference architecture and vendor landscape.
 - [[30 Operational Risk]] for incidents, change risk, end-user computing and resilience.
 - [[03 The Credit Lifecycle]]: where each piece of data is created.
 - [[10 Internal Ratings, Scorecards and PD Models]], [[11 Collateral and Security]] and [[14 Risk Appetite, Limits and Concentration]]: the three domains that cause the most data problems.
