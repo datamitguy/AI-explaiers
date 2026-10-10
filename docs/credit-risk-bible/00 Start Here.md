@@ -76,6 +76,11 @@ A bank lends out money that mostly belongs to its depositors. Some borrowers wil
 | [[22 Credit Risk Data, Systems and BCBS 239]] | The systems landscape, data domains, lineage, data quality, the regulatory principles for risk data. |
 | [[23 Reporting - Regulatory Returns, Pillar 3 and Management Information]] | Regulatory returns, public disclosures, board reporting, the production process and its controls. |
 | [[24 Pricing, RAROC and Return on Capital]] | How a loan is priced, risk-adjusted return on capital, why capital cost drives business decisions. |
+| [[32 The Credit Risk Data Model]] | The entities, keys, hierarchies and critical data elements a credit risk platform holds, traced from one loan to an RWA number. |
+| [[33 Platform Architecture and Vendor Landscape]] | A layered reference architecture, build versus buy, vendor categories, cloud, environments and non-functional requirements. |
+| [[34 Delivering Change in a Regulated Risk Platform]] | Turning regulation into requirements, impact analysis, testing calculation systems, parallel runs, release evidence. |
+| [[35 Regulatory Landscape and Change Calendar]] | Who the regulators are, how a global standard becomes local law, current programmes, and a regulatory change process. |
+| [[38 Platform Lead Toolkit - Runbooks, Metrics and Templates]] | Copy-ready runbooks, checklists, templates, RACIs and metrics for running the platform. |
 
 ### Wider risks
 
@@ -84,6 +89,9 @@ A bank lends out money that mostly belongs to its depositors. Some borrowers wil
 | [[25 Climate, ESG and Emerging Credit Risks]] | Physical and transition climate risk, environmental and social scoring, other emerging risks. |
 | [[26 Sovereign, Bank and Country Risk]] | Lending to governments and banks, country limits, transfer risk, bail-in, correspondent banking. |
 | [[30 Operational Risk]] | Losses from failed processes, people, systems and outside events: event types, controls, incidents, resilience and capital. |
+| [[31 Settlement and Pre-Settlement Risk]] | The trade-date to settlement-date timeline, why pre-settlement exposure is a fraction of the deal and settlement exposure is all of it, CLS, and the two limit types. |
+| [[36 Credit Portfolio Management and Risk Transfer]] | Managing the book as a portfolio: loan sales, credit hedges, guarantees, synthetic securitisation and risk transfer. |
+| [[37 Liquidity Risk and Funding]] | Liquidity versus solvency, LCR and NSFR, contingency funding, and how credit events become liquidity drains. |
 | [[29 Market Risk]] | The trading book side of risk: price moves, sensitivities, value at risk, expected shortfall, FRTB capital, limits and the daily risk process. |
 
 ### Orientation and reference

@@ -24,13 +24,15 @@ digraph VaultMap {
     N17 [label="17 Provisioning\nIFRS 9 and CECL"]; N18 [label="18 Regulatory Capital\nand Basel"];
     N19 [label="19 Counterparty Credit\nRisk and Derivatives"]; N20 [label="20 Stress Testing\nand ICAAP"];
     Basel [label="Basel decision tree\nand long explainer", fillcolor="#1e3a8a", fontcolor="white", color="#1e3a8a"];
+    IFRS [label="IFRS 9 decision trees\nand long explainer", fillcolor="#1e3a8a", fontcolor="white", color="#1e3a8a"];
   }
   subgraph cluster_f { label="Running the platform"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
     N21 [label="21 Model Risk\nand Validation"]; N22 [label="22 Data, Systems\nand BCBS 239"];
     N23 [label="23 Reporting"]; N24 [label="24 Pricing and RAROC"];
+    N32 [label="32 Credit Risk\nData Model"]; N33 [label="33 Architecture\nand Vendors"]; N34 [label="34 Delivering\nChange"]; N35 [label="35 Regulatory\nLandscape"]; N38 [label="38 Platform Lead\nToolkit", fillcolor="#065f46", fontcolor="white", color="#065f46"];
   }
   subgraph cluster_g { label="Wider risks"; style="rounded,dashed"; color="#9ca3af"; fontcolor="#374151";
-    N25 [label="25 Climate, ESG and\nEmerging Risks"]; N26 [label="26 Sovereign, Bank\nand Country Risk"]; N29 [label="29 Market Risk"]; N30 [label="30 Operational Risk"];
+    N25 [label="25 Climate, ESG and\nEmerging Risks"]; N26 [label="26 Sovereign, Bank\nand Country Risk"]; N29 [label="29 Market Risk"]; N30 [label="30 Operational Risk"]; N31 [label="31 Settlement and\nPre-Settlement Risk"]; N36 [label="36 Portfolio Management\nand Risk Transfer"]; N37 [label="37 Liquidity Risk\nand Funding"];
   }
   N27 [label="27 A Platform Lead's\nFirst 90 Days", fillcolor="#065f46", fontcolor="white", color="#065f46"];
   N28 [label="28 Master Glossary", fillcolor="#6b7280", fontcolor="white", color="#6b7280"];
@@ -42,10 +44,12 @@ digraph VaultMap {
   N13 -> N14 -> N15 -> N16 [style=invis];
   N08 -> N17 [style=invis]; N12 -> N17 [style=invis]; N16 -> N17;
   N17 -> N18 -> N19 -> N20 [style=invis];
-  N18 -> Basel;
+  N18 -> Basel; N17 -> IFRS;
   N20 -> N21 [style=invis];
-  N21 -> N22 -> N23 -> N24 [style=invis];
-  N24 -> N25 -> N26 -> N29 -> N30 [style=invis];
+  {rank=same; N21; N22;} {rank=same; N32; N33;} {rank=same; N23; N24;} {rank=same; N34; N35;}
+  N21 -> N32 -> N23 -> N34 -> N38 [style=invis]; N22 -> N33 -> N24 -> N35 [style=invis];
+  {rank=same; N25; N26;} {rank=same; N31; N36;} {rank=same; N29; N30;}
+  N38 -> N25 -> N31 -> N29 -> N37 [style=invis]; N26 -> N36 -> N30 [style=invis];
   N22 -> N27;
-  N30 -> N28 [style=invis];
+  N37 -> N28 [style=invis];
 }

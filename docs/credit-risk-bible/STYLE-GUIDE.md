@@ -51,6 +51,14 @@ This vault is written for someone who has just joined a bank as a platform lead 
 28 Master Glossary
 29 Market Risk
 30 Operational Risk
+31 Settlement and Pre-Settlement Risk
+32 The Credit Risk Data Model
+33 Platform Architecture and Vendor Landscape
+34 Delivering Change in a Regulated Risk Platform
+35 Regulatory Landscape and Change Calendar
+36 Credit Portfolio Management and Risk Transfer
+37 Liquidity Risk and Funding
+38 Platform Lead Toolkit - Runbooks, Metrics and Templates
 ```
 
 ## Diagrams (SVG)
