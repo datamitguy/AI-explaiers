@@ -1,0 +1,43 @@
+digraph LCR {
+  graph [rankdir=TB, splines=true, nodesep=0.3, ranksep=0.4, fontname="Helvetica", fontsize=13, bgcolor="white", newrank=true, pad=0.2];
+  node  [shape=box, style="rounded,filled", fillcolor="#eef2ff", color="#6366f1", fontname="Helvetica", fontsize=12, margin="0.16,0.08"];
+  edge  [color="#4b5563", arrowsize=0.7, fontname="Helvetica", fontsize=10, fontcolor="#374151"];
+
+  Bal [label="Balance sheet, commitments\nand derivatives on the\nreporting date", fillcolor="#1f2937", fontcolor="white", color="#1f2937"];
+
+  subgraph cluster_hqla {
+    label="Numerator: liquid assets"; style="dashed,rounded"; color="#9ca3af"; fontcolor="#374151"; fontsize=11;
+    Enc [label="Unencumbered?", shape=diamond, fillcolor="#fef3c7", color="#d97706"];
+    Out [label="Pledged assets\ndo not count", fillcolor="#6b7280", fontcolor="white", color="#6b7280"];
+    L1 [label="Level 1: cash, reserves,\n0% risk weight sovereigns\nno haircut"];
+    L2 [label="Level 2A: 15% haircut\nLevel 2B: 25% to 50% haircut"];
+    Caps [label="Caps: Level 2 at most 40%,\nLevel 2B at most 15%"];
+    HQLA [label="Stock of HQLA"];
+  }
+
+  subgraph cluster_flows {
+    label="Denominator: 30-day stressed flows"; style="dashed,rounded"; color="#9ca3af"; fontcolor="#374151"; fontsize=11;
+    Outf [label="Outflows = balance x run-off\ndeposits 5% to 100%,\nundrawn lines 5% to 40%,\ncollateral calls"];
+    Inf [label="Inflows = amount due x rate\nperforming loans 50%,\nbanks 100%"];
+    Cap75 [label="Inflows capped at\n75% of outflows"];
+    Net [label="Net cash outflows\n= outflows minus capped inflows"];
+  }
+
+  Ratio [label="LCR = HQLA / net outflows", fillcolor="#1f2937", fontcolor="white", color="#1f2937"];
+  Test [label="At least 100%?", shape=diamond, fillcolor="#fef3c7", color="#d97706"];
+  Pass [label="Compliant\n(plus internal buffer)", fillcolor="#065f46", fontcolor="white", color="#065f46"];
+  Fail [label="Breach: notify supervisor,\nrestoration plan", fillcolor="#991b1b", fontcolor="white", color="#991b1b"];
+
+  Bal -> Enc;
+  Enc -> Out [label="no"];
+  Enc -> L1 [label="yes"];
+  Enc -> L2 [label="yes"];
+  L1 -> HQLA; L2 -> Caps; Caps -> HQLA;
+  Bal -> Outf; Bal -> Inf;
+  Inf -> Cap75; Outf -> Cap75;
+  Outf -> Net; Cap75 -> Net;
+  HQLA -> Ratio; Net -> Ratio;
+  Ratio -> Test;
+  Test -> Pass [label="yes"];
+  Test -> Fail [label="no"];
+}

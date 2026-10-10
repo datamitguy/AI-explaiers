@@ -1,0 +1,203 @@
+<svg width="100%"
+ viewBox="0.00 0.00 858.80 675.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 661.4)">
+<title>LCR</title>
+<polygon fill="white" stroke="transparent" points="-14.4,14.4 -14.4,-661.4 844.4,-661.4 844.4,14.4 -14.4,14.4"/>
+<g id="clust1" class="cluster">
+<title>cluster_hqla</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M20,-206C20,-206 372,-206 372,-206 378,-206 384,-212 384,-218 384,-218 384,-546 384,-546 384,-552 378,-558 372,-558 372,-558 20,-558 20,-558 14,-558 8,-552 8,-546 8,-546 8,-218 8,-218 8,-212 14,-206 20,-206"/>
+<text text-anchor="middle" x="196" y="-545.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#374151">Numerator: liquid assets</text>
+</g>
+<g id="clust2" class="cluster">
+<title>cluster_flows</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M404,-274C404,-274 810,-274 810,-274 816,-274 822,-280 822,-286 822,-286 822,-560 822,-560 822,-566 816,-572 810,-572 810,-572 404,-572 404,-572 398,-572 392,-566 392,-560 392,-560 392,-286 392,-286 392,-280 398,-274 404,-274"/>
+<text text-anchor="middle" x="607" y="-559.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#374151">Denominator: 30&#45;day stressed flows</text>
+</g>
+<g id="node1" class="node">
+<title>Bal</title>
+<path fill="#1f2937" stroke="#1f2937" d="M586,-647C586,-647 410,-647 410,-647 404,-647 398,-641 398,-635 398,-635 398,-608 398,-608 398,-602 404,-596 410,-596 410,-596 586,-596 586,-596 592,-596 598,-602 598,-608 598,-608 598,-635 598,-635 598,-641 592,-647 586,-647"/>
+<text text-anchor="middle" x="498" y="-631.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Balance sheet, commitments</text>
+<text text-anchor="middle" x="498" y="-618.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">and derivatives on the</text>
+<text text-anchor="middle" x="498" y="-605.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">reporting date</text>
+</g>
+<g id="node2" class="node">
+<title>Enc</title>
+<path fill="#fef3c7" stroke="#d97706" d="M215.13,-528.23C215.13,-528.23 118.12,-513.77 118.12,-513.77 112.19,-512.88 112.19,-511.12 118.12,-510.23 118.12,-510.23 215.13,-495.77 215.13,-495.77 221.07,-494.88 232.93,-494.88 238.87,-495.77 238.87,-495.77 335.88,-510.23 335.88,-510.23 341.81,-511.12 341.81,-512.88 335.88,-513.77 335.88,-513.77 238.87,-528.23 238.87,-528.23 232.93,-529.12 221.07,-529.12 215.13,-528.23"/>
+<text text-anchor="middle" x="227" y="-508.9" font-family="Helvetica,sans-Serif" font-size="12.00">Unencumbered?</text>
+</g>
+<g id="edge1" class="edge">
+<title>Bal&#45;&gt;Enc</title>
+<path fill="none" stroke="#4b5563" d="M436.17,-595.97C383.42,-575.05 309.27,-545.63 264.89,-528.03"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="265.71,-525.72 258.3,-525.42 263.9,-530.27 265.71,-525.72"/>
+</g>
+<g id="node8" class="node">
+<title>Outf</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M584,-544C584,-544 412,-544 412,-544 406,-544 400,-538 400,-532 400,-532 400,-492 400,-492 400,-486 406,-480 412,-480 412,-480 584,-480 584,-480 590,-480 596,-486 596,-492 596,-492 596,-532 596,-532 596,-538 590,-544 584,-544"/>
+<text text-anchor="middle" x="498" y="-528.4" font-family="Helvetica,sans-Serif" font-size="12.00">Outflows = balance x run&#45;off</text>
+<text text-anchor="middle" x="498" y="-515.4" font-family="Helvetica,sans-Serif" font-size="12.00">deposits 5% to 100%,</text>
+<text text-anchor="middle" x="498" y="-502.4" font-family="Helvetica,sans-Serif" font-size="12.00">undrawn lines 5% to 40%,</text>
+<text text-anchor="middle" x="498" y="-489.4" font-family="Helvetica,sans-Serif" font-size="12.00">collateral calls</text>
+</g>
+<g id="edge8" class="edge">
+<title>Bal&#45;&gt;Outf</title>
+<path fill="none" stroke="#4b5563" d="M498,-595.84C498,-582.63 498,-566.06 498,-551.22"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="500.45,-551.1 498,-544.1 495.55,-551.1 500.45,-551.1"/>
+</g>
+<g id="node9" class="node">
+<title>Inf</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M802,-537.5C802,-537.5 630,-537.5 630,-537.5 624,-537.5 618,-531.5 618,-525.5 618,-525.5 618,-498.5 618,-498.5 618,-492.5 624,-486.5 630,-486.5 630,-486.5 802,-486.5 802,-486.5 808,-486.5 814,-492.5 814,-498.5 814,-498.5 814,-525.5 814,-525.5 814,-531.5 808,-537.5 802,-537.5"/>
+<text text-anchor="middle" x="716" y="-521.9" font-family="Helvetica,sans-Serif" font-size="12.00">Inflows = amount due x rate</text>
+<text text-anchor="middle" x="716" y="-508.9" font-family="Helvetica,sans-Serif" font-size="12.00">performing loans 50%,</text>
+<text text-anchor="middle" x="716" y="-495.9" font-family="Helvetica,sans-Serif" font-size="12.00">banks 100%</text>
+</g>
+<g id="edge9" class="edge">
+<title>Bal&#45;&gt;Inf</title>
+<path fill="none" stroke="#4b5563" d="M555.52,-595.9C572.25,-588.48 590.46,-580.14 607,-572 626.6,-562.35 647.8,-551.08 666.24,-540.98"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="667.43,-543.13 672.39,-537.61 665.07,-538.83 667.43,-543.13"/>
+</g>
+<g id="node3" class="node">
+<title>Out</title>
+<path fill="#6b7280" stroke="#6b7280" d="M118,-439C118,-439 28,-439 28,-439 22,-439 16,-433 16,-427 16,-427 16,-413 16,-413 16,-407 22,-401 28,-401 28,-401 118,-401 118,-401 124,-401 130,-407 130,-413 130,-413 130,-427 130,-427 130,-433 124,-439 118,-439"/>
+<text text-anchor="middle" x="73" y="-423.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Pledged assets</text>
+<text text-anchor="middle" x="73" y="-410.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">do not count</text>
+</g>
+<g id="edge2" class="edge">
+<title>Enc&#45;&gt;Out</title>
+<path fill="none" stroke="#4b5563" d="M187.35,-499.89C164.36,-492.29 135.59,-480.73 113,-465 104.9,-459.36 97.27,-451.79 90.89,-444.53"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="92.66,-442.83 86.26,-439.07 88.92,-445.99 92.66,-442.83"/>
+<text text-anchor="middle" x="119.5" y="-457" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151">no</text>
+</g>
+<g id="node4" class="node">
+<title>L1</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M232.5,-386C232.5,-386 77.5,-386 77.5,-386 71.5,-386 65.5,-380 65.5,-374 65.5,-374 65.5,-347 65.5,-347 65.5,-341 71.5,-335 77.5,-335 77.5,-335 232.5,-335 232.5,-335 238.5,-335 244.5,-341 244.5,-347 244.5,-347 244.5,-374 244.5,-374 244.5,-380 238.5,-386 232.5,-386"/>
+<text text-anchor="middle" x="155" y="-370.4" font-family="Helvetica,sans-Serif" font-size="12.00">Level 1: cash, reserves,</text>
+<text text-anchor="middle" x="155" y="-357.4" font-family="Helvetica,sans-Serif" font-size="12.00">0% risk weight sovereigns</text>
+<text text-anchor="middle" x="155" y="-344.4" font-family="Helvetica,sans-Serif" font-size="12.00">no haircut</text>
+</g>
+<g id="edge3" class="edge">
+<title>Enc&#45;&gt;L1</title>
+<path fill="none" stroke="#4b5563" d="M209.67,-496.34C195.16,-482.99 175.22,-461.9 165,-439 158.69,-424.86 156.02,-407.93 155,-393.5"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="157.43,-393.07 154.6,-386.22 152.54,-393.34 157.43,-393.07"/>
+<text text-anchor="middle" x="190" y="-457" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151">yes</text>
+</g>
+<g id="node5" class="node">
+<title>L2</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M364,-439C364,-439 188,-439 188,-439 182,-439 176,-433 176,-427 176,-427 176,-413 176,-413 176,-407 182,-401 188,-401 188,-401 364,-401 364,-401 370,-401 376,-407 376,-413 376,-413 376,-427 376,-427 376,-433 370,-439 364,-439"/>
+<text text-anchor="middle" x="276" y="-423.4" font-family="Helvetica,sans-Serif" font-size="12.00">Level 2A: 15% haircut</text>
+<text text-anchor="middle" x="276" y="-410.4" font-family="Helvetica,sans-Serif" font-size="12.00">Level 2B: 25% to 50% haircut</text>
+</g>
+<g id="edge4" class="edge">
+<title>Enc&#45;&gt;L2</title>
+<path fill="none" stroke="#4b5563" d="M235.76,-494.91C243.23,-481.2 254.08,-461.27 262.63,-445.56"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="264.94,-446.44 266.14,-439.12 260.64,-444.09 264.94,-446.44"/>
+<text text-anchor="middle" x="266" y="-457" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151">yes</text>
+</g>
+<g id="node7" class="node">
+<title>HQLA</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M319.5,-250C319.5,-250 232.5,-250 232.5,-250 226.5,-250 220.5,-244 220.5,-238 220.5,-238 220.5,-226 220.5,-226 220.5,-220 226.5,-214 232.5,-214 232.5,-214 319.5,-214 319.5,-214 325.5,-214 331.5,-220 331.5,-226 331.5,-226 331.5,-238 331.5,-238 331.5,-244 325.5,-250 319.5,-250"/>
+<text text-anchor="middle" x="276" y="-228.9" font-family="Helvetica,sans-Serif" font-size="12.00">Stock of HQLA</text>
+</g>
+<g id="edge5" class="edge">
+<title>L1&#45;&gt;HQLA</title>
+<path fill="none" stroke="#4b5563" d="M153.88,-334.72C154.35,-316.04 157.93,-290.84 172,-274 182.72,-261.16 198.01,-252.32 213.58,-246.24"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="214.52,-248.5 220.26,-243.8 212.84,-243.9 214.52,-248.5"/>
+</g>
+<g id="node6" class="node">
+<title>Caps</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M357.5,-320C357.5,-320 194.5,-320 194.5,-320 188.5,-320 182.5,-314 182.5,-308 182.5,-308 182.5,-294 182.5,-294 182.5,-288 188.5,-282 194.5,-282 194.5,-282 357.5,-282 357.5,-282 363.5,-282 369.5,-288 369.5,-294 369.5,-294 369.5,-308 369.5,-308 369.5,-314 363.5,-320 357.5,-320"/>
+<text text-anchor="middle" x="276" y="-304.4" font-family="Helvetica,sans-Serif" font-size="12.00">Caps: Level 2 at most 40%,</text>
+<text text-anchor="middle" x="276" y="-291.4" font-family="Helvetica,sans-Serif" font-size="12.00">Level 2B at most 15%</text>
+</g>
+<g id="edge6" class="edge">
+<title>L2&#45;&gt;Caps</title>
+<path fill="none" stroke="#4b5563" d="M276,-400.98C276,-381.28 276,-349.58 276,-327.37"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="278.45,-327.24 276,-320.24 273.55,-327.24 278.45,-327.24"/>
+</g>
+<g id="edge7" class="edge">
+<title>Caps&#45;&gt;HQLA</title>
+<path fill="none" stroke="#4b5563" d="M276,-281.69C276,-274.22 276,-265.46 276,-257.45"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="278.45,-257.36 276,-250.36 273.55,-257.36 278.45,-257.36"/>
+</g>
+<g id="node12" class="node">
+<title>Ratio</title>
+<path fill="#1f2937" stroke="#1f2937" d="M446,-182C446,-182 286,-182 286,-182 280,-182 274,-176 274,-170 274,-170 274,-158 274,-158 274,-152 280,-146 286,-146 286,-146 446,-146 446,-146 452,-146 458,-152 458,-158 458,-158 458,-170 458,-170 458,-176 452,-182 446,-182"/>
+<text text-anchor="middle" x="366" y="-160.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">LCR = HQLA / net outflows</text>
+</g>
+<g id="edge14" class="edge">
+<title>HQLA&#45;&gt;Ratio</title>
+<path fill="none" stroke="#4b5563" d="M299.65,-213.66C311.01,-205.32 324.75,-195.25 336.77,-186.44"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="338.32,-188.34 342.51,-182.22 335.42,-184.39 338.32,-188.34"/>
+</g>
+<g id="node10" class="node">
+<title>Cap75</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M639,-439C639,-439 533,-439 533,-439 527,-439 521,-433 521,-427 521,-427 521,-413 521,-413 521,-407 527,-401 533,-401 533,-401 639,-401 639,-401 645,-401 651,-407 651,-413 651,-413 651,-427 651,-427 651,-433 645,-439 639,-439"/>
+<text text-anchor="middle" x="586" y="-423.4" font-family="Helvetica,sans-Serif" font-size="12.00">Inflows capped at</text>
+<text text-anchor="middle" x="586" y="-410.4" font-family="Helvetica,sans-Serif" font-size="12.00">75% of outflows</text>
+</g>
+<g id="edge11" class="edge">
+<title>Outf&#45;&gt;Cap75</title>
+<path fill="none" stroke="#4b5563" d="M528.53,-479.77C539.96,-468.08 552.74,-455.02 563.34,-444.18"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="565.21,-445.77 568.35,-439.05 561.7,-442.34 565.21,-445.77"/>
+</g>
+<g id="node11" class="node">
+<title>Net</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M608.5,-320C608.5,-320 411.5,-320 411.5,-320 405.5,-320 399.5,-314 399.5,-308 399.5,-308 399.5,-294 399.5,-294 399.5,-288 405.5,-282 411.5,-282 411.5,-282 608.5,-282 608.5,-282 614.5,-282 620.5,-288 620.5,-294 620.5,-294 620.5,-308 620.5,-308 620.5,-314 614.5,-320 608.5,-320"/>
+<text text-anchor="middle" x="510" y="-304.4" font-family="Helvetica,sans-Serif" font-size="12.00">Net cash outflows</text>
+<text text-anchor="middle" x="510" y="-291.4" font-family="Helvetica,sans-Serif" font-size="12.00">= outflows minus capped inflows</text>
+</g>
+<g id="edge12" class="edge">
+<title>Outf&#45;&gt;Net</title>
+<path fill="none" stroke="#4b5563" d="M499.8,-479.71C502.18,-438.18 506.35,-365.65 508.54,-327.35"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="511,-327.3 508.96,-320.17 506.11,-327.02 511,-327.3"/>
+</g>
+<g id="edge10" class="edge">
+<title>Inf&#45;&gt;Cap75</title>
+<path fill="none" stroke="#4b5563" d="M680.48,-486.41C661.16,-473.03 637.44,-456.61 618.59,-443.57"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="619.56,-441.25 612.41,-439.28 616.77,-445.28 619.56,-441.25"/>
+</g>
+<g id="edge13" class="edge">
+<title>Cap75&#45;&gt;Net</title>
+<path fill="none" stroke="#4b5563" d="M574.29,-400.98C561.28,-380.94 540.19,-348.47 525.73,-326.22"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="527.71,-324.77 521.85,-320.24 523.61,-327.44 527.71,-324.77"/>
+</g>
+<g id="edge15" class="edge">
+<title>Net&#45;&gt;Ratio</title>
+<path fill="none" stroke="#4b5563" d="M490.58,-281.79C464.38,-257.23 417.76,-213.53 389.58,-187.11"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="390.99,-185.07 384.21,-182.07 387.64,-188.64 390.99,-185.07"/>
+</g>
+<g id="node13" class="node">
+<title>Test</title>
+<path fill="#fef3c7" stroke="#d97706" d="M354.15,-113.08C354.15,-113.08 266.75,-98.92 266.75,-98.92 260.83,-97.96 260.83,-96.04 266.75,-95.08 266.75,-95.08 354.15,-80.92 354.15,-80.92 360.08,-79.96 371.92,-79.96 377.85,-80.92 377.85,-80.92 465.25,-95.08 465.25,-95.08 471.17,-96.04 471.17,-97.96 465.25,-98.92 465.25,-98.92 377.85,-113.08 377.85,-113.08 371.92,-114.04 360.08,-114.04 354.15,-113.08"/>
+<text text-anchor="middle" x="366" y="-93.9" font-family="Helvetica,sans-Serif" font-size="12.00">At least 100%?</text>
+</g>
+<g id="edge16" class="edge">
+<title>Ratio&#45;&gt;Test</title>
+<path fill="none" stroke="#4b5563" d="M366,-145.92C366,-138.81 366,-130.42 366,-122.66"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="368.45,-122.19 366,-115.19 363.55,-122.19 368.45,-122.19"/>
+</g>
+<g id="node14" class="node">
+<title>Pass</title>
+<path fill="#065f46" stroke="#065f46" d="M335,-38C335,-38 213,-38 213,-38 207,-38 201,-32 201,-26 201,-26 201,-12 201,-12 201,-6 207,0 213,0 213,0 335,0 335,0 341,0 347,-6 347,-12 347,-12 347,-26 347,-26 347,-32 341,-38 335,-38"/>
+<text text-anchor="middle" x="274" y="-22.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Compliant</text>
+<text text-anchor="middle" x="274" y="-9.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">(plus internal buffer)</text>
+</g>
+<g id="edge17" class="edge">
+<title>Test&#45;&gt;Pass</title>
+<path fill="none" stroke="#4b5563" d="M348.7,-81.7C335.44,-70.75 316.88,-55.43 301.58,-42.79"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="303.07,-40.84 296.11,-38.27 299.95,-44.61 303.07,-40.84"/>
+<text text-anchor="middle" x="334" y="-56" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151">yes</text>
+</g>
+<g id="node15" class="node">
+<title>Fail</title>
+<path fill="#991b1b" stroke="#991b1b" d="M534.5,-38C534.5,-38 381.5,-38 381.5,-38 375.5,-38 369.5,-32 369.5,-26 369.5,-26 369.5,-12 369.5,-12 369.5,-6 375.5,0 381.5,0 381.5,0 534.5,0 534.5,0 540.5,0 546.5,-6 546.5,-12 546.5,-12 546.5,-26 546.5,-26 546.5,-32 540.5,-38 534.5,-38"/>
+<text text-anchor="middle" x="458" y="-22.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Breach: notify supervisor,</text>
+<text text-anchor="middle" x="458" y="-9.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">restoration plan</text>
+</g>
+<g id="edge18" class="edge">
+<title>Test&#45;&gt;Fail</title>
+<path fill="none" stroke="#4b5563" d="M383.3,-81.7C396.56,-70.75 415.12,-55.43 430.42,-42.79"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="432.05,-44.61 435.89,-38.27 428.93,-40.84 432.05,-44.61"/>
+<text text-anchor="middle" x="423.5" y="-56" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151">no</text>
+</g>
+</g>
+</svg>

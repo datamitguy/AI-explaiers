@@ -1,0 +1,33 @@
+digraph Metrics {
+  graph [rankdir=TB, splines=true, nodesep=0.25, ranksep=0.45, fontname="Helvetica", fontsize=13, bgcolor="white", newrank=true, pad=0.2];
+  node  [shape=box, style="rounded,filled", fillcolor="#eef2ff", color="#6366f1", fontname="Helvetica", fontsize=12, margin="0.14,0.08"];
+  edge  [color="#4b5563", arrowsize=0.7, fontname="Helvetica", fontsize=10, fontcolor="#374151"];
+
+  Goal [label="Business outcome:\ntrusted, timely credit risk numbers\nat a sustainable cost", fillcolor="#1f2937", fontcolor="white", color="#1f2937"];
+
+  Timely [label="Timely", fillcolor="#065f46", fontcolor="white", color="#065f46"];
+  Accurate [label="Accurate", fillcolor="#065f46", fontcolor="white", color="#065f46"];
+  Controlled [label="Controlled", fillcolor="#065f46", fontcolor="white", color="#065f46"];
+  Adaptable [label="Adaptable", fillcolor="#065f46", fontcolor="white", color="#065f46"];
+
+  T1 [label="Run completion\nvs deadline"];
+  T2 [label="Submissions\non time"];
+  T3 [label="Mean time\nto restore"];
+  A1 [label="First-time-right\nrate"];
+  A2 [label="Data quality\npass rate"];
+  A3 [label="Open\nreconciliation breaks"];
+  C1 [label="Manual adjustments\ncount and value"];
+  C2 [label="Open and overdue\naudit findings"];
+  X1 [label="Change failure\nrate"];
+  X2 [label="Regulatory changes\ndelivered on time"];
+
+  Goal -> Timely; Goal -> Accurate; Goal -> Controlled; Goal -> Adaptable;
+  Timely -> T1; T1 -> T2 [style=invis]; T2 -> T3 [style=invis];
+  Timely -> T2 [constraint=false]; Timely -> T3 [constraint=false];
+  Accurate -> A1; A1 -> A2 [style=invis]; A2 -> A3 [style=invis];
+  Accurate -> A2 [constraint=false]; Accurate -> A3 [constraint=false];
+  Controlled -> C1; C1 -> C2 [style=invis];
+  Controlled -> C2 [constraint=false];
+  Adaptable -> X1; X1 -> X2 [style=invis];
+  Adaptable -> X2 [constraint=false];
+}

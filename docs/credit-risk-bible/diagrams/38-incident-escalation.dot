@@ -1,0 +1,31 @@
+digraph Escalation {
+  graph [rankdir=TB, splines=true, nodesep=0.35, ranksep=0.4, fontname="Helvetica", fontsize=13, bgcolor="white", newrank=true, pad=0.2];
+  node  [shape=box, style="rounded,filled", fillcolor="#eef2ff", color="#6366f1", fontname="Helvetica", fontsize=12, margin="0.16,0.08"];
+  edge  [color="#4b5563", arrowsize=0.7, fontname="Helvetica", fontsize=10, fontcolor="#374151"];
+
+  Start [label="Alert, failed job, break\nor user report", fillcolor="#1f2937", fontcolor="white", color="#1f2937"];
+  Triage [label="Triage: what output is affected\nand how close is its deadline?"];
+  Window [label="Inside quarter-end\nwindow?", shape=diamond, fillcolor="#fef3c7", color="#d97706"];
+  Up [label="Raise severity\nby one level"];
+  Sev [label="Severity 1 or 2?", shape=diamond, fillcolor="#fef3c7", color="#d97706"];
+  Queue [label="Severity 3 or 4:\nticket queue, next day\nor backlog", fillcolor="#6b7280", fontcolor="white", color="#6b7280"];
+  Bridge [label="Major incident bridge\ncontain: pause, fix data,\ncall vendor"];
+  Notify [label="Notify owners: credit risk,\nfinance, regulatory reporting;\nCRO and CFO for severity 1"];
+  Pub [label="Submitted or published\nnumber wrong?", shape=diamond, fillcolor="#fef3c7", color="#d97706"];
+  Comp [label="Compliance decides on\nregulator notification;\nplan resubmission", fillcolor="#991b1b", fontcolor="white", color="#991b1b"];
+  Fix [label="Fix, re-run, reconcile\nand verify outputs"];
+  Review [label="Incident report within days:\nroot cause and actions"];
+  OpRisk [label="Assess and log with\noperational risk", fillcolor="#065f46", fontcolor="white", color="#065f46"];
+
+  Start -> Triage -> Window;
+  Window -> Up [label="yes"];
+  Window -> Sev [label="no"];
+  Up -> Sev;
+  Sev -> Queue [label="no"];
+  Sev -> Bridge [label="yes"];
+  Bridge -> Notify -> Pub;
+  Pub -> Comp [label="yes"];
+  Pub -> Fix [label="no"];
+  Comp -> Fix;
+  Fix -> Review -> OpRisk;
+}

@@ -1,0 +1,160 @@
+<svg width="100%"
+ viewBox="0.00 0.00 637.80 789.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 775.4)">
+<title>LiqSolv</title>
+<polygon fill="white" stroke="transparent" points="-14.4,14.4 -14.4,-775.4 623.4,-775.4 623.4,14.4 -14.4,14.4"/>
+<g id="clust1" class="cluster">
+<title>cluster_loop</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M93,-62C93,-62 270,-62 270,-62 276,-62 282,-68 282,-74 282,-74 282,-373 282,-373 282,-379 276,-385 270,-385 270,-385 93,-385 93,-385 87,-385 81,-379 81,-373 81,-373 81,-74 81,-74 81,-68 87,-62 93,-62"/>
+<text text-anchor="middle" x="181.5" y="-372.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#374151">The doom loop</text>
+</g>
+<g id="node1" class="node">
+<title>Start</title>
+<path fill="#1f2937" stroke="#1f2937" d="M422,-761C422,-761 274,-761 274,-761 268,-761 262,-755 262,-749 262,-749 262,-737 262,-737 262,-731 268,-725 274,-725 274,-725 422,-725 422,-725 428,-725 434,-731 434,-737 434,-737 434,-749 434,-749 434,-755 428,-761 422,-761"/>
+<text text-anchor="middle" x="348" y="-739.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">A bank on any given day</text>
+</g>
+<g id="node2" class="node">
+<title>Q1</title>
+<path fill="#fef3c7" stroke="#d97706" d="M336.41,-690.88C336.41,-690.88 218.59,-659.12 218.59,-659.12 212.79,-657.56 212.79,-654.44 218.59,-652.88 218.59,-652.88 336.41,-621.12 336.41,-621.12 342.21,-619.56 353.79,-619.56 359.59,-621.12 359.59,-621.12 477.41,-652.88 477.41,-652.88 483.21,-654.44 483.21,-657.56 477.41,-659.12 477.41,-659.12 359.59,-690.88 359.59,-690.88 353.79,-692.44 342.21,-692.44 336.41,-690.88"/>
+<text text-anchor="middle" x="348" y="-659.4" font-family="Helvetica,sans-Serif" font-size="12.00">Solvency: do assets</text>
+<text text-anchor="middle" x="348" y="-646.4" font-family="Helvetica,sans-Serif" font-size="12.00">exceed liabilities?</text>
+</g>
+<g id="edge1" class="edge">
+<title>Start&#45;&gt;Q1</title>
+<path fill="none" stroke="#4b5563" d="M348,-724.8C348,-717.9 348,-709.61 348,-701.22"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="350.45,-701.19 348,-694.19 345.55,-701.19 350.45,-701.19"/>
+</g>
+<g id="node3" class="node">
+<title>Q2a</title>
+<path fill="#fef3c7" stroke="#d97706" d="M224.34,-574.18C224.34,-574.18 90.66,-541.82 90.66,-541.82 84.83,-540.41 84.83,-537.59 90.66,-536.18 90.66,-536.18 224.34,-503.82 224.34,-503.82 230.17,-502.41 241.83,-502.41 247.66,-503.82 247.66,-503.82 381.34,-536.18 381.34,-536.18 387.17,-537.59 387.17,-540.41 381.34,-541.82 381.34,-541.82 247.66,-574.18 247.66,-574.18 241.83,-575.59 230.17,-575.59 224.34,-574.18"/>
+<text text-anchor="middle" x="236" y="-542.4" font-family="Helvetica,sans-Serif" font-size="12.00">Liquidity: enough cash</text>
+<text text-anchor="middle" x="236" y="-529.4" font-family="Helvetica,sans-Serif" font-size="12.00">for what falls due?</text>
+</g>
+<g id="edge2" class="edge">
+<title>Q1&#45;&gt;Q2a</title>
+<path fill="none" stroke="#4b5563" d="M319.45,-625.68C304.54,-610.38 286.19,-591.53 270.49,-575.42"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="271.92,-573.37 265.28,-570.06 268.41,-576.79 271.92,-573.37"/>
+<text text-anchor="middle" x="304" y="-595" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151">yes</text>
+</g>
+<g id="node4" class="node">
+<title>Q2b</title>
+<path fill="#fef3c7" stroke="#d97706" d="M440.34,-373.18C440.34,-373.18 306.66,-340.82 306.66,-340.82 300.83,-339.41 300.83,-336.59 306.66,-335.18 306.66,-335.18 440.34,-302.82 440.34,-302.82 446.17,-301.41 457.83,-301.41 463.66,-302.82 463.66,-302.82 597.34,-335.18 597.34,-335.18 603.17,-336.59 603.17,-339.41 597.34,-340.82 597.34,-340.82 463.66,-373.18 463.66,-373.18 457.83,-374.59 446.17,-374.59 440.34,-373.18"/>
+<text text-anchor="middle" x="452" y="-341.4" font-family="Helvetica,sans-Serif" font-size="12.00">Liquidity: enough cash</text>
+<text text-anchor="middle" x="452" y="-328.4" font-family="Helvetica,sans-Serif" font-size="12.00">for what falls due?</text>
+</g>
+<g id="edge3" class="edge">
+<title>Q1&#45;&gt;Q2b</title>
+<path fill="none" stroke="#4b5563" d="M375.17,-625.14C386.32,-611.39 398.38,-594.29 406,-577 434.23,-512.95 445.2,-431.67 449.41,-382.58"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="451.86,-382.75 449.99,-375.57 446.97,-382.35 451.86,-382.75"/>
+<text text-anchor="middle" x="442.5" y="-478" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151">no</text>
+</g>
+<g id="node5" class="node">
+<title>Healthy</title>
+<path fill="#065f46" stroke="#065f46" d="M118,-453.5C118,-453.5 12,-453.5 12,-453.5 6,-453.5 0,-447.5 0,-441.5 0,-441.5 0,-427.5 0,-427.5 0,-421.5 6,-415.5 12,-415.5 12,-415.5 118,-415.5 118,-415.5 124,-415.5 130,-421.5 130,-427.5 130,-427.5 130,-441.5 130,-441.5 130,-447.5 124,-453.5 118,-453.5"/>
+<text text-anchor="middle" x="65" y="-437.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Solvent and liquid</text>
+<text text-anchor="middle" x="65" y="-424.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">business as usual</text>
+</g>
+<g id="edge4" class="edge">
+<title>Q2a&#45;&gt;Healthy</title>
+<path fill="none" stroke="#4b5563" d="M191.96,-511.6C163.84,-494.75 127.81,-473.15 101.33,-457.28"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="102.42,-455.07 95.15,-453.57 99.9,-459.27 102.42,-455.07"/>
+<text text-anchor="middle" x="154" y="-478" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151">yes</text>
+</g>
+<g id="node6" class="node">
+<title>Illiquid</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M304.5,-460C304.5,-460 167.5,-460 167.5,-460 161.5,-460 155.5,-454 155.5,-448 155.5,-448 155.5,-421 155.5,-421 155.5,-415 161.5,-409 167.5,-409 167.5,-409 304.5,-409 304.5,-409 310.5,-409 316.5,-415 316.5,-421 316.5,-421 316.5,-448 316.5,-448 316.5,-454 310.5,-460 304.5,-460"/>
+<text text-anchor="middle" x="236" y="-444.4" font-family="Helvetica,sans-Serif" font-size="12.00">Solvent but illiquid</text>
+<text text-anchor="middle" x="236" y="-431.4" font-family="Helvetica,sans-Serif" font-size="12.00">central bank can lend</text>
+<text text-anchor="middle" x="236" y="-418.4" font-family="Helvetica,sans-Serif" font-size="12.00">against good collateral</text>
+</g>
+<g id="edge5" class="edge">
+<title>Q2a&#45;&gt;Illiquid</title>
+<path fill="none" stroke="#4b5563" d="M236,-501C236,-490 236,-478.05 236,-467.41"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="238.45,-467.28 236,-460.28 233.55,-467.28 238.45,-467.28"/>
+<text text-anchor="middle" x="242.5" y="-478" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151">no</text>
+</g>
+<g id="node7" class="node">
+<title>Zombie</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M438.5,-259C438.5,-259 311.5,-259 311.5,-259 305.5,-259 299.5,-253 299.5,-247 299.5,-247 299.5,-220 299.5,-220 299.5,-214 305.5,-208 311.5,-208 311.5,-208 438.5,-208 438.5,-208 444.5,-208 450.5,-214 450.5,-220 450.5,-220 450.5,-247 450.5,-247 450.5,-253 444.5,-259 438.5,-259"/>
+<text text-anchor="middle" x="375" y="-243.4" font-family="Helvetica,sans-Serif" font-size="12.00">Insolvent but liquid</text>
+<text text-anchor="middle" x="375" y="-230.4" font-family="Helvetica,sans-Serif" font-size="12.00">looks fine until losses</text>
+<text text-anchor="middle" x="375" y="-217.4" font-family="Helvetica,sans-Serif" font-size="12.00">are recognised</text>
+</g>
+<g id="edge6" class="edge">
+<title>Q2b&#45;&gt;Zombie</title>
+<path fill="none" stroke="#4b5563" d="M428.48,-305.69C418.74,-292.72 407.48,-277.74 397.81,-264.87"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="399.66,-263.25 393.5,-259.12 395.74,-266.19 399.66,-263.25"/>
+<text text-anchor="middle" x="420" y="-277" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151">yes</text>
+</g>
+<g id="node8" class="node">
+<title>Dead</title>
+<path fill="#991b1b" stroke="#991b1b" d="M401,-38C401,-38 279,-38 279,-38 273,-38 267,-32 267,-26 267,-26 267,-12 267,-12 267,-6 273,0 279,0 279,0 401,0 401,0 407,0 413,-6 413,-12 413,-12 413,-26 413,-26 413,-32 407,-38 401,-38"/>
+<text text-anchor="middle" x="340" y="-22.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Insolvent and illiquid</text>
+<text text-anchor="middle" x="340" y="-9.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">resolution or rescue</text>
+</g>
+<g id="edge7" class="edge">
+<title>Q2b&#45;&gt;Dead</title>
+<path fill="none" stroke="#4b5563" d="M470.28,-304.37C479.6,-284.74 489,-258.91 489,-234.5 489,-234.5 489,-234.5 489,-88 489,-53.48 455.49,-36.41 420.25,-28"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="420.56,-25.56 413.19,-26.43 419.49,-30.34 420.56,-25.56"/>
+<text text-anchor="middle" x="495.5" y="-155.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151">no</text>
+</g>
+<g id="node9" class="node">
+<title>Fire</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M258,-357C258,-357 146,-357 146,-357 140,-357 134,-351 134,-345 134,-345 134,-331 134,-331 134,-325 140,-319 146,-319 146,-319 258,-319 258,-319 264,-319 270,-325 270,-331 270,-331 270,-345 270,-345 270,-351 264,-357 258,-357"/>
+<text text-anchor="middle" x="202" y="-341.4" font-family="Helvetica,sans-Serif" font-size="12.00">Fire sales of assets</text>
+<text text-anchor="middle" x="202" y="-328.4" font-family="Helvetica,sans-Serif" font-size="12.00">at a discount</text>
+</g>
+<g id="edge8" class="edge">
+<title>Illiquid&#45;&gt;Fire</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M227.07,-408.67C222.11,-394.89 215.96,-377.79 210.99,-363.98"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="213.19,-362.85 208.51,-357.09 208.57,-364.51 213.19,-362.85"/>
+</g>
+<g id="node11" class="node">
+<title>Rumour</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M235.5,-177C235.5,-177 100.5,-177 100.5,-177 94.5,-177 88.5,-171 88.5,-165 88.5,-165 88.5,-151 88.5,-151 88.5,-145 94.5,-139 100.5,-139 100.5,-139 235.5,-139 235.5,-139 241.5,-139 247.5,-145 247.5,-151 247.5,-151 247.5,-165 247.5,-165 247.5,-171 241.5,-177 235.5,-177"/>
+<text text-anchor="middle" x="168" y="-161.4" font-family="Helvetica,sans-Serif" font-size="12.00">Rumours of losses</text>
+<text text-anchor="middle" x="168" y="-148.4" font-family="Helvetica,sans-Serif" font-size="12.00">or a rating downgrade</text>
+</g>
+<g id="edge9" class="edge">
+<title>Zombie&#45;&gt;Rumour</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M305.78,-207.92C279.79,-198.69 250.53,-188.31 225.69,-179.48"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="226.23,-177.07 218.81,-177.04 224.59,-181.69 226.23,-177.07"/>
+</g>
+<g id="node10" class="node">
+<title>Loss</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M230.5,-251.5C230.5,-251.5 123.5,-251.5 123.5,-251.5 117.5,-251.5 111.5,-245.5 111.5,-239.5 111.5,-239.5 111.5,-227.5 111.5,-227.5 111.5,-221.5 117.5,-215.5 123.5,-215.5 123.5,-215.5 230.5,-215.5 230.5,-215.5 236.5,-215.5 242.5,-221.5 242.5,-227.5 242.5,-227.5 242.5,-239.5 242.5,-239.5 242.5,-245.5 236.5,-251.5 230.5,-251.5"/>
+<text text-anchor="middle" x="177" y="-230.4" font-family="Helvetica,sans-Serif" font-size="12.00">Losses eat capital</text>
+</g>
+<g id="edge10" class="edge">
+<title>Fire&#45;&gt;Loss</title>
+<path fill="none" stroke="#4b5563" d="M197.53,-318.68C193.44,-301.9 187.36,-276.96 182.87,-258.58"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="185.22,-257.86 181.18,-251.64 180.46,-259.02 185.22,-257.86"/>
+</g>
+<g id="edge11" class="edge">
+<title>Loss&#45;&gt;Rumour</title>
+<path fill="none" stroke="#4b5563" d="M174.91,-215.45C173.78,-206.24 172.37,-194.68 171.11,-184.42"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="173.52,-183.89 170.23,-177.24 168.65,-184.49 173.52,-183.89"/>
+</g>
+<g id="node12" class="node">
+<title>Run</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M261.5,-108C261.5,-108 122.5,-108 122.5,-108 116.5,-108 110.5,-102 110.5,-96 110.5,-96 110.5,-82 110.5,-82 110.5,-76 116.5,-70 122.5,-70 122.5,-70 261.5,-70 261.5,-70 267.5,-70 273.5,-76 273.5,-82 273.5,-82 273.5,-96 273.5,-96 273.5,-102 267.5,-108 261.5,-108"/>
+<text text-anchor="middle" x="192" y="-92.4" font-family="Helvetica,sans-Serif" font-size="12.00">Depositors and lenders</text>
+<text text-anchor="middle" x="192" y="-79.4" font-family="Helvetica,sans-Serif" font-size="12.00">withdraw: a run</text>
+</g>
+<g id="edge12" class="edge">
+<title>Rumour&#45;&gt;Run</title>
+<path fill="none" stroke="#4b5563" d="M174.56,-138.69C177.15,-131.45 180.17,-123.02 182.97,-115.22"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="185.4,-115.7 185.45,-108.29 180.78,-114.05 185.4,-115.7"/>
+</g>
+<g id="edge14" class="edge">
+<title>Run&#45;&gt;Dead</title>
+<path fill="none" stroke="#991b1b" stroke-dasharray="5,2" d="M231.27,-69.96C250.67,-61.04 274.18,-50.24 294.37,-40.96"/>
+<polygon fill="#991b1b" stroke="#991b1b" points="295.46,-43.16 300.8,-38.01 293.42,-38.71 295.46,-43.16"/>
+</g>
+<g id="edge13" class="edge">
+<title>Run&#45;&gt;Fire</title>
+<path fill="none" stroke="#4b5563" d="M229.95,-108.22C241.78,-115.94 253.43,-126.18 260,-139 284.33,-186.51 272.24,-208.48 255,-259 248.18,-278.97 234.8,-298.6 223.18,-313.18"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="221.2,-311.73 218.67,-318.7 225,-314.83 221.2,-311.73"/>
+</g>
+</g>
+</svg>

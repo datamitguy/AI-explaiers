@@ -1,0 +1,164 @@
+<svg width="100%"
+ viewBox="0.00 0.00 762.30 357.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 343.4)">
+<title>Metrics</title>
+<polygon fill="white" stroke="transparent" points="-14.4,14.4 -14.4,-343.4 747.9,-343.4 747.9,14.4 -14.4,14.4"/>
+<g id="node1" class="node">
+<title>Goal</title>
+<path fill="#1f2937" stroke="#1f2937" d="M422.5,-329C422.5,-329 219.5,-329 219.5,-329 213.5,-329 207.5,-323 207.5,-317 207.5,-317 207.5,-290 207.5,-290 207.5,-284 213.5,-278 219.5,-278 219.5,-278 422.5,-278 422.5,-278 428.5,-278 434.5,-284 434.5,-290 434.5,-290 434.5,-317 434.5,-317 434.5,-323 428.5,-329 422.5,-329"/>
+<text text-anchor="middle" x="321" y="-313.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Business outcome:</text>
+<text text-anchor="middle" x="321" y="-300.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">trusted, timely credit risk numbers</text>
+<text text-anchor="middle" x="321" y="-287.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">at a sustainable cost</text>
+</g>
+<g id="node2" class="node">
+<title>Timely</title>
+<path fill="#065f46" stroke="#065f46" d="M188,-246C188,-246 152,-246 152,-246 146,-246 140,-240 140,-234 140,-234 140,-222 140,-222 140,-216 146,-210 152,-210 152,-210 188,-210 188,-210 194,-210 200,-216 200,-222 200,-222 200,-234 200,-234 200,-240 194,-246 188,-246"/>
+<text text-anchor="middle" x="170" y="-224.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Timely</text>
+</g>
+<g id="edge1" class="edge">
+<title>Goal&#45;&gt;Timely</title>
+<path fill="none" stroke="#4b5563" d="M270.3,-277.82C249.36,-267.63 225.56,-256.04 206.4,-246.72"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="207.46,-244.51 200.09,-243.65 205.31,-248.91 207.46,-244.51"/>
+</g>
+<g id="node3" class="node">
+<title>Accurate</title>
+<path fill="#065f46" stroke="#065f46" d="M298.5,-246C298.5,-246 247.5,-246 247.5,-246 241.5,-246 235.5,-240 235.5,-234 235.5,-234 235.5,-222 235.5,-222 235.5,-216 241.5,-210 247.5,-210 247.5,-210 298.5,-210 298.5,-210 304.5,-210 310.5,-216 310.5,-222 310.5,-222 310.5,-234 310.5,-234 310.5,-240 304.5,-246 298.5,-246"/>
+<text text-anchor="middle" x="273" y="-224.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Accurate</text>
+</g>
+<g id="edge2" class="edge">
+<title>Goal&#45;&gt;Accurate</title>
+<path fill="none" stroke="#4b5563" d="M304.75,-277.62C299.37,-269.39 293.42,-260.27 288.13,-252.17"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="290.12,-250.73 284.24,-246.21 286.01,-253.41 290.12,-250.73"/>
+</g>
+<g id="node4" class="node">
+<title>Controlled</title>
+<path fill="#065f46" stroke="#065f46" d="M459.5,-246C459.5,-246 402.5,-246 402.5,-246 396.5,-246 390.5,-240 390.5,-234 390.5,-234 390.5,-222 390.5,-222 390.5,-216 396.5,-210 402.5,-210 402.5,-210 459.5,-210 459.5,-210 465.5,-210 471.5,-216 471.5,-222 471.5,-222 471.5,-234 471.5,-234 471.5,-240 465.5,-246 459.5,-246"/>
+<text text-anchor="middle" x="431" y="-224.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Controlled</text>
+</g>
+<g id="edge3" class="edge">
+<title>Goal&#45;&gt;Controlled</title>
+<path fill="none" stroke="#4b5563" d="M357.93,-277.82C371.34,-268.86 386.36,-258.82 399.28,-250.19"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="400.98,-252 405.44,-246.08 398.26,-247.93 400.98,-252"/>
+</g>
+<g id="node5" class="node">
+<title>Adaptable</title>
+<path fill="#065f46" stroke="#065f46" d="M630.5,-246C630.5,-246 573.5,-246 573.5,-246 567.5,-246 561.5,-240 561.5,-234 561.5,-234 561.5,-222 561.5,-222 561.5,-216 567.5,-210 573.5,-210 573.5,-210 630.5,-210 630.5,-210 636.5,-210 642.5,-216 642.5,-222 642.5,-222 642.5,-234 642.5,-234 642.5,-240 636.5,-246 630.5,-246"/>
+<text text-anchor="middle" x="602" y="-224.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Adaptable</text>
+</g>
+<g id="edge4" class="edge">
+<title>Goal&#45;&gt;Adaptable</title>
+<path fill="none" stroke="#4b5563" d="M414.96,-277.92C461.82,-265.67 516.47,-251.37 554.55,-241.41"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="555.31,-243.74 561.46,-239.6 554.07,-239 555.31,-243.74"/>
+</g>
+<g id="node6" class="node">
+<title>T1</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M102,-178C102,-178 12,-178 12,-178 6,-178 0,-172 0,-166 0,-166 0,-152 0,-152 0,-146 6,-140 12,-140 12,-140 102,-140 102,-140 108,-140 114,-146 114,-152 114,-152 114,-166 114,-166 114,-172 108,-178 102,-178"/>
+<text text-anchor="middle" x="57" y="-162.4" font-family="Helvetica,sans-Serif" font-size="12.00">Run completion</text>
+<text text-anchor="middle" x="57" y="-149.4" font-family="Helvetica,sans-Serif" font-size="12.00">vs deadline</text>
+</g>
+<g id="edge5" class="edge">
+<title>Timely&#45;&gt;T1</title>
+<path fill="none" stroke="#4b5563" d="M141.19,-209.92C126.89,-201.44 109.44,-191.09 94.14,-182.02"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="95.01,-179.69 87.73,-178.22 92.51,-183.9 95.01,-179.69"/>
+</g>
+<g id="node7" class="node">
+<title>T2</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M92,-108C92,-108 22,-108 22,-108 16,-108 10,-102 10,-96 10,-96 10,-82 10,-82 10,-76 16,-70 22,-70 22,-70 92,-70 92,-70 98,-70 104,-76 104,-82 104,-82 104,-96 104,-96 104,-102 98,-108 92,-108"/>
+<text text-anchor="middle" x="57" y="-92.4" font-family="Helvetica,sans-Serif" font-size="12.00">Submissions</text>
+<text text-anchor="middle" x="57" y="-79.4" font-family="Helvetica,sans-Serif" font-size="12.00">on time</text>
+</g>
+<g id="edge8" class="edge">
+<title>Timely&#45;&gt;T2</title>
+<path fill="none" stroke="#4b5563" d="M163.4,-209.99C155.63,-191.43 141.44,-161.5 123,-140 114.16,-129.69 102.85,-120.18 92.1,-112.28"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="93.33,-110.14 86.21,-108.06 90.47,-114.13 93.33,-110.14"/>
+</g>
+<g id="node8" class="node">
+<title>T3</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M87,-38C87,-38 27,-38 27,-38 21,-38 15,-32 15,-26 15,-26 15,-12 15,-12 15,-6 21,0 27,0 27,0 87,0 87,0 93,0 99,-6 99,-12 99,-12 99,-26 99,-26 99,-32 93,-38 87,-38"/>
+<text text-anchor="middle" x="57" y="-22.4" font-family="Helvetica,sans-Serif" font-size="12.00">Mean time</text>
+<text text-anchor="middle" x="57" y="-9.4" font-family="Helvetica,sans-Serif" font-size="12.00">to restore</text>
+</g>
+<g id="edge9" class="edge">
+<title>Timely&#45;&gt;T3</title>
+<path fill="none" stroke="#4b5563" d="M167.43,-209.94C164.44,-192.12 158.75,-163.53 150,-140 137.73,-107.02 134.69,-97.71 113,-70 105.28,-60.13 95.46,-50.63 86.21,-42.6"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="87.77,-40.71 80.84,-38.05 84.6,-44.45 87.77,-40.71"/>
+</g>
+<g id="node9" class="node">
+<title>A1</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M305.5,-178C305.5,-178 220.5,-178 220.5,-178 214.5,-178 208.5,-172 208.5,-166 208.5,-166 208.5,-152 208.5,-152 208.5,-146 214.5,-140 220.5,-140 220.5,-140 305.5,-140 305.5,-140 311.5,-140 317.5,-146 317.5,-152 317.5,-152 317.5,-166 317.5,-166 317.5,-172 311.5,-178 305.5,-178"/>
+<text text-anchor="middle" x="263" y="-162.4" font-family="Helvetica,sans-Serif" font-size="12.00">First&#45;time&#45;right</text>
+<text text-anchor="middle" x="263" y="-149.4" font-family="Helvetica,sans-Serif" font-size="12.00">rate</text>
+</g>
+<g id="edge10" class="edge">
+<title>Accurate&#45;&gt;A1</title>
+<path fill="none" stroke="#4b5563" d="M270.42,-209.75C269.33,-202.38 268.02,-193.64 266.81,-185.55"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="269.2,-184.93 265.74,-178.37 264.35,-185.65 269.2,-184.93"/>
+</g>
+<g id="node10" class="node">
+<title>A2</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M297.5,-108C297.5,-108 228.5,-108 228.5,-108 222.5,-108 216.5,-102 216.5,-96 216.5,-96 216.5,-82 216.5,-82 216.5,-76 222.5,-70 228.5,-70 228.5,-70 297.5,-70 297.5,-70 303.5,-70 309.5,-76 309.5,-82 309.5,-82 309.5,-96 309.5,-96 309.5,-102 303.5,-108 297.5,-108"/>
+<text text-anchor="middle" x="263" y="-92.4" font-family="Helvetica,sans-Serif" font-size="12.00">Data quality</text>
+<text text-anchor="middle" x="263" y="-79.4" font-family="Helvetica,sans-Serif" font-size="12.00">pass rate</text>
+</g>
+<g id="edge13" class="edge">
+<title>Accurate&#45;&gt;A2</title>
+<path fill="none" stroke="#4b5563" d="M299.38,-209.91C309.72,-201.65 320.43,-190.74 326,-178 332.77,-162.53 333.35,-155.21 326,-140 320.72,-129.07 311.76,-119.8 302.23,-112.32"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="303.66,-110.32 296.58,-108.12 300.74,-114.26 303.66,-110.32"/>
+</g>
+<g id="node11" class="node">
+<title>A3</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M323,-38C323,-38 203,-38 203,-38 197,-38 191,-32 191,-26 191,-26 191,-12 191,-12 191,-6 197,0 203,0 203,0 323,0 323,0 329,0 335,-6 335,-12 335,-12 335,-26 335,-26 335,-32 329,-38 323,-38"/>
+<text text-anchor="middle" x="263" y="-22.4" font-family="Helvetica,sans-Serif" font-size="12.00">Open</text>
+<text text-anchor="middle" x="263" y="-9.4" font-family="Helvetica,sans-Serif" font-size="12.00">reconciliation breaks</text>
+</g>
+<g id="edge14" class="edge">
+<title>Accurate&#45;&gt;A3</title>
+<path fill="none" stroke="#4b5563" d="M310.56,-209.94C323.23,-202.13 335.94,-191.55 343,-178 350.8,-163.02 345.88,-156.64 343,-140 337.36,-107.45 336.32,-97.49 318,-70 311.3,-59.95 302.15,-50.57 293.24,-42.71"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="294.66,-40.7 287.74,-38.02 291.47,-44.42 294.66,-40.7"/>
+</g>
+<g id="node12" class="node">
+<title>C1</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M541.5,-178C541.5,-178 424.5,-178 424.5,-178 418.5,-178 412.5,-172 412.5,-166 412.5,-166 412.5,-152 412.5,-152 412.5,-146 418.5,-140 424.5,-140 424.5,-140 541.5,-140 541.5,-140 547.5,-140 553.5,-146 553.5,-152 553.5,-152 553.5,-166 553.5,-166 553.5,-172 547.5,-178 541.5,-178"/>
+<text text-anchor="middle" x="483" y="-162.4" font-family="Helvetica,sans-Serif" font-size="12.00">Manual adjustments</text>
+<text text-anchor="middle" x="483" y="-149.4" font-family="Helvetica,sans-Serif" font-size="12.00">count and value</text>
+</g>
+<g id="edge15" class="edge">
+<title>Controlled&#45;&gt;C1</title>
+<path fill="none" stroke="#4b5563" d="M444.39,-209.75C450.45,-201.93 457.73,-192.56 464.31,-184.08"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="466.39,-185.4 468.74,-178.37 462.52,-182.4 466.39,-185.4"/>
+</g>
+<g id="node13" class="node">
+<title>C2</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M537,-108C537,-108 429,-108 429,-108 423,-108 417,-102 417,-96 417,-96 417,-82 417,-82 417,-76 423,-70 429,-70 429,-70 537,-70 537,-70 543,-70 549,-76 549,-82 549,-82 549,-96 549,-96 549,-102 543,-108 537,-108"/>
+<text text-anchor="middle" x="483" y="-92.4" font-family="Helvetica,sans-Serif" font-size="12.00">Open and overdue</text>
+<text text-anchor="middle" x="483" y="-79.4" font-family="Helvetica,sans-Serif" font-size="12.00">audit findings</text>
+</g>
+<g id="edge17" class="edge">
+<title>Controlled&#45;&gt;C2</title>
+<path fill="none" stroke="#4b5563" d="M471.58,-223.77C502.03,-218.97 541.79,-207.13 562,-178 571.63,-164.12 570.15,-154.79 562,-140 555.66,-128.48 545.42,-119.25 534.39,-112"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="535.44,-109.77 528.2,-108.18 532.87,-113.94 535.44,-109.77"/>
+</g>
+<g id="node14" class="node">
+<title>X1</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M706,-178C706,-178 622,-178 622,-178 616,-178 610,-172 610,-166 610,-166 610,-152 610,-152 610,-146 616,-140 622,-140 622,-140 706,-140 706,-140 712,-140 718,-146 718,-152 718,-152 718,-166 718,-166 718,-172 712,-178 706,-178"/>
+<text text-anchor="middle" x="664" y="-162.4" font-family="Helvetica,sans-Serif" font-size="12.00">Change failure</text>
+<text text-anchor="middle" x="664" y="-149.4" font-family="Helvetica,sans-Serif" font-size="12.00">rate</text>
+</g>
+<g id="edge18" class="edge">
+<title>Adaptable&#45;&gt;X1</title>
+<path fill="none" stroke="#4b5563" d="M617.97,-209.75C625.34,-201.78 634.2,-192.2 642.17,-183.59"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="644.05,-185.17 647,-178.37 640.45,-181.84 644.05,-185.17"/>
+</g>
+<g id="node15" class="node">
+<title>X2</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M721.5,-108C721.5,-108 606.5,-108 606.5,-108 600.5,-108 594.5,-102 594.5,-96 594.5,-96 594.5,-82 594.5,-82 594.5,-76 600.5,-70 606.5,-70 606.5,-70 721.5,-70 721.5,-70 727.5,-70 733.5,-76 733.5,-82 733.5,-82 733.5,-96 733.5,-96 733.5,-102 727.5,-108 721.5,-108"/>
+<text text-anchor="middle" x="664" y="-92.4" font-family="Helvetica,sans-Serif" font-size="12.00">Regulatory changes</text>
+<text text-anchor="middle" x="664" y="-79.4" font-family="Helvetica,sans-Serif" font-size="12.00">delivered on time</text>
+</g>
+<g id="edge20" class="edge">
+<title>Adaptable&#45;&gt;X2</title>
+<path fill="none" stroke="#4b5563" d="M642.59,-222.88C671.42,-217.6 708.22,-205.54 727,-178 736.52,-164.05 734.35,-155.21 727,-140 721.72,-129.07 712.76,-119.8 703.23,-112.32"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="704.66,-110.32 697.58,-108.12 701.74,-114.26 704.66,-110.32"/>
+</g>
+</g>
+</svg>

@@ -1,0 +1,146 @@
+<svg width="100%"
+ viewBox="0.00 0.00 630.80 522.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 508.4)">
+<title>Rhythm</title>
+<polygon fill="white" stroke="transparent" points="-14.4,14.4 -14.4,-508.4 616.4,-508.4 616.4,14.4 -14.4,14.4"/>
+<g id="clust1" class="cluster">
+<title>cluster_d</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M72,-412C72,-412 559,-412 559,-412 565,-412 571,-418 571,-424 571,-424 571,-474 571,-474 571,-480 565,-486 559,-486 559,-486 72,-486 72,-486 66,-486 60,-480 60,-474 60,-474 60,-424 60,-424 60,-418 66,-412 72,-412"/>
+<text text-anchor="middle" x="315.5" y="-473.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#374151">Daily</text>
+</g>
+<g id="clust2" class="cluster">
+<title>cluster_w</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M46,-311C46,-311 550,-311 550,-311 556,-311 562,-317 562,-323 562,-323 562,-373 562,-373 562,-379 556,-385 550,-385 550,-385 46,-385 46,-385 40,-385 34,-379 34,-373 34,-373 34,-323 34,-323 34,-317 40,-311 46,-311"/>
+<text text-anchor="middle" x="298" y="-372.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#374151">Weekly</text>
+</g>
+<g id="clust3" class="cluster">
+<title>cluster_m</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M88,-210C88,-210 569,-210 569,-210 575,-210 581,-216 581,-222 581,-222 581,-272 581,-272 581,-278 575,-284 569,-284 569,-284 88,-284 88,-284 82,-284 76,-278 76,-272 76,-272 76,-222 76,-222 76,-216 82,-210 88,-210"/>
+<text text-anchor="middle" x="328.5" y="-271.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#374151">Monthly</text>
+</g>
+<g id="clust4" class="cluster">
+<title>cluster_q</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M20,-109C20,-109 582,-109 582,-109 588,-109 594,-115 594,-121 594,-121 594,-171 594,-171 594,-177 588,-183 582,-183 582,-183 20,-183 20,-183 14,-183 8,-177 8,-171 8,-171 8,-121 8,-121 8,-115 14,-109 20,-109"/>
+<text text-anchor="middle" x="301" y="-170.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#374151">Quarterly</text>
+</g>
+<g id="clust5" class="cluster">
+<title>cluster_a</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M85,-8C85,-8 563,-8 563,-8 569,-8 575,-14 575,-20 575,-20 575,-70 575,-70 575,-76 569,-82 563,-82 563,-82 85,-82 85,-82 79,-82 73,-76 73,-70 73,-70 73,-20 73,-20 73,-14 79,-8 85,-8"/>
+<text text-anchor="middle" x="324" y="-69.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#374151">Annual</text>
+</g>
+<g id="node1" class="node">
+<title>D1</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M179.5,-458C179.5,-458 80.5,-458 80.5,-458 74.5,-458 68.5,-452 68.5,-446 68.5,-446 68.5,-432 68.5,-432 68.5,-426 74.5,-420 80.5,-420 80.5,-420 179.5,-420 179.5,-420 185.5,-420 191.5,-426 191.5,-432 191.5,-432 191.5,-446 191.5,-446 191.5,-452 185.5,-458 179.5,-458"/>
+<text text-anchor="middle" x="130" y="-442.4" font-family="Helvetica,sans-Serif" font-size="12.00">Overnight batch</text>
+<text text-anchor="middle" x="130" y="-429.4" font-family="Helvetica,sans-Serif" font-size="12.00">and feed checks</text>
+</g>
+<g id="node2" class="node">
+<title>D2</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M383,-458C383,-458 247,-458 247,-458 241,-458 235,-452 235,-446 235,-446 235,-432 235,-432 235,-426 241,-420 247,-420 247,-420 383,-420 383,-420 389,-420 395,-426 395,-432 395,-432 395,-446 395,-446 395,-452 389,-458 383,-458"/>
+<text text-anchor="middle" x="315" y="-442.4" font-family="Helvetica,sans-Serif" font-size="12.00">Limit, exposure and</text>
+<text text-anchor="middle" x="315" y="-429.4" font-family="Helvetica,sans-Serif" font-size="12.00">liquidity data delivered</text>
+</g>
+<g id="node4" class="node">
+<title>W1</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M185.5,-357C185.5,-357 54.5,-357 54.5,-357 48.5,-357 42.5,-351 42.5,-345 42.5,-345 42.5,-331 42.5,-331 42.5,-325 48.5,-319 54.5,-319 54.5,-319 185.5,-319 185.5,-319 191.5,-319 197.5,-325 197.5,-331 197.5,-331 197.5,-345 197.5,-345 197.5,-351 191.5,-357 185.5,-357"/>
+<text text-anchor="middle" x="120" y="-341.4" font-family="Helvetica,sans-Serif" font-size="12.00">Data quality review</text>
+<text text-anchor="middle" x="120" y="-328.4" font-family="Helvetica,sans-Serif" font-size="12.00">(scorecard, break log)</text>
+</g>
+<g id="node3" class="node">
+<title>D3</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M551,-458C551,-458 451,-458 451,-458 445,-458 439,-452 439,-446 439,-446 439,-432 439,-432 439,-426 445,-420 451,-420 451,-420 551,-420 551,-420 557,-420 563,-426 563,-432 563,-432 563,-446 563,-446 563,-452 557,-458 551,-458"/>
+<text text-anchor="middle" x="501" y="-442.4" font-family="Helvetica,sans-Serif" font-size="12.00">Incident triage</text>
+<text text-anchor="middle" x="501" y="-429.4" font-family="Helvetica,sans-Serif" font-size="12.00">(severity matrix)</text>
+</g>
+<g id="node5" class="node">
+<title>W2</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M392.5,-357C392.5,-357 253.5,-357 253.5,-357 247.5,-357 241.5,-351 241.5,-345 241.5,-345 241.5,-331 241.5,-331 241.5,-325 247.5,-319 253.5,-319 253.5,-319 392.5,-319 392.5,-319 398.5,-319 404.5,-325 404.5,-331 404.5,-331 404.5,-345 404.5,-345 404.5,-351 398.5,-357 392.5,-357"/>
+<text text-anchor="middle" x="323" y="-341.4" font-family="Helvetica,sans-Serif" font-size="12.00">Change advisory board</text>
+<text text-anchor="middle" x="323" y="-328.4" font-family="Helvetica,sans-Serif" font-size="12.00">(change requests)</text>
+</g>
+<g id="edge19" class="edge">
+<title>D2&#45;&gt;W2</title>
+<path fill="none" stroke="#4b5563" d="M316.47,-419.84C317.73,-404.21 319.57,-381.5 320.97,-364.13"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="323.42,-364.22 321.54,-357.04 318.54,-363.82 323.42,-364.22"/>
+<text text-anchor="middle" x="346" y="-396" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151">issues feed</text>
+</g>
+<g id="node6" class="node">
+<title>W3</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M542,-357C542,-357 460,-357 460,-357 454,-357 448,-351 448,-345 448,-345 448,-331 448,-331 448,-325 454,-319 460,-319 460,-319 542,-319 542,-319 548,-319 554,-325 554,-331 554,-331 554,-345 554,-345 554,-351 548,-357 542,-357"/>
+<text text-anchor="middle" x="501" y="-341.4" font-family="Helvetica,sans-Serif" font-size="12.00">Stakeholder</text>
+<text text-anchor="middle" x="501" y="-328.4" font-family="Helvetica,sans-Serif" font-size="12.00">status update</text>
+</g>
+<g id="node7" class="node">
+<title>M1</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M187.5,-256C187.5,-256 96.5,-256 96.5,-256 90.5,-256 84.5,-250 84.5,-244 84.5,-244 84.5,-230 84.5,-230 84.5,-224 90.5,-218 96.5,-218 96.5,-218 187.5,-218 187.5,-218 193.5,-218 199.5,-224 199.5,-230 199.5,-230 199.5,-244 199.5,-244 199.5,-250 193.5,-256 187.5,-256"/>
+<text text-anchor="middle" x="142" y="-240.4" font-family="Helvetica,sans-Serif" font-size="12.00">Month&#45;end ECL</text>
+<text text-anchor="middle" x="142" y="-227.4" font-family="Helvetica,sans-Serif" font-size="12.00">and RWA runs</text>
+</g>
+<g id="node8" class="node">
+<title>M2</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M373,-256C373,-256 255,-256 255,-256 249,-256 243,-250 243,-244 243,-244 243,-230 243,-230 243,-224 249,-218 255,-218 255,-218 373,-218 373,-218 379,-218 385,-224 385,-230 385,-230 385,-244 385,-244 385,-250 379,-256 373,-256"/>
+<text text-anchor="middle" x="314" y="-240.4" font-family="Helvetica,sans-Serif" font-size="12.00">Metrics review</text>
+<text text-anchor="middle" x="314" y="-227.4" font-family="Helvetica,sans-Serif" font-size="12.00">and vendor reviews</text>
+</g>
+<g id="edge20" class="edge">
+<title>W2&#45;&gt;M2</title>
+<path fill="none" stroke="#4b5563" d="M321.35,-318.84C319.93,-303.21 317.86,-280.5 316.28,-263.13"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="318.71,-262.79 315.64,-256.04 313.83,-263.24 318.71,-262.79"/>
+<text text-anchor="middle" x="348" y="-295" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151">rolls up into</text>
+</g>
+<g id="node9" class="node">
+<title>M3</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M561,-256C561,-256 441,-256 441,-256 435,-256 429,-250 429,-244 429,-244 429,-230 429,-230 429,-224 435,-218 441,-218 441,-218 561,-218 561,-218 567,-218 573,-224 573,-230 573,-230 573,-244 573,-244 573,-250 567,-256 561,-256"/>
+<text text-anchor="middle" x="501" y="-240.4" font-family="Helvetica,sans-Serif" font-size="12.00">Steering committee</text>
+<text text-anchor="middle" x="501" y="-227.4" font-family="Helvetica,sans-Serif" font-size="12.00">pack</text>
+</g>
+<g id="node10" class="node">
+<title>Q1</title>
+<path fill="#1f2937" stroke="#1f2937" d="M164,-155C164,-155 28,-155 28,-155 22,-155 16,-149 16,-143 16,-143 16,-129 16,-129 16,-123 22,-117 28,-117 28,-117 164,-117 164,-117 170,-117 176,-123 176,-129 176,-129 176,-143 176,-143 176,-149 170,-155 164,-155"/>
+<text text-anchor="middle" x="96" y="-139.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Quarter&#45;end run</text>
+<text text-anchor="middle" x="96" y="-126.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">(runbook, T&#45;5 to T+10)</text>
+</g>
+<g id="node11" class="node">
+<title>Q2</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M396.5,-155C396.5,-155 231.5,-155 231.5,-155 225.5,-155 219.5,-149 219.5,-143 219.5,-143 219.5,-129 219.5,-129 219.5,-123 225.5,-117 231.5,-117 231.5,-117 396.5,-117 396.5,-117 402.5,-117 408.5,-123 408.5,-129 408.5,-129 408.5,-143 408.5,-143 408.5,-149 402.5,-155 396.5,-155"/>
+<text text-anchor="middle" x="314" y="-139.4" font-family="Helvetica,sans-Serif" font-size="12.00">Regulatory returns</text>
+<text text-anchor="middle" x="314" y="-126.4" font-family="Helvetica,sans-Serif" font-size="12.00">and impairment committee</text>
+</g>
+<g id="edge21" class="edge">
+<title>M2&#45;&gt;Q2</title>
+<path fill="none" stroke="#4b5563" d="M314,-217.84C314,-202.21 314,-179.5 314,-162.13"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="316.45,-162.04 314,-155.04 311.55,-162.04 316.45,-162.04"/>
+<text text-anchor="middle" x="335.5" y="-194" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151">builds to</text>
+</g>
+<g id="node12" class="node">
+<title>Q3</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M574,-155C574,-155 464,-155 464,-155 458,-155 452,-149 452,-143 452,-143 452,-129 452,-129 452,-123 458,-117 464,-117 464,-117 574,-117 574,-117 580,-117 586,-123 586,-129 586,-129 586,-143 586,-143 586,-149 580,-155 574,-155"/>
+<text text-anchor="middle" x="519" y="-139.4" font-family="Helvetica,sans-Serif" font-size="12.00">EUC attestation</text>
+<text text-anchor="middle" x="519" y="-126.4" font-family="Helvetica,sans-Serif" font-size="12.00">and access review</text>
+</g>
+<g id="node13" class="node">
+<title>A1</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M182.5,-54C182.5,-54 93.5,-54 93.5,-54 87.5,-54 81.5,-48 81.5,-42 81.5,-42 81.5,-28 81.5,-28 81.5,-22 87.5,-16 93.5,-16 93.5,-16 182.5,-16 182.5,-16 188.5,-16 194.5,-22 194.5,-28 194.5,-28 194.5,-42 194.5,-42 194.5,-48 188.5,-54 182.5,-54"/>
+<text text-anchor="middle" x="138" y="-38.4" font-family="Helvetica,sans-Serif" font-size="12.00">Stress test and</text>
+<text text-anchor="middle" x="138" y="-25.4" font-family="Helvetica,sans-Serif" font-size="12.00">ICAAP runs</text>
+</g>
+<g id="node14" class="node">
+<title>A2</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M377.5,-54C377.5,-54 250.5,-54 250.5,-54 244.5,-54 238.5,-48 238.5,-42 238.5,-42 238.5,-28 238.5,-28 238.5,-22 244.5,-16 250.5,-16 250.5,-16 377.5,-16 377.5,-16 383.5,-16 389.5,-22 389.5,-28 389.5,-28 389.5,-42 389.5,-42 389.5,-48 383.5,-54 377.5,-54"/>
+<text text-anchor="middle" x="314" y="-38.4" font-family="Helvetica,sans-Serif" font-size="12.00">Model reviews,</text>
+<text text-anchor="middle" x="314" y="-25.4" font-family="Helvetica,sans-Serif" font-size="12.00">audit, resilience tests</text>
+</g>
+<g id="edge22" class="edge">
+<title>Q2&#45;&gt;A2</title>
+<path fill="none" stroke="#4b5563" d="M314,-116.84C314,-101.21 314,-78.5 314,-61.13"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="316.45,-61.04 314,-54.04 311.55,-61.04 316.45,-61.04"/>
+<text text-anchor="middle" x="350" y="-93" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151">builds towards</text>
+</g>
+<g id="node15" class="node">
+<title>A3</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M554.5,-54C554.5,-54 445.5,-54 445.5,-54 439.5,-54 433.5,-48 433.5,-42 433.5,-42 433.5,-28 433.5,-28 433.5,-22 439.5,-16 445.5,-16 445.5,-16 554.5,-16 554.5,-16 560.5,-16 566.5,-22 566.5,-28 566.5,-28 566.5,-42 566.5,-42 566.5,-48 560.5,-54 554.5,-54"/>
+<text text-anchor="middle" x="500" y="-38.4" font-family="Helvetica,sans-Serif" font-size="12.00">Budget, roadmap,</text>
+<text text-anchor="middle" x="500" y="-25.4" font-family="Helvetica,sans-Serif" font-size="12.00">vendor contracts</text>
+</g>
+</g>
+</svg>
