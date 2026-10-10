@@ -1,0 +1,54 @@
+<svg width="100%"
+ viewBox="0.00 0.00 633.80 523.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 509.4)">
+<title>TestPyramid</title>
+<polygon fill="white" stroke="transparent" points="-14.4,14.4 -14.4,-509.4 619.4,-509.4 619.4,14.4 -14.4,14.4"/>
+<g id="node1" class="node">
+<title>P7</title>
+<path fill="#1f2937" stroke="#1f2937" d="M431,-495C431,-495 174,-495 174,-495 168,-495 162,-489 162,-483 162,-483 162,-453 162,-453 162,-447 168,-441 174,-441 174,-441 431,-441 431,-441 437,-441 443,-447 443,-453 443,-453 443,-483 443,-483 443,-489 437,-495 431,-495"/>
+<text text-anchor="middle" x="302.5" y="-471.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Parallel runs</text>
+<text text-anchor="middle" x="302.5" y="-458.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">several month&#45;ends, variances explained</text>
+</g>
+<g id="node2" class="node">
+<title>P6</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M445.5,-432C445.5,-432 159.5,-432 159.5,-432 153.5,-432 147.5,-426 147.5,-420 147.5,-420 147.5,-390 147.5,-390 147.5,-384 153.5,-378 159.5,-378 159.5,-378 445.5,-378 445.5,-378 451.5,-378 457.5,-384 457.5,-390 457.5,-390 457.5,-420 457.5,-420 457.5,-426 451.5,-432 445.5,-432"/>
+<text text-anchor="middle" x="302.5" y="-408.4" font-family="Helvetica,sans-Serif" font-size="12.00">User acceptance by risk and finance</text>
+<text text-anchor="middle" x="302.5" y="-395.4" font-family="Helvetica,sans-Serif" font-size="12.00">do the numbers make business sense?</text>
+</g>
+<g id="node3" class="node">
+<title>P5</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M481.5,-369C481.5,-369 123.5,-369 123.5,-369 117.5,-369 111.5,-363 111.5,-357 111.5,-357 111.5,-327 111.5,-327 111.5,-321 117.5,-315 123.5,-315 123.5,-315 481.5,-315 481.5,-315 487.5,-315 493.5,-321 493.5,-327 493.5,-327 493.5,-357 493.5,-357 493.5,-363 487.5,-369 481.5,-369"/>
+<text text-anchor="middle" x="302.5" y="-345.4" font-family="Helvetica,sans-Serif" font-size="12.00">Independent model implementation testing</text>
+<text text-anchor="middle" x="302.5" y="-332.4" font-family="Helvetica,sans-Serif" font-size="12.00">validation re&#45;codes the formula and compares</text>
+</g>
+<g id="node4" class="node">
+<title>P4</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M506.5,-306C506.5,-306 98.5,-306 98.5,-306 92.5,-306 86.5,-300 86.5,-294 86.5,-294 86.5,-264 86.5,-264 86.5,-258 92.5,-252 98.5,-252 98.5,-252 506.5,-252 506.5,-252 512.5,-252 518.5,-258 518.5,-264 518.5,-264 518.5,-294 518.5,-294 518.5,-300 512.5,-306 506.5,-306"/>
+<text text-anchor="middle" x="302.5" y="-282.4" font-family="Helvetica,sans-Serif" font-size="12.00">Reconciliation tests</text>
+<text text-anchor="middle" x="302.5" y="-269.4" font-family="Helvetica,sans-Serif" font-size="12.00">to the ledger, to source totals, to last period</text>
+</g>
+<g id="node5" class="node">
+<title>P3</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M535.5,-243C535.5,-243 69.5,-243 69.5,-243 63.5,-243 57.5,-237 57.5,-231 57.5,-231 57.5,-201 57.5,-201 57.5,-195 63.5,-189 69.5,-189 69.5,-189 535.5,-189 535.5,-189 541.5,-189 547.5,-195 547.5,-201 547.5,-201 547.5,-231 547.5,-231 547.5,-237 541.5,-243 535.5,-243"/>
+<text text-anchor="middle" x="302.5" y="-219.4" font-family="Helvetica,sans-Serif" font-size="12.00">Regression on full portfolios</text>
+<text text-anchor="middle" x="302.5" y="-206.4" font-family="Helvetica,sans-Serif" font-size="12.00">nothing moved that should not have moved</text>
+</g>
+<g id="node6" class="node">
+<title>P2</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M564,-180C564,-180 41,-180 41,-180 35,-180 29,-174 29,-168 29,-168 29,-138 29,-138 29,-132 35,-126 41,-126 41,-126 564,-126 564,-126 570,-126 576,-132 576,-138 576,-138 576,-168 576,-168 576,-174 570,-180 564,-180"/>
+<text text-anchor="middle" x="302.5" y="-156.4" font-family="Helvetica,sans-Serif" font-size="12.00">System integration tests</text>
+<text text-anchor="middle" x="302.5" y="-143.4" font-family="Helvetica,sans-Serif" font-size="12.00">feeds, mappings, engine and reports work together</text>
+</g>
+<g id="node7" class="node">
+<title>P1</title>
+<path fill="#065f46" stroke="#065f46" d="M593,-117C593,-117 12,-117 12,-117 6,-117 0,-111 0,-105 0,-105 0,-75 0,-75 0,-69 6,-63 12,-63 12,-63 593,-63 593,-63 599,-63 605,-69 605,-75 605,-75 605,-105 605,-105 605,-111 599,-117 593,-117"/>
+<text text-anchor="middle" x="302.5" y="-93.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Unit tests and golden test cases</text>
+<text text-anchor="middle" x="302.5" y="-80.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">one rule, one exposure, one expected answer; thousands, run on every build</text>
+</g>
+<g id="node8" class="node">
+<title>Note</title>
+<text text-anchor="middle" x="302.5" y="-30.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#374151">Top: few, slow, expensive, close to the real thing</text>
+<text text-anchor="middle" x="302.5" y="-18.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#374151">Bottom: many, fast, cheap, precise about the cause</text>
+</g>
+</g>
+</svg>

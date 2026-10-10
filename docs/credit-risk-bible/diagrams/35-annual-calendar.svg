@@ -1,0 +1,80 @@
+<svg width="100%"
+ viewBox="0.00 0.00 432.30 521.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 507.4)">
+<title>AnnualCalendar</title>
+<polygon fill="white" stroke="transparent" points="-14.4,14.4 -14.4,-507.4 417.9,-507.4 417.9,14.4 -14.4,14.4"/>
+<g id="node1" class="node">
+<title>YE</title>
+<path fill="#1f2937" stroke="#1f2937" d="M230.5,-493C230.5,-493 12.5,-493 12.5,-493 6.5,-493 0.5,-487 0.5,-481 0.5,-481 0.5,-454 0.5,-454 0.5,-448 6.5,-442 12.5,-442 12.5,-442 230.5,-442 230.5,-442 236.5,-442 242.5,-448 242.5,-454 242.5,-454 242.5,-481 242.5,-481 242.5,-487 236.5,-493 230.5,-493"/>
+<text text-anchor="middle" x="121.5" y="-477.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Year&#45;end (December reporting date)</text>
+<text text-anchor="middle" x="121.5" y="-464.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">change freeze, year&#45;end run,</text>
+<text text-anchor="middle" x="121.5" y="-451.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">annual accounts and external audit</text>
+</g>
+<g id="node2" class="node">
+<title>Q1</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M221,-415C221,-415 22,-415 22,-415 16,-415 10,-409 10,-403 10,-403 10,-376 10,-376 10,-370 16,-364 22,-364 22,-364 221,-364 221,-364 227,-364 233,-370 233,-376 233,-376 233,-403 233,-403 233,-409 227,-415 221,-415"/>
+<text text-anchor="middle" x="121.5" y="-399.4" font-family="Helvetica,sans-Serif" font-size="12.00">January to March</text>
+<text text-anchor="middle" x="121.5" y="-386.4" font-family="Helvetica,sans-Serif" font-size="12.00">Q4 returns, annual Pillar 3,</text>
+<text text-anchor="middle" x="121.5" y="-373.4" font-family="Helvetica,sans-Serif" font-size="12.00">ICAAP drafting, stress test launch</text>
+</g>
+<g id="edge1" class="edge">
+<title>YE&#45;&gt;Q1</title>
+<path fill="none" stroke="#4b5563" d="M121.5,-441.61C121.5,-435.52 121.5,-428.9 121.5,-422.52"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="123.95,-422.18 121.5,-415.18 119.05,-422.18 123.95,-422.18"/>
+</g>
+<g id="node3" class="node">
+<title>Q2</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M220,-337C220,-337 23,-337 23,-337 17,-337 11,-331 11,-325 11,-325 11,-285 11,-285 11,-279 17,-273 23,-273 23,-273 220,-273 220,-273 226,-273 232,-279 232,-285 232,-285 232,-325 232,-325 232,-331 226,-337 220,-337"/>
+<text text-anchor="middle" x="121.5" y="-321.4" font-family="Helvetica,sans-Serif" font-size="12.00">April to June</text>
+<text text-anchor="middle" x="121.5" y="-308.4" font-family="Helvetica,sans-Serif" font-size="12.00">ICAAP to board and supervisor,</text>
+<text text-anchor="middle" x="121.5" y="-295.4" font-family="Helvetica,sans-Serif" font-size="12.00">stress test runs and submissions,</text>
+<text text-anchor="middle" x="121.5" y="-282.4" font-family="Helvetica,sans-Serif" font-size="12.00">Q1 returns</text>
+</g>
+<g id="edge2" class="edge">
+<title>Q1&#45;&gt;Q2</title>
+<path fill="none" stroke="#4b5563" d="M121.5,-363.75C121.5,-357.61 121.5,-350.9 121.5,-344.28"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="123.95,-344.17 121.5,-337.18 119.05,-344.18 123.95,-344.17"/>
+</g>
+<g id="node4" class="node">
+<title>Q3</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M231,-246C231,-246 12,-246 12,-246 6,-246 0,-240 0,-234 0,-234 0,-194 0,-194 0,-188 6,-182 12,-182 12,-182 231,-182 231,-182 237,-182 243,-188 243,-194 243,-194 243,-234 243,-234 243,-240 237,-246 231,-246"/>
+<text text-anchor="middle" x="121.5" y="-230.4" font-family="Helvetica,sans-Serif" font-size="12.00">July to September</text>
+<text text-anchor="middle" x="121.5" y="-217.4" font-family="Helvetica,sans-Serif" font-size="12.00">supervisory review (SREP) feedback,</text>
+<text text-anchor="middle" x="121.5" y="-204.4" font-family="Helvetica,sans-Serif" font-size="12.00">half&#45;year results, Q2 returns,</text>
+<text text-anchor="middle" x="121.5" y="-191.4" font-family="Helvetica,sans-Serif" font-size="12.00">main release window for big change</text>
+</g>
+<g id="edge3" class="edge">
+<title>Q2&#45;&gt;Q3</title>
+<path fill="none" stroke="#4b5563" d="M121.5,-272.87C121.5,-266.54 121.5,-259.81 121.5,-253.26"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="123.95,-253.26 121.5,-246.26 119.05,-253.26 123.95,-253.26"/>
+</g>
+<g id="node5" class="node">
+<title>Q4</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M220,-155C220,-155 23,-155 23,-155 17,-155 11,-149 11,-143 11,-143 11,-103 11,-103 11,-97 17,-91 23,-91 23,-91 220,-91 220,-91 226,-91 232,-97 232,-103 232,-103 232,-143 232,-143 232,-149 226,-155 220,-155"/>
+<text text-anchor="middle" x="121.5" y="-139.4" font-family="Helvetica,sans-Serif" font-size="12.00">October to December</text>
+<text text-anchor="middle" x="121.5" y="-126.4" font-family="Helvetica,sans-Serif" font-size="12.00">budget and capital plan,</text>
+<text text-anchor="middle" x="121.5" y="-113.4" font-family="Helvetica,sans-Serif" font-size="12.00">Q3 returns, model recalibrations,</text>
+<text text-anchor="middle" x="121.5" y="-100.4" font-family="Helvetica,sans-Serif" font-size="12.00">audit plan for next year</text>
+</g>
+<g id="edge4" class="edge">
+<title>Q3&#45;&gt;Q4</title>
+<path fill="none" stroke="#4b5563" d="M121.5,-181.87C121.5,-175.54 121.5,-168.81 121.5,-162.26"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="123.95,-162.26 121.5,-155.26 119.05,-162.26 123.95,-162.26"/>
+</g>
+<g id="edge5" class="edge">
+<title>Q4:e&#45;&gt;YE:e</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M232.5,-123C383.3,-123 396.31,-456.82 250.56,-467.25"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="250.41,-464.8 243.5,-467.5 250.58,-469.7 250.41,-464.8"/>
+<text text-anchor="middle" x="378" y="-308" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> &#160;the cycle</text>
+<text text-anchor="middle" x="378" y="-297" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> &#160;repeats</text>
+</g>
+<g id="node6" class="node">
+<title>Every</title>
+<path fill="#6b7280" stroke="#6b7280" d="M213.5,-64C213.5,-64 29.5,-64 29.5,-64 23.5,-64 17.5,-58 17.5,-52 17.5,-52 17.5,-12 17.5,-12 17.5,-6 23.5,0 29.5,0 29.5,0 213.5,0 213.5,0 219.5,0 225.5,-6 225.5,-12 225.5,-12 225.5,-52 225.5,-52 225.5,-58 219.5,-64 213.5,-64"/>
+<text text-anchor="middle" x="121.5" y="-48.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Every month and quarter</text>
+<text text-anchor="middle" x="121.5" y="-35.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">month&#45;end ECL and RWA runs,</text>
+<text text-anchor="middle" x="121.5" y="-22.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">quarterly returns about 4 to 6</text>
+<text text-anchor="middle" x="121.5" y="-9.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">weeks after each quarter end</text>
+</g>
+</g>
+</svg>

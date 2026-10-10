@@ -1,0 +1,137 @@
+<svg width="100%"
+ viewBox="0.00 0.00 496.80 709.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 695.4)">
+<title>Traceability</title>
+<polygon fill="white" stroke="transparent" points="-14.4,14.4 -14.4,-695.4 482.4,-695.4 482.4,14.4 -14.4,14.4"/>
+<g id="node1" class="node">
+<title>Rule</title>
+<path fill="#1f2937" stroke="#1f2937" d="M325,-681C325,-681 155,-681 155,-681 149,-681 143,-675 143,-669 143,-669 143,-655 143,-655 143,-649 149,-643 155,-643 155,-643 325,-643 325,-643 331,-643 337,-649 337,-655 337,-655 337,-669 337,-669 337,-675 331,-681 325,-681"/>
+<text text-anchor="middle" x="240" y="-665.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Regulatory text</text>
+<text text-anchor="middle" x="240" y="-652.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">final rule, paragraph 4.12(b)</text>
+</g>
+<g id="node2" class="node">
+<title>Memo</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M341,-616C341,-616 139,-616 139,-616 133,-616 127,-610 127,-604 127,-604 127,-577 127,-577 127,-571 133,-565 139,-565 139,-565 341,-565 341,-565 347,-565 353,-571 353,-577 353,-577 353,-604 353,-604 353,-610 347,-616 341,-616"/>
+<text text-anchor="middle" x="240" y="-600.4" font-family="Helvetica,sans-Serif" font-size="12.00">Interpretation memo</text>
+<text text-anchor="middle" x="240" y="-587.4" font-family="Helvetica,sans-Serif" font-size="12.00">what the paragraph means for us</text>
+<text text-anchor="middle" x="240" y="-574.4" font-family="Helvetica,sans-Serif" font-size="12.00">REG&#45;INT&#45;031</text>
+</g>
+<g id="edge1" class="edge">
+<title>Rule&#45;&gt;Memo</title>
+<path fill="none" stroke="#4b5563" d="M240,-642.74C240,-636.77 240,-629.96 240,-623.3"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="242.45,-623.17 240,-616.17 237.55,-623.17 242.45,-623.17"/>
+</g>
+<g id="node3" class="node">
+<title>Sign</title>
+<path fill="#fef3c7" stroke="#d97706" d="M104.69,-523.98C104.69,-523.98 20.31,-494.02 20.31,-494.02 14.65,-492.01 14.65,-487.99 20.31,-485.98 20.31,-485.98 104.69,-456.02 104.69,-456.02 110.35,-454.01 121.65,-454.01 127.31,-456.02 127.31,-456.02 211.69,-485.98 211.69,-485.98 217.35,-487.99 217.35,-492.01 211.69,-494.02 211.69,-494.02 127.31,-523.98 127.31,-523.98 121.65,-525.99 110.35,-525.99 104.69,-523.98"/>
+<text text-anchor="middle" x="116" y="-493.4" font-family="Helvetica,sans-Serif" font-size="12.00">Interpretation</text>
+<text text-anchor="middle" x="116" y="-480.4" font-family="Helvetica,sans-Serif" font-size="12.00">signed off?</text>
+</g>
+<g id="edge2" class="edge">
+<title>Memo&#45;&gt;Sign</title>
+<path fill="none" stroke="#4b5563" d="M209.03,-564.9C192.4,-551.69 171.76,-535.29 154.15,-521.31"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="155.31,-519.1 148.31,-516.66 152.26,-522.93 155.31,-519.1"/>
+</g>
+<g id="node4" class="node">
+<title>Esc</title>
+<path fill="#991b1b" stroke="#991b1b" d="M446,-515.5C446,-515.5 284,-515.5 284,-515.5 278,-515.5 272,-509.5 272,-503.5 272,-503.5 272,-476.5 272,-476.5 272,-470.5 278,-464.5 284,-464.5 284,-464.5 446,-464.5 446,-464.5 452,-464.5 458,-470.5 458,-476.5 458,-476.5 458,-503.5 458,-503.5 458,-509.5 452,-515.5 446,-515.5"/>
+<text text-anchor="middle" x="365" y="-499.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Escalate: regulatory policy,</text>
+<text text-anchor="middle" x="365" y="-486.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">legal, ask the regulator</text>
+<text text-anchor="middle" x="365" y="-473.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">if truly ambiguous</text>
+</g>
+<g id="edge3" class="edge">
+<title>Sign&#45;&gt;Esc</title>
+<path fill="none" stroke="#4b5563" d="M223.04,-490C236.85,-490 250.95,-490 264.64,-490"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="264.76,-492.45 271.76,-490 264.76,-487.55 264.76,-492.45"/>
+<text text-anchor="middle" x="247.5" y="-496" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151">no</text>
+</g>
+<g id="node5" class="node">
+<title>BRD</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M220,-415C220,-415 12,-415 12,-415 6,-415 0,-409 0,-403 0,-403 0,-376 0,-376 0,-370 6,-364 12,-364 12,-364 220,-364 220,-364 226,-364 232,-370 232,-376 232,-376 232,-403 232,-403 232,-409 226,-415 220,-415"/>
+<text text-anchor="middle" x="116" y="-399.4" font-family="Helvetica,sans-Serif" font-size="12.00">Business requirements</text>
+<text text-anchor="middle" x="116" y="-386.4" font-family="Helvetica,sans-Serif" font-size="12.00">BR&#45;07: apply 40% to commitments</text>
+<text text-anchor="middle" x="116" y="-373.4" font-family="Helvetica,sans-Serif" font-size="12.00">traced to REG&#45;INT&#45;031</text>
+</g>
+<g id="edge5" class="edge">
+<title>Sign&#45;&gt;BRD</title>
+<path fill="none" stroke="#4b5563" d="M116,-451.76C116,-442.13 116,-431.85 116,-422.51"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="118.45,-422.26 116,-415.26 113.55,-422.26 118.45,-422.26"/>
+<text text-anchor="middle" x="125" y="-431" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151">yes</text>
+</g>
+<g id="edge4" class="edge">
+<title>Esc&#45;&gt;Memo</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M333.74,-515.63C316.44,-529.27 294.83,-546.3 276.72,-560.57"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="275.2,-558.64 271.22,-564.9 278.23,-562.49 275.2,-558.64"/>
+<text text-anchor="middle" x="313.5" y="-544" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151">revise</text>
+</g>
+<g id="node6" class="node">
+<title>FS</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M206,-337C206,-337 26,-337 26,-337 20,-337 14,-331 14,-325 14,-325 14,-298 14,-298 14,-292 20,-286 26,-286 26,-286 206,-286 206,-286 212,-286 218,-292 218,-298 218,-298 218,-325 218,-325 218,-331 212,-337 206,-337"/>
+<text text-anchor="middle" x="116" y="-321.4" font-family="Helvetica,sans-Serif" font-size="12.00">Functional specification</text>
+<text text-anchor="middle" x="116" y="-308.4" font-family="Helvetica,sans-Serif" font-size="12.00">FS&#45;07.2: CCF lookup by</text>
+<text text-anchor="middle" x="116" y="-295.4" font-family="Helvetica,sans-Serif" font-size="12.00">product and cancellability flag</text>
+</g>
+<g id="edge6" class="edge">
+<title>BRD&#45;&gt;FS</title>
+<path fill="none" stroke="#4b5563" d="M116,-363.61C116,-357.52 116,-350.9 116,-344.52"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="118.45,-344.18 116,-337.18 113.55,-344.18 118.45,-344.18"/>
+</g>
+<g id="node7" class="node">
+<title>Code</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M212,-259C212,-259 20,-259 20,-259 14,-259 8,-253 8,-247 8,-247 8,-233 8,-233 8,-227 14,-221 20,-221 20,-221 212,-221 212,-221 218,-221 224,-227 224,-233 224,-233 224,-247 224,-247 224,-253 218,-259 212,-259"/>
+<text text-anchor="middle" x="116" y="-243.4" font-family="Helvetica,sans-Serif" font-size="12.00">Code and configuration</text>
+<text text-anchor="middle" x="116" y="-230.4" font-family="Helvetica,sans-Serif" font-size="12.00">CCF table v3, commit and ticket</text>
+</g>
+<g id="edge7" class="edge">
+<title>FS&#45;&gt;Code</title>
+<path fill="none" stroke="#4b5563" d="M116,-285.8C116,-279.52 116,-272.76 116,-266.44"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="118.45,-266.28 116,-259.28 113.55,-266.28 118.45,-266.28"/>
+</g>
+<g id="node8" class="node">
+<title>Test</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M193,-194C193,-194 39,-194 39,-194 33,-194 27,-188 27,-182 27,-182 27,-155 27,-155 27,-149 33,-143 39,-143 39,-143 193,-143 193,-143 199,-143 205,-149 205,-155 205,-155 205,-182 205,-182 205,-188 199,-194 193,-194"/>
+<text text-anchor="middle" x="116" y="-178.4" font-family="Helvetica,sans-Serif" font-size="12.00">Test cases</text>
+<text text-anchor="middle" x="116" y="-165.4" font-family="Helvetica,sans-Serif" font-size="12.00">TC&#45;07.2.1 to TC&#45;07.2.9</text>
+<text text-anchor="middle" x="116" y="-152.4" font-family="Helvetica,sans-Serif" font-size="12.00">expected results per case</text>
+</g>
+<g id="edge8" class="edge">
+<title>Code&#45;&gt;Test</title>
+<path fill="none" stroke="#4b5563" d="M116,-220.74C116,-214.77 116,-207.96 116,-201.3"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="118.45,-201.17 116,-194.17 113.55,-201.17 118.45,-201.17"/>
+</g>
+<g id="node9" class="node">
+<title>Ev</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M202.5,-116C202.5,-116 29.5,-116 29.5,-116 23.5,-116 17.5,-110 17.5,-104 17.5,-104 17.5,-90 17.5,-90 17.5,-84 23.5,-78 29.5,-78 29.5,-78 202.5,-78 202.5,-78 208.5,-78 214.5,-84 214.5,-90 214.5,-90 214.5,-104 214.5,-104 214.5,-110 208.5,-116 202.5,-116"/>
+<text text-anchor="middle" x="116" y="-100.4" font-family="Helvetica,sans-Serif" font-size="12.00">Evidence pack</text>
+<text text-anchor="middle" x="116" y="-87.4" font-family="Helvetica,sans-Serif" font-size="12.00">results, parallel run, sign&#45;offs</text>
+</g>
+<g id="edge9" class="edge">
+<title>Test&#45;&gt;Ev</title>
+<path fill="none" stroke="#4b5563" d="M116,-142.8C116,-136.52 116,-129.76 116,-123.44"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="118.45,-123.28 116,-116.28 113.55,-123.28 118.45,-123.28"/>
+</g>
+<g id="node10" class="node">
+<title>Prod</title>
+<path fill="#065f46" stroke="#065f46" d="M211,-44.5C211,-44.5 21,-44.5 21,-44.5 15,-44.5 9,-38.5 9,-32.5 9,-32.5 9,-18.5 9,-18.5 9,-12.5 15,-6.5 21,-6.5 21,-6.5 211,-6.5 211,-6.5 217,-6.5 223,-12.5 223,-18.5 223,-18.5 223,-32.5 223,-32.5 223,-38.5 217,-44.5 211,-44.5"/>
+<text text-anchor="middle" x="116" y="-28.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Production</text>
+<text text-anchor="middle" x="116" y="-15.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">number in the regulatory return</text>
+</g>
+<g id="edge10" class="edge">
+<title>Ev&#45;&gt;Prod</title>
+<path fill="none" stroke="#4b5563" d="M116,-77.74C116,-69.9 116,-60.6 116,-52.1"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="118.45,-51.88 116,-44.88 113.55,-51.88 118.45,-51.88"/>
+</g>
+<g id="node11" class="node">
+<title>Back</title>
+<path fill="#6b7280" stroke="#6b7280" d="M456,-51C456,-51 284,-51 284,-51 278,-51 272,-45 272,-39 272,-39 272,-12 272,-12 272,-6 278,0 284,0 284,0 456,0 456,0 462,0 468,-6 468,-12 468,-12 468,-39 468,-39 468,-45 462,-51 456,-51"/>
+<text text-anchor="middle" x="370" y="-35.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Traceability matrix</text>
+<text text-anchor="middle" x="370" y="-22.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">any number can be followed</text>
+<text text-anchor="middle" x="370" y="-9.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">back up to the paragraph</text>
+</g>
+<g id="edge11" class="edge">
+<title>Prod&#45;&gt;Back</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M223.16,-25.5C237,-25.5 250.84,-25.5 264.68,-25.5"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="264.91,-27.95 271.91,-25.5 264.91,-23.05 264.91,-27.95"/>
+</g>
+</g>
+</svg>

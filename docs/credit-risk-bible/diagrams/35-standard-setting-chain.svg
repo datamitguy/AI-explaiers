@@ -1,0 +1,138 @@
+<svg width="100%"
+ viewBox="0.00 0.00 585.80 674.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 660.4)">
+<title>StandardSetting</title>
+<polygon fill="white" stroke="transparent" points="-14.4,14.4 -14.4,-660.4 571.4,-660.4 571.4,14.4 -14.4,14.4"/>
+<g id="clust1" class="cluster">
+<title>cluster_local</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M20,-126C20,-126 425,-126 425,-126 431,-126 437,-132 437,-138 437,-138 437,-441 437,-441 437,-447 431,-453 425,-453 425,-453 20,-453 20,-453 14,-453 8,-447 8,-441 8,-441 8,-138 8,-138 8,-132 14,-126 20,-126"/>
+<text text-anchor="middle" x="222.5" y="-440.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#374151">In each jurisdiction</text>
+</g>
+<g id="node1" class="node">
+<title>G20</title>
+<path fill="#1f2937" stroke="#1f2937" d="M319.5,-646C319.5,-646 138.5,-646 138.5,-646 132.5,-646 126.5,-640 126.5,-634 126.5,-634 126.5,-620 126.5,-620 126.5,-614 132.5,-608 138.5,-608 138.5,-608 319.5,-608 319.5,-608 325.5,-608 331.5,-614 331.5,-620 331.5,-620 331.5,-634 331.5,-634 331.5,-640 325.5,-646 319.5,-646"/>
+<text text-anchor="middle" x="229" y="-630.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">G20 leaders</text>
+<text text-anchor="middle" x="229" y="-617.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">political mandate after a crisis</text>
+</g>
+<g id="node2" class="node">
+<title>FSB</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M336.5,-579C336.5,-579 121.5,-579 121.5,-579 115.5,-579 109.5,-573 109.5,-567 109.5,-567 109.5,-553 109.5,-553 109.5,-547 115.5,-541 121.5,-541 121.5,-541 336.5,-541 336.5,-541 342.5,-541 348.5,-547 348.5,-553 348.5,-553 348.5,-567 348.5,-567 348.5,-573 342.5,-579 336.5,-579"/>
+<text text-anchor="middle" x="229" y="-563.4" font-family="Helvetica,sans-Serif" font-size="12.00">Financial Stability Board (FSB)</text>
+<text text-anchor="middle" x="229" y="-550.4" font-family="Helvetica,sans-Serif" font-size="12.00">coordinates, monitors, peer reviews</text>
+</g>
+<g id="edge1" class="edge">
+<title>G20&#45;&gt;FSB</title>
+<path fill="none" stroke="#4b5563" d="M229,-607.89C229,-601.13 229,-593.33 229,-586.05"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="231.45,-586.01 229,-579.01 226.55,-586.01 231.45,-586.01"/>
+</g>
+<g id="node3" class="node">
+<title>BCBS</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M303,-512C303,-512 155,-512 155,-512 149,-512 143,-506 143,-500 143,-500 143,-473 143,-473 143,-467 149,-461 155,-461 155,-461 303,-461 303,-461 309,-461 315,-467 315,-473 315,-473 315,-500 315,-500 315,-506 309,-512 303,-512"/>
+<text text-anchor="middle" x="229" y="-496.4" font-family="Helvetica,sans-Serif" font-size="12.00">Basel Committee (BCBS)</text>
+<text text-anchor="middle" x="229" y="-483.4" font-family="Helvetica,sans-Serif" font-size="12.00">consults, then publishes</text>
+<text text-anchor="middle" x="229" y="-470.4" font-family="Helvetica,sans-Serif" font-size="12.00">the global standard</text>
+</g>
+<g id="edge2" class="edge">
+<title>FSB&#45;&gt;BCBS</title>
+<path fill="none" stroke="#4b5563" d="M229,-540.96C229,-534.38 229,-526.73 229,-519.31"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="231.45,-519.02 229,-512.02 226.55,-519.02 231.45,-519.02"/>
+</g>
+<g id="node4" class="node">
+<title>Note</title>
+<path fill="#6b7280" stroke="#6b7280" d="M545,-505.5C545,-505.5 349,-505.5 349,-505.5 343,-505.5 337,-499.5 337,-493.5 337,-493.5 337,-479.5 337,-479.5 337,-473.5 343,-467.5 349,-467.5 349,-467.5 545,-467.5 545,-467.5 551,-467.5 557,-473.5 557,-479.5 557,-479.5 557,-493.5 557,-493.5 557,-499.5 551,-505.5 545,-505.5"/>
+<text text-anchor="middle" x="447" y="-489.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Not law: a standard binds</text>
+<text text-anchor="middle" x="447" y="-476.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">only once each country adopts it</text>
+</g>
+<g id="edge3" class="edge">
+<title>BCBS&#45;&gt;Note</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M315.01,-486.5C319.92,-486.5 324.82,-486.5 329.73,-486.5"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="329.92,-488.95 336.92,-486.5 329.92,-484.05 329.92,-488.95"/>
+</g>
+<g id="node5" class="node">
+<title>Cons</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M307.5,-425C307.5,-425 150.5,-425 150.5,-425 144.5,-425 138.5,-419 138.5,-413 138.5,-413 138.5,-386 138.5,-386 138.5,-380 144.5,-374 150.5,-374 150.5,-374 307.5,-374 307.5,-374 313.5,-374 319.5,-380 319.5,-386 319.5,-386 319.5,-413 319.5,-413 319.5,-419 313.5,-425 307.5,-425"/>
+<text text-anchor="middle" x="229" y="-409.4" font-family="Helvetica,sans-Serif" font-size="12.00">Local consultation paper</text>
+<text text-anchor="middle" x="229" y="-396.4" font-family="Helvetica,sans-Serif" font-size="12.00">proposed rules, questions,</text>
+<text text-anchor="middle" x="229" y="-383.4" font-family="Helvetica,sans-Serif" font-size="12.00">impact data request</text>
+</g>
+<g id="edge4" class="edge">
+<title>BCBS&#45;&gt;Cons</title>
+<path fill="none" stroke="#4b5563" d="M229,-460.91C229,-451.93 229,-441.63 229,-432.12"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="231.45,-432.03 229,-425.03 226.55,-432.03 231.45,-432.03"/>
+</g>
+<g id="node6" class="node">
+<title>Resp</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M305.5,-345C305.5,-345 152.5,-345 152.5,-345 146.5,-345 140.5,-339 140.5,-333 140.5,-333 140.5,-306 140.5,-306 140.5,-300 146.5,-294 152.5,-294 152.5,-294 305.5,-294 305.5,-294 311.5,-294 317.5,-300 317.5,-306 317.5,-306 317.5,-333 317.5,-333 317.5,-339 311.5,-345 305.5,-345"/>
+<text text-anchor="middle" x="229" y="-329.4" font-family="Helvetica,sans-Serif" font-size="12.00">Industry responses</text>
+<text text-anchor="middle" x="229" y="-316.4" font-family="Helvetica,sans-Serif" font-size="12.00">banks, trade bodies,</text>
+<text text-anchor="middle" x="229" y="-303.4" font-family="Helvetica,sans-Serif" font-size="12.00">quantitative impact study</text>
+</g>
+<g id="edge5" class="edge">
+<title>Cons&#45;&gt;Resp</title>
+<path fill="none" stroke="#4b5563" d="M229,-373.82C229,-366.92 229,-359.34 229,-352.1"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="231.45,-352.02 229,-345.02 226.55,-352.02 231.45,-352.02"/>
+</g>
+<g id="node7" class="node">
+<title>Final</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M305,-265C305,-265 153,-265 153,-265 147,-265 141,-259 141,-253 141,-253 141,-226 141,-226 141,-220 147,-214 153,-214 153,-214 305,-214 305,-214 311,-214 317,-220 317,-226 317,-226 317,-253 317,-253 317,-259 311,-265 305,-265"/>
+<text text-anchor="middle" x="229" y="-249.4" font-family="Helvetica,sans-Serif" font-size="12.00">Final local rules</text>
+<text text-anchor="middle" x="229" y="-236.4" font-family="Helvetica,sans-Serif" font-size="12.00">law, regulation, rulebook,</text>
+<text text-anchor="middle" x="229" y="-223.4" font-family="Helvetica,sans-Serif" font-size="12.00">plus local choices</text>
+</g>
+<g id="edge6" class="edge">
+<title>Resp&#45;&gt;Final</title>
+<path fill="none" stroke="#4b5563" d="M229,-293.82C229,-286.92 229,-279.34 229,-272.1"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="231.45,-272.02 229,-265.02 226.55,-272.02 231.45,-272.02"/>
+</g>
+<g id="node8" class="node">
+<title>Tech</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M213.5,-185C213.5,-185 28.5,-185 28.5,-185 22.5,-185 16.5,-179 16.5,-173 16.5,-173 16.5,-146 16.5,-146 16.5,-140 22.5,-134 28.5,-134 28.5,-134 213.5,-134 213.5,-134 219.5,-134 225.5,-140 225.5,-146 225.5,-146 225.5,-173 225.5,-173 225.5,-179 219.5,-185 213.5,-185"/>
+<text text-anchor="middle" x="121" y="-169.4" font-family="Helvetica,sans-Serif" font-size="12.00">Technical standards,</text>
+<text text-anchor="middle" x="121" y="-156.4" font-family="Helvetica,sans-Serif" font-size="12.00">reporting templates, guidance,</text>
+<text text-anchor="middle" x="121" y="-143.4" font-family="Helvetica,sans-Serif" font-size="12.00">questions and answers</text>
+</g>
+<g id="edge7" class="edge">
+<title>Final&#45;&gt;Tech</title>
+<path fill="none" stroke="#4b5563" d="M194.83,-213.82C183.99,-205.99 171.91,-197.27 160.71,-189.18"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="162.06,-187.13 154.95,-185.02 159.19,-191.1 162.06,-187.13"/>
+</g>
+<g id="node9" class="node">
+<title>Trans</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M416.5,-178.5C416.5,-178.5 259.5,-178.5 259.5,-178.5 253.5,-178.5 247.5,-172.5 247.5,-166.5 247.5,-166.5 247.5,-152.5 247.5,-152.5 247.5,-146.5 253.5,-140.5 259.5,-140.5 259.5,-140.5 416.5,-140.5 416.5,-140.5 422.5,-140.5 428.5,-146.5 428.5,-152.5 428.5,-152.5 428.5,-166.5 428.5,-166.5 428.5,-172.5 422.5,-178.5 416.5,-178.5"/>
+<text text-anchor="middle" x="338" y="-162.9" font-family="Helvetica,sans-Serif" font-size="12.00">Transitional arrangements</text>
+<text text-anchor="middle" x="338" y="-149.9" font-family="Helvetica,sans-Serif" font-size="12.00">phase&#45;ins, grandfathering</text>
+</g>
+<g id="edge8" class="edge">
+<title>Final&#45;&gt;Trans</title>
+<path fill="none" stroke="#4b5563" d="M263.49,-213.82C277.33,-203.91 293.18,-192.57 306.69,-182.9"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="308.45,-184.66 312.72,-178.59 305.6,-180.67 308.45,-184.66"/>
+</g>
+<g id="node10" class="node">
+<title>Bank</title>
+<path fill="#065f46" stroke="#065f46" d="M325.5,-105C325.5,-105 132.5,-105 132.5,-105 126.5,-105 120.5,-99 120.5,-93 120.5,-93 120.5,-79 120.5,-79 120.5,-73 126.5,-67 132.5,-67 132.5,-67 325.5,-67 325.5,-67 331.5,-67 337.5,-73 337.5,-79 337.5,-79 337.5,-93 337.5,-93 337.5,-99 331.5,-105 325.5,-105"/>
+<text text-anchor="middle" x="229" y="-89.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Bank&#39;s credit risk platform</text>
+<text text-anchor="middle" x="229" y="-76.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">must compute, report, evidence</text>
+</g>
+<g id="edge9" class="edge">
+<title>Tech&#45;&gt;Bank</title>
+<path fill="none" stroke="#4b5563" d="M158.17,-133.89C170.33,-125.84 183.75,-116.96 195.61,-109.1"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="197.17,-111.01 201.66,-105.1 194.47,-106.92 197.17,-111.01"/>
+</g>
+<g id="edge10" class="edge">
+<title>Trans&#45;&gt;Bank</title>
+<path fill="none" stroke="#4b5563" d="M310.49,-140.46C295.91,-130.89 277.87,-119.06 262.47,-108.96"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="263.69,-106.83 256.5,-105.04 261.01,-110.92 263.69,-106.83"/>
+</g>
+<g id="node11" class="node">
+<title>Sup</title>
+<path fill="#1f2937" stroke="#1f2937" d="M314.5,-38C314.5,-38 143.5,-38 143.5,-38 137.5,-38 131.5,-32 131.5,-26 131.5,-26 131.5,-12 131.5,-12 131.5,-6 137.5,0 143.5,0 143.5,0 314.5,0 314.5,0 320.5,0 326.5,-6 326.5,-12 326.5,-12 326.5,-26 326.5,-26 326.5,-32 320.5,-38 314.5,-38"/>
+<text text-anchor="middle" x="229" y="-22.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Supervisor checks</text>
+<text text-anchor="middle" x="229" y="-9.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">returns, inspections, findings</text>
+</g>
+<g id="edge11" class="edge">
+<title>Bank&#45;&gt;Sup</title>
+<path fill="none" stroke="#4b5563" d="M229,-66.89C229,-60.13 229,-52.33 229,-45.05"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="231.45,-45.01 229,-38.01 226.55,-45.01 231.45,-45.01"/>
+</g>
+</g>
+</svg>

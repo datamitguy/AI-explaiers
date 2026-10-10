@@ -1,0 +1,148 @@
+<svg width="100%"
+ viewBox="0.00 0.00 555.80 810.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 796.4)">
+<title>RegChange</title>
+<polygon fill="white" stroke="transparent" points="-14.4,14.4 -14.4,-796.4 541.4,-796.4 541.4,14.4 -14.4,14.4"/>
+<g id="node1" class="node">
+<title>Src</title>
+<path fill="#1f2937" stroke="#1f2937" d="M383.5,-782C383.5,-782 190.5,-782 190.5,-782 184.5,-782 178.5,-776 178.5,-770 178.5,-770 178.5,-743 178.5,-743 178.5,-737 184.5,-731 190.5,-731 190.5,-731 383.5,-731 383.5,-731 389.5,-731 395.5,-737 395.5,-743 395.5,-743 395.5,-770 395.5,-770 395.5,-776 389.5,-782 383.5,-782"/>
+<text text-anchor="middle" x="287" y="-766.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Publications</text>
+<text text-anchor="middle" x="287" y="-753.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">standard setters, regulators,</text>
+<text text-anchor="middle" x="287" y="-740.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">accounting boards, trade bodies</text>
+</g>
+<g id="node2" class="node">
+<title>H</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M372,-704C372,-704 202,-704 202,-704 196,-704 190,-698 190,-692 190,-692 190,-665 190,-665 190,-659 196,-653 202,-653 202,-653 372,-653 372,-653 378,-653 384,-659 384,-665 384,-665 384,-692 384,-692 384,-698 378,-704 372,-704"/>
+<text text-anchor="middle" x="287" y="-688.4" font-family="Helvetica,sans-Serif" font-size="12.00">1. Horizon scanning</text>
+<text text-anchor="middle" x="287" y="-675.4" font-family="Helvetica,sans-Serif" font-size="12.00">log every item in the</text>
+<text text-anchor="middle" x="287" y="-662.4" font-family="Helvetica,sans-Serif" font-size="12.00">regulatory change inventory</text>
+</g>
+<g id="edge1" class="edge">
+<title>Src&#45;&gt;H</title>
+<path fill="none" stroke="#4b5563" d="M287,-730.61C287,-724.52 287,-717.9 287,-711.52"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="289.45,-711.18 287,-704.18 284.55,-711.18 289.45,-711.18"/>
+</g>
+<g id="node3" class="node">
+<title>A</title>
+<path fill="#fef3c7" stroke="#d97706" d="M104.03,-621.14C104.03,-621.14 10.97,-579.86 10.97,-579.86 5.48,-577.43 5.48,-572.57 10.97,-570.14 10.97,-570.14 104.03,-528.86 104.03,-528.86 109.52,-526.43 120.48,-526.43 125.97,-528.86 125.97,-528.86 219.03,-570.14 219.03,-570.14 224.52,-572.57 224.52,-577.43 219.03,-579.86 219.03,-579.86 125.97,-621.14 125.97,-621.14 120.48,-623.57 109.52,-623.57 104.03,-621.14"/>
+<text text-anchor="middle" x="115" y="-584.9" font-family="Helvetica,sans-Serif" font-size="12.00">Applies to us?</text>
+<text text-anchor="middle" x="115" y="-571.9" font-family="Helvetica,sans-Serif" font-size="12.00">entity, product,</text>
+<text text-anchor="middle" x="115" y="-558.9" font-family="Helvetica,sans-Serif" font-size="12.00">approach, size</text>
+</g>
+<g id="edge2" class="edge">
+<title>H&#45;&gt;A</title>
+<path fill="none" stroke="#4b5563" d="M245.36,-652.93C222.63,-639.52 194.21,-622.74 169.71,-608.28"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="170.84,-606.11 163.57,-604.66 168.35,-610.33 170.84,-606.11"/>
+</g>
+<g id="node4" class="node">
+<title>Arch</title>
+<path fill="#6b7280" stroke="#6b7280" d="M408.5,-600.5C408.5,-600.5 291.5,-600.5 291.5,-600.5 285.5,-600.5 279.5,-594.5 279.5,-588.5 279.5,-588.5 279.5,-561.5 279.5,-561.5 279.5,-555.5 285.5,-549.5 291.5,-549.5 291.5,-549.5 408.5,-549.5 408.5,-549.5 414.5,-549.5 420.5,-555.5 420.5,-561.5 420.5,-561.5 420.5,-588.5 420.5,-588.5 420.5,-594.5 414.5,-600.5 408.5,-600.5"/>
+<text text-anchor="middle" x="350" y="-584.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Record rationale</text>
+<text text-anchor="middle" x="350" y="-571.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">and close; re&#45;check</text>
+<text text-anchor="middle" x="350" y="-558.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">if scope changes</text>
+</g>
+<g id="edge3" class="edge">
+<title>A&#45;&gt;Arch</title>
+<path fill="none" stroke="#4b5563" d="M230.09,-575C244.45,-575 258.86,-575 272.45,-575"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="272.49,-577.45 279.49,-575 272.49,-572.55 272.49,-577.45"/>
+<text text-anchor="middle" x="254.75" y="-581" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151">no</text>
+</g>
+<g id="node5" class="node">
+<title>Gap</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M207.5,-487C207.5,-487 34.5,-487 34.5,-487 28.5,-487 22.5,-481 22.5,-475 22.5,-475 22.5,-448 22.5,-448 22.5,-442 28.5,-436 34.5,-436 34.5,-436 207.5,-436 207.5,-436 213.5,-436 219.5,-442 219.5,-448 219.5,-448 219.5,-475 219.5,-475 219.5,-481 213.5,-487 207.5,-487"/>
+<text text-anchor="middle" x="121" y="-471.4" font-family="Helvetica,sans-Serif" font-size="12.00">2. Gap analysis</text>
+<text text-anchor="middle" x="121" y="-458.4" font-family="Helvetica,sans-Serif" font-size="12.00">requirement by requirement:</text>
+<text text-anchor="middle" x="121" y="-445.4" font-family="Helvetica,sans-Serif" font-size="12.00">compliant, partial, gap</text>
+</g>
+<g id="edge4" class="edge">
+<title>A&#45;&gt;Gap</title>
+<path fill="none" stroke="#4b5563" d="M117.63,-525.09C118.19,-514.65 118.77,-503.88 119.29,-494.28"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="121.74,-494.32 119.67,-487.19 116.85,-494.05 121.74,-494.32"/>
+<text text-anchor="middle" x="128" y="-503" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151">yes</text>
+</g>
+<g id="node6" class="node">
+<title>Big</title>
+<path fill="#fef3c7" stroke="#d97706" d="M119.52,-405.51C119.52,-405.51 17.48,-374.49 17.48,-374.49 11.74,-372.75 11.74,-369.25 17.48,-367.51 17.48,-367.51 119.52,-336.49 119.52,-336.49 125.26,-334.75 136.74,-334.75 142.48,-336.49 142.48,-336.49 244.52,-367.51 244.52,-367.51 250.26,-369.25 250.26,-372.75 244.52,-374.49 244.52,-374.49 142.48,-405.51 142.48,-405.51 136.74,-407.25 125.26,-407.25 119.52,-405.51"/>
+<text text-anchor="middle" x="131" y="-374.4" font-family="Helvetica,sans-Serif" font-size="12.00">Large or</text>
+<text text-anchor="middle" x="131" y="-361.4" font-family="Helvetica,sans-Serif" font-size="12.00">cross&#45;functional?</text>
+</g>
+<g id="edge5" class="edge">
+<title>Gap&#45;&gt;Big</title>
+<path fill="none" stroke="#4b5563" d="M123.79,-435.85C124.51,-429.4 125.32,-422.26 126.12,-415.16"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="128.57,-415.33 126.92,-408.1 123.7,-414.78 128.57,-415.33"/>
+</g>
+<g id="node7" class="node">
+<title>BAU</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M184,-278.5C184,-278.5 78,-278.5 78,-278.5 72,-278.5 66,-272.5 66,-266.5 66,-266.5 66,-252.5 66,-252.5 66,-246.5 72,-240.5 78,-240.5 78,-240.5 184,-240.5 184,-240.5 190,-240.5 196,-246.5 196,-252.5 196,-252.5 196,-266.5 196,-266.5 196,-272.5 190,-278.5 184,-278.5"/>
+<text text-anchor="middle" x="131" y="-262.9" font-family="Helvetica,sans-Serif" font-size="12.00">Business&#45;as&#45;usual</text>
+<text text-anchor="middle" x="131" y="-249.9" font-family="Helvetica,sans-Serif" font-size="12.00">change backlog</text>
+</g>
+<g id="edge6" class="edge">
+<title>Big&#45;&gt;BAU</title>
+<path fill="none" stroke="#4b5563" d="M131,-332.93C131,-317.54 131,-300.06 131,-286.13"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="133.45,-285.79 131,-278.79 128.55,-285.79 133.45,-285.79"/>
+<text text-anchor="middle" x="137.5" y="-306.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151">no</text>
+</g>
+<g id="node8" class="node">
+<title>Prog</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M389,-285C389,-285 233,-285 233,-285 227,-285 221,-279 221,-273 221,-273 221,-246 221,-246 221,-240 227,-234 233,-234 233,-234 389,-234 389,-234 395,-234 401,-240 401,-246 401,-246 401,-273 401,-273 401,-279 395,-285 389,-285"/>
+<text text-anchor="middle" x="311" y="-269.4" font-family="Helvetica,sans-Serif" font-size="12.00">3. Programme set&#45;up</text>
+<text text-anchor="middle" x="311" y="-256.4" font-family="Helvetica,sans-Serif" font-size="12.00">sponsor, budget, plan,</text>
+<text text-anchor="middle" x="311" y="-243.4" font-family="Helvetica,sans-Serif" font-size="12.00">workstreams, governance</text>
+</g>
+<g id="edge7" class="edge">
+<title>Big&#45;&gt;Prog</title>
+<path fill="none" stroke="#4b5563" d="M171.84,-345.15C199.44,-328.36 235.94,-306.16 264.63,-288.71"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="265.92,-290.79 270.63,-285.06 263.37,-286.61 265.92,-290.79"/>
+<text text-anchor="middle" x="256" y="-306.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151">yes</text>
+</g>
+<g id="node9" class="node">
+<title>Del</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M374,-207C374,-207 248,-207 248,-207 242,-207 236,-201 236,-195 236,-195 236,-168 236,-168 236,-162 242,-156 248,-156 248,-156 374,-156 374,-156 380,-156 386,-162 386,-168 386,-168 386,-195 386,-195 386,-201 380,-207 374,-207"/>
+<text text-anchor="middle" x="311" y="-191.4" font-family="Helvetica,sans-Serif" font-size="12.00">4. Delivery</text>
+<text text-anchor="middle" x="311" y="-178.4" font-family="Helvetica,sans-Serif" font-size="12.00">interpret, build, test,</text>
+<text text-anchor="middle" x="311" y="-165.4" font-family="Helvetica,sans-Serif" font-size="12.00">parallel run, cut over</text>
+</g>
+<g id="edge9" class="edge">
+<title>BAU&#45;&gt;Del</title>
+<path fill="none" stroke="#4b5563" d="M173.66,-240.49C195.23,-231.38 221.87,-220.13 245.93,-209.97"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="247.15,-212.12 252.65,-207.14 245.24,-207.6 247.15,-212.12"/>
+</g>
+<g id="edge8" class="edge">
+<title>Prog&#45;&gt;Del</title>
+<path fill="none" stroke="#4b5563" d="M311,-233.61C311,-227.52 311,-220.9 311,-214.52"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="313.45,-214.18 311,-207.18 308.55,-214.18 313.45,-214.18"/>
+</g>
+<g id="node10" class="node">
+<title>Att</title>
+<path fill="#065f46" stroke="#065f46" d="M408.5,-129C408.5,-129 217.5,-129 217.5,-129 211.5,-129 205.5,-123 205.5,-117 205.5,-117 205.5,-90 205.5,-90 205.5,-84 211.5,-78 217.5,-78 217.5,-78 408.5,-78 408.5,-78 414.5,-78 420.5,-84 420.5,-90 420.5,-90 420.5,-117 420.5,-117 420.5,-123 414.5,-129 408.5,-129"/>
+<text text-anchor="middle" x="313" y="-113.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">5. Attestation</text>
+<text text-anchor="middle" x="313" y="-100.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">accountable executive confirms</text>
+<text text-anchor="middle" x="313" y="-87.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">compliance, with evidence</text>
+</g>
+<g id="edge10" class="edge">
+<title>Del&#45;&gt;Att</title>
+<path fill="none" stroke="#4b5563" d="M311.65,-155.61C311.82,-149.52 311.99,-142.9 312.16,-136.52"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="314.62,-136.24 312.35,-129.18 309.72,-136.11 314.62,-136.24"/>
+</g>
+<g id="node11" class="node">
+<title>BAU2</title>
+<path fill="#1f2937" stroke="#1f2937" d="M470,-51C470,-51 302,-51 302,-51 296,-51 290,-45 290,-39 290,-39 290,-12 290,-12 290,-6 296,0 302,0 302,0 470,0 470,0 476,0 482,-6 482,-12 482,-12 482,-39 482,-39 482,-45 476,-51 470,-51"/>
+<text text-anchor="middle" x="386" y="-35.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">6. Embed and monitor</text>
+<text text-anchor="middle" x="386" y="-22.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">new controls, Q&amp;A updates,</text>
+<text text-anchor="middle" x="386" y="-9.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">post&#45;implementation review</text>
+</g>
+<g id="edge11" class="edge">
+<title>Att&#45;&gt;BAU2</title>
+<path fill="none" stroke="#4b5563" d="M336.9,-77.61C343.4,-70.85 350.5,-63.46 357.23,-56.45"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="359.21,-57.93 362.29,-51.18 355.68,-54.53 359.21,-57.93"/>
+</g>
+<g id="edge12" class="edge">
+<title>BAU2&#45;&gt;H</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M428.04,-51.12C444.27,-63.99 459,-81.46 459,-102.5 459,-576 459,-576 459,-576 459,-614.19 427.16,-638.31 390.88,-653.39"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="389.66,-651.24 384.06,-656.1 391.47,-655.79 389.66,-651.24"/>
+<text text-anchor="middle" x="493" y="-312" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151">amendments,</text>
+<text text-anchor="middle" x="493" y="-301" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151">new Q&amp;A</text>
+</g>
+</g>
+</svg>

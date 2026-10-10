@@ -1,0 +1,161 @@
+<svg width="100%"
+ viewBox="0.00 0.00 680.30 881.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 867.4)">
+<title>ParallelRun</title>
+<polygon fill="white" stroke="transparent" points="-14.4,14.4 -14.4,-867.4 665.9,-867.4 665.9,14.4 -14.4,14.4"/>
+<g id="node1" class="node">
+<title>Start</title>
+<path fill="#1f2937" stroke="#1f2937" d="M517.5,-853C517.5,-853 360.5,-853 360.5,-853 354.5,-853 348.5,-847 348.5,-841 348.5,-841 348.5,-827 348.5,-827 348.5,-821 354.5,-815 360.5,-815 360.5,-815 517.5,-815 517.5,-815 523.5,-815 529.5,-821 529.5,-827 529.5,-827 529.5,-841 529.5,-841 529.5,-847 523.5,-853 517.5,-853"/>
+<text text-anchor="middle" x="439" y="-837.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Build tested and approved</text>
+<text text-anchor="middle" x="439" y="-824.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">for parallel running</text>
+</g>
+<g id="node2" class="node">
+<title>Run</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M523.5,-788C523.5,-788 354.5,-788 354.5,-788 348.5,-788 342.5,-782 342.5,-776 342.5,-776 342.5,-762 342.5,-762 342.5,-756 348.5,-750 354.5,-750 354.5,-750 523.5,-750 523.5,-750 529.5,-750 535.5,-756 535.5,-762 535.5,-762 535.5,-776 535.5,-776 535.5,-782 529.5,-788 523.5,-788"/>
+<text text-anchor="middle" x="439" y="-772.4" font-family="Helvetica,sans-Serif" font-size="12.00">Month&#45;end: run old and new</text>
+<text text-anchor="middle" x="439" y="-759.4" font-family="Helvetica,sans-Serif" font-size="12.00">on the same frozen data</text>
+</g>
+<g id="edge1" class="edge">
+<title>Start&#45;&gt;Run</title>
+<path fill="none" stroke="#4b5563" d="M439,-814.78C439,-808.82 439,-802.09 439,-795.69"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="441.45,-795.4 439,-788.4 436.55,-795.4 441.45,-795.4"/>
+</g>
+<g id="node3" class="node">
+<title>Cmp</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M379,-723C379,-723 217,-723 217,-723 211,-723 205,-717 205,-711 205,-711 205,-697 205,-697 205,-691 211,-685 217,-685 217,-685 379,-685 379,-685 385,-685 391,-691 391,-697 391,-697 391,-711 391,-711 391,-717 385,-723 379,-723"/>
+<text text-anchor="middle" x="298" y="-707.4" font-family="Helvetica,sans-Serif" font-size="12.00">Compare at total, segment</text>
+<text text-anchor="middle" x="298" y="-694.4" font-family="Helvetica,sans-Serif" font-size="12.00">and exposure level</text>
+</g>
+<g id="edge2" class="edge">
+<title>Run&#45;&gt;Cmp</title>
+<path fill="none" stroke="#4b5563" d="M398.6,-749.95C381.93,-742.5 362.5,-733.82 345.18,-726.08"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="345.8,-723.67 338.41,-723.06 343.8,-728.15 345.8,-723.67"/>
+</g>
+<g id="node4" class="node">
+<title>Exp</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M319.5,-637C319.5,-637 162.5,-637 162.5,-637 156.5,-637 150.5,-631 150.5,-625 150.5,-625 150.5,-598 150.5,-598 150.5,-592 156.5,-586 162.5,-586 162.5,-586 319.5,-586 319.5,-586 325.5,-586 331.5,-592 331.5,-598 331.5,-598 331.5,-625 331.5,-625 331.5,-631 325.5,-637 319.5,-637"/>
+<text text-anchor="middle" x="241" y="-621.4" font-family="Helvetica,sans-Serif" font-size="12.00">Explain every variance</text>
+<text text-anchor="middle" x="241" y="-608.4" font-family="Helvetica,sans-Serif" font-size="12.00">expected (rule change) or</text>
+<text text-anchor="middle" x="241" y="-595.4" font-family="Helvetica,sans-Serif" font-size="12.00">unexpected (defect, data)</text>
+</g>
+<g id="edge3" class="edge">
+<title>Cmp&#45;&gt;Exp</title>
+<path fill="none" stroke="#4b5563" d="M286.47,-684.69C279.02,-672.86 269.14,-657.18 260.49,-643.45"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="262.43,-641.92 256.62,-637.3 258.28,-644.53 262.43,-641.92"/>
+</g>
+<g id="node5" class="node">
+<title>Tol</title>
+<path fill="#fef3c7" stroke="#d97706" d="M142.35,-556.13C142.35,-556.13 11.65,-523.87 11.65,-523.87 5.83,-522.44 5.83,-519.56 11.65,-518.13 11.65,-518.13 142.35,-485.87 142.35,-485.87 148.17,-484.44 159.83,-484.44 165.65,-485.87 165.65,-485.87 296.35,-518.13 296.35,-518.13 302.17,-519.56 302.17,-522.44 296.35,-523.87 296.35,-523.87 165.65,-556.13 165.65,-556.13 159.83,-557.56 148.17,-557.56 142.35,-556.13"/>
+<text text-anchor="middle" x="154" y="-524.4" font-family="Helvetica,sans-Serif" font-size="12.00">Unexplained variance</text>
+<text text-anchor="middle" x="154" y="-511.4" font-family="Helvetica,sans-Serif" font-size="12.00">within tolerance?</text>
+</g>
+<g id="edge4" class="edge">
+<title>Exp&#45;&gt;Tol</title>
+<path fill="none" stroke="#4b5563" d="M216.77,-585.85C207.95,-576.88 197.8,-566.56 188.28,-556.87"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="190.02,-555.14 183.36,-551.87 186.52,-558.58 190.02,-555.14"/>
+</g>
+<g id="node6" class="node">
+<title>Fix</title>
+<path fill="#991b1b" stroke="#991b1b" d="M508,-540C508,-540 370,-540 370,-540 364,-540 358,-534 358,-528 358,-528 358,-514 358,-514 358,-508 364,-502 370,-502 370,-502 508,-502 508,-502 514,-502 520,-508 520,-514 520,-514 520,-528 520,-528 520,-534 514,-540 508,-540"/>
+<text text-anchor="middle" x="439" y="-524.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Raise defect, fix,</text>
+<text text-anchor="middle" x="439" y="-511.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">re&#45;test, reset the count</text>
+</g>
+<g id="edge5" class="edge">
+<title>Tol&#45;&gt;Fix</title>
+<path fill="none" stroke="#4b5563" d="M308.18,-521C322.7,-521 337.05,-521 350.64,-521"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="350.67,-523.45 357.67,-521 350.67,-518.55 350.67,-523.45"/>
+<text text-anchor="middle" x="333" y="-527" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151">no</text>
+</g>
+<g id="node7" class="node">
+<title>Cnt</title>
+<path fill="#fef3c7" stroke="#d97706" d="M345.19,-440.8C345.19,-440.8 260.81,-400.2 260.81,-400.2 255.41,-397.6 255.41,-392.4 260.81,-389.8 260.81,-389.8 345.19,-349.2 345.19,-349.2 350.59,-346.6 361.41,-346.6 366.81,-349.2 366.81,-349.2 451.19,-389.8 451.19,-389.8 456.59,-392.4 456.59,-397.6 451.19,-400.2 451.19,-400.2 366.81,-440.8 366.81,-440.8 361.41,-443.4 350.59,-443.4 345.19,-440.8"/>
+<text text-anchor="middle" x="356" y="-404.9" font-family="Helvetica,sans-Serif" font-size="12.00">Enough clean</text>
+<text text-anchor="middle" x="356" y="-391.9" font-family="Helvetica,sans-Serif" font-size="12.00">month&#45;ends?</text>
+<text text-anchor="middle" x="356" y="-378.9" font-family="Helvetica,sans-Serif" font-size="12.00">(often 2 or 3)</text>
+</g>
+<g id="edge7" class="edge">
+<title>Tol&#45;&gt;Cnt</title>
+<path fill="none" stroke="#4b5563" d="M197.33,-493.4C228.66,-474.17 271.1,-448.11 304.21,-427.79"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="305.6,-429.81 310.28,-424.06 303.03,-425.64 305.6,-429.81"/>
+<text text-anchor="middle" x="258" y="-462" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151">yes</text>
+</g>
+<g id="edge6" class="edge">
+<title>Fix&#45;&gt;Run</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M439,-540.12C439,-583.41 439,-692.99 439,-742.74"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="436.55,-742.91 439,-749.91 441.45,-742.91 436.55,-742.91"/>
+<text text-anchor="middle" x="466" y="-664" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151">next</text>
+<text text-anchor="middle" x="466" y="-653" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151">month&#45;end</text>
+</g>
+<g id="edge8" class="edge">
+<title>Cnt&#45;&gt;Run</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M430.64,-410.27C488.19,-426.1 558,-458.07 558,-520 558,-705 558,-705 558,-705 558,-724.05 545.94,-737.36 529.5,-746.64"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="528.34,-744.48 523.26,-749.89 530.6,-748.83 528.34,-744.48"/>
+<text text-anchor="middle" x="564.5" y="-609" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151">no</text>
+</g>
+<g id="node8" class="node">
+<title>Gate</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M443,-307C443,-307 269,-307 269,-307 263,-307 257,-301 257,-295 257,-295 257,-268 257,-268 257,-262 263,-256 269,-256 269,-256 443,-256 443,-256 449,-256 455,-262 455,-268 455,-268 455,-295 455,-295 455,-301 449,-307 443,-307"/>
+<text text-anchor="middle" x="356" y="-291.4" font-family="Helvetica,sans-Serif" font-size="12.00">Go&#45;live gate</text>
+<text text-anchor="middle" x="356" y="-278.4" font-family="Helvetica,sans-Serif" font-size="12.00">risk, finance, validation,</text>
+<text text-anchor="middle" x="356" y="-265.4" font-family="Helvetica,sans-Serif" font-size="12.00">reporting sign; CAB approves</text>
+</g>
+<g id="edge9" class="edge">
+<title>Cnt&#45;&gt;Gate</title>
+<path fill="none" stroke="#4b5563" d="M356,-343.8C356,-333.76 356,-323.48 356,-314.28"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="358.45,-314.16 356,-307.16 353.55,-314.16 358.45,-314.16"/>
+<text text-anchor="middle" x="365" y="-323" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151">yes</text>
+</g>
+<g id="node9" class="node">
+<title>Ready</title>
+<path fill="#fef3c7" stroke="#d97706" d="M344.55,-225.4C344.55,-225.4 246.45,-194.6 246.45,-194.6 240.72,-192.8 240.72,-189.2 246.45,-187.4 246.45,-187.4 344.55,-156.6 344.55,-156.6 350.28,-154.8 361.72,-154.8 367.45,-156.6 367.45,-156.6 465.55,-187.4 465.55,-187.4 471.28,-189.2 471.28,-192.8 465.55,-194.6 465.55,-194.6 367.45,-225.4 367.45,-225.4 361.72,-227.2 350.28,-227.2 344.55,-225.4"/>
+<text text-anchor="middle" x="356" y="-194.4" font-family="Helvetica,sans-Serif" font-size="12.00">Rollback tested?</text>
+<text text-anchor="middle" x="356" y="-181.4" font-family="Helvetica,sans-Serif" font-size="12.00">Outside freeze?</text>
+</g>
+<g id="edge10" class="edge">
+<title>Gate&#45;&gt;Ready</title>
+<path fill="none" stroke="#4b5563" d="M356,-255.85C356,-249.76 356,-243.06 356,-236.35"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="358.45,-236.1 356,-229.1 353.55,-236.1 358.45,-236.1"/>
+</g>
+<g id="node10" class="node">
+<title>Wait</title>
+<path fill="#6b7280" stroke="#6b7280" d="M639.5,-210C639.5,-210 538.5,-210 538.5,-210 532.5,-210 526.5,-204 526.5,-198 526.5,-198 526.5,-184 526.5,-184 526.5,-178 532.5,-172 538.5,-172 538.5,-172 639.5,-172 639.5,-172 645.5,-172 651.5,-178 651.5,-184 651.5,-184 651.5,-198 651.5,-198 651.5,-204 645.5,-210 639.5,-210"/>
+<text text-anchor="middle" x="589" y="-194.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Wait for the next</text>
+<text text-anchor="middle" x="589" y="-181.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">release window</text>
+</g>
+<g id="edge11" class="edge">
+<title>Ready&#45;&gt;Wait</title>
+<path fill="none" stroke="#4b5563" d="M477.28,-191C491.65,-191 505.92,-191 519.21,-191"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="519.5,-193.45 526.5,-191 519.5,-188.55 519.5,-193.45"/>
+<text text-anchor="middle" x="501.75" y="-197" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151">no</text>
+</g>
+<g id="node11" class="node">
+<title>Cut</title>
+<path fill="#065f46" stroke="#065f46" d="M421,-116C421,-116 291,-116 291,-116 285,-116 279,-110 279,-104 279,-104 279,-77 279,-77 279,-71 285,-65 291,-65 291,-65 421,-65 421,-65 427,-65 433,-71 433,-77 433,-77 433,-104 433,-104 433,-110 427,-116 421,-116"/>
+<text text-anchor="middle" x="356" y="-100.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Cutover</text>
+<text text-anchor="middle" x="356" y="-87.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">new becomes official,</text>
+<text text-anchor="middle" x="356" y="-74.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">old kept read&#45;only</text>
+</g>
+<g id="edge13" class="edge">
+<title>Ready&#45;&gt;Cut</title>
+<path fill="none" stroke="#4b5563" d="M356,-152.76C356,-143.13 356,-132.85 356,-123.51"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="358.45,-123.26 356,-116.26 353.55,-123.26 358.45,-123.26"/>
+<text text-anchor="middle" x="365" y="-132" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151">yes</text>
+</g>
+<g id="edge12" class="edge">
+<title>Wait&#45;&gt;Ready</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M526.48,-188.41C520.91,-188.24 515.35,-188.1 510,-188 498.38,-187.78 486.26,-187.72 474.16,-187.77"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="474.02,-185.32 467.03,-187.82 474.05,-190.22 474.02,-185.32"/>
+</g>
+<g id="node12" class="node">
+<title>PIR</title>
+<path fill="#1f2937" stroke="#1f2937" d="M442.5,-38C442.5,-38 269.5,-38 269.5,-38 263.5,-38 257.5,-32 257.5,-26 257.5,-26 257.5,-12 257.5,-12 257.5,-6 263.5,0 269.5,0 269.5,0 442.5,0 442.5,0 448.5,0 454.5,-6 454.5,-12 454.5,-12 454.5,-26 454.5,-26 454.5,-32 448.5,-38 442.5,-38"/>
+<text text-anchor="middle" x="356" y="-22.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Post&#45;implementation review</text>
+<text text-anchor="middle" x="356" y="-9.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">after first live reporting cycle</text>
+</g>
+<g id="edge14" class="edge">
+<title>Cut&#45;&gt;PIR</title>
+<path fill="none" stroke="#4b5563" d="M356,-64.8C356,-58.52 356,-51.76 356,-45.44"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="358.45,-45.28 356,-38.28 353.55,-45.28 358.45,-45.28"/>
+</g>
+</g>
+</svg>

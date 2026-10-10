@@ -1,0 +1,30 @@
+digraph StandardSetting {
+  graph [rankdir=TB, splines=true, nodesep=0.3, ranksep=0.4, fontname="Helvetica", fontsize=13, bgcolor="white", newrank=true, pad=0.2];
+  node  [shape=box, style="rounded,filled", fillcolor="#eef2ff", color="#6366f1", fontname="Helvetica", fontsize=12, margin="0.16,0.08"];
+  edge  [color="#4b5563", arrowsize=0.7, fontname="Helvetica", fontsize=10, fontcolor="#374151"];
+
+  G20 [label="G20 leaders\npolitical mandate after a crisis", fillcolor="#1f2937", fontcolor="white", color="#1f2937"];
+  FSB [label="Financial Stability Board (FSB)\ncoordinates, monitors, peer reviews"];
+  BCBS [label="Basel Committee (BCBS)\nconsults, then publishes\nthe global standard"];
+  Note [label="Not law: a standard binds\nonly once each country adopts it", fillcolor="#6b7280", fontcolor="white", color="#6b7280"];
+
+  subgraph cluster_local {
+    label="In each jurisdiction"; style="dashed,rounded"; color="#9ca3af"; fontcolor="#374151"; fontsize=11;
+    Cons [label="Local consultation paper\nproposed rules, questions,\nimpact data request"];
+    Resp [label="Industry responses\nbanks, trade bodies,\nquantitative impact study"];
+    Final [label="Final local rules\nlaw, regulation, rulebook,\nplus local choices"];
+    Tech [label="Technical standards,\nreporting templates, guidance,\nquestions and answers"];
+    Trans [label="Transitional arrangements\nphase-ins, grandfathering"];
+  }
+  Bank [label="Bank's credit risk platform\nmust compute, report, evidence", fillcolor="#065f46", fontcolor="white", color="#065f46"];
+  Sup [label="Supervisor checks\nreturns, inspections, findings", fillcolor="#1f2937", fontcolor="white", color="#1f2937"];
+
+  G20 -> FSB -> BCBS;
+  BCBS -> Note [style=dashed];
+  {rank=same; BCBS Note}
+  BCBS -> Cons -> Resp -> Final;
+  Final -> Tech; Final -> Trans;
+  {rank=same; Tech Trans}
+  Tech -> Bank; Trans -> Bank;
+  Bank -> Sup;
+}

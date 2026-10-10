@@ -1,0 +1,18 @@
+digraph TestPyramid {
+  graph [rankdir=TB, splines=true, nodesep=0.3, ranksep=0.12, fontname="Helvetica", fontsize=13, bgcolor="white", pad=0.2];
+  node  [shape=box, style="rounded,filled", fillcolor="#eef2ff", color="#6366f1", fontname="Helvetica", fontsize=12, margin="0.16,0.06", fixedsize=true, height=0.75];
+  edge  [style=invis];
+
+  P7 [label="Parallel runs\nseveral month-ends, variances explained", width=3.9, fillcolor="#1f2937", fontcolor="white", color="#1f2937"];
+  P6 [label="User acceptance by risk and finance\ndo the numbers make business sense?", width=4.3];
+  P5 [label="Independent model implementation testing\nvalidation re-codes the formula and compares", width=5.3];
+  P4 [label="Reconciliation tests\nto the ledger, to source totals, to last period", width=6.0];
+  P3 [label="Regression on full portfolios\nnothing moved that should not have moved", width=6.8];
+  P2 [label="System integration tests\nfeeds, mappings, engine and reports work together", width=7.6];
+  P1 [label="Unit tests and golden test cases\none rule, one exposure, one expected answer; thousands, run on every build", width=8.4, fillcolor="#065f46", fontcolor="white", color="#065f46"];
+
+  P7 -> P6 -> P5 -> P4 -> P3 -> P2 -> P1;
+
+  Note [shape=plaintext, style="", fixedsize=false, fontsize=11, fontcolor="#374151", label="Top: few, slow, expensive, close to the real thing\nBottom: many, fast, cheap, precise about the cause"];
+  P1 -> Note;
+}

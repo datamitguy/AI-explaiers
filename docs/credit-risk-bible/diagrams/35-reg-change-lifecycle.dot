@@ -1,0 +1,29 @@
+digraph RegChange {
+  graph [rankdir=TB, splines=true, nodesep=0.35, ranksep=0.35, fontname="Helvetica", fontsize=13, bgcolor="white", newrank=true, pad=0.2];
+  node  [shape=box, style="rounded,filled", fillcolor="#eef2ff", color="#6366f1", fontname="Helvetica", fontsize=12, margin="0.16,0.08"];
+  edge  [color="#4b5563", arrowsize=0.7, fontname="Helvetica", fontsize=10, fontcolor="#374151"];
+
+  Src [label="Publications\nstandard setters, regulators,\naccounting boards, trade bodies", fillcolor="#1f2937", fontcolor="white", color="#1f2937"];
+  H [label="1. Horizon scanning\nlog every item in the\nregulatory change inventory"];
+  A [label="Applies to us?\nentity, product,\napproach, size", shape=diamond, fillcolor="#fef3c7", color="#d97706"];
+  Arch [label="Record rationale\nand close; re-check\nif scope changes", fillcolor="#6b7280", fontcolor="white", color="#6b7280"];
+  Gap [label="2. Gap analysis\nrequirement by requirement:\ncompliant, partial, gap"];
+  Big [label="Large or\ncross-functional?", shape=diamond, fillcolor="#fef3c7", color="#d97706"];
+  BAU [label="Business-as-usual\nchange backlog"];
+  Prog [label="3. Programme set-up\nsponsor, budget, plan,\nworkstreams, governance"];
+  Del [label="4. Delivery\ninterpret, build, test,\nparallel run, cut over"];
+  Att [label="5. Attestation\naccountable executive confirms\ncompliance, with evidence", fillcolor="#065f46", fontcolor="white", color="#065f46"];
+  BAU2 [label="6. Embed and monitor\nnew controls, Q&A updates,\npost-implementation review", fillcolor="#1f2937", fontcolor="white", color="#1f2937"];
+
+  Src -> H -> A;
+  A -> Arch [label="no"];
+  A -> Gap [label="yes"];
+  {rank=same; A Arch}
+  Gap -> Big;
+  Big -> BAU [label="no"];
+  Big -> Prog [label="yes"];
+  {rank=same; BAU Prog}
+  Prog -> Del; BAU -> Del;
+  Del -> Att -> BAU2;
+  BAU2 -> H [style=dashed, label="amendments,\nnew Q&A"];
+}
