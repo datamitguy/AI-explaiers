@@ -1,0 +1,27 @@
+digraph LimitCheck {
+  graph [rankdir=TB, splines=true, nodesep=0.35, ranksep=0.4, fontname="Helvetica", fontsize=13, bgcolor="white", newrank=true, pad=0.2];
+  node  [shape=box, style="rounded,filled", fillcolor="#eef2ff", color="#6366f1", fontname="Helvetica", fontsize=12, margin="0.16,0.08"];
+  edge  [color="#4b5563", arrowsize=0.7, fontname="Helvetica", fontsize=10, fontcolor="#374151"];
+
+  Start [label="Dealer proposes a new\nFX forward with a counterparty", fillcolor="#1f2937", fontcolor="white", color="#1f2937"];
+  PreCalc [label="Pre-settlement check\nincremental exposure: MTM plus\nadd-on or PFE, after netting"];
+  PreQ [label="Within the\npre-settlement\nlimit?", shape=diamond, fillcolor="#fef3c7", color="#d97706"];
+  SetCalc [label="Settlement check\nadd the gross amount we pay\nto that value date's total"];
+  CLSQ [label="Settles through\nCLS or another\nPvP route?", shape=diamond, fillcolor="#fef3c7", color="#d97706"];
+  Excl [label="Counted at reduced or\nzero settlement exposure\n(per bank policy)", fillcolor="#6b7280", fontcolor="white", color="#6b7280"];
+  SetQ [label="Within the daily\nsettlement limit\nfor that date?", shape=diamond, fillcolor="#fef3c7", color="#d97706"];
+  Book [label="Book the trade\nboth limits updated", fillcolor="#065f46", fontcolor="white", color="#065f46"];
+  Excess [label="Excess\nrefer to the credit officer\nwith authority", fillcolor="#991b1b", fontcolor="white", color="#991b1b"];
+  Decide [label="Approve a temporary excess,\nrestructure (net, use CLS,\nchange value date) or decline"];
+
+  Start -> PreCalc -> PreQ;
+  PreQ -> SetCalc [label="yes"];
+  PreQ -> Excess [label="no"];
+  SetCalc -> CLSQ;
+  CLSQ -> Excl [label="yes"];
+  CLSQ -> SetQ [label="no"];
+  Excl -> Book;
+  SetQ -> Book [label="yes"];
+  SetQ -> Excess [label="no"];
+  Excess -> Decide;
+}

@@ -1,0 +1,95 @@
+<svg width="100%"
+ viewBox="0.00 0.00 570.30 587.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 573.4)">
+<title>SRT</title>
+<polygon fill="white" stroke="transparent" points="-14.4,14.4 -14.4,-573.4 555.9,-573.4 555.9,14.4 -14.4,14.4"/>
+<g id="clust1" class="cluster">
+<title>cluster_pool</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M20,-130C20,-130 271,-130 271,-130 277,-130 283,-136 283,-142 283,-142 283,-450 283,-450 283,-456 277,-462 271,-462 271,-462 20,-462 20,-462 14,-462 8,-456 8,-450 8,-450 8,-142 8,-142 8,-136 14,-130 20,-130"/>
+<text text-anchor="middle" x="145.5" y="-449.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#374151">Reference portfolio: 1,000m of corporate loans</text>
+</g>
+<g id="node1" class="node">
+<title>Bank</title>
+<path fill="#1f2937" stroke="#1f2937" d="M275.5,-559C275.5,-559 64.5,-559 64.5,-559 58.5,-559 52.5,-553 52.5,-547 52.5,-547 52.5,-520 52.5,-520 52.5,-514 58.5,-508 64.5,-508 64.5,-508 275.5,-508 275.5,-508 281.5,-508 287.5,-514 287.5,-520 287.5,-520 287.5,-547 287.5,-547 287.5,-553 281.5,-559 275.5,-559"/>
+<text text-anchor="middle" x="170" y="-543.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Bank (originator)</text>
+<text text-anchor="middle" x="170" y="-530.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">loans stay on its balance sheet</text>
+<text text-anchor="middle" x="170" y="-517.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">and it keeps the client relationships</text>
+</g>
+<g id="node2" class="node">
+<title>Senior</title>
+<path fill="#065f46" stroke="#065f46" d="M258,-434C258,-434 82,-434 82,-434 76,-434 70,-428 70,-422 70,-422 70,-395 70,-395 70,-389 76,-383 82,-383 82,-383 258,-383 258,-383 264,-383 270,-389 270,-395 270,-395 270,-422 270,-422 270,-428 264,-434 258,-434"/>
+<text text-anchor="middle" x="170" y="-418.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Senior tranche 7.5% to 100%</text>
+<text text-anchor="middle" x="170" y="-405.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">925m, retained by the bank</text>
+<text text-anchor="middle" x="170" y="-392.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">low risk weight (floor applies)</text>
+</g>
+<g id="edge3" class="edge">
+<title>Bank&#45;&gt;Senior</title>
+<path fill="none" stroke="#4b5563" d="M170,-507.9C170,-488.71 170,-461.92 170,-441.13"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="172.45,-441.05 170,-434.05 167.55,-441.05 172.45,-441.05"/>
+<text text-anchor="middle" x="214" y="-484" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> tranches the risk,</text>
+<text text-anchor="middle" x="214" y="-473" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> not the loans</text>
+</g>
+<g id="node3" class="node">
+<title>Mezz</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M263,-350C263,-350 77,-350 77,-350 71,-350 65,-344 65,-338 65,-338 65,-311 65,-311 65,-305 71,-299 77,-299 77,-299 263,-299 263,-299 269,-299 275,-305 275,-311 275,-311 275,-338 275,-338 275,-344 269,-350 263,-350"/>
+<text text-anchor="middle" x="170" y="-334.4" font-family="Helvetica,sans-Serif" font-size="12.00">Mezzanine tranche 1% to 7.5%</text>
+<text text-anchor="middle" x="170" y="-321.4" font-family="Helvetica,sans-Serif" font-size="12.00">65m, protection bought</text>
+<text text-anchor="middle" x="170" y="-308.4" font-family="Helvetica,sans-Serif" font-size="12.00">from investors</text>
+</g>
+<g id="node4" class="node">
+<title>First</title>
+<path fill="#991b1b" stroke="#991b1b" d="M259.5,-189C259.5,-189 96.5,-189 96.5,-189 90.5,-189 84.5,-183 84.5,-177 84.5,-177 84.5,-150 84.5,-150 84.5,-144 90.5,-138 96.5,-138 96.5,-138 259.5,-138 259.5,-138 265.5,-138 271.5,-144 271.5,-150 271.5,-150 271.5,-177 271.5,-177 271.5,-183 265.5,-189 259.5,-189"/>
+<text text-anchor="middle" x="178" y="-173.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">First loss tranche 0% to 1%</text>
+<text text-anchor="middle" x="178" y="-160.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">10m, retained by the bank</text>
+<text text-anchor="middle" x="178" y="-147.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">very high risk weight</text>
+</g>
+<g id="node6" class="node">
+<title>CLN</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M499.5,-256C499.5,-256 302.5,-256 302.5,-256 296.5,-256 290.5,-250 290.5,-244 290.5,-244 290.5,-217 290.5,-217 290.5,-211 296.5,-205 302.5,-205 302.5,-205 499.5,-205 499.5,-205 505.5,-205 511.5,-211 511.5,-217 511.5,-217 511.5,-244 511.5,-244 511.5,-250 505.5,-256 499.5,-256"/>
+<text text-anchor="middle" x="401" y="-240.4" font-family="Helvetica,sans-Serif" font-size="12.00">Funded: credit&#45;linked notes</text>
+<text text-anchor="middle" x="401" y="-227.4" font-family="Helvetica,sans-Serif" font-size="12.00">investors pay 65m cash up front,</text>
+<text text-anchor="middle" x="401" y="-214.4" font-family="Helvetica,sans-Serif" font-size="12.00">held as collateral</text>
+</g>
+<g id="edge4" class="edge">
+<title>Mezz&#45;&gt;CLN</title>
+<path fill="none" stroke="#4b5563" d="M231.6,-298.97C262.67,-286.59 300.45,-271.55 332.44,-258.81"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="333.57,-260.99 339.17,-256.12 331.76,-256.44 333.57,-260.99"/>
+<text text-anchor="middle" x="319.5" y="-275" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> protection</text>
+</g>
+<g id="node8" class="node">
+<title>Loss</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M317.5,-51C317.5,-51 110.5,-51 110.5,-51 104.5,-51 98.5,-45 98.5,-39 98.5,-39 98.5,-12 98.5,-12 98.5,-6 104.5,0 110.5,0 110.5,0 317.5,0 317.5,0 323.5,0 329.5,-6 329.5,-12 329.5,-12 329.5,-39 329.5,-39 329.5,-45 323.5,-51 317.5,-51"/>
+<text text-anchor="middle" x="214" y="-35.4" font-family="Helvetica,sans-Serif" font-size="12.00">Losses on the pool hit the first loss</text>
+<text text-anchor="middle" x="214" y="-22.4" font-family="Helvetica,sans-Serif" font-size="12.00">first, then reduce what is repaid</text>
+<text text-anchor="middle" x="214" y="-9.4" font-family="Helvetica,sans-Serif" font-size="12.00">to investors on the notes</text>
+</g>
+<g id="edge7" class="edge">
+<title>First&#45;&gt;Loss</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M184.52,-137.87C190.42,-115.58 199.15,-82.61 205.58,-58.32"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="207.98,-58.8 207.41,-51.4 203.25,-57.54 207.98,-58.8"/>
+</g>
+<g id="node5" class="node">
+<title>Inv</title>
+<path fill="#6b7280" stroke="#6b7280" d="M529.5,-343.5C529.5,-343.5 312.5,-343.5 312.5,-343.5 306.5,-343.5 300.5,-337.5 300.5,-331.5 300.5,-331.5 300.5,-317.5 300.5,-317.5 300.5,-311.5 306.5,-305.5 312.5,-305.5 312.5,-305.5 529.5,-305.5 529.5,-305.5 535.5,-305.5 541.5,-311.5 541.5,-317.5 541.5,-317.5 541.5,-331.5 541.5,-331.5 541.5,-337.5 535.5,-343.5 529.5,-343.5"/>
+<text text-anchor="middle" x="421" y="-327.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Investors</text>
+<text text-anchor="middle" x="421" y="-314.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">credit funds, pension funds, insurers</text>
+</g>
+<g id="edge5" class="edge">
+<title>Inv&#45;&gt;CLN</title>
+<path fill="none" stroke="#4b5563" d="M417.05,-305.32C414.45,-293.37 410.98,-277.41 407.93,-263.38"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="410.26,-262.58 406.38,-256.26 405.47,-263.62 410.26,-262.58"/>
+<text text-anchor="middle" x="437" y="-275" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> buy notes</text>
+</g>
+<g id="node7" class="node">
+<title>Prem</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M455,-122C455,-122 259,-122 259,-122 253,-122 247,-116 247,-110 247,-110 247,-96 247,-96 247,-90 253,-84 259,-84 259,-84 455,-84 455,-84 461,-84 467,-90 467,-96 467,-96 467,-110 467,-110 467,-116 461,-122 455,-122"/>
+<text text-anchor="middle" x="357" y="-106.4" font-family="Helvetica,sans-Serif" font-size="12.00">Bank pays a coupon or premium</text>
+<text text-anchor="middle" x="357" y="-93.4" font-family="Helvetica,sans-Serif" font-size="12.00">for example 7% a year on 65m</text>
+</g>
+<g id="edge6" class="edge">
+<title>CLN&#45;&gt;Prem</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M392.31,-204.71C384.62,-182.79 373.47,-150.98 365.77,-129"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="368.02,-128.03 363.39,-122.24 363.4,-129.65 368.02,-128.03"/>
+</g>
+</g>
+</svg>

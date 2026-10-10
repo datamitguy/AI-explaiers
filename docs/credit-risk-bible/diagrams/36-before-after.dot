@@ -1,0 +1,22 @@
+digraph BeforeAfter {
+  graph [rankdir=TB, splines=true, nodesep=0.35, ranksep=0.4, fontname="Helvetica", fontsize=13, bgcolor="white", newrank=true, pad=0.2];
+  node  [shape=box, style="rounded,filled", fillcolor="#eef2ff", color="#6366f1", fontname="Helvetica", fontsize=12, margin="0.16,0.08"];
+  edge  [color="#4b5563", arrowsize=0.7, fontname="Helvetica", fontsize=10, fontcolor="#374151"];
+
+  Before [label="Before: 5,000m corporate book\nName A 180m against a 120m limit\nShipping sector 14% against 10% appetite\nRWA 3,000m", fillcolor="#991b1b", fontcolor="white", color="#991b1b"];
+  Diag [label="CPM diagnoses the portfolio\nportfolio model shows Name A and\nshipping drive a third of economic capital"];
+  Q [label="Keep the client\nrelationship?", shape=diamond, fillcolor="#fef3c7", color="#d97706"];
+  CDS [label="Buy 60m single-name CDS\non Name A from a\nhighly rated bank"];
+  Sell [label="Sell 250m of shipping loans\nin the secondary market\n(price about 97)"];
+  SRT [label="Synthetic securitisation on\n1,000m of mid-market loans\n(mezzanine protection sold)"];
+  Check [label="Check eligibility for capital relief\nmaturity match, legal terms,\nprovider eligibility, supervisor view", fillcolor="#6b7280", fontcolor="white", color="#6b7280"];
+  After [label="After: Name A net 120m, back at the limit\nShipping about 9.5% of the book\nRWA down by about 580m\nCost: premiums, sale discount", fillcolor="#065f46", fontcolor="white", color="#065f46"];
+
+  Before -> Diag -> Q;
+  Q -> CDS [label="yes, Name A"];
+  Q -> Sell [label="no, shipping"];
+  Diag -> SRT [label=" capital"];
+  CDS -> Check; SRT -> Check;
+  Sell -> After;
+  Check -> After;
+}

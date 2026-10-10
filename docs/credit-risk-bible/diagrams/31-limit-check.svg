@@ -1,0 +1,136 @@
+<svg width="100%"
+ viewBox="0.00 0.00 578.80 823.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 809.4)">
+<title>LimitCheck</title>
+<polygon fill="white" stroke="transparent" points="-14.4,14.4 -14.4,-809.4 564.4,-809.4 564.4,14.4 -14.4,14.4"/>
+<g id="node1" class="node">
+<title>Start</title>
+<path fill="#1f2937" stroke="#1f2937" d="M501,-795C501,-795 314,-795 314,-795 308,-795 302,-789 302,-783 302,-783 302,-769 302,-769 302,-763 308,-757 314,-757 314,-757 501,-757 501,-757 507,-757 513,-763 513,-769 513,-769 513,-783 513,-783 513,-789 507,-795 501,-795"/>
+<text text-anchor="middle" x="407.5" y="-779.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Dealer proposes a new</text>
+<text text-anchor="middle" x="407.5" y="-766.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">FX forward with a counterparty</text>
+</g>
+<g id="node2" class="node">
+<title>PreCalc</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M504.5,-726C504.5,-726 310.5,-726 310.5,-726 304.5,-726 298.5,-720 298.5,-714 298.5,-714 298.5,-687 298.5,-687 298.5,-681 304.5,-675 310.5,-675 310.5,-675 504.5,-675 504.5,-675 510.5,-675 516.5,-681 516.5,-687 516.5,-687 516.5,-714 516.5,-714 516.5,-720 510.5,-726 504.5,-726"/>
+<text text-anchor="middle" x="407.5" y="-710.4" font-family="Helvetica,sans-Serif" font-size="12.00">Pre&#45;settlement check</text>
+<text text-anchor="middle" x="407.5" y="-697.4" font-family="Helvetica,sans-Serif" font-size="12.00">incremental exposure: MTM plus</text>
+<text text-anchor="middle" x="407.5" y="-684.4" font-family="Helvetica,sans-Serif" font-size="12.00">add&#45;on or PFE, after netting</text>
+</g>
+<g id="edge1" class="edge">
+<title>Start&#45;&gt;PreCalc</title>
+<path fill="none" stroke="#4b5563" d="M407.5,-756.83C407.5,-749.74 407.5,-741.39 407.5,-733.36"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="409.95,-733.11 407.5,-726.11 405.05,-733.11 409.95,-733.11"/>
+</g>
+<g id="node3" class="node">
+<title>PreQ</title>
+<path fill="#fef3c7" stroke="#d97706" d="M396.56,-639.06C396.56,-639.06 305.44,-597.94 305.44,-597.94 299.97,-595.47 299.97,-590.53 305.44,-588.06 305.44,-588.06 396.56,-546.94 396.56,-546.94 402.03,-544.47 412.97,-544.47 418.44,-546.94 418.44,-546.94 509.56,-588.06 509.56,-588.06 515.03,-590.53 515.03,-595.47 509.56,-597.94 509.56,-597.94 418.44,-639.06 418.44,-639.06 412.97,-641.53 402.03,-641.53 396.56,-639.06"/>
+<text text-anchor="middle" x="407.5" y="-602.9" font-family="Helvetica,sans-Serif" font-size="12.00">Within the</text>
+<text text-anchor="middle" x="407.5" y="-589.9" font-family="Helvetica,sans-Serif" font-size="12.00">pre&#45;settlement</text>
+<text text-anchor="middle" x="407.5" y="-576.9" font-family="Helvetica,sans-Serif" font-size="12.00">limit?</text>
+</g>
+<g id="edge2" class="edge">
+<title>PreCalc&#45;&gt;PreQ</title>
+<path fill="none" stroke="#4b5563" d="M407.5,-674.76C407.5,-667.77 407.5,-659.85 407.5,-651.77"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="409.95,-651.33 407.5,-644.33 405.05,-651.33 409.95,-651.33"/>
+</g>
+<g id="node4" class="node">
+<title>SetCalc</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M420.5,-501C420.5,-501 242.5,-501 242.5,-501 236.5,-501 230.5,-495 230.5,-489 230.5,-489 230.5,-462 230.5,-462 230.5,-456 236.5,-450 242.5,-450 242.5,-450 420.5,-450 420.5,-450 426.5,-450 432.5,-456 432.5,-462 432.5,-462 432.5,-489 432.5,-489 432.5,-495 426.5,-501 420.5,-501"/>
+<text text-anchor="middle" x="331.5" y="-485.4" font-family="Helvetica,sans-Serif" font-size="12.00">Settlement check</text>
+<text text-anchor="middle" x="331.5" y="-472.4" font-family="Helvetica,sans-Serif" font-size="12.00">add the gross amount we pay</text>
+<text text-anchor="middle" x="331.5" y="-459.4" font-family="Helvetica,sans-Serif" font-size="12.00">to that value date&#39;s total</text>
+</g>
+<g id="edge3" class="edge">
+<title>PreQ&#45;&gt;SetCalc</title>
+<path fill="none" stroke="#4b5563" d="M381.98,-553.22C372.1,-538.19 360.94,-521.24 351.64,-507.1"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="353.67,-505.73 347.77,-501.23 349.57,-508.42 353.67,-505.73"/>
+<text text-anchor="middle" x="371.5" y="-519" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151">yes</text>
+</g>
+<g id="node9" class="node">
+<title>Excess</title>
+<path fill="#991b1b" stroke="#991b1b" d="M522.5,-133C522.5,-133 374.5,-133 374.5,-133 368.5,-133 362.5,-127 362.5,-121 362.5,-121 362.5,-94 362.5,-94 362.5,-88 368.5,-82 374.5,-82 374.5,-82 522.5,-82 522.5,-82 528.5,-82 534.5,-88 534.5,-94 534.5,-94 534.5,-121 534.5,-121 534.5,-127 528.5,-133 522.5,-133"/>
+<text text-anchor="middle" x="448.5" y="-117.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Excess</text>
+<text text-anchor="middle" x="448.5" y="-104.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">refer to the credit officer</text>
+<text text-anchor="middle" x="448.5" y="-91.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">with authority</text>
+</g>
+<g id="edge4" class="edge">
+<title>PreQ&#45;&gt;Excess</title>
+<path fill="none" stroke="#4b5563" d="M441.6,-557.17C458.98,-535.72 476.5,-506.63 476.5,-476.5 476.5,-476.5 476.5,-476.5 476.5,-224 476.5,-195.02 468.07,-163.07 460.46,-140.13"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="462.71,-139.15 458.14,-133.31 458.08,-140.73 462.71,-139.15"/>
+<text text-anchor="middle" x="483" y="-365.5" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151">no</text>
+</g>
+<g id="node5" class="node">
+<title>CLSQ</title>
+<path fill="#fef3c7" stroke="#d97706" d="M300.53,-414.14C300.53,-414.14 207.47,-372.86 207.47,-372.86 201.98,-370.43 201.98,-365.57 207.47,-363.14 207.47,-363.14 300.53,-321.86 300.53,-321.86 306.02,-319.43 316.98,-319.43 322.47,-321.86 322.47,-321.86 415.53,-363.14 415.53,-363.14 421.02,-365.57 421.02,-370.43 415.53,-372.86 415.53,-372.86 322.47,-414.14 322.47,-414.14 316.98,-416.57 306.02,-416.57 300.53,-414.14"/>
+<text text-anchor="middle" x="311.5" y="-377.9" font-family="Helvetica,sans-Serif" font-size="12.00">Settles through</text>
+<text text-anchor="middle" x="311.5" y="-364.9" font-family="Helvetica,sans-Serif" font-size="12.00">CLS or another</text>
+<text text-anchor="middle" x="311.5" y="-351.9" font-family="Helvetica,sans-Serif" font-size="12.00">PvP route?</text>
+</g>
+<g id="edge5" class="edge">
+<title>SetCalc&#45;&gt;CLSQ</title>
+<path fill="none" stroke="#4b5563" d="M326.81,-449.76C325.25,-441.53 323.45,-432.02 321.64,-422.47"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="324.03,-421.95 320.32,-415.53 319.22,-422.86 324.03,-421.95"/>
+</g>
+<g id="node6" class="node">
+<title>Excl</title>
+<path fill="#6b7280" stroke="#6b7280" d="M165,-250.5C165,-250.5 12,-250.5 12,-250.5 6,-250.5 0,-244.5 0,-238.5 0,-238.5 0,-211.5 0,-211.5 0,-205.5 6,-199.5 12,-199.5 12,-199.5 165,-199.5 165,-199.5 171,-199.5 177,-205.5 177,-211.5 177,-211.5 177,-238.5 177,-238.5 177,-244.5 171,-250.5 165,-250.5"/>
+<text text-anchor="middle" x="88.5" y="-234.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Counted at reduced or</text>
+<text text-anchor="middle" x="88.5" y="-221.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">zero settlement exposure</text>
+<text text-anchor="middle" x="88.5" y="-208.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">(per bank policy)</text>
+</g>
+<g id="edge6" class="edge">
+<title>CLSQ&#45;&gt;Excl</title>
+<path fill="none" stroke="#4b5563" d="M264.75,-337.44C226.08,-312.99 171.5,-278.48 133.36,-254.36"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="134.61,-252.26 127.38,-250.59 131.99,-256.4 134.61,-252.26"/>
+<text text-anchor="middle" x="216.5" y="-294" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151">yes</text>
+</g>
+<g id="node7" class="node">
+<title>SetQ</title>
+<path fill="#fef3c7" stroke="#d97706" d="M309.48,-271.24C309.48,-271.24 213.52,-229.76 213.52,-229.76 208.01,-227.38 208.01,-222.62 213.52,-220.24 213.52,-220.24 309.48,-178.76 309.48,-178.76 314.99,-176.38 326.01,-176.38 331.52,-178.76 331.52,-178.76 427.48,-220.24 427.48,-220.24 432.99,-222.62 432.99,-227.38 427.48,-229.76 427.48,-229.76 331.52,-271.24 331.52,-271.24 326.01,-273.62 314.99,-273.62 309.48,-271.24"/>
+<text text-anchor="middle" x="320.5" y="-234.9" font-family="Helvetica,sans-Serif" font-size="12.00">Within the daily</text>
+<text text-anchor="middle" x="320.5" y="-221.9" font-family="Helvetica,sans-Serif" font-size="12.00">settlement limit</text>
+<text text-anchor="middle" x="320.5" y="-208.9" font-family="Helvetica,sans-Serif" font-size="12.00">for that date?</text>
+</g>
+<g id="edge7" class="edge">
+<title>CLSQ&#45;&gt;SetQ</title>
+<path fill="none" stroke="#4b5563" d="M314.62,-318.08C315.36,-306.49 316.16,-294.03 316.92,-282.15"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="319.38,-281.97 317.38,-274.83 314.49,-281.66 319.38,-281.97"/>
+<text text-anchor="middle" x="322" y="-294" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151">no</text>
+</g>
+<g id="node8" class="node">
+<title>Book</title>
+<path fill="#065f46" stroke="#065f46" d="M297.5,-126.5C297.5,-126.5 181.5,-126.5 181.5,-126.5 175.5,-126.5 169.5,-120.5 169.5,-114.5 169.5,-114.5 169.5,-100.5 169.5,-100.5 169.5,-94.5 175.5,-88.5 181.5,-88.5 181.5,-88.5 297.5,-88.5 297.5,-88.5 303.5,-88.5 309.5,-94.5 309.5,-100.5 309.5,-100.5 309.5,-114.5 309.5,-114.5 309.5,-120.5 303.5,-126.5 297.5,-126.5"/>
+<text text-anchor="middle" x="239.5" y="-110.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Book the trade</text>
+<text text-anchor="middle" x="239.5" y="-97.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">both limits updated</text>
+</g>
+<g id="edge8" class="edge">
+<title>Excl&#45;&gt;Book</title>
+<path fill="none" stroke="#4b5563" d="M120.89,-199.22C147.32,-179.01 184.34,-150.69 209.96,-131.09"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="211.5,-133 215.57,-126.81 208.52,-129.11 211.5,-133"/>
+</g>
+<g id="edge9" class="edge">
+<title>SetQ&#45;&gt;Book</title>
+<path fill="none" stroke="#4b5563" d="M293.53,-185.54C281.26,-168.04 267.12,-147.88 256.38,-132.57"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="258.32,-131.07 252.3,-126.75 254.31,-133.89 258.32,-131.07"/>
+<text text-anchor="middle" x="282.5" y="-151" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151">yes</text>
+</g>
+<g id="edge10" class="edge">
+<title>SetQ&#45;&gt;Excess</title>
+<path fill="none" stroke="#4b5563" d="M358.21,-189.97C376.52,-173.45 398.31,-153.79 415.89,-137.92"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="417.65,-139.64 421.21,-133.13 414.37,-136 417.65,-139.64"/>
+<text text-anchor="middle" x="409" y="-151" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151">no</text>
+</g>
+<g id="node10" class="node">
+<title>Decide</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M538,-51C538,-51 359,-51 359,-51 353,-51 347,-45 347,-39 347,-39 347,-12 347,-12 347,-6 353,0 359,0 359,0 538,0 538,0 544,0 550,-6 550,-12 550,-12 550,-39 550,-39 550,-45 544,-51 538,-51"/>
+<text text-anchor="middle" x="448.5" y="-35.4" font-family="Helvetica,sans-Serif" font-size="12.00">Approve a temporary excess,</text>
+<text text-anchor="middle" x="448.5" y="-22.4" font-family="Helvetica,sans-Serif" font-size="12.00">restructure (net, use CLS,</text>
+<text text-anchor="middle" x="448.5" y="-9.4" font-family="Helvetica,sans-Serif" font-size="12.00">change value date) or decline</text>
+</g>
+<g id="edge11" class="edge">
+<title>Excess&#45;&gt;Decide</title>
+<path fill="none" stroke="#4b5563" d="M448.5,-81.63C448.5,-74.18 448.5,-65.92 448.5,-58.1"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="450.95,-58.08 448.5,-51.08 446.05,-58.08 450.95,-58.08"/>
+</g>
+</g>
+</svg>

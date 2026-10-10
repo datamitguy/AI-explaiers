@@ -1,0 +1,103 @@
+<svg width="100%"
+ viewBox="0.00 0.00 306.80 629.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 615.4)">
+<title>ExposureTimeline</title>
+<polygon fill="white" stroke="transparent" points="-14.4,14.4 -14.4,-615.4 292.4,-615.4 292.4,14.4 -14.4,14.4"/>
+<g id="clust1" class="cluster">
+<title>cluster_pre</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M20,-314C20,-314 258,-314 258,-314 264,-314 270,-320 270,-326 270,-326 270,-527 270,-527 270,-533 264,-539 258,-539 258,-539 20,-539 20,-539 14,-539 8,-533 8,-527 8,-527 8,-326 8,-326 8,-320 14,-314 20,-314"/>
+<text text-anchor="middle" x="139" y="-526.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#374151">Pre&#45;settlement risk: weeks, months or years</text>
+</g>
+<g id="clust2" class="cluster">
+<title>cluster_set</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M34,-62C34,-62 247,-62 247,-62 253,-62 259,-68 259,-74 259,-74 259,-275 259,-275 259,-281 253,-287 247,-287 247,-287 34,-287 34,-287 28,-287 22,-281 22,-275 22,-275 22,-74 22,-74 22,-68 28,-62 34,-62"/>
+<text text-anchor="middle" x="140.5" y="-274.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#374151">Settlement risk: hours, sometimes days</text>
+</g>
+<g id="node1" class="node">
+<title>Trade</title>
+<path fill="#1f2937" stroke="#1f2937" d="M224,-601C224,-601 48,-601 48,-601 42,-601 36,-595 36,-589 36,-589 36,-575 36,-575 36,-569 42,-563 48,-563 48,-563 224,-563 224,-563 230,-563 236,-569 236,-575 236,-575 236,-589 236,-589 236,-595 230,-601 224,-601"/>
+<text text-anchor="middle" x="136" y="-585.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Trade date (T)</text>
+<text text-anchor="middle" x="136" y="-572.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">deal agreed, nothing paid yet</text>
+</g>
+<g id="node2" class="node">
+<title>Life</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M211.5,-511C211.5,-511 60.5,-511 60.5,-511 54.5,-511 48.5,-505 48.5,-499 48.5,-499 48.5,-485 48.5,-485 48.5,-479 54.5,-473 60.5,-473 60.5,-473 211.5,-473 211.5,-473 217.5,-473 223.5,-479 223.5,-485 223.5,-485 223.5,-499 223.5,-499 223.5,-505 217.5,-511 211.5,-511"/>
+<text text-anchor="middle" x="136" y="-495.4" font-family="Helvetica,sans-Serif" font-size="12.00">Life of the contract</text>
+<text text-anchor="middle" x="136" y="-482.4" font-family="Helvetica,sans-Serif" font-size="12.00">markets move every day</text>
+</g>
+<g id="edge1" class="edge">
+<title>Trade&#45;&gt;Life</title>
+<path fill="none" stroke="#4b5563" d="M136,-562.77C136,-549.91 136,-532.51 136,-518.31"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="138.45,-518.21 136,-511.21 133.55,-518.21 138.45,-518.21"/>
+</g>
+<g id="node3" class="node">
+<title>MTM</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M232.5,-442C232.5,-442 39.5,-442 39.5,-442 33.5,-442 27.5,-436 27.5,-430 27.5,-430 27.5,-403 27.5,-403 27.5,-397 33.5,-391 39.5,-391 39.5,-391 232.5,-391 232.5,-391 238.5,-391 244.5,-397 244.5,-403 244.5,-403 244.5,-430 244.5,-430 244.5,-436 238.5,-442 232.5,-442"/>
+<text text-anchor="middle" x="136" y="-426.4" font-family="Helvetica,sans-Serif" font-size="12.00">Exposure = replacement cost</text>
+<text text-anchor="middle" x="136" y="-413.4" font-family="Helvetica,sans-Serif" font-size="12.00">positive mark&#45;to&#45;market plus an</text>
+<text text-anchor="middle" x="136" y="-400.4" font-family="Helvetica,sans-Serif" font-size="12.00">add&#45;on for future moves</text>
+</g>
+<g id="edge2" class="edge">
+<title>Life&#45;&gt;MTM</title>
+<path fill="none" stroke="#4b5563" d="M136,-472.83C136,-465.74 136,-457.39 136,-449.36"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="138.45,-449.11 136,-442.11 133.55,-449.11 138.45,-449.11"/>
+</g>
+<g id="node4" class="node">
+<title>Size1</title>
+<path fill="#065f46" stroke="#065f46" d="M232.5,-360C232.5,-360 39.5,-360 39.5,-360 33.5,-360 27.5,-354 27.5,-348 27.5,-348 27.5,-334 27.5,-334 27.5,-328 33.5,-322 39.5,-322 39.5,-322 232.5,-322 232.5,-322 238.5,-322 244.5,-328 244.5,-334 244.5,-334 244.5,-348 244.5,-348 244.5,-354 238.5,-360 232.5,-360"/>
+<text text-anchor="middle" x="136" y="-344.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Size: a small fraction of notional</text>
+<text text-anchor="middle" x="136" y="-331.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">(often a few per cent)</text>
+</g>
+<g id="edge3" class="edge">
+<title>MTM&#45;&gt;Size1</title>
+<path fill="none" stroke="#4b5563" d="M136,-390.62C136,-383.12 136,-374.89 136,-367.36"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="138.45,-367.12 136,-360.12 133.55,-367.12 138.45,-367.12"/>
+</g>
+<g id="node5" class="node">
+<title>Pay</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M227,-259C227,-259 45,-259 45,-259 39,-259 33,-253 33,-247 33,-247 33,-233 33,-233 33,-227 39,-221 45,-221 45,-221 227,-221 227,-221 233,-221 239,-227 239,-233 239,-233 239,-247 239,-247 239,-253 233,-259 227,-259"/>
+<text text-anchor="middle" x="136" y="-243.4" font-family="Helvetica,sans-Serif" font-size="12.00">Value date: we send our leg</text>
+<text text-anchor="middle" x="136" y="-230.4" font-family="Helvetica,sans-Serif" font-size="12.00">payment becomes irrevocable</text>
+</g>
+<g id="edge4" class="edge">
+<title>Size1&#45;&gt;Pay</title>
+<path fill="none" stroke="#4b5563" d="M136,-321.84C136,-306.21 136,-283.5 136,-266.13"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="138.45,-266.04 136,-259.04 133.55,-266.04 138.45,-266.04"/>
+<text text-anchor="middle" x="195" y="-298" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> settlement date arrives</text>
+</g>
+<g id="node6" class="node">
+<title>Window</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M211.5,-190C211.5,-190 60.5,-190 60.5,-190 54.5,-190 48.5,-184 48.5,-178 48.5,-178 48.5,-151 48.5,-151 48.5,-145 54.5,-139 60.5,-139 60.5,-139 211.5,-139 211.5,-139 217.5,-139 223.5,-145 223.5,-151 223.5,-151 223.5,-178 223.5,-178 223.5,-184 217.5,-190 211.5,-190"/>
+<text text-anchor="middle" x="136" y="-174.4" font-family="Helvetica,sans-Serif" font-size="12.00">Window of exposure</text>
+<text text-anchor="middle" x="136" y="-161.4" font-family="Helvetica,sans-Serif" font-size="12.00">our money has gone,</text>
+<text text-anchor="middle" x="136" y="-148.4" font-family="Helvetica,sans-Serif" font-size="12.00">theirs has not yet arrived</text>
+</g>
+<g id="edge5" class="edge">
+<title>Pay&#45;&gt;Window</title>
+<path fill="none" stroke="#4b5563" d="M136,-220.83C136,-213.74 136,-205.39 136,-197.36"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="138.45,-197.11 136,-190.11 133.55,-197.11 138.45,-197.11"/>
+</g>
+<g id="node7" class="node">
+<title>Size2</title>
+<path fill="#991b1b" stroke="#991b1b" d="M207,-108C207,-108 65,-108 65,-108 59,-108 53,-102 53,-96 53,-96 53,-82 53,-82 53,-76 59,-70 65,-70 65,-70 207,-70 207,-70 213,-70 219,-76 219,-82 219,-82 219,-96 219,-96 219,-102 213,-108 207,-108"/>
+<text text-anchor="middle" x="136" y="-92.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Size: the full principal</text>
+<text text-anchor="middle" x="136" y="-79.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">(100% of what we paid)</text>
+</g>
+<g id="edge6" class="edge">
+<title>Window&#45;&gt;Size2</title>
+<path fill="none" stroke="#4b5563" d="M136,-138.62C136,-131.12 136,-122.89 136,-115.36"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="138.45,-115.12 136,-108.12 133.55,-115.12 138.45,-115.12"/>
+</g>
+<g id="node8" class="node">
+<title>Done</title>
+<path fill="#1f2937" stroke="#1f2937" d="M218,-38C218,-38 54,-38 54,-38 48,-38 42,-32 42,-26 42,-26 42,-12 42,-12 42,-6 48,0 54,0 54,0 218,0 218,0 224,0 230,-6 230,-12 230,-12 230,-26 230,-26 230,-32 224,-38 218,-38"/>
+<text text-anchor="middle" x="136" y="-22.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Receipt confirmed</text>
+<text text-anchor="middle" x="136" y="-9.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">nostro reconciled, risk ends</text>
+</g>
+<g id="edge7" class="edge">
+<title>Size2&#45;&gt;Done</title>
+<path fill="none" stroke="#4b5563" d="M136,-69.78C136,-62.31 136,-53.53 136,-45.45"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="138.45,-45.27 136,-38.27 133.55,-45.27 138.45,-45.27"/>
+</g>
+</g>
+</svg>

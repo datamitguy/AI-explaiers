@@ -1,0 +1,29 @@
+digraph CPMToolkit {
+  graph [rankdir=LR, splines=true, nodesep=0.22, ranksep=0.5, fontname="Helvetica", fontsize=13, bgcolor="white", pad=0.2];
+  node  [shape=box, style="rounded,filled", fillcolor="#eef2ff", color="#6366f1", fontname="Helvetica", fontsize=12, margin="0.16,0.08"];
+  edge  [color="#4b5563", arrowsize=0.7];
+
+  Root [label="Credit portfolio\nmanagement toolkit", fillcolor="#1f2937", fontcolor="white", color="#1f2937"];
+
+  subgraph cluster_sell {
+    label="Move the loan out (funded, true sale)"; style="dashed,rounded"; color="#9ca3af"; fontcolor="#374151"; fontsize=11; labeljust=r;
+    Sale [label="Loan sales and\nsecondary loan trading"];
+    TS [label="True-sale securitisation\npool sold to a vehicle"];
+    OTD [label="Originate-to-distribute\nsyndicate at the start,\nhold only a slice"];
+  }
+  subgraph cluster_protect {
+    label="Keep the loan, buy protection"; style="dashed,rounded"; color="#9ca3af"; fontcolor="#374151"; fontsize=11; labeljust=r;
+    CDS [label="Credit default swaps\nsingle-name or index"];
+    Ins [label="Credit insurance\nnon-payment cover\nfrom insurers"];
+    ECA [label="Guarantees from export\ncredit agencies and\ndevelopment banks"];
+    SRT [label="Synthetic securitisation\nand significant risk transfer\ntranche protection on a pool"];
+  }
+  subgraph cluster_steer {
+    label="Shape what comes in"; style="dashed,rounded"; color="#9ca3af"; fontcolor="#374151"; fontsize=11; labeljust=r;
+    Lim [label="Concentration limits\nand appetite signals"];
+    Price [label="Pricing guidance and\ncapital charges to\noriginators"];
+  }
+  Root -> Sale; Root -> TS; Root -> OTD;
+  Root -> CDS; Root -> Ins; Root -> ECA; Root -> SRT;
+  Root -> Lim; Root -> Price;
+}

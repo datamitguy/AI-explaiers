@@ -1,0 +1,125 @@
+<svg width="100%"
+ viewBox="0.00 0.00 471.80 675.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 661.4)">
+<title>CLS</title>
+<polygon fill="white" stroke="transparent" points="-14.4,14.4 -14.4,-661.4 457.4,-661.4 457.4,14.4 -14.4,14.4"/>
+<g id="node1" class="node">
+<title>Trade</title>
+<path fill="#1f2937" stroke="#1f2937" d="M398.5,-647C398.5,-647 151.5,-647 151.5,-647 145.5,-647 139.5,-641 139.5,-635 139.5,-635 139.5,-621 139.5,-621 139.5,-615 145.5,-609 151.5,-609 151.5,-609 398.5,-609 398.5,-609 404.5,-609 410.5,-615 410.5,-621 410.5,-621 410.5,-635 410.5,-635 410.5,-641 404.5,-647 398.5,-647"/>
+<text text-anchor="middle" x="275" y="-631.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Bank A and Bank B agree an FX trade</text>
+<text text-anchor="middle" x="275" y="-618.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">A sells 10m pounds, B sells 12.5m dollars</text>
+</g>
+<g id="node2" class="node">
+<title>Submit</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M366.5,-578C366.5,-578 183.5,-578 183.5,-578 177.5,-578 171.5,-572 171.5,-566 171.5,-566 171.5,-552 171.5,-552 171.5,-546 177.5,-540 183.5,-540 183.5,-540 366.5,-540 366.5,-540 372.5,-540 378.5,-546 378.5,-552 378.5,-552 378.5,-566 378.5,-566 378.5,-572 372.5,-578 366.5,-578"/>
+<text text-anchor="middle" x="275" y="-562.4" font-family="Helvetica,sans-Serif" font-size="12.00">1. Both banks send settlement</text>
+<text text-anchor="middle" x="275" y="-549.4" font-family="Helvetica,sans-Serif" font-size="12.00">instructions to CLS</text>
+</g>
+<g id="edge1" class="edge">
+<title>Trade&#45;&gt;Submit</title>
+<path fill="none" stroke="#4b5563" d="M275,-608.69C275,-601.6 275,-593.36 275,-585.69"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="277.45,-585.29 275,-578.29 272.55,-585.29 277.45,-585.29"/>
+</g>
+<g id="node3" class="node">
+<title>Match</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M392.5,-509C392.5,-509 157.5,-509 157.5,-509 151.5,-509 145.5,-503 145.5,-497 145.5,-497 145.5,-483 145.5,-483 145.5,-477 151.5,-471 157.5,-471 157.5,-471 392.5,-471 392.5,-471 398.5,-471 404.5,-477 404.5,-483 404.5,-483 404.5,-497 404.5,-497 404.5,-503 398.5,-509 392.5,-509"/>
+<text text-anchor="middle" x="275" y="-493.4" font-family="Helvetica,sans-Serif" font-size="12.00">2. CLS matches the two instructions</text>
+<text text-anchor="middle" x="275" y="-480.4" font-family="Helvetica,sans-Serif" font-size="12.00">and queues the trade for its value date</text>
+</g>
+<g id="edge2" class="edge">
+<title>Submit&#45;&gt;Match</title>
+<path fill="none" stroke="#4b5563" d="M275,-539.69C275,-532.6 275,-524.36 275,-516.69"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="277.45,-516.29 275,-509.29 272.55,-516.29 277.45,-516.29"/>
+</g>
+<g id="node4" class="node">
+<title>Net</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M403,-440C403,-440 147,-440 147,-440 141,-440 135,-434 135,-428 135,-428 135,-401 135,-401 135,-395 141,-389 147,-389 147,-389 403,-389 403,-389 409,-389 415,-395 415,-401 415,-401 415,-428 415,-428 415,-434 409,-440 403,-440"/>
+<text text-anchor="middle" x="275" y="-424.4" font-family="Helvetica,sans-Serif" font-size="12.00">3. Before value date CLS nets each</text>
+<text text-anchor="middle" x="275" y="-411.4" font-family="Helvetica,sans-Serif" font-size="12.00">member&#39;s trades per currency and sends</text>
+<text text-anchor="middle" x="275" y="-398.4" font-family="Helvetica,sans-Serif" font-size="12.00">a pay&#45;in schedule (much smaller amounts)</text>
+</g>
+<g id="edge3" class="edge">
+<title>Match&#45;&gt;Net</title>
+<path fill="none" stroke="#4b5563" d="M275,-470.83C275,-463.74 275,-455.39 275,-447.36"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="277.45,-447.11 275,-440.11 272.55,-447.11 277.45,-447.11"/>
+</g>
+<g id="node5" class="node">
+<title>PayIn</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M400.5,-358C400.5,-358 149.5,-358 149.5,-358 143.5,-358 137.5,-352 137.5,-346 137.5,-346 137.5,-319 137.5,-319 137.5,-313 143.5,-307 149.5,-307 149.5,-307 400.5,-307 400.5,-307 406.5,-307 412.5,-313 412.5,-319 412.5,-319 412.5,-346 412.5,-346 412.5,-352 406.5,-358 400.5,-358"/>
+<text text-anchor="middle" x="275" y="-342.4" font-family="Helvetica,sans-Serif" font-size="12.00">4. On value date members pay in through</text>
+<text text-anchor="middle" x="275" y="-329.4" font-family="Helvetica,sans-Serif" font-size="12.00">central bank payment systems,</text>
+<text text-anchor="middle" x="275" y="-316.4" font-family="Helvetica,sans-Serif" font-size="12.00">in a window when all are open</text>
+</g>
+<g id="edge4" class="edge">
+<title>Net&#45;&gt;PayIn</title>
+<path fill="none" stroke="#4b5563" d="M275,-388.63C275,-381.18 275,-372.92 275,-365.1"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="277.45,-365.08 275,-358.08 272.55,-365.08 277.45,-365.08"/>
+</g>
+<g id="node6" class="node">
+<title>Q</title>
+<path fill="#fef3c7" stroke="#d97706" d="M263.88,-271.5C263.88,-271.5 160.12,-229.5 160.12,-229.5 154.56,-227.25 154.56,-222.75 160.12,-220.5 160.12,-220.5 263.88,-178.5 263.88,-178.5 269.44,-176.25 280.56,-176.25 286.12,-178.5 286.12,-178.5 389.88,-220.5 389.88,-220.5 395.44,-222.75 395.44,-227.25 389.88,-229.5 389.88,-229.5 286.12,-271.5 286.12,-271.5 280.56,-273.75 269.44,-273.75 263.88,-271.5"/>
+<text text-anchor="middle" x="275" y="-234.9" font-family="Helvetica,sans-Serif" font-size="12.00">Both legs funded</text>
+<text text-anchor="middle" x="275" y="-221.9" font-family="Helvetica,sans-Serif" font-size="12.00">and risk tests</text>
+<text text-anchor="middle" x="275" y="-208.9" font-family="Helvetica,sans-Serif" font-size="12.00">passed?</text>
+</g>
+<g id="edge5" class="edge">
+<title>PayIn&#45;&gt;Q</title>
+<path fill="none" stroke="#4b5563" d="M275,-306.76C275,-299.77 275,-291.85 275,-283.77"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="277.45,-283.33 275,-276.33 272.55,-283.33 277.45,-283.33"/>
+</g>
+<g id="node7" class="node">
+<title>Settle</title>
+<path fill="#065f46" stroke="#065f46" d="M200,-133C200,-133 12,-133 12,-133 6,-133 0,-127 0,-121 0,-121 0,-94 0,-94 0,-88 6,-82 12,-82 12,-82 200,-82 200,-82 206,-82 212,-88 212,-94 212,-94 212,-121 212,-121 212,-127 206,-133 200,-133"/>
+<text text-anchor="middle" x="106" y="-117.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">5. CLS settles both legs at once</text>
+<text text-anchor="middle" x="106" y="-104.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">on its own books: pounds to B,</text>
+<text text-anchor="middle" x="106" y="-91.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">dollars to A, in one instant</text>
+</g>
+<g id="edge6" class="edge">
+<title>Q&#45;&gt;Settle</title>
+<path fill="none" stroke="#4b5563" d="M228.82,-192.44C203.49,-175.13 172.32,-153.83 147.73,-137.02"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="149.11,-134.99 141.94,-133.07 146.34,-139.04 149.11,-134.99"/>
+<text text-anchor="middle" x="185" y="-151" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151">yes</text>
+</g>
+<g id="node8" class="node">
+<title>Wait</title>
+<path fill="#6b7280" stroke="#6b7280" d="M431,-126.5C431,-126.5 249,-126.5 249,-126.5 243,-126.5 237,-120.5 237,-114.5 237,-114.5 237,-100.5 237,-100.5 237,-94.5 243,-88.5 249,-88.5 249,-88.5 431,-88.5 431,-88.5 437,-88.5 443,-94.5 443,-100.5 443,-100.5 443,-114.5 443,-114.5 443,-120.5 437,-126.5 431,-126.5"/>
+<text text-anchor="middle" x="340" y="-110.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Trade waits in the queue</text>
+<text text-anchor="middle" x="340" y="-97.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">nobody has lost a principal leg</text>
+</g>
+<g id="edge7" class="edge">
+<title>Q&#45;&gt;Wait</title>
+<path fill="none" stroke="#4b5563" d="M266.88,-177.06C267.13,-166.97 269.05,-156.72 274,-148 277.83,-141.24 283.33,-135.51 289.54,-130.7"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="291.13,-132.58 295.42,-126.53 288.29,-128.58 291.13,-132.58"/>
+<text text-anchor="middle" x="291.5" y="-151" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151">not yet</text>
+</g>
+<g id="node10" class="node">
+<title>PayOut</title>
+<path fill="#1f2937" stroke="#1f2937" d="M175.5,-44.5C175.5,-44.5 36.5,-44.5 36.5,-44.5 30.5,-44.5 24.5,-38.5 24.5,-32.5 24.5,-32.5 24.5,-18.5 24.5,-18.5 24.5,-12.5 30.5,-6.5 36.5,-6.5 36.5,-6.5 175.5,-6.5 175.5,-6.5 181.5,-6.5 187.5,-12.5 187.5,-18.5 187.5,-18.5 187.5,-32.5 187.5,-32.5 187.5,-38.5 181.5,-44.5 175.5,-44.5"/>
+<text text-anchor="middle" x="106" y="-28.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">6. CLS pays out the net</text>
+<text text-anchor="middle" x="106" y="-15.9" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">balances to members</text>
+</g>
+<g id="edge10" class="edge">
+<title>Settle&#45;&gt;PayOut</title>
+<path fill="none" stroke="#4b5563" d="M106,-81.63C106,-72.22 106,-61.5 106,-52.03"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="108.45,-51.75 106,-44.75 103.55,-51.75 108.45,-51.75"/>
+</g>
+<g id="edge8" class="edge">
+<title>Wait&#45;&gt;Q</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M329.86,-126.52C322.31,-139.93 311.64,-158.89 301.72,-176.53"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="299.4,-175.65 298.1,-182.95 303.67,-178.06 299.4,-175.65"/>
+<text text-anchor="middle" x="335" y="-151" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#374151"> retried</text>
+</g>
+<g id="node9" class="node">
+<title>Fail</title>
+<path fill="#6b7280" stroke="#6b7280" d="M430,-51C430,-51 250,-51 250,-51 244,-51 238,-45 238,-39 238,-39 238,-12 238,-12 238,-6 244,0 250,0 250,0 430,0 430,0 436,0 442,-6 442,-12 442,-12 442,-39 442,-39 442,-45 436,-51 430,-51"/>
+<text text-anchor="middle" x="340" y="-35.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">If a member fails:</text>
+<text text-anchor="middle" x="340" y="-22.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">unsettled trades are returned,</text>
+<text text-anchor="middle" x="340" y="-9.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">not half&#45;paid</text>
+</g>
+<g id="edge9" class="edge">
+<title>Wait&#45;&gt;Fail</title>
+<path fill="none" stroke="#4b5563" stroke-dasharray="5,2" d="M340,-88.35C340,-79.52 340,-68.64 340,-58.48"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="342.45,-58.25 340,-51.25 337.55,-58.25 342.45,-58.25"/>
+</g>
+</g>
+</svg>

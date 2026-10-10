@@ -1,0 +1,27 @@
+digraph SRT {
+  graph [rankdir=TB, splines=true, nodesep=0.35, ranksep=0.45, fontname="Helvetica", fontsize=13, bgcolor="white", newrank=true, pad=0.2];
+  node  [shape=box, style="rounded,filled", fillcolor="#eef2ff", color="#6366f1", fontname="Helvetica", fontsize=12, margin="0.16,0.08"];
+  edge  [color="#4b5563", arrowsize=0.7, fontname="Helvetica", fontsize=10, fontcolor="#374151"];
+
+  Bank [label="Bank (originator)\nloans stay on its balance sheet\nand it keeps the client relationships", fillcolor="#1f2937", fontcolor="white", color="#1f2937"];
+
+  subgraph cluster_pool {
+    label="Reference portfolio: 1,000m of corporate loans"; style="dashed,rounded"; color="#9ca3af"; fontcolor="#374151"; fontsize=11; labeljust=r;
+    Senior [label="Senior tranche 7.5% to 100%\n925m, retained by the bank\nlow risk weight (floor applies)", fillcolor="#065f46", fontcolor="white", color="#065f46"];
+    Mezz [label="Mezzanine tranche 1% to 7.5%\n65m, protection bought\nfrom investors"];
+    First [label="First loss tranche 0% to 1%\n10m, retained by the bank\nvery high risk weight", fillcolor="#991b1b", fontcolor="white", color="#991b1b"];
+    Senior -> Mezz -> First [style=invis];
+  }
+
+  Inv [label="Investors\ncredit funds, pension funds, insurers", fillcolor="#6b7280", fontcolor="white", color="#6b7280"];
+  CLN [label="Funded: credit-linked notes\ninvestors pay 65m cash up front,\nheld as collateral"];
+  Prem [label="Bank pays a coupon or premium\nfor example 7% a year on 65m"];
+  Loss [label="Losses on the pool hit the first loss\nfirst, then reduce what is repaid\nto investors on the notes"];
+
+  Bank -> Senior [label=" tranches the risk,\n not the loans"];
+  Mezz -> CLN [label=" protection"];
+  Inv -> CLN [label=" buy notes"];
+  CLN -> Prem [style=dashed];
+  First -> Loss [style=dashed];
+  Prem -> Loss [style=invis];
+}

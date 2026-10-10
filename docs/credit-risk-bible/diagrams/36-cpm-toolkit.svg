@@ -1,0 +1,132 @@
+<svg width="100%"
+ viewBox="0.00 0.00 427.80 674.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 660.4)">
+<title>CPMToolkit</title>
+<polygon fill="white" stroke="transparent" points="-14.4,14.4 -14.4,-660.4 413.4,-660.4 413.4,14.4 -14.4,14.4"/>
+<g id="clust1" class="cluster">
+<title>cluster_sell</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M186,-442C186,-442 386,-442 386,-442 392,-442 398,-448 398,-454 398,-454 398,-626 398,-626 398,-632 392,-638 386,-638 386,-638 186,-638 186,-638 180,-638 174,-632 174,-626 174,-626 174,-454 174,-454 174,-448 180,-442 186,-442"/>
+<text text-anchor="middle" x="286" y="-625.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#374151">Move the loan out (funded, true sale)</text>
+</g>
+<g id="clust2" class="cluster">
+<title>cluster_protect</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M192,-158C192,-158 379,-158 379,-158 385,-158 391,-164 391,-170 391,-170 391,-422 391,-422 391,-428 385,-434 379,-434 379,-434 192,-434 192,-434 186,-434 180,-428 180,-422 180,-422 180,-170 180,-170 180,-164 186,-158 192,-158"/>
+<text text-anchor="middle" x="301" y="-421.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#374151">Keep the loan, buy protection</text>
+</g>
+<g id="clust3" class="cluster">
+<title>cluster_steer</title>
+<path fill="white" stroke="#9ca3af" stroke-dasharray="5,2" d="M215,-8C215,-8 356,-8 356,-8 362,-8 368,-14 368,-20 368,-20 368,-138 368,-138 368,-144 362,-150 356,-150 356,-150 215,-150 215,-150 209,-150 203,-144 203,-138 203,-138 203,-20 203,-20 203,-14 209,-8 215,-8"/>
+<text text-anchor="middle" x="301" y="-137.2" font-family="Helvetica,sans-Serif" font-size="11.00" fill="#374151">Shape what comes in</text>
+</g>
+<g id="node1" class="node">
+<title>Root</title>
+<path fill="#1f2937" stroke="#1f2937" d="M134,-345C134,-345 12,-345 12,-345 6,-345 0,-339 0,-333 0,-333 0,-319 0,-319 0,-313 6,-307 12,-307 12,-307 134,-307 134,-307 140,-307 146,-313 146,-319 146,-319 146,-333 146,-333 146,-339 140,-345 134,-345"/>
+<text text-anchor="middle" x="73" y="-329.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">Credit portfolio</text>
+<text text-anchor="middle" x="73" y="-316.4" font-family="Helvetica,sans-Serif" font-size="12.00" fill="white">management toolkit</text>
+</g>
+<g id="node2" class="node">
+<title>Sale</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M355,-610C355,-610 216,-610 216,-610 210,-610 204,-604 204,-598 204,-598 204,-584 204,-584 204,-578 210,-572 216,-572 216,-572 355,-572 355,-572 361,-572 367,-578 367,-584 367,-584 367,-598 367,-598 367,-604 361,-610 355,-610"/>
+<text text-anchor="middle" x="285.5" y="-594.4" font-family="Helvetica,sans-Serif" font-size="12.00">Loan sales and</text>
+<text text-anchor="middle" x="285.5" y="-581.4" font-family="Helvetica,sans-Serif" font-size="12.00">secondary loan trading</text>
+</g>
+<g id="edge1" class="edge">
+<title>Root&#45;&gt;Sale</title>
+<path fill="none" stroke="#4b5563" d="M76.23,-345.12C82.57,-390.46 104.96,-505.09 174,-564 180.88,-569.87 188.84,-574.51 197.27,-578.16"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="196.39,-580.45 203.8,-580.77 198.21,-575.9 196.39,-580.45"/>
+</g>
+<g id="node3" class="node">
+<title>TS</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M354.5,-556C354.5,-556 216.5,-556 216.5,-556 210.5,-556 204.5,-550 204.5,-544 204.5,-544 204.5,-530 204.5,-530 204.5,-524 210.5,-518 216.5,-518 216.5,-518 354.5,-518 354.5,-518 360.5,-518 366.5,-524 366.5,-530 366.5,-530 366.5,-544 366.5,-544 366.5,-550 360.5,-556 354.5,-556"/>
+<text text-anchor="middle" x="285.5" y="-540.4" font-family="Helvetica,sans-Serif" font-size="12.00">True&#45;sale securitisation</text>
+<text text-anchor="middle" x="285.5" y="-527.4" font-family="Helvetica,sans-Serif" font-size="12.00">pool sold to a vehicle</text>
+</g>
+<g id="edge2" class="edge">
+<title>Root&#45;&gt;TS</title>
+<path fill="none" stroke="#4b5563" d="M78.84,-345.28C89.36,-383.05 117.98,-466.85 174,-510 181.17,-515.52 189.31,-519.93 197.85,-523.45"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="197.03,-525.76 204.45,-525.97 198.78,-521.18 197.03,-525.76"/>
+</g>
+<g id="node4" class="node">
+<title>OTD</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M352,-501.5C352,-501.5 219,-501.5 219,-501.5 213,-501.5 207,-495.5 207,-489.5 207,-489.5 207,-462.5 207,-462.5 207,-456.5 213,-450.5 219,-450.5 219,-450.5 352,-450.5 352,-450.5 358,-450.5 364,-456.5 364,-462.5 364,-462.5 364,-489.5 364,-489.5 364,-495.5 358,-501.5 352,-501.5"/>
+<text text-anchor="middle" x="285.5" y="-485.9" font-family="Helvetica,sans-Serif" font-size="12.00">Originate&#45;to&#45;distribute</text>
+<text text-anchor="middle" x="285.5" y="-472.9" font-family="Helvetica,sans-Serif" font-size="12.00">syndicate at the start,</text>
+<text text-anchor="middle" x="285.5" y="-459.9" font-family="Helvetica,sans-Serif" font-size="12.00">hold only a slice</text>
+</g>
+<g id="edge3" class="edge">
+<title>Root&#45;&gt;OTD</title>
+<path fill="none" stroke="#4b5563" d="M86.58,-345.38C103.6,-370.18 136.23,-412.89 174,-438 182.17,-443.43 191.19,-448.16 200.46,-452.27"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="199.5,-454.53 206.9,-455.01 201.42,-450.02 199.5,-454.53"/>
+</g>
+<g id="node5" class="node">
+<title>CDS</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M349,-406C349,-406 222,-406 222,-406 216,-406 210,-400 210,-394 210,-394 210,-380 210,-380 210,-374 216,-368 222,-368 222,-368 349,-368 349,-368 355,-368 361,-374 361,-380 361,-380 361,-394 361,-394 361,-400 355,-406 349,-406"/>
+<text text-anchor="middle" x="285.5" y="-390.4" font-family="Helvetica,sans-Serif" font-size="12.00">Credit default swaps</text>
+<text text-anchor="middle" x="285.5" y="-377.4" font-family="Helvetica,sans-Serif" font-size="12.00">single&#45;name or index</text>
+</g>
+<g id="edge4" class="edge">
+<title>Root&#45;&gt;CDS</title>
+<path fill="none" stroke="#4b5563" d="M127.18,-345.05C142.23,-350.18 158.68,-355.53 174,-360 183.4,-362.74 193.3,-365.43 203.15,-367.99"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="202.57,-370.37 209.96,-369.74 203.79,-365.62 202.57,-370.37"/>
+</g>
+<g id="node6" class="node">
+<title>Ins</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M344.5,-351.5C344.5,-351.5 226.5,-351.5 226.5,-351.5 220.5,-351.5 214.5,-345.5 214.5,-339.5 214.5,-339.5 214.5,-312.5 214.5,-312.5 214.5,-306.5 220.5,-300.5 226.5,-300.5 226.5,-300.5 344.5,-300.5 344.5,-300.5 350.5,-300.5 356.5,-306.5 356.5,-312.5 356.5,-312.5 356.5,-339.5 356.5,-339.5 356.5,-345.5 350.5,-351.5 344.5,-351.5"/>
+<text text-anchor="middle" x="285.5" y="-335.9" font-family="Helvetica,sans-Serif" font-size="12.00">Credit insurance</text>
+<text text-anchor="middle" x="285.5" y="-322.9" font-family="Helvetica,sans-Serif" font-size="12.00">non&#45;payment cover</text>
+<text text-anchor="middle" x="285.5" y="-309.9" font-family="Helvetica,sans-Serif" font-size="12.00">from insurers</text>
+</g>
+<g id="edge5" class="edge">
+<title>Root&#45;&gt;Ins</title>
+<path fill="none" stroke="#4b5563" d="M146.15,-326C165.76,-326 187.07,-326 206.97,-326"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="207.23,-328.45 214.23,-326 207.23,-323.55 207.23,-328.45"/>
+</g>
+<g id="node7" class="node">
+<title>ECA</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M358,-284.5C358,-284.5 213,-284.5 213,-284.5 207,-284.5 201,-278.5 201,-272.5 201,-272.5 201,-245.5 201,-245.5 201,-239.5 207,-233.5 213,-233.5 213,-233.5 358,-233.5 358,-233.5 364,-233.5 370,-239.5 370,-245.5 370,-245.5 370,-272.5 370,-272.5 370,-278.5 364,-284.5 358,-284.5"/>
+<text text-anchor="middle" x="285.5" y="-268.9" font-family="Helvetica,sans-Serif" font-size="12.00">Guarantees from export</text>
+<text text-anchor="middle" x="285.5" y="-255.9" font-family="Helvetica,sans-Serif" font-size="12.00">credit agencies and</text>
+<text text-anchor="middle" x="285.5" y="-242.9" font-family="Helvetica,sans-Serif" font-size="12.00">development banks</text>
+</g>
+<g id="edge6" class="edge">
+<title>Root&#45;&gt;ECA</title>
+<path fill="none" stroke="#4b5563" d="M131.05,-306.95C145.07,-302.33 160.07,-297.44 174,-293 180.53,-290.92 187.28,-288.79 194.07,-286.66"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="194.93,-288.96 200.88,-284.53 193.47,-284.28 194.93,-288.96"/>
+</g>
+<g id="node8" class="node">
+<title>SRT</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M371,-217.5C371,-217.5 200,-217.5 200,-217.5 194,-217.5 188,-211.5 188,-205.5 188,-205.5 188,-178.5 188,-178.5 188,-172.5 194,-166.5 200,-166.5 200,-166.5 371,-166.5 371,-166.5 377,-166.5 383,-172.5 383,-178.5 383,-178.5 383,-205.5 383,-205.5 383,-211.5 377,-217.5 371,-217.5"/>
+<text text-anchor="middle" x="285.5" y="-201.9" font-family="Helvetica,sans-Serif" font-size="12.00">Synthetic securitisation</text>
+<text text-anchor="middle" x="285.5" y="-188.9" font-family="Helvetica,sans-Serif" font-size="12.00">and significant risk transfer</text>
+<text text-anchor="middle" x="285.5" y="-175.9" font-family="Helvetica,sans-Serif" font-size="12.00">tranche protection on a pool</text>
+</g>
+<g id="edge7" class="edge">
+<title>Root&#45;&gt;SRT</title>
+<path fill="none" stroke="#4b5563" d="M88.48,-306.62C106.26,-284.13 138.45,-247.4 174,-226 177.09,-224.14 180.29,-222.37 183.57,-220.69"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="184.76,-222.84 189.98,-217.58 182.61,-218.44 184.76,-222.84"/>
+</g>
+<g id="node9" class="node">
+<title>Lim</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M346,-122C346,-122 225,-122 225,-122 219,-122 213,-116 213,-110 213,-110 213,-96 213,-96 213,-90 219,-84 225,-84 225,-84 346,-84 346,-84 352,-84 358,-90 358,-96 358,-96 358,-110 358,-110 358,-116 352,-122 346,-122"/>
+<text text-anchor="middle" x="285.5" y="-106.4" font-family="Helvetica,sans-Serif" font-size="12.00">Concentration limits</text>
+<text text-anchor="middle" x="285.5" y="-93.4" font-family="Helvetica,sans-Serif" font-size="12.00">and appetite signals</text>
+</g>
+<g id="edge8" class="edge">
+<title>Root&#45;&gt;Lim</title>
+<path fill="none" stroke="#4b5563" d="M80.63,-306.95C93.56,-272.29 125.2,-198.4 174,-154 187.11,-142.07 203.48,-132.49 219.58,-124.99"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="220.6,-127.22 225.97,-122.11 218.58,-122.75 220.6,-127.22"/>
+</g>
+<g id="node10" class="node">
+<title>Price</title>
+<path fill="#eef2ff" stroke="#6366f1" d="M348,-67.5C348,-67.5 223,-67.5 223,-67.5 217,-67.5 211,-61.5 211,-55.5 211,-55.5 211,-28.5 211,-28.5 211,-22.5 217,-16.5 223,-16.5 223,-16.5 348,-16.5 348,-16.5 354,-16.5 360,-22.5 360,-28.5 360,-28.5 360,-55.5 360,-55.5 360,-61.5 354,-67.5 348,-67.5"/>
+<text text-anchor="middle" x="285.5" y="-51.9" font-family="Helvetica,sans-Serif" font-size="12.00">Pricing guidance and</text>
+<text text-anchor="middle" x="285.5" y="-38.9" font-family="Helvetica,sans-Serif" font-size="12.00">capital charges to</text>
+<text text-anchor="middle" x="285.5" y="-25.9" font-family="Helvetica,sans-Serif" font-size="12.00">originators</text>
+</g>
+<g id="edge9" class="edge">
+<title>Root&#45;&gt;Price</title>
+<path fill="none" stroke="#4b5563" d="M76.06,-306.9C82.11,-260.41 104.03,-140.45 174,-76 182.7,-67.99 193.25,-61.86 204.34,-57.18"/>
+<polygon fill="#4b5563" stroke="#4b5563" points="205.31,-59.43 210.92,-54.58 203.51,-54.87 205.31,-59.43"/>
+</g>
+</g>
+</svg>
